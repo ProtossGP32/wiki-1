@@ -1,0 +1,127 @@
+---
+title: "Java SE: Java 8"
+subtitle: Java Fundamentals
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: What is Java 8
+categories: [javase,lambda, stream, optional, ]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.summary}
+📘 **Java 8**
+
+[Java 8 is a revolutionary release](){.external} of the development platform.
+
+It includes a huge upgrade to the Java programming model and a coordinated evolution of the JVM, Java language, and libraries.
+
+``Java 8`` includes features for productivity, ease of use, improved programming technique in java, security and improved performance.
+:::
+
+
+## Overview
+
+``Java 8`` includes the following:
+
+- Lambda expressions
+- Method references
+- Default Methods (Defender methods)
+- A new Stream API.
+- Optional
+- A new Date/Time API.
+- Nashorn, the new JavaScript engine
+- Removal of the Permanent Generation
+
+
+## Main features
+
+Java 8 introduced several new features to the language, including Streams, Optional, Lambda expressions, and Method references. Here's a brief definition of each of these features:
+
+> ``Streams``</br>
+**Streams provide a way to process collections of data in a declarative and functional way**. Streams allow you to express complex data manipulations in a simple, concise way. With streams, you can filter, map, reduce, and collect data in a highly readable and maintainable way.
+
+> ``Optional``</br>
+**Optional is a container object that may or may not contain a non-null value.** It is designed to reduce the number of null checks in your code and to provide a more elegant way of handling null values. Optional can be used to wrap any object, and it provides methods for safely accessing the wrapped object or handling the case when the object is null.
+
+> ``Lambda expressions``</br>
+**Lambda expressions provide a way to write code in a functional style. **They allow you to pass behavior as an argument to a method, which is a powerful technique for writing more modular and reusable code. Lambda expressions can be used in place of anonymous inner classes and are highly concise and readable.
+
+> ``Method references``</br>
+**Method references provide a way to pass a method as an argument to another method**. They provide a concise and expressive way to write code, and can be used in place of lambda expressions in certain situations. Method references are highly readable and can make code more modular and reusable.
+
+
+## Example of ``functional-styl``e in`` Java 8``
+
+Suppose you have a **list of integers and you want to filter out the even numbers and then calculate the sum of the remaining odd numbers**.
+
+In Java 8 and later, you can use a combination of ``lambda`` expressions and the ``Stream API`` to express this computation in a ``functional-style``:
+
+```java
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+int sum = numbers.stream()               // create a stream of the list of numbers
+                .filter(n -> n % 2 != 0) // filter out the even numbers
+                .mapToInt(Integer::intValue) // convert the stream to an IntStream
+                .sum();                 // calculate the sum of the remaining odd numbers
+
+System.out.println("Sum of odd numbers: " + sum);
+
+```
+::: {.column-margin}
+The lambda expression ``n -> n % 2 != 0`` passed to the ``filter()`` method tests each number to see if it is odd by checking if the remainder *after division by 2 is not equal to 0*.
+:::
+
+In this code, we first create a **stream of the list of numbers using the ``stream()`` method**.
+
+We then use the ``filter()`` method to remove all the even numbers from the stream, and the ``mapToInt()`` method to convert the stream to an ``IntStream``, which has a ``sum()`` method that we can use to calculate the sum of the remaining odd numbers.
+
+This example demonstrates how **functional-style** programming in Java can be used to express computations in a more concise and readable way by using higher-order functions, ``lambda`` expressions, and the **Stream API**.
+
+Instead, using imperative and modern ``Java 8``:
+
+
+```java
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+int sum = 0;
+for (int number : numbers) {
+    if (number % 2 != 0) {  // filter out even numbers
+        sum += number;      // accumulate odd numbers
+    }
+}
+
+System.out.println("Sum of odd numbers: " + sum);
+
+```
+::: {.column-margin}
+In this code, we iterate over the list of numbers using a ``for-each`` loop, and filter out even numbers using an ``if-statement.`` We then accumulate the **odd** numbers in the **sum** variable using the ``+=`` **operator**. Finally, we print the result using ``System.out.println()``.
+:::
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Java SE: Class and Objects](/javase/se-concepts-objects.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Java SE: static modifier  {{< fa solid arrow-right >}}](/javase/se-concepts-static.qmd)
+<br>
+</div>
+<br>
+</div>

@@ -1,0 +1,79 @@
+---
+title: "Java SE Resources"
+subtitle: Readings
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: Java SE Resources and Readings
+categories: [javase, resources, readings]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+![Java SE Resources](/images/home/frontimagealbertprofeweb-readings.png){width=50%}
+
+## Object-Oriented Programming with Java, part I
+
+::: {.callout}
+- [Object-Oriented Programming with Java, part I Week 1](https://materiaalit.github.io/2013-oo-programming/part1/week-1/)
+- [Object-Oriented Programming with Java, part I Week 2](https://materiaalit.github.io/2013-oo-programming/part1/week-2/)
+- [Object-Oriented Programming with Java, part I Week 3](https://materiaalit.github.io/2013-oo-programming/part1/week-3/)
+- [Object-Oriented Programming with Java, part I Week 4](https://materiaalit.github.io/2013-oo-programming/part1/week-4/)
+- [Object-Oriented Programming with Java, part I Week 5](https://materiaalit.github.io/2013-oo-programming/part1/week-5/)
+- [Object-Oriented Programming with Java, part I Week 6](https://materiaalit.github.io/2013-oo-programming/part1/week-6/)
+:::
+
+## Books
+
+- [Design Patterns: Elements of Reusable Object-Oriented Software
+Erich Gamma; Richard Helm; Ralph Johnson; John Vlissides](https://www.academia.edu/43687858/Design_Patterns_Elements_of_Reusable_Object_Oriented_Software_by_Erich_Gamma_Richard_Helm_Ralph_Johnson_John_Vlissides)
+
+
+## Web
+
+- Java Programming Tutorial Object-oriented Programming (OOP) Basics: [www3.ntu.edu.sg](https://www3.ntu.edu.sg/home/ehchua/programming/java/J3a_OOPBasics.html){.external}
+- Java Oracle Official Documentation [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/java/index.html){.external}
+- StackOverFlow [Is Java "pass-by-reference" or "pass-by-value"?](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value){#IsJavaReference .external}
+- JHipster is a development platform to quickly generate, develop, & deploy modern web applications & microservice architectures: [JHipster](https://www.jhipster.tech/){.external}
+- Mermaid [The class diagram is the main building block of object-oriented modeling.](https://mermaid.js.org/syntax/classDiagram.html){.external}
+- Java Persistence, a book relating to the Java programming language. [Java Persistence](https://en.wikibooks.org/wiki/Java_Persistence){.external}
+
+## Presentations
+
+- [Java SE Presentations](https://drive.google.com/drive/folders/1SNCf3_bFRDsVC929j8-xSfbKkHn1OOMo?usp=share_link)
+
+
+### Student recommmendations
+
+by **Victor C.**
+
+- Tutorials de git y github: [Git and GitHub](https://www.youtube.com/playlist?list=PLU8oAlHdN5BlyaPFiNQcV0xDqy0eR35aU)
+- Tutorials java desde 0: [Java tutorials](https://www.youtube.com/playlist?list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk)
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Lab#SE02-5: Movie/Review, simulate interactivity by console](/javase/selab2-5.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Spring Framework  {{< fa solid arrow-right >}}](/spring/spring-basics.qmd)
+<br>
+</div>
+<br>
+</div>

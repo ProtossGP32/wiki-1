@@ -1,0 +1,91 @@
+---
+title: "Java SE: Create Maven Project"
+subtitle: Maven and Java
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: How to create a Maven Project
+categories: [javase, maven, code, project]
+toc: true
+number-sections: true
+format:
+  html
+---
+## Create Maven Project
+
+To create a Maven project with a **standard directory structure using IntelliJ IDEA**, you can follow these steps:
+
+1. Install the Maven plugin in **IntelliJ IDEA**.
+2. Open IntelliJ IDEA and navigate to the `Plugins` settings.
+3. Search for `Maven` and install the plugin.
+4. In IntelliJ IDEA, click `Create New Project`.
+5. In the `New Project` dialog, select `Maven Archetype` from the list of Generators.
+6. Select the **`maven-archetype-quickstart` archetype**. This archetype creates a <mark>standard Maven project with a directory structure for source code and unit tests.<mark>
+7. Click `Advanced Settings` and enter the `GroupId` and `ArtifactId` for your project. These are used to identify your project uniquely across all projects.
+8. Click `Create` to create the project.
+
+
+Your project will be created with the following directory structure:
+
+``` java
+my-project
+├── pom.xml
+└── src
+    ├── main
+    │   └── Person.java
+    │       Account.java
+    │       AccountManager.java    
+    └── test
+        └── AccountManagerTest.java
+``` 
+
+The `src/main/java` directory is where you should put your Java source code, and the `src/test/java` directory is where you should put your **unit tests**.
+
+![Maven project folder-tree](/images/javase/se-createproject/createprojectMavenIntellJI_3.png)
+
+To specify the version of Maven to use, you can edit the pom.xml file and add a <version> element to the <project> element. For example:
+
+``` xml
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>my-project</artifactId>
+  <version>3.6.3</version>
+  ...
+</project>
+```
+This will use **version 3.6.3 of Maven** for the project.
+
+## Step-by-step screenshots (2022-12-14)
+
+[Slider-presentation Create project Java SE Maven](/images/javase/se-createproject/se-presentation-createproject.qmd)
+
+## What did we create?
+
+
+![Anatomy of our first Class](/images/javase/classMain.png)
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Java SE: Maven](/javase/se-concepts-maven.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Java SE: Project push GitHub  {{< fa solid arrow-right >}}](/javase/se-concepts-projectgit.qmd)
+<br>
+</div>
+<br>
+</div>

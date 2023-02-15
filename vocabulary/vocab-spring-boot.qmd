@@ -1,0 +1,60 @@
+---
+title: "Spring Boot Vocabulary"
+subtitle: Technical terms and definitions
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: description
+categories: [vocabulary, Spring-Boot]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+![Technical terms and definitions](/images/home/frontimagealbertprofeweb-vocabulary.png){width=60%}
+
+## Vocabulary 
+
+| Term | Definition |
+|:---|:---|
+| mvc | description |
+| view | description |
+| model | It represents graphically an abstraction of the same reality or of a service. It solves problems or needs through a set of black boxes (DDD) that depend only on its previous state and its runtime input. Its conception and implementation is translated into the creation of classes and the relationships between them by means of the UML. The UML will be based on previously defined architectures adapted to the needs of the project. |
+| controller | description |
+| annotations | description |
+| dependency injection  | description |
+| request response | description |
+| rest | description |
+| spring boot | description |
+| java ee | description |
+| jpa | description |
+| thymeleaf | description |
+| dto | description |
+
+: Spring Boot vocabulary {tbl-colwidths="[20,80]"}
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Java SE Vocabulay](/vocabulary/vocab-java-se.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[DataBase Vocabulary  {{< fa solid arrow-right >}}](/vocabulary/vocab-data-base.qmd)
+<br>
+</div>
+<br>
+</div>

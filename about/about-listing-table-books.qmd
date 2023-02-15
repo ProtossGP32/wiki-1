@@ -1,0 +1,51 @@
+---
+title: "Books Table-Listing"
+categories: [listing, table]
+listing:
+    id: books-table-listing
+    contents:
+         - "../books/*.qmd"
+    sort:
+        - "file-modified desc"
+        - "categories desc"
+    type: table
+    image-align: left
+    image-placeholder: "/images/home/frontimagealbertprofeweb.png"
+    fields: [image, title, subtitle, categories, file-modified]
+    table-hover: true
+    date-format: full
+    categories: numbered
+    image-height: 90px   
+---
+
+You can look up the following table listing for additional information:
+
+::: {.column-page-left}
+::: {#books-table-listing}
+:::
+:::
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Books Card-Listing](/about/about-listing-card-books.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Articles Card-Listing  {{< fa solid arrow-right >}}](/about/about-listing-card.qmd)
+<br>
+</div>
+<br>
+</div>

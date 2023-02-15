@@ -1,0 +1,58 @@
+---
+title: "SCRUM Vocabulary"
+subtitle: Technical terms and definitions
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: description
+categories: [vocabulary, scrum]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+![Technical terms and definitions](/images/home/frontimagealbertprofeweb-vocabulary.png){width=60%}
+
+## Vocabulary 
+
+| Term | Definition |
+|:---|:---|
+| iterate | Repeat a process with improvements and a certain time-box |
+| sprint | Short, time-boxed iterations in Scrum, usually 2-4 weeks |
+| sprint goal | A clear objective for the sprint to achieve |
+| sprint backlog | A prioritized list of items to be worked on during the sprint |
+| planning poker | A consensus-based estimation technique used in Scrum with this serie to weight tasks: 1, 2, 3, 5, 8, 13, 21 |
+| scrum master | A facilitator who ensures the team adheres to Scrum principles, link to company |
+| product owner | A person responsible for the product backlog and its priorities, link to client |
+| principles | Transparency, Inspection, Adaptation, and Delivery |
+| beyond scrum | Scaled Agile Framework (SAFe), LeSS, Nexus |
+| agile | A methodology for software development that values flexibility and collaboration |
+| user story | A description of a feature or requirement from the perspective of the end-user |
+
+: SCRUM vocabulary {tbl-colwidths="[20,80]"}
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} General Vocabulary](/vocabulary/vocab-general.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[DevOps Vocabulary  {{< fa solid arrow-right >}}](/vocabulary/vocab-devops.qmd)
+<br>
+</div>
+<br>
+</div>
