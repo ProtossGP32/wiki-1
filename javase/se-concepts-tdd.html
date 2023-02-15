@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="albertprofe">
+<meta name="description" content="What is the TDD and JUnit in Java">
+
+<title>albertprofe wiki - Java SE: JUnit and TDD</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">albertprofe wiki</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-linux-os" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Linux OS</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-linux-os">    
+        <li class="dropdown-header">Linux: concepts</li>
+        <li>
+    <a class="dropdown-item" href="../linux/linux-what-basics.html">
+ <span class="dropdown-text">Linux: basic concepts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-what-bash.html">
+ <span class="dropdown-text">Linux: Bash</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-what-sudo.html">
+ <span class="dropdown-text">Linux: su and sudo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-what-pipes.html">
+ <span class="dropdown-text">Linux: pipes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-what-fsys.html">
+ <span class="dropdown-text">Linux: File System</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-what-vm.html">
+ <span class="dropdown-text">Linux: Virtual Machines</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Linux: distros</li>
+        <li>
+    <a class="dropdown-item" href="../linux/linux-distros-ubuntu.html">
+ <span class="dropdown-text">Linux Distros: Ubuntu</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-distros-mint.html">
+ <span class="dropdown-text">Linux Distros: Mint</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-distros-debian.html">
+ <span class="dropdown-text">Linux Distros: Debian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-distros-opensuse.html">
+ <span class="dropdown-text">Linux Distros: openSuse</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-distros-manjaro.html">
+ <span class="dropdown-text">Linux Distros: Manjaro</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/linux-distros-redhat.html">
+ <span class="dropdown-text">Linux Distros: Red Hat Enterprise Linux</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Linux: laboratories</li>
+        <li>
+    <a class="dropdown-item" href="../linux/lilab01-1.html">
+ <span class="dropdown-text">Linux Lab#LI01-1: Choose Linux</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab01-2.html">
+ <span class="dropdown-text">Linux Lab#LI01-2: Install at least three distributions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab01-3.html">
+ <span class="dropdown-text">Linux Lab#LI01-3: Adjust user permissions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab02-1.html">
+ <span class="dropdown-text">Linux Lab#LI02-1: Export env user with grep and pipe</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab03-1.html">
+ <span class="dropdown-text">Linux Lab#LI03-1: Manage users and groups</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab03-2.html">
+ <span class="dropdown-text">Linux Lab#LI03-2: Manage files</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab03-3.html">
+ <span class="dropdown-text">Linux Lab#LI03-3: Manage software</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab03-4.html">
+ <span class="dropdown-text">Linux Lab#LI03-4: Manage hardware</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab04-1.html">
+ <span class="dropdown-text">Linux Lab#LI04-1: Bash scripting, qtool</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab04-2.html">
+ <span class="dropdown-text">Linux Lab#LI04-2: Bash scripts as terminal tool</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../linux/lilab04-3.html">
+ <span class="dropdown-text">Linux Lab#LI04-3: Distribute the terminal app</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Linux readings</li>
+        <li>
+    <a class="dropdown-item" href="../linux/resources.html">
+ <span class="dropdown-text">Linux Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-devops" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">DevOps</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-devops">    
+        <li class="dropdown-header">What is DevOps</li>
+        <li>
+    <a class="dropdown-item" href="../devops/devops-what-intro.html">
+ <span class="dropdown-text">DevOps: Introduction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-what-overview.html">
+ <span class="dropdown-text">DevOps: agile and microservices</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-what-immutable.html">
+ <span class="dropdown-text">Immutable Infrastructure</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Documentation</li>
+        <li>
+    <a class="dropdown-item" href="../devops/devops-doc-quarto.html">
+ <span class="dropdown-text">How to document: Quarto and Obsidian</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Version Control</li>
+        <li>
+    <a class="dropdown-item" href="../devops/devops-vc-git.html">
+ <span class="dropdown-text">Git</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-vc-github.html">
+ <span class="dropdown-text">GitHub</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">IDEs</li>
+        <li>
+    <a class="dropdown-item" href="../devops/devops-ide-visualcode.html">
+ <span class="dropdown-text">IDE: Visual Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-ide-intelljidea.html">
+ <span class="dropdown-text">IDE: IntellJIdea</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">DevOps tools</li>
+        <li>
+    <a class="dropdown-item" href="../devops/devops-tools-aws.html">
+ <span class="dropdown-text">Aamanzon Web Sevices AWS</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-tools-docker.html">
+ <span class="dropdown-text">Docker</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-tools-jenkins.html">
+ <span class="dropdown-text">Jenkins pipelines</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-tools-k8s.html">
+ <span class="dropdown-text">Kubernetes k8s</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-tools-digitalocean.html">
+ <span class="dropdown-text">Digital Ocean</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-tools-installjenkins.html">
+ <span class="dropdown-text">Howto install Jenkins</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-tools-installmaven.html">
+ <span class="dropdown-text">Howto install Maven</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">DevOps Laboratories</li>
+        <li>
+    <a class="dropdown-item" href="../devops/devops-lab-chatapp.html">
+ <span class="dropdown-text">Lab 1: chat App</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-lab-springbooksintro.html">
+ <span class="dropdown-text">Lab 2: Spring Boot Intro</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-lab-springbookss3.html">
+ <span class="dropdown-text">Lab 3: Spring Boot and AWS S3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-lab-springbooksdocker.html">
+ <span class="dropdown-text">Lab 4: Spring Boot and Docker</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../devops/devops-lab-k8sdigitalocean.html">
+ <span class="dropdown-text">Lab 5: k8s on Digital Ocean</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">DevOps readings</li>
+        <li>
+    <a class="dropdown-item" href="../devops/resources.html">
+ <span class="dropdown-text">DevOps Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-markup" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">MarkUp</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-markup">    
+        <li class="dropdown-header">MarkUp Languages</li>
+        <li>
+    <a class="dropdown-item" href="../markup/markup-lang-intro.html">
+ <span class="dropdown-text">Introduction Markup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-lang-html.html">
+ <span class="dropdown-text">HTML Markup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-lang-md.html">
+ <span class="dropdown-text">Markdown Markup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-lang-html-md.html">
+ <span class="dropdown-text">Markdown and HTML working together, good idea?</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Quarto Markdown</li>
+        <li>
+    <a class="dropdown-item" href="../markup/markup-quarto-basics.html">
+ <span class="dropdown-text">Quarto Markdown: basics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-quarto-create.html">
+ <span class="dropdown-text">Quarto Markdown: creating</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-quarto-publish.html">
+ <span class="dropdown-text">Quarto Markdown: publishing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-quarto-code.html">
+ <span class="dropdown-text">Quarto Markdown: code &amp; data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-quarto-api-rest.html">
+ <span class="dropdown-text">Quarto Markdown: api rest call</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-quarto-api-rest-v2.html">
+ <span class="dropdown-text">Quarto Markdown: OJS Cells</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-quarto-cheatsheet.html">
+ <span class="dropdown-text">Quarto Markdown: cheat-sheet</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Styling: CSS</li>
+        <li>
+    <a class="dropdown-item" href="../markup/markup-css-basics.html">
+ <span class="dropdown-text">Cascade Style Sheet</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../markup/markup-css-w3css.html">
+ <span class="dropdown-text">CSS: W3.css</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">MarkUp Languages Laboratories</li>
+        <li>
+    <a class="dropdown-item" href="../markup/mulab1.html">
+ <span class="dropdown-text">Lab#MD01-1: Create and publish by Quarto</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">MarkUp Languages readings</li>
+        <li>
+    <a class="dropdown-item" href="../markup/resources.html">
+ <span class="dropdown-text">MarkUp Languages Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-java-se" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Java SE</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-java-se">    
+        <li class="dropdown-header">What is Java SE</li>
+        <li>
+    <a class="dropdown-item" href="../javase/se-what-basics.html">
+ <span class="dropdown-text">Java Standard Edition: Basics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-what-principles.html">
+ <span class="dropdown-text">Java Standard Edition: Principles</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-what-moochelsinki.html">
+ <span class="dropdown-text">Java MOOC Helsinki</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Java Create Project</li>
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-maven.html">
+ <span class="dropdown-text">Java SE: Maven</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-createproject.html">
+ <span class="dropdown-text">Java SE: Create Maven Project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-projectgit.html">
+ <span class="dropdown-text">Java SE: Project push GitHub</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-tdd.html">
+ <span class="dropdown-text">Java SE: JUnit and TDD</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Java Concepts</li>
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-objects.html">
+ <span class="dropdown-text">Java SE: Class and Objects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-scope.html">
+ <span class="dropdown-text">Java SE: Scope</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-static.html">
+ <span class="dropdown-text">Java SE: static modifier</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-coupling.html">
+ <span class="dropdown-text">Java SE: Coupling and DDD</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-package.html">
+ <span class="dropdown-text">Java SE: Packages</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-interface.html">
+ <span class="dropdown-text">Java SE: Abstract/Interface</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-java8.html">
+ <span class="dropdown-text">Java SE: Java 8</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Java Principles</li>
+        <li>
+    <a class="dropdown-item" href="../javase/se-principles-encapsulation.html">
+ <span class="dropdown-text">Java SE: Encapsulation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-principles-abstraction.html">
+ <span class="dropdown-text">Java SE: Abstraction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-principles-inheritance.html">
+ <span class="dropdown-text">Java SE: Inherence</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-principles-polymorphism.html">
+ <span class="dropdown-text">Java SE: Polymorphism</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Java Design Patterns</li>
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-uml.html">
+ <span class="dropdown-text">Java Patterns: UML</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-intro.html">
+ <span class="dropdown-text">Java Patterns: Types</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-singleton.html">
+ <span class="dropdown-text">Creational: Singleton</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-factory.html">
+ <span class="dropdown-text">Creational: Factory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-abstractfactory.html">
+ <span class="dropdown-text">Creational: Abstract Factory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-builder.html">
+ <span class="dropdown-text">Creational: Builder</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-facade.html">
+ <span class="dropdown-text">Structural: Facade</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-bridge.html">
+ <span class="dropdown-text">Structural: Bridge</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-decorator.html">
+ <span class="dropdown-text">Structural: Decorator</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-observer.html">
+ <span class="dropdown-text">Behavioral: Observer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-strategy.html">
+ <span class="dropdown-text">Behavioral: Strategy</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-state.html">
+ <span class="dropdown-text">Behavioral: State</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Java SE Laboratories</li>
+        <li>
+    <a class="dropdown-item" href="../javase/selab0-1.html">
+ <span class="dropdown-text">Lab#SE00-1: Maven Person</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab0-2.html">
+ <span class="dropdown-text">Lab#SE00-2: Maven Clinic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab0-3.html">
+ <span class="dropdown-text">Lab#SE00-3: Library Model</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab0-4.html">
+ <span class="dropdown-text">Lab#SE00-4: Abstract/Interface Human</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab1-1.html">
+ <span class="dropdown-text">Lab#SE01-1: Maven/Gradle Person and Account</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab1-2.html">
+ <span class="dropdown-text">Lab#SE01-2: Maven/Gradle Person and Account stored in JSON</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab2-1.html">
+ <span class="dropdown-text">Lab#SE02-1: Movie/Review, Model</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab2-2.html">
+ <span class="dropdown-text">Lab#SE02-2: Movie/Review, CRUD Operations</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab2-3.html">
+ <span class="dropdown-text">Lab#SE02-3: Movie/Review, factory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab2-4.html">
+ <span class="dropdown-text">Lab#SE02-4: Movie/Review, interactivity and coupling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab2-5.html">
+ <span class="dropdown-text">Lab#SE02-5: Movie/Review, simulate interactivity by console</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab3-1.html">
+ <span class="dropdown-text">Lab#SE03-1: Library/Book, Core-Model</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab3-2.html">
+ <span class="dropdown-text">Lab#SE03-2: Library/Book, Sprint Zero</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Java SE readings</li>
+        <li>
+    <a class="dropdown-item" href="../javase/resources.html">
+ <span class="dropdown-text">Java SE Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-spring" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Spring</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-spring">    
+        <li class="dropdown-header">Spring Legacy</li>
+        <li>
+    <a class="dropdown-item" href="../spring/spring-basics.html">
+ <span class="dropdown-text">Spring Framework</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../spring/spring-mvc.html">
+ <span class="dropdown-text">Spring MVC</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Spring Boot Basics</li>
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-what-basics.html">
+ <span class="dropdown-text">Spring Boot: Fundamentals</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-what-create.html">
+ <span class="dropdown-text">Spring Boot: create a Spring Boot Project</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Spring Boot Concepts</li>
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-concepts-annotations.html">
+ <span class="dropdown-text">Spring Boot: Annotations</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-concepts-controller.html">
+ <span class="dropdown-text">Spring Boot: Controller</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-concepts-view.html">
+ <span class="dropdown-text">Spring Boot: View</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-concepts-model.html">
+ <span class="dropdown-text">Spring Boot: Model</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-concepts-jpa.html">
+ <span class="dropdown-text">Spring Boot: JPA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-concepts-injection.html">
+ <span class="dropdown-text">Spring Boot: Dependency Injection</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-concepts-rest.html">
+ <span class="dropdown-text">Spring Boot: Rest</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-concepts-data.html">
+ <span class="dropdown-text">Spring Boot: Data</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Spring Boot Laboratories</li>
+        <li>
+    <a class="dropdown-item" href="../springboot/sblab1.html">
+ <span class="dropdown-text">Lab 1: Spring Boot Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/sblab2.html">
+ <span class="dropdown-text">Lab 2: Spring Boot Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/sblab3.html">
+ <span class="dropdown-text">Lab 3: Spring Boot Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/sblab4.html">
+ <span class="dropdown-text">Lab 4: Spring Boot Projects <code>JPA Inherence</code> strategies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/sblab5.html">
+ <span class="dropdown-text">Lab 5: subject</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Spring Boot readings</li>
+        <li>
+    <a class="dropdown-item" href="../springboot/resources.html">
+ <span class="dropdown-text">Spring Boot Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reactjs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">ReactJS</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-reactjs">    
+        <li class="dropdown-header">ReactJS: Principles</li>
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-what-principles.html">
+ <span class="dropdown-text">React JS: Introduction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-what-render-dom.html">
+ <span class="dropdown-text">React JS: render virtual DOM</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-what-create.html">
+ <span class="dropdown-text">React JS: Create a React project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-what-components.html">
+ <span class="dropdown-text">React JS: Components</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-what-jsx.html">
+ <span class="dropdown-text">React JS: JSX</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-what-props.html">
+ <span class="dropdown-text">React JS: props and state</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">ES6: ECMAScript 6</li>
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-es6-arrow.html">
+ <span class="dropdown-text">React JS ES6: arrow functions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-es6-import.html">
+ <span class="dropdown-text">React JS ES6: import modules</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-es6-data.html">
+ <span class="dropdown-text">React JS ES6: array, data and key</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-es6-destructuring.html">
+ <span class="dropdown-text">React JS ES6: destructuring</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-es6-spread.html">
+ <span class="dropdown-text">React JS ES6: spread operator</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">ReacJS 18: Hooks</li>
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-hook-state.html">
+ <span class="dropdown-text">ReactJS: useState</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-hook-reducer.html">
+ <span class="dropdown-text">React JS: useReducer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-hook-ref.html">
+ <span class="dropdown-text">React JS: useRef</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-hook-effect.html">
+ <span class="dropdown-text">React JS: useEffect</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-hook-custom.html">
+ <span class="dropdown-text">ReactJS: custom hooks</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-hook-context.html">
+ <span class="dropdown-text">React JS: useContext</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">ReactJS: Designing an App</li>
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-app-async.html">
+ <span class="dropdown-text">React JS App: async</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-app-events.html">
+ <span class="dropdown-text">React JS App: events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-app-router.html">
+ <span class="dropdown-text">React JS App: router</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-app-conditional-render.html">
+ <span class="dropdown-text">React JS App: conditional render</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/reactjs-app-styling.html">
+ <span class="dropdown-text">React JS App: styling</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">React JS: Laboratories</li>
+        <li>
+    <a class="dropdown-item" href="../reactjs/rjslab1.html">
+ <span class="dropdown-text">React JS: Lab#RE01-1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/rjslab2.html">
+ <span class="dropdown-text">React JS: Lab#RE02-1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/rjslab3.html">
+ <span class="dropdown-text">React JS: Lab#RE03-1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/rjslab4.html">
+ <span class="dropdown-text">React JS: Lab#RE04-1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reactjs/rjslab5.html">
+ <span class="dropdown-text">React JS: Lab#RE05-1</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">React JS readings</li>
+        <li>
+    <a class="dropdown-item" href="../reactjs/resources.html">
+ <span class="dropdown-text">ReactJS Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-scrum" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SCRUM</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-scrum">    
+        <li class="dropdown-header">What is SCRUM</li>
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-what-concepts.html">
+ <span class="dropdown-text">SCRUM Agile Methodology</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-what-agile-manifesto.html">
+ <span class="dropdown-text">Agile Manifesto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-what-guide.html">
+ <span class="dropdown-text">SCRUM Guide</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Weeks</li>
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week1.html">
+ <span class="dropdown-text">Week 1: Meetings and impediments</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week2.html">
+ <span class="dropdown-text">Week 2: User stories, tasks and habits</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week3.html">
+ <span class="dropdown-text">Week 3: Communication and value</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week4.html">
+ <span class="dropdown-text">Week 4: ScrumMaster, how it works</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week5.html">
+ <span class="dropdown-text">Week 5: Mindset, the key to everythng</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week6.html">
+ <span class="dropdown-text">Week 6: Product Owner</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week7.html">
+ <span class="dropdown-text">Week 7: Managing time and mind</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week8.html">
+ <span class="dropdown-text">Week 8: The specialist</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week9.html">
+ <span class="dropdown-text">Week 9: Albertus’ Dylemma</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../scrum/scrum-week10.html">
+ <span class="dropdown-text">Week 10: Beyond SCRUM</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Resources</li>
+        <li>
+    <a class="dropdown-item" href="../scrum/resources.html">
+ <span class="dropdown-text">SCRUM Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-vocabulary" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Vocabulary</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-vocabulary">    
+        <li class="dropdown-header">General Vocabulary</li>
+        <li>
+    <a class="dropdown-item" href="../vocabulary/vocab-general.html">
+ <span class="dropdown-text">General Vocabulary</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../vocabulary/vocab-scrum.html">
+ <span class="dropdown-text">SCRUM Vocabulary</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../vocabulary/vocab-devops.html">
+ <span class="dropdown-text">DevOps Vocabulary</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Back-end Vocabulary</li>
+        <li>
+    <a class="dropdown-item" href="../vocabulary/vocab-java-se.html">
+ <span class="dropdown-text">Java SE Vocabulay</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../vocabulary/vocab-spring-boot.html">
+ <span class="dropdown-text">Spring Boot Vocabulary</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../vocabulary/vocab-data-base.html">
+ <span class="dropdown-text">DataBase Vocabulary</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Front-end Vocabulary</li>
+        <li>
+    <a class="dropdown-item" href="../vocabulary/vocab-reactjs.html">
+ <span class="dropdown-text">ReactJS Vocabulary</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../vocabulary/vocab-web.html">
+ <span class="dropdown-text">Web Vocabulary</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ifcd0210" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">IFCD0210</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ifcd0210">    
+        <li class="dropdown-header">IFCD0210 Docs</li>
+        <li>
+    <a class="dropdown-item" href="../ifcd0210/ifcd0210.html">
+ <span class="dropdown-text">IFCD0210 Official Docs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ifcd0210/ifcd0210initemail.html">
+ <span class="dropdown-text">IFCD0210 Init Mail</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ifcd0210/ifcd0210deliveries.html">
+ <span class="dropdown-text">IFCD0210 Deliveries</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">IFCD0210 Backlog</li>
+        <li>
+    <a class="dropdown-item" href="../ifcd0210/ifcd0210calendar.html">
+ <span class="dropdown-text">IFCD0210 Calendar Backlog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ifcd0210/ifcd0210backlog-sprint.html">
+ <span class="dropdown-text">IFCD0210 Sprint Backlog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ifcd0210/ifcd0210backlog-product.html">
+ <span class="dropdown-text">IFCD0210 Product Backlog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ifcd0210/ifcd0210backlog-projects.html">
+ <span class="dropdown-text">IFCD0210 Projects Backlog</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li class="dropdown-header">About me and this site</li>
+        <li>
+    <a class="dropdown-item" href="../about/about-this-me.html">
+ <span class="dropdown-text">About me</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/about-this-site.html">
+ <span class="dropdown-text">About this site</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/about-this-images-credit.html">
+ <span class="dropdown-text">About images credit</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Learning</li>
+        <li>
+    <a class="dropdown-item" href="../about/about-learning-intro.html">
+ <span class="dropdown-text">About learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/about-learning-writing.html">
+ <span class="dropdown-text">About Writing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/about-learning-take-notes.html">
+ <span class="dropdown-text">About Taking Notes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/about-learning-write-comments.html">
+ <span class="dropdown-text">About Writing Comments</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/about-learning-auto-evaluate.html">
+ <span class="dropdown-text">About Auto-Evaluate</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/about-learning-questions.html">
+ <span class="dropdown-text">About the Useful Questions</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Books</li>
+        <li>
+    <a class="dropdown-item" href="../about/about-listing-table-books.html">
+ <span class="dropdown-text">Books Table-Listing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/about-listing-card-books.html">
+ <span class="dropdown-text">Books Card-Listing</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Articles</li>
+        <li>
+    <a class="dropdown-item" href="../about/about-listing-table-articles.html">
+ <span class="dropdown-text">Articles Table-Listing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/about-listing-card-articles.html">
+ <span class="dropdown-text">Articles Card-Listing</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Java SE: JUnit and TDD</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  Java Standard Edition
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">What is Java SE</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-what-basics.html" class="sidebar-item-text sidebar-link">Java Standard Edition: Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-what-principles.html" class="sidebar-item-text sidebar-link">Java Standard Edition: Principles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-what-moochelsinki.html" class="sidebar-item-text sidebar-link">Java MOOC Helsinki</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Java Create Project</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-maven.html" class="sidebar-item-text sidebar-link">Java SE: Maven</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-createproject.html" class="sidebar-item-text sidebar-link">Java SE: Create Maven Project</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-projectgit.html" class="sidebar-item-text sidebar-link">Java SE: Project push GitHub</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-tdd.html" class="sidebar-item-text sidebar-link active">Java SE: JUnit and TDD</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Java Concepts</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-objects.html" class="sidebar-item-text sidebar-link">Java SE: Class and Objects</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-scope.html" class="sidebar-item-text sidebar-link">Java SE: Scope</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-static.html" class="sidebar-item-text sidebar-link">Java SE: static modifier</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-coupling.html" class="sidebar-item-text sidebar-link">Java SE: Coupling and DDD</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-package.html" class="sidebar-item-text sidebar-link">Java SE: Packages</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-interface.html" class="sidebar-item-text sidebar-link">Java SE: Abstract/Interface</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-java8.html" class="sidebar-item-text sidebar-link">Java SE: Java 8</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Java Principles</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-encapsulation.html" class="sidebar-item-text sidebar-link">Java SE: Encapsulation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-abstraction.html" class="sidebar-item-text sidebar-link">Java SE: Abstraction</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-inheritance.html" class="sidebar-item-text sidebar-link">Java SE: Inherence</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-polymorphism.html" class="sidebar-item-text sidebar-link">Java SE: Polymorphism</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Java Design Patterns</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-uml.html" class="sidebar-item-text sidebar-link">Java Patterns: UML</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-intro.html" class="sidebar-item-text sidebar-link">Java Patterns: Types</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  - Creational
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-singleton.html" class="sidebar-item-text sidebar-link">Creational: Singleton</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-factory.html" class="sidebar-item-text sidebar-link">Creational: Factory</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-abstractfactory.html" class="sidebar-item-text sidebar-link">Creational: Abstract Factory</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-builder.html" class="sidebar-item-text sidebar-link">Creational: Builder</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  - Structural
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-facade.html" class="sidebar-item-text sidebar-link">Structural: Facade</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-bridge.html" class="sidebar-item-text sidebar-link">Structural: Bridge</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-decorator.html" class="sidebar-item-text sidebar-link">Structural: Decorator</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  - Behavioral
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-observer.html" class="sidebar-item-text sidebar-link">Behavioral: Observer</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-strategy.html" class="sidebar-item-text sidebar-link">Behavioral: Strategy</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-state.html" class="sidebar-item-text sidebar-link">Behavioral: State</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">Java SE Laboratories</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-1.html" class="sidebar-item-text sidebar-link">Lab#SE00-1: Maven Person</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-2.html" class="sidebar-item-text sidebar-link">Lab#SE00-2: Maven Clinic</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-3.html" class="sidebar-item-text sidebar-link">Lab#SE00-3: Library Model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-4.html" class="sidebar-item-text sidebar-link">Lab#SE00-4: Abstract/Interface Human</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab1-1.html" class="sidebar-item-text sidebar-link">Lab#SE01-1: Maven/Gradle Person and Account</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab1-2.html" class="sidebar-item-text sidebar-link">Lab#SE01-2: Maven/Gradle Person and Account stored in JSON</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-1.html" class="sidebar-item-text sidebar-link">Lab#SE02-1: Movie/Review, Model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-2.html" class="sidebar-item-text sidebar-link">Lab#SE02-2: Movie/Review, CRUD Operations</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-3.html" class="sidebar-item-text sidebar-link">Lab#SE02-3: Movie/Review, factory</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-4.html" class="sidebar-item-text sidebar-link">Lab#SE02-4: Movie/Review, interactivity and coupling</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-5.html" class="sidebar-item-text sidebar-link">Lab#SE02-5: Movie/Review, simulate interactivity by console</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab3-1.html" class="sidebar-item-text sidebar-link">Lab#SE03-1: Library/Book, Core-Model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab3-2.html" class="sidebar-item-text sidebar-link">Lab#SE03-2: Library/Book, Sprint Zero</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">Java SE readings</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/resources.html" class="sidebar-item-text sidebar-link">Java SE Resources</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#junit-unit-test" id="toc-junit-unit-test" class="nav-link active" data-scroll-target="#junit-unit-test"><span class="toc-section-number">1</span>  JUnit: unit test</a></li>
+  <li><a href="#tdd" id="toc-tdd" class="nav-link" data-scroll-target="#tdd"><span class="toc-section-number">2</span>  TDD</a></li>
+  <li><a href="#static-vs.-non-static" id="toc-static-vs.-non-static" class="nav-link" data-scroll-target="#static-vs.-non-static"><span class="toc-section-number">3</span>  <code>static</code> vs.&nbsp;<code>non-static</code></a>
+  <ul>
+  <li><a href="#pros-cons-usage-static-methods" id="toc-pros-cons-usage-static-methods" class="nav-link" data-scroll-target="#pros-cons-usage-static-methods"><span class="toc-section-number">3.1</span>  Pros &amp; cons usage <code>static</code> methods</a></li>
+  <li><a href="#pros-cons-usage-non-static-methods" id="toc-pros-cons-usage-non-static-methods" class="nav-link" data-scroll-target="#pros-cons-usage-non-static-methods"><span class="toc-section-number">3.2</span>  Pros &amp; cons usage <code>non-static</code> methods</a></li>
+  </ul></li>
+  <li><a href="#example-test" id="toc-example-test" class="nav-link" data-scroll-target="#example-test"><span class="toc-section-number">4</span>  Example: <code>@Test</code></a></li>
+  <li><a href="#most-popular-asserts" id="toc-most-popular-asserts" class="nav-link" data-scroll-target="#most-popular-asserts"><span class="toc-section-number">5</span>  Most popular <code>asserts</code></a></li>
+  <li><a href="#naming-the-test-class" id="toc-naming-the-test-class" class="nav-link" data-scroll-target="#naming-the-test-class"><span class="toc-section-number">6</span>  Naming the test class</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Albertprofe/wiki/edit/main/javase/se-concepts-tdd.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Albertprofe/wiki/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Java SE: JUnit and TDD</h1>
+<p class="subtitle lead">Java Fundamentals</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">javase</div>
+    <div class="quarto-category">TDD</div>
+    <div class="quarto-category">JUnit</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    What is the TDD and JUnit in Java
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>albertprofe </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Tuesday, June 1, 2021</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">Wednesday, February 15, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<div class="summary">
+<p>📘 <strong>JUnit</strong></p>
+<p><strong>JUnit is a unit testing framework for the Java programming language</strong>. It is used to write and run repeatable tests for Java code. JUnit provides a set of <strong>annotations</strong> and <strong>assertions</strong> that make it easy to write and run tests, as well as a simple framework for organizing and running tests.</p>
+</div>
+<hr>
+<div class="summary">
+<p>📘 <strong>TDD: Test Driven Domain</strong></p>
+<p><strong>Test-driven development (TDD)</strong> is a software development process in which <strong>tests are written for a piece of code before the code itself is written</strong>.</p>
+<p>This approach to development is designed to ensure that the code meets the requirements and works as intended. TDD involves writing a test for a feature, running the test to see if it fails, writing the code to implement the feature, and then running the test again to ensure that it passes. This process is then repeated for each feature until the code is complete.</p>
+<p>TDD is often used in <strong>agile software development</strong>, as it allows for the rapid development of <strong>high-quality code</strong>*.</p>
+</div>
+<hr>
+<section id="junit-unit-test" class="level2 page-columns page-full" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="junit-unit-test"><span class="header-section-number">1</span> JUnit: unit test</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/javase/junit5.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="JUnit 5"><img src="..\images/javase/junit5.jpeg" class="img-fluid figure-img" style="width:30.0%"></a></p>
+<p></p><figcaption class="figure-caption">JUnit 5</figcaption><p></p>
+</figure>
+</div>
+<p>Unit tests are the smallest elements in the test automation process. With the help of unit tests, the developer can check the business logic of any class. So JUnit plays a vital role in the development of a test-driven development framework.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Link: <a href="https://junit.org/junit5/">Junit</a> and <a href="https://junit.org/junit5/docs/current/user-guide/">User guide</a></p>
+</div></div><div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>MyFirstJUnitJupiterTests.java</strong></pre>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource java code-overflow-wrap number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">import</span> <span class="kw">static</span><span class="im"> org</span><span class="op">.</span><span class="im">junit</span><span class="op">.</span><span class="im">jupiter</span><span class="op">.</span><span class="im">api</span><span class="op">.</span><span class="im">Assertions</span><span class="op">.</span><span class="im">assertEquals</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">import</span> <span class="im">example</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Calculator</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">junit</span><span class="op">.</span><span class="im">jupiter</span><span class="op">.</span><span class="im">api</span><span class="op">.</span><span class="im">Test</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="kw">class</span> MyFirstJUnitJupiterTests <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">private</span> <span class="dt">final</span> Calculator calculator <span class="op">=</span> <span class="kw">new</span> <span class="fu">Calculator</span><span class="op">();</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="at">@Test</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="dt">void</span> <span class="fu">addition</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>        <span class="fu">assertEquals</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> calculator<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">));</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="op">}</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>The following example provides a glimpse at the minimum requirements for writing a test in JUnit Jupiter. Subsequent sections of this chapter will provide further details on all available features.</p>
+</div></div></section>
+<section id="tdd" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="tdd"><span class="header-section-number">2</span> TDD</h2>
+<p><mark>Test-driven development is a development technique where the developer must first write a test that fails before writing a new functional code&lt;</mark>. It ensures a proven way to ensure effective unit testing; however, it does not replace traditional testing. We believe that TDD is an excellent practice that all software developers should consider during the development process.</p>
+<p>Steps for the same are given below:</p>
+<ol type="1">
+<li>Firstly, add a test.</li>
+<li>Run all the tests and see if any new test fails.</li>
+<li>Update the code to make it pass the new tests.</li>
+<li>Rerun the test and if they fail, then debug the code again and fix any related error. Rinse and repeat.</li>
+</ol>
+</section>
+<section id="static-vs.-non-static" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="static-vs.-non-static"><span class="header-section-number">3</span> <code>static</code> vs.&nbsp;<code>non-static</code></h2>
+<section id="pros-cons-usage-static-methods" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="pros-cons-usage-static-methods"><span class="header-section-number">3.1</span> Pros &amp; cons usage <code>static</code> methods</h3>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros of making a method static</th>
+<th>Cons of making a method static</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Can be called directly on the class, without needing to create an instance</td>
+<td>Cannot access non-static fields and methods of the class</td>
+</tr>
+<tr class="even">
+<td>Can be used as utility methods that don’t depend on the state of an object</td>
+<td>Can only work with the parameters passed to it and not use information unique to each object or instance</td>
+</tr>
+<tr class="odd">
+<td>Can be used to access only static variables and methods, making it more efficient</td>
+<td>Can be challenging to make sure all instances of a class are modified consistently when using static methods</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pros-cons-usage-non-static-methods" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="pros-cons-usage-non-static-methods"><span class="header-section-number">3.2</span> Pros &amp; cons usage <code>non-static</code> methods</h3>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros of making a method non-static</th>
+<th>Cons of making a method non-static</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Can access both static and non-static fields and methods of the class, allowing it to use the state of an object to determine its behavior</td>
+<td>Can only be called on an instance of the class, so you need to create an object of a class before using the method</td>
+</tr>
+<tr class="even">
+<td>Are associated with an instance of the class, so they can use the information that is unique to each object</td>
+<td>Can cause confusion when working with non-static methods because it could be called on different instances, which could cause unexpected behavior</td>
+</tr>
+<tr class="odd">
+<td>Object-oriented design principles promote the use of non-static methods because they can be overridden by subclasses to change their behavior</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="example-test" class="level2 page-columns page-full" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="example-test"><span class="header-section-number">4</span> Example: <code>@Test</code></h2>
+<p>First, to configure support for <strong>JUnit Jupiter based tests</strong>, configure test scoped <code>dependencies</code> on the<a href="https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven-engines-configure" class="external">JUnit Jupiter API and the JUnit Jupiter TestEngine</a> implementation similar to the following.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>pom.xml</strong></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource java code-overflow-wrap number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&lt;!--</span> https<span class="op">:</span><span class="co">//mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine --&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="op">&lt;</span>dependency<span class="op">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>      <span class="op">&lt;</span>groupId<span class="op">&gt;</span>org<span class="op">.</span><span class="fu">junit</span><span class="op">.</span><span class="fu">jupiter</span><span class="op">&lt;/</span>groupId<span class="op">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>      <span class="op">&lt;</span>artifactId<span class="op">&gt;</span>junit<span class="op">-</span>jupiter<span class="op">-</span>engine<span class="op">&lt;/</span>artifactId<span class="op">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>      <span class="op">&lt;</span>version<span class="op">&gt;</span><span class="fl">5.9.1</span><span class="op">&lt;/</span>version<span class="op">&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>      <span class="op">&lt;</span>scope<span class="op">&gt;</span>test<span class="op">&lt;/</span>scope<span class="op">&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="op">&lt;/</span>dependency<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Unlike previous versions of JUnit, JUnit 5 is composed of several different modules from three different sub-projects.</p>
+<p><strong>JUnit 5 = JUnit Platform + JUnit Jupiter + JUnit Vintage</strong></p>
+</div><div class="">
+<p>JUnit 5 requires <strong>Java 8 (or higher) at runtime</strong>. However, you can still test code that has been compiled with previous versions of the JDK.</p>
+</div></div>
+<p>Second, we would write a test for the add method, which should take two numbers as arguments and return their sum. Here is an example of how this test might look using JUnit:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>MyFirstJUnitJupiterTests.java</strong></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource java code-overflow-wrap number-lines code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">junit</span><span class="op">.</span><span class="im">jupiter</span><span class="op">.</span><span class="im">api</span><span class="op">.</span><span class="im">Test</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">public</span> <span class="kw">class</span> CalculatorTest <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="at">@Test</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">testAdd</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>    Calculator calc <span class="op">=</span> <span class="kw">new</span> <span class="fu">Calculator</span><span class="op">();</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>    <span class="dt">double</span> result <span class="op">=</span> calc<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">);</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>    <span class="fu">assertEquals</span><span class="op">(</span><span class="dv">5</span><span class="op">,</span> result<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>  <span class="op">}</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Here is an example of how <strong>TDD could be applied in a Java project using JUnit</strong>. Let’s say we are building a class that represents a simple calculator.</p>
+</div></div><p>Next, we would run the test to see if it fails. Since we have not yet implemented the add method, the test should fail with a message indicating that the add method is not yet implemented.</p>
+<p>Next, we would write the code for the add method. Here is an example of how this method might look:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>MyFirstJUnitJupiterTests.java</strong></pre>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource java code-overflow-wrap number-lines code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">public</span> <span class="kw">class</span> Calculator <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="kw">public</span> <span class="dt">double</span> <span class="fu">add</span><span class="op">(</span><span class="dt">double</span> a<span class="op">,</span> <span class="dt">double</span> b<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="cf">return</span> a <span class="op">+</span> b<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="op">}</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>We want the calculator to have methods for adding, subtracting, multiplying, and dividing two numbers.</p>
+</div></div><p>Finally, we would run the test again to ensure that it passes. If the test passes, we know that the add method is working correctly and we can move on to the next feature. We would repeat this process for each of the calculator’s methods, writing a test for each one, implementing the code, and then running the test to ensure it passes.</p>
+<p>This is just one example of how TDD can be applied in a Java project using JUnit. There are many other ways to approach TDD, and the specific steps and details will vary depending on the project and the requirements.</p>
+</section>
+<section id="most-popular-asserts" class="level2 page-columns page-full" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="most-popular-asserts"><span class="header-section-number">5</span> Most popular <code>asserts</code></h2>
+<p><code>Assertions</code> is a <strong>collection</strong> of utility methods that support asserting conditions in tests.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Unless otherwise noted, a failed assertion will throw an AssertionFailedError or a subclass thereof.</p>
+</div></div><div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>MyFirstJUnitJupiterTests.java</strong></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource java code-overflow-wrap number-lines code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1"></a><span class="at">@API</span><span class="op">(</span>status<span class="op">=</span>STABLE<span class="op">,</span> since<span class="op">=</span><span class="st">"5.0"</span><span class="op">)</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">public</span> <span class="dt">final</span> <span class="kw">class</span> Assertions</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw">extends</span> <span class="bu">Object</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="https://junit.org/junit5/docs/5.8.2/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html" class="external">Assertions 5.8.2</a></p>
+<table class="table">
+<caption>Most Pouplar Asserts: description</caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 40%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Assert</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>assertEquals(expected, actual)</code></td>
+<td>Tests that two values are equal.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>assertTrue(condition)</code></td>
+<td>Tests that a condition is true.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>assertFalse(condition)</code></td>
+<td>Tests that a condition is false.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>assertNotNull(object)</code></td>
+<td>Tests that an object is not null.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>assertNull(object)</code></td>
+<td>Tests that an object is null.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>assertArrayEquals(expected, actual)</code></td>
+<td>Tests that two arrays are equal.</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>assertSame(expected, actual)</code></td>
+<td>Tests that two references refer to the same object.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>assertNotSame(expected, actual)</code></td>
+<td>Tests that two references don’t refer to the same object.</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>assertAll(executables)</code></td>
+<td>Allows to group several assertions and execute them all.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>assertThrows(exceptionType, executable)</code></td>
+<td>Tests that a specific exception is thrown.</td>
+</tr>
+</tbody>
+</table>
+<div class="column-body-outset-right">
+<table class="table">
+<caption>Most Pouplar Asserts: code</caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 95%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Example Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>assertEquals(5, add(2,3));</code></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>assertTrue(checkRole("admin"));</code></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>assertFalse(checkRole("user"));</code></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>assertNotNull(new Object());</code></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>assertNull(null);</code></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>assertArrayEquals(new int[]{1,2,3}, new int[]{1,2,3});</code></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>Object obj = new Object(); assertSame(obj, obj);</code></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>Object obj1 = new Object(); Object obj2 = new Object(); assertNotSame(obj1, obj2);</code></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>assertAll("Person properties", () -&gt; assertEquals("John", person.getFirstName()), () -&gt; assertEquals("Doe", person.getLastName()));</code></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>assertThrows(IllegalArgumentException.class, () -&gt; { Integer.parseInt("Not a number"); });</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="naming-the-test-class" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="naming-the-test-class"><span class="header-section-number">6</span> Naming the test class</h2>
+<p>We use common conventions in naming the test class. Let’s start with the name of the class which is being tested and assume the name of that class is <code>Student</code>. In that case, the name of the test class should be <code>StudentTest</code>. We have to append <code>Test</code> to it. The same naming convention is used in the case of methods. If there is a method <code>DisplayStudentAddress()</code>, then the name of the method in testing should be <code>testDisplayStudentAddress()</code>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Naming in Production</th>
+<th>Naming in Testing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Student</td>
+<td>StudentTest</td>
+</tr>
+<tr class="even">
+<td>DisplayStudentAddress()</td>
+<td>testDisplayStudentAddress()</td>
+</tr>
+</tbody>
+</table>
+<!--- navLinks -->
+<br><br>
+<div class="row">
+<br>
+<div class="column left previous">
+<p><br> <a href="../javase/se-concepts-projectgit.html"><i class="fa-solid fa-arrow-left" aria-label="arrow-left"></i> Java SE: Project push GitHub</a> <br></p>
+</div>
+<br>
+<div class="column center">
+<p><br> <a href="#top"><i class="fa-solid fa-arrow-up" aria-label="arrow-up"></i> top</a> <br></p>
+</div>
+<br>
+<div class="column right next">
+<p><br> <a href="../javase/se-concepts-objects.html">Java SE: Class and Objects <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></a> <br></p>
+</div>
+<p><br></p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><a href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International (CC BY 4.0)</a></div>   
+      <div class="nav-footer-center">if you want to go far, walk slow</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/AlbertProfe/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom"});</script>
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
