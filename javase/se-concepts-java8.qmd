@@ -55,7 +55,7 @@ Java 8 introduced several new features to the language, including Streams, Optio
 **Method references provide a way to pass a method as an argument to another method**. They provide a concise and expressive way to write code, and can be used in place of lambda expressions in certain situations. Method references are highly readable and can make code more modular and reusable.
 
 
-## Example of ``functional-styl``e in`` Java 8``
+## Example of ``functional-style`` in ``Java 8``
 
 Suppose you have a **list of integers and you want to filter out the even numbers and then calculate the sum of the remaining odd numbers**.
 
