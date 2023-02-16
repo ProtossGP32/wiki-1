@@ -11,7 +11,7 @@ categories: [ifcd0210, calendar,forecast, timetable]
 | - | 100% | -  | Lab | Labs, MOOC, Java, Spring, React etc |
 | 20% | 60% | 20% | Project | SCRUM, Lifecycle code from plan to devOps |
 | 20% | 60% | 20% | Itinerary | Three kinds: MOOC, model, devOps |
-| - | 100% | - | Personal | Take notes, time ma| #5 | 20 | 23/01 |
+| - | 100% | - | Personal | Take notes, time management| #5 | 20 | 23/01 |
 : Time Management, categories and time distribution {tbl-colwidths="[10,10,10,10,60]"}
 
 ## Timetable

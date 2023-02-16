@@ -211,6 +211,7 @@ website:
             - javase/se-concepts-coupling.qmd
             - javase/se-concepts-package.qmd
             - javase/se-concepts-interface.qmd
+            - javase/se-concepts-java8.qmd
         - text: "---"
         - section: "Java Principles"
           contents:
@@ -441,11 +442,15 @@ website:
             - about/about-learning-auto-evaluate.qmd
             - about/about-learning-questions.qmd
         - text: "---"
-        - section: "Listings"
+        - section: "Books"
           contents:
-            - about/about-listing-books.qmd
-            - about/about-listing-table.qmd
-            - about/about-listing-card.qmd
+            - about/about-listing-table-books.qmd
+            - about/about-listing-card-books.qmd
+        - text: "---"
+        - section: "Articles"
+          contents:
+            - about/about-listing-table-articles.qmd
+            - about/about-listing-card-articles.qmd
 
   page-footer: 
     background: secondary 
