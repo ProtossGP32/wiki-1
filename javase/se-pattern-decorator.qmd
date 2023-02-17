@@ -175,6 +175,7 @@ House Blend, Syrup, Milk $4.24
 This example demonstrates how the Decorator pattern can be used to add behavior to objects dynamically, without affecting the behavior of other objects from the same class.
 
 
+>>>>>>> e3f6b450685662abb959fe6dc77071b7dc9be0c2
 
 
 <!--- navLinks -->
