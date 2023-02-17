@@ -1,5 +1,5 @@
 ---
-title: "Behavioral: State"
+title: "State"
 subtitle: Java Fundamentals and Patterns
 author: Carla Velasco
 date: "06/01/2021"

@@ -224,19 +224,21 @@ website:
           contents:
             - javase/se-pattern-uml.qmd
             - javase/se-pattern-intro.qmd
-            - text: "- Creational"
+            - text: "<b>Creational</b>"
             - javase/se-pattern-singleton.qmd
             - javase/se-pattern-factory.qmd
             - javase/se-pattern-abstractfactory.qmd
             - javase/se-pattern-builder.qmd
-            - text: "- Structural"
+            - text: "<b>Structural</b>"
             - javase/se-pattern-facade.qmd
             - javase/se-pattern-bridge.qmd
             - javase/se-pattern-decorator.qmd
-            - text: "- Behavioral"
+            - javase/se-pattern-composite.qmd
+            - text: "<b>Behavioral</b>"
             - javase/se-pattern-observer.qmd
             - javase/se-pattern-strategy.qmd
             - javase/se-pattern-state.qmd
+            - javase/se-pattern-commander.qmd
         - text: "---"  
         - section: "Java SE Laboratories"
           contents:
@@ -455,7 +457,7 @@ website:
   page-footer: 
     background: secondary 
     left: "[Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)" 
-    center: "if you want to go far, walk slow" 
+    center: "If you want to go far, walk slow  /  We love dukkha" 
     right: 
       - icon: github
         href: https://github.com/AlbertProfe/

@@ -67,6 +67,7 @@ It deals with object **composition**. They provide a way **to compose objects an
   - [Facade](/javase/se-pattern-facade.qmd)
   - [Bridge](/javase/se-pattern-bridge.qmd)
   - [Decorator](/javase/se-pattern-decorator.qmd)
+  - [Composite](/javase/se-pattern-composite.qmd)
 
 ### Behavioral
 
@@ -75,6 +76,7 @@ It deals with **communication between objects and classes**. They provide a way 
   - [Observer](/javase/se-pattern-observer.qmd)
   - [Strategy](/javase/se-pattern-strategy.qmd)
   - [State](/javase/se-pattern-state.qmd)
+  - [Commander](/javase/se-pattern-commander.qmd)
 
 ## Advantage of design patterns
 
