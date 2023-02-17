@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,8 +47,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,7 +77,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-image','listing-categories','listing-title','listing-description','listing-reading-time','listing-date','listing-author','listing-file-modified',{ data: ['index'] },{ data: ['categories'] }],
-      
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-genre"],
     };
 
@@ -104,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-fixed">
 
 
 <div id="quarto-search-results"></div>
@@ -477,6 +476,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../javase/se-concepts-interface.html">
  <span class="dropdown-text">Java SE: Abstract/Interface</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-concepts-java8.html">
+ <span class="dropdown-text">Java SE: Java 8</span></a>
+  </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Java Principles</li>
         <li>
@@ -507,43 +510,51 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-singleton.html">
- <span class="dropdown-text">Creational: Singleton</span></a>
+ <span class="dropdown-text">Singleton</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-factory.html">
- <span class="dropdown-text">Creational: Factory</span></a>
+ <span class="dropdown-text">Factory</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-abstractfactory.html">
- <span class="dropdown-text">Creational: Abstract Factory</span></a>
+ <span class="dropdown-text">Abstract Factory</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-builder.html">
- <span class="dropdown-text">Creational: Builder</span></a>
+ <span class="dropdown-text">Builder</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-facade.html">
- <span class="dropdown-text">Structural: Facade</span></a>
+ <span class="dropdown-text">Facade</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-bridge.html">
- <span class="dropdown-text">Structural: Bridge</span></a>
+ <span class="dropdown-text">Bridge</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-decorator.html">
- <span class="dropdown-text">Structural: Decorator</span></a>
+ <span class="dropdown-text">Decorator</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-composite.html">
+ <span class="dropdown-text">Composite</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-observer.html">
- <span class="dropdown-text">Behavioral: Observer</span></a>
+ <span class="dropdown-text">Observer</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-strategy.html">
- <span class="dropdown-text">Behavioral: Strategy</span></a>
+ <span class="dropdown-text">Strategy</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../javase/se-pattern-state.html">
- <span class="dropdown-text">Behavioral: State</span></a>
+ <span class="dropdown-text">State</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/se-pattern-commander.html">
+ <span class="dropdown-text">Commander</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Java SE Laboratories</li>
@@ -1020,17 +1031,23 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">About the Useful Questions</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">Listings</li>
+        <li class="dropdown-header">Books</li>
         <li>
-    <a class="dropdown-item" href="../about/about-listing-books.html">
- <span class="dropdown-text">Books Card-Listing</span></a>
+    <a class="dropdown-item" href="../about/about-listing-table-books.html">
+ <span class="dropdown-text">Books Table-Listing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../about/about-listing-table.html">
+    <a class="dropdown-item" href="../about/about-listing-card-books.html">
+ <span class="dropdown-text">Books Card-Listing</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Articles</li>
+        <li>
+    <a class="dropdown-item" href="../about/about-listing-table-articles.html">
  <span class="dropdown-text">Articles Table-Listing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../about/about-listing-card.html">
+    <a class="dropdown-item" href="../about/about-listing-card-articles.html">
  <span class="dropdown-text">Articles Card-Listing</span></a>
   </li>  
     </ul>
@@ -1043,130 +1060,20 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Books Card-Listing</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  About
-  </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">About me and this site</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-this-me.html" class="sidebar-item-text sidebar-link">About me</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-this-site.html" class="sidebar-item-text sidebar-link">About this site</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-this-images-credit.html" class="sidebar-item-text sidebar-link">About images credit</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Learning</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-learning-intro.html" class="sidebar-item-text sidebar-link">About learning</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-learning-writing.html" class="sidebar-item-text sidebar-link">About Writing</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-learning-take-notes.html" class="sidebar-item-text sidebar-link">About Taking Notes</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-learning-write-comments.html" class="sidebar-item-text sidebar-link">About Writing Comments</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-learning-auto-evaluate.html" class="sidebar-item-text sidebar-link">About Auto-Evaluate</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-learning-questions.html" class="sidebar-item-text sidebar-link">About the Useful Questions</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Listings</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-listing-books.html" class="sidebar-item-text sidebar-link active">Books Card-Listing</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-listing-table.html" class="sidebar-item-text sidebar-link">Articles Table-Listing</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about/about-listing-card.html" class="sidebar-item-text sidebar-link">Articles Card-Listing</a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(21)</span></div><div class="category" data-category="AWS">AWS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Quarkus">Quarkus <span class="quarto-category-count">(2)</span></div><div class="category" data-category="agile">agile <span class="quarto-category-count">(7)</span></div><div class="category" data-category="architecture">architecture <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bash">bash <span class="quarto-category-count">(1)</span></div><div class="category" data-category="behavioral science">behavioral science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c">c <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data analysis">data analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="design">design <span class="quarto-category-count">(2)</span></div><div class="category" data-category="devops">devops <span class="quarto-category-count">(4)</span></div><div class="category" data-category="habits">habits <span class="quarto-category-count">(1)</span></div><div class="category" data-category="java">java <span class="quarto-category-count">(6)</span></div><div class="category" data-category="linux">linux <span class="quarto-category-count">(1)</span></div><div class="category" data-category="mental health">mental health <span class="quarto-category-count">(1)</span></div><div class="category" data-category="microservices">microservices <span class="quarto-category-count">(2)</span></div><div class="category" data-category="openshift">openshift <span class="quarto-category-count">(2)</span></div><div class="category" data-category="patterns">patterns <span class="quarto-category-count">(1)</span></div><div class="category" data-category="programming">programming <span class="quarto-category-count">(12)</span></div><div class="category" data-category="scrum">scrum <span class="quarto-category-count">(1)</span></div><div class="category" data-category="self-help">self-help <span class="quarto-category-count">(2)</span></div><div class="category" data-category="springboot">springboot <span class="quarto-category-count">(4)</span></div><div class="category" data-category="sre">sre <span class="quarto-category-count">(1)</span></div><div class="category" data-category="stress">stress <span class="quarto-category-count">(1)</span></div><div class="category" data-category="writing">writing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="zoology">zoology <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(30)</span></div><div class="category" data-category="agile">agile <span class="quarto-category-count">(4)</span></div><div class="category" data-category="assay">assay <span class="quarto-category-count">(2)</span></div><div class="category" data-category="design">design <span class="quarto-category-count">(4)</span></div><div class="category" data-category="devops">devops <span class="quarto-category-count">(4)</span></div><div class="category" data-category="java">java <span class="quarto-category-count">(6)</span></div><div class="category" data-category="programming">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="psychology">psychology <span class="quarto-category-count">(8)</span></div><div class="category" data-category="writing">writing <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Books Card-Listing</h1>
+<h1 class="title">Books Card-Listing</h1>
 <p class="subtitle lead">Recommended book list</p>
   <div class="quarto-categories">
     <div class="quarto-category">listing</div>
@@ -1195,7 +1102,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Thursday, January 26, 2023</p>
+      <p class="date-modified">Friday, February 17, 2023</p>
     </div>
   </div>
     
@@ -1206,7 +1113,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/about/books.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Reading is essential for those who seek to rise above the ordinary. - Jim Rohn"><img src="..\images/about/books.jpg" class="img-fluid figure-img" style="width:35.0%"></a></p>
+<p><a href="../images/about/books.jpg" class="lightbox" title="Reading is essential for those who seek to rise above the ordinary. - Jim Rohn" data-gallery="quarto-lightbox-gallery-1"><img src="../images/about/books.jpg" class="img-fluid figure-img" style="width:35.0%"></a></p>
 <p></p><figcaption class="figure-caption">Reading is essential for those who seek to rise above the ordinary. - Jim Rohn</figcaption><p></p>
 </figure>
 </div>
@@ -1231,7 +1138,7 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="agile,habits" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1674241791791" data-listing-reading-time-sort="0.09">
+<div class="quarto-post image-left" data-index="0" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.09">
 <div class="thumbnail">
 <p><a href="../books/atomicHabits.html"> <img src="../books/atomicHabits.jpeg" class="thumnail-image"> </a></p>
 </div>
@@ -1245,11 +1152,8 @@ James Clear, 2016, Atomic Habits: An Easy &amp; Proven Way to Build Good Habits 
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
-agile
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('habits'); return false;">
-habits
+<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
+psychology
 </div>
 </div>
 <a href="../books/atomicHabits.html">
@@ -1270,12 +1174,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Friday, January 20, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="1" data-categories="agile,mental health,stress" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185533372" data-listing-reading-time-sort="0.015">
+<div class="quarto-post image-left" data-index="1" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="1.975">
 <div class="thumbnail">
 <p><a href="../books/burnout.html"> <img src="../books/burnout.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -1289,14 +1193,8 @@ Herbert Freudenberger, 1980, Burnout: The High Cost of High Achievement
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
-agile
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('mental health'); return false;">
-mental health
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('stress'); return false;">
-stress
+<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
+psychology
 </div>
 </div>
 <a href="../books/burnout.html">
@@ -1314,15 +1212,15 @@ Friday, January 20, 2023
 albertprofe
 </div>
 <div class="listing-reading-time">
-0 min
+1 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="2" data-categories="programming,c" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185496619" data-listing-reading-time-sort="0.015">
+<div class="quarto-post image-left" data-index="2" data-categories="programming" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.015">
 <div class="thumbnail">
 <p><a href="../books/c.html"> <img src="../books/c.jpeg" class="thumnail-image"> </a></p>
 </div>
@@ -1338,9 +1236,6 @@ Dennis Ritchie, 1978, C: A Programming Language
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
 programming
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c'); return false;">
-c
 </div>
 </div>
 <a href="../books/c.html">
@@ -1361,12 +1256,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="3" data-categories="agile,behavioral science,zoology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185917013" data-listing-reading-time-sort="0.015">
+<div class="quarto-post image-left" data-index="3" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.015">
 <div class="thumbnail">
 <p><a href="../books/chimpanzeePolitics.html"> <img src="../books/chimpanzeePolitics.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -1380,14 +1275,8 @@ Frans de Waal, 1982, Chimpanzee Politics: Power and Sex among Apes
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
-agile
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('behavioral science'); return false;">
-behavioral science
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('zoology'); return false;">
-zoology
+<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
+psychology
 </div>
 </div>
 <a href="../books/chimpanzeePolitics.html">
@@ -1408,12 +1297,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="4" data-categories="programming,data analysis,bash,linux" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185840737" data-listing-reading-time-sort="0.015">
+<div class="quarto-post image-left" data-index="4" data-categories="devops" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.015">
 <div class="thumbnail">
 <p><a href="../books/dataScienceAtCommandLine.html"> <img src="../books/dataScienceAtCommandLine.jpeg" class="thumnail-image"> </a></p>
 </div>
@@ -1427,17 +1316,8 @@ Jeroen Janssens, 2014, Data Science at the Command Line: Facing the Future with 
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data analysis'); return false;">
-data analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bash'); return false;">
-bash
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('linux'); return false;">
-linux
+<div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
+devops
 </div>
 </div>
 <a href="../books/dataScienceAtCommandLine.html">
@@ -1458,12 +1338,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="5" data-categories="programming,architecture,design" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185586253" data-listing-reading-time-sort="0.015">
+<div class="quarto-post image-left" data-index="5" data-categories="design" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.015">
 <div class="thumbnail">
 <p><a href="../books/designPatterns.html"> <img src="../books/designPatterns.jpeg" class="thumnail-image"> </a></p>
 </div>
@@ -1477,12 +1357,6 @@ Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, 1994, Design Patterns:
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('architecture'); return false;">
-architecture
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
 design
 </div>
@@ -1505,12 +1379,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="6" data-categories="programming,devops,openshift" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185604406" data-listing-reading-time-sort="0.015">
+<div class="quarto-post image-left" data-index="6" data-categories="devops" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.705">
 <div class="thumbnail">
 <p><a href="../books/devops_with_openshift_oreilly.html"> <img src="../books/devops_with_openshift_oreilly.png" class="thumnail-image"> </a></p>
 </div>
@@ -1520,18 +1394,12 @@ Sunday, February 12, 2023
 DevOps with OpenShift
 </h3>
 <div class="listing-subtitle">
-Joao Pinto, Jay Shaughnessy, Grant Shipley, 2018, DevOps with OpenShift: Continuous Delivery for Container Applications
+Stefano Picozzi, Mike Hepburn &amp; Noel O’Connor, 2017, DevOps with OpenShift: Cloud Deployments Made Easy
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
 devops
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('openshift'); return false;">
-openshift
 </div>
 </div>
 <a href="../books/devops_with_openshift_oreilly.html">
@@ -1552,12 +1420,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="7" data-categories="programming,patterns" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185619021" data-listing-reading-time-sort="0.1">
+<div class="quarto-post image-left" data-index="7" data-categories="design" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.14">
 <div class="thumbnail">
 <p><a href="../books/diveIntoDesignPatterns.html"> <img src="../books/diveIntoDesignPatterns.png" class="thumnail-image"> </a></p>
 </div>
@@ -1571,11 +1439,8 @@ Alexander Shvets, 2022, Dive Into DESIGN PATTERNS: An ebook on design patterns a
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('patterns'); return false;">
-patterns
+<div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
+design
 </div>
 </div>
 <a href="../books/diveIntoDesignPatterns.html">
@@ -1596,12 +1461,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="8" data-categories="programming,design,architecture" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185897484" data-listing-reading-time-sort="0.015">
+<div class="quarto-post image-left" data-index="8" data-categories="design" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.015">
 <div class="thumbnail">
 <p><a href="../books/domaindrivendesign.html"> <img src="../books/domaindrivendesign.jpeg" class="thumnail-image"> </a></p>
 </div>
@@ -1615,14 +1480,8 @@ Eric Evans, 2003, Domain Driven Design: Tackling Complexity in the Heart of Soft
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
 design
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('architecture'); return false;">
-architecture
 </div>
 </div>
 <a href="../books/domaindrivendesign.html">
@@ -1643,12 +1502,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="9" data-categories="writing" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185932919" data-listing-reading-time-sort="0.015">
+<div class="quarto-post image-left" data-index="9" data-categories="writing" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.015">
 <div class="thumbnail">
 <p><a href="../books/elements_style.html"> <img src="../books/elementsStyle.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -1684,12 +1543,53 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="10" data-categories="agile,data analysis" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185660629" data-listing-reading-time-sort="0.015">
+<div class="quarto-post image-left" data-index="10" data-categories="agile" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676624483607" data-listing-reading-time-sort="5.425">
+<div class="thumbnail">
+<p><a href="../books/execution.html"> <img src="../books/execution.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../books/execution.html">
+<h3 class="no-anchor listing-title">
+Execution: The Discipline of Getting Things Done
+</h3>
+<div class="listing-subtitle">
+Larry Bossidy, Ram Charan,Charles Burck (with), 2006, Execution: The Discipline of Getting Things Done
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
+agile
+</div>
+</div>
+<a href="../books/execution.html">
+<div class="listing-description">
+<p>#1 NEW YORK TIMES BESTSELLER - More than two million copies in print! The premier resource for how to deliver results in an uncertain world, whether you’re running an entire company or in your first management job. A must-read for anyone who cares about business.–The New York Times</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../books/execution.html">
+<div class="listing-date">
+Friday, January 20, 2023
+</div>
+<div class="listing-author">
+albertprofe
+</div>
+<div class="listing-reading-time">
+5 min
+</div>
+<div class="metadata-value listing-file-modified">
+Friday, February 17, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="11" data-categories="agile" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078154" data-listing-reading-time-sort="0.015">
 <div class="thumbnail">
 <p><a href="../books/howToMeasureAnyThing.html"> <img src="../books/howToMeasureAnyThing.jpeg" class="thumnail-image"> </a></p>
 </div>
@@ -1705,9 +1605,6 @@ Douglas W. Hubbard, 2010, How to Measure Anything: Finding the Value of Intangib
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
 agile
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data analysis'); return false;">
-data analysis
 </div>
 </div>
 <a href="../books/howToMeasureAnyThing.html">
@@ -1728,12 +1625,94 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="11" data-categories="programming,java,springboot,microservices,architecture" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185703093" data-listing-reading-time-sort="0.465">
+<div class="quarto-post image-left" data-index="12" data-categories="assay" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="0.4">
+<div class="thumbnail">
+<p><a href="../books/incerto.html"> <img src="../books/incerto.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../books/incerto.html">
+<h3 class="no-anchor listing-title">
+Incerto
+</h3>
+<div class="listing-subtitle">
+Nicholas Taleb, 2020, Incerto: Navigating Uncertainty and the Four Traps of Success
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('assay'); return false;">
+assay
+</div>
+</div>
+<a href="../books/incerto.html">
+<div class="listing-description">
+<p>A comprehensive guide to navigating uncertainty and the traps of success. Incerto, written by renowned author Nicholas Taleb, explores the intricacies of decision-making and how to avoid the traps that often lead to failure.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../books/incerto.html">
+<div class="listing-date">
+Friday, January 20, 2023
+</div>
+<div class="listing-author">
+albertprofe
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+<div class="metadata-value listing-file-modified">
+Thursday, February 16, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="13" data-categories="devops" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.065">
+<div class="thumbnail">
+<p><a href="../books/Kubernetes_Native_Microservices.html"> <img src="../books/Kubernetes_Native_Microservice.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../books/Kubernetes_Native_Microservices.html">
+<h3 class="no-anchor listing-title">
+Kubernetes Native Microservices
+</h3>
+<div class="listing-subtitle">
+John Clingan and Ken Finnigan, 2021, Kubernetes Native Microservices with Quarkus and MicroProfile
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
+devops
+</div>
+</div>
+<a href="../books/Kubernetes_Native_Microservices.html">
+<div class="listing-description">
+<p>Entire books are available on Quarkus, microservices, MicroProfile, Spring, and Kubernetes. However, they tend to focus only on each specific topic. This book covers how to combine these topics into an effective and integrated development and deployment stack. Kubernetes-native microservices utilize and integrate with Kubernetes features naturally and efficiently. The result is a productive developer experience that is consistent with the expectations of Kubernetes platform administrators.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../books/Kubernetes_Native_Microservices.html">
+<div class="listing-date">
+Friday, January 20, 2023
+</div>
+<div class="listing-author">
+albertprofe
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+<div class="metadata-value listing-file-modified">
+Thursday, February 16, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="14" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.465">
 <div class="thumbnail">
 <p><a href="../books/MicroservicesPatterns.html"> <img src="../books/MicrosserivcesPatterns.png" class="thumnail-image"> </a></p>
 </div>
@@ -1747,20 +1726,8 @@ Chris Richardson, 2020, Microservices Patterns: With examples in Java
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
 java
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('springboot'); return false;">
-springboot
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('microservices'); return false;">
-microservices
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('architecture'); return false;">
-architecture
 </div>
 </div>
 <a href="../books/MicroservicesPatterns.html">
@@ -1781,12 +1748,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="12" data-categories="programming,java,springboot,microservices" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676186556245" data-listing-reading-time-sort="0.645">
+<div class="quarto-post image-left" data-index="15" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="0.645">
 <div class="thumbnail">
 <p><a href="../books/microservices-for-java-developers.html"> <img src="../books/microservices-for-java-developers.png" class="thumnail-image"> </a></p>
 </div>
@@ -1800,17 +1767,8 @@ Rafael Benevides, 2019, Microservices for Java Developers: A Hands-On Introducti
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
 java
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('springboot'); return false;">
-springboot
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('microservices'); return false;">
-microservices
 </div>
 </div>
 <a href="../books/microservices-for-java-developers.html">
@@ -1831,12 +1789,53 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="13" data-categories="agile,self-help" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185714276" data-listing-reading-time-sort="1.24">
+<div class="quarto-post image-left" data-index="16" data-categories="agile" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="0.29">
+<div class="thumbnail">
+<p><a href="../books/MindManagementNotTimeManagement.html"> <img src="../books/MindManagementNotTimeManagement.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../books/MindManagementNotTimeManagement.html">
+<h3 class="no-anchor listing-title">
+Mind Management Not Time Management
+</h3>
+<div class="listing-subtitle">
+David Kadavy, 2020, Mind Management Not Time Management: A Guide to Improving Your Productivity and Happiness
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
+agile
+</div>
+</div>
+<a href="../books/MindManagementNotTimeManagement.html">
+<div class="listing-description">
+<p>A practical guide to improving your productivity and happiness. Mind Management Not Time Management teaches you how to manage your thoughts and emotions, so you can achieve your goals and live a more fulfilling life.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../books/MindManagementNotTimeManagement.html">
+<div class="listing-date">
+Friday, January 20, 2023
+</div>
+<div class="listing-author">
+albertprofe
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+<div class="metadata-value listing-file-modified">
+Thursday, February 16, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="17" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="1.24">
 <div class="thumbnail">
 <p><a href="../books/mindset.html"> <img src="../books/mindset.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -1850,11 +1849,8 @@ Carol Dweck, 2006, Mindset: The New Psychology of Success
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
-agile
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('self-help'); return false;">
-self-help
+<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
+psychology
 </div>
 </div>
 <a href="../books/mindset.html">
@@ -1875,12 +1871,53 @@ albertprofe
 1 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="14" data-categories="programming,java,devops,Quarkus,openshift" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676186323197" data-listing-reading-time-sort="0.695">
+<div class="quarto-post image-left" data-index="18" data-categories="design" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="0.92">
+<div class="thumbnail">
+<p><a href="../books/modern-java-ee-design-patterns.html"> <img src="../books/modern-java-ee-design-patterns.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../books/modern-java-ee-design-patterns.html">
+<h3 class="no-anchor listing-title">
+Modern Java EE Design Patterns
+</h3>
+<div class="listing-subtitle">
+Markus Eisele, 2016, Modern Java EE Design Patterns: Building Scalable Architecture for Sustainable Enterprise Development
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
+design
+</div>
+</div>
+<a href="../books/modern-java-ee-design-patterns.html">
+<div class="listing-description">
+<p>With the ascent of DevOps, microservices, containers, and cloud-based development platforms, the gap between state-of-the-art solutions and the technology that enterprises typically support has greatly increased. But as Markus Eisele explains in this O’Reilly report, some enterprises are now looking to bridge that gap by building microservice-based architectures on top of Java EE.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../books/modern-java-ee-design-patterns.html">
+<div class="listing-date">
+Friday, January 20, 2023
+</div>
+<div class="listing-author">
+albertprofe
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+<div class="metadata-value listing-file-modified">
+Thursday, February 16, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="19" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="0.695">
 <div class="thumbnail">
 <p><a href="../books/quarkusCookBook.html"> <img src="../books/quarkusCookBook.jpeg" class="thumnail-image"> </a></p>
 </div>
@@ -1894,20 +1931,8 @@ Alex Soto Bueno, Jason Porter, February 9, 2021, Quarkus Cookbook: Developing Cl
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
 java
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
-devops
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Quarkus'); return false;">
-Quarkus
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('openshift'); return false;">
-openshift
 </div>
 </div>
 <a href="../books/quarkusCookBook.html">
@@ -1928,12 +1953,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="15" data-categories="programming,java,springboot,devops,Quarkus" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185807642" data-listing-reading-time-sort="0.52">
+<div class="quarto-post image-left" data-index="20" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="0.52">
 <div class="thumbnail">
 <p><a href="../books/quarkusSpringDevelopers.html"> <img src="../books/quarkusSpringDevelopers.png" class="thumnail-image"> </a></p>
 </div>
@@ -1947,20 +1972,8 @@ Eric Deandrea, August 31, 2021, Quarkus for Spring Developers
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
 java
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('springboot'); return false;">
-springboot
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
-devops
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Quarkus'); return false;">
-Quarkus
 </div>
 </div>
 <a href="../books/quarkusSpringDevelopers.html">
@@ -1981,12 +1994,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="16" data-categories="scrum,agile" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1674241777376" data-listing-reading-time-sort="1.315">
+<div class="quarto-post image-left" data-index="21" data-categories="agile" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="1.315">
 <div class="thumbnail">
 <p><a href="../books/scrum.html"> <img src="../books/scrum.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -2000,9 +2013,6 @@ J.J. shuterland, 2014, Scrum: The Art of Doing Twice the Work in Half the Time
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('scrum'); return false;">
-scrum
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
 agile
 </div>
@@ -2025,12 +2035,12 @@ albertprofe
 1 min
 </div>
 <div class="metadata-value listing-file-modified">
-Friday, January 20, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="17" data-categories="devops,sre" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1674371066522" data-listing-reading-time-sort="2.29">
+<div class="quarto-post image-left" data-index="22" data-categories="devops" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="2.29">
 <div class="thumbnail">
 <p><a href="../books/sre.html"> <img src="../books/sre.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -2046,9 +2056,6 @@ Betsy Beyer, Chris Jones, Jennifer Petoff and Niall Richard Murphy, 2016, How Go
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
 devops
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('sre'); return false;">
-sre
 </div>
 </div>
 <a href="../books/sre.html">
@@ -2069,12 +2076,12 @@ albertprofe
 2 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, January 22, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="18" data-categories="programming,java,springboot,AWS,architecture" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185743046" data-listing-reading-time-sort="0.58">
+<div class="quarto-post image-left" data-index="23" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="0.58">
 <div class="thumbnail">
 <p><a href="../books/stratospheric.html"> <img src="../books/stratospheric.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -2088,20 +2095,8 @@ Stratospheric, 2020, From Zero to Production with Spring Boot and AWS: Building 
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
 java
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('springboot'); return false;">
-springboot
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('AWS'); return false;">
-AWS
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('architecture'); return false;">
-architecture
 </div>
 </div>
 <a href="../books/stratospheric.html">
@@ -2122,12 +2117,12 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="19" data-categories="agile,self-help" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676185520027" data-listing-reading-time-sort="1.565">
+<div class="quarto-post image-left" data-index="24" data-categories="assay" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078102" data-listing-reading-time-sort="1.565">
 <div class="thumbnail">
 <p><a href="../books/budddhaandBadasss.html"> <img src="../books/budddhaandBadasss.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -2141,11 +2136,8 @@ Vishen Lakhiani, 2020, The Buddha and the Badass: The Secret Spiritual Art of Su
 </div>
 </a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
-agile
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('self-help'); return false;">
-self-help
+<div class="listing-category" onclick="window.quartoListingCategory('assay'); return false;">
+assay
 </div>
 </div>
 <a href="../books/budddhaandBadasss.html">
@@ -2166,14 +2158,178 @@ albertprofe
 1 min
 </div>
 <div class="metadata-value listing-file-modified">
-Sunday, February 12, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="20" data-categories="java,programming" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1674241530270" data-listing-reading-time-sort="0.6">
+<div class="quarto-post image-left" data-index="25" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="0.43">
 <div class="thumbnail">
-<p><a href="../books/thinkInJava.html"> <img src="../books/thinkInJava.jpeg" class="thumnail-image"> </a></p>
+<p><a href="../books/theIntellingenceTrap.html"> <img data-src="../books/theIntellingenceTrap.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../books/theIntellingenceTrap.html">
+<h3 class="no-anchor listing-title">
+The Intelligence Trap
+</h3>
+<div class="listing-subtitle">
+The Intelligence Trap, 2019, The Intelligence Trap: Why Smart People Make Dumb Decisions
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
+psychology
+</div>
+</div>
+<a href="../books/theIntellingenceTrap.html">
+<div class="listing-description">
+<p>An exploration of why even the smartest people can make poor decisions. The Intelligence Trap, written by science journalist David Robson, reveals the cognitive biases and traps that can lead us astray, and provides practical strategies for overcoming them.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../books/theIntellingenceTrap.html">
+<div class="listing-date">
+Friday, January 20, 2023
+</div>
+<div class="listing-author">
+David Robson
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+<div class="metadata-value listing-file-modified">
+Thursday, February 16, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="26" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="1.215">
+<div class="thumbnail">
+<p><a href="../books/relaxationrevolution.html"> <img data-src="../books/relaxationrevolution.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../books/relaxationrevolution.html">
+<h3 class="no-anchor listing-title">
+The Relaxation Revolution
+</h3>
+<div class="listing-subtitle">
+William Proctor, Herbert Benson, 2010, The Relaxation Revolution: Enhancing Your Personal Health Through the Science and Genetics of Mind Body Healing
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
+psychology
+</div>
+</div>
+<a href="../books/relaxationrevolution.html">
+<div class="listing-description">
+<p>A comprehensive guide to reducing stress and improving well-being. The Relaxation Revolution provides practical strategies for relaxation and mindfulness, so you can lead a more balanced and fulfilling life.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../books/relaxationrevolution.html">
+<div class="listing-date">
+Friday, January 20, 2023
+</div>
+<div class="listing-author">
+albertprofe
+</div>
+<div class="listing-reading-time">
+1 min
+</div>
+<div class="metadata-value listing-file-modified">
+Thursday, February 16, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="27" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="1.9">
+<div class="thumbnail">
+<p><a href="../books/theRighteousMind.html"> <img data-src="../books/theRighteousMind.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../books/theRighteousMind.html">
+<h3 class="no-anchor listing-title">
+The Righteous Mind
+</h3>
+<div class="listing-subtitle">
+Jonathan Haidt, 2013, The Righteous Mind: Why Good People are Divided by Politics and Religion
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
+psychology
+</div>
+</div>
+<a href="../books/theRighteousMind.html">
+<div class="listing-description">
+<p>A groundbreaking exploration of the roots of human morality. The Righteous Mind, written by social psychologist Jonathan Haidt, provides insights into the ways in which moral values and beliefs influence our political and religious views.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../books/theRighteousMind.html">
+<div class="listing-date">
+Friday, January 20, 2023
+</div>
+<div class="listing-author">
+albertprofe
+</div>
+<div class="listing-reading-time">
+1 min
+</div>
+<div class="metadata-value listing-file-modified">
+Thursday, February 16, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="28" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078166" data-listing-reading-time-sort="1.13">
+<div class="thumbnail">
+<p><a href="../books/statusGame.html"> <img data-src="../books/statusGame.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../books/statusGame.html">
+<h3 class="no-anchor listing-title">
+The Status Game
+</h3>
+<div class="listing-subtitle">
+Will Storr, 2021, The Status Game: On Social Position and How We Use It
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
+psychology
+</div>
+</div>
+<a href="../books/statusGame.html">
+<div class="listing-description">
+<p>An in-depth examination of the role of social status and prestige in our lives. The Status Game provides insights and strategies for navigating the complex world of status and prestige, so you can achieve your goals and live a more fulfilling life.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../books/statusGame.html">
+<div class="listing-date">
+Friday, January 20, 2023
+</div>
+<div class="listing-author">
+albertprofe
+</div>
+<div class="listing-reading-time">
+1 min
+</div>
+<div class="metadata-value listing-file-modified">
+Thursday, February 16, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="29" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676533078186" data-listing-reading-time-sort="0.6">
+<div class="thumbnail">
+<p><a href="../books/thinkInJava.html"> <img data-src="../books/thinkInJava.jpeg" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="../books/thinkInJava.html">
@@ -2187,9 +2343,6 @@ Eckel Bruce, 2006, Scrum: The Art of Doing Twice the Work in Half the Time
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
 java
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
 </div>
 </div>
 <a href="../books/thinkInJava.html">
@@ -2210,7 +2363,7 @@ albertprofe
 0 min
 </div>
 <div class="metadata-value listing-file-modified">
-Friday, January 20, 2023
+Thursday, February 16, 2023
 </div>
 </a>
 </div>
@@ -2219,21 +2372,24 @@ Friday, January 20, 2023
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="books-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 <!--- navLinks -->
 <br><br>
 <div class="row">
 <br>
 <div class="column left previous">
-<p><br> <a href="../about/about-learning-questions.html"><i class="fa-solid fa-arrow-left" aria-label="arrow-left"></i> About the Useful Questions</a> <br></p>
+<p><br> <a href="../about/about-learning-questions.html"> About the Useful Questions</a> <br></p>
 </div>
 <br>
 <div class="column center">
-<p><br> <a href="#top"><i class="fa-solid fa-arrow-up" aria-label="arrow-up"></i> top</a> <br></p>
+<p><br> <a href="#top"> top</a> <br></p>
 </div>
 <br>
 <div class="column right next">
-<p><br> <a href="../about/about-listing-table.html">Articles Table-Listing <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></a> <br></p>
+<p><br> <a href="../about/about-listing-table.html">Articles Table-Listing </a> <br></p>
 </div>
 <p><br></p>
 </div>
@@ -2494,7 +2650,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left"><a href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International (CC BY 4.0)</a></div>   
-      <div class="nav-footer-center">if you want to go far, walk slow</div>
+      <div class="nav-footer-center">If you want to go far, walk slow / We love dukkha</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -2513,7 +2669,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});</script>
 
 
 

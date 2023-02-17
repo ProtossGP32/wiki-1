@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="albertprofe">
-<meta name="description" content="A seminal book in software engineering that has become an essential reference for developers. The authors describe 23 design patterns that provide solutions to recurring problems in software design, making it easier to write maintainable and scalable code.">
+<meta name="author" content="Rafa C.">
+<meta name="description" content="What is the Composite Structural Design-Pattern">
 
-<title>albertprofe wiki - Design Patterns</title>
+<title>albertprofe wiki - Composite</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,9 +43,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 
 <div id="quarto-search-results"></div>
@@ -1028,36 +1025,368 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Composite</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  Java Standard Edition
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">What is Java SE</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-what-basics.html" class="sidebar-item-text sidebar-link">Java Standard Edition: Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-what-principles.html" class="sidebar-item-text sidebar-link">Java Standard Edition: Principles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-what-moochelsinki.html" class="sidebar-item-text sidebar-link">Java MOOC Helsinki</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Java Create Project</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-maven.html" class="sidebar-item-text sidebar-link">Java SE: Maven</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-createproject.html" class="sidebar-item-text sidebar-link">Java SE: Create Maven Project</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-projectgit.html" class="sidebar-item-text sidebar-link">Java SE: Project push GitHub</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-tdd.html" class="sidebar-item-text sidebar-link">Java SE: JUnit and TDD</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Java Concepts</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-objects.html" class="sidebar-item-text sidebar-link">Java SE: Class and Objects</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-scope.html" class="sidebar-item-text sidebar-link">Java SE: Scope</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-static.html" class="sidebar-item-text sidebar-link">Java SE: static modifier</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-coupling.html" class="sidebar-item-text sidebar-link">Java SE: Coupling and DDD</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-package.html" class="sidebar-item-text sidebar-link">Java SE: Packages</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-interface.html" class="sidebar-item-text sidebar-link">Java SE: Abstract/Interface</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-java8.html" class="sidebar-item-text sidebar-link">Java SE: Java 8</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Java Principles</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-encapsulation.html" class="sidebar-item-text sidebar-link">Java SE: Encapsulation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-abstraction.html" class="sidebar-item-text sidebar-link">Java SE: Abstraction</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-inheritance.html" class="sidebar-item-text sidebar-link">Java SE: Inherence</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-polymorphism.html" class="sidebar-item-text sidebar-link">Java SE: Polymorphism</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Java Design Patterns</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-uml.html" class="sidebar-item-text sidebar-link">Java Patterns: UML</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-intro.html" class="sidebar-item-text sidebar-link">Java Patterns: Types</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <b>Creational</b>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-singleton.html" class="sidebar-item-text sidebar-link">Singleton</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-factory.html" class="sidebar-item-text sidebar-link">Factory</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-abstractfactory.html" class="sidebar-item-text sidebar-link">Abstract Factory</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-builder.html" class="sidebar-item-text sidebar-link">Builder</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <b>Structural</b>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-facade.html" class="sidebar-item-text sidebar-link">Facade</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-bridge.html" class="sidebar-item-text sidebar-link">Bridge</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-decorator.html" class="sidebar-item-text sidebar-link">Decorator</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-composite.html" class="sidebar-item-text sidebar-link active">Composite</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <b>Behavioral</b>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-observer.html" class="sidebar-item-text sidebar-link">Observer</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-strategy.html" class="sidebar-item-text sidebar-link">Strategy</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-state.html" class="sidebar-item-text sidebar-link">State</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-commander.html" class="sidebar-item-text sidebar-link">Commander</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">Java SE Laboratories</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-1.html" class="sidebar-item-text sidebar-link">Lab#SE00-1: Maven Person</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-2.html" class="sidebar-item-text sidebar-link">Lab#SE00-2: Maven Clinic</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-3.html" class="sidebar-item-text sidebar-link">Lab#SE00-3: Library Model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-4.html" class="sidebar-item-text sidebar-link">Lab#SE00-4: Abstract/Interface Human</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab1-1.html" class="sidebar-item-text sidebar-link">Lab#SE01-1: Maven/Gradle Person and Account</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab1-2.html" class="sidebar-item-text sidebar-link">Lab#SE01-2: Maven/Gradle Person and Account stored in JSON</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-1.html" class="sidebar-item-text sidebar-link">Lab#SE02-1: Movie/Review, Model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-2.html" class="sidebar-item-text sidebar-link">Lab#SE02-2: Movie/Review, CRUD Operations</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-3.html" class="sidebar-item-text sidebar-link">Lab#SE02-3: Movie/Review, factory</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-4.html" class="sidebar-item-text sidebar-link">Lab#SE02-4: Movie/Review, interactivity and coupling</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-5.html" class="sidebar-item-text sidebar-link">Lab#SE02-5: Movie/Review, simulate interactivity by console</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab3-1.html" class="sidebar-item-text sidebar-link">Lab#SE03-1: Library/Book, Core-Model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab3-2.html" class="sidebar-item-text sidebar-link">Lab#SE03-2: Library/Book, Sprint Zero</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">Java SE readings</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/resources.html" class="sidebar-item-text sidebar-link">Java SE Resources</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#book-image" id="toc-book-image" class="nav-link active" data-scroll-target="#book-image">Book Image</a></li>
-  <li><a href="#more-info" id="toc-more-info" class="nav-link" data-scroll-target="#more-info">More info</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Albertprofe/wiki/edit/main/books/designPatterns.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Albertprofe/wiki/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Design Patterns</h1>
-<p class="subtitle lead">Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, 1994, Design Patterns: Elements of Reusable Object-Oriented Software</p>
+<h1 class="title d-none d-lg-block">Composite</h1>
+<p class="subtitle lead">Java Fundamentals and Patterns</p>
   <div class="quarto-categories">
-    <div class="quarto-category">design</div>
+    <div class="quarto-category">javase</div>
+    <div class="quarto-category">composite</div>
+    <div class="quarto-category">design-patterns</div>
+    <div class="quarto-category">concepts</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A seminal book in software engineering that has become an essential reference for developers. The authors describe 23 design patterns that provide solutions to recurring problems in software design, making it easier to write maintainable and scalable code.
+    What is the Composite Structural Design-Pattern
   </div>
 </div>
 
@@ -1067,21 +1396,21 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>albertprofe </p>
+             <p>Rafa C. </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Friday, January 20, 2023</p>
+      <p class="date">Tuesday, June 1, 2021</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Thursday, February 16, 2023</p>
+      <p class="date-modified">Friday, February 17, 2023</p>
     </div>
   </div>
     
@@ -1090,19 +1419,12 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="book-image" class="level2">
-<h2 class="anchored" data-anchor-id="book-image">Book Image</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../books/designPatterns.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../books/designPatterns.jpeg" class="img-fluid figure-img"></a></p>
-</figure>
+<div class="summary">
+
 </div>
-</section>
-<section id="more-info" class="level2">
-<h2 class="anchored" data-anchor-id="more-info">More info</h2>
+<hr>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1376,7 +1698,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom"});</script>
 
 
 
