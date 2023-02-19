@@ -106,6 +106,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -1452,6 +1455,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="toc-section-number">4.1</span>  Example</a></li>
   </ul></li>
+  <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional"><span class="toc-section-number">5</span>  Optional</a>
+  <ul>
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1"><span class="toc-section-number">5.1</span>  Example</a></li>
+  </ul></li>
+  <li><a href="#lambda" id="toc-lambda" class="nav-link" data-scroll-target="#lambda"><span class="toc-section-number">6</span>  Lambda</a>
+  <ul>
+  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2"><span class="toc-section-number">6.1</span>  Example</a></li>
+  </ul></li>
+  <li><a href="#method-references" id="toc-method-references" class="nav-link" data-scroll-target="#method-references"><span class="toc-section-number">7</span>  Method references</a>
+  <ul>
+  <li><a href="#example-names-print" id="toc-example-names-print" class="nav-link" data-scroll-target="#example-names-print"><span class="toc-section-number">7.1</span>  Example <code>names</code> print</a></li>
+  <li><a href="#example-names-compareto" id="toc-example-names-compareto" class="nav-link" data-scroll-target="#example-names-compareto"><span class="toc-section-number">7.2</span>  Example <code>names</code> compareTo</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Albertprofe/wiki/edit/main/javase/se-concepts-java8.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Albertprofe/wiki/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -1594,6 +1610,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A stream <strong>does not store data and, in that sense, is not a data structure</strong>. It also never modifies the underlying data source.</p>
 <p>This functionality <code>java.util.stream</code> supports <strong>functional-style operations on streams of elements</strong>.</p>
 </div>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/javase/stream.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Streams allow you to express complex data manipulations in a simple, concise way. With streams, you can filter, map, reduce, and collect data in a highly readable and maintainable way."><img src="..\images/javase/stream.png" class="img-fluid figure-img" style="width:65.0%"></a></p>
+<p></p><figcaption class="figure-caption">Streams allow you to express complex data manipulations in a simple, concise way. With streams, you can filter, map, reduce, and collect data in a highly readable and maintainable way.</figcaption><p></p>
+</figure>
+</div>
 <section id="example" class="level3 page-columns page-full" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="example"><span class="header-section-number">4.1</span> Example</h3>
 <p>Here’s an example of how <strong>lazy evaluation, wrapping the data and intermediate/terminal operations</strong> work in Java streams:</p>
@@ -1617,6 +1640,147 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This operation <strong>triggers the computation of the stream and produces a result</strong>, which in this case is the first word in the stream that has a length greater than 3 and is in uppercase.</p>
 <p>Because of lazy evaluation, only the elements that are necessary to produce the result are processed. In this example, only the first element that matches the condition is processed, and the remaining elements are not processed.</p>
 <p>Finally, <strong>we print the result to the console</strong>, which is the first word in the stream that matches the condition. In this case, the result is the string “WORLD”.</p>
+</section>
+</section>
+<section id="optional" class="level2 page-columns page-full" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="optional"><span class="header-section-number">5</span> Optional</h2>
+<div class="summary">
+<p><code>Optional</code> is a <strong>container object that may or may not contain a non-null value.</strong> It is a way to represent a value that may or may not be present, without using null references.</p>
+</div>
+<p><br></p>
+<p>An <code>Optional</code> object can either contain a non-null value, or be empty. When an <code>Optional</code> object contains a value, it provides a way to safely access that value without risking a NullPointerException. On the other hand, when an <code>Optional</code> object is empty, it indicates that there is no value present.</p>
+<p>To create an <code>Optional</code> object, you can call the static<code>of()</code> method and pass in a non-null value, or you can call the static <code>empty()</code> method to create an empty <code>Optional</code> object.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/javase/optional.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Optional"><img src="..\images/javase/optional.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p></p><figcaption class="figure-caption">Optional</figcaption><p></p>
+</figure>
+</div>
+<p>To access the value of an <code>Optional</code> object, you can call the get() method, but it is recommended to first check if the value is present using the isPresent() method. If the value is not present, you can provide a default value using the <code>orElse()</code> or <code>orElseGet()</code> methods.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>Optional</code> is often used as a <strong>return type for methods that may or may not return a value</strong>, as a way to indicate that the method <strong>may return no value</strong>, and to avoid returning null references. It is also used in the <code>Stream API</code> to represent the possibility <strong>of an empty result set</strong>.</p>
+</div>
+</div>
+<section id="example-1" class="level3 page-columns page-full" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="example-1"><span class="header-section-number">5.1</span> Example</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Optional</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">public</span> <span class="kw">class</span> OptionalExample <span class="op">{</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>        <span class="bu">String</span> name <span class="op">=</span> <span class="st">"John Doe"</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>        Optional<span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> optionalName <span class="op">=</span> Optional<span class="op">.</span><span class="fu">of</span><span class="op">(</span>name<span class="op">);</span> <span class="co">// Create an Optional object with a non-null value</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>optionalName<span class="op">.</span><span class="fu">isPresent</span><span class="op">());</span> <span class="co">// true</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>optionalName<span class="op">.</span><span class="fu">get</span><span class="op">());</span> <span class="co">// "John Doe"</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a>        <span class="bu">String</span> nullName <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>        Optional<span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> optionalNullName <span class="op">=</span> Optional<span class="op">.</span><span class="fu">ofNullable</span><span class="op">(</span>nullName<span class="op">);</span> <span class="co">// Create an Optional object with a null value</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>optionalNullName<span class="op">.</span><span class="fu">isPresent</span><span class="op">());</span> <span class="co">// false</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a></span>
+<span id="cb4-14"><a href="#cb4-14"></a>        <span class="bu">String</span> defaultName <span class="op">=</span> <span class="st">"Jane Doe"</span><span class="op">;</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a>        <span class="bu">String</span> finalName <span class="op">=</span> optionalNullName<span class="op">.</span><span class="fu">orElse</span><span class="op">(</span>defaultName<span class="op">);</span> <span class="co">// Use the default value when the Optional is empty</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>finalName<span class="op">);</span> <span class="co">// "Jane Doe"</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a>    <span class="op">}</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="op">}</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>In this example, we create <strong>two Optional objects</strong>: <code>optionalName</code>, which contains a non-null value, and <code>optionalNullName</code>, which contains a null value.</p>
+</div></div><p>We use the <code>isPresent()</code> method to check if the Optional objects contain a value, and the <code>get()</code> method to access the values. When <code>optionalNullName</code> is empty, we use the <code>orElse()</code> method to provide a default value.</p>
+</section>
+</section>
+<section id="lambda" class="level2 page-columns page-full" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="lambda"><span class="header-section-number">6</span> Lambda</h2>
+<div class="summary">
+<p><code>Lambda expressions</code> support <code>functional</code> programming style, which emphasizes <strong>writing code in terms of functions that take inputs and produce outputs, without relying on mutable state or side effects</strong>.</p>
+<p>They allow to express a behavior as a function object, which can be passed around and executed later.</p>
+</div>
+<p><br></p>
+<p>A <code>lambda expression</code> is composed of three parts:</p>
+<ul>
+<li>the argument list,</li>
+<li>the arrow token (-&gt;),</li>
+<li>and the body.</li>
+</ul>
+<p>The <code>argument</code> list specifies <strong>the inputs to the function</strong>, and can be empty or have one or more parameters. The <code>arrow token</code> separates the argument list from the body. The <code>body</code> contains the <strong>code that implements the behavior of the lambda expression.</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/javase/lambdsa.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Lambda"><img src="..\images/javase/lambdsa.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p></p><figcaption class="figure-caption">Lambda</figcaption><p></p>
+</figure>
+</div>
+<section id="example-2" class="level3 page-columns page-full" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="example-2"><span class="header-section-number">6.1</span> Example</h3>
+<p>Here’s an example of a lambda expression that adds two numbers:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">(</span><span class="dt">int</span> a<span class="op">,</span> <span class="dt">int</span> b<span class="op">)</span> <span class="op">-&gt;</span> a <span class="op">+</span> b</span>
+<span id="cb5-2"><a href="#cb5-2"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>This lambda expression takes** two int arguments and returns their sum<strong>. The argument <code>list (int a, int b)</code> specifies the </strong>inputs** to the function, and the <strong>body</strong> a + b contains the code that implements the behavior.</p>
+</div></div><p>Lambda expressions can be used in many places in <code>Java</code>, such as the <code>Stream API</code>, the <code>Comparator</code> <code>interface</code>, and the <code>Runnable</code> and <code>Callable</code> <code>interfaces</code>. They are a powerful tool for writing concise, expressive code that is easy to read and maintain.</p>
+</section>
+</section>
+<section id="method-references" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="method-references"><span class="header-section-number">7</span> Method references</h2>
+<div class="summary">
+<p><code>Method reference</code>s are <strong>special types of lambda expressions</strong> that execute only one method.</p>
+<p><code>Method reference</code> is a <strong>shorthand syntax for referring to an existing method or constructor</strong>, without having to provide a <strong>full method implementation</strong>.</p>
+<p>It is a way to pass a method as a parameter to another method or to create a functional interface instance.</p>
+</div>
+<p><br></p>
+<ul>
+<li><a href="https://medium.com/javarevisited/a-comprehensive-guide-to-java-8-method-reference-f0bf5457b72d" class="external">A comprehensive guide to Java 8 method reference</a></li>
+<li><a href="https://codeburst.io/quick-java-lambdas-and-method-references-3279b7690c07" class="external">Quickly writing Java lambdas and method references</a></li>
+</ul>
+<p>They allow you to refer to a method by its name and optionally specify the object on which the method is invoked.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/javase/referenceMethod.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Method references"><img src="..\images/javase/referenceMethod.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p></p><figcaption class="figure-caption">Method references</figcaption><p></p>
+</figure>
+</div>
+<p>There are <strong>four types of method references</strong>:</p>
+<ul>
+<li>Reference to a <code>static method</code></li>
+<li>Reference to an instance method of an object of a <code>particular type</code></li>
+<li>Reference to an instance method of an <code>existing object</code></li>
+<li>Reference to a <code>constructor</code></li>
+</ul>
+<section id="example-names-print" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="example-names-print"><span class="header-section-number">7.1</span> Example <code>names</code> print</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">List</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> names <span class="op">=</span> <span class="bu">Arrays</span><span class="op">.</span><span class="fu">asList</span><span class="op">(</span><span class="st">"Alice"</span><span class="op">,</span> <span class="st">"Bob"</span><span class="op">,</span> <span class="st">"Charlie"</span><span class="op">);</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co">// Using lambda expression</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>names<span class="op">.</span><span class="fu">forEach</span><span class="op">(</span>name <span class="op">-&gt;</span> <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>name<span class="op">));</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">// Using method reference</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>names<span class="op">.</span><span class="fu">forEach</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">::</span>println<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this example, we have a list of names and we want to print them to the console. We can achieve this using a forEach method that accepts a Consumer interface implementation. The Consumer interface has a single abstract method accept that takes an input and performs an operation on it.</p>
+<p>We can pass a lambda expression or a method reference to the forEach method to define the Consumer implementation. In the lambda expression version, we define an anonymous function that takes a name parameter and prints it to the console using System.out.println(name).</p>
+<p>In the method reference version, we refer to the println method of the System.out object using the syntax System.out::println. This is equivalent to passing a lambda expression that calls System.out.println(name) with the name parameter.</p>
+<p>Both versions of the code produce the same output, but the method reference version is more concise and easier to read.</p>
+</section>
+<section id="example-names-compareto" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="example-names-compareto"><span class="header-section-number">7.2</span> Example <code>names</code> compareTo</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">List</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> names <span class="op">=</span> <span class="bu">Arrays</span><span class="op">.</span><span class="fu">asList</span><span class="op">(</span><span class="st">"Alice"</span><span class="op">,</span> <span class="st">"Bob"</span><span class="op">,</span> <span class="st">"Charlie"</span><span class="op">);</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="co">// Using lambda expression</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="bu">Collections</span><span class="op">.</span><span class="fu">sort</span><span class="op">(</span>names<span class="op">,</span> <span class="op">(</span>name1<span class="op">,</span> name2<span class="op">)</span> <span class="op">-&gt;</span> name1<span class="op">.</span><span class="fu">compareTo</span><span class="op">(</span>name2<span class="op">));</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="co">// Using method reference</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="bu">Collections</span><span class="op">.</span><span class="fu">sort</span><span class="op">(</span>names<span class="op">,</span> <span class="bu">String</span><span class="op">::</span>compareTo<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this example, we have a list of names and we want to sort them in ascending order. We can achieve this using the sort method of the Collections class, which accepts a list and a Comparator implementation to define the sort order.</p>
+<p>We can pass a lambda expression or a method reference to the sort method to define the Comparator implementation. In the lambda expression version, we define an anonymous function that takes two String parameters name1 and name2, and compares them using the compareTo method of String class.</p>
+<p>In the method reference version, we refer to the compareTo method of the String class using the syntax String::compareTo. This is equivalent to passing a lambda expression that calls name1.compareTo(name2).</p>
+<p>Both versions of the code produce the same output, but the method reference version is more concise and easier to read.</p>
 <!--- navLinks -->
 <br><br>
 <div class="row">
@@ -1911,6 +2075,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 
