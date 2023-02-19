@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.280">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -106,6 +106,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -637,6 +639,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <li>
     <a class="dropdown-item" href="../javase/selab3-2.html">
  <span class="dropdown-text">Lab#SE03-2: Library/Book, Sprint Zero</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../javase/selab3-3.html">
+ <span class="dropdown-text">Lab#SE03-2: Library/Book, Expand Model</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Java SE readings</li>
@@ -1407,6 +1413,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../javase/selab3-2.html" class="sidebar-item-text sidebar-link">Lab#SE03-2: Library/Book, Sprint Zero</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab3-3.html" class="sidebar-item-text sidebar-link">Lab#SE03-2: Library/Book, Expand Model</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -1437,6 +1448,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="toc-section-number">1</span>  Overview</a></li>
   <li><a href="#main-features" id="toc-main-features" class="nav-link" data-scroll-target="#main-features"><span class="toc-section-number">2</span>  Main features</a></li>
   <li><a href="#example-of-functional-style-in-java-8" id="toc-example-of-functional-style-in-java-8" class="nav-link" data-scroll-target="#example-of-functional-style-in-java-8"><span class="toc-section-number">3</span>  Example of <code>functional-style</code> in <code>Java 8</code></a></li>
+  <li><a href="#streams" id="toc-streams" class="nav-link" data-scroll-target="#streams"><span class="toc-section-number">4</span>  Streams</a>
+  <ul>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="toc-section-number">4.1</span>  Example</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Albertprofe/wiki/edit/main/javase/se-concepts-java8.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Albertprofe/wiki/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -1481,7 +1496,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Thursday, February 16, 2023</p>
+      <p class="date-modified">Sunday, February 19, 2023</p>
     </div>
   </div>
     
@@ -1510,22 +1525,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Removal of the Permanent Generation</li>
 </ul>
 </section>
-<section id="main-features" class="level2" data-number="2">
+<section id="main-features" class="level2 page-columns page-full" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="main-features"><span class="header-section-number">2</span> Main features</h2>
 <p>Java 8 introduced several new features to the language, including Streams, Optional, Lambda expressions, and Method references. Here’s a brief definition of each of these features:</p>
 <blockquote class="blockquote">
-<p><code>Streams</code><br> <strong>Streams provide a way to process collections of data in a declarative and functional way</strong>. Streams allow you to express complex data manipulations in a simple, concise way. With streams, you can filter, map, reduce, and collect data in a highly readable and maintainable way.</p>
+<p><code>Streams</code><br> <strong>Streams provide a way to process collections of data in a declarative and functional way</strong>. Streams allow you to express complex data manipulations in a simple, concise way.</p>
 </blockquote>
-<blockquote class="blockquote">
-<p><code>Optional</code><br> <strong>Optional is a container object that may or may not contain a non-null value.</strong> It is designed to reduce the number of null checks in your code and to provide a more elegant way of handling null values. Optional can be used to wrap any object, and it provides methods for safely accessing the wrapped object or handling the case when the object is null.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>With streams, you can filter, map, reduce, and collect data in a highly readable and maintainable way.</p>
+</div></div><blockquote class="blockquote">
+<p><code>Optional</code><br> <strong>Optional is a container object that may or may not contain a non-null value.</strong> It is designed to reduce the number of null checks in your code and to provide a more elegant way of handling null values.</p>
 </blockquote>
-<blockquote class="blockquote">
-<p><code>Lambda expressions</code><br> <strong>Lambda expressions provide a way to write code in a functional style. </strong>They allow you to pass behavior as an argument to a method, which is a powerful technique for writing more modular and reusable code. Lambda expressions can be used in place of anonymous inner classes and are highly concise and readable.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Optional can be used to wrap any object, and it provides methods for safely accessing the wrapped object or handling the case when the object is null.</p>
+</div></div><blockquote class="blockquote">
+<p><code>Lambda expressions</code><br> <strong>Lambda expressions provide a way to write code in a functional style. </strong>They allow you to pass behavior as an argument to a method, which is a powerful technique for writing more modular and reusable code.</p>
 </blockquote>
-<blockquote class="blockquote">
-<p><code>Method references</code><br> <strong>Method references provide a way to pass a method as an argument to another method</strong>. They provide a concise and expressive way to write code, and can be used in place of lambda expressions in certain situations. Method references are highly readable and can make code more modular and reusable.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Lambda expressions can be used in place of anonymous inner classes and are highly concise and readable.</p>
+</div></div><blockquote class="blockquote">
+<p><code>Method references</code><br> <strong>Method references provide a way to pass a method as an argument to another method</strong>. They provide a concise and expressive way to write code, and can be used in place of lambda expressions in certain situations.</p>
 </blockquote>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Method references are highly readable and can make code more modular and reusable.</p>
+</div></div></section>
 <section id="example-of-functional-style-in-java-8" class="level2 page-columns page-full" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="example-of-functional-style-in-java-8"><span class="header-section-number">3</span> Example of <code>functional-style</code> in <code>Java 8</code></h2>
 <p>Suppose you have a <strong>list of integers and you want to filter out the even numbers and then calculate the sum of the remaining odd numbers</strong>.</p>
@@ -1556,27 +1583,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-9"><a href="#cb2-9"></a></span>
 <span id="cb2-10"><a href="#cb2-10"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Sum of odd numbers: "</span> <span class="op">+</span> sum<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<!--- navLinks -->
 <div class="no-row-height column-margin column-container"><div class="">
 <p>In this code, we iterate over the list of numbers using a <code>for-each</code> loop, and filter out even numbers using an <code>if-statement.</code> We then accumulate the <strong>odd</strong> numbers in the <strong>sum</strong> variable using the <code>+=</code> <strong>operator</strong>. Finally, we print the result using <code>System.out.println()</code>.</p>
-</div></div><br><br>
+</div></div></section>
+<section id="streams" class="level2 page-columns page-full" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="streams"><span class="header-section-number">4</span> Streams</h2>
+<div class="summary">
+<p>First of all, Java 8 Streams should <strong>not be confused with</strong> <code>Java I/O streams</code> (ex: <code>FileInputStream</code> etc).</p>
+<p>Simply put, <strong>streams are wrappers around a data source</strong>, allowing us to operate with that data source and making bulk processing convenient and fast by lazy and terminal operations.</p>
+<p>A stream <strong>does not store data and, in that sense, is not a data structure</strong>. It also never modifies the underlying data source.</p>
+<p>This functionality <code>java.util.stream</code> supports <strong>functional-style operations on streams of elements</strong>.</p>
+</div>
+<section id="example" class="level3 page-columns page-full" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="example"><span class="header-section-number">4.1</span> Example</h3>
+<p>Here’s an example of how <strong>lazy evaluation, wrapping the data and intermediate/terminal operations</strong> work in Java streams:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">List</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> words <span class="op">=</span> <span class="bu">Arrays</span><span class="op">.</span><span class="fu">asList</span><span class="op">(</span><span class="st">"hello"</span><span class="op">,</span> <span class="st">"world"</span><span class="op">,</span> <span class="st">"how"</span><span class="op">,</span> <span class="st">"are"</span><span class="op">,</span> <span class="st">"you"</span><span class="op">);</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co">// create a stream and apply intermediate operations to filter and map the data</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>Stream<span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> stream <span class="op">=</span> words<span class="op">.</span><span class="fu">stream</span><span class="op">()</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="op">.</span><span class="fu">filter</span><span class="op">(</span>w <span class="op">-&gt;</span> w<span class="op">.</span><span class="fu">length</span><span class="op">()</span> <span class="op">&gt;</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>    <span class="op">.</span><span class="fu">map</span><span class="op">(</span><span class="bu">String</span><span class="op">::</span>toUpperCase<span class="op">);</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="co">// call a terminal operation to evaluate the stream and produce a result</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="bu">String</span> result <span class="op">=</span> stream<span class="op">.</span><span class="fu">findFirst</span><span class="op">().</span><span class="fu">orElse</span><span class="op">(</span><span class="st">""</span><span class="op">);</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>result<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>In this example, we start by creating a list of strings and then create a stream from the list using the stream() method and wrapping them around.</p>
+</div></div><p>We then apply two intermediate operations, <code>filter()</code> and <code>map()</code>, to filter the words that have a length greater than 3 and convert them to uppercase, respectively.</p>
+<p>At this point, <strong>no computation has been performed on the data</strong>. Instead, the operations on the stream have created a new stream with the modified data.</p>
+<p>Next, we call a <strong>terminal</strong> operation, <code>findFirst()</code>, to find the first element in the stream that matches the specified condition.</p>
+<p>This operation <strong>triggers the computation of the stream and produces a result</strong>, which in this case is the first word in the stream that has a length greater than 3 and is in uppercase.</p>
+<p>Because of lazy evaluation, only the elements that are necessary to produce the result are processed. In this example, only the first element that matches the condition is processed, and the remaining elements are not processed.</p>
+<p>Finally, <strong>we print the result to the console</strong>, which is the first word in the stream that matches the condition. In this case, the result is the string “WORLD”.</p>
+<!--- navLinks -->
+<br><br>
 <div class="row">
 <br>
 <div class="column left previous">
-<p><br> <a href="../javase/se-concepts-objects.html"> Java SE: Class and Objects</a> <br></p>
+<p><br> <a href="../javase/se-concepts-objects.html"><i class="fa-solid fa-arrow-left" aria-label="arrow-left"></i> Java SE: Class and Objects</a> <br></p>
 </div>
 <br>
 <div class="column center">
-<p><br> <a href="#top"> top</a> <br></p>
+<p><br> <a href="#top"><i class="fa-solid fa-arrow-up" aria-label="arrow-up"></i> top</a> <br></p>
 </div>
 <br>
 <div class="column right next">
-<p><br> <a href="../javase/se-concepts-static.html">Java SE: static modifier </a> <br></p>
+<p><br> <a href="../javase/se-concepts-static.html">Java SE: static modifier <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></a> <br></p>
 </div>
 <p><br></p>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

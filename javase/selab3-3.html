@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="About books">
+<meta name="author" content="albertprofe">
+<meta name="author" content="Marc P.">
+<meta name="description" content="Java SE Lab 03, part 3 Expand Model">
 
-<title>albertprofe wiki - Books Card-Listing</title>
+<title>albertprofe wiki - Lab#SE03-2: Library/Book, Expand Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +23,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -31,8 +96,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -44,9 +107,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -68,44 +128,16 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-books .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-categories','listing-title','listing-description','listing-reading-time','listing-date','listing-author','listing-file-modified',{ data: ['index'] },{ data: ['categories'] }],
-      page: 25,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-genre"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-books'] = new List('listing-books', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed slimcontent">
 
 
 <div id="quarto-search-results"></div>
@@ -1066,37 +1098,397 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Lab#SE03-2: Library/Book, Expand Model</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  Java Standard Edition
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">What is Java SE</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-what-basics.html" class="sidebar-item-text sidebar-link">Java Standard Edition: Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-what-principles.html" class="sidebar-item-text sidebar-link">Java Standard Edition: Principles</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-what-moochelsinki.html" class="sidebar-item-text sidebar-link">Java MOOC Helsinki</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Java Create Project</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-maven.html" class="sidebar-item-text sidebar-link">Java SE: Maven</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-createproject.html" class="sidebar-item-text sidebar-link">Java SE: Create Maven Project</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-projectgit.html" class="sidebar-item-text sidebar-link">Java SE: Project push GitHub</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-tdd.html" class="sidebar-item-text sidebar-link">Java SE: JUnit and TDD</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Java Concepts</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-objects.html" class="sidebar-item-text sidebar-link">Java SE: Class and Objects</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-scope.html" class="sidebar-item-text sidebar-link">Java SE: Scope</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-static.html" class="sidebar-item-text sidebar-link">Java SE: static modifier</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-coupling.html" class="sidebar-item-text sidebar-link">Java SE: Coupling and DDD</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-package.html" class="sidebar-item-text sidebar-link">Java SE: Packages</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-interface.html" class="sidebar-item-text sidebar-link">Java SE: Abstract/Interface</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-concepts-java8.html" class="sidebar-item-text sidebar-link">Java SE: Java 8</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Java Principles</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-encapsulation.html" class="sidebar-item-text sidebar-link">Java SE: Encapsulation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-abstraction.html" class="sidebar-item-text sidebar-link">Java SE: Abstraction</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-inheritance.html" class="sidebar-item-text sidebar-link">Java SE: Inherence</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-principles-polymorphism.html" class="sidebar-item-text sidebar-link">Java SE: Polymorphism</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Java Design Patterns</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-uml.html" class="sidebar-item-text sidebar-link">Java Patterns: UML</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-intro.html" class="sidebar-item-text sidebar-link">Java Patterns: Types</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <b>Creational</b>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-singleton.html" class="sidebar-item-text sidebar-link">Singleton</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-factory.html" class="sidebar-item-text sidebar-link">Factory</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-abstractfactory.html" class="sidebar-item-text sidebar-link">Abstract Factory</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-builder.html" class="sidebar-item-text sidebar-link">Builder</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <b>Structural</b>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-facade.html" class="sidebar-item-text sidebar-link">Facade</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-bridge.html" class="sidebar-item-text sidebar-link">Bridge</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-decorator.html" class="sidebar-item-text sidebar-link">Decorator</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-composite.html" class="sidebar-item-text sidebar-link">Composite</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <b>Behavioral</b>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-observer.html" class="sidebar-item-text sidebar-link">Observer</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-strategy.html" class="sidebar-item-text sidebar-link">Strategy</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-state.html" class="sidebar-item-text sidebar-link">State</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/se-pattern-commander.html" class="sidebar-item-text sidebar-link">Commander</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Java SE Laboratories</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-1.html" class="sidebar-item-text sidebar-link">Lab#SE00-1: Maven Person</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-2.html" class="sidebar-item-text sidebar-link">Lab#SE00-2: Maven Clinic</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-3.html" class="sidebar-item-text sidebar-link">Lab#SE00-3: Library Model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab0-4.html" class="sidebar-item-text sidebar-link">Lab#SE00-4: Abstract/Interface Human</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab1-1.html" class="sidebar-item-text sidebar-link">Lab#SE01-1: Maven/Gradle Person and Account</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab1-2.html" class="sidebar-item-text sidebar-link">Lab#SE01-2: Maven/Gradle Person and Account stored in JSON</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-1.html" class="sidebar-item-text sidebar-link">Lab#SE02-1: Movie/Review, Model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-2.html" class="sidebar-item-text sidebar-link">Lab#SE02-2: Movie/Review, CRUD Operations</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-3.html" class="sidebar-item-text sidebar-link">Lab#SE02-3: Movie/Review, factory</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-4.html" class="sidebar-item-text sidebar-link">Lab#SE02-4: Movie/Review, interactivity and coupling</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab2-5.html" class="sidebar-item-text sidebar-link">Lab#SE02-5: Movie/Review, simulate interactivity by console</a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab3-1.html" class="sidebar-item-text sidebar-link">Lab#SE03-1: Library/Book, Core-Model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab3-2.html" class="sidebar-item-text sidebar-link">Lab#SE03-2: Library/Book, Sprint Zero</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/selab3-3.html" class="sidebar-item-text sidebar-link active">Lab#SE03-2: Library/Book, Expand Model</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">Java SE readings</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javase/resources.html" class="sidebar-item-text sidebar-link">Java SE Resources</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(30)</span></div><div class="category" data-category="agile">agile <span class="quarto-category-count">(4)</span></div><div class="category" data-category="assay">assay <span class="quarto-category-count">(2)</span></div><div class="category" data-category="design">design <span class="quarto-category-count">(4)</span></div><div class="category" data-category="devops">devops <span class="quarto-category-count">(4)</span></div><div class="category" data-category="java">java <span class="quarto-category-count">(6)</span></div><div class="category" data-category="programming">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="psychology">psychology <span class="quarto-category-count">(8)</span></div><div class="category" data-category="writing">writing <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#interfaces" id="toc-interfaces" class="nav-link active" data-scroll-target="#interfaces"><span class="toc-section-number">1</span>  Interfaces</a></li>
+  <li><a href="#abstract-class" id="toc-abstract-class" class="nav-link" data-scroll-target="#abstract-class"><span class="toc-section-number">2</span>  Abstract class</a></li>
+  <li><a href="#uml" id="toc-uml" class="nav-link" data-scroll-target="#uml"><span class="toc-section-number">3</span>  UML</a>
+  <ul>
+  <li><a href="#previous-drafts" id="toc-previous-drafts" class="nav-link" data-scroll-target="#previous-drafts"><span class="toc-section-number">3.1</span>  Previous drafts</a></li>
+  <li><a href="#current-uml" id="toc-current-uml" class="nav-link" data-scroll-target="#current-uml"><span class="toc-section-number">3.2</span>  Current UML</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Albertprofe/wiki/edit/main/javase/selab3-3.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Albertprofe/wiki/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Books Card-Listing</h1>
-<p class="subtitle lead">Recommended book list</p>
+<h1 class="title d-none d-lg-block">Lab#SE03-2: Library/Book, Expand Model</h1>
+<p class="subtitle lead">Java SE Lab 03 part 3</p>
   <div class="quarto-categories">
-    <div class="quarto-category">listing</div>
-    <div class="quarto-category">books</div>
-    <div class="quarto-category">reading</div>
+    <div class="quarto-category">javase</div>
+    <div class="quarto-category">lab</div>
+    <div class="quarto-category">inherence</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    About books
+    Java SE Lab 03, part 3 Expand Model
   </div>
 </div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>albertprofe </p>
+             <p>Marc P. </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
@@ -1108,7 +1500,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Friday, February 17, 2023</p>
+      <p class="date-modified">Sunday, February 19, 2023</p>
     </div>
   </div>
     
@@ -1117,1277 +1509,227 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../images/about/books.jpg" class="lightbox" title="Reading is essential for those who seek to rise above the ordinary. - Jim Rohn" data-gallery="quarto-lightbox-gallery-1"><img src="..\images/about/books.jpg" class="img-fluid figure-img" style="width:35.0%"></a></p>
-<p></p><figcaption class="figure-caption">Reading is essential for those who seek to rise above the ordinary. - Jim Rohn</figcaption><p></p>
-</figure>
+<div class="labs">
+<p>📘 <strong>Linux Lab#SE03-3: Library/Book </strong></p>
+<p>In <code>LibraryProject</code>, the <code>User</code> and <code>Staff</code> classes could have different <code>operations</code> that they are <strong>authorize/able to perform.</strong></p>
+<p>The <code>User</code> class could have the following operations:</p>
+<ul>
+<li>Search for books</li>
+<li>Borrow a book</li>
+<li>Return a book</li>
+<li>Check the status of borrowed books</li>
+<li>Update personal information</li>
+</ul>
+<p>The <code>Staff</code> class could have the following operations:</p>
+<ul>
+<li>Add a new book</li>
+<li>Remove a book</li>
+<li>Update the book details</li>
+<li>Register a new user</li>
+<li>Remove a user</li>
+<li>Update the user details</li>
+<li>Generate reports on library operations</li>
+</ul>
+<p>To <code>implement</code> these operations, we could define three separate <code>interfaces</code>:</p>
+<ul>
+<li>UserOperations</li>
+<li>StaffOperations</li>
+<li>GeneralOpeations</li>
+</ul>
 </div>
-<p><a href="../index.html#and-reading-books">Why should I read books?</a></p>
 <hr>
-<p><br></p>
-<div id="listing-books" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-books-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-books'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<section id="interfaces" class="level2 page-columns page-full" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="interfaces"><span class="header-section-number">1</span> Interfaces</h2>
+<p>The three interfaces <code>GeneralOperations</code>, <code>UserOperations</code>, and <code>StaffOperations</code> provide a clear separation of concerns and responsibilities within the library management system.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>In a library project, having separate interfaces for different types of operations <strong>will help to keep the code organized and maintainable</strong>.</p>
+</div></div><blockquote class="blockquote">
+<p><code>GeneralOperations</code> <code>interface</code> provides methods that are commonly used by both users and staff, such as searching for books and creating an account.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><code>UserOperations</code> <code>interface</code> includes methods that are specific to users, such as updating personal information, borrowing and returning books, and checking their borrowed books.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><code>StaffOperations</code> <code>interface</code> includes methods that are specific to staff members, such as adding, removing, and updating book details, as well as registering and updating user details and generating reports.</p>
+</blockquote>
+<p>By separating these different functionalities into interfaces, <strong>it becomes easier to implement and maintain the system.</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>For example, a developer could create different classes that implement the UserOperations interface, such as Student or Faculty, which will all have their own implementation of the methods defined in the interface.</p>
+</div></div></section>
+<section id="abstract-class" class="level2 page-columns page-full" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="abstract-class"><span class="header-section-number">2</span> Abstract class</h2>
+<p>Finally, the <code>LibraryMember</code> abstract class is a parent class for users and staff members, which includes common fields such as id, address, and phoneNumber.</p>
+<p>By defining these fields in an <code>abstract</code> class, it allows for different types of users and staff members to inherit them and <strong>avoid duplication of code.</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">public</span> <span class="kw">interface</span> GeneralOperations <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">searchBooks</span><span class="op">(</span><span class="bu">String</span> query<span class="op">);</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">createAccount</span><span class="op">();</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>    </span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="op">}</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">public</span> <span class="kw">interface</span> UserOperations <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">updatePersonalInformation</span><span class="op">();</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">borrowBook</span><span class="op">(</span><span class="bu">Book</span> book<span class="op">);</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">returnBook</span><span class="op">(</span><span class="bu">Book</span> book<span class="op">);</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">checkBorrowedBooks</span><span class="op">();</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="op">}</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="kw">public</span> <span class="kw">interface</span> StaffOperations <span class="op">{</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">addBook</span><span class="op">(</span><span class="bu">Book</span> book<span class="op">);</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">removeBook</span><span class="op">(</span><span class="bu">Book</span> book<span class="op">);</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">updateBookDetails</span><span class="op">(</span><span class="bu">Book</span> book<span class="op">);</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">registerUser</span><span class="op">(</span>User user<span class="op">);</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">removeUser</span><span class="op">(</span>User user<span class="op">);</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">updateUserDetails</span><span class="op">(</span>User user<span class="op">);</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">generateReports</span><span class="op">();</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Using <code>interfaces</code> and <code>abstract</code> classes in this way can make the code more modular and easier to maintain, as it allows for <code>greater flexibility and extensibility.</code></p>
+</div></div></section>
+<section id="uml" class="level2 page-columns page-full" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="uml"><span class="header-section-number">3</span> UML</h2>
+<section id="previous-drafts" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="previous-drafts"><span class="header-section-number">3.1</span> Previous drafts</h3>
+<p>The <strong>two UML diagrams</strong> describe the <strong>core features</strong> of a libraryProject, specifically the <strong>use cases</strong> for borrowing and issuing books, as well as the roles and responsibilities of users and librarians/staff members.</p>
+<blockquote class="blockquote">
+<p>The first diagram, <code>Core features: borrow and issue</code>, depicts the <strong>interaction</strong> between the user and the system, as well as the system and the librarian:</p>
+</blockquote>
+<ul>
+<li><a href="../javase/selab3-1.html#core-features-borrow-and-issue">Core features: borrow and issue</a></li>
+</ul>
+<blockquote class="blockquote">
+<p>The second diagram, <code>Core features: user and librarian (staff)</code>, expands on the <strong>roles</strong> and <strong>responsibilities</strong> of users and librarians/staff members.</p>
+</blockquote>
+<ul>
+<li><a href="../javase/selab3-1.html#core-features-user-and-librarian-(staf)">Core features: user and librarian (staf)</a></li>
+</ul>
+</section>
+<section id="current-uml" class="level3 page-columns page-full" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="current-uml"><span class="header-section-number">3.2</span> Current UML</h3>
+<div class="column-page-right">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">classDiagram
+
+  
+ class GeneralOperations {
+   &lt;&lt;interface&gt;&gt;
+    
+    +createAccount(): void
+    +searchBooks(query: String): void
+   
+  }
+
+   class UserOperations {
+     &lt;&lt;interface&gt;&gt;
+   
+    +borrowBook(book: Book): void
+    +returnBook(book: Book): void
+    +checkBorrowedBooks(): void
+  }
+
+
+class LibraryMember {
+    &lt;&lt;abstract&gt;&gt;
+    +id: String
+    +address: String
+    +phoneNumber: String
+   
+  }
+
+
+class Member {
+    &lt;&lt;abstract&gt;&gt;
+    +name: String
+    +surname: String
+    nationality: String
+    +birthdate: Date
+    
+  }
+
+
+ class   StaffOperations {
+     &lt;&lt;interface&gt;&gt;
+    
+    +addBook(book: Book): void
+    +removeBook(book: Book): void
+    +updateBookDetails(book: Book): void
+    +registerUser(user: User): void
+    +removeUser(user: User): void
+    +updateUserDetails(user: User): void
+    +generateReports(): void
+  }
+
+
+
+
+  class User {
+    -libraryCardNumber: String
+    -borrowedBooks: ArrayList&lt;Book&gt;
+    +User()
+  }
+
+   class Author {
+    -deathdate: Date
+    -books: Book
+    +author()
+  }
+  
+  
+  class Staff {
+    -staffId: String
+    -position: String
+    -registeredUsers: ArrayList&lt;User&gt;
+    -libraryBooks: ArrayList&lt;Book&gt;
+    +Staff()
+  }
+
+  class Book {
+    -title: String
+    -author: Author
+    -publisher: String
+    -year: int
+    -isbn: String
+    -status: String
+    +Book()
+    +getStatus(): String
+  }
+  
+ Author *-- Book
+UserOperations &lt;|..  User 
+  GeneralOperations &lt;|..  LibraryMember  
+  LibraryMember &lt;|.. User
+  LibraryMember &lt;|.. Staff
+  Member &lt;|.. Author
+   
+  Member &lt;|.. LibraryMember
+
+  StaffOperations  &lt;|.. Staff
+  Staff --&gt; User
+
+
+  
+
+
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159163" data-listing-reading-time-sort="0.09">
-<div class="thumbnail">
-<p><a href="../books/atomicHabits.html"> <img src="../books/atomicHabits.jpeg" class="thumnail-image"> </a></p>
 </div>
-<div class="body">
-<a href="../books/atomicHabits.html">
-<h3 class="no-anchor listing-title">
-Atomic Habits
-</h3>
-<div class="listing-subtitle">
-James Clear, 2016, Atomic Habits: An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
-psychology
-</div>
-</div>
-<a href="../books/atomicHabits.html">
-<div class="listing-description">
-<p>A supremely practical and useful book. James Clear distills the most fundamental information about habit formation, so you can accomplish more by focusing on less.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/atomicHabits.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="1" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159165" data-listing-reading-time-sort="1.975">
-<div class="thumbnail">
-<p><a href="../books/burnout.html"> <img src="../books/burnout.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/burnout.html">
-<h3 class="no-anchor listing-title">
-Burnout
-</h3>
-<div class="listing-subtitle">
-Herbert Freudenberger, 1980, Burnout: The High Cost of High Achievement
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
-psychology
-</div>
-</div>
-<a href="../books/burnout.html">
-<div class="listing-description">
-<p>An early and influential work on the topic of burnout. Herbert Freudenberger explores the causes and symptoms of burnout and provides practical tips for avoiding and overcoming it.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/burnout.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="2" data-categories="programming" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159165" data-listing-reading-time-sort="0.015">
-<div class="thumbnail">
-<p><a href="../books/c.html"> <img src="../books/c.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/c.html">
-<h3 class="no-anchor listing-title">
-C
-</h3>
-<div class="listing-subtitle">
-Dennis Ritchie, 1978, C: A Programming Language
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
-</div>
-<a href="../books/c.html">
-<div class="listing-description">
-<p>A seminal work in the world of computer programming. Dennis Ritchie introduces the C programming language, which has since become a staple of software development and remains widely used to this day.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/c.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="3" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159166" data-listing-reading-time-sort="0.015">
-<div class="thumbnail">
-<p><a href="../books/chimpanzeePolitics.html"> <img src="../books/chimpanzeePolitics.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/chimpanzeePolitics.html">
-<h3 class="no-anchor listing-title">
-Chimpanzee Politics
-</h3>
-<div class="listing-subtitle">
-Frans de Waal, 1982, Chimpanzee Politics: Power and Sex among Apes
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
-psychology
-</div>
-</div>
-<a href="../books/chimpanzeePolitics.html">
-<div class="listing-description">
-<p>An groundbreaking book on primate behavior and social dynamics. Frans de Waal provides a deep insight into the complex relationships between chimpanzees and how they influence their political power structures.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/chimpanzeePolitics.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="4" data-categories="devops" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159166" data-listing-reading-time-sort="0.015">
-<div class="thumbnail">
-<p><a href="../books/dataScienceAtCommandLine.html"> <img src="../books/dataScienceAtCommandLine.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/dataScienceAtCommandLine.html">
-<h3 class="no-anchor listing-title">
-Data Science at the Command Line
-</h3>
-<div class="listing-subtitle">
-Jeroen Janssens, 2014, Data Science at the Command Line: Facing the Future with Time-Tested Tools
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
-devops
-</div>
-</div>
-<a href="../books/dataScienceAtCommandLine.html">
-<div class="listing-description">
-<p>An innovative book that teaches how to perform data science tasks at the command line, streamlining workflows and making them more efficient. Jeroen Janssens provides a comprehensive guide for data scientists who want to work smarter, not harder.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/dataScienceAtCommandLine.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="5" data-categories="design" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159167" data-listing-reading-time-sort="0.015">
-<div class="thumbnail">
-<p><a href="../books/designPatterns.html"> <img src="../books/designPatterns.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/designPatterns.html">
-<h3 class="no-anchor listing-title">
-Design Patterns
-</h3>
-<div class="listing-subtitle">
-Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, 1994, Design Patterns: Elements of Reusable Object-Oriented Software
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
-design
-</div>
-</div>
-<a href="../books/designPatterns.html">
-<div class="listing-description">
-<p>A seminal book in software engineering that has become an essential reference for developers. The authors describe 23 design patterns that provide solutions to recurring problems in software design, making it easier to write maintainable and scalable code.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/designPatterns.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="6" data-categories="devops" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159168" data-listing-reading-time-sort="0.705">
-<div class="thumbnail">
-<p><a href="../books/devops_with_openshift_oreilly.html"> <img src="../books/devops_with_openshift_oreilly.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/devops_with_openshift_oreilly.html">
-<h3 class="no-anchor listing-title">
-DevOps with OpenShift
-</h3>
-<div class="listing-subtitle">
-Stefano Picozzi, Mike Hepburn &amp; Noel O’Connor, 2017, DevOps with OpenShift: Cloud Deployments Made Easy
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
-devops
-</div>
-</div>
-<a href="../books/devops_with_openshift_oreilly.html">
-<div class="listing-description">
-<p>A comprehensive guide to DevOps with OpenShift, the powerful platform for container-based applications. The authors explain how to implement a continuous delivery pipeline and how to manage containers in a DevOps environment.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/devops_with_openshift_oreilly.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="7" data-categories="design" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159169" data-listing-reading-time-sort="0.14">
-<div class="thumbnail">
-<p><a href="../books/diveIntoDesignPatterns.html"> <img src="../books/diveIntoDesignPatterns.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/diveIntoDesignPatterns.html">
-<h3 class="no-anchor listing-title">
-Dive Into DESIGN PATTERNS
-</h3>
-<div class="listing-subtitle">
-Alexander Shvets, 2022, Dive Into DESIGN PATTERNS: An ebook on design patterns and the principles behind them
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
-design
-</div>
-</div>
-<a href="../books/diveIntoDesignPatterns.html">
-<div class="listing-description">
-<p>Design patterns help you solve commonly-occurring problems in software design. But you can’t just find a pattern and copy it into your program, the way you can with off-the-shelf functions or libraries. A pattern is not a specific piece of code, but a general concept for solving a particular problem. They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/diveIntoDesignPatterns.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="8" data-categories="design" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159169" data-listing-reading-time-sort="0.015">
-<div class="thumbnail">
-<p><a href="../books/domaindrivendesign.html"> <img src="../books/domaindrivendesign.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/domaindrivendesign.html">
-<h3 class="no-anchor listing-title">
-Domain Driven Design
-</h3>
-<div class="listing-subtitle">
-Eric Evans, 2003, Domain Driven Design: Tackling Complexity in the Heart of Software
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
-design
-</div>
-</div>
-<a href="../books/domaindrivendesign.html">
-<div class="listing-description">
-<p>A groundbreaking book on software design that focuses on modeling complex software systems in a way that aligns with business goals. Eric Evans provides a practical and insightful approach to software design that helps teams build systems that are scalable, maintainable, and easily adaptable to changing business needs.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/domaindrivendesign.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="9" data-categories="writing" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159170" data-listing-reading-time-sort="0.015">
-<div class="thumbnail">
-<p><a href="../books/elements_style.html"> <img src="../books/elementsStyle.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/elements_style.html">
-<h3 class="no-anchor listing-title">
-Elements of Style
-</h3>
-<div class="listing-subtitle">
-Strunk and White, 1918, The Elements of Style
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('writing'); return false;">
-writing
-</div>
-</div>
-<a href="../books/elements_style.html">
-<div class="listing-description">
-<p>A classic guide to writing clear and concise English. Strunk and White’s ‘Elements of Style’ covers everything from grammar and syntax to style and tone, making it an essential reference for writers and students.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/elements_style.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="10" data-categories="agile" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676652990858" data-listing-reading-time-sort="5.425">
-<div class="thumbnail">
-<p><a href="../books/execution.html"> <img src="../books/execution.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/execution.html">
-<h3 class="no-anchor listing-title">
-Execution: The Discipline of Getting Things Done
-</h3>
-<div class="listing-subtitle">
-Larry Bossidy, Ram Charan,Charles Burck (with), 2006, Execution: The Discipline of Getting Things Done
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
-agile
-</div>
-</div>
-<a href="../books/execution.html">
-<div class="listing-description">
-<p>#1 NEW YORK TIMES BESTSELLER - More than two million copies in print! The premier resource for how to deliver results in an uncertain world, whether you’re running an entire company or in your first management job. A must-read for anyone who cares about business.–The New York Times</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/execution.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-5 min
-</div>
-<div class="metadata-value listing-file-modified">
-Friday, February 17, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="11" data-categories="agile" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159172" data-listing-reading-time-sort="0.015">
-<div class="thumbnail">
-<p><a href="../books/howToMeasureAnyThing.html"> <img src="../books/howToMeasureAnyThing.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/howToMeasureAnyThing.html">
-<h3 class="no-anchor listing-title">
-How to Measure Anything
-</h3>
-<div class="listing-subtitle">
-Douglas W. Hubbard, 2010, How to Measure Anything: Finding the Value of Intangibles in Business
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
-agile
-</div>
-</div>
-<a href="../books/howToMeasureAnyThing.html">
-<div class="listing-description">
-<p>A groundbreaking book on measurement that challenges traditional approaches to data collection and analysis. Douglas W. Hubbard provides practical techniques for measuring intangible assets, such as customer satisfaction and employee morale, that are critical to business success.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/howToMeasureAnyThing.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="12" data-categories="assay" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159174" data-listing-reading-time-sort="0.4">
-<div class="thumbnail">
-<p><a href="../books/incerto.html"> <img src="../books/incerto.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/incerto.html">
-<h3 class="no-anchor listing-title">
-Incerto
-</h3>
-<div class="listing-subtitle">
-Nicholas Taleb, 2020, Incerto: Navigating Uncertainty and the Four Traps of Success
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('assay'); return false;">
-assay
-</div>
-</div>
-<a href="../books/incerto.html">
-<div class="listing-description">
-<p>A comprehensive guide to navigating uncertainty and the traps of success. Incerto, written by renowned author Nicholas Taleb, explores the intricacies of decision-making and how to avoid the traps that often lead to failure.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/incerto.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="13" data-categories="devops" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159156" data-listing-reading-time-sort="0.065">
-<div class="thumbnail">
-<p><a href="../books/Kubernetes_Native_Microservices.html"> <img src="../books/Kubernetes_Native_Microservice.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/Kubernetes_Native_Microservices.html">
-<h3 class="no-anchor listing-title">
-Kubernetes Native Microservices
-</h3>
-<div class="listing-subtitle">
-John Clingan and Ken Finnigan, 2021, Kubernetes Native Microservices with Quarkus and MicroProfile
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
-devops
-</div>
-</div>
-<a href="../books/Kubernetes_Native_Microservices.html">
-<div class="listing-description">
-<p>Entire books are available on Quarkus, microservices, MicroProfile, Spring, and Kubernetes. However, they tend to focus only on each specific topic. This book covers how to combine these topics into an effective and integrated development and deployment stack. Kubernetes-native microservices utilize and integrate with Kubernetes features naturally and efficiently. The result is a productive developer experience that is consistent with the expectations of Kubernetes platform administrators.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/Kubernetes_Native_Microservices.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="14" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159156" data-listing-reading-time-sort="0.465">
-<div class="thumbnail">
-<p><a href="../books/MicroservicesPatterns.html"> <img src="../books/MicrosserivcesPatterns.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/MicroservicesPatterns.html">
-<h3 class="no-anchor listing-title">
-Microservices Patterns
-</h3>
-<div class="listing-subtitle">
-Chris Richardson, 2020, Microservices Patterns: With examples in Java
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
-java
-</div>
-</div>
-<a href="../books/MicroservicesPatterns.html">
-<div class="listing-description">
-<p>A comprehensive guide to designing and building microservices. Chris Richardson provides a wealth of practical patterns and best practices for building scalable and resilient microservices, with examples in Java.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/MicroservicesPatterns.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="15" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159177" data-listing-reading-time-sort="0.645">
-<div class="thumbnail">
-<p><a href="../books/microservices-for-java-developers.html"> <img src="../books/microservices-for-java-developers.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/microservices-for-java-developers.html">
-<h3 class="no-anchor listing-title">
-Microservices for Java Developers
-</h3>
-<div class="listing-subtitle">
-Rafael Benevides, 2019, Microservices for Java Developers: A Hands-On Introduction to Frameworks and Containers - Java Developers
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
-java
-</div>
-</div>
-<a href="../books/microservices-for-java-developers.html">
-<div class="listing-description">
-<p>The microservice architectural approach reaches into the foundation of your organization, letting you build complex systems to adapt to rapidly changing competitive markets. Now in its second edition, this step-by-step guide introduces concepts like immutable delivery, and gets you started building distributed systems for managing microservices using Linux containers, Kubernetes, and three different Java frameworks: Spring Boot, Dropwizard, and WildFly Swarm (WildFly Swarm was renamed Thorntail in 2018).</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/microservices-for-java-developers.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="16" data-categories="agile" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159160" data-listing-reading-time-sort="0.29">
-<div class="thumbnail">
-<p><a href="../books/MindManagementNotTimeManagement.html"> <img src="../books/MindManagementNotTimeManagement.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/MindManagementNotTimeManagement.html">
-<h3 class="no-anchor listing-title">
-Mind Management Not Time Management
-</h3>
-<div class="listing-subtitle">
-David Kadavy, 2020, Mind Management Not Time Management: A Guide to Improving Your Productivity and Happiness
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
-agile
-</div>
-</div>
-<a href="../books/MindManagementNotTimeManagement.html">
-<div class="listing-description">
-<p>A practical guide to improving your productivity and happiness. Mind Management Not Time Management teaches you how to manage your thoughts and emotions, so you can achieve your goals and live a more fulfilling life.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/MindManagementNotTimeManagement.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="17" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159177" data-listing-reading-time-sort="1.24">
-<div class="thumbnail">
-<p><a href="../books/mindset.html"> <img src="../books/mindset.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/mindset.html">
-<h3 class="no-anchor listing-title">
-Mindset
-</h3>
-<div class="listing-subtitle">
-Carol Dweck, 2006, Mindset: The New Psychology of Success
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
-psychology
-</div>
-</div>
-<a href="../books/mindset.html">
-<div class="listing-description">
-<p>A powerful and inspiring book that challenges traditional notions of intelligence and talent. Carol Dweck introduces the concept of a growth mindset and shows how embracing a growth mindset can lead to greater success and fulfillment in life.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/mindset.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="18" data-categories="design" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159179" data-listing-reading-time-sort="0.92">
-<div class="thumbnail">
-<p><a href="../books/modern-java-ee-design-patterns.html"> <img src="../books/modern-java-ee-design-patterns.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/modern-java-ee-design-patterns.html">
-<h3 class="no-anchor listing-title">
-Modern Java EE Design Patterns
-</h3>
-<div class="listing-subtitle">
-Markus Eisele, 2016, Modern Java EE Design Patterns: Building Scalable Architecture for Sustainable Enterprise Development
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('design'); return false;">
-design
-</div>
-</div>
-<a href="../books/modern-java-ee-design-patterns.html">
-<div class="listing-description">
-<p>With the ascent of DevOps, microservices, containers, and cloud-based development platforms, the gap between state-of-the-art solutions and the technology that enterprises typically support has greatly increased. But as Markus Eisele explains in this O’Reilly report, some enterprises are now looking to bridge that gap by building microservice-based architectures on top of Java EE.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/modern-java-ee-design-patterns.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="19" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159180" data-listing-reading-time-sort="0.695">
-<div class="thumbnail">
-<p><a href="../books/quarkusCookBook.html"> <img src="../books/quarkusCookBook.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/quarkusCookBook.html">
-<h3 class="no-anchor listing-title">
-Quarkus Cookbook
-</h3>
-<div class="listing-subtitle">
-Alex Soto Bueno, Jason Porter, February 9, 2021, Quarkus Cookbook: Developing Cloud-Native Applications with Java
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
-java
-</div>
-</div>
-<a href="../books/quarkusCookBook.html">
-<div class="listing-description">
-<p>Optimized for Kubernetes, Quarkus is designed to help you create Java applications that are cloud-first, container-native, and serverless capable. With this cookbook, authors Alex Soto Bueno and Jason Porter from Red Hat provide detailed solutions for installing, interacting with, and using Quarkus in the development and production of microservices</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/quarkusCookBook.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="20" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159182" data-listing-reading-time-sort="0.52">
-<div class="thumbnail">
-<p><a href="../books/quarkusSpringDevelopers.html"> <img src="../books/quarkusSpringDevelopers.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/quarkusSpringDevelopers.html">
-<h3 class="no-anchor listing-title">
-Quarkus for Spring Developers
-</h3>
-<div class="listing-subtitle">
-Eric Deandrea, August 31, 2021, Quarkus for Spring Developers
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
-java
-</div>
-</div>
-<a href="../books/quarkusSpringDevelopers.html">
-<div class="listing-description">
-<p>An essential guide for Spring developers who want to embrace cloud-native development with Java. Eric Deandrea provides a clear and practical approach to building cloud-native applications with Quarkus, a modern, fast, and efficient Java framework.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/quarkusSpringDevelopers.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="21" data-categories="agile" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159183" data-listing-reading-time-sort="1.315">
-<div class="thumbnail">
-<p><a href="../books/scrum.html"> <img src="../books/scrum.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/scrum.html">
-<h3 class="no-anchor listing-title">
-Scrum
-</h3>
-<div class="listing-subtitle">
-J.J. shuterland, 2014, Scrum: The Art of Doing Twice the Work in Half the Time
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('agile'); return false;">
-agile
-</div>
-</div>
-<a href="../books/scrum.html">
-<div class="listing-description">
-<p>Full of engaging stories and real-world examples. The project management method known as Scrum may be the most widely deployed productivity tool among high-tech companies. On a mission to put this tool into the hands of the broader business world for the first time, Jeff Sutherland succeeds brilliantly</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/scrum.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="22" data-categories="devops" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159185" data-listing-reading-time-sort="2.29">
-<div class="thumbnail">
-<p><a href="../books/sre.html"> <img src="../books/sre.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/sre.html">
-<h3 class="no-anchor listing-title">
-Site Reliability Engineering
-</h3>
-<div class="listing-subtitle">
-Betsy Beyer, Chris Jones, Jennifer Petoff and Niall Richard Murphy, 2016, How Google runs production systems
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('devops'); return false;">
-devops
-</div>
-</div>
-<a href="../books/sre.html">
-<div class="listing-description">
-<p>Members of the SRE team explain how their engagement with the entire software lifecycle has enabled Google to build, deploy, monitor, and maintain some of the largest software systems in the world.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/sre.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="23" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159186" data-listing-reading-time-sort="0.58">
-<div class="thumbnail">
-<p><a href="../books/stratospheric.html"> <img src="../books/stratospheric.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/stratospheric.html">
-<h3 class="no-anchor listing-title">
-Stratospheric: From Zero to Production with Spring Boot and AWS
-</h3>
-<div class="listing-subtitle">
-Stratospheric, 2020, From Zero to Production with Spring Boot and AWS: Building Scalable and Resilient Applications
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
-java
-</div>
-</div>
-<a href="../books/stratospheric.html">
-<div class="listing-description">
-<p>A comprehensive guide to building and deploying scalable and resilient applications with Spring Boot and AWS. Stratospheric provides step-by-step guidance and best practices for building applications from zero to production, leveraging the power of both technologies.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/stratospheric.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="24" data-categories="assay" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159164" data-listing-reading-time-sort="1.565">
-<div class="thumbnail">
-<p><a href="../books/budddhaandBadasss.html"> <img src="../books/budddhaandBadasss.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/budddhaandBadasss.html">
-<h3 class="no-anchor listing-title">
-The Buddha and the Badass
-</h3>
-<div class="listing-subtitle">
-Vishen Lakhiani, 2020, The Buddha and the Badass: The Secret Spiritual Art of Succeeding at Work
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('assay'); return false;">
-assay
-</div>
-</div>
-<a href="../books/budddhaandBadasss.html">
-<div class="listing-description">
-<p>Have You Ever Noticed How Some People Have All the Luck at Work?They generate ideas on the fly. They magnetically attract the right people. Others crave joining their missions, their companies, their teams. They move with fluidity and ease, nailing projects with a smile on their face. Getting the coveted raises and promotions. These superstars are often able to get in the zone, displaying remarkable focus and creativity. They are masters of relationships, forging close ties with their teams and everyone around them. When they do business, it’s about win-win. And one of the most unique qualities they seem to have is remarkable luck. Things just go easy for them. It seems like the Universe bends in their favor.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/budddhaandBadasss.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="25" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159188" data-listing-reading-time-sort="0.43">
-<div class="thumbnail">
-<p><a href="../books/theIntellingenceTrap.html"> <img data-src="../books/theIntellingenceTrap.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/theIntellingenceTrap.html">
-<h3 class="no-anchor listing-title">
-The Intelligence Trap
-</h3>
-<div class="listing-subtitle">
-The Intelligence Trap, 2019, The Intelligence Trap: Why Smart People Make Dumb Decisions
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
-psychology
-</div>
-</div>
-<a href="../books/theIntellingenceTrap.html">
-<div class="listing-description">
-<p>An exploration of why even the smartest people can make poor decisions. The Intelligence Trap, written by science journalist David Robson, reveals the cognitive biases and traps that can lead us astray, and provides practical strategies for overcoming them.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/theIntellingenceTrap.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-David Robson
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="26" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159183" data-listing-reading-time-sort="1.215">
-<div class="thumbnail">
-<p><a href="../books/relaxationrevolution.html"> <img data-src="../books/relaxationrevolution.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/relaxationrevolution.html">
-<h3 class="no-anchor listing-title">
-The Relaxation Revolution
-</h3>
-<div class="listing-subtitle">
-William Proctor, Herbert Benson, 2010, The Relaxation Revolution: Enhancing Your Personal Health Through the Science and Genetics of Mind Body Healing
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
-psychology
-</div>
-</div>
-<a href="../books/relaxationrevolution.html">
-<div class="listing-description">
-<p>A comprehensive guide to reducing stress and improving well-being. The Relaxation Revolution provides practical strategies for relaxation and mindfulness, so you can lead a more balanced and fulfilling life.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/relaxationrevolution.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="27" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159188" data-listing-reading-time-sort="1.9">
-<div class="thumbnail">
-<p><a href="../books/theRighteousMind.html"> <img data-src="../books/theRighteousMind.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/theRighteousMind.html">
-<h3 class="no-anchor listing-title">
-The Righteous Mind
-</h3>
-<div class="listing-subtitle">
-Jonathan Haidt, 2013, The Righteous Mind: Why Good People are Divided by Politics and Religion
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
-psychology
-</div>
-</div>
-<a href="../books/theRighteousMind.html">
-<div class="listing-description">
-<p>A groundbreaking exploration of the roots of human morality. The Righteous Mind, written by social psychologist Jonathan Haidt, provides insights into the ways in which moral values and beliefs influence our political and religious views.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/theRighteousMind.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="28" data-categories="psychology" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159185" data-listing-reading-time-sort="1.13">
-<div class="thumbnail">
-<p><a href="../books/statusGame.html"> <img data-src="../books/statusGame.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/statusGame.html">
-<h3 class="no-anchor listing-title">
-The Status Game
-</h3>
-<div class="listing-subtitle">
-Will Storr, 2021, The Status Game: On Social Position and How We Use It
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('psychology'); return false;">
-psychology
-</div>
-</div>
-<a href="../books/statusGame.html">
-<div class="listing-description">
-<p>An in-depth examination of the role of social status and prestige in our lives. The Status Game provides insights and strategies for navigating the complex world of status and prestige, so you can achieve your goals and live a more fulfilling life.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/statusGame.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-1 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="29" data-categories="java" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1676492159201" data-listing-reading-time-sort="0.6">
-<div class="thumbnail">
-<p><a href="../books/thinkInJava.html"> <img data-src="../books/thinkInJava.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../books/thinkInJava.html">
-<h3 class="no-anchor listing-title">
-Thinking in Java
-</h3>
-<div class="listing-subtitle">
-Eckel Bruce, 2006, Scrum: The Art of Doing Twice the Work in Half the Time
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('java'); return false;">
-java
-</div>
-</div>
-<a href="../books/thinkInJava.html">
-<div class="listing-description">
-<p>Thinking in Java has earned raves from programmers worldwide for its extraordinary clarity, careful organization, and small, direct programming examples. From the fundamentals of Java syntax to its most advanced features, Thinking in Java is designed to teach, one simple step at a time.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../books/thinkInJava.html">
-<div class="listing-date">
-Friday, January 20, 2023
-</div>
-<div class="listing-author">
-albertprofe
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-<div class="metadata-value listing-file-modified">
-Wednesday, February 15, 2023
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-<nav id="books-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
 </div>
 <!--- navLinks -->
 <br><br>
 <div class="row">
 <br>
 <div class="column left previous">
-<p><br> <a href="../about/about-learning-questions.html"><i class="fa-solid fa-arrow-left" aria-label="arrow-left"></i> About the Useful Questions</a> <br></p>
+<p><br> <a href="../javase/selab2-4.html"><i class="fa-solid fa-arrow-left" aria-label="arrow-left"></i> Lab#SE02-4: Movie/Review, interactivity and coupling</a> <br></p>
 </div>
 <br>
 <div class="column center">
@@ -2395,13 +1737,14 @@ No matching items
 </div>
 <br>
 <div class="column right next">
-<p><br> <a href="../about/about-listing-table.html">Articles Table-Listing <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></a> <br></p>
+<p><br> <a href="../javase/resources.html">Java SE Resources <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></a> <br></p>
 </div>
 <p><br></p>
 </div>
 
 
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2675,7 +2018,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":true,"selector":".lightbox"});</script>
 
 
 
