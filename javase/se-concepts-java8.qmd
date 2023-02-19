@@ -130,6 +130,9 @@ A stream **does not store data and, in that sense, is not a data structure**. It
 
 This functionality ``java.util.stream`` supports **functional-style operations on streams of elements**.
 :::
+</br>
+
+![Streams allow you to express complex data manipulations in a simple, concise way. With streams, you can filter, map, reduce, and collect data in a highly readable and maintainable way.](/images/javase/stream.png){width="65%"}
 
 ### Example
 
@@ -166,6 +169,162 @@ This operation **triggers the computation of the stream and produces a result**,
 Because of lazy evaluation, only the elements that are necessary to produce the result are processed. In this example, only the first element that matches the condition is processed, and the remaining elements are not processed.
 
 Finally, **we print the result to the console**, which is the first word in the stream that matches the condition. In this case, the result is the string "WORLD".
+
+
+## Optional
+
+
+::: {.summary}
+``Optional`` is a **container object that may or may not contain a non-null value.** It is a way to represent a value that may or may not be present, without using null references.
+:::
+</br>
+
+An ``Optional`` object can either contain a non-null value, or be empty. When an ``Optional`` object contains a value, it provides a way to safely access that value without risking a NullPointerException. On the other hand, when an ``Optional`` object is empty, it indicates that there is no value present.
+
+
+To create an ``Optional`` object, you can call the static`` of()`` method and pass in a non-null value, or you can call the static ``empty()`` method to create an empty ``Optional`` object.
+
+![Optional](/images/javase/optional.png){width="80%"}
+
+To access the value of an ``Optional`` object, you can call the get() method, but it is recommended to first check if the value is present using the isPresent() method. If the value is not present, you can provide a default value using the ``orElse()`` or ``orElseGet()`` methods.
+
+::: {.callout-note}
+``Optional`` is often used as a **return type for methods that may or may not return a value**, as a way to indicate that the method **may return no value**, and to avoid returning null references. It is also used in the ``Stream API`` to represent the possibility **of an empty result set**.
+:::
+
+### Example
+
+```java
+import java.util.Optional;
+
+public class OptionalExample {
+    public static void main(String[] args) {
+        String name = "John Doe";
+        Optional<String> optionalName = Optional.of(name); // Create an Optional object with a non-null value
+        System.out.println(optionalName.isPresent()); // true
+        System.out.println(optionalName.get()); // "John Doe"
+
+        String nullName = null;
+        Optional<String> optionalNullName = Optional.ofNullable(nullName); // Create an Optional object with a null value
+        System.out.println(optionalNullName.isPresent()); // false
+
+        String defaultName = "Jane Doe";
+        String finalName = optionalNullName.orElse(defaultName); // Use the default value when the Optional is empty
+        System.out.println(finalName); // "Jane Doe"
+    }
+}
+
+
+```
+::: {.column-margin}
+In this example, we create **two Optional objects**: ``optionalName``, which contains a non-null value, and ``optionalNullName``, which contains a null value.
+:::
+
+We use the ``isPresent()`` method to check if the Optional objects contain a value, and the ``get()`` method to access the values. When ``optionalNullName`` is empty, we use the ``orElse()`` method to provide a default value.
+
+## Lambda
+::: {.summary}
+``Lambda expressions`` support ``functional`` programming style, which emphasizes **writing code in terms of functions that take inputs and produce outputs, without relying on mutable state or side effects**.
+
+They allow to express a behavior as a function object, which can be passed around and executed later.
+:::
+</br>
+
+A ``lambda expression`` is composed of three parts:
+
+- the argument list,
+- the arrow token (->),
+- and the body. 
+
+The ``argument`` list specifies **the inputs to the function**, and can be empty or have one or more parameters. The ``arrow token`` separates the argument list from the body. The ``body`` contains the **code that implements the behavior of the lambda expression.**
+
+![Lambda](/images/javase/lambdsa.png){width="50%"}
+
+### Example
+
+Here's an example of a lambda expression that adds two numbers:
+
+```java
+(int a, int b) -> a + b
+
+
+```
+
+::: {.column-margin}
+This lambda expression takes** two int arguments and returns their sum**. The argument ``list (int a, int b)`` specifies the **inputs** to the function, and the **body** a + b contains the code that implements the behavior.
+:::
+
+
+Lambda expressions can be used in many places in ``Java``, such as the ``Stream API``, the ``Comparator`` ``interface``, and the ``Runnable`` and ``Callable`` ``interfaces``. They are a powerful tool for writing concise, expressive code that is easy to read and maintain.
+
+
+## Method references
+
+::: {.summary}
+
+``Method reference``s are **special types of lambda expressions** that execute only one method.
+
+``Method reference`` is a **shorthand syntax for referring to an existing method or constructor**, without having to provide a **full method implementation**.
+ 
+It is a way to pass a method as a parameter to another method or to create a functional interface instance.
+:::
+</br>
+
+- [A comprehensive guide to Java 8 method reference](https://medium.com/javarevisited/a-comprehensive-guide-to-java-8-method-reference-f0bf5457b72d){.external}
+- [Quickly writing Java lambdas and method references](https://codeburst.io/quick-java-lambdas-and-method-references-3279b7690c07){.external}
+
+
+They allow you to refer to a method by its name and optionally specify the object on which the method is invoked.
+
+![Method references](/images/javase/referenceMethod.png){width="50%"}
+
+There are **four types of method references**:
+
+- Reference to a ``static method``
+- Reference to an instance method of an object of a ``particular type``
+- Reference to an instance method of an ``existing object``
+- Reference to a ``constructor``
+
+### Example ``names`` print
+
+```java
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+// Using lambda expression
+names.forEach(name -> System.out.println(name));
+
+// Using method reference
+names.forEach(System.out::println);
+
+```
+In this example, we have a list of names and we want to print them to the console. We can achieve this using a forEach method that accepts a Consumer interface implementation. The Consumer interface has a single abstract method accept that takes an input and performs an operation on it.
+
+We can pass a lambda expression or a method reference to the forEach method to define the Consumer implementation. In the lambda expression version, we define an anonymous function that takes a name parameter and prints it to the console using System.out.println(name).
+
+In the method reference version, we refer to the println method of the System.out object using the syntax System.out::println. This is equivalent to passing a lambda expression that calls System.out.println(name) with the name parameter.
+
+Both versions of the code produce the same output, but the method reference version is more concise and easier to read.
+
+### Example ``names`` compareTo
+
+```java
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+// Using lambda expression
+Collections.sort(names, (name1, name2) -> name1.compareTo(name2));
+
+// Using method reference
+Collections.sort(names, String::compareTo);
+```
+
+In this example, we have a list of names and we want to sort them in ascending order. We can achieve this using the sort method of the Collections class, which accepts a list and a Comparator implementation to define the sort order.
+
+We can pass a lambda expression or a method reference to the sort method to define the Comparator implementation. In the lambda expression version, we define an anonymous function that takes two String parameters name1 and name2, and compares them using the compareTo method of String class.
+
+In the method reference version, we refer to the compareTo method of the String class using the syntax String::compareTo. This is equivalent to passing a lambda expression that calls name1.compareTo(name2).
+
+Both versions of the code produce the same output, but the method reference version is more concise and easier to read.
+
 
 <!--- navLinks -->
 <br><br>
