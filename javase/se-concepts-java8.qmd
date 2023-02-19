@@ -43,17 +43,32 @@ It includes a huge upgrade to the Java programming model and a coordinated evolu
 Java 8 introduced several new features to the language, including Streams, Optional, Lambda expressions, and Method references. Here's a brief definition of each of these features:
 
 > ``Streams``</br>
-**Streams provide a way to process collections of data in a declarative and functional way**. Streams allow you to express complex data manipulations in a simple, concise way. With streams, you can filter, map, reduce, and collect data in a highly readable and maintainable way.
+**Streams provide a way to process collections of data in a declarative and functional way**. Streams allow you to express complex data manipulations in a simple, concise way. 
+
+::: {.column-margin}
+With streams, you can filter, map, reduce, and collect data in a highly readable and maintainable way.
+:::
 
 > ``Optional``</br>
-**Optional is a container object that may or may not contain a non-null value.** It is designed to reduce the number of null checks in your code and to provide a more elegant way of handling null values. Optional can be used to wrap any object, and it provides methods for safely accessing the wrapped object or handling the case when the object is null.
+**Optional is a container object that may or may not contain a non-null value.** It is designed to reduce the number of null checks in your code and to provide a more elegant way of handling null values. 
+
+::: {.column-margin}
+Optional can be used to wrap any object, and it provides methods for safely accessing the wrapped object or handling the case when the object is null.
+:::
 
 > ``Lambda expressions``</br>
-**Lambda expressions provide a way to write code in a functional style. **They allow you to pass behavior as an argument to a method, which is a powerful technique for writing more modular and reusable code. Lambda expressions can be used in place of anonymous inner classes and are highly concise and readable.
+**Lambda expressions provide a way to write code in a functional style. **They allow you to pass behavior as an argument to a method, which is a powerful technique for writing more modular and reusable code. 
+
+::: {.column-margin}
+Lambda expressions can be used in place of anonymous inner classes and are highly concise and readable.
+:::
 
 > ``Method references``</br>
-**Method references provide a way to pass a method as an argument to another method**. They provide a concise and expressive way to write code, and can be used in place of lambda expressions in certain situations. Method references are highly readable and can make code more modular and reusable.
+**Method references provide a way to pass a method as an argument to another method**. They provide a concise and expressive way to write code, and can be used in place of lambda expressions in certain situations.
 
+::: {.column-margin}
+Method references are highly readable and can make code more modular and reusable.
+:::
 
 ## Example of ``functional-style`` in ``Java 8``
 
@@ -101,6 +116,56 @@ System.out.println("Sum of odd numbers: " + sum);
 ::: {.column-margin}
 In this code, we iterate over the list of numbers using a ``for-each`` loop, and filter out even numbers using an ``if-statement.`` We then accumulate the **odd** numbers in the **sum** variable using the ``+=`` **operator**. Finally, we print the result using ``System.out.println()``.
 :::
+
+
+
+## Streams
+
+::: {.summary}
+First of all, Java 8 Streams should **not be confused with** ``Java I/O streams`` (ex: ``FileInputStream`` etc).
+
+Simply put, **streams are wrappers around a data source**, allowing us to operate with that data source and making bulk processing convenient and fast by lazy and terminal operations.
+
+A stream **does not store data and, in that sense, is not a data structure**. It also never modifies the underlying data source.
+
+This functionality ``java.util.stream`` supports **functional-style operations on streams of elements**.
+:::
+
+### Example
+
+
+Here's an example of how **lazy evaluation, wrapping the data and intermediate/terminal operations** work in Java streams:
+
+```java
+List<String> words = Arrays.asList("hello", "world", "how", "are", "you");
+
+// create a stream and apply intermediate operations to filter and map the data
+Stream<String> stream = words.stream()
+    .filter(w -> w.length() > 3)
+    .map(String::toUpperCase);
+
+// call a terminal operation to evaluate the stream and produce a result
+String result = stream.findFirst().orElse("");
+
+System.out.println(result);
+
+```
+::: {.column-margin}
+In this example, we start by creating a list of strings and then create a stream from the list using the stream() method and wrapping them around.
+:::
+
+
+We then apply two intermediate operations, ``filter()`` and ``map()``, to filter the words that have a length greater than 3 and convert them to uppercase, respectively.
+
+At this point, **no computation has been performed on the data**. Instead, the operations on the stream have created a new stream with the modified data.
+
+Next, we call a **terminal** operation, ``findFirst()``, to find the first element in the stream that matches the specified condition. 
+
+This operation **triggers the computation of the stream and produces a result**, which in this case is the first word in the stream that has a length greater than 3 and is in uppercase.
+
+Because of lazy evaluation, only the elements that are necessary to produce the result are processed. In this example, only the first element that matches the condition is processed, and the remaining elements are not processed.
+
+Finally, **we print the result to the console**, which is the first word in the stream that matches the condition. In this case, the result is the string "WORLD".
 
 <!--- navLinks -->
 <br><br>

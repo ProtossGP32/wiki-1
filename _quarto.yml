@@ -258,6 +258,7 @@ website:
             - text: "---"
             - javase/selab3-1.qmd
             - javase/selab3-2.qmd
+            - javase/selab3-3.qmd
         - text: "---" 
         - section: "Java SE readings"
           contents: 
