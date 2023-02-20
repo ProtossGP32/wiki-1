@@ -2,10 +2,10 @@
   {
     "listing": "/about/about-listing-card.html",
     "items": [
-      "/javase/se-pattern-state.html",
-      "/javase/se-pattern-strategy.html",
       "/ifcd0210/ifcd0210backlog-sprint.html",
       "/javase/selab3-3.html",
+      "/javase/se-pattern-state.html",
+      "/javase/se-pattern-strategy.html",
       "/javase/se-concepts-java8.html",
       "/ifcd0210/ifcd0210backlog-product.html",
       "/javase/se-pattern-commander.html",
@@ -190,10 +190,10 @@
   {
     "listing": "/about/about-listing-card-articles.html",
     "items": [
-      "/javase/se-pattern-state.html",
-      "/javase/se-pattern-strategy.html",
       "/ifcd0210/ifcd0210backlog-sprint.html",
       "/javase/selab3-3.html",
+      "/javase/se-pattern-state.html",
+      "/javase/se-pattern-strategy.html",
       "/javase/se-concepts-java8.html",
       "/ifcd0210/ifcd0210backlog-product.html",
       "/javase/se-pattern-commander.html",
@@ -378,10 +378,10 @@
   {
     "listing": "/about/about-listing-table-articles.html",
     "items": [
-      "/javase/se-pattern-state.html",
-      "/javase/se-pattern-strategy.html",
       "/ifcd0210/ifcd0210backlog-sprint.html",
       "/javase/selab3-3.html",
+      "/javase/se-pattern-state.html",
+      "/javase/se-pattern-strategy.html",
       "/javase/se-concepts-java8.html",
       "/ifcd0210/ifcd0210backlog-product.html",
       "/javase/se-pattern-commander.html",
@@ -671,10 +671,10 @@
   {
     "listing": "/about/about-listing-table.html",
     "items": [
-      "/javase/se-pattern-state.html",
-      "/javase/se-pattern-strategy.html",
       "/ifcd0210/ifcd0210backlog-sprint.html",
       "/javase/selab3-3.html",
+      "/javase/se-pattern-state.html",
+      "/javase/se-pattern-strategy.html",
       "/javase/se-concepts-java8.html",
       "/ifcd0210/ifcd0210backlog-product.html",
       "/javase/se-pattern-commander.html",

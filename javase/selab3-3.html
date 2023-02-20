@@ -1697,21 +1697,14 @@ class Member {
     +getStatus(): String
   }
   
- Author *-- Book
-UserOperations &lt;|..  User 
+  Author *-- Book
+  UserOperations &lt;|..  User 
   GeneralOperations &lt;|..  LibraryMember  
   LibraryMember &lt;|.. User
   LibraryMember &lt;|.. Staff
   Member &lt;|.. Author
-   
   Member &lt;|.. LibraryMember
-
   StaffOperations  &lt;|.. Staff
-  Staff --&gt; User
-
-
-  
-
 
 </pre>
 <div id="mermaid-tooltip-1" class="mermaidTooltip">
