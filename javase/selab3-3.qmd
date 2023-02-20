@@ -112,7 +112,7 @@ Using ``interfaces`` and ``abstract`` classes in this way can make the code more
 
 ## UML
 
-### Previous drafts
+### Previous UML proposals
 
 The **two UML diagrams** describe the **core features** of a libraryProject, specifically the **use cases** for borrowing and issuing books, as well as the roles and responsibilities of users and librarians/staff members.
 
@@ -125,52 +125,53 @@ The **two UML diagrams** describe the **core features** of a libraryProject, spe
 
 - [Core features: user and librarian (staf)](/javase/selab3-1.qmd#core-features-user-and-librarian-(staf))
 
-### Current UML
+### Solving discussion: actors UML
+
+THE UML diagram describes our LibraryProject that includes three interfaces: GeneralOperations, UserOperations, and StaffOperations.
+
+- ``GeneralOperations`` provides two methods, createAccount() and searchBooks(String query), that allow users to create an account and search for books.
+- ``UserOperations`` provides four methods that allow users to update their personal information, borrow and return books, and check the books they have borrowed.
+- ``StaffOperations`` provides several methods that allow staff to add, remove, and update books, as well as register, remove, and update user details and generate reports.
+
+
 
 ::: {.column-page-right}
+<div class="mermaidContent">
+
 ```{mermaid}
 classDiagram
 
-  
  class GeneralOperations {
    <<interface>>
-    
     +createAccount(): void
-    +searchBooks(query: String): void
-   
+    +searchBooks(query: String): void 
   }
 
    class UserOperations {
      <<interface>>
-   
     +borrowBook(book: Book): void
     +returnBook(book: Book): void
     +checkBorrowedBooks(): void
   }
 
-
-class LibraryMember {
+  class LibraryMember {
     <<abstract>>
     +id: String
     +address: String
     +phoneNumber: String
-   
   }
 
-
-class Member {
+  class Member {
     <<abstract>>
     +name: String
     +surname: String
     nationality: String
     +birthdate: Date
-    
+  
   }
 
-
- class   StaffOperations {
+ class StaffOperations {
      <<interface>>
-    
     +addBook(book: Book): void
     +removeBook(book: Book): void
     +updateBookDetails(book: Book): void
@@ -179,9 +180,6 @@ class Member {
     +updateUserDetails(user: User): void
     +generateReports(): void
   }
-
-
-
 
   class User {
     -libraryCardNumber: String
@@ -225,7 +223,30 @@ class Member {
   StaffOperations  <|.. Staff
 
 ```
+
+</div>
+
 :::
+
+
+### Solving discussion: actors UML & core-model
+
+
+![Actors and core-model UML](/images/javase/actorsuml-issuing.png){width="100%"}
+
+::: {.column-margin}
+The diagram also includes four classes: ``User``, ``Author``, ``Staff``, and ``Book``.
+:::
+
+::: {.column-margin}
+**User represents a library member with a library card number** and a list of borrowed books. Author represents the author of a book, with details including their name, nationality, and birth and death dates.
+:::
+
+::: {.column-margin}
+**Staff represents a staff member with a staff ID**, position, and lists of registered users and library books. Book represents a book with details including its title, author, publisher, publication year, ISBN, and status.
+:::
+
+![Actors and core-model UML](/images/javase/actorsuml-borrowing.png){width="100%"}
 
 <!--- navLinks -->
 <br><br>
