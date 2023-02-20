@@ -18,11 +18,11 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #9 | 40 | 20/01 | - LibraryProject:</br> (0) plan Sprint </br> (1) brief-study returBook </br> (2) branch returnBook </br> - Quarto </br>| - |
-|  | 41 | 21/01 | - LibraryProject:</br> (1) Inherence Person,Publication </br> | - |
-|  | 42 | 22/02 | - Git </br>  | - |
-|  | 43 | 23/02 | - | - |
-|  | 44 | 24/02 | SCRUM | - |
+| #9 | 40 | 20/01 | - LibraryProject:</br> (0) plan Sprint </br> (1) brief-study returBook </br> (2) branch returnBook </br> (3) Inherence Person| [LibraryProject ](https://github.com/AlbertProfe/CifoJava2023/tree/1413c47c8aa8e5ed6ec4eb6ff4600df5dbfb28a8/LibraryProject){.external} |
+|  | 41 | 21/01 | - LibraryProject:</br> (1) Inherence: Publication </br> - Quarto </br>| - |
+|  | 42 | 22/02 | - Spring Boot: </br> (1) Book @controller  </br> (2) Book @Service </br> (3) Book CRUD html Thymeleaf </br> - Git </br>  | - |
+|  | 43 | 23/02 | - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> | - |
+|  | 44 | 24/02 |  - Spring Boot: </br> (1) Themleaf </br>  - SCRUM: </br> (1) Motivation/Purpose 2 </br> (2) Burn Out multitasking, several hats </br>  (3) spaceX beyond Scrum | - |
 : Backlog Sprint#9 February 2023 {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
