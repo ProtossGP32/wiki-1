@@ -215,21 +215,14 @@ class Member {
     +getStatus(): String
   }
   
- Author *-- Book
-UserOperations <|..  User 
+  Author *-- Book
+  UserOperations <|..  User 
   GeneralOperations <|..  LibraryMember  
   LibraryMember <|.. User
   LibraryMember <|.. Staff
   Member <|.. Author
-   
   Member <|.. LibraryMember
-
   StaffOperations  <|.. Staff
-  Staff --> User
-
-
-  
-
 
 ```
 :::
