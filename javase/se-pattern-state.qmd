@@ -14,7 +14,7 @@ format:
 ---
 
 ::: {.summary}
-The state pattern is a behavioral that **allows objects to dynamically alter their behavior based on internal state changes**.
+The state pattern is a behavioral design pattern that **allows objects to dynamically alter their behavior based on internal state changes**.
 :::
 
 ---
