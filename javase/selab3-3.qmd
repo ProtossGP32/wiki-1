@@ -136,7 +136,9 @@ THE UML diagram describes our LibraryProject that includes three interfaces: Gen
 
 
 ::: {.column-page-right}
+
 <div class="mermaidContent">
+
 
 ```{mermaid}
 classDiagram
@@ -247,6 +249,80 @@ The diagram also includes four classes: ``User``, ``Author``, ``Staff``, and ``B
 :::
 
 ![Actors and core-model UML](/images/javase/actorsuml-borrowing.png){width="100%"}
+
+
+
+::: {.column-page-right}
+
+<div class="mermaidContent">
+
+
+```{mermaid}
+classDiagram
+
+
+   class UserOperations {
+     <<interface>>
+    +borrowBook(book: Book): void
+    +returnBook(book: Book): void
+    +checkBorrowedBooks(): void
+  }
+
+  class Member {
+    <<abstract>>
+    +name: String
+    +surname: String
+    +nationality: String
+    +birthdate: Date
+    +abstract printData(): void
+    +calculateAge(): int
+  }
+
+  class User {
+    -email: String
+    -libraryCardNumber: String
+    -borrowedBooks: ArrayList<Book>
+    +User()
+  }
+
+
+ class GeneralOperations {
+   <<interface>>
+    +createAccount(): void
+    +searchBooks(query: String): void 
+  }
+
+   class Author {
+    -deathdate: Date
+    -books: List~Book~
+    +author()
+  }
+  
+  class Librarian {
+    -staffId: String
+    -position: String
+    -address: String
+    -phoneNumber: String
+    -salary: double
+    +Librarian()
+  }
+
+
+    UserOperations <|..  User
+    Member <|.. User
+    Member <|.. Author
+    Member <|.. Librarian
+    GeneralOperations <|..  User
+    GeneralOperations <|..  Librarian 
+
+
+```
+</div>
+
+:::
+
+
+
 
 <!--- navLinks -->
 <br><br>
