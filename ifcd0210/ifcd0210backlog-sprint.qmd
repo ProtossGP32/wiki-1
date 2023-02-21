@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(2) {
+tr:nth-child(3) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -19,7 +19,7 @@ tr:nth-child(2) {
 | Sprint | Day(1) brief-study returnBook | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
 | #9 | 40 | 20/01 | + LibraryProject:</br> (0) plan Sprint </br> (1) brief-study returnBook </br> (2) branch returnBook </br> (3) Inherence Person </br> + Git: <br> (1) Remote/Local (just one user)</br> (2) Basic Operations: push, pull, commit, add, clone </br> (3) watchdog: writting commits, location, document, time</br>| [LibraryProject ](https://github.com/AlbertProfe/CifoJava2023/tree/1413c47c8aa8e5ed6ec4eb6ff4600df5dbfb28a8/LibraryProject){.external} </br> [Learn Git](https://learngitbranching.js.org/){.external} </br> ![](/images/javase/git_branch.png){width="45%"} |
-|  | 41 | 21/01 | - LibraryProject:</br> (1) Inherence: Publication </br> -Quarto </br>| - |
+|  | 41 | 21/01 | + LibraryProject:</br> (1) Inherence: Member </br> (2) Is Author a Member? </br> (3) Member is Abstract/Interface/ Regular class</br> (4) How will we call Mangers? </br></s>- Quarto </s></br>| [core-General UML Proposal](/javase/selab3-3.qmd) |
 |  | 42 | 22/02 | - Spring Boot: </br> (1) Book @controller  </br> (2) Book @Service </br> (3) Book CRUD html Thymeleaf </br> - Git </br>  | - |
 |  | 43 | 23/02 | - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> | - |
 |  | 44 | 24/02 |  - Spring Boot: </br> (1) Themleaf </br>  - SCRUM: </br> (1) Motivation/Purpose 2 </br> (2) Burn Out multitasking, several hats </br>  (3) spaceX beyond Scrum | - |
