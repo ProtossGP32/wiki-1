@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -107,6 +107,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1451,8 +1454,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#abstract-class" id="toc-abstract-class" class="nav-link" data-scroll-target="#abstract-class"><span class="toc-section-number">2</span>  Abstract class</a></li>
   <li><a href="#uml" id="toc-uml" class="nav-link" data-scroll-target="#uml"><span class="toc-section-number">3</span>  UML</a>
   <ul>
-  <li><a href="#previous-drafts" id="toc-previous-drafts" class="nav-link" data-scroll-target="#previous-drafts"><span class="toc-section-number">3.1</span>  Previous drafts</a></li>
-  <li><a href="#current-uml" id="toc-current-uml" class="nav-link" data-scroll-target="#current-uml"><span class="toc-section-number">3.2</span>  Current UML</a></li>
+  <li><a href="#previous-uml-proposals" id="toc-previous-uml-proposals" class="nav-link" data-scroll-target="#previous-uml-proposals"><span class="toc-section-number">3.1</span>  Previous UML proposals</a></li>
+  <li><a href="#solving-discussion-actors-uml" id="toc-solving-discussion-actors-uml" class="nav-link" data-scroll-target="#solving-discussion-actors-uml"><span class="toc-section-number">3.2</span>  Solving discussion: actors UML</a></li>
+  <li><a href="#solving-discussion-actors-uml-core-model" id="toc-solving-discussion-actors-uml-core-model" class="nav-link" data-scroll-target="#solving-discussion-actors-uml-core-model"><span class="toc-section-number">3.3</span>  Solving discussion: actors UML &amp; core-model</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Albertprofe/wiki/edit/main/javase/selab3-3.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Albertprofe/wiki/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -1498,7 +1502,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Monday, February 20, 2023</p>
+      <p class="date-modified">Tuesday, February 21, 2023</p>
     </div>
   </div>
     
@@ -1588,8 +1592,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div></div></section>
 <section id="uml" class="level2 page-columns page-full" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="uml"><span class="header-section-number">3</span> UML</h2>
-<section id="previous-drafts" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="previous-drafts"><span class="header-section-number">3.1</span> Previous drafts</h3>
+<section id="previous-uml-proposals" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="previous-uml-proposals"><span class="header-section-number">3.1</span> Previous UML proposals</h3>
 <p>The <strong>two UML diagrams</strong> describe the <strong>core features</strong> of a libraryProject, specifically the <strong>use cases</strong> for borrowing and issuing books, as well as the roles and responsibilities of users and librarians/staff members.</p>
 <blockquote class="blockquote">
 <p>The first diagram, <code>Core features: borrow and issue</code>, depicts the <strong>interaction</strong> between the user and the system, as well as the system and the librarian:</p>
@@ -1604,55 +1608,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="../javase/selab3-1.html#core-features-user-and-librarian-(staf)">Core features: user and librarian (staf)</a></li>
 </ul>
 </section>
-<section id="current-uml" class="level3 page-columns page-full" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="current-uml"><span class="header-section-number">3.2</span> Current UML</h3>
+<section id="solving-discussion-actors-uml" class="level3 page-columns page-full" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="solving-discussion-actors-uml"><span class="header-section-number">3.2</span> Solving discussion: actors UML</h3>
+<p>THE UML diagram describes our LibraryProject that includes three interfaces: GeneralOperations, UserOperations, and StaffOperations.</p>
+<ul>
+<li><code>GeneralOperations</code> provides two methods, createAccount() and searchBooks(String query), that allow users to create an account and search for books.</li>
+<li><code>UserOperations</code> provides four methods that allow users to update their personal information, borrow and return books, and check the books they have borrowed.</li>
+<li><code>StaffOperations</code> provides several methods that allow staff to add, remove, and update books, as well as register, remove, and update user details and generate reports.</li>
+</ul>
 <div class="column-page-right">
+<div class="mermaidContent">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <p>
 </p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">classDiagram
 
-  
  class GeneralOperations {
    &lt;&lt;interface&gt;&gt;
-    
     +createAccount(): void
-    +searchBooks(query: String): void
-   
+    +searchBooks(query: String): void 
   }
 
    class UserOperations {
      &lt;&lt;interface&gt;&gt;
-   
     +borrowBook(book: Book): void
     +returnBook(book: Book): void
     +checkBorrowedBooks(): void
   }
 
-
-class LibraryMember {
+  class LibraryMember {
     &lt;&lt;abstract&gt;&gt;
     +id: String
     +address: String
     +phoneNumber: String
-   
   }
 
-
-class Member {
+  class Member {
     &lt;&lt;abstract&gt;&gt;
     +name: String
     +surname: String
     nationality: String
     +birthdate: Date
-    
+  
   }
 
-
- class   StaffOperations {
+ class StaffOperations {
      &lt;&lt;interface&gt;&gt;
-    
     +addBook(book: Book): void
     +removeBook(book: Book): void
     +updateBookDetails(book: Book): void
@@ -1661,9 +1663,6 @@ class Member {
     +updateUserDetails(user: User): void
     +generateReports(): void
   }
-
-
-
 
   class User {
     -libraryCardNumber: String
@@ -1711,6 +1710,105 @@ class Member {
 
 </div>
 <p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="solving-discussion-actors-uml-core-model" class="level3 page-columns page-full" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="solving-discussion-actors-uml-core-model"><span class="header-section-number">3.3</span> Solving discussion: actors UML &amp; core-model</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/javase/actorsuml-issuing.png" class="lightbox" title="Actors and core-model UML" data-gallery="quarto-lightbox-gallery-1"><img src="../images/javase/actorsuml-issuing.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<p></p><figcaption class="figure-caption">Actors and core-model UML</figcaption><p></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>The diagram also includes four classes: <code>User</code>, <code>Author</code>, <code>Staff</code>, and <code>Book</code>.</p>
+</div><div class="">
+<p><strong>User represents a library member with a library card number</strong> and a list of borrowed books. Author represents the author of a book, with details including their name, nationality, and birth and death dates.</p>
+</div><div class="">
+<p><strong>Staff represents a staff member with a staff ID</strong>, position, and lists of registered users and library books. Book represents a book with details including its title, author, publisher, publication year, ISBN, and status.</p>
+</div></div>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/javase/actorsuml-borrowing.png" class="lightbox" title="Actors and core-model UML" data-gallery="quarto-lightbox-gallery-2"><img src="../images/javase/actorsuml-borrowing.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<p></p><figcaption class="figure-caption">Actors and core-model UML</figcaption><p></p>
+</figure>
+</div>
+<div class="column-page-right">
+<div class="mermaidContent">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">classDiagram
+
+
+   class UserOperations {
+     &lt;&lt;interface&gt;&gt;
+    +borrowBook(book: Book): void
+    +returnBook(book: Book): void
+    +checkBorrowedBooks(): void
+  }
+
+  class Member {
+    &lt;&lt;abstract&gt;&gt;
+    +name: String
+    +surname: String
+    +nationality: String
+    +birthdate: Date
+    +abstract printData(): void
+    +calculateAge(): int
+  }
+
+  class User {
+    -email: String
+    -libraryCardNumber: String
+    -borrowedBooks: ArrayList&lt;Book&gt;
+    +User()
+  }
+
+
+ class GeneralOperations {
+   &lt;&lt;interface&gt;&gt;
+    +createAccount(): void
+    +searchBooks(query: String): void 
+  }
+
+   class Author {
+    -deathdate: Date
+    -books: List~Book~
+    +author()
+  }
+  
+  class Librarian {
+    -staffId: String
+    -position: String
+    -address: String
+    -phoneNumber: String
+    -salary: double
+    +Librarian()
+  }
+
+
+    UserOperations &lt;|..  User
+    Member &lt;|.. User
+    Member &lt;|.. Author
+    Member &lt;|.. Librarian
+    GeneralOperations &lt;|..  User
+    GeneralOperations &lt;|..  Librarian 
+
+
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
 </div>
 </div>
 </div>
@@ -2009,6 +2107,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 

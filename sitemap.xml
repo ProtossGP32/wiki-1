@@ -1,927 +1,927 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/spring/spring-mvc.html</loc>
-    <lastmod>2023-02-20T11:52:28.784Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/spring/spring-basics.html</loc>
-    <lastmod>2023-02-20T11:52:30.128Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-publish.html</loc>
-    <lastmod>2023-02-20T11:52:32.272Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-lang-intro.html</loc>
-    <lastmod>2023-02-20T11:52:33.408Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-css-basics.html</loc>
-    <lastmod>2023-02-20T11:52:34.540Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/mulab1.html</loc>
-    <lastmod>2023-02-20T11:52:36.124Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-code.html</loc>
-    <lastmod>2023-02-20T11:52:37.896Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-lang-html.html</loc>
-    <lastmod>2023-02-20T11:52:39.388Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-api-rest.html</loc>
-    <lastmod>2023-02-20T11:52:42.001Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-lang-md.html</loc>
-    <lastmod>2023-02-20T11:52:43.513Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-create.html</loc>
-    <lastmod>2023-02-20T11:52:49.717Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-cheatsheet.html</loc>
-    <lastmod>2023-02-20T11:52:56.321Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-lang-html-md.html</loc>
-    <lastmod>2023-02-20T11:52:57.637Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-css-w3css.html</loc>
-    <lastmod>2023-02-20T11:52:58.489Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-basics.html</loc>
-    <lastmod>2023-02-20T11:52:59.493Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/resources.html</loc>
-    <lastmod>2023-02-20T11:53:00.325Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-api-rest-v2.html</loc>
-    <lastmod>2023-02-20T11:53:01.417Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/howToMeasureAnyThing.html</loc>
-    <lastmod>2023-02-20T11:53:02.157Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/chimpanzeePolitics.html</loc>
-    <lastmod>2023-02-20T11:53:03.033Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/burnout.html</loc>
-    <lastmod>2023-02-20T11:53:03.885Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/atomicHabits.html</loc>
-    <lastmod>2023-02-20T11:53:04.593Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/thinkInJava.html</loc>
-    <lastmod>2023-02-20T11:53:05.853Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/diveIntoDesignPatterns.html</loc>
-    <lastmod>2023-02-20T11:53:06.777Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/scrum.html</loc>
-    <lastmod>2023-02-20T11:53:07.533Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/statusGame.html</loc>
-    <lastmod>2023-02-20T11:53:08.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/devops_with_openshift_oreilly.html</loc>
-    <lastmod>2023-02-20T11:53:09.041Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/incerto.html</loc>
-    <lastmod>2023-02-20T11:53:09.797Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/microservices-for-java-developers.html</loc>
-    <lastmod>2023-02-20T11:53:10.521Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/stratospheric.html</loc>
-    <lastmod>2023-02-20T11:53:11.377Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/budddhaandBadasss.html</loc>
-    <lastmod>2023-02-20T11:53:12.205Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/theIntellingenceTrap.html</loc>
-    <lastmod>2023-02-20T11:53:13.441Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/theRighteousMind.html</loc>
-    <lastmod>2023-02-20T11:53:14.193Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/dataScienceAtCommandLine.html</loc>
-    <lastmod>2023-02-20T11:53:15.093Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/elements_style.html</loc>
-    <lastmod>2023-02-20T11:53:15.898Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/domaindrivendesign.html</loc>
-    <lastmod>2023-02-20T11:53:16.634Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/MindManagementNotTimeManagement.html</loc>
-    <lastmod>2023-02-20T11:53:18.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/Kubernetes_Native_Microservices.html</loc>
-    <lastmod>2023-02-20T11:53:19.550Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/sre.html</loc>
-    <lastmod>2023-02-20T11:53:20.906Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/relaxationrevolution.html</loc>
-    <lastmod>2023-02-20T11:53:21.678Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/quarkusCookBook.html</loc>
-    <lastmod>2023-02-20T11:53:22.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/c.html</loc>
-    <lastmod>2023-02-20T11:53:23.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/mindset.html</loc>
-    <lastmod>2023-02-20T11:53:23.982Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/quarkusSpringDevelopers.html</loc>
-    <lastmod>2023-02-20T11:53:24.754Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/execution.html</loc>
-    <lastmod>2023-02-20T11:53:25.558Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/modern-java-ee-design-patterns.html</loc>
-    <lastmod>2023-02-20T11:53:26.302Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/MicroservicesPatterns.html</loc>
-    <lastmod>2023-02-20T11:53:27.138Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/books/designPatterns.html</loc>
-    <lastmod>2023-02-20T11:53:28.162Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-ide-intelljidea.html</loc>
-    <lastmod>2023-02-20T11:53:34.122Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-aws.html</loc>
+    <lastmod>2023-02-21T16:57:45.209Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-installjenkins.html</loc>
-    <lastmod>2023-02-20T11:53:34.906Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-doc-quarto.html</loc>
-    <lastmod>2023-02-20T11:53:40.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-springbooksdocker.html</loc>
-    <lastmod>2023-02-20T11:53:46.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-vc-github.html</loc>
-    <lastmod>2023-02-20T11:53:50.455Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-digitalocean.html</loc>
-    <lastmod>2023-02-20T11:53:53.611Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-vc-git.html</loc>
-    <lastmod>2023-02-20T11:53:54.787Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-chatapp.html</loc>
-    <lastmod>2023-02-20T11:53:55.591Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-springbooksintro.html</loc>
-    <lastmod>2023-02-20T11:53:56.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-jenkins.html</loc>
-    <lastmod>2023-02-20T11:53:57.255Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-ide-visualcode.html</loc>
-    <lastmod>2023-02-20T11:53:58.155Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-k8sdigitalocean.html</loc>
-    <lastmod>2023-02-20T11:53:59.003Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-springbookss3.html</loc>
-    <lastmod>2023-02-20T11:53:59.815Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-docker.html</loc>
-    <lastmod>2023-02-20T11:54:00.679Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-installmaven.html</loc>
-    <lastmod>2023-02-20T11:54:01.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/resources.html</loc>
-    <lastmod>2023-02-20T11:54:02.335Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-what-immutable.html</loc>
-    <lastmod>2023-02-20T11:54:03.631Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-aws.html</loc>
-    <lastmod>2023-02-20T11:54:04.591Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-what-overview.html</loc>
-    <lastmod>2023-02-20T11:54:05.411Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/devops/devops-what-intro.html</loc>
-    <lastmod>2023-02-20T11:54:06.303Z</lastmod>
+    <lastmod>2023-02-21T16:57:46.081Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-k8s.html</loc>
-    <lastmod>2023-02-20T11:54:07.147Z</lastmod>
+    <lastmod>2023-02-21T16:57:47.225Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-model.html</loc>
-    <lastmod>2023-02-20T11:54:12.979Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-vc-git.html</loc>
+    <lastmod>2023-02-21T16:57:48.637Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-controller.html</loc>
-    <lastmod>2023-02-20T11:54:14.167Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-docker.html</loc>
+    <lastmod>2023-02-21T16:57:49.625Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-what-create.html</loc>
-    <lastmod>2023-02-20T11:54:15.503Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-jenkins.html</loc>
+    <lastmod>2023-02-21T16:57:51.025Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab2.html</loc>
-    <lastmod>2023-02-20T11:54:16.539Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-installmaven.html</loc>
+    <lastmod>2023-02-21T16:57:51.977Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab5.html</loc>
-    <lastmod>2023-02-20T11:54:17.419Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-springbooksintro.html</loc>
+    <lastmod>2023-02-21T16:57:52.785Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab3.html</loc>
-    <lastmod>2023-02-20T11:54:18.455Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-vc-github.html</loc>
+    <lastmod>2023-02-21T16:57:53.665Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-what-basics.html</loc>
-    <lastmod>2023-02-20T11:54:19.683Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-tools-digitalocean.html</loc>
+    <lastmod>2023-02-21T16:57:54.401Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-data.html</loc>
-    <lastmod>2023-02-20T11:54:20.555Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-chatapp.html</loc>
+    <lastmod>2023-02-21T16:57:55.217Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-jpa.html</loc>
-    <lastmod>2023-02-20T11:54:21.699Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-what-immutable.html</loc>
+    <lastmod>2023-02-21T16:57:56.021Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-rest.html</loc>
-    <lastmod>2023-02-20T11:54:22.551Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-k8sdigitalocean.html</loc>
+    <lastmod>2023-02-21T16:57:56.749Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab1.html</loc>
-    <lastmod>2023-02-20T11:54:23.559Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/resources.html</loc>
+    <lastmod>2023-02-21T16:57:57.509Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/resources.html</loc>
-    <lastmod>2023-02-20T11:54:24.932Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-ide-visualcode.html</loc>
+    <lastmod>2023-02-21T16:57:58.433Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-injection.html</loc>
-    <lastmod>2023-02-20T11:54:26.260Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-ide-intelljidea.html</loc>
+    <lastmod>2023-02-21T16:57:59.469Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-view.html</loc>
-    <lastmod>2023-02-20T11:54:27.576Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-what-intro.html</loc>
+    <lastmod>2023-02-21T16:58:00.432Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-annotations.html</loc>
-    <lastmod>2023-02-20T11:54:28.536Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-what-overview.html</loc>
+    <lastmod>2023-02-21T16:58:01.320Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab4.html</loc>
-    <lastmod>2023-02-20T11:54:29.436Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-doc-quarto.html</loc>
+    <lastmod>2023-02-21T16:58:02.924Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-card.html</loc>
-    <lastmod>2023-02-20T11:54:36.168Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-springbookss3.html</loc>
+    <lastmod>2023-02-21T16:58:04.388Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-write-comments.html</loc>
-    <lastmod>2023-02-20T11:54:37.860Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-this-site.html</loc>
-    <lastmod>2023-02-20T11:54:39.376Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-this-images-credit.html</loc>
-    <lastmod>2023-02-20T11:54:40.292Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-intro.html</loc>
-    <lastmod>2023-02-20T11:54:41.232Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-questions.html</loc>
-    <lastmod>2023-02-20T11:54:42.364Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-card-articles.html</loc>
-    <lastmod>2023-02-20T11:54:48.076Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-table-articles.html</loc>
-    <lastmod>2023-02-20T11:54:51.260Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-table-books.html</loc>
-    <lastmod>2023-02-20T11:54:52.452Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-card-books.html</loc>
-    <lastmod>2023-02-20T11:54:54.332Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-books.html</loc>
-    <lastmod>2023-02-20T11:54:55.892Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-table.html</loc>
-    <lastmod>2023-02-20T11:54:58.776Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-auto-evaluate.html</loc>
-    <lastmod>2023-02-20T11:54:59.773Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-writing.html</loc>
-    <lastmod>2023-02-20T11:55:01.285Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-this-me.html</loc>
-    <lastmod>2023-02-20T11:55:02.137Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-take-notes.html</loc>
-    <lastmod>2023-02-20T11:55:02.873Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week8.html</loc>
-    <lastmod>2023-02-20T11:55:03.629Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week6.html</loc>
-    <lastmod>2023-02-20T11:55:04.393Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week1.html</loc>
-    <lastmod>2023-02-20T11:55:05.521Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week4.html</loc>
-    <lastmod>2023-02-20T11:55:06.285Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week10.html</loc>
-    <lastmod>2023-02-20T11:55:07.073Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week5.html</loc>
-    <lastmod>2023-02-20T11:55:07.849Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week7.html</loc>
-    <lastmod>2023-02-20T11:55:08.609Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week2.html</loc>
-    <lastmod>2023-02-20T11:55:09.365Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-what-agile-manifesto.html</loc>
-    <lastmod>2023-02-20T11:55:10.169Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/resources.html</loc>
-    <lastmod>2023-02-20T11:55:10.881Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-what-guide.html</loc>
-    <lastmod>2023-02-20T11:55:11.965Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-what-concepts.html</loc>
-    <lastmod>2023-02-20T11:55:13.065Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week9.html</loc>
-    <lastmod>2023-02-20T11:55:14.125Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week3.html</loc>
-    <lastmod>2023-02-20T11:55:15.069Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/images/markup/quarto-github/markup-quarto-github.html</loc>
-    <lastmod>2023-02-20T11:55:16.029Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/images/javase/se-createproject/se-presentation-createproject.html</loc>
-    <lastmod>2023-02-20T11:55:16.565Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210.html</loc>
-    <lastmod>2023-02-20T11:55:17.433Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210backlog-sprint.html</loc>
-    <lastmod>2023-02-20T11:55:18.333Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210calendar.html</loc>
-    <lastmod>2023-02-20T11:55:19.497Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210backlog-projects.html</loc>
-    <lastmod>2023-02-20T11:55:20.401Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210initemail.html</loc>
-    <lastmod>2023-02-20T11:55:21.141Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210backlog-product.html</loc>
-    <lastmod>2023-02-20T11:55:22.637Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210deliveries.html</loc>
-    <lastmod>2023-02-20T11:55:23.829Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/devops/devops-lab-springbooksdocker.html</loc>
+    <lastmod>2023-02-21T16:58:05.388Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/index.html</loc>
-    <lastmod>2023-02-20T11:55:24.909Z</lastmod>
+    <lastmod>2023-02-21T16:58:06.956Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab04-2.html</loc>
-    <lastmod>2023-02-20T11:55:25.817Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-auto-evaluate.html</loc>
+    <lastmod>2023-02-21T16:58:07.748Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab01-3.html</loc>
-    <lastmod>2023-02-20T11:55:26.669Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-write-comments.html</loc>
+    <lastmod>2023-02-21T16:58:08.632Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab01-2.html</loc>
-    <lastmod>2023-02-20T11:55:27.925Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-table-books.html</loc>
+    <lastmod>2023-02-21T16:58:09.940Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-manjaro.html</loc>
-    <lastmod>2023-02-20T11:55:28.657Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-card.html</loc>
+    <lastmod>2023-02-21T16:58:15.200Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-fsys.html</loc>
-    <lastmod>2023-02-20T11:55:29.497Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-card-articles.html</loc>
+    <lastmod>2023-02-21T16:58:20.208Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-pipes.html</loc>
-    <lastmod>2023-02-20T11:55:30.277Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-this-site.html</loc>
+    <lastmod>2023-02-21T16:58:21.304Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab02-1.html</loc>
-    <lastmod>2023-02-20T11:55:31.133Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-questions.html</loc>
+    <lastmod>2023-02-21T16:58:22.156Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-vm.html</loc>
-    <lastmod>2023-02-20T11:55:31.929Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-table.html</loc>
+    <lastmod>2023-02-21T16:58:24.916Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-bash.html</loc>
-    <lastmod>2023-02-20T11:55:32.713Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-writing.html</loc>
+    <lastmod>2023-02-21T16:58:25.696Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab01-1.html</loc>
-    <lastmod>2023-02-20T11:55:33.493Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-this-images-credit.html</loc>
+    <lastmod>2023-02-21T16:58:26.444Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-opensuse.html</loc>
-    <lastmod>2023-02-20T11:55:34.302Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-books.html</loc>
+    <lastmod>2023-02-21T16:58:28.180Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-debian.html</loc>
-    <lastmod>2023-02-20T11:55:34.978Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-card-books.html</loc>
+    <lastmod>2023-02-21T16:58:29.719Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-basics.html</loc>
-    <lastmod>2023-02-20T11:55:35.838Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-take-notes.html</loc>
+    <lastmod>2023-02-21T16:58:30.439Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab03-3.html</loc>
-    <lastmod>2023-02-20T11:55:36.542Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-this-me.html</loc>
+    <lastmod>2023-02-21T16:58:31.283Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-sudo.html</loc>
-    <lastmod>2023-02-20T11:55:37.378Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-learning-intro.html</loc>
+    <lastmod>2023-02-21T16:58:32.399Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab03-1.html</loc>
-    <lastmod>2023-02-20T11:55:38.114Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/about/about-listing-table-articles.html</loc>
+    <lastmod>2023-02-21T16:58:35.363Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab04-3.html</loc>
-    <lastmod>2023-02-20T11:55:38.922Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/spring/spring-mvc.html</loc>
+    <lastmod>2023-02-21T16:58:36.131Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-ubuntu.html</loc>
-    <lastmod>2023-02-20T11:55:39.694Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/spring/spring-basics.html</loc>
+    <lastmod>2023-02-21T16:58:37.027Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab03-2.html</loc>
-    <lastmod>2023-02-20T11:55:40.518Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/images/javase/se-createproject/se-presentation-createproject.html</loc>
+    <lastmod>2023-02-21T16:58:37.863Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-mint.html</loc>
-    <lastmod>2023-02-20T11:55:41.570Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-redhat.html</loc>
-    <lastmod>2023-02-20T11:55:42.438Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab04-1.html</loc>
-    <lastmod>2023-02-20T11:55:43.494Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/lilab03-4.html</loc>
-    <lastmod>2023-02-20T11:55:44.334Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/linux/resources.html</loc>
-    <lastmod>2023-02-20T11:55:45.454Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-java-se.html</loc>
-    <lastmod>2023-02-20T11:55:46.278Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-devops.html</loc>
-    <lastmod>2023-02-20T11:55:47.190Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-web.html</loc>
-    <lastmod>2023-02-20T11:55:47.970Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-general.html</loc>
-    <lastmod>2023-02-20T11:55:48.834Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-data-base.html</loc>
-    <lastmod>2023-02-20T11:55:49.566Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-reactjs.html</loc>
-    <lastmod>2023-02-20T11:55:50.414Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/images/markup/quarto-github/markup-quarto-github.html</loc>
+    <lastmod>2023-02-21T16:58:38.455Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-spring-boot.html</loc>
-    <lastmod>2023-02-20T11:55:51.226Z</lastmod>
+    <lastmod>2023-02-21T16:58:40.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-data-base.html</loc>
+    <lastmod>2023-02-21T16:58:40.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-web.html</loc>
+    <lastmod>2023-02-21T16:58:41.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-general.html</loc>
+    <lastmod>2023-02-21T16:58:42.811Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-devops.html</loc>
+    <lastmod>2023-02-21T16:58:43.595Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-reactjs.html</loc>
+    <lastmod>2023-02-21T16:58:44.299Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-java-se.html</loc>
+    <lastmod>2023-02-21T16:58:45.019Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/vocabulary/vocab-scrum.html</loc>
-    <lastmod>2023-02-20T11:55:52.030Z</lastmod>
+    <lastmod>2023-02-21T16:58:45.791Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-static.html</loc>
-    <lastmod>2023-02-20T11:55:52.966Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210deliveries.html</loc>
+    <lastmod>2023-02-21T16:58:46.771Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-singleton.html</loc>
-    <lastmod>2023-02-20T11:55:53.782Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210.html</loc>
+    <lastmod>2023-02-21T16:58:47.691Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-2.html</loc>
-    <lastmod>2023-02-20T11:55:54.750Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210backlog-sprint.html</loc>
+    <lastmod>2023-02-21T16:58:48.455Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-intro.html</loc>
-    <lastmod>2023-02-20T11:55:55.590Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210calendar.html</loc>
+    <lastmod>2023-02-21T16:58:49.323Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab0-4.html</loc>
-    <lastmod>2023-02-20T11:55:56.482Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210backlog-projects.html</loc>
+    <lastmod>2023-02-21T16:58:50.083Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-4.html</loc>
-    <lastmod>2023-02-20T11:55:57.966Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210initemail.html</loc>
+    <lastmod>2023-02-21T16:58:50.819Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-projectgit.html</loc>
-    <lastmod>2023-02-20T11:55:58.822Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/ifcd0210/ifcd0210backlog-product.html</loc>
+    <lastmod>2023-02-21T16:58:52.183Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-objects.html</loc>
-    <lastmod>2023-02-20T11:55:59.958Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week9.html</loc>
+    <lastmod>2023-02-21T16:58:53.055Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-5.html</loc>
-    <lastmod>2023-02-20T11:56:01.898Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-what-agile-manifesto.html</loc>
+    <lastmod>2023-02-21T16:58:54.283Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-decorator.html</loc>
-    <lastmod>2023-02-20T11:56:02.662Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week1.html</loc>
+    <lastmod>2023-02-21T16:58:55.383Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab3-2.html</loc>
-    <lastmod>2023-02-20T11:56:04.446Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week7.html</loc>
+    <lastmod>2023-02-21T16:58:56.319Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-tdd.html</loc>
-    <lastmod>2023-02-20T11:56:08.947Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week2.html</loc>
+    <lastmod>2023-02-21T16:58:57.123Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-java8.html</loc>
-    <lastmod>2023-02-20T11:56:10.307Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week3.html</loc>
+    <lastmod>2023-02-21T16:58:57.906Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-interface.html</loc>
-    <lastmod>2023-02-20T11:56:11.171Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/resources.html</loc>
+    <lastmod>2023-02-21T16:58:58.770Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab3-1.html</loc>
-    <lastmod>2023-02-20T11:56:12.103Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week4.html</loc>
+    <lastmod>2023-02-21T16:58:59.526Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab0-1.html</loc>
-    <lastmod>2023-02-20T11:56:13.071Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week8.html</loc>
+    <lastmod>2023-02-21T16:59:00.302Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-principles-inheritance.html</loc>
-    <lastmod>2023-02-20T11:56:13.875Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week5.html</loc>
+    <lastmod>2023-02-21T16:59:01.142Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-scope.html</loc>
-    <lastmod>2023-02-20T11:56:14.731Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week6.html</loc>
+    <lastmod>2023-02-21T16:59:02.050Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-commander.html</loc>
-    <lastmod>2023-02-20T11:56:15.423Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-what-guide.html</loc>
+    <lastmod>2023-02-21T16:59:03.446Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-3.html</loc>
-    <lastmod>2023-02-20T11:56:16.251Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-what-concepts.html</loc>
+    <lastmod>2023-02-21T16:59:04.398Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab0-3.html</loc>
-    <lastmod>2023-02-20T11:56:17.143Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-coupling.html</loc>
-    <lastmod>2023-02-20T11:56:17.991Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-what-moochelsinki.html</loc>
-    <lastmod>2023-02-20T11:56:18.747Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab1-1.html</loc>
-    <lastmod>2023-02-20T11:56:19.779Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab0-2.html</loc>
-    <lastmod>2023-02-20T11:56:20.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-composite.html</loc>
-    <lastmod>2023-02-20T11:56:21.455Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-observer.html</loc>
-    <lastmod>2023-02-20T11:56:22.227Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-createproject.html</loc>
-    <lastmod>2023-02-20T11:56:23.075Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab1-2.html</loc>
-    <lastmod>2023-02-20T11:56:24.371Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-builder.html</loc>
-    <lastmod>2023-02-20T11:56:25.427Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-uml.html</loc>
-    <lastmod>2023-02-20T11:56:26.559Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-abstractfactory.html</loc>
-    <lastmod>2023-02-20T11:56:27.667Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-package.html</loc>
-    <lastmod>2023-02-20T11:56:28.647Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-1.html</loc>
-    <lastmod>2023-02-20T11:56:32.979Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-principles-polymorphism.html</loc>
-    <lastmod>2023-02-20T11:56:33.995Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-state.html</loc>
-    <lastmod>2023-02-20T11:56:34.947Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/scrum/scrum-week10.html</loc>
+    <lastmod>2023-02-21T16:59:05.262Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-strategy.html</loc>
-    <lastmod>2023-02-20T11:56:35.907Z</lastmod>
+    <lastmod>2023-02-21T16:59:06.650Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/resources.html</loc>
-    <lastmod>2023-02-20T11:56:36.675Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-principles-abstraction.html</loc>
-    <lastmod>2023-02-20T11:56:37.595Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-principles-encapsulation.html</loc>
-    <lastmod>2023-02-20T11:56:38.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-factory.html</loc>
-    <lastmod>2023-02-20T11:56:40.871Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-maven.html</loc>
-    <lastmod>2023-02-20T11:56:41.675Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-bridge.html</loc>
-    <lastmod>2023-02-20T11:56:42.588Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab0-1.html</loc>
+    <lastmod>2023-02-21T16:59:07.834Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/javase/se-what-principles.html</loc>
-    <lastmod>2023-02-20T11:56:43.912Z</lastmod>
+    <lastmod>2023-02-21T16:59:08.778Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/selab3-3.html</loc>
-    <lastmod>2023-02-20T11:56:44.872Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-facade.html</loc>
-    <lastmod>2023-02-20T11:56:46.040Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-singleton.html</loc>
+    <lastmod>2023-02-21T16:59:09.682Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/javase/se-what-basics.html</loc>
-    <lastmod>2023-02-20T11:56:47.084Z</lastmod>
+    <lastmod>2023-02-21T16:59:10.538Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab2.html</loc>
-    <lastmod>2023-02-20T11:56:50.092Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-tdd.html</loc>
+    <lastmod>2023-02-21T16:59:11.478Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab4.html</loc>
-    <lastmod>2023-02-20T11:56:51.016Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab0-2.html</loc>
+    <lastmod>2023-02-21T16:59:12.358Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-effect.html</loc>
-    <lastmod>2023-02-20T11:56:52.420Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-coupling.html</loc>
+    <lastmod>2023-02-21T16:59:13.222Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-create.html</loc>
-    <lastmod>2023-02-20T11:56:53.384Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-5.html</loc>
+    <lastmod>2023-02-21T16:59:14.074Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-context.html</loc>
-    <lastmod>2023-02-20T11:56:54.548Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab1-2.html</loc>
+    <lastmod>2023-02-21T16:59:14.954Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab5.html</loc>
-    <lastmod>2023-02-20T11:56:55.256Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-scope.html</loc>
+    <lastmod>2023-02-21T16:59:15.826Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-state.html</loc>
-    <lastmod>2023-02-20T11:56:56.348Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-bridge.html</loc>
+    <lastmod>2023-02-21T16:59:16.650Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-app-async.html</loc>
-    <lastmod>2023-02-20T11:56:57.484Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-interface.html</loc>
+    <lastmod>2023-02-21T16:59:17.490Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-app-styling.html</loc>
-    <lastmod>2023-02-20T11:56:58.560Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-projectgit.html</loc>
+    <lastmod>2023-02-21T16:59:18.374Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-components.html</loc>
-    <lastmod>2023-02-20T11:56:59.672Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-1.html</loc>
+    <lastmod>2023-02-21T16:59:19.318Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-render-dom.html</loc>
-    <lastmod>2023-02-20T11:57:00.492Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-factory.html</loc>
+    <lastmod>2023-02-21T16:59:20.146Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-principles.html</loc>
-    <lastmod>2023-02-20T11:57:01.604Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-java8.html</loc>
+    <lastmod>2023-02-21T16:59:21.158Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-import.html</loc>
-    <lastmod>2023-02-20T11:57:02.604Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-abstractfactory.html</loc>
+    <lastmod>2023-02-21T16:59:21.910Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-data.html</loc>
-    <lastmod>2023-02-20T11:57:03.596Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-facade.html</loc>
+    <lastmod>2023-02-21T16:59:22.730Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-ref.html</loc>
-    <lastmod>2023-02-20T11:57:04.692Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-package.html</loc>
+    <lastmod>2023-02-21T16:59:23.546Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-arrow.html</loc>
-    <lastmod>2023-02-20T11:57:05.500Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-3.html</loc>
+    <lastmod>2023-02-21T16:59:24.394Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab3.html</loc>
-    <lastmod>2023-02-20T11:57:06.192Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab3-1.html</loc>
+    <lastmod>2023-02-21T16:59:25.282Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-reducer.html</loc>
-    <lastmod>2023-02-20T11:57:07.576Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-intro.html</loc>
+    <lastmod>2023-02-21T16:59:26.074Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-props.html</loc>
-    <lastmod>2023-02-20T11:57:08.848Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-commander.html</loc>
+    <lastmod>2023-02-21T16:59:26.841Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-spread.html</loc>
-    <lastmod>2023-02-20T11:57:09.968Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab0-4.html</loc>
+    <lastmod>2023-02-21T16:59:27.673Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/resources.html</loc>
-    <lastmod>2023-02-20T11:57:12.100Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-static.html</loc>
+    <lastmod>2023-02-21T16:59:28.629Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-destructuring.html</loc>
-    <lastmod>2023-02-20T11:57:13.840Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-principles-inheritance.html</loc>
+    <lastmod>2023-02-21T16:59:29.481Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-custom.html</loc>
-    <lastmod>2023-02-20T11:57:14.860Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/resources.html</loc>
+    <lastmod>2023-02-21T16:59:30.225Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-app-conditional-render.html</loc>
-    <lastmod>2023-02-20T11:57:16.004Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-what-moochelsinki.html</loc>
+    <lastmod>2023-02-21T16:59:31.005Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab1.html</loc>
-    <lastmod>2023-02-20T11:57:16.817Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-principles-abstraction.html</loc>
+    <lastmod>2023-02-21T16:59:31.893Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab3-2.html</loc>
+    <lastmod>2023-02-21T16:59:33.357Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab3-3.html</loc>
+    <lastmod>2023-02-21T16:59:34.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab0-3.html</loc>
+    <lastmod>2023-02-21T16:59:35.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-state.html</loc>
+    <lastmod>2023-02-21T16:59:35.993Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-maven.html</loc>
+    <lastmod>2023-02-21T16:59:36.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab1-1.html</loc>
+    <lastmod>2023-02-21T16:59:37.805Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-objects.html</loc>
+    <lastmod>2023-02-21T16:59:38.865Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-builder.html</loc>
+    <lastmod>2023-02-21T16:59:39.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-decorator.html</loc>
+    <lastmod>2023-02-21T16:59:40.497Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-observer.html</loc>
+    <lastmod>2023-02-21T16:59:41.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-2.html</loc>
+    <lastmod>2023-02-21T16:59:42.237Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-principles-encapsulation.html</loc>
+    <lastmod>2023-02-21T16:59:42.981Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-uml.html</loc>
+    <lastmod>2023-02-21T16:59:43.937Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-pattern-composite.html</loc>
+    <lastmod>2023-02-21T16:59:44.649Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/selab2-4.html</loc>
+    <lastmod>2023-02-21T16:59:45.601Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-principles-polymorphism.html</loc>
+    <lastmod>2023-02-21T16:59:46.429Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/javase/se-concepts-createproject.html</loc>
+    <lastmod>2023-02-21T16:59:47.237Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-what-basics.html</loc>
+    <lastmod>2023-02-21T16:59:48.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-data.html</loc>
+    <lastmod>2023-02-21T16:59:48.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-controller.html</loc>
+    <lastmod>2023-02-21T16:59:49.617Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-rest.html</loc>
+    <lastmod>2023-02-21T16:59:50.385Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab3.html</loc>
+    <lastmod>2023-02-21T16:59:51.185Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-annotations.html</loc>
+    <lastmod>2023-02-21T16:59:51.973Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-jpa.html</loc>
+    <lastmod>2023-02-21T16:59:53.021Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-model.html</loc>
+    <lastmod>2023-02-21T16:59:53.965Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-view.html</loc>
+    <lastmod>2023-02-21T16:59:54.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab5.html</loc>
+    <lastmod>2023-02-21T16:59:55.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab4.html</loc>
+    <lastmod>2023-02-21T16:59:56.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/resources.html</loc>
+    <lastmod>2023-02-21T16:59:57.196Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab1.html</loc>
+    <lastmod>2023-02-21T16:59:58.024Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/sblab2.html</loc>
+    <lastmod>2023-02-21T16:59:58.968Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-concepts-injection.html</loc>
+    <lastmod>2023-02-21T16:59:59.852Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/springboot/boot-what-create.html</loc>
+    <lastmod>2023-02-21T17:00:00.764Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/mulab1.html</loc>
+    <lastmod>2023-02-21T17:00:01.832Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-lang-html-md.html</loc>
+    <lastmod>2023-02-21T17:00:03.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-css-w3css.html</loc>
+    <lastmod>2023-02-21T17:00:04.356Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-lang-html.html</loc>
+    <lastmod>2023-02-21T17:00:05.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-code.html</loc>
+    <lastmod>2023-02-21T17:00:07.288Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-create.html</loc>
+    <lastmod>2023-02-21T17:00:10.748Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-lang-md.html</loc>
+    <lastmod>2023-02-21T17:00:13.900Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-publish.html</loc>
+    <lastmod>2023-02-21T17:00:15.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/resources.html</loc>
+    <lastmod>2023-02-21T17:00:15.936Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-api-rest.html</loc>
+    <lastmod>2023-02-21T17:00:17.616Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-basics.html</loc>
+    <lastmod>2023-02-21T17:00:18.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-css-basics.html</loc>
+    <lastmod>2023-02-21T17:00:19.676Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-cheatsheet.html</loc>
+    <lastmod>2023-02-21T17:00:21.012Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-quarto-api-rest-v2.html</loc>
+    <lastmod>2023-02-21T17:00:22.376Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/markup/markup-lang-intro.html</loc>
+    <lastmod>2023-02-21T17:00:23.652Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab01-1.html</loc>
+    <lastmod>2023-02-21T17:00:24.712Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab01-2.html</loc>
+    <lastmod>2023-02-21T17:00:25.835Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-debian.html</loc>
+    <lastmod>2023-02-21T17:00:26.703Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab03-1.html</loc>
+    <lastmod>2023-02-21T17:00:27.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-mint.html</loc>
+    <lastmod>2023-02-21T17:00:29.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-vm.html</loc>
+    <lastmod>2023-02-21T17:00:30.315Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-basics.html</loc>
+    <lastmod>2023-02-21T17:00:31.443Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-redhat.html</loc>
+    <lastmod>2023-02-21T17:00:32.451Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/resources.html</loc>
+    <lastmod>2023-02-21T17:00:33.347Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab02-1.html</loc>
+    <lastmod>2023-02-21T17:00:34.223Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab04-1.html</loc>
+    <lastmod>2023-02-21T17:00:35.343Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab03-3.html</loc>
+    <lastmod>2023-02-21T17:00:36.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-bash.html</loc>
+    <lastmod>2023-02-21T17:00:37.387Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab03-2.html</loc>
+    <lastmod>2023-02-21T17:00:38.439Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-fsys.html</loc>
+    <lastmod>2023-02-21T17:00:39.251Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-pipes.html</loc>
+    <lastmod>2023-02-21T17:00:40.315Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab03-4.html</loc>
+    <lastmod>2023-02-21T17:00:41.163Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab04-3.html</loc>
+    <lastmod>2023-02-21T17:00:42.107Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab01-3.html</loc>
+    <lastmod>2023-02-21T17:00:43.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/lilab04-2.html</loc>
+    <lastmod>2023-02-21T17:00:43.915Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-what-sudo.html</loc>
+    <lastmod>2023-02-21T17:00:45.111Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-opensuse.html</loc>
+    <lastmod>2023-02-21T17:00:46.147Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-ubuntu.html</loc>
+    <lastmod>2023-02-21T17:00:47.111Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/linux/linux-distros-manjaro.html</loc>
+    <lastmod>2023-02-21T17:00:48.115Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/diveIntoDesignPatterns.html</loc>
+    <lastmod>2023-02-21T17:00:48.907Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/execution.html</loc>
+    <lastmod>2023-02-21T17:00:49.907Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/statusGame.html</loc>
+    <lastmod>2023-02-21T17:00:50.651Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/microservices-for-java-developers.html</loc>
+    <lastmod>2023-02-21T17:00:51.455Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/budddhaandBadasss.html</loc>
+    <lastmod>2023-02-21T17:00:52.375Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/stratospheric.html</loc>
+    <lastmod>2023-02-21T17:00:53.403Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/designPatterns.html</loc>
+    <lastmod>2023-02-21T17:00:54.191Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/howToMeasureAnyThing.html</loc>
+    <lastmod>2023-02-21T17:00:55.039Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/burnout.html</loc>
+    <lastmod>2023-02-21T17:00:55.950Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/quarkusCookBook.html</loc>
+    <lastmod>2023-02-21T17:00:56.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/quarkusSpringDevelopers.html</loc>
+    <lastmod>2023-02-21T17:00:57.582Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/MindManagementNotTimeManagement.html</loc>
+    <lastmod>2023-02-21T17:00:58.470Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/devops_with_openshift_oreilly.html</loc>
+    <lastmod>2023-02-21T17:00:59.418Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/theRighteousMind.html</loc>
+    <lastmod>2023-02-21T17:01:00.406Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/mindset.html</loc>
+    <lastmod>2023-02-21T17:01:01.310Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/dataScienceAtCommandLine.html</loc>
+    <lastmod>2023-02-21T17:01:02.198Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/sre.html</loc>
+    <lastmod>2023-02-21T17:01:03.294Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/atomicHabits.html</loc>
+    <lastmod>2023-02-21T17:01:04.134Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/thinkInJava.html</loc>
+    <lastmod>2023-02-21T17:01:04.894Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/c.html</loc>
+    <lastmod>2023-02-21T17:01:05.798Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/relaxationrevolution.html</loc>
+    <lastmod>2023-02-21T17:01:06.662Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/modern-java-ee-design-patterns.html</loc>
+    <lastmod>2023-02-21T17:01:07.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/chimpanzeePolitics.html</loc>
+    <lastmod>2023-02-21T17:01:08.586Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/elements_style.html</loc>
+    <lastmod>2023-02-21T17:01:09.622Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/domaindrivendesign.html</loc>
+    <lastmod>2023-02-21T17:01:10.522Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/incerto.html</loc>
+    <lastmod>2023-02-21T17:01:11.450Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/scrum.html</loc>
+    <lastmod>2023-02-21T17:01:12.474Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/theIntellingenceTrap.html</loc>
+    <lastmod>2023-02-21T17:01:13.414Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/Kubernetes_Native_Microservices.html</loc>
+    <lastmod>2023-02-21T17:01:14.350Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/books/MicroservicesPatterns.html</loc>
+    <lastmod>2023-02-21T17:01:15.354Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-app-router.html</loc>
-    <lastmod>2023-02-20T11:57:18.421Z</lastmod>
+    <lastmod>2023-02-21T17:01:16.650Z</lastmod>
   </url>
   <url>
-    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-jsx.html</loc>
-    <lastmod>2023-02-20T11:57:19.593Z</lastmod>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-effect.html</loc>
+    <lastmod>2023-02-21T17:01:18.254Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-app-styling.html</loc>
+    <lastmod>2023-02-21T17:01:19.586Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-destructuring.html</loc>
+    <lastmod>2023-02-21T17:01:21.246Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-import.html</loc>
+    <lastmod>2023-02-21T17:01:22.550Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab4.html</loc>
+    <lastmod>2023-02-21T17:01:23.450Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-state.html</loc>
+    <lastmod>2023-02-21T17:01:24.590Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-components.html</loc>
+    <lastmod>2023-02-21T17:01:25.862Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-principles.html</loc>
+    <lastmod>2023-02-21T17:01:27.217Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab5.html</loc>
+    <lastmod>2023-02-21T17:01:27.977Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-props.html</loc>
+    <lastmod>2023-02-21T17:01:29.469Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab1.html</loc>
+    <lastmod>2023-02-21T17:01:30.401Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab3.html</loc>
+    <lastmod>2023-02-21T17:01:31.253Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/resources.html</loc>
+    <lastmod>2023-02-21T17:01:32.001Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-app-events.html</loc>
-    <lastmod>2023-02-20T11:57:20.745Z</lastmod>
+    <lastmod>2023-02-21T17:01:33.109Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-render-dom.html</loc>
+    <lastmod>2023-02-21T17:01:33.893Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-jsx.html</loc>
+    <lastmod>2023-02-21T17:01:35.157Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-custom.html</loc>
+    <lastmod>2023-02-21T17:01:36.421Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-arrow.html</loc>
+    <lastmod>2023-02-21T17:01:37.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-app-conditional-render.html</loc>
+    <lastmod>2023-02-21T17:01:38.377Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-reducer.html</loc>
+    <lastmod>2023-02-21T17:01:39.709Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-data.html</loc>
+    <lastmod>2023-02-21T17:01:40.853Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/rjslab2.html</loc>
+    <lastmod>2023-02-21T17:01:41.557Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-context.html</loc>
+    <lastmod>2023-02-21T17:01:42.681Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-hook-ref.html</loc>
+    <lastmod>2023-02-21T17:01:43.893Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-what-create.html</loc>
+    <lastmod>2023-02-21T17:01:44.945Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-app-async.html</loc>
+    <lastmod>2023-02-21T17:01:46.217Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertProfe.github.io/wiki/reactjs/reactjs-es6-spread.html</loc>
+    <lastmod>2023-02-21T17:01:47.401Z</lastmod>
   </url>
 </urlset>
