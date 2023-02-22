@@ -2,12 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.280">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="albertprofe">
+<meta name="description" content="Spring Boot">
 
-<title>albertprofe wiki - Lab 1: Spring Boot Projects</title>
+<title>albertprofe wiki - Lab 1: Spring Boot &amp; DataBase Basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,6 +43,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -650,8 +654,12 @@ ul.task-list li input[type="checkbox"] {
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Spring Boot Laboratories</li>
         <li>
+    <a class="dropdown-item" href="../springboot/sblab0.html">
+ <span class="dropdown-text">Lab 0: Spring Boot Project Basics</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../springboot/sblab1.html">
- <span class="dropdown-text">Lab 1: Spring Boot Projects</span></a>
+ <span class="dropdown-text">Lab 1: Spring Boot &amp; DataBase Basics</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../springboot/sblab2.html">
@@ -1033,7 +1041,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Lab 1: Spring Boot Projects</h1>
+      <h1 class="quarto-secondary-nav-title">Lab 1: Spring Boot &amp; DataBase Basics</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -1158,7 +1166,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../springboot/sblab1.html" class="sidebar-item-text sidebar-link active">Lab 1: Spring Boot Projects</a>
+  <a href="../springboot/sblab0.html" class="sidebar-item-text sidebar-link">Lab 0: Spring Boot Project Basics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../springboot/sblab1.html" class="sidebar-item-text sidebar-link active">Lab 1: Spring Boot &amp; DataBase Basics</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1208,20 +1221,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-to-connect-java-project-with-jdbc-to-h2-sql-database" id="toc-how-to-connect-java-project-with-jdbc-to-h2-sql-database" class="nav-link active" data-scroll-target="#how-to-connect-java-project-with-jdbc-to-h2-sql-database">How to connect Java Project with JDBC to H2 SQL Database</a>
+  <li><a href="#how-to-connect-java-project-with-jdbc-to-h2-sql-database" id="toc-how-to-connect-java-project-with-jdbc-to-h2-sql-database" class="nav-link active" data-scroll-target="#how-to-connect-java-project-with-jdbc-to-h2-sql-database"><span class="toc-section-number">1</span>  How to connect Java Project with JDBC to H2 SQL Database</a>
   <ul>
-  <li><a href="#what-is-h2-database" id="toc-what-is-h2-database" class="nav-link" data-scroll-target="#what-is-h2-database">What is H2 Database</a></li>
-  <li><a href="#java-jdbc" id="toc-java-jdbc" class="nav-link" data-scroll-target="#java-jdbc">(1) Java JDBC</a>
+  <li><a href="#what-is-h2-database" id="toc-what-is-h2-database" class="nav-link" data-scroll-target="#what-is-h2-database"><span class="toc-section-number">1.1</span>  What is H2 Database</a></li>
+  <li><a href="#java-jdbc" id="toc-java-jdbc" class="nav-link" data-scroll-target="#java-jdbc"><span class="toc-section-number">1.2</span>  Java JDBC</a>
   <ul>
-  <li><a href="#demomavenh2" id="toc-demomavenh2" class="nav-link" data-scroll-target="#demomavenh2">demoMavenH2</a></li>
+  <li><a href="#demomavenh2" id="toc-demomavenh2" class="nav-link" data-scroll-target="#demomavenh2"><span class="toc-section-number">1.2.1</span>  demoMavenH2</a></li>
   </ul></li>
-  <li><a href="#entity-manager-api" id="toc-entity-manager-api" class="nav-link" data-scroll-target="#entity-manager-api">(2) Entity Manager API</a>
+  <li><a href="#entity-manager-api" id="toc-entity-manager-api" class="nav-link" data-scroll-target="#entity-manager-api"><span class="toc-section-number">1.3</span>  Entity Manager API</a>
   <ul>
-  <li><a href="#test-hibernate-jpa" id="toc-test-hibernate-jpa" class="nav-link" data-scroll-target="#test-hibernate-jpa">test-hibernate-jpa</a></li>
+  <li><a href="#test-hibernate-jpa" id="toc-test-hibernate-jpa" class="nav-link" data-scroll-target="#test-hibernate-jpa"><span class="toc-section-number">1.3.1</span>  test-hibernate-jpa</a></li>
   </ul></li>
-  <li><a href="#jpa-data-spring-boot" id="toc-jpa-data-spring-boot" class="nav-link" data-scroll-target="#jpa-data-spring-boot">(3) JPA Data Spring Boot</a>
+  <li><a href="#jpa-data-spring-boot" id="toc-jpa-data-spring-boot" class="nav-link" data-scroll-target="#jpa-data-spring-boot"><span class="toc-section-number">1.4</span>  JPA Data Spring Boot</a>
   <ul>
-  <li><a href="#libraryh2command" id="toc-libraryh2command" class="nav-link" data-scroll-target="#libraryh2command">libraryH2Command</a></li>
+  <li><a href="#libraryh2command" id="toc-libraryh2command" class="nav-link" data-scroll-target="#libraryh2command"><span class="toc-section-number">1.4.1</span>  libraryH2Command</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -1232,15 +1245,43 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Lab 1: Spring Boot Projects</h1>
-</div>
+<h1 class="title d-none d-lg-block">Lab 1: Spring Boot &amp; DataBase Basics</h1>
+<p class="subtitle lead">Spring Boot</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Spring-Boot</div>
+    <div class="quarto-category">lab</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Spring Boot
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>albertprofe </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Tuesday, June 1, 2021</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">Wednesday, February 22, 2023</p>
+    </div>
+  </div>
     
   </div>
   
@@ -1248,10 +1289,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Welcome to the cifojava2022-4 wiki!</p>
-<section id="how-to-connect-java-project-with-jdbc-to-h2-sql-database" class="level1">
-<h1>How to connect Java Project with JDBC to H2 SQL Database</h1>
-<section id="what-is-h2-database" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-h2-database">What is H2 Database</h2>
+<section id="how-to-connect-java-project-with-jdbc-to-h2-sql-database" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> How to connect Java Project with JDBC to H2 SQL Database</h1>
+<section id="what-is-h2-database" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-h2-database"><span class="header-section-number">1.1</span> What is H2 Database</h2>
 <p>H2 is <strong>pure Java SQL database</strong>, which means you can embed H2 directly in your Java applications <strong>without any database installation.</strong></p>
 <ul>
 <li>Very <strong>fast, open source, JDBC</strong> API compatible.</li>
@@ -1261,29 +1302,35 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><a href="http://www.h2database.com/html/build.html">H2 Java DataBase</a></p>
 </section>
-<section id="java-jdbc" class="level2">
-<h2 class="anchored" data-anchor-id="java-jdbc">(1) Java JDBC</h2>
-<section id="demomavenh2" class="level3">
-<h3 class="anchored" data-anchor-id="demomavenh2">demoMavenH2</h3>
+<section id="java-jdbc" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="java-jdbc"><span class="header-section-number">1.2</span> Java JDBC</h2>
+<section id="demomavenh2" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="demomavenh2"><span class="header-section-number">1.2.1</span> demoMavenH2</h3>
 <p>Java™ database connectivity (JDBC) is the JavaSoft specification of a standard application programming interface (API) that allows Java programs to access database management systems. The JDBC API consists of a set of interfaces and classes written in the Java programming language.</p>
 <p>Using these standard interfaces and classes, programmers can write applications that connect to databases, send queries written in structured query language (SQL), and process the results.</p>
 <p>Since <a href="https://www.ibm.com/docs/en/informix-servers/12.10?topic=started-what-is-jdbc">JDBC</a> is a standard specification, one Java program that uses the JDBC API can connect to any database management system (DBMS), as long as a driver exists for that particular DBMS.</p>
-<p>Project <a href="https://github.com/AlbertProfe/cifojava2022-4/tree/master/demoMavenH2">repo</a></p>
+<ul>
+<li>Project Code GitHub <a href="https://github.com/AlbertProfe/cifojava2022-4/tree/master/demoMavenH2" class="external">repo</a></li>
+<li><a href="https://github.com/AlbertProfe/cifojava2022-4/wiki/Java-JDBC" class="external">Project Documentation</a></li>
+</ul>
 </section>
 </section>
-<section id="entity-manager-api" class="level2">
-<h2 class="anchored" data-anchor-id="entity-manager-api">(2) Entity Manager API</h2>
-<section id="test-hibernate-jpa" class="level3">
-<h3 class="anchored" data-anchor-id="test-hibernate-jpa">test-hibernate-jpa</h3>
+<section id="entity-manager-api" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="entity-manager-api"><span class="header-section-number">1.3</span> Entity Manager API</h2>
+<section id="test-hibernate-jpa" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="test-hibernate-jpa"><span class="header-section-number">1.3.1</span> test-hibernate-jpa</h3>
 <p>Java Persistence API is a Java Specification and Standard for Object Relational Mapping (ORM). In Object Relational Mapping we create Java Objects which represents the database entities. ORM also provides an EntityManager which provides methods to create, delete, update and find the objects from database.</p>
 <p>We don’t need to write low level queries, we just need to use entity manager and access the entities through java objects.</p>
-<p>Project <a href="https://github.com/AlbertProfe/cifojava2022-4/tree/master/test-hibernate-jpa">repo</a></p>
+<ul>
+<li>Project Code GitHub <a href="https://github.com/AlbertProfe/cifojava2022-4/tree/master/test-hibernate-jpa" class="external">repo</a></li>
+<li><a href="https://github.com/AlbertProfe/cifojava2022-4/wiki/Entity-Manager-API" class="external">Project Documentation</a></li>
+</ul>
 </section>
 </section>
-<section id="jpa-data-spring-boot" class="level2">
-<h2 class="anchored" data-anchor-id="jpa-data-spring-boot">(3) JPA Data Spring Boot</h2>
-<section id="libraryh2command" class="level3">
-<h3 class="anchored" data-anchor-id="libraryh2command">libraryH2Command</h3>
+<section id="jpa-data-spring-boot" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="jpa-data-spring-boot"><span class="header-section-number">1.4</span> JPA Data Spring Boot</h2>
+<section id="libraryh2command" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="libraryh2command"><span class="header-section-number">1.4.1</span> libraryH2Command</h3>
 <p>Project <a href="https://github.com/AlbertProfe/cifojava2022-4/tree/master/libraryH2Command">repo</a></p>
 <p>Base project:</p>
 <ul>
@@ -1297,15 +1344,15 @@ ul.task-list li input[type="checkbox"] {
 <div class="row">
 <br>
 <div class="column left previous">
-<p><br> <a href="../springboot/boot-concepts-data.html"> Spring Boot: Data</a> <br></p>
+<p><br> <a href="../springboot/boot-concepts-data.html"><i class="fa-solid fa-arrow-left" aria-label="arrow-left"></i> Spring Boot: Data</a> <br></p>
 </div>
 <br>
 <div class="column center">
-<p><br> <a href="#top"> top</a> <br></p>
+<p><br> <a href="#top"><i class="fa-solid fa-arrow-up" aria-label="arrow-up"></i> top</a> <br></p>
 </div>
 <br>
 <div class="column right next">
-<p><br> <a href="../springboot/sblab2.html">Lab 2: Spring Boot Projects </a> <br></p>
+<p><br> <a href="../springboot/sblab2.html">Lab 2: Spring Boot Projects <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></a> <br></p>
 </div>
 <p><br></p>
 </div></li>
