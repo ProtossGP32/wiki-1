@@ -14,7 +14,7 @@ format:
 ---
 
 ::: {.labs}
-📘 **Linux Lab#SE03-3: Library/Book **
+📘 **Linux Lab#SE03-3: LibraryProject Expand Model**
 
 In ``LibraryProject``, the ``User`` and ``Staff`` classes could have different ``operations`` that they are **authorize/able to perform.**
 
@@ -46,7 +46,6 @@ To ``implement`` these operations, we could define three separate ``interfaces``
 :::
 
 ---
-
 
 
 ## Interfaces
