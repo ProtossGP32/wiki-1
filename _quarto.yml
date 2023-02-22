@@ -292,7 +292,8 @@ website:
             - springboot/boot-concepts-data.qmd
         - text: "---"  
         - section: "Spring Boot Laboratories"
-          contents: 
+          contents:
+            - springboot/sblab0.qmd 
             - springboot/sblab1.qmd
             - springboot/sblab2.qmd
             - springboot/sblab3.qmd

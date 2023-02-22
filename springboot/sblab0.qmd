@@ -1,0 +1,47 @@
+---
+title: "Lab 0: Spring Boot Project Basics"
+subtitle: Spring Boot
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description:  Spring Boot
+categories: [Spring-Boot, lab]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+
+# From LibraryProject to LibraryManagement
+
+
+
+
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Spring Boot: Data](/springboot/boot-concepts-data.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Lab 2: Spring Boot Projects  {{< fa solid arrow-right >}}](/springboot/sblab2.qmd)
+<br>
+</div>
+<br>
+</div>
