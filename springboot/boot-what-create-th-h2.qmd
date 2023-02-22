@@ -1,0 +1,117 @@
+---
+title: "Spring Boot: create a Spring Boot Project with mySql H2 and Thymeleaf"
+subtitle: Spring Boot
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description:  Spring Boot
+categories: [Spring-Boot, project, maven, thymeleaf, db, h2]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+
+::: {.summary}
+
+📘 **Create a Spring Boot Project**
+
+1. Create a [Maven Spring Project](/springboot/boot-what-create.qmd)
+2. Install `H2 DB`
+3. Define **Application.properties**
+4. Create Model: @Entity `Book`
+5. Create @Controller and @Service
+6. Create `HTML` template
+
+:::
+
+---
+
+## Step-by-step H2 DB creation
+
+1. Download the `H2 database`: Go to the `H2 database` website at [H2 DB](http://www.h2database.com){external} and download **the latest version of the H2 database for Linux**. You can download either the ZIP or the TAR package.
+
+2. Extract the downloaded file: Open the terminal and navigate to the folder where you downloaded the `H2 database. `Extract the contents of the downloaded file using the following command:
+
+```console
+tar -zxvf h2-*.tar.gz
+```
+
+3. **Start the H2 database server**: Navigate to the `H2 database` directory and start the `H2 database` server by running the following command:
+
+```console
+java -jar h2*.jar
+```
+
+```termninal
+cd <download directory>
+unzip h2*.zip
+cd h2/bin
+chmod +x h2.s
+```
+This will **start** the `H2 database` server and display the **URL** where the `H2 database` can be accessed.
+
+
+
+4. Connect to the `H2 database`: Open a web browser and enter the URL displayed in the terminal. The H2 database web interface will open in the browser.
+
+5. Create a new database: In the `H2 database` web interface, click on the "Create a new database" button and follow the prompts to create a new database.
+
+![Create H2 DataBase: define parameters](/images/springboot/createH2.png){width="80%"}
+
+![Create H2 DataBase: DB created](/images/springboot/createH2-2.png){width="80%"}
+
+![Create H2 DataBase: check it has been created](/images/springboot/createH2-3.png){width="80%"}
+
+![Create H2 DataBase: connect to DB](/images/springboot/createH2-4.png){width="80%"}
+
+
+6. Connect to the new database: Once the new database is created, click on the "Connect" button in the `H2 database` web interface and introduce the right parameters.
+
+::: {.callout-important}
+
+Saved Settings: **Generic H2 (Server)**</br>
+Setting Name: Generic H2 (Server)</br>
+  
+Driver Class: **org.h2.Driver**</br>
+JDBC URL: **jdbc:h2:/home/albert/MyProjects/MyDBs/h2DBs/myDB**</br>
+
+User Name: albert</br>
+Password: ••••</br>
+
+:::
+
+![Create H2 DataBase](/images/springboot/createH2-5.png){width="80%"}
+
+7. Use the `H2 database`: Now you can start using the `H2 database`. You can create tables, insert data, and perform queries using SQL commands.
+
+
+
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Spring Boot: Fundamentals](/springboot/boot-what-basics.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Spring Boot: Annotations  {{< fa solid arrow-right >}}](/springboot/boot-concepts-annotations.qmd)
+<br>
+</div>
+<br>
+</div>

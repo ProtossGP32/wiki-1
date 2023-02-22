@@ -282,7 +282,7 @@ classDiagram
     -email: String
     -libraryCardNumber: String
     -borrowedBooks: ArrayList<Book>
-    +User()
+    +user()
   }
 
 
@@ -304,7 +304,7 @@ classDiagram
     -address: String
     -phoneNumber: String
     -salary: double
-    +Librarian()
+    +librarian()
   }
 
 
