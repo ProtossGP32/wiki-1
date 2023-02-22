@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(3) {
+tr:nth-child(4) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -20,9 +20,9 @@ tr:nth-child(3) {
 | -- | -- | -- | -- | -- |
 | #9 | 40 | 20/01 | + LibraryProject:</br> (0) plan Sprint </br> (1) brief-study returnBook </br> (2) branch returnBook </br> (3) Inherence Person </br> + Git: <br> (1) Remote/Local (just one user)</br> (2) Basic Operations: push, pull, commit, add, clone </br> (3) watchdog: writting commits, location, document, time</br>| [LibraryProject ](https://github.com/AlbertProfe/CifoJava2023/tree/1413c47c8aa8e5ed6ec4eb6ff4600df5dbfb28a8/LibraryProject){.external} </br> [Learn Git](https://learngitbranching.js.org/){.external} </br> ![](/images/javase/git_branch.png){width="45%"} |
 |  | 41 | 21/01 | + LibraryProject:</br> (1) Inherence: Member and/or LibraryMember </br> (2) Is Author a Member? </br> (3) Member is Abstract/Interface/Regular class? </br> (4) How will we call Managers? </br><s> - Quarto </s></br>| [core-General UML Proposal](/javase/selab3-3.qmd) </br> ![user-librarian Inherence UML](/images/javase/uml_user-librarian_inherence.png){width="80%"}|
-|  | 42 | 22/02 | - Spring Boot: </br> (1) Book @controller  </br> (2) Book @Service </br> (3) Book CRUD html Thymeleaf </br> - Git </br>  | - |
+|  | 42 | 22/02 | - Spring Boot: </br> (1) Book @Controller  </br> (2) Book @Service </br> (3) Book CRUD </br> (4) HTML Thymeleaf </br> (5) H2 DataBase Local Source and Application.properties</br> - <s>Git</s> </br>  | [Library5](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5){.external} </br> |
 |  | 43 | 23/02 | - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> | - |
-|  | 44 | 24/02 |  - Spring Boot: </br> (1) Themleaf </br>  - SCRUM: </br> (1) Motivation/Purpose 2 </br> (2) Burn Out multitasking, several hats </br>  (3) spaceX beyond Scrum | - |
+|  | 44 | 24/02 |  - Spring Boot: </br> (1) Thymeleaf </br>  - SCRUM: </br> (1) Motivation/Purpose 2 </br> (2) Burn Out multitasking, several hats </br>  (3) spaceX beyond Scrum | - |
 : Backlog Sprint#9 February 2023 {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
