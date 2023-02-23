@@ -88,7 +88,43 @@ Password: ••••</br>
 7. Use the `H2 database`: Now you can start using the `H2 database`. You can create tables, insert data, and perform queries using SQL commands.
 
 
+## Example: Library5
 
+ - [Lab#SB02-Library5 Code](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5){.external}
+ - [Lab#SB02-Library5 Docs](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library5:-ThymeLeaf-Web-Project){.external}
+
+### Tree-folder Project root
+
+Collapsed tree-folder:
+
+![](/images/springboot/Library5-tree-2.png)
+
+1. `scr/main`: This directory contains two subdirectories - java and resources - which respectively hold the **Java source code** and **resource files for the application.**
+    - java
+    - resources
+2. `scr/test`: This directory contains **unit test code** and resources that can be used to test the application.
+3. `target` and `files`:
+      - `target`: This directory is the **output directory where compiled classes and artifacts are stored.**
+      - `files` on root: This directory holds any additional files or resources needed by the application that are not directly related to the code or tests: **POM.xml is the most important.**
+
+### Tree-folder Project 
+
+All files in our tree-folder:
+
+![](/images/springboot/Library5-tree.png)
+
+
+The **Spring Boot tree-folder structure** includes various components such as POM.xml, Git, Java classes, application.properties, and HTML templates that help manage dependencies, version control, database access, configuration, and dynamic content generation.
+
+1. [POM.xml and dependencies](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/pom.xml){.external}: The POM.xml file manages the dependencies of a project in Maven.
+2. [Git and .gitignore](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/.gitignore){.external}: Git is a version control system that helps manage code changes, while .gitignore is a file that specifies which files and directories should be excluded from version control.
+3. [Main](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/LibraryApplication.java#L9){.external}: The main method is the entry point for a Java application, where the program starts execution.
+4. [Java Classes](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5/src/main/java/io/company/library){.external}:
+    - `@Entity`: A Java class annotated with `@Entity` is mapped to a database table.
+    - `@Controller`: A Java class annotated with `@Controller` handles incoming web requests and returns a response.
+    - `@Repository`: A Java class annotated with `@Repository` provides database access to other classes in the application.
+5. [Application.Properties](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/application.properties){.external}: The application.properties file contains configuration properties for a Spring Boot application.
+6. [Templates HTML](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5/src/main/resources/templates){.external}: HTML templates are used in a web application to generate dynamic content on the server-side.
 
 
 

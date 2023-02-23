@@ -1,5 +1,5 @@
 ---
-title: "Lab#SE03-2: Library/Book, Expand Model"
+title: "Lab#SE03-3: Library/Book, Expand Model"
 subtitle: "Java SE Lab 03 part 3"
 author: [albertprofe, Marc P.]
 date: "06/01/2021"
@@ -87,7 +87,7 @@ public interface GeneralOperations {
 
 public interface UserOperations {
     public void updatePersonalInformation();
-    public void borrowBook(Book book);
+    public void borrowBook(Book booLab#SE00-3: Library Modelk);
     public void returnBook(Book book);
     public void checkBorrowedBooks();
 }

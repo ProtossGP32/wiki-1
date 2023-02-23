@@ -1,8 +1,20 @@
 ---
-title: "Lab 3: Spring Boot Projects"
+title: "Spring Boot Lab#SB03-1: Communication"
+subtitle: Spring Boot
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description:  Spring Boot
+categories: [Spring-Boot, lab]
+toc: true
+number-sections: true
+format:
+  html
 ---
 
-Welcome to the cifojava2022-5 wiki!
+
+Welcome to the cifojava20Basics22-5 wiki!
 
 # Spring Boot Projects
 

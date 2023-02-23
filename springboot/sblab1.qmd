@@ -1,5 +1,5 @@
 ---
-title: "Lab 1: Spring Boot & DataBase Basics"
+title: "Spring Boot  Lab#SB01-1: DataBase"
 subtitle: Spring Boot
 author: albertprofe
 date: "06/01/2021"

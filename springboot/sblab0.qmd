@@ -1,5 +1,5 @@
 ---
-title: "Lab 0: Spring Boot Project Basics"
+title: "Spring Boot Lab#SB00-1: LibraryManagement"
 subtitle: Spring Boot
 author: albertprofe
 date: "06/01/2021"
@@ -164,28 +164,9 @@ Within Spring Boot Project
 
 <div class="mermaidContent">
 
-
-
-
 ```{mermaid}
 classDiagram
-class BookCopy {
-    -id: String
-    -status: String
-    -book: Book
-    +BookCopy(book: Book)
-    +getStatus(): String
-}
 
-class BorrowRecord {
-    -id: String
-    -user: User
-    -bookCopy: BookCopy
-    -borrowDate: LocalDateTime
-    -returnDate: LocalDateTime
-    +BorrowRecord()
-    +setReturnDate(returnDate: LocalDateTime): void
-}
 
 class WebController {
     -bookService: BookService
@@ -234,6 +215,38 @@ BookService --> BookCopyRepository
 BookService --> BorrowRecordRepository
 UserService --> UserRepository
 UserService --> BorrowRecordRepository
+
+```
+
+</div>
+
+:::
+
+Just the Controller and Service
+
+::: {.column-page-right}
+
+<div class="mermaidContent">
+
+```{mermaid}
+classDiagram
+class BookCopy {
+    -id: String
+    -status: String
+    -book: Book
+    +BookCopy(book: Book)
+    +getStatus(): String
+}
+
+class BorrowRecord {
+    -id: String
+    -user: User
+    -bookCopy: BookCopy
+    -borrowDate: LocalDateTime
+    -returnDate: LocalDateTime
+    +BorrowRecord()
+    +setReturnDate(returnDate: LocalDateTime): void
+}
 Book --> Author
 Book --> BookCopy
 BookCopy --> Book
