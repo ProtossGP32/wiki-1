@@ -293,7 +293,9 @@ website:
         - text: "---"  
         - section: "Spring Boot Laboratories"
           contents:
-            - springboot/sblab0.qmd 
+            - springboot/sblab0-1.qmd
+            - springboot/sblab0-2.qmd
+            - text: "---"
             - springboot/sblab1.qmd
             - springboot/sblab2.qmd
             - springboot/sblab3.qmd

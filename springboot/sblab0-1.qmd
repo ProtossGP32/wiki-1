@@ -1,6 +1,6 @@
 ---
-title: "Spring Boot Lab#SB00-1: LibraryManagement"
-subtitle: Spring Boot
+title: "Spring Boot Lab#SB00-1: Library UML"
+subtitle: Spring Boot Library Management UML
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
@@ -32,15 +32,29 @@ We are going to evolve the [current Java SE Libraryproject](/javase/selab3-3.qmd
 
 ## Create a new Spring Boot project & H2 DB
 
-- ``Create a new Spring Boot project``: The first step would be to create a new Spring Boot project in the preferred IDE or text editor. The project can be created using Spring Initializr, which will create the necessary file structure and dependencies.
+- ``Create a new Spring Boot project``: The first step would be to create a new Spring Boot project in the preferred IDE or text editor.
 
-- ``Configure the H2 database``: In the newly created project, configure the H2 database by adding the H2 dependency in the pom.xml file, and also create a new application.properties file to set the database properties such as the database URL, username, and password.
+::: {.callout-note}
+The project can be created using **Spring Initializr**, which will create the necessary **file structure and dependencies**.
+:::
+
+- ``Configure the H2 database``: In the newly created project, configure the H2 database by adding:
+  - the H2 dependency in the ``pom.xml`` file,
+  - and also create a new ``application.properties`` file
+  - set the database properties such as:
+    - the database **URL**,
+    - **username**,
+    - and **password**.
 
 ## Model & Entities
 
-- ``Create a Book Entity``: To represent a book in the library management system, create a Book entity that includes attributes such as title, author, publisher, year, ISBN, and status. The status attribute will indicate whether the book is available, borrowed or reserved.
+- ``Create a Book Entity``: To represent a book in the library management system, create a Book @Entity 
 
-- ``Create a User Entity``: To represent a user in the system, create a User entity that includes attributes such as library card number, name, surname, nationality, birthdate, and borrowed books.
+::: {.column-margin}
+It could include attributes such as title, author, publisher, year, ISBN, and status. The status attribute will indicate whether the book is available, borrowed or reserved.
+:::
+
+- ``Create a User Entity``: To represent a user in the system, create a User entity that includes attributes such as library card number, name, surname, nationality, birthdate, and **borrowed books.**
 
 - ``Create Author Entity``: To represent an author in the system, create an Author entity that includes attributes such as deathdate, books, name, and surname.
 
@@ -48,22 +62,52 @@ We are going to evolve the [current Java SE Libraryproject](/javase/selab3-3.qmd
 
 ## Domains: @Controller, @Service and @Repository
 
-- ``Create Repositories``: To access the data stored in the database, create repositories for each entity. The repositories will provide the methods to create, read, update, and delete the data.
+- ``Create Repositories``: To access the data stored in the database, create repositories for each entity. **The repositories will provide the methods to create, read, update, and delete the data.**
 
-- ``Create Services``: Create services that will implement the business logic of the system by calling the repository methods. The services will provide the methods to search for books, borrow a book, return a book, add a book, remove a book, update book details, register a user, remove a user, update user details, and generate reports.
+- ``Create Services``: Create services that **will implement the business logic of the system by calling the repository methods.** 
 
-- ``Create Controllers``: Create controllers that will handle the HTTP requests from the web interface by calling the service methods. The controllers will provide the methods to create a user account, search for books, borrow a book, return a book, add a book, remove a book, update book details, register a user, remove a user, update user details, and generate reports.
+::: {.column-margin}
+The **services** will provide the methods to search for books, borrow a book, return a book, add a book, remove a book, update book details, register a user, remove a user, update user details, and generate reports.
+:::
 
-## HTML Thymeleaf 
+- ``Create Controllers``: Create controllers that **will handle the HTTP requests from the web interface by calling the service methods.** 
 
-- ``Create Thymeleaf templates``: To create the web interface of the system, create Thymeleaf templates for each of the controller methods. The templates will be used to display the data and also to handle the user input.
+::: {.column-margin}
+The **controllers** will provide the methods to create a user account, search for books, borrow a book, return a book, add a book, remove a book, update book details, register a user, remove a user, update user details, and generate reports.
+:::
+
+
+## HTML Thymeleaf
+
+### Modern server-side Java template engine
+- [ThymeLeaf](https://www.thymeleaf.org/){.external}
+- [Tutorial: Using Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html){.external}
+- [Tutorial: Thymeleaf + Spring](https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html){.external}
+
+
+### Create Thymeleaf
+
+- ``Create Thymeleaf templates``: To create the web interface of the system, create Thymeleaf templates for each of the controller methods. **The templates will be used to display the data and also to handle the user input.**
+
+::: {.callout-note}
+Thymeleaf is a **modern server-side Java template engine** for both web and standalone environments.
+
+Thymeleaf's main goal is to bring elegant natural templates to your development workflow — HTML that can be correctly displayed in browsers and also work as static prototypes, allowing for stronger collaboration in development teams.
+:::
 
 ## Test
 
 - Test the system: Test the system by running it and making sure that all the functionalities work as expected.
 
+# MockUp
 
-## Discussion Solving: UML
+## Core use-case: borrowBook() and returnBook() with user and librarian
+
+
+![Mockup Web Library Management core use-case](/images/springboot/LibraryManagementMockUp.png){width="80%"}
+
+
+# Discussion Solving: UML
 
 ::: {.column-page-right}
 

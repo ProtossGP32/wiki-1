@@ -1,6 +1,6 @@
 ---
 title: "Spring Boot Lab#SB02-1: Projects"
-subtitle: Spring Boot
+subtitle: Spring Boot JPA Relationships
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
