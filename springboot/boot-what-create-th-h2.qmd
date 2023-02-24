@@ -1,5 +1,5 @@
 ---
-title: "Spring Boot: create a Spring Boot Project with H2 DB and Thymeleaf"
+title: "Spring Boot: H2 DB and Thymeleaf"
 subtitle: Spring Boot
 author: albertprofe
 date: "06/01/2021"
@@ -29,23 +29,64 @@ format:
 
 ---
 
-## Step-by-step H2 DB creation
+# Model
+
+## `@Entity` book
+
+- [Book entity](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/Book.java){.external}
+
+A ``persistence entity`` is a **lightweight Java class with its state typically persisted to a table in a relational database.** 
+
+::: {.callout-tip}
+## Entity definition
+- Instances of such an entity correspond to** individual rows** in the table. 
+
+- Entities typically have relationships with other entities, and these relationships are expressed through **object/relational mapping** (ORM) metadata. 
+
+- This metadata may be specified directly in the entity class file by using **annotations** *(or in a separate XML descriptor file distributed with the application).*
+:::
+
+``` {.java .code-overflow-wrap filename="DemoApplication.java"}
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Entity(name="Book")
+@Table(name="BOOK_TABLE")
+public class Book {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="BOOK_ID")
+    private long bookId;
+    @Column(name="BOOK_TITLE")
+    private String title;
+    @Column(name="AUTHOR")
+    private String author;
+    private int pages;
+    @Column(name="PUBLISHED_YEAR")
+    private int publishedYear;
+    @Column(name="ISBN")
+    private String isbn;
+}
+```
+
+- [](){.external}
+
+## H2 DB creation: step-by-step
 
 1. Download the `H2 database`: Go to the `H2 database` website at [H2 DB](http://www.h2database.com){external} and download **the latest version of the H2 database for Linux**. You can download either the ZIP or the TAR package.
 
 2. Extract the downloaded file: Open the terminal and navigate to the folder where you downloaded the `H2 database. `Extract the contents of the downloaded file using the following command:
 
-```console
+``` {.bash .code-overflow-wrap filename="linux.sh"}
 tar -zxvf h2-*.tar.gz
 ```
 
 3. **Start the H2 database server**: Navigate to the `H2 database` directory and start the `H2 database` server by running the following command:
 
-```console
+``` {.bash .code-overflow-wrap filename="linux.sh"}
 java -jar h2*.jar
 ```
 
-```termninal
+``` {.bash .code-overflow-wrap filename="linux.sh"}
 cd <download directory>
 unzip h2*.zip
 cd h2/bin
@@ -95,29 +136,52 @@ Password: ••••</br>
 
 7. Use the `H2 database`: Now you can start using the `H2 database`. You can create tables, insert data, and perform queries using SQL commands.
 
-## @Entity, JPA and Application.properties
+## JPA
 
-This code snippet is defining a Java interface named `BookRepository` that extends the `CrudRepository` interface.
+- [Spring Data JPA - Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/){.external}
+
+::: {.column-margin}
+**JPA**: Jakarta Persistence, formerly Java Persistence API
+:::
 
 ::: {.callout-tip}
+## JPA definiton
+
+``JPA`` is a application programming interface specification that describes the **management of relational data**.
+:::
+
+</br>
+
+
+``` {.java .code-overflow-wrap filename="DemoApplication.java"}
+public interface BookRepository extends CrudRepository<Book, Long> {}
+
+```
+
+This code is defining a Java interface named `BookRepository` that extends the `CrudRepository` interface.
+
+::: {.callout-note}
+## Crud Repository
+
 The `CrudRepository` interface is a built-in interface in the Spring Framework that provides generic CRUD (Create, Read, Update, Delete) operations for working with entities in a database.
 :::
 
 
-The `BookRepository` interface is being used to define a repository for managing `Book` entities, where `Book` is likely a Java class representing a **book object in the application**. The Long parameter in `CrudRepository`<Book, Long> specifies the type of the primary key for the Book entity. In this case, the primary key is a Long type.
+The `BookRepository` interface is being used to define a repository for managing `Book` entities, where `Book` is likely a Java class representing a **book object in the application**.
 
-By extending `CrudRepository`, the `BookRepository` interface will inherit methods such as `save()`, `findById()`, `findAll()`, and `deleteById()`, among others, which can be used to perform database operations on `Book` entities. This allows for efficient and standardized data access and management within the application.
+
+The ``Long`` parameter in `CrudRepository`<Book, Long> specifies the type of the **primary key** for the Book entity. In this case, the **primary key** is a ``Long`` type.
+
+By extending `CrudRepository`, the `BookRepository` interface will inherit methods such as `save()`, `findById()`, `findAll()`, and `deleteById()`, among others, which can be used to perform database operations on `Book` entities.
+
+This allows for efficient and standardized data access and management within the application.
 
 ::: {.column-margin}
 The public keyword specifies that the interface can be accessed from other classes, and the interface name should be in camelCase to follow Java naming conventions.
 :::
 
-```java
-public interface BookRepository extends CrudRepository<Book, Long> {}
 
-```
-
-### `Application.Properties`
+## `Application.Properties`
 
 [Application.Properties](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/application.properties){.external}: the `application.properties` file contains configuration properties for a **Spring Boot application.**
 
@@ -133,11 +197,11 @@ spring.datasource.driver-class-name=org.h2.Driver
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
 ```
 
-## `@Controller` and Thymeleaf
+# Controller
 
-### `@Controller` Web
+## `@Controller` Web
 
-```java
+``` {.java .code-overflow-wrap filename="DemoApplication.java"}
 @Controller
 @RequestMapping("/library")
 public class LibraryWebController {
@@ -154,6 +218,7 @@ public class LibraryWebController {
 
         return "showBooks";
     }
+}
 ```
 
 The method `getWeb()` is handling a **GET request** to the "`/library/books`" **URL path** and adding a list of books retrieved from the `BookService` to the `Model` attribute "`booksfromController`".
@@ -173,7 +238,7 @@ Finally, it **returns** the name of the view that will be used **to render the r
 6. `return "showBooks;`: This returns the name of the view that **will be used to render the response**.
 
 
-### Thymeleaf and the view
+# View: Thymeleaf
 
 In Spring Boot, the `@Controller` returns the name of the **HTML file** (also known as the `view`) that should be rendered to display the response. 
 
@@ -207,12 +272,10 @@ The links are styled using `CSS` classes from the **W3.CSS framework.**
 
 
 
-
-
 ![](/images/springboot/thymeleaf.png)
 
 
-## Example: Library5
+# Example: Library5
 
  - [Lab#SB02-Library5 Code](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5){.external}
  - [Lab#SB02-Library5 Docs](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library5:-ThymeLeaf-Web-Project){.external}
@@ -250,7 +313,7 @@ The **Spring Boot tree-folder structure** includes various components such as PO
 5. [Application.Properties](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/application.properties){.external}: The application.properties file contains configuration properties for a Spring Boot application.
 6. [Templates HTML](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5/src/main/resources/templates){.external}: HTML templates are used in a web application to generate dynamic content on the server-side.
 
-## Execution
+# Execution
 
 ![](/images/springboot/execution-1.png)
 
