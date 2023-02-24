@@ -15,6 +15,7 @@ format:
 
 ::: {.labs}
 📘 **Spring Boot Lab#SB00-1: Library Management**
+
 We are going to evolve the [current Java SE Libraryproject](/javase/selab3-3.qmd) into a **Spring Boot Library Management System** with a ``H2 DB`` and web with ``Thymeleaf``.
 :::
 

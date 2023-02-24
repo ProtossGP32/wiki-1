@@ -54,8 +54,15 @@ chmod +x h2.s
 This will **start** the `H2 database` server and display the **URL** where the `H2 database` can be accessed.
 
 
-
 4. Connect to the `H2 database`: Open a web browser and enter the URL displayed in the terminal. The H2 database web interface will open in the browser.
+
+    - Other option is to execute the app and then clik "Create a new database" from the H2 Icon
+
+![](/images/springboot/h2Icon.png){width="40%"}
+
+![](/images/springboot/h2Icon-2.png){width="40%"}
+
+![](/images/springboot/h2Icon-3.png){width="40%"}
 
 5. Create a new database: In the `H2 database` web interface, click on the "Create a new database" button and follow the prompts to create a new database.
 
@@ -67,6 +74,7 @@ This will **start** the `H2 database` server and display the **URL** where the `
 
 ![Create H2 DataBase: connect to DB](/images/springboot/createH2-4.png){width="80%"}
 
+Name your database: jdbc:h2:/home/albert/MyProjects/MyDBs/h2DBs/**myDB**
 
 6. Connect to the new database: Once the new database is created, click on the "Connect" button in the `H2 database` web interface and introduce the right parameters.
 
@@ -193,7 +201,7 @@ There are also **three links in the row**, each represented by an `anchor` `<a>`
 
 These links use **Thymeleaf's URL** syntax `@{...}` to generate URLs that invoke **Spring MVC `@Controller` methods**.
 
-The `deleteBook()`, `updateBook()`, and `detailBook()` methods will be called with the bookId parameter set to the `book.bookId` value of the current iteration.
+The `deleteBook()`, `updateBook()`, and `detailBook()` methods will be called with the bookId parameter set to the `book.bookId` value of the cu Open a web browser and enter the URL dirrent iteration.
 
 The links are styled using `CSS` classes from the **W3.CSS framework.**
 
