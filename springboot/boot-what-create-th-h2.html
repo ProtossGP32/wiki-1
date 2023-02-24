@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.280">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="albertprofe">
 <meta name="description" content="Spring Boot">
 
-<title>albertprofe wiki - Spring Boot: create a Spring Boot Project with H2 DB and Thymeleaf</title>
+<title>albertprofe wiki - Spring Boot: H2 DB and Thymeleaf</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,6 +109,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -671,15 +673,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <li class="dropdown-header">Spring Boot Basics</li>
         <li>
     <a class="dropdown-item" href="../springboot/boot-what-basics.html">
- <span class="dropdown-text">Spring Boot: Fundamentals</span></a>
+ <span class="dropdown-text">Spring Boot: fundamentals</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../springboot/boot-what-create.html">
- <span class="dropdown-text">Spring Boot: create a Spring Boot Project</span></a>
+ <span class="dropdown-text">Spring Boot: create a Project</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../springboot/boot-what-create-th-h2.html">
- <span class="dropdown-text">Spring Boot: create a Spring Boot Project with H2 DB and Thymeleaf</span></a>
+ <span class="dropdown-text">Spring Boot: H2 DB and Thymeleaf</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Spring Boot Concepts</li>
@@ -1109,7 +1111,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Spring Boot: create a Spring Boot Project with H2 DB and Thymeleaf</h1>
+      <h1 class="quarto-secondary-nav-title">Spring Boot: H2 DB and Thymeleaf</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -1157,17 +1159,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../springboot/boot-what-basics.html" class="sidebar-item-text sidebar-link">Spring Boot: Fundamentals</a>
+  <a href="../springboot/boot-what-basics.html" class="sidebar-item-text sidebar-link">Spring Boot: fundamentals</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../springboot/boot-what-create.html" class="sidebar-item-text sidebar-link">Spring Boot: create a Spring Boot Project</a>
+  <a href="../springboot/boot-what-create.html" class="sidebar-item-text sidebar-link">Spring Boot: create a Project</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../springboot/boot-what-create-th-h2.html" class="sidebar-item-text sidebar-link active">Spring Boot: create a Spring Boot Project with H2 DB and Thymeleaf</a>
+  <a href="../springboot/boot-what-create-th-h2.html" class="sidebar-item-text sidebar-link active">Spring Boot: H2 DB and Thymeleaf</a>
   </div>
 </li>
       </ul>
@@ -1295,20 +1297,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#step-by-step-h2-db-creation" id="toc-step-by-step-h2-db-creation" class="nav-link active" data-scroll-target="#step-by-step-h2-db-creation"><span class="toc-section-number">1</span>  Step-by-step H2 DB creation</a></li>
-  <li><a href="#entity-jpa-and-application.properties" id="toc-entity-jpa-and-application.properties" class="nav-link" data-scroll-target="#entity-jpa-and-application.properties"><span class="toc-section-number">2</span>  <span class="citation" data-cites="Entity">@Entity</span>, JPA and Application.properties</a>
+  <li><a href="#model" id="toc-model" class="nav-link active" data-scroll-target="#model"><span class="toc-section-number">1</span>  Model</a>
   <ul>
-  <li><a href="#application.properties" id="toc-application.properties" class="nav-link" data-scroll-target="#application.properties"><span class="toc-section-number">2.1</span>  <code>Application.Properties</code></a></li>
+  <li><a href="#entity-book" id="toc-entity-book" class="nav-link" data-scroll-target="#entity-book"><span class="toc-section-number">1.1</span>  <code>@Entity</code> book</a></li>
+  <li><a href="#h2-db-creation-step-by-step" id="toc-h2-db-creation-step-by-step" class="nav-link" data-scroll-target="#h2-db-creation-step-by-step"><span class="toc-section-number">1.2</span>  H2 DB creation: step-by-step</a></li>
+  <li><a href="#jpa" id="toc-jpa" class="nav-link" data-scroll-target="#jpa"><span class="toc-section-number">1.3</span>  JPA</a></li>
+  <li><a href="#application.properties" id="toc-application.properties" class="nav-link" data-scroll-target="#application.properties"><span class="toc-section-number">1.4</span>  <code>Application.Properties</code></a></li>
   </ul></li>
-  <li><a href="#controller-and-thymeleaf" id="toc-controller-and-thymeleaf" class="nav-link" data-scroll-target="#controller-and-thymeleaf"><span class="toc-section-number">3</span>  <code>@Controller</code> and Thymeleaf</a>
+  <li><a href="#controller" id="toc-controller" class="nav-link" data-scroll-target="#controller"><span class="toc-section-number">2</span>  Controller</a>
   <ul>
-  <li><a href="#controller-web" id="toc-controller-web" class="nav-link" data-scroll-target="#controller-web"><span class="toc-section-number">3.1</span>  <code>@Controller</code> Web</a></li>
-  <li><a href="#thymeleaf-and-the-view" id="toc-thymeleaf-and-the-view" class="nav-link" data-scroll-target="#thymeleaf-and-the-view"><span class="toc-section-number">3.2</span>  Thymeleaf and the view</a></li>
+  <li><a href="#controller-web" id="toc-controller-web" class="nav-link" data-scroll-target="#controller-web"><span class="toc-section-number">2.1</span>  <code>@Controller</code> Web</a></li>
   </ul></li>
+  <li><a href="#view-thymeleaf" id="toc-view-thymeleaf" class="nav-link" data-scroll-target="#view-thymeleaf"><span class="toc-section-number">3</span>  View: Thymeleaf</a></li>
   <li><a href="#example-library5" id="toc-example-library5" class="nav-link" data-scroll-target="#example-library5"><span class="toc-section-number">4</span>  Example: Library5</a>
   <ul>
-  <li><a href="#tree-folder-project-root" id="toc-tree-folder-project-root" class="nav-link" data-scroll-target="#tree-folder-project-root"><span class="toc-section-number">4.1</span>  Tree-folder Project root</a></li>
-  <li><a href="#tree-folder-project" id="toc-tree-folder-project" class="nav-link" data-scroll-target="#tree-folder-project"><span class="toc-section-number">4.2</span>  Tree-folder Project</a></li>
+  <li><a href="#tree-folder-project-root" id="toc-tree-folder-project-root" class="nav-link" data-scroll-target="#tree-folder-project-root"><span class="toc-section-number">4.0.1</span>  Tree-folder Project root</a></li>
+  <li><a href="#tree-folder-project" id="toc-tree-folder-project" class="nav-link" data-scroll-target="#tree-folder-project"><span class="toc-section-number">4.0.2</span>  Tree-folder Project</a></li>
   </ul></li>
   <li><a href="#execution" id="toc-execution" class="nav-link" data-scroll-target="#execution"><span class="toc-section-number">5</span>  Execution</a></li>
   </ul>
@@ -1319,7 +1323,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Spring Boot: create a Spring Boot Project with H2 DB and Thymeleaf</h1>
+<h1 class="title d-none d-lg-block">Spring Boot: H2 DB and Thymeleaf</h1>
 <p class="subtitle lead">Spring Boot</p>
   <div class="quarto-categories">
     <div class="quarto-category">Spring-Boot</div>
@@ -1378,50 +1382,139 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 </div>
 <hr>
-<section id="step-by-step-h2-db-creation" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="step-by-step-h2-db-creation"><span class="header-section-number">1</span> Step-by-step H2 DB creation</h2>
+<section id="model" class="level1 page-columns page-full" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Model</h1>
+<section id="entity-book" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="entity-book"><span class="header-section-number">1.1</span> <code>@Entity</code> book</h2>
+<ul>
+<li><a href="https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/Book.java" class="external">Book entity</a></li>
+</ul>
+<p>A <code>persistence entity</code> is a <strong>lightweight Java class with its state typically persisted to a table in a relational database.</strong></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Entity definition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Instances of such an entity correspond to** individual rows** in the table.</p></li>
+<li><p>Entities typically have relationships with other entities, and these relationships are expressed through <strong>object/relational mapping</strong> (ORM) metadata.</p></li>
+<li><p>This metadata may be specified directly in the entity class file by using <strong>annotations</strong> <em>(or in a separate XML descriptor file distributed with the application).</em></p></li>
+</ul>
+</div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>DemoApplication.java</strong></pre>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource java code-overflow-wrap number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="at">@Getter</span> <span class="at">@Setter</span> <span class="at">@NoArgsConstructor</span> <span class="at">@AllArgsConstructor</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="at">@Entity</span><span class="op">(</span>name<span class="op">=</span><span class="st">"Book"</span><span class="op">)</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="at">@Table</span><span class="op">(</span>name<span class="op">=</span><span class="st">"BOOK_TABLE"</span><span class="op">)</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Book</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="at">@Id</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="at">@GeneratedValue</span><span class="op">(</span>strategy <span class="op">=</span> GenerationType<span class="op">.</span><span class="fu">AUTO</span><span class="op">)</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="at">@Column</span><span class="op">(</span>name<span class="op">=</span><span class="st">"BOOK_ID"</span><span class="op">)</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="kw">private</span> <span class="dt">long</span> bookId<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="at">@Column</span><span class="op">(</span>name<span class="op">=</span><span class="st">"BOOK_TITLE"</span><span class="op">)</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="kw">private</span> <span class="bu">String</span> title<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="at">@Column</span><span class="op">(</span>name<span class="op">=</span><span class="st">"AUTHOR"</span><span class="op">)</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="kw">private</span> <span class="bu">String</span> author<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="kw">private</span> <span class="dt">int</span> pages<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="at">@Column</span><span class="op">(</span>name<span class="op">=</span><span class="st">"PUBLISHED_YEAR"</span><span class="op">)</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>    <span class="kw">private</span> <span class="dt">int</span> publishedYear<span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>    <span class="at">@Column</span><span class="op">(</span>name<span class="op">=</span><span class="st">"ISBN"</span><span class="op">)</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>    <span class="kw">private</span> <span class="bu">String</span> isbn<span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><a href="" class="external"></a></li>
+</ul>
+</section>
+<section id="h2-db-creation-step-by-step" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="h2-db-creation-step-by-step"><span class="header-section-number">1.2</span> H2 DB creation: step-by-step</h2>
 <ol type="1">
 <li><p>Download the <code>H2 database</code>: Go to the <code>H2 database</code> website at <a href="http://www.h2database.com">H2 DB</a>{external} and download <strong>the latest version of the H2 database for Linux</strong>. You can download either the ZIP or the TAR package.</p></li>
 <li><p>Extract the downloaded file: Open the terminal and navigate to the folder where you downloaded the <code>H2 database.</code>Extract the contents of the downloaded file using the following command:</p></li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource console number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>tar -zxvf h2-*.tar.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>linux.sh</strong></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash code-overflow-wrap number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">tar</span> <span class="at">-zxvf</span> h2-<span class="pp">*</span>.tar.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ol start="3" type="1">
 <li><strong>Start the H2 database server</strong>: Navigate to the <code>H2 database</code> directory and start the <code>H2 database</code> server by running the following command:</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource console number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>java -jar h2*.jar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource termninal number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>cd &lt;download directory&gt;</span>
-<span id="cb3-2"><a href="#cb3-2"></a>unzip h2*.zip</span>
-<span id="cb3-3"><a href="#cb3-3"></a>cd h2/bin</span>
-<span id="cb3-4"><a href="#cb3-4"></a>chmod +x h2.s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>linux.sh</strong></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash code-overflow-wrap number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">java</span> <span class="at">-jar</span> h2<span class="pp">*</span>.jar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>linux.sh</strong></pre>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash code-overflow-wrap number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">cd</span> <span class="op">&lt;</span>download directory<span class="op">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">unzip</span> h2<span class="pp">*</span>.zip</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="bu">cd</span> h2/bin</span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="fu">chmod</span> +x h2.s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>This will <strong>start</strong> the <code>H2 database</code> server and display the <strong>URL</strong> where the <code>H2 database</code> can be accessed.</p>
 <ol start="4" type="1">
-<li><p>Connect to the <code>H2 database</code>: Open a web browser and enter the URL displayed in the terminal. The H2 database web interface will open in the browser.</p></li>
-<li><p>Create a new database: In the <code>H2 database</code> web interface, click on the “Create a new database” button and follow the prompts to create a new database.</p></li>
+<li><p>Connect to the <code>H2 database</code>: Open a web browser and enter the URL displayed in the terminal. The H2 database web interface will open in the browser.</p>
+<ul>
+<li>Other option is to execute the app and then clik “Create a new database” from the H2 Icon</li>
+</ul></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/createH2.png" class="lightbox" title="Create H2 DataBase: define parameters" data-gallery="quarto-lightbox-gallery-1"><img src="../images/springboot/createH2.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p><a href="../images/springboot/h2Icon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="..\images/springboot/h2Icon.png" class="img-fluid figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/springboot/h2Icon-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="..\images/springboot/h2Icon-2.png" class="img-fluid figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/springboot/h2Icon-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="..\images/springboot/h2Icon-3.png" class="img-fluid figure-img" style="width:40.0%"></a></p>
+</figure>
+</div>
+<ol start="5" type="1">
+<li>Create a new database: In the <code>H2 database</code> web interface, click on the “Create a new database” button and follow the prompts to create a new database.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/springboot/createH2.png" class="lightbox" title="Create H2 DataBase: define parameters" data-gallery="quarto-lightbox-gallery-4"><img src="..\images/springboot/createH2.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 <p></p><figcaption class="figure-caption">Create H2 DataBase: define parameters</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/createH2-2.png" class="lightbox" title="Create H2 DataBase: DB created" data-gallery="quarto-lightbox-gallery-2"><img src="../images/springboot/createH2-2.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p><a href="../images/springboot/createH2-2.png" class="lightbox" title="Create H2 DataBase: DB created" data-gallery="quarto-lightbox-gallery-5"><img src="..\images/springboot/createH2-2.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 <p></p><figcaption class="figure-caption">Create H2 DataBase: DB created</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/createH2-3.png" class="lightbox" title="Create H2 DataBase: check it has been created" data-gallery="quarto-lightbox-gallery-3"><img src="../images/springboot/createH2-3.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p><a href="../images/springboot/createH2-3.png" class="lightbox" title="Create H2 DataBase: check it has been created" data-gallery="quarto-lightbox-gallery-6"><img src="..\images/springboot/createH2-3.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 <p></p><figcaption class="figure-caption">Create H2 DataBase: check it has been created</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/createH2-4.png" class="lightbox" title="Create H2 DataBase: connect to DB" data-gallery="quarto-lightbox-gallery-4"><img src="../images/springboot/createH2-4.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p><a href="../images/springboot/createH2-4.png" class="lightbox" title="Create H2 DataBase: connect to DB" data-gallery="quarto-lightbox-gallery-7"><img src="..\images/springboot/createH2-4.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 <p></p><figcaption class="figure-caption">Create H2 DataBase: connect to DB</figcaption><p></p>
 </figure>
 </div>
+<p>Name your database: jdbc:h2:/home/albert/MyProjects/MyDBs/h2DBs/<strong>myDB</strong></p>
 <ol start="6" type="1">
 <li>Connect to the new database: Once the new database is created, click on the “Connect” button in the <code>H2 database</code> web interface and introduce the right parameters.</li>
 </ol>
@@ -1442,7 +1535,7 @@ Important
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/createH2-5.png" class="lightbox" title="Create H2 DataBase" data-gallery="quarto-lightbox-gallery-5"><img src="../images/springboot/createH2-5.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p><a href="../images/springboot/createH2-5.png" class="lightbox" title="Create H2 DataBase" data-gallery="quarto-lightbox-gallery-8"><img src="..\images/springboot/createH2-5.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 <p></p><figcaption class="figure-caption">Create H2 DataBase</figcaption><p></p>
 </figure>
 </div>
@@ -1450,30 +1543,58 @@ Important
 <li>Use the <code>H2 database</code>: Now you can start using the <code>H2 database</code>. You can create tables, insert data, and perform queries using SQL commands.</li>
 </ol>
 </section>
-<section id="entity-jpa-and-application.properties" class="level2 page-columns page-full" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="entity-jpa-and-application.properties"><span class="header-section-number">2</span> <span class="citation" data-cites="Entity">@Entity</span>, JPA and Application.properties</h2>
-<p>This code snippet is defining a Java interface named <code>BookRepository</code> that extends the <code>CrudRepository</code> interface.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<section id="jpa" class="level2 page-columns page-full" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="jpa"><span class="header-section-number">1.3</span> JPA</h2>
+<ul>
+<li><a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/" class="external">Spring Data JPA - Reference Documentation</a></li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>JPA</strong>: Jakarta Persistence, formerly Java Persistence API</p>
+</div></div><div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Tip
+JPA definiton
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>JPA</code> is a application programming interface specification that describes the <strong>management of relational data</strong>.</p>
+</div>
+</div>
+<p><br></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>DemoApplication.java</strong></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource java code-overflow-wrap number-lines code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">public</span> <span class="kw">interface</span> BookRepository <span class="kw">extends</span> CrudRepository<span class="op">&lt;</span><span class="bu">Book</span><span class="op">,</span> <span class="bu">Long</span><span class="op">&gt;</span> <span class="op">{}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This code is defining a Java interface named <code>BookRepository</code> that extends the <code>CrudRepository</code> interface.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Crud Repository
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>The <code>CrudRepository</code> interface is a built-in interface in the Spring Framework that provides generic CRUD (Create, Read, Update, Delete) operations for working with entities in a database.</p>
 </div>
 </div>
-<p>The <code>BookRepository</code> interface is being used to define a repository for managing <code>Book</code> entities, where <code>Book</code> is likely a Java class representing a <strong>book object in the application</strong>. The Long parameter in <code>CrudRepository</code>&lt;Book, Long&gt; specifies the type of the primary key for the Book entity. In this case, the primary key is a Long type.</p>
-<p>By extending <code>CrudRepository</code>, the <code>BookRepository</code> interface will inherit methods such as <code>save()</code>, <code>findById()</code>, <code>findAll()</code>, and <code>deleteById()</code>, among others, which can be used to perform database operations on <code>Book</code> entities. This allows for efficient and standardized data access and management within the application.</p>
+<p>The <code>BookRepository</code> interface is being used to define a repository for managing <code>Book</code> entities, where <code>Book</code> is likely a Java class representing a <strong>book object in the application</strong>.</p>
+<p>The <code>Long</code> parameter in <code>CrudRepository</code>&lt;Book, Long&gt; specifies the type of the <strong>primary key</strong> for the Book entity. In this case, the <strong>primary key</strong> is a <code>Long</code> type.</p>
+<p>By extending <code>CrudRepository</code>, the <code>BookRepository</code> interface will inherit methods such as <code>save()</code>, <code>findById()</code>, <code>findAll()</code>, and <code>deleteById()</code>, among others, which can be used to perform database operations on <code>Book</code> entities.</p>
+<p>This allows for efficient and standardized data access and management within the application.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>The public keyword specifies that the interface can be accessed from other classes, and the interface name should be in camelCase to follow Java naming conventions.</p>
-</div></div><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">public</span> <span class="kw">interface</span> BookRepository <span class="kw">extends</span> CrudRepository<span class="op">&lt;</span><span class="bu">Book</span><span class="op">,</span> <span class="bu">Long</span><span class="op">&gt;</span> <span class="op">{}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="application.properties" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="application.properties"><span class="header-section-number">2.1</span> <code>Application.Properties</code></h3>
+</div></div></section>
+<section id="application.properties" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="application.properties"><span class="header-section-number">1.4</span> <code>Application.Properties</code></h2>
 <p><a href="https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/application.properties" class="external">Application.Properties</a>: the <code>application.properties</code> file contains configuration properties for a <strong>Spring Boot application.</strong></p>
 <pre><code>#H2 DATASOURCE
 spring.datasource.url=jdbc:h2:tcp://localhost/~/dataBaseH2/library5
@@ -1486,31 +1607,37 @@ spring.datasource.driver-class-name=org.h2.Driver
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect</code></pre>
 </section>
 </section>
-<section id="controller-and-thymeleaf" class="level2 page-columns page-full" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="controller-and-thymeleaf"><span class="header-section-number">3</span> <code>@Controller</code> and Thymeleaf</h2>
-<section id="controller-web" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="controller-web"><span class="header-section-number">3.1</span> <code>@Controller</code> Web</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1"></a><span class="at">@Controller</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="at">@RequestMapping</span><span class="op">(</span><span class="st">"/library"</span><span class="op">)</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">public</span> <span class="kw">class</span> LibraryWebController <span class="op">{</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a></span>
-<span id="cb6-5"><a href="#cb6-5"></a>    <span class="at">@Autowired</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a>    BookService bookService<span class="op">;</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-8"><a href="#cb6-8"></a>    <span class="at">@RequestMapping</span><span class="op">(</span><span class="st">"/books"</span><span class="op">)</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getWeb</span><span class="op">(</span>Model containerToView<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a>        <span class="co">//</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a>        containerToView<span class="op">.</span><span class="fu">addAttribute</span><span class="op">(</span><span class="st">"booksfromController"</span><span class="op">,</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a>                bookService<span class="op">.</span><span class="fu">getAllBooks</span><span class="op">());</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a>        </span>
-<span id="cb6-14"><a href="#cb6-14"></a></span>
-<span id="cb6-15"><a href="#cb6-15"></a>        <span class="cf">return</span> <span class="st">"showBooks"</span><span class="op">;</span></span>
-<span id="cb6-16"><a href="#cb6-16"></a>    <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="controller" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Controller</h1>
+<section id="controller-web" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="controller-web"><span class="header-section-number">2.1</span> <code>@Controller</code> Web</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>DemoApplication.java</strong></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource java code-overflow-wrap number-lines code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1"></a><span class="at">@Controller</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="at">@RequestMapping</span><span class="op">(</span><span class="st">"/library"</span><span class="op">)</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="kw">public</span> <span class="kw">class</span> LibraryWebController <span class="op">{</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a>    <span class="at">@Autowired</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    BookService bookService<span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a>    <span class="at">@RequestMapping</span><span class="op">(</span><span class="st">"/books"</span><span class="op">)</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getWeb</span><span class="op">(</span>Model containerToView<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>        <span class="co">//</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a>        containerToView<span class="op">.</span><span class="fu">addAttribute</span><span class="op">(</span><span class="st">"booksfromController"</span><span class="op">,</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a>                bookService<span class="op">.</span><span class="fu">getAllBooks</span><span class="op">());</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a>        </span>
+<span id="cb7-14"><a href="#cb7-14"></a></span>
+<span id="cb7-15"><a href="#cb7-15"></a>        <span class="cf">return</span> <span class="st">"showBooks"</span><span class="op">;</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a>    <span class="op">}</span></span>
+<span id="cb7-17"><a href="#cb7-17"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>The method <code>getWeb()</code> is handling a <strong>GET request</strong> to the “<code>/library/books</code>” <strong>URL path</strong> and adding a list of books retrieved from the <code>BookService</code> to the <code>Model</code> attribute “<code>booksfromController</code>”.</p>
 <p>Finally, it <strong>returns</strong> the name of the view that will be used <strong>to render the response.</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/controller.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="../images/springboot/controller.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/controller.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="..\images/springboot/controller.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <ol type="1">
@@ -1526,8 +1653,9 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect</code></
 <li><code>return "showBooks;</code>: This returns the name of the view that <strong>will be used to render the response</strong>.</li>
 </ol>
 </section>
-<section id="thymeleaf-and-the-view" class="level3 page-columns page-full" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="thymeleaf-and-the-view"><span class="header-section-number">3.2</span> Thymeleaf and the view</h3>
+</section>
+<section id="view-thymeleaf" class="level1 page-columns page-full" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> View: Thymeleaf</h1>
 <p>In Spring Boot, the <code>@Controller</code> returns the name of the <strong>HTML file</strong> (also known as the <code>view</code>) that should be rendered to display the response.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -1542,27 +1670,26 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect</code></
 <p>For each book, it creates a <code>table cell</code> <code>&lt;td&gt;</code> and displays different attributes of the book, such as bookId, title, isbn, pages, publishedYear, and author.</p>
 <p>There are also <strong>three links in the row</strong>, each represented by an <code>anchor</code> <code>&lt;a&gt;</code> tag.</p>
 <p>These links use <strong>Thymeleaf’s URL</strong> syntax <code>@{...}</code> to generate URLs that invoke <strong>Spring MVC <code>@Controller</code> methods</strong>.</p>
-<p>The <code>deleteBook()</code>, <code>updateBook()</code>, and <code>detailBook()</code> methods will be called with the bookId parameter set to the <code>book.bookId</code> value of the current iteration.</p>
+<p>The <code>deleteBook()</code>, <code>updateBook()</code>, and <code>detailBook()</code> methods will be called with the bookId parameter set to the <code>book.bookId</code> value of the cu Open a web browser and enter the URL dirrent iteration.</p>
 <p>The links are styled using <code>CSS</code> classes from the <strong>W3.CSS framework.</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/thymeleaf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="../images/springboot/thymeleaf.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/thymeleaf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="..\images/springboot/thymeleaf.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
-</section>
-<section id="example-library5" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="example-library5"><span class="header-section-number">4</span> Example: Library5</h2>
+<section id="example-library5" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Example: Library5</h1>
 <ul>
 <li><a href="https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5" class="external">Lab#SB02-Library5 Code</a></li>
 <li><a href="https://github.com/AlbertProfe/cifojava2022-3/wiki/Library5:-ThymeLeaf-Web-Project" class="external">Lab#SB02-Library5 Docs</a></li>
 </ul>
-<section id="tree-folder-project-root" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="tree-folder-project-root"><span class="header-section-number">4.1</span> Tree-folder Project root</h3>
+<section id="tree-folder-project-root" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="tree-folder-project-root"><span class="header-section-number">4.0.1</span> Tree-folder Project root</h3>
 <p>Collapsed tree-folder:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/Library5-tree-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="../images/springboot/Library5-tree-2.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/Library5-tree-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="..\images/springboot/Library5-tree-2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <ol type="1">
@@ -1579,12 +1706,12 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect</code></
 </ul></li>
 </ol>
 </section>
-<section id="tree-folder-project" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="tree-folder-project"><span class="header-section-number">4.2</span> Tree-folder Project</h3>
+<section id="tree-folder-project" class="level3" data-number="4.0.2">
+<h3 data-number="4.0.2" class="anchored" data-anchor-id="tree-folder-project"><span class="header-section-number">4.0.2</span> Tree-folder Project</h3>
 <p>All files in our tree-folder:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/Library5-tree.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="../images/springboot/Library5-tree.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/Library5-tree.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="..\images/springboot/Library5-tree.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>The <strong>Spring Boot tree-folder structure</strong> includes various components such as POM.xml, Git, Java classes, application.properties, and HTML templates that help manage dependencies, version control, database access, configuration, and dynamic content generation.</p>
@@ -1603,26 +1730,26 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect</code></
 </ol>
 </section>
 </section>
-<section id="execution" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="execution"><span class="header-section-number">5</span> Execution</h2>
+<section id="execution" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Execution</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/execution-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="../images/springboot/execution-1.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/execution-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="..\images/springboot/execution-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<a href="../images/springboot/execution-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="../images/springboot/execution-2.png" class="img-fluid"></a> <!--- navLinks --> <br><br>
+<a href="../images/springboot/execution-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="..\images/springboot/execution-2.png" class="img-fluid"></a> <!--- navLinks --> <br><br>
 <div class="row">
 <br>
 <div class="column left previous">
-<p><br> <a href="../springboot/boot-what-basics.html"> Spring Boot: Fundamentals</a> <br></p>
+<p><br> <a href="../springboot/boot-what-basics.html"><i class="fa-solid fa-arrow-left" aria-label="arrow-left"></i> Spring Boot: Fundamentals</a> <br></p>
 </div>
 <br>
 <div class="column center">
-<p><br> <a href="#top"> top</a> <br></p>
+<p><br> <a href="#top"><i class="fa-solid fa-arrow-up" aria-label="arrow-up"></i> top</a> <br></p>
 </div>
 <br>
 <div class="column right next">
-<p><br> <a href="../springboot/boot-concepts-annotations.html">Spring Boot: Annotations </a> <br></p>
+<p><br> <a href="../springboot/boot-concepts-annotations.html">Spring Boot: Annotations <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></a> <br></p>
 </div>
 <p><br></p>
 </div>
@@ -1902,7 +2029,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 
