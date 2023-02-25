@@ -669,6 +669,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="dropdown-item" href="../spring/spring-mvc.html">
  <span class="dropdown-text">Spring MVC</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../spring/spring-servlets.html">
+ <span class="dropdown-text">Springs Servlets</span></a>
+  </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Spring Boot Basics</li>
         <li>
@@ -682,6 +686,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <li>
     <a class="dropdown-item" href="../springboot/boot-what-create-th-h2.html">
  <span class="dropdown-text">Spring Boot: H2 DB and Thymeleaf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../springboot/boot-what-cycle.html">
+ <span class="dropdown-text">Spring Boot: cycle</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Spring Boot Concepts</li>
@@ -1146,6 +1154,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../spring/spring-mvc.html" class="sidebar-item-text sidebar-link">Spring MVC</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../spring/spring-servlets.html" class="sidebar-item-text sidebar-link">Springs Servlets</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -1170,6 +1183,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../springboot/boot-what-create-th-h2.html" class="sidebar-item-text sidebar-link active">Spring Boot: H2 DB and Thymeleaf</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../springboot/boot-what-cycle.html" class="sidebar-item-text sidebar-link">Spring Boot: cycle</a>
   </div>
 </li>
       </ul>
@@ -1361,7 +1379,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Friday, February 24, 2023</p>
+      <p class="date-modified">Saturday, February 25, 2023</p>
     </div>
   </div>
     
@@ -1384,7 +1402,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <hr>
 <section id="model" class="level1 page-columns page-full" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Model</h1>
-<section id="entity-book" class="level2" data-number="1.1">
+<section id="entity-book" class="level2 page-columns page-full" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="entity-book"><span class="header-section-number">1.1</span> <code>@Entity</code> book</h2>
 <ul>
 <li><a href="https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/Book.java" class="external">Book entity</a></li>
@@ -1401,7 +1419,7 @@ Entity definition
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>Instances of such an entity correspond to** individual rows** in the table.</p></li>
+<li><p>Instances of such an entity correspond to <strong>individual rows</strong> in the table.</p></li>
 <li><p>Entities typically have relationships with other entities, and these relationships are expressed through <strong>object/relational mapping</strong> (ORM) metadata.</p></li>
 <li><p>This metadata may be specified directly in the entity class file by using <strong>annotations</strong> <em>(or in a separate XML descriptor file distributed with the application).</em></p></li>
 </ul>
@@ -1431,10 +1449,31 @@ Entity definition
 <span id="cb1-18"><a href="#cb1-18"></a>    <span class="kw">private</span> <span class="bu">String</span> isbn<span class="op">;</span></span>
 <span id="cb1-19"><a href="#cb1-19"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Historical note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>Spring MVC</code> was <a href="../spring/spring-mvc.html">the original web framework</a> in the <strong>Spring ecosystem</strong>, and it relied heavily on <strong>XML-based configuration</strong>.</p>
+<p>Over time, Spring MVC <strong>evolved to become more annotation-driven</strong>, which made it simpler and more concise to work with.</p>
+<p>With the advent of Spring Boot, the Spring ecosystem became even more streamlined, with convention-over-configuration and a focus on out-of-the-box features that made <strong>it easier to build and deploy Spring-based applications.</strong></p>
+<p>In the domian of database access, <strong>Spring evolved from using plain JDBC to providing support for Object-Relational Mapping (ORM) frameworks such as Hibernate and JPA.</strong></p>
+<p>Spring also provides transaction management capabilities through the Spring Transaction module, which allows developers to define transaction boundaries declaratively using annotations or XML configuration.</p>
+<p>By using Spring, developers can build robust, scalable, and maintainable web applications that leverage modern technologies and best practices.</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <ul>
-<li><a href="" class="external"></a></li>
+<li><a href="https://docs.spring.io/spring-framework/docs/2.0.x/reference/orm.html" class="external">Object Relational Mapping (ORM) data access</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/spring-orm-example-jpa-hibernate-transaction" class="external">Spring ORM example - JPA, Hibernate, Transaction</a></li>
 </ul>
-</section>
+</div></div></section>
 <section id="h2-db-creation-step-by-step" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="h2-db-creation-step-by-step"><span class="header-section-number">1.2</span> H2 DB creation: step-by-step</h2>
 <ol type="1">
@@ -1661,22 +1700,52 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect</code></
 <div class="no-row-height column-margin column-container"><div class="">
 <p>The view is then resolved by the <code>ViewResolver</code> and the corresponding HTML template file is located.</p>
 </div></div><p>The data that the <code>@Controller</code> wants to send to the view <strong>is stored in a Model object</strong>. The Model object is passed to the view <strong>as a parameter</strong> and <strong>can be accessed</strong> from the HTML template.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Thymeleaf
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Using <strong>template engines like Thymeleaf</strong>, the view can then use expressions and tags <strong>to inject the data from the Model</strong> object into the HTML file.</p>
+</div>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><a href="https://freemarker.apache.org/" class="external">FreeMarker</a>. Apache FreeMarker™ is a template engine: a Java library to generate text output (HTML web pages, e-mails, configuration files, source code, etc.) based on templates and changing data.</p>
 </div></div><p>Finally, the rendered HTML file with the <strong>injected data</strong> is sent as the response to the client’s request.</p>
-<p>explain this: public interface BookRepository extends CrudRepository&lt;Book, Long&gt; {}en a row <code>&lt;tr&gt;</code> that iterates over a list of books <code>booksfromController</code> using the <code>th:each</code> attribute.</p>
-<p>For each book, it creates a <code>table cell</code> <code>&lt;td&gt;</code> and displays different attributes of the book, such as bookId, title, isbn, pages, publishedYear, and author.</p>
-<p>There are also <strong>three links in the row</strong>, each represented by an <code>anchor</code> <code>&lt;a&gt;</code> tag.</p>
-<p>These links use <strong>Thymeleaf’s URL</strong> syntax <code>@{...}</code> to generate URLs that invoke <strong>Spring MVC <code>@Controller</code> methods</strong>.</p>
-<p>The <code>deleteBook()</code>, <code>updateBook()</code>, and <code>detailBook()</code> methods will be called with the bookId parameter set to the <code>book.bookId</code> value of the cu Open a web browser and enter the URL dirrent iteration.</p>
-<p>The links are styled using <code>CSS</code> classes from the <strong>W3.CSS framework.</strong></p>
+<ul>
+<li><a href="https://github.com/AlbertProfe/cifojava2022-3/blob/0b15d01c098821f07cf4c8f7a10828ef5080bdb7/library5/src/main/resources/templates/showBooks.html#L29" class="external">showBooks.html on src/mian/resources/templates/</a></li>
+</ul>
+<p><code>Thyemeleaf</code> builds the HTML table injecting data from <code>Model object</code>. This <code>model objects</code> comes from <code>@Controller</code>.</p>
+<p>It builds a <code>&lt;table&gt;&lt;/table&gt;</code> with a header and multiple rows <code>&lt;tr&gt;&lt;/tr&gt;</code></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../images/springboot/thymeleaf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="..\images/springboot/thymeleaf.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
+<p>[1] A java <strong>forEach</strong> wirtten in <code>Thymeleaf</code> iterates over a list of books <code>booksfromController</code> using the tr<code>th:each</code> attribute.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Scope in Thymeleaf
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>th:each</code> attribute on <code>&lt;tr&gt;</code> scope starts in <code>&lt;tr&gt;</code> and finishes in <code>&lt;/tr&gt;</code></p>
+</div>
+</div>
+<p>[2] For each book, it creates a <code>table cell</code> <code>&lt;td&gt;</code> and displays different attributes of the book, such as bookId, title, isbn, pages, publishedYear, and author.</p>
+<p>There are also <strong>three links in the row</strong>, each represented by an <code>anchor</code> <code>&lt;a&gt;</code> tag.</p>
+<p>These links use <strong>Thymeleaf’s URL</strong> syntax <code>@{...}</code> to generate URLs that invoke <strong>Spring MVC <code>@Controller</code> methods</strong>.</p>
+<p>[3] [4] [5] The <code>deleteBook()</code>, <code>updateBook()</code>, and <code>detailBook()</code> methods will be called with the bookId parameter set to the <code>book.bookId</code> value of the cu Open a web browser and enter the URL dirrent iteration.</p>
+<p>The links are styled using <code>CSS</code> classes from the <strong>W3.CSS framework.</strong></p>
 </section>
 <section id="example-library5" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Example: Library5</h1>
@@ -1737,7 +1806,13 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect</code></
 <p><a href="../images/springboot/execution-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="..\images/springboot/execution-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<a href="../images/springboot/execution-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="..\images/springboot/execution-2.png" class="img-fluid"></a> <!--- navLinks --> <br><br>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/springboot/execution-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="..\images/springboot/execution-2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<!--- navLinks -->
+<br><br>
 <div class="row">
 <br>
 <div class="column left previous">
@@ -2029,7 +2104,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":true,"openEffect":"zoom"});</script>
 
 
 
