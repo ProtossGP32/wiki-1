@@ -22,6 +22,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -73,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed slimcontent">
 
 
 <div id="quarto-search-results"></div>
@@ -1252,12 +1315,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="toc-section-number">1</span>  Overview</a></li>
+  <li><a href="#overview-jsp-servlets-and-daos" id="toc-overview-jsp-servlets-and-daos" class="nav-link active" data-scroll-target="#overview-jsp-servlets-and-daos"><span class="toc-section-number">1</span>  Overview: JSP, Servlets and DAOs</a></li>
+  <li><a href="#jsp-javaserver-page" id="toc-jsp-javaserver-page" class="nav-link" data-scroll-target="#jsp-javaserver-page"><span class="toc-section-number">2</span>  JSP: JavaServer Page</a>
+  <ul>
+  <li><a href="#jsps-are-internally-compiled-into-java-servlets" id="toc-jsps-are-internally-compiled-into-java-servlets" class="nav-link" data-scroll-target="#jsps-are-internally-compiled-into-java-servlets"><span class="toc-section-number">2.1</span>  JSPs are Internally Compiled into Java Servlets</a></li>
+  <li><a href="#apache-tomcat-server" id="toc-apache-tomcat-server" class="nav-link" data-scroll-target="#apache-tomcat-server"><span class="toc-section-number">2.2</span>  Apache Tomcat Server</a></li>
+  </ul></li>
+  <li><a href="#example-java-inside-html" id="toc-example-java-inside-html" class="nav-link" data-scroll-target="#example-java-inside-html"><span class="toc-section-number">3</span>  Example: Java inside HTML</a>
+  <ul>
+  <li><a href="#code-example" id="toc-code-example" class="nav-link" data-scroll-target="#code-example"><span class="toc-section-number">3.1</span>  Code example</a></li>
+  </ul></li>
+  <li><a href="#in-2023-is-this-tech-obsolete-yes-and-not" id="toc-in-2023-is-this-tech-obsolete-yes-and-not" class="nav-link" data-scroll-target="#in-2023-is-this-tech-obsolete-yes-and-not"><span class="toc-section-number">4</span>  In 2023, is this tech obsolete? Yes and Not</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Albertprofe/wiki/edit/main/spring/spring-servlets.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Albertprofe/wiki/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -1304,27 +1377,136 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="overview" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="overview"><span class="header-section-number">1</span> Overview</h2>
+<div class="summary">
+<p>📘 <strong>Servlet</strong></p>
+<p>A <code>servlet</code> in Java is a <strong>server-side technology</strong> that enables the <strong>handling of requests and responses between a client and a server</strong>.</p>
+<p><code>Servlets</code> are <strong>Java classes</strong> that extend the functionality of web servers and allow developers to dynamically generate web pages and other resources based on user requests.</p>
+</div>
+<section id="overview-jsp-servlets-and-daos" class="level2 page-columns page-full" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="overview-jsp-servlets-and-daos"><span class="header-section-number">1</span> Overview: JSP, Servlets and DAOs</h2>
 <ul>
 <li><a href="https://mossgreen.github.io/Servlet-Containers-and-Spring-Framework/" class="external">Servlet Container and Spring Framework</a></li>
 <li><a href="https://drive.google.com/drive/folders/1CEhyfjf1VhEOlZUuewzWu-zxwqzpBVD6?usp=sharing" class="external">Servelets examples</a></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
+<p>JSP (JavaServer Pages) and servlets are server-side Java technologies that work together to build dynamic web applications. JSPs provide a way to generate HTML pages dynamically using Java code, while servlets handle incoming HTTP requests and provide responses back to the client.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>JSP, servlets, and DAOs are technologies that have been around for many years and are still in use today.</p>
+</div></div><p>When combined with a DAO (Data Access Object) layer, JSPs and servlets can interact with a SQL database to store and retrieve data. The DAO layer acts as an intermediary between the application and the database, handling the low-level details of data access and providing a consistent interface for the rest of the application to use.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>JSP and servlets were introduced in the late 1990s as part of the Java EE (Enterprise Edition) specification, which aimed to provide a platform for building scalable and robust enterprise applications. These technologies are still commonly used today.</p>
+</div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="//images/springmvc/Servlet_HelloServletURL.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Request-Response cycle with servlets and .xml: Spring 2.x"><img src="../images/springmvc/Servlet_HelloServletURL.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
-<p></p><figcaption class="figure-caption">Request-Response cycle with servlets and .xml: Spring 2.x</figcaption><p></p>
+<p><a href="../images/springmvc/java-servlet-flow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Database Connectivity and Operations Comparison : Java and Force.com"><img src="..\images/springmvc/java-servlet-flow.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p></p><figcaption class="figure-caption"><a href="http://clouddatafacts.com/force.com/java-to-force/db-connectivity.html" class="external">Database Connectivity and Operations Comparison : Java and Force.com</a></figcaption><p></p>
 </figure>
 </div>
+<p>Using this combination of JSPs, servlets, and DAOs, developers can build powerful, scalable, and maintainable web applications that can handle complex data and business logic.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>The use of DAOs in conjunction with JSPs and servlets to access SQL databases has also been a common practice for many years. DAOs were first introduced as a design pattern in the early 2000s, and since then, they have been widely adopted as a best practice.</p>
+</div></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/springmvc/servlet_life_cycle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Servlet life cycle"><img src="..\images/springmvc/servlet_life_cycle.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p></p><figcaption class="figure-caption">Servlet life cycle</figcaption><p></p>
+</figure>
+</div>
+<p>The end result is a web application that can provide rich functionality to users while remaining easy to maintain and extend over time.</p>
+</section>
+<section id="jsp-javaserver-page" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="jsp-javaserver-page"><span class="header-section-number">2</span> JSP: JavaServer Page</h2>
+<ul>
+<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html" class="external">Java Server-side Programming, Getting started with JSP by Examples</a></li>
+</ul>
+<p>JavaServer Page (JSP) provides a simplified and fast mean to generate dynamic web contents.</p>
+<p>It allows you to mix static HTML with dynamically generated HTML - in the way that the business logic and the presentation are well separated.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springmvc/path.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Request-Response cycle with URL and Java Methods: Spring 2.x"><img src="..\images/springmvc/path.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
-<p></p><figcaption class="figure-caption">Request-Response cycle with URL and Java Methods: Spring 2.x</figcaption><p></p>
+<p><a href="//images/springmvc/Servlet_HelloServletURL.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Request-Response cycle with servlets and .xml: Spring 2.x"><img src="../images/springmvc/Servlet_HelloServletURL.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p></p><figcaption class="figure-caption">Request-Response cycle with servlets and .xml: Spring 2.x</figcaption><p></p>
 </figure>
 </div>
 <ul>
 <li><a href="../images/springmvc/servlet.book.pdf" class="external">Book servlet</a></li>
 </ul>
+<section id="jsps-are-internally-compiled-into-java-servlets" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="jsps-are-internally-compiled-into-java-servlets"><span class="header-section-number">2.1</span> JSPs are Internally Compiled into Java Servlets</h3>
+<p>That is to say, anything that can be done using JSPs can also be accomplished using Java servlets.</p>
+<p>However, it is important to note that servlets and JSPs are complementary technologies, NOT replacement of each other. Servlet can be viewed as “HTML inside Java”, which is better for implementing business logic - as it is Java dominant. JSP, on the other hand, is “Java inside HTML”, which is superior for creating presentation - as it is HTML dominant. In a typical Model-View-Control (MVC) application, servlets are often used for the Controller (C), which involves complex programming logic.</p>
+<p>JSPs are often used for the View (V), which mainly deals with presentation. The Model (M) is usually implemented using JavaBean or EJB.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/springmvc/servlet_lifecycle_webserver.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Servlet life cycle"><img src="..\images/springmvc/servlet_lifecycle_webserver.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p></p><figcaption class="figure-caption">Servlet life cycle</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="apache-tomcat-server" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="apache-tomcat-server"><span class="header-section-number">2.2</span> Apache Tomcat Server</h3>
+<p>JSPs, like servlets, are <strong>server-side programs run inside a HTTP server.</strong></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tomcat
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To support JSP/servlet, a Java-capable HTTP server is required.</p>
+<p><a href="http://tomcat.apache.org" class="external">Tomcat Server</a> is the official reference implementation (RI) for Java servlet and JSP, provided free by <a href="http://www.apache.org" class="external">Apache</a>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="example-java-inside-html" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="example-java-inside-html"><span class="header-section-number">3</span> Example: Java inside HTML</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/springmvc/path.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Request-Response cycle with URL and Java Methods: Spring 2.x"><img src="..\images/springmvc/path.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p></p><figcaption class="figure-caption">Request-Response cycle with URL and Java Methods: Spring 2.x</figcaption><p></p>
+</figure>
+</div>
+<section id="code-example" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="code-example"><span class="header-section-number">3.1</span> Code example</h3>
+<p>This JSP code generates a random number and displays a message to the user based on the value of the number.</p>
+<p>If the number is greater than 0.95, the user is told they will have a lucky day, and if the number is less than or equal to 0.95, the user is told that life goes on.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>DemoApplication.java</strong></pre>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource java code-overflow-wrap number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&lt;</span>html<span class="op">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="op">&lt;</span>head<span class="op">&gt;&lt;</span>title<span class="op">&gt;</span>First JSP<span class="op">&lt;/</span>title<span class="op">&gt;&lt;/</span>head<span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="op">&lt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="dt">double</span> num <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">random</span><span class="op">();</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="cf">if</span> <span class="op">(</span>num <span class="op">&gt;</span> <span class="fl">0.95</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="op">%&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>      <span class="op">&lt;</span>h2<span class="op">&gt;</span>You<span class="er">'</span>ll have a luck day<span class="op">!&lt;/</span>h2<span class="op">&gt;&lt;</span>p<span class="op">&gt;(&lt;%=</span> num <span class="op">%&gt;)&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="op">&lt;%</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="op">%&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>      <span class="op">&lt;</span>h2<span class="op">&gt;</span>Well<span class="op">,</span> life goes on <span class="kw">...</span> <span class="op">&lt;/</span>h2<span class="op">&gt;&lt;</span>p<span class="op">&gt;(&lt;%=</span> num <span class="op">%&gt;)&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>  <span class="op">&lt;%</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="op">}</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>  <span class="op">%&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>  <span class="op">&lt;</span>a href<span class="op">=</span><span class="st">"&lt;%= request.getRequestURI() %&gt;"</span><span class="op">&gt;&lt;</span>h3<span class="op">&gt;</span>Try Again<span class="op">&lt;/</span>h3<span class="op">&gt;&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="op">&lt;/</span>body<span class="op">&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="op">&lt;/</span>html<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The random number is displayed along with the message, and the user is given the option to try again by clicking on a link that reloads the page.</p>
+</section>
+</section>
+<section id="in-2023-is-this-tech-obsolete-yes-and-not" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="in-2023-is-this-tech-obsolete-yes-and-not"><span class="header-section-number">4</span> In 2023, is this tech obsolete? Yes and Not</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/springmvc/jsp_tech.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Servlet and JSP Tutorial- How to Build Web Applications in Java?"><img src="..\images/springmvc/jsp_tech.png" class="img-fluid figure-img" style="width:40.0%"></a></p>
+<p></p><figcaption class="figure-caption"><a href="https://www.edureka.co/blog/servlet-and-jsp-tutorial/" class="external">Servlet and JSP Tutorial- How to Build Web Applications in Java?</a></figcaption><p></p>
+</figure>
+</div>
 <!--- navLinks -->
 <br><br>
 <div class="row">
@@ -1618,7 +1800,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 
