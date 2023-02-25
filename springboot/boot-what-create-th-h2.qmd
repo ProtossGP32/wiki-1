@@ -39,7 +39,7 @@ A ``persistence entity`` is a **lightweight Java class with its state typically 
 
 ::: {.callout-tip}
 ## Entity definition
-- Instances of such an entity correspond to** individual rows** in the table. 
+- Instances of such an entity correspond to **individual rows** in the table. 
 
 - Entities typically have relationships with other entities, and these relationships are expressed through **object/relational mapping** (ORM) metadata. 
 
@@ -68,7 +68,26 @@ public class Book {
 }
 ```
 
-- [](){.external}
+::: {.callout-warning}
+## Historical note
+
+``Spring MVC`` was [the original web framework](/spring/spring-mvc.qmd) in the **Spring ecosystem**, and it relied heavily on **XML-based configuration**.
+
+Over time, Spring MVC **evolved to become more annotation-driven**, which made it simpler and more concise to work with.
+
+With the advent of Spring Boot, the Spring ecosystem became even more streamlined, with convention-over-configuration and a focus on out-of-the-box features that made **it easier to build and deploy Spring-based applications.**
+
+In the domian of database access, **Spring evolved from using plain JDBC to providing support for Object-Relational Mapping (ORM) frameworks such as Hibernate and JPA.**
+
+Spring also provides transaction management capabilities through the Spring Transaction module, which allows developers to define transaction boundaries declaratively using annotations or XML configuration.
+
+By using Spring, developers can build robust, scalable, and maintainable web applications that leverage modern technologies and best practices.
+:::
+
+::: {.column-margin}
+- [Object Relational Mapping (ORM) data access](https://docs.spring.io/spring-framework/docs/2.0.x/reference/orm.html){.external}
+- [Spring ORM example - JPA, Hibernate, Transaction](https://www.digitalocean.com/community/tutorials/spring-orm-example-jpa-hibernate-transaction){.external}
+:::
 
 ## H2 DB creation: step-by-step
 
@@ -249,7 +268,11 @@ The view is then resolved by the `ViewResolver` and the corresponding HTML templ
 
 The data that the `@Controller` wants to send to the view **is stored in a Model object**. The Model object is passed to the view **as a parameter** and **can be accessed** from the HTML template.
 
+::: {.callout-tip}
+## Thymeleaf
+
 Using **template engines like Thymeleaf**, the view can then use expressions and tags **to inject the data from the Model** object into the HTML file.
+:::
 
 :::{.column-margin}
 [FreeMarker](https://freemarker.apache.org/){.external}. Apache FreeMarker™ is a template engine: a Java library to generate text output (HTML web pages, e-mails, configuration files, source code, etc.) based on templates and changing data.
@@ -257,22 +280,31 @@ Using **template engines like Thymeleaf**, the view can then use expressions and
 
 Finally, the rendered HTML file with the **injected data** is sent as the response to the client's request.
 
+- [showBooks.html on src/mian/resources/templates/](https://github.com/AlbertProfe/cifojava2022-3/blob/0b15d01c098821f07cf4c8f7a10828ef5080bdb7/library5/src/main/resources/templates/showBooks.html#L29){.external}
 
-explain this: public interface BookRepository extends CrudRepository<Book, Long> {}en a row `<tr>` that iterates over a list of books `booksfromController` using the `th:each` attribute.
 
-For each book, it creates a `table cell` `<td>` and displays different attributes of the book, such as bookId, title, isbn, pages, publishedYear, and author.
+``Thyemeleaf`` builds the HTML table injecting data from ``Model object``. This ``model objects`` comes from ``@Controller``.
+
+It builds a ``<table></table>`` with a header and multiple rows `<tr></tr>`
+
+![](/images/springboot/thymeleaf.png)
+
+[1] A java **forEach** wirtten in ``Thymeleaf`` iterates over a list of books `booksfromController` using the tr`th:each` attribute.
+
+::: {.callout-note}
+## Scope in Thymeleaf
+The `th:each` attribute on `<tr>` scope starts in `<tr>` and finishes in  `</tr>`
+:::
+
+[2] For each book, it creates a `table cell` `<td>` and displays different attributes of the book, such as bookId, title, isbn, pages, publishedYear, and author.
 
 There are also **three links in the row**, each represented by an `anchor` `<a>` tag. 
 
 These links use **Thymeleaf's URL** syntax `@{...}` to generate URLs that invoke **Spring MVC `@Controller` methods**.
 
-The `deleteBook()`, `updateBook()`, and `detailBook()` methods will be called with the bookId parameter set to the `book.bookId` value of the cu Open a web browser and enter the URL dirrent iteration.
+[3] [4] [5] The `deleteBook()`, `updateBook()`, and `detailBook()` methods will be called with the bookId parameter set to the `book.bookId` value of the cu Open a web browser and enter the URL dirrent iteration.
 
 The links are styled using `CSS` classes from the **W3.CSS framework.**
-
-
-
-![](/images/springboot/thymeleaf.png)
 
 
 # Example: Library5
@@ -319,6 +351,8 @@ The **Spring Boot tree-folder structure** includes various components such as PO
 
 
 ![](/images/springboot/execution-2.png)
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>

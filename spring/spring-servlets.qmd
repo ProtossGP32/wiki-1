@@ -1,0 +1,50 @@
+---
+title: "Springs Servlets"
+subtitle: Spring MVC
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: Spring MVC
+categories: [spring, MVC]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+## Overview
+
+- [Servlet Container and Spring Framework](https://mossgreen.github.io/Servlet-Containers-and-Spring-Framework/){.external}
+- [Servelets examples](https://drive.google.com/drive/folders/1CEhyfjf1VhEOlZUuewzWu-zxwqzpBVD6?usp=sharing){.external}
+
+![Request-Response cycle with servlets and .xml: Spring 2.x](//images/springmvc/Servlet_HelloServletURL.png){width="80%"}
+
+![Request-Response cycle with URL and Java Methods: Spring 2.x](/images/springmvc/path.png){width="80%"}
+
+- [Book servlet](/images/springmvc/servlet.book.pdf){.external}
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Spring Framework](/spring/spring-basics.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Spring Boot: Fundamentals  {{< fa solid arrow-right >}}](/springboot/boot-what-basics.qmd)
+<br>
+</div>
+<br>
+</div>

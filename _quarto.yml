@@ -273,12 +273,14 @@ website:
           contents: 
             - spring/spring-basics.qmd
             - spring/spring-mvc.qmd
+            - spring/spring-servlets.qmd
         - text: "---"  
         - section: "Spring Boot Basics"
           contents: 
             - springboot/boot-what-basics.qmd
             - springboot/boot-what-create.qmd
             - springboot/boot-what-create-th-h2.qmd
+            - springboot/boot-what-cycle.qmd
         - text: "---"  
         - section: "Spring Boot Concepts"
           contents:
