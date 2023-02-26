@@ -25,25 +25,30 @@ A ``servlet`` in Java is a **server-side technology** that enables the **handlin
 
 - [Servlet Container and Spring Framework](https://mossgreen.github.io/Servlet-Containers-and-Spring-Framework/){.external}
 - [Servelets examples](https://drive.google.com/drive/folders/1CEhyfjf1VhEOlZUuewzWu-zxwqzpBVD6?usp=sharing){.external}
+- [Web on Servlet Stack](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html){.external}
 
-JSP (JavaServer Pages) and servlets are server-side Java technologies that work together to build dynamic web applications. JSPs provide a way to generate HTML pages dynamically using Java code, while servlets handle incoming HTTP requests and provide responses back to the client.
+JSP (``JavaServer Pages``) and servlets are **server-side Java technologies that work together to build dynamic web applications.**
+
+JSPs provide a way to generate HTML pages dynamically using Java code, while servlets handle incoming HTTP requests and provide responses back to the client.
 
 ::: {.column-margin}
-JSP, servlets, and DAOs are technologies that have been around for many years and are still in use today.
+JSP, servlets, and DAOs are technologies that have been around for many years and **are still in use today**.
 :::
 
-When combined with a DAO (Data Access Object) layer, JSPs and servlets can interact with a SQL database to store and retrieve data. The DAO layer acts as an intermediary between the application and the database, handling the low-level details of data access and providing a consistent interface for the rest of the application to use.
+When combined with a ``DAO`` (Data Access Object) layer, JSPs and servlets can interact with a **SQL database to store and retrieve data**.
+
+The DAO layer acts as an **intermediary between the application and the database**, handling the low-level details of data access and providing a consistent interface for the rest of the application to use.
 
 ::: {.column-margin}
-JSP and servlets were introduced in the late 1990s as part of the Java EE (Enterprise Edition) specification, which aimed to provide a platform for building scalable and robust enterprise applications. These technologies are still commonly used today.
+JSP and servlets were introduced **in the late 1990s as part of the Java EE (Enterprise Edition)** specification, which aimed to provide a platform for building scalable and robust enterprise applications. These technologies are still commonly used today.
 :::
 
 ![ [Database Connectivity and Operations Comparison : Java and Force.com](http://clouddatafacts.com/force.com/java-to-force/db-connectivity.html){.external}  ](/images/springmvc/java-servlet-flow.png){width="80%"}
 
-Using this combination of JSPs, servlets, and DAOs, developers can build powerful, scalable, and maintainable web applications that can handle complex data and business logic. 
+Using this **combination of JSPs, servlets, and DAOs,** developers can build powerful, scalable, and maintainable web applications that can handle complex data and business logic. 
 
 ::: {.column-margin}
-The use of DAOs in conjunction with JSPs and servlets to access SQL databases has also been a common practice for many years. DAOs were first introduced as a design pattern in the early 2000s, and since then, they have been widely adopted as a best practice.
+The use of DAOs in conjunction with JSPs and servlets to access SQL databases has also been a common practice for many years. DAOs were first introduced **as a design pattern in the early 2000s,** and since then, they have been widely adopted as a best practice.
 :::
 
 ![Servlet life cycle](/images/springmvc/servlet_life_cycle.png){width="80%"}
@@ -71,9 +76,16 @@ It allows you to mix static HTML with dynamically generated HTML - in the way th
 
 That is to say, anything that can be done using JSPs can also be accomplished using Java servlets.
 
-However, it is important to note that servlets and JSPs are complementary technologies, NOT replacement of each other. Servlet can be viewed as "HTML inside Java", which is better for implementing business logic - as it is Java dominant. JSP, on the other hand, is "Java inside HTML", which is superior for creating presentation - as it is HTML dominant. In a typical Model-View-Control (MVC) application, servlets are often used for the Controller (C), which involves complex programming logic.
+However, it is important to note that servlets and JSPs are **complementary technologies, NOT replacement of each other.** 
 
-JSPs are often used for the View (V), which mainly deals with presentation. The Model (M) is usually implemented using JavaBean or EJB.
+- Servlet can be viewed as *HTML inside Java*, which is better for implementing business logic - as it is Java dominant.
+- JSP, on the other hand, is *Java inside HTML*, which is superior for creating presentation - as it is HTML dominant.
+
+In a typical **Model-View-Control (MVC) application**:
+
+- servlets are often used for the **Controller (C)**, which involves complex programming logic.
+- JSPs are often used for the **View (V)**, which mainly deals with presentation.
+- The Model (M) is usually implemented using **JavaBean or EJB**.
 
 ![Servlet life cycle](/images/springmvc/servlet_lifecycle_webserver.png){width="80%"}
 

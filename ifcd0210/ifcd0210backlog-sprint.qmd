@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(5) {
+tr:nth-child(1) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -13,17 +13,17 @@ tr:nth-child(5) {
 
 ![Backlog course](/images/home/backlog.jpg){width="30%"}
 
-## ``Sprint#9`` (February)
+## ``Sprint#10`` (February-March)
 
 ::: {.column-page-right}
-| Sprint | Day(1) brief-study returnBook | Date | Topics |  Details Topics |
+| Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #9 | 40 | 20/01 | + LibraryProject:</br> (0) plan Sprint </br> (1) brief-study returnBook </br> (2) branch returnBook </br> (3) Inherence Person </br> + Git: <br> (1) Remote/Local (just one user)</br> (2) Basic Operations: push, pull, commit, add, clone </br> (3) watchdog: writting commits, location, document, time</br>| [LibraryProject ](https://github.com/AlbertProfe/CifoJava2023/tree/1413c47c8aa8e5ed6ec4eb6ff4600df5dbfb28a8/LibraryProject){.external} </br> [Learn Git](https://learngitbranching.js.org/){.external} </br> ![](/images/javase/git_branch.png){width="45%"} |
-|  | 41 | 21/01 | + LibraryProject:</br> (1) Inherence: Member and/or LibraryMember </br> (2) Is Author a Member? </br> (3) Member is Abstract/Interface/Regular class? </br> (4) How will we call Managers? </br><s> - Quarto </s></br>| [core-General UML Proposal](/javase/selab3-3.qmd) </br> ![user-librarian Inherence UML](/images/javase/uml_user-librarian_inherence.png){width="80%"}|
-|  | 42 | 22/02 | + Spring Boot: </br> (1) Book @Controller  </br> (2) Book @Service </br> (3) Book CRUD </br> (4) HTML Thymeleaf </br> (5) H2 DataBase Local Source and Application.properties</br> - <s>Git</s> </br>  | [Lab#SB02-Library5 Code](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5){.external} </br> [Lab#SB02-Library5 Docs](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library5:-ThymeLeaf-Web-Project){.external} </br> [Create H2 DB Spring Boot](/springboot/boot-what-create-th-h2.qmd) </br> [Create Spring Boot](/springboot/boot-what-create.qmd) </br>|
-|  | 43 | 23/02 | - <s>LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</s></br> ++ LibraryManagement: </br> (1) What is Spring Boot? </br> (2) How does it works? </br> (3) What are the main elements of Spring Boot? </br> (4) What is Thymeleaf? </br> (5) What are server-renders and template engines? </br> ++ Deliveries MF01 </br> | [Thymeleaf](https://www.thymeleaf.org/){.external} </br> [H2 DB](https://www.h2database.com/html/main.html){.external} </br> [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/){.external}</br> [Spring init](https://start.spring.io/){.external} </br>  [Building an App with Spring Boot](https://spring.io/guides/gs/spring-boot/){.external}  </br></BR>  [Create Spring Boot](/springboot/boot-what-create-th-h2.qmd) </br>  [Create Spring Boot H2 DB and TH](/springboot/boot-what-create-th-h2.qmd) </br>[Lab#SB00-1](/springboot/sblab0-1.qmd)  </br> </br> |
-|  | 44 | 24/02 |  - Deliveries MF01</br> - Quarto </br> - Spring Boot: </br> (1) Summary week </br>  - SCRUM: </br> <s>(1) Motivation/Purpose 2 </s></br> (2) Burn Out multitasking, several hats </br>  (3) spaceX beyond Scrum | - |
-: Backlog Sprint#9 February 2023 {tbl-colwidths="[2,2,2,60,34]"}
+| #10 | 45 | 27/02 | - LibraryManagement: </br> (1) Tree: packages </br> (2) User: @Entity, @Repository, @Controller  </br> (3) Thymelaf </br>  - Spring Boot: request-response Cycle | - |
+|  | 46 | 28/02 | - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</s></br> - LibraryManagement: </br>  | - |
+|  | 47 | 01/03 | - LibraryManagement: </br> - Git and Quarto example | - |
+|  | 48 | 02/03 | - LibraryManagement: </br> - Spring Timeline </br> | - |
+|  | 49 | 03/03 | - Deliveries MF01</br> - Spring Boot: </br> (1) Summary week </br>  - SCRUM: </br> (1) Motivation/Purpose 2 </br> (2) Order and How we see the world </br>  (3) spaceX beyond Scrum | - |
+: Backlog Sprint#10 February-March 2023 {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
 ::: {.callout-note}

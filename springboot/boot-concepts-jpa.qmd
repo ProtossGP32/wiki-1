@@ -24,6 +24,8 @@ JPA stands for Java Persistence API. It is a Java specification for managing, pe
 
 ---
 
+## Overall
+
 In Spring Boot, JPA is used to interact with databases. It provides a convenient and powerful way to perform CRUD operations on database tables and provides a lot of useful features such as caching, lazy loading, and automatic management of transaction.
 
 Spring Boot provides a number of auto-configuration options for JPA, so you don't have to set up everything from scratch. The spring-boot-starter-data-jpa is a starter for using Spring Data JPA with Hibernate. It provides a convenient way to create JPA repositories, which can be used to perform CRUD operations on the database.
@@ -31,6 +33,17 @@ Spring Boot provides a number of auto-configuration options for JPA, so you don'
 When using JPA in Spring Boot, you can use the @Entity annotation to define a class as a JPA entity, and the @Repository annotation to define a class as a JPA repository. This allows you to use the JPA repository to perform CRUD operations on the corresponding database table.
 
 
+## JPA: DIP and DAO
+
+The Java Persistence API (JPA) is a popular Java framework used for Object-Relational Mapping (ORM). The JPA framework provides the @Repository annotation to identify the DAO (Data Access Object) layer of an application. The @Repository annotation is a good example of the terms Dependency Inversion Principle (DIP), Dependency Injection (DI), and Inversion of Control (IoC) container.
+
+The Dependency Inversion Principle (DIP) is a software design principle that states high-level modules should not depend on low-level modules, but both should depend on abstractions. The @Repository annotation follows this principle by allowing the DAO layer to depend on an interface (abstraction) instead of directly depending on a concrete implementation. This allows for easier maintenance, testing, and flexibility in changing the implementation of the DAO layer.
+
+Dependency Injection (DI) is a design pattern that implements the DIP by injecting dependencies (objects or interfaces) into a class at runtime. In the case of the @Repository annotation, the dependency is the EntityManager object, which is injected into the DAO class using the @PersistenceContext annotation. This allows the DAO to be decoupled from the EntityManager implementation and provides flexibility to use different implementations of the EntityManager.
+
+Inversion of Control (IoC) container is a pattern used to manage the lifecycle of objects and their dependencies. It allows the framework to control the creation, configuration, and destruction of objects, rather than having the application manage them directly. The @Repository annotation is an example of an IoC container because it is managed by the Spring framework. The framework handles the instantiation and injection of dependencies, such as the EntityManager, into the DAO classes.
+
+In this case, the high order modules are the business logic layer and the low order modules are the data access layer. The business logic layer depends on the data access layer through an abstraction, and the data access layer depends on the EntityManager implementation through injection by the IoC container. This allows for a separation of concerns and easier maintenance and testing of each layer independently.
 
 <!--- navLinks -->
 <br><br>

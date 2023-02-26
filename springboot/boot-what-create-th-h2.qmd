@@ -239,12 +239,14 @@ public class LibraryWebController {
     }
 }
 ```
-
+</br>
 The method `getWeb()` is handling a **GET request** to the "`/library/books`" **URL path** and adding a list of books retrieved from the `BookService` to the `Model` attribute "`booksfromController`".
+
+![@controller and View are connected by HTML/ViewResolver/TH](/images/springboot/view.png){width="80%"}
 
 Finally, it **returns** the name of the view that will be used **to render the response.**
 
-![](/images/springboot/controller.png)
+![getWeb method](/images/springboot/controller.png){width="80%"}
 
 1. Java Class and annotations:
     - `@Controller`: This is an annotation that identifies the class as a **Spring MVC controller.**
@@ -347,10 +349,10 @@ The **Spring Boot tree-folder structure** includes various components such as PO
 
 # Execution
 
-![](/images/springboot/execution-1.png)
+![Web client from Chrome web browser makes a request to Spring Boot Server](/images/springboot/execution-1.png)
 
 
-![](/images/springboot/execution-2.png)
+![Spring Boot Server gets the request and manages to create a Response to client in HTML file format](/images/springboot/execution-2.png)
 
 
 <!--- navLinks -->
