@@ -1245,7 +1245,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overall" id="toc-overall" class="nav-link active" data-scroll-target="#overall"><span class="toc-section-number">1</span>  Overall</a></li>
+  <li><a href="#jpa-dip-and-dao" id="toc-jpa-dip-and-dao" class="nav-link" data-scroll-target="#jpa-dip-and-dao"><span class="toc-section-number">2</span>  JPA: DIP and DAO</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Albertprofe/wiki/edit/main/springboot/boot-concepts-jpa.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Albertprofe/wiki/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1286,7 +1293,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Wednesday, February 15, 2023</p>
+      <p class="date-modified">Sunday, February 26, 2023</p>
     </div>
   </div>
     
@@ -1300,9 +1307,19 @@ ul.task-list li input[type="checkbox"] {
 <p>JPA stands for Java Persistence API. It is a Java specification for managing, persisting, and accessing relational data in Java applications. JPA is a standard API for ORM (Object-Relational Mapping) and provides a way to map Java objects to relational databases.</p>
 </div>
 <hr>
+<section id="overall" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="overall"><span class="header-section-number">1</span> Overall</h2>
 <p>In Spring Boot, JPA is used to interact with databases. It provides a convenient and powerful way to perform CRUD operations on database tables and provides a lot of useful features such as caching, lazy loading, and automatic management of transaction.</p>
 <p>Spring Boot provides a number of auto-configuration options for JPA, so you don’t have to set up everything from scratch. The spring-boot-starter-data-jpa is a starter for using Spring Data JPA with Hibernate. It provides a convenient way to create JPA repositories, which can be used to perform CRUD operations on the database.</p>
 <p>When using JPA in Spring Boot, you can use the <span class="citation" data-cites="Entity">@Entity</span> annotation to define a class as a JPA entity, and the <span class="citation" data-cites="Repository">@Repository</span> annotation to define a class as a JPA repository. This allows you to use the JPA repository to perform CRUD operations on the corresponding database table.</p>
+</section>
+<section id="jpa-dip-and-dao" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="jpa-dip-and-dao"><span class="header-section-number">2</span> JPA: DIP and DAO</h2>
+<p>The Java Persistence API (JPA) is a popular Java framework used for Object-Relational Mapping (ORM). The JPA framework provides the <span class="citation" data-cites="Repository">@Repository</span> annotation to identify the DAO (Data Access Object) layer of an application. The <span class="citation" data-cites="Repository">@Repository</span> annotation is a good example of the terms Dependency Inversion Principle (DIP), Dependency Injection (DI), and Inversion of Control (IoC) container.</p>
+<p>The Dependency Inversion Principle (DIP) is a software design principle that states high-level modules should not depend on low-level modules, but both should depend on abstractions. The <span class="citation" data-cites="Repository">@Repository</span> annotation follows this principle by allowing the DAO layer to depend on an interface (abstraction) instead of directly depending on a concrete implementation. This allows for easier maintenance, testing, and flexibility in changing the implementation of the DAO layer.</p>
+<p>Dependency Injection (DI) is a design pattern that implements the DIP by injecting dependencies (objects or interfaces) into a class at runtime. In the case of the <span class="citation" data-cites="Repository">@Repository</span> annotation, the dependency is the EntityManager object, which is injected into the DAO class using the <span class="citation" data-cites="PersistenceContext">@PersistenceContext</span> annotation. This allows the DAO to be decoupled from the EntityManager implementation and provides flexibility to use different implementations of the EntityManager.</p>
+<p>Inversion of Control (IoC) container is a pattern used to manage the lifecycle of objects and their dependencies. It allows the framework to control the creation, configuration, and destruction of objects, rather than having the application manage them directly. The <span class="citation" data-cites="Repository">@Repository</span> annotation is an example of an IoC container because it is managed by the Spring framework. The framework handles the instantiation and injection of dependencies, such as the EntityManager, into the DAO classes.</p>
+<p>In this case, the high order modules are the business logic layer and the low order modules are the data access layer. The business logic layer depends on the data access layer through an abstraction, and the data access layer depends on the EntityManager implementation through injection by the IoC container. This allows for a separation of concerns and easier maintenance and testing of each layer independently.</p>
 <!--- navLinks -->
 <br><br>
 <div class="row">
@@ -1322,6 +1339,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

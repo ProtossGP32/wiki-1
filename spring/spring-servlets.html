@@ -1387,25 +1387,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><a href="https://mossgreen.github.io/Servlet-Containers-and-Spring-Framework/" class="external">Servlet Container and Spring Framework</a></li>
 <li><a href="https://drive.google.com/drive/folders/1CEhyfjf1VhEOlZUuewzWu-zxwqzpBVD6?usp=sharing" class="external">Servelets examples</a></li>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html" class="external">Web on Servlet Stack</a></li>
 </ul>
-<p>JSP (JavaServer Pages) and servlets are server-side Java technologies that work together to build dynamic web applications. JSPs provide a way to generate HTML pages dynamically using Java code, while servlets handle incoming HTTP requests and provide responses back to the client.</p>
+<p>JSP (<code>JavaServer Pages</code>) and servlets are <strong>server-side Java technologies that work together to build dynamic web applications.</strong></p>
+<p>JSPs provide a way to generate HTML pages dynamically using Java code, while servlets handle incoming HTTP requests and provide responses back to the client.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>JSP, servlets, and DAOs are technologies that have been around for many years and are still in use today.</p>
-</div></div><p>When combined with a DAO (Data Access Object) layer, JSPs and servlets can interact with a SQL database to store and retrieve data. The DAO layer acts as an intermediary between the application and the database, handling the low-level details of data access and providing a consistent interface for the rest of the application to use.</p>
+<p>JSP, servlets, and DAOs are technologies that have been around for many years and <strong>are still in use today</strong>.</p>
+</div></div><p>When combined with a <code>DAO</code> (Data Access Object) layer, JSPs and servlets can interact with a <strong>SQL database to store and retrieve data</strong>.</p>
+<p>The DAO layer acts as an <strong>intermediary between the application and the database</strong>, handling the low-level details of data access and providing a consistent interface for the rest of the application to use.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>JSP and servlets were introduced in the late 1990s as part of the Java EE (Enterprise Edition) specification, which aimed to provide a platform for building scalable and robust enterprise applications. These technologies are still commonly used today.</p>
+<p>JSP and servlets were introduced <strong>in the late 1990s as part of the Java EE (Enterprise Edition)</strong> specification, which aimed to provide a platform for building scalable and robust enterprise applications. These technologies are still commonly used today.</p>
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../images/springmvc/java-servlet-flow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Database Connectivity and Operations Comparison : Java and Force.com"><img src="..\images/springmvc/java-servlet-flow.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 <p></p><figcaption class="figure-caption"><a href="http://clouddatafacts.com/force.com/java-to-force/db-connectivity.html" class="external">Database Connectivity and Operations Comparison : Java and Force.com</a></figcaption><p></p>
 </figure>
 </div>
-<p>Using this combination of JSPs, servlets, and DAOs, developers can build powerful, scalable, and maintainable web applications that can handle complex data and business logic.</p>
+<p>Using this <strong>combination of JSPs, servlets, and DAOs,</strong> developers can build powerful, scalable, and maintainable web applications that can handle complex data and business logic.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>The use of DAOs in conjunction with JSPs and servlets to access SQL databases has also been a common practice for many years. DAOs were first introduced as a design pattern in the early 2000s, and since then, they have been widely adopted as a best practice.</p>
+<p>The use of DAOs in conjunction with JSPs and servlets to access SQL databases has also been a common practice for many years. DAOs were first introduced <strong>as a design pattern in the early 2000s,</strong> and since then, they have been widely adopted as a best practice.</p>
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../images/springmvc/servlet_life_cycle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Servlet life cycle"><img src="..\images/springmvc/servlet_life_cycle.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
@@ -1433,8 +1436,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="jsps-are-internally-compiled-into-java-servlets" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="jsps-are-internally-compiled-into-java-servlets"><span class="header-section-number">2.1</span> JSPs are Internally Compiled into Java Servlets</h3>
 <p>That is to say, anything that can be done using JSPs can also be accomplished using Java servlets.</p>
-<p>However, it is important to note that servlets and JSPs are complementary technologies, NOT replacement of each other. Servlet can be viewed as “HTML inside Java”, which is better for implementing business logic - as it is Java dominant. JSP, on the other hand, is “Java inside HTML”, which is superior for creating presentation - as it is HTML dominant. In a typical Model-View-Control (MVC) application, servlets are often used for the Controller (C), which involves complex programming logic.</p>
-<p>JSPs are often used for the View (V), which mainly deals with presentation. The Model (M) is usually implemented using JavaBean or EJB.</p>
+<p>However, it is important to note that servlets and JSPs are <strong>complementary technologies, NOT replacement of each other.</strong></p>
+<ul>
+<li>Servlet can be viewed as <em>HTML inside Java</em>, which is better for implementing business logic - as it is Java dominant.</li>
+<li>JSP, on the other hand, is <em>Java inside HTML</em>, which is superior for creating presentation - as it is HTML dominant.</li>
+</ul>
+<p>In a typical <strong>Model-View-Control (MVC) application</strong>:</p>
+<ul>
+<li>servlets are often used for the <strong>Controller (C)</strong>, which involves complex programming logic.</li>
+<li>JSPs are often used for the <strong>View (V)</strong>, which mainly deals with presentation.</li>
+<li>The Model (M) is usually implemented using <strong>JavaBean or EJB</strong>.</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../images/springmvc/servlet_lifecycle_webserver.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Servlet life cycle"><img src="..\images/springmvc/servlet_lifecycle_webserver.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
@@ -1800,7 +1812,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 

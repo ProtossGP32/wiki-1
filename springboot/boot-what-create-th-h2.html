@@ -1672,11 +1672,18 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect</code></
 <span id="cb7-16"><a href="#cb7-16"></a>    <span class="op">}</span></span>
 <span id="cb7-17"><a href="#cb7-17"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The method <code>getWeb()</code> is handling a <strong>GET request</strong> to the “<code>/library/books</code>” <strong>URL path</strong> and adding a list of books retrieved from the <code>BookService</code> to the <code>Model</code> attribute “<code>booksfromController</code>”.</p>
+<p><br> The method <code>getWeb()</code> is handling a <strong>GET request</strong> to the “<code>/library/books</code>” <strong>URL path</strong> and adding a list of books retrieved from the <code>BookService</code> to the <code>Model</code> attribute “<code>booksfromController</code>”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/springboot/view.png" class="lightbox" title="@controller and View are connected by HTML/ViewResolver/TH" data-gallery="quarto-lightbox-gallery-9"><img src="..\images/springboot/view.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p></p><figcaption class="figure-caption"><span class="citation" data-cites="controller">@controller</span> and View are connected by HTML/ViewResolver/TH</figcaption><p></p>
+</figure>
+</div>
 <p>Finally, it <strong>returns</strong> the name of the view that will be used <strong>to render the response.</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/controller.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="..\images/springboot/controller.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/controller.png" class="lightbox" title="getWeb method" data-gallery="quarto-lightbox-gallery-10"><img src="..\images/springboot/controller.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<p></p><figcaption class="figure-caption">getWeb method</figcaption><p></p>
 </figure>
 </div>
 <ol type="1">
@@ -1724,7 +1731,7 @@ Thymeleaf
 <p>It builds a <code>&lt;table&gt;&lt;/table&gt;</code> with a header and multiple rows <code>&lt;tr&gt;&lt;/tr&gt;</code></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/thymeleaf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="..\images/springboot/thymeleaf.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/thymeleaf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="..\images/springboot/thymeleaf.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>[1] A java <strong>forEach</strong> wirtten in <code>Thymeleaf</code> iterates over a list of books <code>booksfromController</code> using the tr<code>th:each</code> attribute.</p>
@@ -1758,7 +1765,7 @@ Scope in Thymeleaf
 <p>Collapsed tree-folder:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/Library5-tree-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="..\images/springboot/Library5-tree-2.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/Library5-tree-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="..\images/springboot/Library5-tree-2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <ol type="1">
@@ -1780,7 +1787,7 @@ Scope in Thymeleaf
 <p>All files in our tree-folder:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/Library5-tree.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="..\images/springboot/Library5-tree.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/Library5-tree.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="..\images/springboot/Library5-tree.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>The <strong>Spring Boot tree-folder structure</strong> includes various components such as POM.xml, Git, Java classes, application.properties, and HTML templates that help manage dependencies, version control, database access, configuration, and dynamic content generation.</p>
@@ -1803,12 +1810,14 @@ Scope in Thymeleaf
 <h1 data-number="5"><span class="header-section-number">5</span> Execution</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/execution-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="..\images/springboot/execution-1.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/execution-1.png" class="lightbox" title="Web client from Chrome web browser makes a request to Spring Boot Server" data-gallery="quarto-lightbox-gallery-14"><img src="..\images/springboot/execution-1.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Web client from Chrome web browser makes a request to Spring Boot Server</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/springboot/execution-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="..\images/springboot/execution-2.png" class="img-fluid figure-img"></a></p>
+<p><a href="../images/springboot/execution-2.png" class="lightbox" title="Spring Boot Server gets the request and manages to create a Response to client in HTML file format" data-gallery="quarto-lightbox-gallery-15"><img src="..\images/springboot/execution-2.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Spring Boot Server gets the request and manages to create a Response to client in HTML file format</figcaption><p></p>
 </figure>
 </div>
 <!--- navLinks -->
@@ -2104,7 +2113,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":true,"closeEffect":"zoom","selector":".lightbox"});</script>
 
 
 
