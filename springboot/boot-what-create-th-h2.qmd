@@ -386,6 +386,12 @@ The **Spring Boot tree-folder structure** includes various components such as PO
 
 ![Spring Boot Server gets the request and manages to create a Response to client in HTML file format](/images/springboot/execution-2.png)
 
+## Auto-reload compiler
+
+![Auto-reload compiler: Advanced Settings](/images/springboot/compiler.png){width="70%"}
+
+![Auto-reload compiler: build project automatically](/images/springboot/compiller2.png){width="70%"}
+
 
 <!--- navLinks -->
 <br><br>

@@ -29,7 +29,7 @@ lightbox: auto
 highlight-style: breezedark
 
 editor:
-    render-on-save: true
+    render-on-save: false
 
 website:
   title: albertprofe wiki

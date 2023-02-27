@@ -18,7 +18,7 @@ tr:nth-child(2) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #10 | 45 | 27/02 | + LibraryManagement: </br> (0) Mock-up  </br> <s>(1) Tree-Folder: packages </s> </br> (2) Book: @Entity, @Repository, @Controller  </br> (3) Thymelaf </br>  + Spring Boot: request-response Cycle | [Spring Boot: cycle](/springboot/boot-what-cycle.qmd) </br> [Lab#SB00-1](/springboot/sblab0-1.qmd)  |
+| #10 | 45 | 27/02 | + LibraryManagement: </br> (0) Mock-up  </br> <s>(1) Tree-Folder: packages </s> </br> (2) Book: @Entity, @Repository, @Controller  </br> (3) Thymelaf </br>  + Spring Boot: request-response Cycle | [Spring Boot H2DB TH](/springboot/boot-what-create-th-h2.qmd) </br>[Spring Boot: cycle](/springboot/boot-what-cycle.qmd) </br> [Lab#SB00-1](/springboot/sblab0-1.qmd) </br></br> Auto-reload compiler:</br>![Auto-reload compiler: Advanced Settings](/images/springboot/compiler.png){width="20%"}  ![Auto-reload compiler: build project automatically](/images/springboot/compiller2.png){width="20%"} </br> |
 |  | 46 | 28/02 |  - LibraryManagement: </br> (0) Mock-up user  </br> (1) Tree-Folder: packages  </br> (2) User: @Entity, @Repository, @Controller  </br> (3) Thymelaf </br>  | [Lab#SB00-2](/springboot/sblab0-2.qmd)   |
 |  | 47 | 01/03 | - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> - LibraryManagement: </br>(1) Thynmeleaf Basics </br> (2) Thynmeleaf Nested </br> - Git and Quarto example | - |
 |  | 48 | 02/03 | - LibraryManagement: </br> (1) User & Author </br> - Spring Timeline </br> | - |
