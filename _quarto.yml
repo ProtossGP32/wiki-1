@@ -29,7 +29,7 @@ lightbox: auto
 highlight-style: breezedark
 
 editor:
-    render-on-save: false
+    render-on-save: true
 
 website:
   title: albertprofe wiki
@@ -289,7 +289,11 @@ website:
           contents:
             - springboot/boot-concepts-annotations.qmd
             - springboot/boot-concepts-controller.qmd
-            - springboot/boot-cBookboot-concepts-rest.qmd
+            - springboot/boot-concepts-view.qmd
+            - springboot/boot-concepts-model.qmd
+            - springboot/boot-concepts-jpa.qmd
+            - springboot/boot-concepts-injection.qmd
+            - springboot/boot-concepts-rest.qmd
             - springboot/boot-concepts-data.qmd
         - text: "---"  
         - section: "Spring Boot Laboratories"

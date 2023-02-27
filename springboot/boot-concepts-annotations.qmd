@@ -18,7 +18,9 @@ format:
 
 📘 **Annotations**
 
-In Spring Boot, annotations are used to configure and enable various features and functionality. They are used to provide metadata about a class, method, or field, and are used by the Spring framework to determine how to handle that class, method, or field.
+In Spring Boot, ``annotations`` are used to **configure and enable various features and functionality**.
+
+They are used to provide ``metadata`` about a class, method, or field, and are used by the ``Spring framework`` to determine how to handle that class, method, or field.
 
 :::
 
@@ -27,14 +29,34 @@ In Spring Boot, annotations are used to configure and enable various features an
 
 Here are some examples of common annotations used in Spring Boot:
 
-- ``@SpringBootApplication``: This annotation is used to enable the default configuration of a Spring Boot application.
-- ``@RestController``: This annotation is used to define a class as a RESTful web service controller.
-- ``@RequestMapping``: This annotation is used to map HTTP requests to specific methods in a controller class.
-- ``@Autowired``: This annotation is used to automatically wire a bean from the Spring application context into a class field or method.
-- ``@Entity``: This annotation is used to define a class as a JPA entity, which can be used to interact with a database.
-- ``@Repository`` : This annotation is used to define a class as a JPA repository, which can be used to perform CRUD operations on a database.
-- ``@Component`` : This annotation is used to define a class as a Spring Bean which can be used throughout the application.
+## App
 
+- ``@SpringBootApplication``: This annotation is used to enable the default configuration of a Spring Boot application.
+
+    - Basically, the ``@SpringBootApplication`` annotation is a combination of the following three Spring annotations: ``@Configuration``, ``@EnableAutoConfiguration`` and ``@ComponentScan``.
+
+## Class
+
+- ``@Component`` : This annotation is used to automatically detect the component classes without any need to write any explicit code. Spring framework scans classes with ``@component``, initialize them, and injects the required dependencies.
+- ``@RestController``: This annotation is used to define a class as a RESTful web service controller.
+- ``@Controller``: This annotation is used to define a class as a  web service controller
+- ``@Repository`` : This annotation is used to define a class as a **JPA repository, which can be used to perform CRUD operations on a database.**
+- ``@Service`` : This annotation is used to define a class as a **service class that defines the business logic.**
+
+## Dependence Injection
+
+- ``@Autowired``: This annotation is used to automatically wire a bean from the Spring application context into a class field or method. When we use this annotation Spring Boot is responsible to create the instance of that variable, **it basically manages the whole life cycle of the object**.
+
+## JPA
+
+- ``@Entity``: This annotation is used to define a class as a **JPA entity**, which can be used to interact with a database.
+
+
+## Mapping and parameters
+
+- ``@RequestMapping``: This annotation is used to map HTTP requests to specific methods in a controller class.
+- ``@RequestParam``	: This annotation is used to bind request parameters to a method parameter in the controller.					
+- ``@PathVariable`` :	This annotations binds the placeholder from the URI to the method parameter and can be used when the URI is dynamically created or the value of the URI itself acts as a parameter.
 
 
 <!--- navLinks -->
