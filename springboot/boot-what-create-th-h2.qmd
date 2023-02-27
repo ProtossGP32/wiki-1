@@ -204,7 +204,7 @@ The public keyword specifies that the interface can be accessed from other class
 
 [Application.Properties](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/application.properties){.external}: the `application.properties` file contains configuration properties for a **Spring Boot application.**
 
-```
+```{.conf filename="application.properties"}
 #H2 DATASOURCE
 spring.datasource.url=jdbc:h2:tcp://localhost/~/dataBaseH2/library5
 spring.datasource.username=albert
