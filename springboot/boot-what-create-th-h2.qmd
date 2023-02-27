@@ -29,6 +29,34 @@ format:
 
 ---
 
+# Maven Project
+
+Be careful with [this](https://hibernate.org/orm/releases/){.external}.
+
+![Compatibility matrix Java / JPA / ORM Hibernate / Jakarta](/images/springboot/ormjava_comp_matrix.png)
+
+## POM.xml and dependencies
+
+Check the base project, [Library5](/springboot/boot-what-create-th-h2.qmd#example-library5).
+
+[POM.xml and dependencies](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/pom.xml){.external}: The POM.xml file manages the dependencies of a project in Maven.
+
+- The first two dependencies, `spring-boot-starter-thymeleaf` and `spring-boot-starter-web`, are **starter dependencies for Spring Boot** and include libraries for building **web applications** using the **Thymeleaf template engine**.
+- The `spring-boot-devtools` dependency provides **development-time tools to improve the development experience**, such as automatic application restarts and enhanced debugging capabilities.
+- `javafaker` is a library used to generate **random data for testing purposes**, and `lombok` is a library that simplifies Java code **by reducing boilerplate code**.
+- The `spring-boot-starter-test` dependency includes the necessary libraries for testing Spring Boot applications, and the `junit-jupiter-api` dependency provides the `JUnit 5 testing framework`.
+- The `spring-boot-starter-jdbc` and `spring-boot-starter-data-jpa` dependencies provide libraries for accessing and manipulating **databases** in a Spring Boot application.
+- Finally, the `h2 dependency` is a **lightweight in-memory database used for testing** and development purposes.
+
+::: {.column-margin}
+The `groupId` and `artifactId` attributes uniquely identify each dependency, while the version attribute specifies the version of the library to use.
+:::
+
+::: {.column-margin}
+The `scope attribute` defines the visibility of the dependency at different stages of the **application's lifecycle**, and the optional attribute indicates that the dependency is not strictly required for the application to function.
+:::
+
+
 # Model
 
 ## `@Entity` book
@@ -193,7 +221,11 @@ The ``Long`` parameter in `CrudRepository`<Book, Long> specifies the type of the
 
 By extending `CrudRepository`, the `BookRepository` interface will inherit methods such as `save()`, `findById()`, `findAll()`, and `deleteById()`, among others, which can be used to perform database operations on `Book` entities.
 
-This allows for efficient and standardized data access and management within the application.
+This allows for efficient and standardized **data access** and management within the application. Otherwise, we should use a [DAO](https://en.wikipedia.org/wiki/Data_access_object){.external}:
+
+- [Example DAO MongoDB](https://github.com/AlbertProfe/JAVA_2020/blob/addIO/DAOtoMongo/src/main/java/dao/AuthorDAO.java){.external}
+- [Example SQL execution in Java](https://github.com/AlbertProfe/cifojava2022-4/blob/master/demoMavenH2/src/main/java/MavenH2.java){.external}
+
 
 ::: {.column-margin}
 The public keyword specifies that the interface can be accessed from other classes, and the interface name should be in camelCase to follow Java naming conventions.
@@ -204,7 +236,7 @@ The public keyword specifies that the interface can be accessed from other class
 
 [Application.Properties](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/application.properties){.external}: the `application.properties` file contains configuration properties for a **Spring Boot application.**
 
-```
+```js
 #H2 DATASOURCE
 spring.datasource.url=jdbc:h2:tcp://localhost/~/dataBaseH2/library5
 spring.datasource.username=albert

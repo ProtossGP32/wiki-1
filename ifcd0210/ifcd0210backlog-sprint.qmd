@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(1) {
+tr:nth-child(2) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -18,10 +18,10 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #10 | 45 | 27/02 | - LibraryManagement: </br> (1) Tree: packages </br> (2) User: @Entity, @Repository, @Controller  </br> (3) Thymelaf </br>  - Spring Boot: request-response Cycle | - |
-|  | 46 | 28/02 | - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</s></br> - LibraryManagement: </br>  | - |
-|  | 47 | 01/03 | - LibraryManagement: </br> - Git and Quarto example | - |
-|  | 48 | 02/03 | - LibraryManagement: </br> - Spring Timeline </br> | - |
+| #10 | 45 | 27/02 | + LibraryManagement: </br> (0) Mock-up  </br> <s>(1) Tree-Folder: packages </s> </br> (2) Book: @Entity, @Repository, @Controller  </br> (3) Thymelaf </br>  + Spring Boot: request-response Cycle | [Spring Boot: cycle](/springboot/boot-what-cycle.qmd) </br> [Lab#SB00-1](/springboot/sblab0-1.qmd)  |
+|  | 46 | 28/02 |  - LibraryManagement: </br> (0) Mock-up user  </br> (1) Tree-Folder: packages  </br> (2) User: @Entity, @Repository, @Controller  </br> (3) Thymelaf </br>  | [Lab#SB00-2](/springboot/sblab0-2.qmd)   |
+|  | 47 | 01/03 | - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> - LibraryManagement: </br>(1) Thynmeleaf Basics </br> (2) Thynmeleaf Nested </br> - Git and Quarto example | - |
+|  | 48 | 02/03 | - LibraryManagement: </br> (1) User & Author </br> - Spring Timeline </br> | - |
 |  | 49 | 03/03 | - Deliveries MF01</br> - Spring Boot: </br> (1) Summary week </br>  - SCRUM: </br> (1) Motivation/Purpose 2 </br> (2) Order and How we see the world </br>  (3) spaceX beyond Scrum | - |
 : Backlog Sprint#10 February-March 2023 {tbl-colwidths="[2,2,2,60,34]"}
 :::

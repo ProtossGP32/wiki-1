@@ -14,8 +14,7 @@ format:
 ---
 
 ::: {.labs}
-📘 **Spring Boot Lab#SB00-1: Library Management**
-
+📘 **Spring Boot Lab#SB00-1: Library UML**
 We are going to evolve the [current Java SE Libraryproject](/javase/selab3-3.qmd) into a **Spring Boot Library Management System** with a ``H2 DB`` and web with ``Thymeleaf``.
 :::
 
@@ -107,6 +106,8 @@ Thymeleaf's main goal is to bring elegant natural templates to your development 
 
 ![Mockup Web Library Management core use-case](/images/springboot/LibraryManagementMockUp.png){width="80%"}
 
+
+[Mockup Web Library Management core use-case extended](https://viewer.diagrams.net/?target=blank&highlight=0000FF&nav=1&title=LibraryManagementMockUp#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1Cqxn88pLy5DDgawKyY_amnqEiELtDcHG%26export%3Ddownload){.external}
 
 # Discussion Solving: UML
 
