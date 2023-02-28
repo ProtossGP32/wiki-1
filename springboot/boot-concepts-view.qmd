@@ -13,20 +13,24 @@ format:
   html
 ---
 
-In Spring Boot, the Model-View-Controller (MVC) pattern is used to separate the application logic into three components: Model - View -Controller
+In Spring Boot, the **Model-View-Controller (MVC)** pattern is used to separate the application logic into three components: Model - View -Controller
 
 ::: {.summary}
 
 📘 **View**
 
-The view is responsible for presenting the data to the user. In Spring Boot, views are typically implemented using template engines such as Thymeleaf or FreeMarker. The view can access the model and use it to generate the HTML, JSON or XML that is sent to the user's browser.
+The `view` is responsible **for presenting the data to the user.**
+
+In Spring Boot, views are t**ypically implemented using template engines such as `Thymeleaf` or `FreeMarker`**.
+
+The view can access the model and use it to generate the `HTML`, `JSON` or `XML` that is sent to the user's browser. 
 
 :::
 
 ---
 
 
-## Example
+## Example1: Model
 
 ```html
 <!DOCTYPE html>
@@ -40,16 +44,22 @@ The view is responsible for presenting the data to the user. In Spring Boot, vie
 </html>
 
 ```
-In this template, the th:text attribute is used to set the text of the ``<h1>`` tag to the value of the message attribute in the model. The expression ${message} evaluates to the value of the message attribute.
+In this template, the `th:text` attribute is used **to set the text** of the ``<h1>`` tag to the value of the message attribute in the model. The expression `${message}` evaluates to the value of the message attribute.
 
-Assuming that this template is saved in a file named home.html in your application's templates directory, the HomeController will render a message that says "Welcome to my Spring Boot app!" when you visit the URL /. The value of the message attribute is set in the home() method of the controller.
+Assuming that this template is saved in a file named `home.html` **in your application's templates directory**, the `HomeController` will render a message that says:
+
+> "Welcome to my Spring Boot app!"
+
+when you visit the` URL /`.
+
+The value of the message attribute is set in the `home()` method of the **controller**.
 
 
-## Example
+## Example2: ``@PathVariable`` and ``@RequestBody``
 
-Thymeleaf templates that can be used with the hello(), createUser(), and getUserById() methods:
+`Thymeleaf` templates that can be used with the `hello()`, `createUser()`, and `getUserById()` methods:
 
-hello.html:
+`hello.html`
 
 ```html
 <!DOCTYPE html>
@@ -65,7 +75,7 @@ hello.html:
 ```
 In this template, the th:text attribute is used to set the text of the ``<h1>`` tag to the value of the message attribute in the model. The value of message is set in the hello() method of the controller.
 
-user.html:
+`user.html`
 
 ``` html
 <!DOCTYPE html>
@@ -89,7 +99,7 @@ The createUser() method doesn't return a view, so it doesn't need a Thymeleaf te
 
 Finally, the getUserById() method will render a page that displays the details of a user when you visit the URL /users/{id}, where {id} is the ID of the user. The details of the user are passed to the template using the model.addAttribute() method. The th:text attribute is used to set the text of the ``<h1>`` tag to the name of the user, and the th:text attribute of the ``<p>`` tag is used to set its text to the email of the user.
 
-## Example
+## Example3: `@RequestParam`
 
 
 ```html
@@ -105,9 +115,71 @@ Finally, the getUserById() method will render a page that displays the details o
 
 ```
 
-In this template, the th:text attribute is used to set the text of the ``<h1>`` tag to the value of the message attribute in the model. The expression 'Hello, ' + ${message} concatenates the string "Hello, " with the value of the message attribute.
+In this template, the `th:text` attribute is used to set the text of the ``<h1>`` tag to the value of the message attribute in the `model`.
 
-Assuming that this template is saved in a file named hello.html in your application's templates directory, the ExampleController will render a message that says "Hello, {name}!" when you visit the URL /hello?name=John, where {name} is the value of the name parameter in the query string. For example, if you visit the URL /hello?name=John, the message will say "Hello, John!".
+The expression `'Hello, ' + ${message}` concatenates the string `"Hello, "` with the value of the message attribute.
+
+Assuming that this template is saved in a file named `hello.html` in your application's templates directory, the `ExampleController` will render a message that says:
+
+::: {.column-margin}
+
+For example, if you visit the URL /hello?name=John, the message will say "Hello, John!".
+:::
+
+> "Hello, {name}!" 
+
+when you visit the URL:
+
+> /hello?name=John
+
+where `{name}` is the value of the name parameter in the query string. 
+
+## Thymeleaf
+
+
+- [Library5 Documentation](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library5:-ThymeLeaf-Web-Project){.external} 
+- [Repo GitHub Code](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library3){.external} 
+
+### ThymeLeaf `Templates Engine`
+
+Most Thymeleaf **attributes allow their values to be set as or containing expressions**, which we will call Standard Expressions because of the dialects they are used in. These can be of five types:
+
+::: {.callout-note}
+## Thymeleaf expresssions
+- ${...} : Variable expressions.
+- *{...} : Selection expressions.
+- #{...} : Message (i18n) expressions.
+- @{...} : Link (URL) expressions.
+- ~{...} : Fragment expressions.
+:::
+
+Attributes `th:`
+
+::: {.callout-note}
+## Thyemleaf attributes
+- message: `<p th:text="#{msg.welcome}">Welcome everyone!</p>`
+- list: `<li th:each="book : ${books}" th:text="${book.title}">En las Orillas del Sar</li>`
+- link: `<form th:action="@{/createOrder}">`
+- action: `<input type="button" th:value**="#{form.submit}" />`
+- path: `<a th:href="@{/admin/users}">`
+:::
+
+How to write `th:`
+
+
+![ThymeLeaf how TH: works (1/2)](/images/springboot/howtagsTHworks.png){width="80%"}
+
+![ThymeLeaf how TH: works (2/2)](/images/springboot/howtagsTHworks2.png){width="80%"}
+
+
+```html
+- message: `<p th:text="#{msg.welcome}">Welcome everyone!</p>`
+- list: `<li th:each="book : ${books}" th:text="${book.title}">En las Orillas del Sar</li>`
+- link: `<form th:action="@{/createOrder}">`
+- action: `<input type="button" th:value**="#{form.submit}" />`
+- path: `<a th:href="@{/admin/users}">`
+```
+
 
 <!--- navLinks -->
 <br><br>

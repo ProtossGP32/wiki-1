@@ -13,7 +13,7 @@ format:
   html
 ---
 
-In Spring Boot, the Model-View-Controller (MVC) pattern is used to separate the application logic into three components: Model - View -Controller
+In Spring Boot, the **Model-View-Controller (MVC)** pattern is used to separate the application logic into three components: Model - View -Controller
 
 ::: {.summary}
 
@@ -31,7 +31,7 @@ In Spring Boot, controllers are implemented as classes with methods that handle 
 
  In Spring Boot, a controller is a class that handles incoming **HTTP requests and returns an HTTP response**. There are two ways to handle the HTTP response in Spring Boot controllers: using a ``model`` (or ``ModelMap``) or a ``model and view.``
 
-## Model
+### Model
 
 A ``model`` is an object **that holds data to be rendered by a view.**
 
@@ -64,7 +64,7 @@ The ``getHome`` method returns the name of the view ``home`` (html), which will 
 :::
 
 
-## Model and View
+### Model and View
 
 A model and view is a combination of a model object and the name of the view to be rendered. To use a model and view in a controller, you need to add the @Controller annotation to the class and use the ModelAndView class as the return type for the method that handles the HTTP request.
 
@@ -92,6 +92,10 @@ In this example, the ``getHome`` method creates a new ``ModelAndView`` object an
 
 ## Using Annotations
 
+In this table, we will explore some of the most commonly used annotations in Spring Boot. These annotations can be used to map HTTP requests to controller methods, extract data from the request, bind data to model attributes, and handle exceptions. Understanding these annotations is essential for building Spring Boot applications that are reliable, scalable, and maintainable.
+
+
+
 | Annotation | Description |
 |------------|-------------|
 | `@Controller` | Indicates that a class serves as a Spring Boot controller. |
@@ -110,9 +114,9 @@ In this example, the ``getHome`` method creates a new ``ModelAndView`` object an
 | `@ResponseBody` | Indicates that a controller method returns a response body instead of a view. |
 | `@ControllerAdvice` | Provides global exception handling for controllers. |
 
-## Example: ``Model``
+## Example1: ``Model``
 
-he most commonly used annotation is ``@GetMapping``, which maps ``HTTP`` ``GET`` **requests** to a specific method.
+The most commonly used annotation is ``@GetMapping``, which maps ``HTTP`` ``GET`` **requests** to a specific method.
 
 ```java
 import org.springframework.stereotype.Controller;
@@ -136,7 +140,7 @@ In this example, the ``@GetMapping("/")`` annotation maps ``HTTP`` ``GET`` reque
 :::
 
 
-## Example: ``@PathVariable`` and ``@RequestBody``
+## Example2: ``@PathVariable`` and ``@RequestBody``
 
 ```java
 @GetMapping("/hello")
@@ -162,7 +166,45 @@ public String getUserById(@PathVariable("id") Long id, Model model) {
 In these examples, the @GetMapping and @PostMapping annotations are used to map HTTP GET and POST requests to specific methods. The @PathVariable annotation is used to extract a variable from the URL path, and the @RequestBody annotation is used to map the request body to a Java object.
 :::
 
-## Example: ``@RequestParam`
+An alternative implementation where the `User` object **is created directly in the `@Controller`**:
+
+```java
+@Controller
+public class UserController {
+    
+    private List<User> users = new ArrayList<>();
+    
+    @PostMapping("/users")
+    public void createUser(@RequestBody User user) {
+        users.add(user);
+    }
+    
+    @GetMapping("/users/{id}")
+    public String getUserById(@PathVariable("id") Long id, Model model) {
+        User user = null;
+        for (User u : users) {
+            if (u.getId() == id) {
+                user = u;
+                break;
+            }
+        }
+        if (user == null) {
+            // handle error case
+        } else {
+            model.addAttribute("user", user);
+        }
+        return "user";
+    }
+}
+
+```
+In this implementation, we have replaced the `userService` dependency with an **in-memory** `List<User>` to **store** the user objects.
+
+In the `createUser()` method, **we simply add the User object to the list**.
+
+In the `getUserById()` method, we search for the `User` object with the given `id` in the `list` and add it to the model if it exists. If the user is not found, we can handle the error case appropriately.
+
+## Example3: `@RequestParam`
 
 Let's create a method that uses the ``@RequestParam`` **annotation** to **extract a variable from the query string:**
 
@@ -184,15 +226,17 @@ The ``@RequestParam("name")`` ``annotation`` **extracts a variable named name fr
 
 The Model parameter is used to add an attribute to the model, which will be used to render the view. Finally, the method returns the name of the view, which in this case is ``home``.
 
+::: {.column-margin}
+For example, if you visit the URL ``/hello?name=John``, the message will say **"Hello, John!"**.
+:::
+
+
 Assuming that you have a view named ``home.html`` in your application's templates directory, this controller method will render a message that says **"Hello, {``name``}!"** when you visit the URL:
 
- ``/hello?name=John.``
+> ``/hello?name=John.``
  
- The value of {``name``} will be taken from the ``name`` **parameter** in the query string.
+The value of {``name``} will be taken from the ``name`` **parameter** in the query string.
  
- ::: {.column-margin}
- For example, if you visit the URL ``/hello?name=John``, the message will say **"Hello, John!"**.
-:::
 
 
 
