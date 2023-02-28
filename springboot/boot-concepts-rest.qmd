@@ -32,10 +32,30 @@ In addition to these annotations, Spring Boot also provides a number of other fe
 
 In summary, REST stands for Representational State Transfer. In Spring Boot, the Spring MVC framework is used to build RESTful web services, the @RestController and @RequestMapping annotations are used to define a class as a RESTful web service controller and map HTTP requests to specific methods, respectively. Spring Boot provides many features to make building RESTful web services easy, such as support for JSON and XML serialization and deserialization, automatic content negotiation, and built-in exception handling.
 
+## Example
 
+```java
+@RestController
+@RequestMapping("/api")
+public class MyController {
+    
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, world!";
+    }
+    
+    @PostMapping("/data")
+    public ResponseEntity<Void> postData(@RequestBody MyData data) {
+        // Process the data...
+        return ResponseEntity.ok().build();
+    }
+}
 
+```
 
+In this example, the @RestController annotation indicates that this class is a controller, and the @RequestMapping("/api") annotation specifies that all routes in this controller should be prefixed with "/api". The hello() method is annotated with @GetMapping("/hello"), which means it will handle GET requests to the "/api/hello" endpoint and return the string "Hello, world!". The postData() method is annotated with @PostMapping("/data"), which means it will handle POST requests to the "/api/data" endpoint and accept a JSON payload in the request body, which will be automatically converted to a MyData object using Spring's request body parsing functionality. The method then returns a ResponseEntity object with an HTTP status code of 200 (OK) and an empty response body.
 
+By defining controllers like this, you can create RESTful APIs and web applications that can handle a wide range of HTTP requests and responses.
 
 
 <!--- navLinks -->
