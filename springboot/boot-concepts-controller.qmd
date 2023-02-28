@@ -113,6 +113,8 @@ In this table, we will explore some of the most commonly used annotations in Spr
 | `@ResponseStatus` | Sets the HTTP status code for a controller method. |
 | `@ResponseBody` | Indicates that a controller method returns a response body instead of a view. |
 | `@ControllerAdvice` | Provides global exception handling for controllers. |
+: Spring Boot Annotations {tbl-colwidths="[30,70]"}
+
 
 ## Example1: ``Model``
 
