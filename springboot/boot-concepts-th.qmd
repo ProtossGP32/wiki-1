@@ -1,0 +1,115 @@
+---
+title: "Spring Boot: Thymeleaf"
+subtitle: Spring Boot View Thymeleaf
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description:  Spring Boot View
+categories: [Spring-Boot, View, thymeleaf]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+In Spring Boot, the **Model-View-Controller (MVC)** pattern is used to separate the application logic into three components: Model - View -Controller
+
+::: {.summary}
+
+📘 **Thymeleaf**
+
+``Thymeleaf`` is a **modern server-side Java template engine** for both web and standalone environments.
+
+
+:::
+
+---
+
+![](/images/springboot/thymeleaf_logo.png){width="50%"}
+
+## Overview
+
+``Thymeleaf`` uses HTML attributes to add functionality and dynamic behavior to web pages, allowing for **server-side rendering and template processing.**
+
+
+```html
+<p th:text="'Thymeleaf will display this'">text</p>
+```
+
+Here ``Thymeleaf`` **will process the text inside the th:text attribute**, and replace the contents of the ``<p>`` tag with it. 
+
+``Thymeleaf`` works **by replacing the contents of the tags** that its attributes are defined on. so the final in the browser output will be:
+
+```html
+<p>Thymeleaf will display this</p>
+```
+
+Notice that the special attributes are now gone, as well as the text “text” which is now replace with the contents of the Thymeleaf attribute.
+
+A more complicated example:
+
+
+```html
+<tr th:each="prod : ${prods}">
+    <td th:text="${prod.name}">Onions</td>
+    <td th:text="${prod.price}">2.41</td>
+<tr>
+```
+
+Here Thymeleaf will repeat the ``<tr>`` with the list of products, this is defined by the attribute th:each, it will also remove the dummy content in both the ``<td>`` tags, and replace them with the content that is evaluated from ``th:text="${prod.name}"`` and ``th:text="${prod.price}"``.
+
+## CheatSheet
+
+
+| Feature | Description | Syntax |
+|---------|-------------|--------|
+| th:text | Sets the text of an element | `<p th:text="${someValue}">Default Text</p>` |
+| th:if | Conditionally renders an element | `<p th:if="${someCondition}">Visible when condition is true</p>` |
+| th:each | Loops over a collection and renders an element for each item | `<ul><li th:each="item : ${items}" th:text="${item}">Default Text</li></ul>` |
+| th:object | Binds a form to an object and sets its properties | `<form th:object="${user}"><input th:field="*{name}" /></form>` |
+| th:action | Sets the URL for a form's submission | `<form th:action="@{/submit}" method="post">` |
+| th:href | Sets the URL for an anchor tag | `<a th:href="@{/page}">Link Text</a>` |
+| th:src | Sets the source URL for an image tag | `<img th:src="@{/image.jpg}" alt="Alt Text" />` |
+| th:value | Sets the value of an input field | `<input th:value="${someValue}" />` |
+| th:selected | Conditionally selects an option in a select field | `<select><option th:selected="${isSelected}">Option Text</option></select>` |
+| th:disabled | Conditionally disables an input field | `<input th:disabled="${isDisabled}" />` |
+| th:readonly | Conditionally sets an input field as read-only | `<input th:readonly="${isReadOnly}" />` |
+| th:classappend | Conditionally appends a CSS class to an element | `<div class="default" th:classappend="${additionalClass}"></div>` |
+| th:style | Sets the style attribute of an element | `<div th:style="'background-color:' + ${bgColor} + ';'"></div>` |
+| th:attr | Sets any attribute of an element | `<input th:attr="data-id=${itemId}" />` |
+| th:replace | Replaces an element with another | `<div th:replace="fragments/header :: header"></div>` |
+| th:include | Includes a fragment of a template | `<div th:include="fragments/footer :: footer"></div>` |
+| th:unless | Conditionally renders an element when a condition is false | `<p th:unless="${someCondition}">Visible when condition is false</p>` |
+| th:inline | Sets the inline mode of an element | `<script th:inline="javascript">alert([[${message}]]);</script>` |
+| th:textappend | Appends text to an element | `<span th:textappend="${additionalText}">Default Text</span>` |
+| th:with | Sets a local variable in the current context | `<div th:with="varName=${someValue}"></div>` |
+: Thymeleaf CheatSheet {tbl-colwidths="[20,30,50]"}
+
+
+- [A Cheat Sheet for using the Thymeleaf templating Engine](http://engma.github.io/thymeleaf-cheat-sheet/){.external}
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Spring Boot: Controller](/springboot/boot-concepts-controller.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Spring Boot: Model  {{< fa solid arrow-right >}}](/springboot/boot-concepts-model.qmd)
+<br>
+</div>
+<br>
+</div>
