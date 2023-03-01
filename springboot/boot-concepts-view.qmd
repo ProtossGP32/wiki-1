@@ -21,7 +21,11 @@ In Spring Boot, the **Model-View-Controller (MVC)** pattern is used to separate 
 
 The `view` is responsible **for presenting the data to the user.**
 
-In Spring Boot, views are t**ypically implemented using template engines such as `Thymeleaf` or `FreeMarker`**.
+In Spring Boot, views are typically implemented using template engines such as:
+
+- `Thymeleaf`: [Thymeleaf](/springboot/boot-concepts-th.qmd)
+- `FreeMarker`: [Apache FreeMarker™](https://freemarker.apache.org/){.external} is a template engine: a Java library to generate text output (HTML web pages, e-mails, configuration files, source code, etc.) based on templates and changing data. 
+- `Groovy`: Spring Boot officially provided starter to use [Groovy Template for MVC](http://groovy-lang.org/templating.html#_the_markuptemplateengine){.external} and offline rendering.
 
 The view can access the model and use it to generate the `HTML`, `JSON` or `XML` that is sent to the user's browser. 
 
@@ -167,6 +171,7 @@ Most Thymeleaf **attributes allow their values to be set as or containing expres
 - #{...} : Message (i18n) expressions.
 - @{...} : Link (URL) expressions.
 - ~{...} : Fragment expressions.
+- __{...} : use an element inside another
 :::
 
 Attributes `th:`
