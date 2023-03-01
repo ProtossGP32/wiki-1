@@ -388,10 +388,27 @@ The **Spring Boot tree-folder structure** includes various components such as PO
 
 ## Auto-reload compiler
 
+`Spring Boot Dev Tools`
+
+
+Any changes to views or resources can be seen in the browser directly, no need restarts, just refresh the browser. As wwll, any changes to the code that will restart the Spring container automatically.
+
+``` xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+    <scope>runtime</scope>
+    <optional>true</optional>
+</dependency>
+```
+
 ![Auto-reload compiler: Advanced Settings](/images/springboot/compiler.png){width="70%"}
 
 ![Auto-reload compiler: build project automatically](/images/springboot/compiller2.png){width="70%"}
 
+![Enable this option: `compiler.automake.allow.when.app.running`](/images/springboot/devtools_registry.png){width="70%"}
+
+> In Menu -> Build -> Build Project `CTRL + F9`
 
 <!--- navLinks -->
 <br><br>
