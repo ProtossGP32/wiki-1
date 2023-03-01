@@ -104,6 +104,9 @@ indicate the value to be replaced inside the braces and precede it with a dollar
 
 ``Thymeleaf`` by default allows you to define such messages in the ``messages.properties`` file, which by default should be located directly in **the resources directory**.
 
+
+
+
 In this file we store the keys and the corresponding values. In the HTML template, we refer to the key using the ``#`` sign:
 
 > hi.msg=Hi there!
@@ -120,7 +123,13 @@ In this file we store the keys and the corresponding values. In the HTML templat
 </html>
 ```
 
-We could add another lenguage by creating a new file named ``messages_fr.properties`` (``messages_cat.properties``, ``messages_es.properties``, ``messages_jap.properties``) in the same directory.
+In ``application.properties``, we should define ``locale``:
+
+> spring.mvc.locale=``en``
+
+We could add another lenguage by creating a new file named ``messages_fr.properties`` (``messages_cat.properties``, ``messages_es.properties``, ``messages_ja.properties``) in the same directory.
+
+- [resources (examples)](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView/src/main/resources){.external}
 
 This approach also allows the implementation of **internationalization** by means of the so-called **interceptors**:
 
@@ -143,12 +152,7 @@ public LocaleChangeInterceptor localeChangeInterceptor() {
 public void addInterceptors(InterceptorRegistry registry) {
     registry.addInterceptor(localeChangeInterceptor());
 }
-
-
 ```
-
-
-
 
 ## ThymeLeaf `Templates Engine`
 
