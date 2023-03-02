@@ -95,9 +95,14 @@ We might implement the ``CRUD`` operations for our ``LibraryMangement`` system:
 
 - [controllerView code github](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external}
 
-![home](/images/springboot/viewController1.png){width="60%"}
-![users](/images/springboot/viewController2.png){width="60%"}
-![librarians](/images/springboot/viewController3.png){width="60%"}
+![render html chrome: /home](/images/springboot/viewController1.png){width="60%"}
+
+
+![render html chrome: /user/users](/images/springboot/viewController2.png){width="60%"}
+
+
+![render html chrome: /librarian/librarians](/images/springboot/viewController3.png){width="60%"}
+
 
 ## CRUD: create
 
