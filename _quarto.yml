@@ -16,7 +16,7 @@ format:
     code-link: true
     #code-block-bg: "#29465B"
     code-line-numbers: "true"
-    code-overflow: "wrap" 
+    code-overflow: "wrap"
 
 execute:
   cache: true
