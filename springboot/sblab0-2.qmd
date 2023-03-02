@@ -69,6 +69,36 @@ We might implement the ``CRUD`` operations for our ``LibraryMangement`` system:
 - ``Update``: To update user information, we'll need to retrieve the User object from our HashMap using the user ID as the key, and then update the relevant properties of the User object.
 - ``Delete``: To delete a user from the system, we'll need to remove the User object from our HashMap using the user ID as the key.
 
+## Reference: Library5
+
+### Repos
+
+- [Lab#SB02-Library5 Code](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5){.external}
+- [Lab#SB02-Library5 Docs](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library5:-ThymeLeaf-Web-Project){.external}
+
+### Java Classes
+
+- [Book](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/Book.java){.external}
+- [BookService](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/BookService.java){.external}
+- [LibraryWebController](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/LibraryWebController.java){.external}
+
+### Templates Thynmeleaf
+
+- [detailBook](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/templates/detailBook.html){.external}
+- [newBook](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/templates/newBook.html){.external}
+- [notfound](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/templates/notfound.html){.external}
+- [showBooks](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/templates/showBooks.html){.external}
+- [updateBook](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/templates/updateBook.html){.external}
+
+
+## LibraryManagement: controllerView
+
+- [controllerView code github](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external}
+
+![home](/images/springboot/viewController1.png){width="60%"}
+![users](/images/springboot/viewController2.png){width="60%"}
+![librarians](/images/springboot/viewController3.png){width="60%"}
+
 ## CRUD: create
 
 ## CRUD: read
