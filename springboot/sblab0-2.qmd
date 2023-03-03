@@ -1,6 +1,6 @@
 ---
 title: "Spring Boot Lab#SB00-2: CRUD User"
-subtitle: Spring Boot Library Management CRUD User
+subtitle: Spring Boot Library Management CRUD User (and Librarian)
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
@@ -14,7 +14,7 @@ format:
 ---
 
 ::: {.labs}
-📘 **Spring Boot Lab#SB00-2: CRUD User**
+📘 **Spring Boot Lab#SB00-2: CRUD User (and Librarian)**
 
 ``CRUD`` stands for ``Create``, ``Read``, ``Update``, and ``Delete`` - the four basic operations for persistent storage of data.
 
@@ -52,7 +52,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data // generates getters, setters, equals, hashCode, and toString methods
+// generates getters, setters, equals, 
+// hashCode, and toString methods
+@Data
 @NoArgsConstructor // generates a no-args constructor
 @AllArgsConstructor // generates a constructor with all arguments
 public class User {
@@ -69,20 +71,22 @@ We might implement the ``CRUD`` operations for our ``LibraryMangement`` system:
 - ``Update``: To update user information, we'll need to retrieve the User object from our HashMap using the user ID as the key, and then update the relevant properties of the User object.
 - ``Delete``: To delete a user from the system, we'll need to remove the User object from our HashMap using the user ID as the key.
 
-## Reference: Library5
+## References: 
 
-### Repos
+### Library5
+
+#### Repos
 
 - [Lab#SB02-Library5 Code](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5){.external}
 - [Lab#SB02-Library5 Docs](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library5:-ThymeLeaf-Web-Project){.external}
 
-### Java Classes
+#### Java Classes
 
-- [Book](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/Book.java){.external}
-- [BookService](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/BookService.java){.external}
-- [LibraryWebController](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/LibraryWebController.java){.external}
+- [Book Entity](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/Book.java){.external}
+- [Book Service](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/BookService.java){.external}
+- [Book Controller](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/java/io/company/library/LibraryWebController.java){.external}
 
-### Templates Thynmeleaf
+#### Templates Thynmeleaf
 
 - [detailBook](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/templates/detailBook.html){.external}
 - [newBook](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/templates/newBook.html){.external}
@@ -90,20 +94,131 @@ We might implement the ``CRUD`` operations for our ``LibraryMangement`` system:
 - [showBooks](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/templates/showBooks.html){.external}
 - [updateBook](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library5/src/main/resources/templates/updateBook.html){.external}
 
-## CRUD: read
-
 ### LibraryManagement: controllerView
 
 - [controllerView code github](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external}
 
+## CRUD: read
+
+![Folder-tree `controllerView` Project just with `Read` feature](/images/springboot/controllerView_read.png){width="60%"}
+
+### Home
+
+This cycle defines a `@Controller` class that handles requests to the `URL` `"/home"`. When a `request` is made, it adds the current date and time to the `model` object, and then `returns` **the name of the view to be rendered.** 
+
+The view will have access to the "todayDate" attribute and can use it to display the current date and time.
+
+```java
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import java.util.Date;
+
+@Controller
+public class HomeController {
+    @RequestMapping("/home")
+    public String gethome(Model model){
+
+        model.addAttribute("todayDate", new Date().toString());
+        return "home";
+    }
+
+}
+
+```
+:::{.column-margin}
+
 ![render html chrome: /home](/images/springboot/viewController1.png){width="60%"}
+:::
+
+### Users
+
+The cycle request-response relies in the `@Controller` class called `UserController`, which `maps` `requests` to the `"/user/users" URL`. 
+
+It uses an `@Autowired` `UserService` to `fetch` a **list of users and adds them to the `model`**, before returning a view called `"user/users".`
 
 
+``` java
+package com.example.myFirstSpring.controller;
+
+import com.example.myFirstSpring.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/user")
+public class UserController {
+
+    @Autowired
+    UserService userService;
+
+    @RequestMapping("/users")
+    public String getAllUsers(Model model){
+        // fetch all users, add to model
+        model.addAttribute("users", userService.getAllUsers());
+        return "user/users";
+    }
+}
+
+```
+:::{.column-margin}
 ![render html chrome: /user/users](/images/springboot/viewController2.png){width="60%"}
+:::
+
+Here we will define the @Service class, called `UserService` with a method called `getAllUsers`, which returns a `HashMap` of `user` objects.
+
+The `HashMap` is populated **with 20 fake user objects using a utility** method called `populateFakeUsers`.
+
+```java
+package com.example.myFirstSpring.service;
+
+import com.example.myFirstSpring.model.User;
+import com.example.myFirstSpring.utils.Utils;
+import org.springframework.stereotype.Service;
+import java.util.HashMap;
+
+@Service
+public class UserService {
+    public static HashMap<String, User> users = new HashMap<>();
+
+    static {
+        Utils.populateFakeUsers(20, users);
+    }
+
+    public HashMap<String, User> getAllUsers (){
+
+        return users;
+    }
+}
+```
 
 
+
+### Librarians
+
+Like `User request-response cyle read` feature (user-case and user-story) we will code the `Librarian`.
+
+::: {.callout-note}
+The `Librarian cycle request-response` would function similarly to the User cycle request-response, but with different URLs, controller methods, and service methods tailored to the Librarian entity.
+:::
+
+1. The `LibrarianController` would `map` requests to the appropriate URLs, such as `"/librarian/librarians"`.
+
+2. These `requests` would be handled by methods in the `LibrarianController`, which would call methods from the `LibrarianService` to fetch or manipulate data.
+
+::: {.column-margin}
+The `LibrarianService` would contain methods for fetching and manipulating data from the Librarian entity, similar to the UserService for the User entity.
+:::
+
+3. Templates would also be created for rendering views related to the Librarian entity, using `Thymeleaf` or a similar templating engine.
+
+
+
+:::{.column-margin}
 ![render html chrome: /librarian/librarians](/images/springboot/viewController3.png){width="60%"}
-
+:::
 
 ## CRUD: create
 
