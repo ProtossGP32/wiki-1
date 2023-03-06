@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(5) {
+tr:nth-child(1) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -13,17 +13,17 @@ tr:nth-child(5) {
 
 ![Backlog course](/images/home/backlog.jpg){width="30%"}
 
-## ``Sprint#10`` (February-March)
+## ``Sprint#11`` (March)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #10 | 45 | 27/02 | + LibraryManagement: </br> (0) Mock-up  </br> <s>(1) Tree-Folder: packages </s> </br> (2) Book: @Entity, @Repository, @Controller, @Service  </br> (3) Thymelaf </br>  + Spring Boot: request-response Cycle | [Spring Boot H2DB TH](/springboot/boot-what-create-th-h2.qmd) </br>[Spring Boot: cycle](/springboot/boot-what-cycle.qmd) </br> [Lab#SB00-1](/springboot/sblab0-1.qmd) </br></br> Auto-reload compiler:</br>![Auto-reload compiler: Advanced Settings](/images/springboot/compiler.png){width="20%"}  ![Auto-reload compiler: build project automatically](/images/springboot/compiller2.png){width="20%"} </br> |
-|  | 46 | 28/02 | + View-Controller </br> (1) Controller </br> (2) View  </br> (3) Example| [Controller](/springboot/boot-concepts-controller.qmd) - [View](/springboot/boot-concepts-view.qmd) </br> [Auto-reload compiler](/springboot/boot-what-create-th-h2.qmd#auto-reload-compiler) </br> [Tutorial: Using Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html){.external} |
-|  | 47 | 01/03 | + View-Controller </br> (1) @Service and Dependency Injection </br>(2) HashMap fake @Repository </br>(3) <b>request-response scope</b>  </br>  (4) redirect: </br>  (5) messages.properties </br>  (6)  CRUD operations draft and pseudo-code </br><s>LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</s></br> | [controllerView Project](https://github.com/AlbertProfe/CifoJava2023/tree/e17d40231644aca79c90ff9205f3235</s>36495d8d4/controllerView){.external} </br> [render controllerView](/images/springboot/th_controller_view.png) </br> [resources messages.properties](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView/src/main/resources){.external}</br> |
-|  | 48 | 02/03 | + View-Controller  </br> (1) Mock-up user-librarian HTML  </br> (2) Tree-Folder: packages  </br> (3) User: Java Lombok Class and @UserController  </br> (4) User: fake @Repository (HashMap) and @Service  </br> <s>(5) CRUD Operations User and draft Librarian </s></br>  - <s>Spring Timeline <s></br> | [Lab#SB00-2](/springboot/sblab0-2.qmd) </br> [Lab#SB02-Library5 Code](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5){.external} </br>  [Lab#SB02-Library5 Docs](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library5:-ThymeLeaf-Web-Project){.external}  </br> [controllerView](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external} |
-|  | 49 | 03/03 | + Deliveries MF01</br> + Spring Boot: </br> (1) Summary week </br> ++ How to Connect Domains </br> (1) URL+ paths: localhost: 8080/home </br> (2) annotations: @Controller, @RequestMapping, @RequestParam </br> (3) Dependency Injection @Autowired UserService userService </br>  + SCRUM: </br> <s>(1) Motivation/Purpose 2 </s></br> (2) Order and How we see the world </br>  <s>(3) spaceX beyond Scrum </s> | [controllerView](https://github.com/AlbertProfe/CifoJava2023/tree/0a821cc862d142f213b13f65586de09236699ee9/controllerView){.external} </br> [Neuroscience: You Will Never Lack Motivation Again](https://www.newtraderu.com/2023/02/25/neuroscience-you-will-never-lack-motivation-again/?utm_content=cmp-true){.external} |
-: Backlog Sprint#10 February-March 2023 {tbl-colwidths="[2,2,2,60,34]"}
+| #11 | 50 | 06/03 | - controllerView: </br> (1) CRUD: create User </br> (2) CRUD: delete User </br> (3) CRUD: Librarian | - |
+|  | 51 | 07/03 |  - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> - LibraryManagement: </br> (1) refactor variables and packages </br> (2) Project > Management </br> (3) userController > Management | - |
+|  | 52 | 08/03 | - LibraryManagement: </br> (1) Borrow </br> - Git </br> | - |
+|  | 53 | 09/03 | - ThymeLeaf: </br> (1) Fragments | - |
+|  | 54 | 10/03 | - SCRUM: </br> (1) Motivation/Purpose 2 </br> - How we see the world: </br> (1) noise </br>(2) how it works (no-negotation) </br> (3) order </br> (4) time management</br> - Decision-making: </br> (1) execution: Albertu's dylemma</br> - Vocabulary: </br> (1) Spring Boot </br> | [Mind Management (Not Time Management)](https://kadavy.medium.com/mind-management-not-time-management-25ebd3a58dc6){.external} |
+: Backlog Sprint#11 March 2023 {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
 ::: {.callout-note}
