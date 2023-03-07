@@ -226,7 +226,83 @@ The `LibrarianService` would contain methods for fetching and manipulating data 
 
 ![CRUD: create book](/images/springboot/crud-create.png)
 
+1. [The client sends a request to server-controller to get the user form](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/users.html#L27){.external}
 
+```html
+<p>
+    <a th:href="@{/user/emptyForm}">Add new user to HashMap</a>
+</p>
+```
+::: {.column-margin}
+![](/images/springboot/createUser-01.png)
+:::
+2. [The server-controller method handles the request and send a response with the user form](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L36){.external}
+
+```java
+@RequestMapping("/emptyForm")
+public String sendUserForm(){
+
+    return "user/userForm";
+}
+```
+
+
+3. [The clients renders the user form received from server-controller](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/userForm.html){.external}
+
+```html
+<form action="/user/createUser" >
+    <p>
+        <label for="name">Name</label>
+        <input  type="text" name="name"  id="name"></p>
+    <p>
+        <label for="address">address</label>
+        <input  type="text" name="address"  id="address"></p>
+    <p>
+        <label for="age">age</label>
+        <input type="number" name="age"  id="age" ></p>
+    <p>
+
+        <input type="submit" value="Add new user" />
+
+</form>
+```
+
+::: {.column-margin}
+![](/images/springboot/createUser-02.png)
+:::
+
+
+4. [The client sends a request to add this new user to HashMap](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/userForm.html#L24){.external}
+
+
+```html
+<form action="/user/createUser" >
+
+    <input type="submit" value="Add new user" />
+
+</form>
+```
+::: {.column-margin}
+![](/images/springboot/createUser-03.png)
+:::
+
+
+5. [The sever-controller method handles the request, saves the user object in a HashMap and redirects the reponse](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L27){.external}
+
+```java
+@RequestMapping("/createUser")
+public String createUser(User user){
+
+    userService.createUser(user);
+
+    return "redirect:users";
+    //return "user/userCreationResult";
+}
+```
+::: {.column-margin}
+
+![](/images/springboot/createUser-04.png)
+:::
 
 ## CRUD: update
 
