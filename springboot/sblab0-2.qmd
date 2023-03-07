@@ -194,7 +194,13 @@ public class UserService {
 }
 ```
 
+#### Code source 
 
+- [controllerView Project](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external}
+- [Home Controller](https://github.com/AlbertProfe/CifoJava2023/blob/0a821cc862d142f213b13f65586de09236699ee9/controllerView/src/main/java/com/example/myFirstSpring/controller/HomeController.java){.external}
+- [User Controller](https://github.com/AlbertProfe/CifoJava2023/blob/0a821cc862d142f213b13f65586de09236699ee9/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java){.external}
+- [Users html](https://github.com/AlbertProfe/CifoJava2023/blob/0a821cc862d142f213b13f65586de09236699ee9/controllerView/src/main/resources/templates/user/users.html){.external}
+- [Home html](https://github.com/AlbertProfe/CifoJava2023/blob/0a821cc862d142f213b13f65586de09236699ee9/controllerView/src/main/resources/templates/home.html){.external}
 
 ### Librarians
 
@@ -214,7 +220,10 @@ The `LibrarianService` would contain methods for fetching and manipulating data 
 
 3. Templates would also be created for rendering views related to the Librarian entity, using `Thymeleaf` or a similar templating engine.
 
+#### Code source 
 
+- [controllerView Project](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external}
+- [Librarian controller](https://github.com/AlbertProfe/CifoJava2023/blob/master/controllerView/src/main/java/com/example/myFirstSpring/controller/LibrarianController.java){.external}
 
 :::{.column-margin}
 ![render html chrome: /librarian/librarians](/images/springboot/viewController3.png){width="60%"}
