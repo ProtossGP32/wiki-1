@@ -235,7 +235,7 @@ The `LibrarianService` would contain methods for fetching and manipulating data 
 
 ![CRUD: create book](/images/springboot/crud-create.png)
 
-1. [The client sends a request to server-controller to get the user form](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/users.html#L27){.external}
+1. The client sends a request to server-controller to get the user form: [Users template](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/users.html#L27){.external}
 
 ```html
 <p>
@@ -245,18 +245,18 @@ The `LibrarianService` would contain methods for fetching and manipulating data 
 ::: {.column-margin}
 ![](/images/springboot/createUser-01.png)
 :::
-2. [The server-controller method handles the request and send a response with the user form](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L36){.external}
+
+2. The server-controller method handles the request and send a response with the user form: [UserController](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L36){.external}
 
 ```java
 @RequestMapping("/emptyForm")
 public String sendUserForm(){
-
     return "user/userForm";
 }
 ```
 
 
-3. [The clients renders the user form received from server-controller](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/userForm.html){.external}
+3. The clients renders the user form received from server-controller: [userForm](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/userForm.html){.external}
 
 ```html
 <form action="/user/createUser" >
@@ -270,9 +270,7 @@ public String sendUserForm(){
         <label for="age">age</label>
         <input type="number" name="age"  id="age" ></p>
     <p>
-
         <input type="submit" value="Add new user" />
-
 </form>
 ```
 
@@ -281,14 +279,11 @@ public String sendUserForm(){
 :::
 
 
-4. [The client sends a request to add this new user to HashMap](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/userForm.html#L24){.external}
-
+4. The client sends a request to add this new user to HashMap: [userForm](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/userForm.html#L24){.external} 
 
 ```html
 <form action="/user/createUser" >
-
     <input type="submit" value="Add new user" />
-
 </form>
 ```
 ::: {.column-margin}
@@ -296,14 +291,12 @@ public String sendUserForm(){
 :::
 
 
-5. [The sever-controller method handles the request, saves the user object in a HashMap and redirects the reponse](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L27){.external}
+5. The sever-controller method handles the request, saves the user object in a HashMap and redirects the reponse: [UserController](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L27){.external}
 
 ```java
 @RequestMapping("/createUser")
 public String createUser(User user){
-
     userService.createUser(user);
-
     return "redirect:users";
     //return "user/userCreationResult";
 }
