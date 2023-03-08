@@ -14,7 +14,8 @@ categories: [ifcd0210, training]
 
 [![IFCD0210 fitxa](/images/ifcd0210/ifcd0210_ftixa.png)](/ifcd0210/IFCD0210_ficha.pdf){#ifcd0210-fitxa}
 
-[IFCD0210 fitxa .pdf](/ifcd0210/IFCD0210_ficha.pdf)
+- [IFCD0210 fitxa-es .pdf](/ifcd0210/IFCD0210_ficha.pdf)
+- [IFCD0210 fitxa-cat .pdf](/ifcd0210/IFCD0210-cat.pdf)
 
 ## Relació d'unitats de competència que configuren el certificat de professionalitat
 - UC0491_3: Desenvolupar elements de programari en l'entorn client.
