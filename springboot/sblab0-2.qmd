@@ -238,9 +238,39 @@ The `LibrarianService` would contain methods for fetching and manipulating data 
 
 ![CRUD: create book](/images/springboot/crud-create.png)
 
+- [The Form element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form){.external}
+
+::: {.callout-note}
+## HTML Form: name/id
+
+In ``HTML`` forms, the ``name`` and ``id`` **attributes** serve different purposes for form elements:
+
+- ``name`` **attribute**: This attribute defines the ``name`` of the input element, which is used to identify the **form data in the request that is sent to the server** when the form is **submitted**. The name attribute is required for all form controls and must be unique within the form.
+
+- ``id`` **attribute**: This attribute is used to **uniquely identify an HTML element**. It can be used to **target** the element with ``CSS`` or ``JavaScript``, and can also be used to associate a label with an input element using the for attribute.
+:::
+
+::: {.callout-note}
+## HTML Form: action
+The ``action`` attribute is used to **specify the URL of the server-side script or class/method that will process the form data when the form is submitted**.
+
+This attribute is required for all forms and **specifies the location where the form data will be sent.**
+
+The method attribute is also used to specify the ``HTTP`` method that will be used to submit the form data, such as ``GET`` or ``POST``.
+
+:::
+
+::: {.callout-note}
+## HTML Form: for
+
+The ``for`` attribute is used **to associate a label with an input element.**
+
+The ``for`` attribute specifies which input element **the label belongs to by referring to the ``id`` attribute** of the input element.
+
+:::
 ### Create user
 
-1. The client sends a ``request`` to server-controller to get the create-user form: [Users template](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/users.html#L27){.external}
+1. The client sends a ``request`` to server-controller by an ``endpoint`` to get the create-user form: [Users template](https://github.com/AlbertProfe/CifoJava2023/blob/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView/src/main/resources/templates/user/users.html#L27){.external}
 
 ```html
 <p>
@@ -319,7 +349,7 @@ public String createUser(User user){
 
 ### Update user
 
-1. The client sends a ``request`` to server-controller to get the update-user form: [Update user template](){.external}
+1. The client sends a ``request`` to server-controller by an ``endpoint`` to get the update-user form: [Update user template](){.external}
 
 ```html
 <td>
@@ -401,7 +431,6 @@ public String replaceBook(@PathVariable("idFromView") Long id, Book book){
         return "redirect:/library/books";
     } else  return "notfound.html";
 }
-
 ```
 ::: {.column-margin}
 
@@ -411,6 +440,11 @@ public String replaceBook(@PathVariable("idFromView") Long id, Book book){
 
 ## CRUD: delete
 
+1. The client sends a ``request`` to server-controller by an ``endpoint`` to delete a user: [Users template](){.external}
+
+2. The server-controller method handles the ``request`` and sends a response with the result. It could be success (user deleted) or fail (the deletion operation could not be done): [UserController](){.external}
+
+3. The server-controller method after handled the request sends the response: redirects the reponse to users: [Users template](){.external}
 
 
 <!--- navLinks -->
