@@ -353,26 +353,30 @@ public String createUser(User user){
 
 ```html
 <td>
-     <a th:href = "@{packedForm(userIdFromView=${user.userId})}"
-     >Update this book</a>
+     <a th:href="@{packedUserForm(idFromView=${user.value.userId})}">
+     >Update</a>
 </td>
 ```
 ::: {.column-margin}
-![](/images/springboot/createUser-01.png)
+![](/images/springboot/updateCrud-1.png)
 :::
 
 2. The server-controller method handles the ``request`` and sends a response with the update-user form: [UserController](){.external}
 
 ```java
-@RequestMapping("/packedForm")
-public String packedForm(@RequestParam("userIdFromView") String id, 
-                        Model model) {
-    //examples of addAtrribute
-     = bookService.findUserById(id);
-    if () {
-        model.addAttribute("userFromController", user);
-        return "updateUser.html";
-    } else return "userNotfound.html";
+@RequestMapping("/packedUserForm")
+public String packedUserForm(@RequestParam("idFromView") String id ,
+                                Model model){
+
+    User userFound = userService.findUserById(id);
+
+    if (userFound != null){
+        model.addAttribute("userFromController", userFound);
+        model.addAttribute("message", "User  found");}
+    else
+        model.addAttribute("message", "User not found");
+
+    return "user/userToUpdateForm";
 }
 ```
 
@@ -380,11 +384,13 @@ public String packedForm(@RequestParam("userIdFromView") String id,
 3. The client renders the update-user form received from server-controller: [userForm](){.external}
 
 ```html
-<form   action="#"
-        th:action="@{updateBook/{userIdFromView}
-        (userIdFromView=${userFromController.userId})}"
-        th:object="${userFromController}"
-        method="post">
+<form th:action=
+        "@{updateUser/{idFromView}
+        (idFromView=${userFromController.idUser})}"
+      th:object=
+        "${userFromController}"
+      method=
+        "post">
     <p>
         <label for="userId">User Id</label>
         <input  type="number" name="userId" id="userId" 
@@ -409,43 +415,46 @@ public String packedForm(@RequestParam("userIdFromView") String id,
 ```
 
 ::: {.column-margin}
-![](/images/springboot/createUser-02.png)
+![](/images/springboot/updateCrud-2.png)
 :::
 
 
 4. The client sends a request to update this ``user`` to ``HashMap``: [userForm](){.external} 
 
 ```html
-<form   action="#"
-        th:action="@{updateUser/{userIdFromView}
-        (userIdFromView=${userFromController.userId})}"
-        th:object="${userFromController}"
-        method="post">
-
+<form th:action=
+        "@{updateUser/{idFromView}
+        (idFromView=${userFromController.idUser})}"
+      th:object=
+        "${userFromController}"
+      method=
+        "post">
 </form>
 ```
 ::: {.column-margin}
-![](/images/springboot/createUser-03.png)
+![From age 50 to 51](/images/springboot/updateCrud-3.png)
 :::
 
 
 5. The sever-controller method handles the request, updates the ``user`` object in a ``HashMap`` and redirects the reponse: [UserController](){.external}
 
 ```java
-@PostMapping("/updateUser/{userIdFromView}")
-public String updateUser(@PathVariable("userIdFromView") String id, 
-                        User user){
-    
-     = bookService.findUserById(id);
-    if () {
-        bookService.updateUser(user);
-        return "redirect:/user/users";
-    } else  return "userNotfound.html";
+@PostMapping("/updateUser/{idFromView}")
+public String updateUser(@PathVariable("idFromView") String id, User user) {
+
+    User userFound = userService.findUserById(id);
+
+    if (userFound != null) {
+        userService.updateUserById(userFound);
+        return "redirect:user/users";
+    } else return "user/userNotFound";
+
+
 }
 ```
 ::: {.column-margin}
 
-![](/images/springboot/createUser-04.png)
+![](/images/springboot/updateCrud-4.png)
 :::
 
 
