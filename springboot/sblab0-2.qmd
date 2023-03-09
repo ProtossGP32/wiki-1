@@ -448,8 +448,6 @@ public String updateUser(@PathVariable("idFromView") String id, User user) {
         userService.updateUserById(userFound);
         return "redirect:user/users";
     } else return "user/userNotFound";
-
-
 }
 ```
 ::: {.column-margin}
