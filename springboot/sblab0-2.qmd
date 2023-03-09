@@ -353,8 +353,8 @@ public String createUser(User user){
 
 ```html
 <td>
-     <a th:href ="@{updateBook(bookIdFromView=${book.bookId})}"
-                    class="w3-button w3-cyan">Update this book</a>
+     <a th:href = "@{packedForm(userIdFromView=${user.userId})}"
+     >Update this book</a>
 </td>
 ```
 ::: {.column-margin}
@@ -364,14 +364,15 @@ public String createUser(User user){
 2. The server-controller method handles the ``request`` and sends a response with the update-user form: [UserController](){.external}
 
 ```java
-@RequestMapping("/updateBook")
-public String updateBook(@RequestParam("bookIdFromView") Long id, Model model) {
+@RequestMapping("/packedForm")
+public String packedForm(@RequestParam("userIdFromView") String id, 
+                        Model model) {
     //examples of addAtrribute
-    Optional<Book> bookFound = bookService.findBookById(id);
-    if (bookFound.isPresent()) {
-        model.addAttribute("bookfromController", bookFound.get());
-        return "updateBook.html";
-    } else return "notfound.html";
+     = bookService.findUserById(id);
+    if () {
+        model.addAttribute("userFromController", user);
+        return "updateUser.html";
+    } else return "userNotfound.html";
 }
 ```
 
@@ -379,23 +380,28 @@ public String updateBook(@RequestParam("bookIdFromView") Long id, Model model) {
 3. The client renders the update-user form received from server-controller: [userForm](){.external}
 
 ```html
-<form action="#"
-        th:action="@{replaceBook/{idFromView}(idFromView=${bookfromController.bookId})}"
-        th:object="${bookfromController}" method="post">
+<form   action="#"
+        th:action="@{updateBook/{userIdFromView}
+        (userIdFromView=${userFromController.userId})}"
+        th:object="${userFromController}"
+        method="post">
     <p>
-        <label for="bookId">Book Id</label>
-        <input  type="number" name="bookId" id="bookId" 
-        th:field="*{bookId}" readonly></p>
+        <label for="userId">User Id</label>
+        <input  type="number" name="userId" id="userId" 
+                th:field="*{userId}" readonly></p>
     <p>
     <p>
-        <label for="title">Title</label>
-        <input  type="text" name="title" id="title"  th:field="*{title}"></p>
+        <label for="name">Name</label>
+        <input  type="text" name="name" id="name"
+                th:field="*{name}"></p>
     <p>
-        <label for="isbn">ISBN</label>
-        <input  type="text" name="isbn" id="isbn"  th:field="*{isbn}"></p>
+        <label for="address">Address</label>
+        <input  type="text" name="address" id="address"
+                th:field="*{address}"></p>
     <p>
-        <label for="pages">Pages</label>
-        <input type="number" name="pages" id="pages" th:field="*{pages}" ></p>
+        <label for="Age">Age</label>
+        <input type="number" name="age" id="age"
+                th:field="*{age}" ></p>
     
         <input type="submit" value="Update user"/>
     </div>
@@ -410,9 +416,13 @@ public String updateBook(@RequestParam("bookIdFromView") Long id, Model model) {
 4. The client sends a request to update this ``user`` to ``HashMap``: [userForm](){.external} 
 
 ```html
-<form action="#"
-      th:action="@{replaceBook/{idFromView}(idFromView=${bookfromController.bookId})}"
-      th:object="${bookfromController}" method="post">
+<form   action="#"
+        th:action="@{updateUser/{userIdFromView}
+        (userIdFromView=${userFromController.userId})}"
+        th:object="${userFromController}"
+        method="post">
+
+</form>
 ```
 ::: {.column-margin}
 ![](/images/springboot/createUser-03.png)
@@ -422,14 +432,15 @@ public String updateBook(@RequestParam("bookIdFromView") Long id, Model model) {
 5. The sever-controller method handles the request, updates the ``user`` object in a ``HashMap`` and redirects the reponse: [UserController](){.external}
 
 ```java
-@PostMapping("/replaceBook/{idFromView}")
-public String replaceBook(@PathVariable("idFromView") Long id, Book book){
+@PostMapping("/updateUser/{userIdFromView}")
+public String updateUser(@PathVariable("userIdFromView") String id, 
+                        User user){
     
-    Optional<Book> bookFound = bookService.findBookById(id);
-    if (bookFound.isPresent()) {
-        bookService.createBook(book);
-        return "redirect:/library/books";
-    } else  return "notfound.html";
+     = bookService.findUserById(id);
+    if () {
+        bookService.updateUser(user);
+        return "redirect:/user/users";
+    } else  return "userNotfound.html";
 }
 ```
 ::: {.column-margin}

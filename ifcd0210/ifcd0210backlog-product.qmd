@@ -101,7 +101,7 @@ categories: [ifcd0210, backlog]
 |  | 53 | 09/03 | - | - |
 |  | 54 | 10/03 | - | - |
 | #12 | 55 | 13/03 | - ThymeLeaf: </br> (1) Fragments </br> | - |
-|  | 56 | 14/03 | - | - |
+|  | 56 | 14/03 | - LibraryManagement: </br> (1) Borrow </br> - Git </br>  - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> - LibraryManagement: </br> (1) refactor variables and packages </br> (2) Project > Management </br> (3) userController > Management | - |
 |  | 57 | 15/03 | - | - |
 |  | 58 | 16/03 | - | - |
 |  | 59 | 17/03 | - | - |

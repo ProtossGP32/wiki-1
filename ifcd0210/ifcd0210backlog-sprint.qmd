@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(3) {
+tr:nth-child(4) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -20,8 +20,8 @@ tr:nth-child(3) {
 | -- | -- | -- | -- | -- |
 | #11 | 50 | 06/03 | - controllerView: </br> (1) CRUD: create User </br> <s>(2) CRUD: delete User </s></br> (3) CRUD: Librarian </br> ++ Renfe use-case RedSys error </br> ++ Time Mangement is Mind Management | [PJG-1](https://ruc.udc.es/dspace/bitstream/handle/2183/25132/C.Busto_Sistema_de_compra_y_consumo_de_t%C3%ADckets_2019.pdf){.external} - [PJG-2](https://oa.upm.es/54274/1/TFG_CARLOS_JIMENEZ_ALIAGA.pdf){.external} - [PJG-3](https://uvadoc.uva.es/bitstream/handle/10324/45258/TFG-B.%201564.pdf?sequence=4&isAllowed=y){.external} - [PJG-4](https://m.riunet.upv.es/bitstream/handle/10251/150920/Vacas%20-%20TeacherQuiz%3A%20una%20herramienta%20de%20apoyo%20para%20dinamizar%20la%20ense%C3%B1anza.%20Evaluaci%C3%B3n%20y%20desarroll....pdf?sequence=1&isAllowed=y){.external} </br> [Screenshoot origin](https://twitter.com/juanmacias/status/1631704758577659943){.external} </br>  [Renfe error log](/images/springboot/renfe.jpg){width="60%"} </br></br> [Time management](/books/MindManagementNotTimeManagement.qmd#key-takeaways) </br> [LibraryManagement](){.external}| 
 |  | 51 | 07/03 | + controllerView: </br> (1) CRUD: create User</br>  | [CRUD: create](/springboot/sblab0-2.qmd#crud-create) </br> [userController: create](https://github.com/AlbertProfe/CifoJava2023/tree/dea67f25d24bcc89a6141762d5ed17085660349b/controllerView){.external}|
-|  | 52 | 08/03 | - controllerView: </br> (1) CRUD: update User </br> (2) CRUD: delete User</br>  |  [CRUD: update](/springboot/sblab0-2.qmd#crud-update) </br> [userController: create](){.external} </br> [CRUD: delete](/springboot/sblab0-2.qmd#crud-delete) </br> [userController: delete](){.external} </br> |
-|  | 53 | 09/03 | - LibraryManagement: </br> (1) Borrow </br> - Git </br>  - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> - LibraryManagement: </br> (1) refactor variables and packages </br> (2) Project > Management </br> (3) userController > Management | - |
+|  | 52 | 08/03 | - controllerView: </br> (1) CRUD: update User draft </br> (2) CRUD: delete User draft</br>  |  |
+|  | 53 | 09/03 | - controllerView: </br> (1) CRUD: update User </br> (2) CRUD: delete User</br> | [CRUD: update](/springboot/sblab0-2.qmd#crud-update) </br> [userController: create](){.external} </br> [CRUD: delete](/springboot/sblab0-2.qmd#crud-delete) </br> [userController: delete](){.external} </br>  |
 |  | 54 | 10/03 | - SCRUM: </br> (1) Motivation/Purpose 2 </br> - How we see the world: </br> (1) noise </br>(2) how it works (no-negotation) </br> (3) order </br> (4) time management</br> - Decision-making: </br> (1) execution: Albertu's dylemma</br> - Vocabulary: </br> (1) Spring Boot </br> | [Mind Management (Not Time Management)](https://kadavy.medium.com/mind-management-not-time-management-25ebd3a58dc6){.external} |
 : Backlog Sprint#11 March 2023 {tbl-colwidths="[2,2,2,60,34]"}
 :::
