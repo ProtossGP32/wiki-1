@@ -349,11 +349,12 @@ public String createUser(User user){
 
 ### Update user
 
-1. The client sends a ``request`` to server-controller by an ``endpoint`` to get the update-user form: [Update user template](){.external}
+1. The client sends a ``request`` to server-controller by an ``endpoint`` to get the update-user form: [Update user template](https://github.com/AlbertProfe/CifoJava2023/blob/e4c046a70dba18dc3fcc9515cac269dec7523374/controllerView/src/main/resources/templates/user/users.html#L19){.external}
 
 ```html
 <td>
-     <a th:href="@{packedUserForm(idFromView=${user.value.userId})}">
+     <a th:href=
+     "@{packedUserForm(idFromView=${user.value.userId})}"
      >Update</a>
 </td>
 ```
@@ -361,7 +362,7 @@ public String createUser(User user){
 ![](/images/springboot/updateCrud-1.png)
 :::
 
-2. The server-controller method handles the ``request`` and sends a response with the update-user form: [UserController](){.external}
+2. The server-controller method handles the ``request`` and sends a response with the update-user form: [UserController](https://github.com/AlbertProfe/CifoJava2023/blob/e4c046a70dba18dc3fcc9515cac269dec7523374/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L42){.external}
 
 ```java
 @RequestMapping("/packedUserForm")
@@ -381,7 +382,7 @@ public String packedUserForm(@RequestParam("idFromView") String id ,
 ```
 
 
-3. The client renders the update-user form received from server-controller: [userForm](){.external}
+3. The client renders the update-user form received from server-controller: [userForm](https://github.com/AlbertProfe/CifoJava2023/blob/e4c046a70dba18dc3fcc9515cac269dec7523374/controllerView/src/main/resources/templates/user/userToUpdateForm.html){.external}
 
 ```html
 <form th:action=
@@ -419,7 +420,7 @@ public String packedUserForm(@RequestParam("idFromView") String id ,
 :::
 
 
-4. The client sends a request to update this ``user`` to ``HashMap``: [userForm](){.external} 
+4. The client sends a request to update this ``user`` to ``HashMap``: [userForm](https://github.com/AlbertProfe/CifoJava2023/blob/e4c046a70dba18dc3fcc9515cac269dec7523374/controllerView/src/main/resources/templates/user/userToUpdateForm.html#L13){.external} 
 
 ```html
 <form th:action=
@@ -436,17 +437,18 @@ public String packedUserForm(@RequestParam("idFromView") String id ,
 :::
 
 
-5. The sever-controller method handles the request, updates the ``user`` object in a ``HashMap`` and redirects the reponse: [UserController](){.external}
+5. The sever-controller method handles the request, updates the ``user`` object in a ``HashMap`` and redirects the reponse: [UserController](https://github.com/AlbertProfe/CifoJava2023/blob/e4c046a70dba18dc3fcc9515cac269dec7523374/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L57){.external} and [UserService](hhttps://github.com/AlbertProfe/CifoJava2023/blob/e4c046a70dba18dc3fcc9515cac269dec7523374/controllerView/src/main/java/com/example/myFirstSpring/service/UserService.java#L41){.external}
 
 ```java
 @PostMapping("/updateUser/{idFromView}")
-public String updateUser(@PathVariable("idFromView") String id, User user) {
+public String updateUser(@PathVariable("idFromView") String id,
+                            User updatedUser) {
 
     User userFound = userService.findUserById(id);
 
     if (userFound != null) {
-        userService.updateUserById(userFound);
-        return "redirect:user/users";
+        userService.updateUserByUser(updatedUser);
+        return "redirect:/user/users";
     } else return "user/userNotFound";
 }
 ```
@@ -458,11 +460,38 @@ public String updateUser(@PathVariable("idFromView") String id, User user) {
 
 ## CRUD: delete
 
-1. The client sends a ``request`` to server-controller by an ``endpoint`` to delete a user: [Users template](){.external}
+::: {.column-margin}
 
-2. The server-controller method handles the ``request`` and sends a response with the result. It could be success (user deleted) or fail (the deletion operation could not be done): [UserController](){.external}
+![](/images/springboot/crudDelete-1.png)
+:::
 
-3. The server-controller method after handled the request sends the response: redirects the reponse to users: [Users template](){.external}
+1. The client sends a ``request`` to server-controller by an ``endpoint`` to delete a user: [Users template](https://github.com/AlbertProfe/CifoJava2023/blob/6cb9830203dd3376e98bd0c1b0483dc2a5f16751/controllerView/src/main/resources/templates/user/users.html#L19){.external}
+
+2. The server-controller method handles the ``request`` and sends a response with the result. It could be success (user deleted) or fail (the deletion operation could not be done): [UserController](https://github.com/AlbertProfe/CifoJava2023/blob/6cb9830203dd3376e98bd0c1b0483dc2a5f16751/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L72){.external}
+
+
+::: {.column-margin}
+
+![](/images/springboot/deleteUser-2.png)
+:::
+
+```java
+@RequestMapping("/deleteUser")
+    public String deleteUser(@RequestParam("idFromView") String id) {
+
+        User userFound = userService.findUserById(id);
+
+        if (userFound != null) {
+            userService.deleteUserById(id);
+            return "redirect:/user/users";
+        } else return "user/userNotFound";
+
+
+    }
+```
+
+3. The server-controller method after handled the request sends the response: redirects the reponse to users: [UserController redirect](https://github.com/AlbertProfe/CifoJava2023/blob/6cb9830203dd3376e98bd0c1b0483dc2a5f16751/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L79){.external}
+
 
 
 <!--- navLinks -->
