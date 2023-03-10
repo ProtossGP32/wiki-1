@@ -460,34 +460,46 @@ public String updateUser(@PathVariable("idFromView") String id,
 
 ## CRUD: delete
 
-::: {.column-margin}
 
-![](/images/springboot/crudDelete-1.png)
-:::
 
 1. The client sends a ``request`` to server-controller by an ``endpoint`` to delete a user: [Users template](https://github.com/AlbertProfe/CifoJava2023/blob/6cb9830203dd3376e98bd0c1b0483dc2a5f16751/controllerView/src/main/resources/templates/user/users.html#L19){.external}
+
+::: {.column-margin}
+
+![We are going to delete one user: Antoine](/images/springboot/crudDelete-1.png)
+:::
 
 2. The server-controller method handles the ``request`` and sends a response with the result. It could be success (user deleted) or fail (the deletion operation could not be done): [UserController](https://github.com/AlbertProfe/CifoJava2023/blob/6cb9830203dd3376e98bd0c1b0483dc2a5f16751/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L72){.external}
 
 
-::: {.column-margin}
-
-![](/images/springboot/deleteUser-2.png)
-:::
 
 ```java
 @RequestMapping("/deleteUser")
-    public String deleteUser(@RequestParam("idFromView") String id) {
+public String deleteUser(@RequestParam("idFromView") String id) {
 
-        User userFound = userService.findUserById(id);
+    User userFound = userService.findUserById(id);
 
-        if (userFound != null) {
-            userService.deleteUserById(id);
-            return "redirect:/user/users";
-        } else return "user/userNotFound";
+    if (userFound != null) {
+        userService.deleteUserById(id);
+        return "redirect:/user/users";
+    } else return "user/userNotFound";
 
 
-    }
+}
+```
+
+::: {.column-margin}
+
+![User Antoine deleted](/images/springboot/deleteUser-2.png)
+:::
+
+The `@Controller` uses **userService** to call `@Service`: `deleteUserById`:
+
+```java
+public void deleteUserById(String id) {
+    users.remove(id);
+}
+
 ```
 
 3. The server-controller method after handled the request sends the response: redirects the reponse to users: [UserController redirect](https://github.com/AlbertProfe/CifoJava2023/blob/6cb9830203dd3376e98bd0c1b0483dc2a5f16751/controllerView/src/main/java/com/example/myFirstSpring/controller/UserController.java#L79){.external}
