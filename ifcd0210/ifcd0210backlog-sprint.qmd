@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(5) {
+tr:nth-child(1) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -18,11 +18,11 @@ tr:nth-child(5) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #12 | 55 | 13/03 | - ThymeLeaf: </br> (1) Fragments </br> | - |
-|  | 56 | 14/03 | - LibraryManagement: </br> (1) Borrow </br> - Git </br>  - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> - LibraryManagement: </br> (1) refactor variables and packages </br> (2) Project > Management </br> (3) userController > Management | [CRUD: delete](/springboot/sblab0-2.qmd#crud-delete) </br> [userController: delete](){.external} </br> |
-|  | 57 | 15/03 | - | - |
-|  | 58 | 16/03 | - | - |
-|  | 59 | 17/03 | - | - The three `great untruths 2023`: </br> (1) What doesn’t kill you makes you weaker </br> (2) Always trust your feelings </br> (3) Life is a battle between good people and evil people |
+| #12 | 55 | 13/03 | - LibraryManagement: </br> (1) refactor variables and packages </br> (2) Project > Management </br> (3) userController > Management </br>(4) Library5 > Management| [CRUD: delete](/springboot/sblab0-2.qmd#crud-delete) </br> [userController: delete](https://github.com/AlbertProfe/CifoJava2023/tree/6cb9830203dd3376e98bd0c1b0483dc2a5f16751/controllerView){.external} </br>  [userController: detail & createFakeUsers](https://github.com/AlbertProfe/CifoJava2023/tree/dfe9468a358c033851a5d5f06887008d33098616/controllerView){.external} </br></br>  |
+|  | 56 | 14/03 | - LibraryManagement: </br> (1) Borrow </br>  - LibraryProject: </br>  (1) finish core use-cases </br> (2) finish main UML</br> | - |
+|  | 57 | 15/03 | - Git </br> -  Spring Session</br> | [HttpSession with JDBC](https://docs.spring.io/spring-session/reference/samples.html){.external} |
+|  | 58 | 16/03 | - Spring Boot Rest </br> - ThymeLeaf: </br> (1) Fragments </br> | - |
+|  | 59 | 17/03 | - SCRUM: </br>  (0) Less Wrong </br>(1) Time management </br>  (2) Getting things done </br> - The three `great untruths 2023`: </br> (1) What doesn’t kill you makes you weaker </br> (2) Always trust your feelings <b>(motivation?)</b> </br> (3) Life is a battle between good people and evil people |  [Happy SCRUM groups are all alike..](/images/home/happy-scrum-groups-are-all-alike-every-unhappy-scrum-group.jpg) </br> [Why the Mental Health of Liberal Girls Sank First and Fastest](https://jonathanhaidt.substack.com/p/mental-health-liberal-girls){.external}</br></br> [Frakfurt School](https://study.com/academy/lesson/frankfurt-school-critical-theory-philosophy.html){.external} </br> [End of history](https://theconversation.com/the-end-of-history-francis-fukuyamas-controversial-idea-explained-193225){.external}|
 : Backlog Sprint#12 March 2023 {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
