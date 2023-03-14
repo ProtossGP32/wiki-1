@@ -1,0 +1,63 @@
+---
+title: "Lab#SB00-3: LibraryManagement"
+subtitle: Spring Boot Library Management Borrow
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: Spring Boot
+categories: [Spring-Boot, lab]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.labs}
+📘 **Spring Boot Lab#SB00-3: Borrow Domain**
+
+After [Lab#SB00-1](/springboot/sblab0-1.qmd) and [Lab#SB00-2](/springboot/sblab0-2.qmd) it is time to integrate and refactor the code created at projects:
+
+- **Libray5**: `Book` domain
+- **controllerView**: `User` and `Librarian` domain
+- **LibraryProject**: from `Java SE` project we have the `business logic` of borrowing a book
+
+:::
+
+</br>
+
+## Folder-tree
+
+![General View Library Management](/images/springboot/LibraryManagement-1.png)
+
+![Java Classes Library Management](/images/springboot/LibraryManagement-2.png)
+
+![Templates Library Management](/images/springboot/LibraryManagement-3.png)
+
+## MockUp
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Spring Boot: Data](/springboot/boot-concepts-data.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Lab 2: Spring Boot Projects  {{< fa solid arrow-right >}}](/springboot/sblab2.qmd)
+<br>
+</div>
+<br>
+</div>

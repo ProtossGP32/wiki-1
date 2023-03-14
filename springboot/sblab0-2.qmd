@@ -1,6 +1,6 @@
 ---
 title: "Lab#SB00-2: CRUD User"
-subtitle: Spring Boot Library Management CRUD User (and Librarian)
+subtitle: Spring Boot controllerView CRUD User (and Librarian)
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
