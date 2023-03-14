@@ -166,7 +166,10 @@ public String getUserById(@PathVariable("id") Long id, Model model) {
 ```
 
 ::: {.column-margin}
-In these examples, the @GetMapping and @PostMapping annotations are used to map HTTP GET and POST requests to specific methods. The @PathVariable annotation is used to extract a variable from the URL path, and the @RequestBody annotation is used to map the request body to a Java object.
+In these examples, the ``@GetMapping`` and ``@PostMapping`` annotations are used to map HTTP ``GET`` and ``POST`` requests to specific methods.
+:::
+::: {.column-margin}
+The ``@PathVariable`` annotation is used **to extract a variable from the URL path**, and the ``@RequestBody`` annotation is used to map the request body to a Java object.
 :::
 
 An alternative implementation where the `User` object **is created directly in the `@Controller`**:
@@ -272,10 +275,15 @@ you can use `@PathVariable` to extract the id **parameter value** `123` from the
 
 In general, use `@RequestParam` when you need to extract data from the query string or request body, and use `@PathVariable` when you need to extract data from the URL path.
 
+- [Spring MVC](https://www.digitalocean.com/community/tutorials/spring-requestmapping-requestparam-pathvariable-example#spring-requestmapping){.external}  RequestMapping Annotation Example with Controller, Methods, Headers, Params, @RequestParam, @PathVariable.
+- [Annotation Interface RequestMapping](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestMapping.html){.external}
 
+## URL structure
 
+![URL Structure Protocol Credential Host Path Username ( Optional ) Password ( Optional ) Hostname Port ( Optional ) Pathname Query Strings ( Optional ) Subdomain ( s ) ( Optional ) Domain Top Level Domain](/images/springboot/URL-structure.png)
 
-
+- [Keep a simple URL structure](https://developers.google.com/search/docs/crawling-indexing/url-structure){.external}
+- [What is a URL](https://www.hostinger.com/tutorials/what-is-a-url){.external}
 
 <!--- navLinks -->
 <br><br>

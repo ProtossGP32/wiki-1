@@ -18,13 +18,17 @@ format:
 
 After [Lab#SB00-1](/springboot/sblab0-1.qmd) and [Lab#SB00-2](/springboot/sblab0-2.qmd) it is time to integrate and refactor the code created at projects:
 
-- **Libray5**: `Book` domain
-- **controllerView**: `User` and `Librarian` domain
-- **LibraryProject**: from `Java SE` project we have the `business logic` of borrowing a book
+- **Libray5**: `Book` domain (all CRUD operations)
+- **controllerView**: `User` and `Librarian` domain (all CRUD operations)
+- **LibraryProject**: from `Java SE` project we have the `business logic` of borrowing a book and the ``Borrow`` clas
 
 :::
 
 </br>
+
+- [Library Management](https://github.com/AlbertProfe/CifoJava2023/tree/5eeeaa816c4de2ad7b5c9e732d50de630bb4bbfb/LibraryManagement){.external} just initial integration with book-selection.
+
+
 
 ## Folder-tree
 
@@ -34,9 +38,14 @@ After [Lab#SB00-1](/springboot/sblab0-1.qmd) and [Lab#SB00-2](/springboot/sblab0
 
 ![Templates Library Management](/images/springboot/LibraryManagement-3.png)
 
-## MockUp
+## use-story & use-case
 
+As a ``super-admin`` -no defined yet-, we are able to access user's borrow domain from ``use/users`` web domain and perform such a operations:
 
+- create a new ``borrow``
+- ``borrows`` table
+- renovation ``borrow``
+- return books, close a ``borrow``
 
 <!--- navLinks -->
 <br><br>
