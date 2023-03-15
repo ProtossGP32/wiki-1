@@ -1,5 +1,5 @@
 ---
-title: "About Writing Comments"
+title: "Comments"
 subtitle: About how to write comments properly
 date: "06/01/2021"
 date-modified: last-modified

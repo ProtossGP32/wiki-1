@@ -1,10 +1,10 @@
 ---
-title: "About Auto-Evaluate"
-subtitle: About how to auto-evaluate
+title: "Taking Notes"
+subtitle: About how to take notes properly
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: About how to auto-evaluate
+description: About how to take notes properly
 categories: [about, writing]
 toc: true
 number-sections: true
@@ -12,7 +12,7 @@ format:
   html
 ---
 
-
+- [Cornell way](https://medium.goodnotes.com/study-with-ease-the-best-way-to-take-notes-2749a3e8297b){.external}
 
 
 

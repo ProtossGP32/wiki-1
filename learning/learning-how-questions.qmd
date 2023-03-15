@@ -1,5 +1,5 @@
 ---
-title: "About the Useful Questions"
+title: "Useful Questions"
 subtitle: About fundamental questions
 date: "06/01/2021"
 date-modified: last-modified

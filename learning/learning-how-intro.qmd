@@ -1,5 +1,5 @@
 ---
-title: "About learning"
+title: "Learning: tips"
 subtitle: Basics on how to learn
 date: "06/01/2021"
 date-modified: last-modified

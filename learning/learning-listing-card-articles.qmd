@@ -1,8 +1,8 @@
 ---
-title: "Articles Table-Listing"
-categories: [listing, table]
+title: "Articles cards"
+categories: [listing, card]
 listing:
-    id: articles-table-listing
+    id: articles-card-listing
     contents:
         - "../*.qmd"
         - "../javase/*.qmd"
@@ -19,21 +19,20 @@ listing:
     sort:
         - "file-modified desc"
         - "categories"
-    type: table
+    type: default
+    sort-ui: [title, categories]
+    filter-ui: [title]
     image-align: left
     image-placeholder: "/images/home/frontimagealbertprofeweb.png"
-    fields: [image, categories, title, reading-time, file-modified]
-    table-hover: true
+    fields: [image, categories, title, description, reading-time, date, author, file-modified]
     date-format: full
-    categories: cloud
-    image-height: 30px   
+    categories: cloud  
 ---
 
-You can look up the following table listing for additional information:
+You can look up the following card listing for additional information:
 
-::: {#articles-table-listing}
+::: {#articles-card-listing}
 :::
-
 
 <!--- navLinks -->
 <br><br>
@@ -41,19 +40,13 @@ You can look up the following table listing for additional information:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Books Card-Listing](/about/about-listing-books.qmd)
+[{{< fa solid arrow-left >}} Articles Table-Listing](/about/about-listing-table.qmd)
 <br>
 </div>
 <br>
 <div class='column center'>
 <br>
 [{{< fa solid arrow-up >}} top](#top)
-<br>
-</div>
-<br>
-<div class='column right next'>
-<br>
-[Articles Card-Listing  {{< fa solid arrow-right >}}](/about/about-listing-card.qmd)
 <br>
 </div>
 <br>

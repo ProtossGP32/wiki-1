@@ -1,5 +1,5 @@
 ---
-title: "Books Card-Listing"
+title: "Books cards"
 subtitle: Recommended book list
 date: "06/01/2021"
 date-modified: last-modified

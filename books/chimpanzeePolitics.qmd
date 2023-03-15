@@ -6,8 +6,8 @@ date: 1/20/2023
 date-modified: last-modified
 date-format: full
 description: "An groundbreaking book on primate behavior and social dynamics. Frans de Waal provides a deep insight into the complex relationships between chimpanzees and how they influence their political power structures."
-categories: [psychology]
-subcategories: [agile, behavioral science, zoology]
+categories: [assay]
+subcategories: [assay, gile, behavioral science, zoology]
 format:
     html
 ---

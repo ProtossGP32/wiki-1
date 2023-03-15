@@ -56,7 +56,7 @@ website:
       - sidebar:spring   
       - sidebar:reactjs
       - sidebar:scrum
-      - sidebar:vocabulary
+      - sidebar:learning
       - sidebar:ifcd
       - sidebar:about
 
@@ -334,7 +334,7 @@ website:
             - reactjs/reactjs-es6-data.qmd
             - reactjs/reactjs-es6-destructuring.qmd
             - reactjs/reactjs-es6-spread.qmd
-        - text: "---"  
+        - text: "---"
         - section: "ReacJS 18: Hooks"
           contents: 
             - reactjs/reactjs-hook-state.qmd
@@ -392,27 +392,37 @@ website:
           contents:
              - scrum/resources.qmd
 
-    - id: "vocabulary"
-      title: "Vocabulary"
+    - id: "learning"
+      title: "Learning"
       contents: 
         - text: "Vocabulary"
         - text: "---"  
-        - section: "General Vocabulary"
+        - section: "Vocabulary"
           contents: 
-            - vocabulary/vocab-general.qmd
-            - vocabulary/vocab-scrum.qmd
-            - vocabulary/vocab-devops.qmd
-        - text: "---"  
-        - section: "Back-end Vocabulary"
-          contents: 
-            - vocabulary/vocab-java-se.qmd
-            - vocabulary/vocab-spring-boot.qmd
-            - vocabulary/vocab-data-base.qmd
-        - text: "---" 
-        - section: "Front-end Vocabulary"
+            - learning/learning-vocab-general.qmd
+            - learning/learning-vocab-scrum.qmd
+            - learning/learning-vocab-devops.qmd
+            - learning/learning-vocab-java-se.qmd
+            - learning/learning-vocab-spring-boot.qmd
+            - learning/learning-vocab-data-base.qmd
+            - learning/learning-vocab-reactjs.qmd
+            - learning/learning-vocab-web.qmd
+        - text: "---"
+        - section: "Learning"
           contents:
-            - vocabulary/vocab-reactjs.qmd
-            - vocabulary/vocab-web.qmd
+            - learning/learning-how-questions.qmd 
+            - learning/learning-how-intro.qmd
+            - learning/learning-how-writing.qmd
+            - learning/learning-how-take-notes.qmd
+            - learning/learning-how-write-comments.qmd
+            - learning/learning-how-auto-evaluate.qmd
+        - text: "---"
+        - section: "Books & Articles"
+          contents:
+            - learning/learning-listing-table-books.qmd
+            - learning/learning-listing-card-books.qmd
+            - learning/learning-listing-table-articles.qmd
+            - learning/learning-listing-card-articles.qmd
             
     - id: "ifcd"
       title: "IFCD0210"
@@ -442,25 +452,7 @@ website:
             - about/about-this-me.qmd
             - about/about-this-site.qmd
             - about/about-this-images-credit.qmd
-        - text: "---"
-        - section: "Learning"
-          contents: 
-            - about/about-learning-intro.qmd
-            - about/about-learning-writing.qmd
-            - about/about-learning-take-notes.qmd
-            - about/about-learning-write-comments.qmd
-            - about/about-learning-auto-evaluate.qmd
-            - about/about-learning-questions.qmd
-        - text: "---"
-        - section: "Books"
-          contents:
-            - about/about-listing-table-books.qmd
-            - about/about-listing-card-books.qmd
-        - text: "---"
-        - section: "Articles"
-          contents:
-            - about/about-listing-table-articles.qmd
-            - about/about-listing-card-articles.qmd
+       
 
   page-footer: 
     background: secondary 
