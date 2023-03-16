@@ -19,10 +19,10 @@ Deliveries **via github:**
 | UF03-1843 | 20/02/2023  | WebApp Quarto amb [Document Listings](https://quarto.org/docs/websites/website-listings.html){.external} |
 | MF01-0492 | 21/02/2023  | Prova objectiva i prova pràctica</br>  - WebApp Quarto amb [Api REST call to server and render the data from JSON](/markup/markup-quarto-api-rest.qmd), from cloud-external server or Spring Boot local server </br>  - WebApp Quarto amb a [Observable JS script cell](/markup/markup-quarto-code.qmd#observable-js) |
 | **MF02-0492**  | **21/02/2022**  | **Back-end** |
-| UF01-1844 | 20/03/2023  | Laboratori app MVC amb Spring Boot Rest conectat a React-client |
-| UF02-1845 | 19/04/2023  | Laboratori app Spring Boot Rest (opcional websocket) amb H2 JPA conectat a React-client  |
-| UF03-1846 | 09/05/2023  | Crear app web que comuniquiMÉS de 2 apps (2 Spring Boot i un React)  |
-| MF02-0492 | 10/05/2023  | Prova objectiva i prova pràctica |
+| UF01-1844 | 20/03/2023  | Laboratori app MVC amb Spring Boot Thyemeleaf (alternatiu Rest) un objecte amb totes les operacions CRUD |
+| UF02-1845 | 19/04/2023  | Laboratori app Spring Boot Thyemeleaf (opcional Rest) amb H2 JPA (alternatiu objectes amb Composition/Inherence) |
+| UF03-1846 | 09/05/2023  | Laboratori app web amb React Hooks |
+| MF02-0492 | 10/05/2023  | Prova objectiva i prova pràctica (triar una opció)</br>  - Laboratori app Spring Boot amb React </br>  - Laboratori Spring Boot Server-Data API Rest amb Spring Boot Client-Web-Thymeleaf </br>  -  Laboratori app Spring Boot Thynmeleaf deployat a AWS </br> -  Laboratori app web amb React Hooks amb Data API Rest |
 | **MF03-0493**  | **10/05/2022**  | **Project** |
 | UF01 | 08/06/2023  | Crear app web CRUD amb db en servidor remot Spring Boot i gestió de dades amb API fetch (opcional altres tech) JS React |
 | MF03-0493 | 08/06/2023  | Prova objectiva i prova pràctica |
