@@ -38,14 +38,60 @@ After [Lab#SB00-1](/springboot/sblab0-1.qmd) and [Lab#SB00-2](/springboot/sblab0
 
 ![Templates Library Management](/images/springboot/LibraryManagement-3.png)
 
-## use-story & use-case
+## user-story & use-case
 
-As a ``super-admin`` -no defined yet-, we are able to access user's borrow domain from ``use/users`` web domain and perform such a operations:
+::: {.callout-tip}
+## user-story
+As a ``user/librarian``, we are able to access user's borrow domain from ``use/users`` web domain and perform such a operations:
+:::
 
 - create a new ``borrow``
-- ``borrows`` table
+- ``borrows`` ``HashMap``
 - renovation ``borrow``
-- return books, close a ``borrow``
+- return books
+- close a ``borrow``
+- findBorrowsByUser
+
+And also:
+
+- fake login and logout
+
+### use-cases
+
+- **Create a new borrow**: initiate a new record in the borrow ``HashMap`` for a user borrowing a book(s).
+- **Borrows ``HashMap``**: a database ``HashMap`` that stores information about borrowed books, including user information and return dates.
+- **Renovation borrow**: extend the return date for a borrowed book by updating the corresponding borrow record.
+- **Return books**: update the borrow record to indicate that the borrowed book(s) have been returned.
+- **Close a borrow**: mark a borrow record as closed to indicate that the borrowed book(s) have been returned and the borrow is complete.
+- **Fake login as librarian or user**: simulate a login as a librarian or user for testing or debugging purposes.
+- **Logout**: terminate a user's authenticated session.
+- **Find borrows by user**: retrieve all borrow records associated with a particular user from the borrow ``HashMap``.
+
+
+
+![Templates Library Management](/images/springboot/LibraryManagement-4.png)
+
+- [LibraryManagement](https://github.com/AlbertProfe/CifoJava2023/tree/82f4c404b914ef17ae1aee8446ee7f919791b27e){.external}
+
+
+## Mock up
+
+Creating a **web Thymeleaf app without CSS** means that the application's user interface will not have any styling. 
+
+The focus of the app is to test Spring Boot's controller and service layers using data stored in ``HashMaps``. 
+
+![Mockup Web Library Management core use-case](/images/springboot/LibraryManagementMockUp.png){width="80%"}
+
+This app will be useful for testing and development purposes, as it allows developers to quickly **build and test the functionality of the controller and service layers without worrying about the presentation layer and the database**
+
+::: {.column-margin}
+However, it is not intended for production use, as a production app would require a more polished and professional user interface with styling and layout design
+:::
+
+
+
+
+[Mockup Web Library Management core use-case extended](https://viewer.diagrams.net/?target=blank&highlight=0000FF&nav=1&title=LibraryManagementMockUp#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1Cqxn88pLy5DDgawKyY_amnqEiELtDcHG%26export%3Ddownload){.external}
 
 <!--- navLinks -->
 <br><br>
