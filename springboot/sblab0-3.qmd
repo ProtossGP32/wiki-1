@@ -26,17 +26,32 @@ After [Lab#SB00-1](/springboot/sblab0-1.qmd) and [Lab#SB00-2](/springboot/sblab0
 
 </br>
 
-- [Library Management](https://github.com/AlbertProfe/CifoJava2023/tree/5eeeaa816c4de2ad7b5c9e732d50de630bb4bbfb/LibraryManagement){.external} just initial integration with book-selection.
+``LibraryManagement`` is the result of **combining three base projects into a single system.**
+
+It is a **legacy system, meaning it has been in use for some time**. The three original projects likely provided different functionality, such as book creation, user management, and borrowing/returning books, which were combined to eventually create the LibraryManagement system.
+
+## Initial integration
 
 
 
-## Folder-tree
+- [Library Management](https://github.com/AlbertProfe/CifoJava2023/tree/076dad9b52714b1bb5edb72f27c053494d5e86b0/LibraryManagement){.external} just initial integration with book-selection.
 
-![General View Library Management](/images/springboot/LibraryManagement-1.png)
+::: {.column-margin}
+![Java Classes Library Management](/images/springboot/LibraryManagement-2.png){width="60%"}
+:::
 
-![Java Classes Library Management](/images/springboot/LibraryManagement-2.png)
+::: {.column-margin}
+![Templates Library Management](/images/springboot/LibraryManagement-3.png){width="60%"}
+:::
 
-![Templates Library Management](/images/springboot/LibraryManagement-3.png)
+![General View Library Management](/images/springboot/LibraryManagement-1.png){width="40%"}
+
+
+
+
+- ``Library5`` is a library module that provides **CRUD (Create, Read, Update, Delete)** operations for the ``Book`` domain. This means that the ``Library5`` module provides functions or classes that allow users of the software to create, read, update, and delete information about books in the system.
+- ``controllerView`` is a module that provides **CRUD operations** for both the ``User`` and ``Librarian`` domains. This module provides functions or classes that allow users and librarians to interact with the system, including creating, reading, updating, and deleting information about users and librarians.
+- ``LibraryProject`` is the **main Java SE project that contains the business logic for borrowing a book,** as well as a ``Borrow`` class. The Borrow class represents a transaction in which a user borrows a book from the library.
 
 ## user-story & use-case
 
@@ -46,11 +61,12 @@ As a ``user/librarian``, we are able to access user's borrow domain from ``use/u
 :::
 
 - create a new ``borrow``
-- ``borrows`` ``HashMap``
+- ``borrows`` stored in a ``HashMap``
 - renovation ``borrow``
-- return books
+- return books from ``borrow``
 - close a ``borrow``
-- findBorrowsByUser
+- ``findBorrowsByUser``
+- ``selectBooks`` by ``userId``
 
 And also:
 
@@ -69,9 +85,7 @@ And also:
 
 
 
-![Templates Library Management](/images/springboot/LibraryManagement-4.png)
 
-- [LibraryManagement](https://github.com/AlbertProfe/CifoJava2023/tree/82f4c404b914ef17ae1aee8446ee7f919791b27e){.external}
 
 
 ## Mock up
@@ -90,8 +104,20 @@ However, it is not intended for production use, as a production app would requir
 
 
 
-
 [Mockup Web Library Management core use-case extended](https://viewer.diagrams.net/?target=blank&highlight=0000FF&nav=1&title=LibraryManagementMockUp#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1Cqxn88pLy5DDgawKyY_amnqEiELtDcHG%26export%3Ddownload){.external}
+
+## Versions
+
+| Version | Code | Commit | Folder-Tree |
+| -- | -- | -- | -- |
+| 0.0 | [Library Management](https://github.com/AlbertProfe/CifoJava2023/tree/076dad9b52714b1bb5edb72f27c053494d5e86b0/LibraryManagement){.external}  | create project pom and first integration | [General View Library Management](/images/springboot/LibraryManagement-1.png) |
+| 0.1 | [Library Management](https://github.com/AlbertProfe/CifoJava2023/tree/5eeeaa816c4de2ad7b5c9e732d50de630bb4bbfb/LibraryManagement){.external} |  select books and userid without a borrow | - |
+| 0.2 | [Library Management](https://github.com/AlbertProfe/CifoJava2023/tree/8f1942b915b5d043e1948ffe65ee55fa0d26cff3){.external} | session and httpServletRequest | - |
+| 0.3 | [Library Management](https://github.com/AlbertProfe/CifoJava2023/tree/5538e59e988fc8ec07009644717f8ae820096916/LibraryManagement){.external} | simplify login and logout | - |
+| 0.4 | [Library Management](https://github.com/AlbertProfe/CifoJava2023/tree/82f4c404b914ef17ae1aee8446ee7f919791b27e/LibraryManagement){.external} |  borrowByUserId and book domain | [Templates Library Management](/images/springboot/LibraryManagement-4.png) |
+
+
+
 
 <!--- navLinks -->
 <br><br>
