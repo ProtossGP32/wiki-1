@@ -18,11 +18,11 @@ tr:nth-child(5) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #13 | 60 | 20/03 | - | - |
-|  | 61 | 21/03 | - | - |
-|  | 62 | 22/03 | - | - |
+| #13 | 60 | 20/03 | - LibraryManagement:  </br>  (1) Login and logout: refreshing </br> (2) borrowsByUser </br> | - |
+|  | 61 | 21/03 | - LibraryManagement:  </br>  (1) create borrow </br> (2) fragments | - |
+|  | 62 | 22/03 | - LibraryManagement </br> (1) API Rest | - |
 |  | 63 | 23/03 | - | - |
-|  | 64 | 24/03 | - | - |
+|  | 64 | 24/03 | - SCRUM: </br> - Getting things done  </br>| - |
 : Backlog Sprint#13 March 2023 {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
