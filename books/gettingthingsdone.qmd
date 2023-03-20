@@ -62,7 +62,7 @@ If an action will **take less than two minutes**, it should be done at the momen
 
 > Save energy, do it now!
 
-### Anixety
+### Anxiety
 
 ``Anxiety`` and ``guilt`` don’t come from having too much to do; it comes from **breaking agreements with yourself.**
 
