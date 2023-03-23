@@ -23,28 +23,63 @@ You may also check [this](/markup/markup-quarto-api-rest.qmd) introduction to AP
 
 </br>
 
-An `API` is a set of definitions and protocols for building and integrating application software. It’s sometimes referred to as a contract between an information provider and an information user—establishing the content required from the consumer (the call) and the content required by the producer (the response).
+## Overview
+
+An `API` is a **set of definitions and protocols for building and integrating application software**.
+
+> It’s sometimes referred to as a contract between an information provider and an information user—establishing the content required from the consumer (the `call`) and the content required by the producer (the `response`).
 
 ::: {.column-margin}
-For example, the API design for a weather service could specify that the user supply a zip code and that the producer reply with a 2-part answer, the first being the high temperature, and the second being the low.
+For example, the API design for a `weather service` could specify that the user supply a `zip code` and that the producer reply with a 2-part answer, the first being the `high temperature`, and the second being the `low temperature`.
 :::
 
 ::: {.callout-note}
 ## Rest
-REST is a set of architectural constraints, not a protocol or a standard. API developers can implement REST in a variety of ways.
+REST is a set of architectural constraints, not a protocol or a standard. *API developers can implement REST in a variety of ways.*
 :::
 
-When a client request is made via a RESTful API, it transfers a representation of the state of the resource to the requester or endpoint. This information, or representation, is delivered in one of several formats via HTTP: JSON (Javascript Object Notation), HTML, XLT, Python, PHP, or plain text. JSON is the most generally popular file format to use because, despite its name, it’s language-agnostic, as well as readable by both humans and machines. 
+When a client request is made via a RESTful API, it transfers a representation of the state of the resource to the requester or endpoint.
+
+This information, or representation, is delivered in one of several formats via `HTTP`: `JSON` (Javascript Object Notation), `HTML`, `XLT`, `Python`, `PHP`, or `plain text`. 
+
+::: {.callout-note}
+## JSON
+JSON is the most generally popular file format to use because, despite its name, it’s language-agnostic, as well as readable by both humans and machines.
+:::
 
 ## Library Management base project
 
 
 - [Library Management 0.7](https://github.com/AlbertProfe/CifoJava2023/tree/4a2599405941d32bdf5431cde70a8052c845588e/LibraryManagement){.external}
 
+## Folder-tree project
+
+![Library Management](/images/springboot/LibraryManagement-apirest.png){width="40%"}
+
 
 ## API Rest `book`
 
-![Library Management](/images/springboot/LibraryManagement-apirest.png){width="40%"}
+Reference: 
+
+- [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/){.external}
+- [What is JSON](https://www.w3schools.com/whatis/whatis_json.asp){.external}
+- [Library1 Rest Controller Book](https://github.com/AlbertProfe/cifojava2022-3/blob/master/library1/src/main/java/io/company/library/LibraryRestController.java){.external}
+- [What is a REST API?](https://www.redhat.com/en/topics/api/what-is-a-rest-api){.external}
+
+::: {.callout-note}
+## @RestController Annotation
+This **annotation** is used at the class level and allows the class to handle the requests made by the client. The RestController allows to handle all REST APIs such as GET, POST, Delete, and PUT requests. 
+:::
+
+We define a REST controller using the `@RestController` and @`RequestMapping `annotations. The controller handles requests related to books under the base path `"/api/book"`.
+
+The `BookRestController` class has a dependency on the `BookService` class, which is automatically injected using the `@Autowired` annotation.
+
+The controller has a `GET` method mapped to the `"/books"` path, which retrieves all the books using the `bookService.getAllBooks()` method and returns them as a `HashMap` with String keys and `Book` values.
+
+::: {.column-margin}
+This method can be accessed through a web browser or another client, and it will return the response in a format such as JSON or XML.
+:::
 
 ```java
 package com.example.myFirstSpring.restcontroller;
