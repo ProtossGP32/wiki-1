@@ -1,0 +1,119 @@
+---
+title: "Lab#SB00-4: API Rest"
+subtitle: Spring Boot Library Management API Rest
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: Spring Boot
+categories: [Spring-Boot, lab, rest]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.labs}
+📘 **Spring Boot Lab#SB00-4: API Rest**
+
+After [Lab#SB00-3](/springboot/sblab0-3.qmd) we are going to creata an `API Rest` just for `book` domain.
+
+You may also check [this](/markup/markup-quarto-api-rest.qmd) introduction to API Rest.
+:::
+
+</br>
+
+An `API` is a set of definitions and protocols for building and integrating application software. It’s sometimes referred to as a contract between an information provider and an information user—establishing the content required from the consumer (the call) and the content required by the producer (the response).
+
+::: {.column-margin}
+For example, the API design for a weather service could specify that the user supply a zip code and that the producer reply with a 2-part answer, the first being the high temperature, and the second being the low.
+:::
+
+::: {.callout-note}
+## Rest
+REST is a set of architectural constraints, not a protocol or a standard. API developers can implement REST in a variety of ways.
+:::
+
+When a client request is made via a RESTful API, it transfers a representation of the state of the resource to the requester or endpoint. This information, or representation, is delivered in one of several formats via HTTP: JSON (Javascript Object Notation), HTML, XLT, Python, PHP, or plain text. JSON is the most generally popular file format to use because, despite its name, it’s language-agnostic, as well as readable by both humans and machines. 
+
+## Library Management base project
+
+
+- [Library Management 0.7](https://github.com/AlbertProfe/CifoJava2023/tree/4a2599405941d32bdf5431cde70a8052c845588e/LibraryManagement){.external}
+
+
+## API Rest `book`
+
+![Library Management](/images/springboot/LibraryManagement-apirest.png){width="40%"}
+
+```java
+package com.example.myFirstSpring.restcontroller;
+
+import com.example.myFirstSpring.model.Book;
+import com.example.myFirstSpring.service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.HashMap;
+
+@RestController
+@RequestMapping("/api/book")
+public class BookRestController {
+
+    @Autowired
+    BookService bookService;
+
+    @GetMapping ("/books")
+    public HashMap<String, Book> getAllBooks(){
+
+      return bookService.getAllBooks();
+
+
+    }
+}
+```
+
+## Postman
+
+### Install Postman in Linux Mint
+
+``` terminal
+
+$ sudo rm /etc/apt/preferences.d/nosnap.pref
+$ sudo apt update
+$ sudo apt install snapd
+$ sudo snap install postman
+
+
+```
+
+**endpoint**: `http://localhost:8086/api/book/books`
+
+![Postman](/images/springboot/postman.png){width="40%"}
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Spring Boot: Data](/springboot/boot-concepts-data.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Lab 2: Spring Boot Projects  {{< fa solid arrow-right >}}](/springboot/sblab2.qmd)
+<br>
+</div>
+<br>
+</div>
