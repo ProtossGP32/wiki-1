@@ -47,6 +47,38 @@ This information, or representation, is delivered in one of several formats via 
 JSON is the most generally popular file format to use because, despite its name, it’s language-agnostic, as well as readable by both humans and machines.
 :::
 
+## HTTP messages
+
+`HTTP messages` are **how data is exchanged between a server and a client.**
+
+There are two types of messages:
+
+- `requests` sent by the client to trigger an action on the server,
+- and `responses`, the answer from the server.
+
+[HTTP messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages){.external} are composed of **textual information encoded in ASCII**, and span over multiple lines. 
+
+::: {.column-margin}
+In HTTP/1.1, and earlier versions of the protocol, these messages were openly sent across the connection. In HTTP/2, the once human-readable message is now divided up into `HTTP frames`, providing **optimization and performance improvements.**
+:::
+
+![HTTP message](/images/springboot/httpmsg2.png){width="80%"}
+
+HTTP `requests`, and `responses`, share similar structure and are composed of:
+
+1. **A start-line describing the requests to be implemented,** or its status of whether successful or a failure. This start-line is always a single line.
+2. **An optional set of HTTP headers specifying the request,** or describing the body included in the message.
+3. A blank line indicating all meta-information for the request has been sent.
+4. **An optional body containing data associated with the request** (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
+
+## HTTP status messages
+
+- [HTTP status messages](https://www.w3schools.com/tags/ref_httpmessages.asp){.external}
+
+![HTTP status messages poster](/images/springboot/httpstatus.png){width="40%"}
+
+[Source-status-code-poster by Steve Schoger](https://www.steveschoger.com/status-code-poster/){.external}
+
 ## Library Management base project
 
 
@@ -127,7 +159,13 @@ $ sudo snap install postman
 
 ![Postman](/images/springboot/postman.png){width="40%"}
 
+## Versions
 
+**endpoint**: `http://localhost:8090/api/book/books`
+
+| Code Version | Commit | Folder-Tree | Screeshoots |
+| -- | -- | -- | -- |
+| [Library Management Rest 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/de0b6481a5440b6f0b61b36801676bf02409a402/LibraryManagementRest){.external}  | create project pom and refactoring, CRUD: [read](https://github.com/AlbertProfe/CifoJava2023/blob/de0b6481a5440b6f0b61b36801676bf02409a402/LibraryManagementRest/src/main/java/com/example/myFirstSpring/restcontroller/BookRestController.java#L18){.external} all books | [Basic Structure](/images/springboot/LibraryManagementRest-v0.0-project.png){width="60%"} | [localhost:8090/api/book/books](/images/springboot/LibraryManagementRest-v0.0-1.png){width="80%"} |
 
 <!--- navLinks -->
 <br><br>
