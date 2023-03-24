@@ -1,0 +1,51 @@
+---
+title: "Lab#SB00-5: Rest & JPA-H2"
+subtitle: Spring Boot Library Management API Rest and JPA H2
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: Spring Boot
+categories: [Spring-Boot, lab, rest]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.labs}
+
+📘 **Spring Boot Lab#SB00-5: API Rest and JPA H2**
+
+
+:::
+
+</br>
+
+## Overview
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Spring Boot: Data](/springboot/boot-concepts-data.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Lab 2: Spring Boot Projects  {{< fa solid arrow-right >}}](/springboot/sblab2.qmd)
+<br>
+</div>
+<br>
+</div>
