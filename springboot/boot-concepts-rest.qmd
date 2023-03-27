@@ -24,13 +24,82 @@ REST stands for Representational State Transfer. It is an architectural style fo
 
 ---
 
-In Spring Boot, the Spring MVC framework is used to build RESTful web services. The @RestController annotation is used to define a class as a RESTful web service controller. This annotation is a combination of the @Controller and @ResponseBody annotations, which means that the class is a controller and the methods return the data directly rather than returning the name of a view.
 
-The @RequestMapping annotation is used to map HTTP requests to specific methods in a controller class. This annotation can be used at the class level or the method level to define the path that the method should handle.
+## Overview
 
-In addition to these annotations, Spring Boot also provides a number of other features that make it easy to build RESTful web services, such as support for JSON and XML serialization and deserialization, automatic content negotiation, and built-in exception handling.
+An `API` is a **set of definitions and protocols for building and integrating application software**.
 
-In summary, REST stands for Representational State Transfer. In Spring Boot, the Spring MVC framework is used to build RESTful web services, the @RestController and @RequestMapping annotations are used to define a class as a RESTful web service controller and map HTTP requests to specific methods, respectively. Spring Boot provides many features to make building RESTful web services easy, such as support for JSON and XML serialization and deserialization, automatic content negotiation, and built-in exception handling.
+> It’s sometimes referred to as a contract between an information provider and an information user—establishing the content required from the consumer (the `call`) and the content required by the producer (the `response`).
+
+::: {.column-margin}
+For example, the API design for a `weather service` could specify that the user supply a `zip code` and that the producer reply with a 2-part answer, the first being the `high temperature`, and the second being the `low temperature`.
+:::
+
+::: {.callout-note}
+## Rest
+REST is a set of architectural constraints, not a protocol or a standard. *API developers can implement REST in a variety of ways.*
+:::
+
+When a client request is made via a RESTful API, it transfers a representation of the state of the resource to the requester or endpoint.
+
+This information, or representation, is delivered in one of several formats via `HTTP`: `JSON` (Javascript Object Notation), `HTML`, `XLT`, `Python`, `PHP`, or `plain text`. 
+
+::: {.callout-note}
+## JSON
+JSON is the most generally popular file format to use because, despite its name, it’s language-agnostic, as well as readable by both humans and machines.
+:::
+
+## HTTP messages
+
+`HTTP messages` are **how data is exchanged between a server and a client.**
+
+There are two types of messages:
+
+- `requests` sent by the client to trigger an action on the server,
+- and `responses`, the answer from the server.
+
+[HTTP messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages){.external} are composed of **textual information encoded in ASCII**, and span over multiple lines. 
+
+::: {.column-margin}
+In HTTP/1.1, and earlier versions of the protocol, these messages were openly sent across the connection. In HTTP/2, the once human-readable message is now divided up into `HTTP frames`, providing **optimization and performance improvements.**
+:::
+
+![HTTP message](/images/springboot/httpmsg2.png){width="80%"}
+
+HTTP `requests`, and `responses`, share similar structure and are composed of:
+
+1. **A start-line describing the requests to be implemented,** or its status of whether successful or a failure. This start-line is always a single line.
+2. **An optional set of HTTP headers specifying the request,** or describing the body included in the message.
+3. A blank line indicating all meta-information for the request has been sent.
+4. **An optional body containing data associated with the request** (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
+
+## HTTP status messages
+
+- [HTTP status messages](https://www.w3schools.com/tags/ref_httpmessages.asp){.external}
+
+![HTTP status messages poster](/images/springboot/httpstatus.png){width="40%"}
+
+[Source-status-code-poster by Steve Schoger](https://www.steveschoger.com/status-code-poster/){.external}
+
+
+## Spring Boot
+
+In ``Spring Boot``, the ``Spring MVC framework`` is used to build ``RESTful`` web services.
+
+The ``@RestController`` **annotation is used to define a class as a RESTful web service controller**. This annotation is a combination of the ``@Controller`` and ``@ResponseBody`` annotations, which means that the class is a controller and the methods return the data directly rather than returning the name of a view.
+
+The ``@RequestMapping`` annotation is used **to map HTTP requests to specific methods in a controller class**. This annotation can be used at the class level or the method level to define the path that the method should handle.
+
+In addition to these annotations, ``Spring Boot`` also provides a number of other features that make it easy to build RESTful web services, such as support for ``JSON`` and ``XML serialization`` and ``deserialization``, automatic content negotiation, and built-in exception handling.
+
+::: {.callout-note}
+## Rest and Spring Boot
+In summary, REST stands for Representational State Transfer.
+
+In Spring Boot, the Spring MVC framework is used to build RESTful web services, the @RestController and @RequestMapping annotations are used to define a class as a RESTful web service controller and map HTTP requests to specific methods, respectively.
+
+Spring Boot provides many features to make building RESTful web services easy, such as support for JSON and XML serialization and deserialization, automatic content negotiation, and built-in exception handling.
+:::
 
 ## Example
 
@@ -52,10 +121,21 @@ public class MyController {
 }
 
 ```
-
-In this example, the @RestController annotation indicates that this class is a controller, and the @RequestMapping("/api") annotation specifies that all routes in this controller should be prefixed with "/api". The hello() method is annotated with @GetMapping("/hello"), which means it will handle GET requests to the "/api/hello" endpoint and return the string "Hello, world!". The postData() method is annotated with @PostMapping("/data"), which means it will handle POST requests to the "/api/data" endpoint and accept a JSON payload in the request body, which will be automatically converted to a MyData object using Spring's request body parsing functionality. The method then returns a ResponseEntity object with an HTTP status code of 200 (OK) and an empty response body.
-
+::: {.column-margin}
 By defining controllers like this, you can create RESTful APIs and web applications that can handle a wide range of HTTP requests and responses.
+:::
+
+::: {.column-margin}
+The method then returns a ``ResponseEntity`` object with an HTTP status code of 200 (OK) and an empty response body.
+:::
+
+
+In this example, the ``@RestController`` annotation **indicates that this class is a controller,** and the ``@RequestMapping("/api")`` annotation **specifies that all routes in this controller should be prefixed with "/api".**
+
+The ``hello()`` method is annotated with ``@GetMapping("/hello")``, which means it will handle ``GET`` requests to the ``"/api/hello"`` **endpoint** and return the string **"Hello, world!".**
+
+The ``postData()`` method is annotated with ``@PostMapping("/data")``, which means it will handle ``POST`` requests to the ``"/api/data"`` **endpoint** and accept a JSON payload in the request body, which will be automatically converted to a MyData object using Spring's request body parsing functionality.
+
 
 
 <!--- navLinks -->

@@ -184,6 +184,104 @@ How to write `th:`
 
 ![ThymeLeaf how TH: works (1/3)](/images/springboot/howtagsTHworks.png){width="80%"}
 
+## Fragments
+
+- [Thymeleaf Views: fragments](https://education.launchcode.org/java-web-development/chapters/thymeleaf-views/template-fragments.html){.external}
+- [employeeCourse repository](https://github.com/AlbertProfe/employeecourse/wiki){.external}
+
+::: {.column-margin}
+Using fragments in Thymeleaf can make it easier to maintain and update web pages, as changes to a fragment will be reflected in all pages that include it.
+:::
+
+
+In ``Thymeleaf``, a ``fragment`` is a **reusable piece of a web page that can be included in multiple pages**. It can contain HTML markup, Thymeleaf expressions, and other Thymeleaf features.
+
+``Fragments`` are defined in ``Thymeleaf`` using the ``th:fragment`` attribute, which is added to any HTML element.
+
+The value of the attribute is the name of the ``fragment``. For example:
+
+``` html
+<div th:fragment="header">
+   <h1>Welcome to my website!</h1>
+</div>
+```
+
+This defines a ``fragment`` called "**header**" that contains a heading element. This fragment can then be included in other pages using the ``th:replace`` or ``th:include`` attributes.
+
+For example:
+
+``` html
+<html>
+   <body>
+      <div th:replace="fragments/header :: header"></div>
+      <p>This is the content of my page.</p>
+   </body>
+</html>
+```
+This code includes the "**header**" ``fragment`` in the page using the ``th:replace`` attribute. The ``::`` syntax is used to specify the ``fragment`` name, and the ``fragments/header`` prefix specifies the location of the fragment file.
+
+## Layout
+
+- [employeeCourse repository](https://github.com/AlbertProfe/employeecourse/wiki){.external}
+
+::: {.column-margin}
+Using the Layout Dialect can make it easier to maintain a consistent layout across your web pages, and simplify the process of creating new pages.
+:::
+
+
+``Thymeleaf Layout Dialect`` is a third-party ``dialect`` that provides a way to define a common layout for a set of web pages in ``Thymeleaf``.
+
+With the ``Layout Dialect``, you can **define a template that contains the common structure and layout of your web pages, and then include the content of each page in the appropriate section of the template.**
+
+To use the ``Layout Dialect``, you need to add the dialect dependency (for ``Maven``):
+
+
+```xml
+<dependency>
+   <groupId>nz.net.ultraq.thymeleaf</groupId>
+   <artifactId>thymeleaf-layout-dialect</artifactId>
+   <version>2.5.1</version>
+</dependency>
+
+```
+Once you have added the dependency, you can use the ``Layout Dialect`` in your ``Thymeleaf`` templates. Here's an example of how to define a layout:
+
+
+``` html
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My Website</title>
+   </head>
+   <body>
+      <header th:replace="fragments/header :: header"></header>
+      <div layout:fragment="content"></div>
+      <footer th:replace="fragments/footer :: footer"></footer>
+   </body>
+</html>
+```
+
+This template defines a layout that includes a header and a footer. The ``layout:fragment`` attribute is used to define a **section** where the content of each page will be included.
+
+To use this ``layout`` in a page, you can create a new template that includes the ``layout`` and defines the content:
+
+``` html
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+   <head>
+      <title>My Page</title>
+   </head>
+   <body>
+      <div layout:decorator="layout/template">
+         <div layout:fragment="content">
+            <p>This is the content of my page.</p>
+         </div>
+      </div>
+   </body>
+</html>
+```
+
+This page includes the ``layout`` by setting the ``layout:decorator`` attribute to the path of the layout template. The content of the page is defined inside the ``layout:fragment`` attribute.
 
 ## CheatSheet
 
