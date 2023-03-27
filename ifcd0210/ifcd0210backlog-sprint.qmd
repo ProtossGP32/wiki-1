@@ -18,11 +18,11 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #14 | 65 | 27/03 | - | - |
-|  | 66 | 28/02 | - | - |
-|  | 67 | 29/03 | - | - |
-|  | 68 | 30/03 | - | - |
-|  | 69 | 31/03 | - | - |
+| #14 | 65 | 27/03 | - API Rest: </br> (1) CRUD: create, delete, update </br> (2) Postman  </br> (3) @EntityResponse </br>| [LibraryManagementRest](){.external} </br> [Lab#SB00-4](/springboot/sblab4.qmd) |
+|  | 66 | 28/02 | - API Rest </B> (1) Test Junit  </br>  - Swagger </br> - Borrow  | [LibraryManagementRest](){.external} |
+|  | 67 | 29/03 | - API Rest Borrow | [LibraryManagementRest](){.external} |
+|  | 68 | 30/03 | - NoSQL: what is NoSQL and SQL H2 JPA </br> - MongoDB | [LibraryManagementRest](){.external} |
+|  | 69 | 31/03 | - SCRUM </br> - Vocabulary </br> | - |
 : Backlog Sprint#14 March 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
