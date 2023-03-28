@@ -143,6 +143,12 @@ public class BookRestController {
 
 ## Postman
 
+[Postman](https://www.postman.com/){.external} is a p**opular API development tool used by developers to test, design, and document APIs**.
+
+With `Postman`, developers **can send requests to APIs and receive responses**, allowing them to check the functionality of the API and identify any issues that need to be fixed.
+
+Postman also allows developers to create collections of requests and to collaborate with other developers by sharing these collections.
+
 ### Install Postman in Linux Mint
 
 ``` terminal
@@ -159,6 +165,86 @@ $ sudo snap install postman
 
 ![Postman](/images/springboot/postman.png){width="40%"}
 
+## Swagger
+
+[Swagger](https://swagger.io/){.external}, on the other hand, **is an open-source framework for designing and documenting APIs.**
+
+With `Swagger`, developers **can create an API specification that defines the endpoints, parameters, and responses of an API.** 
+
+This specification **can then be used to generate documentation, client libraries, and server stubs in multiple programming languages.**
+
+`Swagger` also includes a user interface called Swagger UI, which allows developers to interact with an API and explore its endpoints and responses.
+
+### Add `Swagger` to Spring
+
+Add `Swagger` to project, [swagger web](https://swagger.io/tools/swaggerhub/) and **refactor**:
+
+1. [URL swagger](http://localhost:8080/swagger-ui.html) : 
+   
+> `http://localhost:8080/swagger-ui.html`
+   
+2. Java Version and dependencies 
+
+``` c
+  <properties>
+              <java.version>11</java.version>
+  </properties>
+```
+Dependencies:
+
+``` c
+  <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+    <dependency>
+          <groupId>io.springfox</groupId>
+          <artifactId>springfox-swagger2</artifactId>
+          <version>2.9.2</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+  <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>2.9.2</version>
+  </dependency>
+```
+
+3. Annotation:
+   
+> @EnableSwagger2 in Main
+
+4. application.properties:
+
+> spring.mvc.pathmatch.matching-strategy=ant-path-matcher
+
+5. java class config:
+   
+``` java
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+@EnableSwagger2
+@Configuration
+public class SpringFoxConfig {
+
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors
+                .any())
+                .paths(PathSelectors
+                .any())
+                .build();
+    }
+}
+```
+
+
 ## Versions
 
 **endpoint**: `http://localhost:8090/api/book/books`
@@ -167,6 +253,8 @@ $ sudo snap install postman
 | -- | -- | -- | -- |
 | [Library Management Rest 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/de0b6481a5440b6f0b61b36801676bf02409a402/LibraryManagementRest){.external}  | create project pom and refactoring, CRUD: [read](https://github.com/AlbertProfe/CifoJava2023/blob/de0b6481a5440b6f0b61b36801676bf02409a402/LibraryManagementRest/src/main/java/com/example/myFirstSpring/restcontroller/BookRestController.java#L18){.external} all books | [Basic Structure](/images/springboot/LibraryManagementRest-v0.0-project.png){width="60%"} | [localhost:8090/api/book/books](/images/springboot/LibraryManagementRest-v0.0-1.png){width="80%"} |
 | [Library Management Rest 0.1](https://github.com/AlbertProfe/CifoJava2023/tree/cdee65c2c0afa44adb8c0a967de22c9a57a993a1/LibraryManagementRest){.external}  | CRUD: delete | - | [localhost:8090/api/book/deleteBook](/images/springboot/LibraryManagementRest-v0.1-1.png){width="80%"} |
+| [Library Management Rest 0.2](https://github.com/AlbertProfe/CifoJava2023/tree/b5fcf2a90186f66a58f119dfaf17ee0be0ddb47c/LibraryManagementRest){.external}  | CRUD: create borrow and book | - | [localhost:8090/api/book/books](/images/springboot/LibraryManagementRest-v0.2-1.png){width="80%"} - [localhost:8090/api/user/users](/images/springboot/LibraryManagementRest-v0.2-3.png){width="80%"} - [localhost:8090/api/borrow/createBorrow](/images/springboot/LibraryManagementRest-v0.2-2.png){width="80%"}|
+
 
 
 
