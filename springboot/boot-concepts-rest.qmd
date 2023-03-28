@@ -18,7 +18,7 @@ format:
 
 📘 **Rest**
 
-REST stands for Representational State Transfer. It is an architectural style for building web services that are designed to be lightweight, stateless, and easy to scale.
+`REST` stands for **Representational State Transfer**. It is an architectural style for building web services that are designed to be lightweight, **stateless**, and easy to scale.
 
 :::
 
@@ -47,6 +47,21 @@ This information, or representation, is delivered in one of several formats via 
 ::: {.callout-note}
 ## JSON
 JSON is the most generally popular file format to use because, despite its name, it’s language-agnostic, as well as readable by both humans and machines.
+:::
+
+## `stateless`
+
+In REST (Representational State Transfer), a `stateless` system is one in which t**he server does not maintain any state or session information about the client between requests.**
+
+This means that **each request from the client to the server is treated as an independent and complete operation, and the server responds with the appropriate data based solely on the information provided in the request.**
+
+In other words, the server does not keep track of any information about the previous requests made by the client. This is in contrast to stateful systems, where the server maintains information about the client's session or context, and uses that information to provide a personalized response to each request.
+
+::: {.callout-note}
+## stateless architecture
+The stateless architecture of REST provides several benefits, such as improved scalability, simplicity, and reliability, as well as allowing requests to be processed in parallel by different servers or nodes.
+
+However, it also means that **the client needs to include all the necessary information in each request**, and the server cannot assume any context or information beyond what is provided in the request.
 :::
 
 ## HTTP messages
