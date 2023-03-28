@@ -116,6 +116,10 @@ In this table, we will explore some of the most commonly used annotations in Spr
 : Spring Boot Annotations {tbl-colwidths="[30,70]"}
 
 
+![](/images/springboot/swagger-petstore-endpoint-methods.png){width="80&"}
+
+
+
 ## Example1: ``Model``
 
 The most commonly used annotation is ``@GetMapping``, which maps ``HTTP`` ``GET`` **requests** to a specific method.
