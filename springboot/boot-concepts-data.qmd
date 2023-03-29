@@ -1,6 +1,6 @@
 ---
-title: "Spring Boot: Data"
-subtitle: Spring Boot Data
+title: "Spring Boot: Data & DB"
+subtitle: Spring Boot Data & DB
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
@@ -18,16 +18,86 @@ format:
 
 📘 **Data**
 
-Spring Data’s mission is to provide a familiar and consistent, Spring-based programming model for data access while still retaining the special traits of the underlying data store.
+Spring Data’s mission is to provide a **familiar and consistent, Spring-based programming model** for data access.
 
-It makes it easy to use data access technologies, relational and non-relational databases, map-reduce frameworks, and cloud-based data services. This is an umbrella project which contains many subprojects that are specific to a given database. The projects are developed by working together with many of the companies and developers that are behind these exciting technologies.
+It makes it easy to use data access technologies, ``relational`` and ``non-relational`` databases, ``map-reduce frameworks``, and ``cloud-based`` data services.
+
+This is an **umbrella project which contains many subprojects** that are specific to a given database.
+
+The projects are developed by working together with many of the companies and developers that are behind these exciting technologies.
 
 :::
 
+</br>
+
+![Spring Data](/images/springboot/springdata.png){width="60%"}
+
+- [Spring Boot Data](https://spring.io/projects/spring-data#overview){.external}
+
 ---
 
+## Overview
 
-[Spring Boot Data](https://spring.io/projects/spring-data#overview){.exteranl}
+``Spring Boot`` provides support for both ``SQL`` and ``NoSQ``L databases through its ``Spring Data`` module.
+
+
+::: {.column-margin}
+Spring Boot supports both SQL and NoSQL databases through its Spring Data module, making it easy to work with different types of databases in your application.
+:::
+
+> For ``SQL`` databases, Spring Data provides support for popular relational databases like **MySQL, PostgreSQL, Oracle, and SQL Server**. The SQL support in Spring Boot is primarily based on the **Java Persistence API (JPA)** and provides easy-to-use abstractions for querying and manipulating data in a relational database.
+
+> On the other hand, for ``NoSQL`` databases like **MongoDB or DynamoDB**, Spring Data provides a consistent interface for working with various NoSQL data stores. The NoSQL support in Spring Boot is built on top of the Spring Data MongoDB module and offers features like **object mapping, query building, and integration with the Spring Framework.**
+
+To use Spring Data in your Spring Boot application, you can add the appropriate Spring Data dependency to your project and configure the data source properties in your ``application.properties`` or ``application.yml`` file.
+
+Once configured, you can use **Spring Data repositories to interact with your database and perform CRUD operations on your data**.
+
+
+
+## SQL vs NoSQL
+
+![NoSQL vs. SQL: Important Differences ](/images/springboot/sqlvsnosql.png){width="50%"}
+
+
+
+> Examples of [SQL](https://en.wikipedia.org/wiki/SQL){.external} database engine are: [MySQL](https://www.mysql.com/){.external}, [PostgreSQL](https://www.postgresql.org/){.external}, [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server){.external}, [SQLite](https://www.sqlite.org/index.html){.external} and [H2 Database](https://www.h2database.com/){.external}.
+
+> Examples of [Non-Relational](https://en.wikipedia.org/wiki/NoSQL){.external} database engines are: [MongoDB](https://www.mongodb.com/){.external}, [Apache Cassandra](https://cassandra.apache.org/){.external}, [Redis](https://redis.io/){.external}, [Couchbase](https://www.couchbase.com/){.external}, [Apache HBase](https://hbase.apache.org/){.external} and [DynamoDB AWS](https://aws.amazon.com/dynamodb/){.external}. 
+
+
+### Comparative table
+                    
+| Concept       | SQL                                    | NoSQL                                      |
+|---------------|----------------------------------------|--------------------------------------------|
+| Data Model    | Relational                             | Document, Key-Value, Column-Family, Graph  |
+| Query Language| Structured Query Language (SQL)        | Query APIs, sometimes proprietary         |
+| Scalability   | Vertical                               | Horizontal                                 |
+| Data Consistency | Strong                             | Eventual                                   |
+| Transactional Support | ACID compliance                | Limited                                   |
+| Schema Definition | Required                            | Optional                                  |
+| Query Flexibility | Limited                              | Flexible                                  |
+| Join Operations | Complex                               | Not supported                              |
+| Data Modeling  | Fixed schema                          | Dynamic schema                             |
+| Availability and Fault Tolerance | Low                  | High                                      |
+
+
+
+
+## Examples
+
+- [Evolution of SQL DB mapping in Spring](https://github.com/AlbertProfe/cifojava2022-4/wiki){.external}
+- [Lab#SB04-1: JPA Inherence strategies](/springboot/sblab4.qmd)
+- [Lab#SB01-1: DataBase](/springboot/sblab1.qmd)
+
+
+
+
+
+
+
+
+
 
 
 <!--- navLinks -->
