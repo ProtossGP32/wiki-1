@@ -116,6 +116,44 @@ In Spring Boot, the Spring MVC framework is used to build RESTful web services, 
 Spring Boot provides many features to make building RESTful web services easy, such as support for JSON and XML serialization and deserialization, automatic content negotiation, and built-in exception handling.
 :::
 
+## Using Annotations
+
+In this table, we will explore some of the most commonly used annotations in Spring Boot. These annotations can be used to map HTTP requests to controller methods, extract data from the request, bind data to model attributes, and handle exceptions. Understanding these annotations is essential for building Spring Boot applications that are reliable, scalable, and maintainable.
+
+
+
+| Annotation | Description |
+|------------|-------------|
+| `@Controller` | Indicates that a class serves as a Spring Boot controller. |
+| `@RequestMapping` | Maps HTTP requests to controller methods. |
+| `@GetMapping` | Maps HTTP GET requests to controller methods. |
+| `@PostMapping` | Maps HTTP POST requests to controller methods. |
+| `@PutMapping` | Maps HTTP PUT requests to controller methods. |
+| `@DeleteMapping` | Maps HTTP DELETE requests to controller methods. |
+| `@PathVariable` | Extracts a variable from the URL path. |
+| `@RequestParam` | Extracts a variable from the query string or request body. |
+| `@ModelAttribute` | Binds a method parameter to a model attribute. |
+| `@SessionAttribute` | Binds a method parameter to a session attribute. |
+| `@InitBinder` | Initializes a web data binder for a specific controller method. |
+| `@ExceptionHandler` | Handles exceptions thrown by a controller method. |
+| `@ResponseStatus` | Sets the HTTP status code for a controller method. |
+| `@ResponseBody` | Indicates that a controller method returns a response body instead of a view. |
+| `@ControllerAdvice` | Provides global exception handling for controllers. |
+: Spring Boot Annotations {tbl-colwidths="[30,70]"}
+
+GET, POST, PUT, PATCH, and DELETE are **HTTP methods that are used to perform CRUD** (Create, Read, Update, and Delete) operations on resources in a RESTful API.
+
+- `GET`: retrieves a representation of a resource from the server.
+- `POST`: creates a new resource on the server.
+- `PUT`: updates an existing resource on the server.
+- `PATCH`: partially updates an existing resource on the server.
+- `DELETE`: deletes a resource from the server.
+
+
+![](/images/springboot/swagger-petstore-endpoint-methods.png){width="80&"}
+
+
+
 ## Example
 
 ```java

@@ -115,6 +115,14 @@ In this table, we will explore some of the most commonly used annotations in Spr
 | `@ControllerAdvice` | Provides global exception handling for controllers. |
 : Spring Boot Annotations {tbl-colwidths="[30,70]"}
 
+GET, POST, PUT, PATCH, and DELETE are **HTTP methods that are used to perform CRUD** (Create, Read, Update, and Delete) operations on resources in a RESTful API.
+
+- `GET`: retrieves a representation of a resource from the server.
+- `POST`: creates a new resource on the server.
+- `PUT`: updates an existing resource on the server.
+- `PATCH`: partially updates an existing resource on the server.
+- `DELETE`: deletes a resource from the server.
+
 
 ![](/images/springboot/swagger-petstore-endpoint-methods.png){width="80&"}
 
@@ -286,9 +294,11 @@ In general, use `@RequestParam` when you need to extract data from the query str
 
 ![URL Structure Protocol Credential Host Path Username ( Optional ) Password ( Optional ) Hostname Port ( Optional ) Pathname Query Strings ( Optional ) Subdomain ( s ) ( Optional ) Domain Top Level Domain](/images/springboot/URL-structure.png)
 
+
+
 - [Keep a simple URL structure](https://developers.google.com/search/docs/crawling-indexing/url-structure){.external}
 - [What is a URL](https://www.hostinger.com/tutorials/what-is-a-url){.external}
-
+- [URL Structure cheatsheet](/images/springboot/url_structrure.png){width="80&"}
 <!--- navLinks -->
 <br><br>
 <div class=row>
