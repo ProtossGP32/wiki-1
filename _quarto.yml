@@ -287,15 +287,16 @@ website:
         - text: "---"  
         - section: "Spring Boot Concepts"
           contents:
+            - springboot/boot-concepts-injection.qmd
             - springboot/boot-concepts-annotations.qmd
             - springboot/boot-concepts-controller.qmd
             - springboot/boot-concepts-view.qmd
             - springboot/boot-concepts-th.qmd
             - springboot/boot-concepts-model.qmd
             - springboot/boot-concepts-rest.qmd
-            - springboot/boot-concepts-injection.qmd
-            - springboot/boot-concepts-jpa.qmd
             - springboot/boot-concepts-data.qmd
+            - springboot/boot-concepts-jpa.qmd
+         
         - text: "---"  
         - section: "Spring Boot Laboratories"
           contents:

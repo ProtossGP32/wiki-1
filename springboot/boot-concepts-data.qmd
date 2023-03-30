@@ -18,9 +18,9 @@ format:
 
 📘 **Data**
 
-Spring Data’s mission is to provide a **familiar and consistent, Spring-based programming model** for data access.
+Spring Data’s mission is to provide a familiar and consistent, **Spring-based programming model for data access**.
 
-It makes it easy to use data access technologies, ``relational`` and ``non-relational`` databases, ``map-reduce frameworks``, and ``cloud-based`` data services.
+It makes it easy to use **data access** technologies, ``relational`` and ``non-relational`` databases, ``map-reduce frameworks``, and ``cloud-based`` data services.
 
 This is an **umbrella project which contains many subprojects** that are specific to a given database.
 
@@ -34,17 +34,22 @@ The projects are developed by working together with many of the companies and de
 
 - [Spring Boot Data](https://spring.io/projects/spring-data#overview){.external}
 
+::: {.callout-note}
+``Spring Data`` is a collection of frameworks that provide developers with a simple and consistent way to access data from various databases and data stores. 
+:::
 
-Spring Data’s mission is to provide a familiar and consistent, Spring-based programming model for data access while still retaining the special traits of the underlying data store. Features:
+It helps reduce boilerplate code and enables rapid development of data-driven applications by providing abstractions for common data access tasks such as CRUD operations, query creation, and pagination. Features:
 
 - Powerful repository and **custom object-mapping abstractions**
 - **Dynamic query derivation** from repository method names
-- Implementation domain base classes providing basic properties
-- Support for transparent auditing (created, last changed)
-- Possibility to integrate custom repository code
-- Easy Spring integration via JavaConfig and custom XML namespaces
-- Advanced integration with Spring MVC controllers
-- Experimental support for cross-store persistence
+- Implementation **domain base classes** providing basic properties
+- Support for transparent **auditing** (created, last changed)
+
+::: {.column-margin}
+**Secondary features:**
+Possibility to integrate custom repository code - Easy Spring integration via JavaConfig and custom XML namespaces - Advanced integration with Spring MVC controllers - Experimental support for cross-store persistence 
+:::
+
 
 ## Overview
 
