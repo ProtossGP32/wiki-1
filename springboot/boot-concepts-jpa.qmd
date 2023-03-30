@@ -18,19 +18,44 @@ format:
 
 📘 **JPA**
 
-JPA stands for Java Persistence API. It is a Java specification for managing, persisting, and accessing relational data in Java applications. JPA is a standard API for ORM (Object-Relational Mapping) and provides a way to map Java objects to relational databases.
+JPA stands for `Java Persistence API`.
+
+It is a Java specification for **managing, persisting, and accessing relational data** in Java applications. 
+
+JPA is a **standard API for ORM (Object-Relational Mapping)** and provides a way to map Java objects to relational databases.
 
 :::
 
----
+</br>
+
+- [Spring Data JPA](https://spring.io/projects/spring-data-jpa){.external}
+- [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/){.external}
 
 ## Overall
 
 In Spring Boot, JPA is used to interact with databases. It provides a convenient and powerful way to perform CRUD operations on database tables and provides a lot of useful features such as caching, lazy loading, and automatic management of transaction.
 
-Spring Boot provides a number of auto-configuration options for JPA, so you don't have to set up everything from scratch. The spring-boot-starter-data-jpa is a starter for using Spring Data JPA with Hibernate. It provides a convenient way to create JPA repositories, which can be used to perform CRUD operations on the database.
+Spring Boot provides a number of **auto-configuration options for JPA**, so you don't have to set up everything from scratch.
+
+![Spring Boot JPA](/images/springboot/spring-boot-jpa3.png){width="50%"}
+
+The spring-boot-starter-data-jpa is a starter for using Spring Data JPA with Hibernate. It provides a convenient way to create JPA repositories, which can be used to perform CRUD operations on the database.
 
 When using JPA in Spring Boot, you can use the @Entity annotation to define a class as a JPA entity, and the @Repository annotation to define a class as a JPA repository. This allows you to use the JPA repository to perform CRUD operations on the corresponding database table.
+
+::: {.column-margin}
+Spring Data JPA, part of the larger Spring Data family, makes it easy to easily implement JPA based repositories. This module deals with enhanced support for JPA based data access layers. It makes it easier to build Spring-powered applications that use data access technologies.
+:::
+
+Features:
+
+- Sophisticated support to build repositories based on Spring and JPA
+- Support for Querydsl predicates and thus type-safe JPA queries
+- Transparent auditing of domain class
+- Pagination support, dynamic query execution, ability to integrate custom data access code
+- Validation of @Query annotated queries at bootstrap time
+- Support for XML based entity mapping
+- JavaConfig based repository configuration by introducing @EnableJpaRepositories.
 
 
 ## JPA: DIP and DAO
@@ -44,6 +69,10 @@ Dependency Injection (DI) is a design pattern that implements the DIP by injecti
 Inversion of Control (IoC) container is a pattern used to manage the lifecycle of objects and their dependencies. It allows the framework to control the creation, configuration, and destruction of objects, rather than having the application manage them directly. The @Repository annotation is an example of an IoC container because it is managed by the Spring framework. The framework handles the instantiation and injection of dependencies, such as the EntityManager, into the DAO classes.
 
 In this case, the high order modules are the business logic layer and the low order modules are the data access layer. The business logic layer depends on the data access layer through an abstraction, and the data access layer depends on the EntityManager implementation through injection by the IoC container. This allows for a separation of concerns and easier maintenance and testing of each layer independently.
+
+## Example
+
+- [Library1](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library1/src/main/java/io/company/library){.external}
 
 <!--- navLinks -->
 <br><br>
