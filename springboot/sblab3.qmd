@@ -160,7 +160,7 @@ Welcome to the cifojava20Basics22-5 wiki!
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab 2: Spring Boot Projects](/springboot/sblab2.qmd)
+[{{< fa solid arrow-left >}} Lab#SB02-1: Projects](/springboot/sblab2.qmd)
 <br>
 </div>
 <br>
@@ -172,7 +172,7 @@ Welcome to the cifojava20Basics22-5 wiki!
 <br>
 <div class='column right next'>
 <br>
-[Lab 4: Spring Boot Projects `JPA Inherence` strategies  {{< fa solid arrow-right >}}](/springboot/sblab4.qmd)
+[Lab#SB04-1: `JPA Inherence` strategies  {{< fa solid arrow-right >}}](/springboot/sblab4.qmd)
 <br>
 </div>
 <br>

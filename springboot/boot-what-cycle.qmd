@@ -153,7 +153,7 @@ Additional scenarios that may be encountered when processing a request using Spr
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Boot: Fundamentals](/springboot/boot-what-basics.qmd)
+[{{< fa solid arrow-left >}} Spring Boot: H2 DB and Thymeleaf](/springboot/boot-what-create-th-h2.qmd)
 <br>
 </div>
 <br>
@@ -165,7 +165,7 @@ Additional scenarios that may be encountered when processing a request using Spr
 <br>
 <div class='column right next'>
 <br>
-[Spring Boot: Annotations  {{< fa solid arrow-right >}}](/springboot/boot-concepts-annotations.qmd)
+[Spring Boot: Dependency Injection  {{< fa solid arrow-right >}}](/springboot/boot-concepts-injection.qmd)
 <br>
 </div>
 <br>

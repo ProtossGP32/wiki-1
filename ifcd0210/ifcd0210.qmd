@@ -33,7 +33,7 @@ intranet i extranet.
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Web Vocabulary](/vocabulary/vocab-web.qmd)
+[{{< fa solid arrow-left >}} Articles cards](/learning/learning-listing-card-articles.qmd)
 <br>
 </div>
 <br>

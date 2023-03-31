@@ -40,7 +40,7 @@ format:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} SCRUM Vocabulary](/vocabulary/vocab-scrum.qmd)
+[{{< fa solid arrow-left >}} SCRUM Vocabulary](/learning/learning-vocab-scrum.qmd)
 <br>
 </div>
 <br>
@@ -52,7 +52,7 @@ format:
 <br>
 <div class='column right next'>
 <br>
-[Java SE Vocabulay  {{< fa solid arrow-right >}}](/vocabulary/vocab-java-se.qmd)
+[Java SE Vocabulay  {{< fa solid arrow-right >}}](/learning/learning-vocab-java-se.qmd)
 <br>
 </div>
 <br>

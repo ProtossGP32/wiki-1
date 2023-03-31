@@ -116,7 +116,7 @@ Design patterns ease the analysis and requirement phase of SDLC by providing inf
 <br>
 <div class='column right next'>
 <br>
-[Creational: Singleton  {{< fa solid arrow-right >}}](/javase/se-pattern-singleton.qmd)
+[Singleton  {{< fa solid arrow-right >}}](/javase/se-pattern-singleton.qmd)
 <br>
 </div>
 <br>

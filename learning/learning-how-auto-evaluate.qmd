@@ -24,7 +24,7 @@ format:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} About Writing](/about/about-learning-writing.qmd)
+[{{< fa solid arrow-left >}} Comments](/learning/learning-how-write-comments.qmd)
 <br>
 </div>
 <br>
@@ -36,7 +36,7 @@ format:
 <br>
 <div class='column right next'>
 <br>
-[About Writing Comments  {{< fa solid arrow-right >}}](/about/about-learning-write-comments.qmd)
+[Books table  {{< fa solid arrow-right >}}](/learning/learning-listing-table-books.qmd)
 <br>
 </div>
 <br>

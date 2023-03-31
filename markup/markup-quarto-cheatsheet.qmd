@@ -402,7 +402,7 @@ public class Account {
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Quarto Markdown: data sources](/markup/markup-quarto-code.qmd)
+[{{< fa solid arrow-left >}} Quarto Markdown: OJS Cells](/markup/markup-quarto-api-rest-v2.qmd)
 <br>
 </div>
 <br>

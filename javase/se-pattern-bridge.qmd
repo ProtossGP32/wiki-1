@@ -119,7 +119,7 @@ About this site
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Structural: Facade](/javase/se-pattern-facade.qmd)
+[{{< fa solid arrow-left >}} Facade](/javase/se-pattern-facade.qmd)
 <br>
 </div>
 <br>
@@ -131,7 +131,7 @@ About this site
 <br>
 <div class='column right next'>
 <br>
-[Structural: Decorator  {{< fa solid arrow-right >}}](/javase/se-pattern-decorator.qmd)
+[Decorator  {{< fa solid arrow-right >}}](/javase/se-pattern-decorator.qmd)
 <br>
 </div>
 <br>

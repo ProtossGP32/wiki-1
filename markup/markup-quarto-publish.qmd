@@ -151,7 +151,7 @@ Your Quarto website will be published by GitHub pages on:
 <br>
 <div class='column right next'>
 <br>
-[Quarto Markdown: data sources  {{< fa solid arrow-right >}}](/markup/markup-quarto-code.qmd)
+[Quarto Markdown: code & data  {{< fa solid arrow-right >}}](/markup/markup-quarto-code.qmd)
 <br>
 </div>
 <br>

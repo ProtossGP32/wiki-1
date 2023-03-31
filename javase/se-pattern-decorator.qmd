@@ -184,7 +184,7 @@ This example demonstrates how the Decorator pattern can be used to add behavior 
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Structural: Bridge](/javase/se-pattern-bridge.qmd)
+[{{< fa solid arrow-left >}} Bridge](/javase/se-pattern-bridge.qmd)
 <br>
 </div>
 <br>
@@ -196,7 +196,7 @@ This example demonstrates how the Decorator pattern can be used to add behavior 
 <br>
 <div class='column right next'>
 <br>
-[Behavioral: Observer  {{< fa solid arrow-right >}}](/javase/se-pattern-observer.qmd)
+[Composite  {{< fa solid arrow-right >}}](/javase/se-pattern-composite.qmd)
 <br>
 </div>
 <br>

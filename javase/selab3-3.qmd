@@ -329,7 +329,7 @@ classDiagram
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab#SE02-4: Movie/Review, interactivity and coupling](/javase/selab2-4.qmd)
+[{{< fa solid arrow-left >}} Lab#SE03-2: Library/Book, Sprint Zero](/javase/selab3-2.qmd)
 <br>
 </div>
 <br>

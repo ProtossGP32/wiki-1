@@ -103,7 +103,7 @@ By using the Strategy pattern in this way, the behavior of the sorting operation
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Behavioral: Observer](/javase/se-pattern-observer.qmd)
+[{{< fa solid arrow-left >}} Observer](/javase/se-pattern-observer.qmd)
 <br>
 </div>
 <br>
@@ -115,7 +115,7 @@ By using the Strategy pattern in this way, the behavior of the sorting operation
 <br>
 <div class='column right next'>
 <br>
-[Behavioral: State  {{< fa solid arrow-right >}}](/javase/se-pattern-state.qmd)
+[State  {{< fa solid arrow-right >}}](/javase/se-pattern-state.qmd)
 <br>
 </div>
 <br>

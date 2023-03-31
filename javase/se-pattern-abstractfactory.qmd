@@ -22,7 +22,7 @@ About this site
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Creational: Factory](/javase/se-pattern-factory.qmd)
+[{{< fa solid arrow-left >}} Factory](/javase/se-pattern-factory.qmd)
 <br>
 </div>
 <br>
@@ -34,7 +34,7 @@ About this site
 <br>
 <div class='column right next'>
 <br>
-[Creational: Builder  {{< fa solid arrow-right >}}](/javase/se-pattern-builder.qmd)
+[Builder  {{< fa solid arrow-right >}}](/javase/se-pattern-builder.qmd)
 <br>
 </div>
 <br>

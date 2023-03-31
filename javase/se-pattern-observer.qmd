@@ -128,7 +128,7 @@ About this site<!--- navLinks -->
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Structural: Decorator](/javase/se-pattern-decorator.qmd)
+[{{< fa solid arrow-left >}} Composite](/javase/se-pattern-composite.qmd)
 <br>
 </div>
 <br>
@@ -140,7 +140,7 @@ About this site<!--- navLinks -->
 <br>
 <div class='column right next'>
 <br>
-[Behavioral: Strategy  {{< fa solid arrow-right >}}](/javase/se-pattern-strategy.qmd)
+[Strategy  {{< fa solid arrow-right >}}](/javase/se-pattern-strategy.qmd)
 <br>
 </div>
 <br>

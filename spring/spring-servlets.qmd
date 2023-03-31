@@ -149,7 +149,7 @@ The random number is displayed along with the message, and the user is given the
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Framework](/spring/spring-basics.qmd)
+[{{< fa solid arrow-left >}} Spring MVC](/spring/spring-mvc.qmd)
 <br>
 </div>
 <br>
@@ -161,7 +161,7 @@ The random number is displayed along with the message, and the user is given the
 <br>
 <div class='column right next'>
 <br>
-[Spring Boot: Fundamentals  {{< fa solid arrow-right >}}](/springboot/boot-what-basics.qmd)
+[Spring Boot: fundamentals  {{< fa solid arrow-right >}}](/springboot/boot-what-basics.qmd)
 <br>
 </div>
 <br>

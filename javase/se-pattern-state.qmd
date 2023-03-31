@@ -142,7 +142,7 @@ That's a basic example of how to implement the State pattern in Java. In a real-
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Behavioral: Strategy](/javase/se-pattern-strategy.qmd)
+[{{< fa solid arrow-left >}} Strategy](/javase/se-pattern-strategy.qmd)
 <br>
 </div>
 <br>
@@ -154,7 +154,7 @@ That's a basic example of how to implement the State pattern in Java. In a real-
 <br>
 <div class='column right next'>
 <br>
-[Lab#SE00-1: Maven Person  {{< fa solid arrow-right >}}](/javase/selab0-1.qmd)
+[Commander  {{< fa solid arrow-right >}}](/javase/se-pattern-commander.qmd)
 <br>
 </div>
 <br>

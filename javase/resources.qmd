@@ -60,7 +60,7 @@ by **Victor C.**
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab#SE02-5: Movie/Review, simulate interactivity by console](/javase/selab2-5.qmd)
+[{{< fa solid arrow-left >}} Lab#SE03-3: Library/Book, Expand Model](/javase/selab3-3.qmd)
 <br>
 </div>
 <br>

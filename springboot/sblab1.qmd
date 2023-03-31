@@ -74,7 +74,7 @@ Base project:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Boot: Data](/springboot/boot-concepts-data.qmd)
+[{{< fa solid arrow-left >}} Lab#SB00-6: Rest & MongoDB](/springboot/sblab0-6.qmd)
 <br>
 </div>
 <br>
@@ -86,7 +86,7 @@ Base project:
 <br>
 <div class='column right next'>
 <br>
-[Lab 2: Spring Boot Projects  {{< fa solid arrow-right >}}](/springboot/sblab2.qmd)
+[Lab#SB02-1: Projects  {{< fa solid arrow-right >}}](/springboot/sblab2.qmd)
 <br>
 </div>
 <br>

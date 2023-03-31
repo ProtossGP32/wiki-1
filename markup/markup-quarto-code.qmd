@@ -218,7 +218,7 @@ commits = contributors.map(contributor => {
 <br>
 <div class='column right next'>
 <br>
-[Quarto Markdown: cheat-sheet  {{< fa solid arrow-right >}}](/markup/markup-quarto-cheatsheet.qmd)
+[Quarto Markdown: api rest call  {{< fa solid arrow-right >}}](/markup/markup-quarto-api-rest.qmd)
 <br>
 </div>
 <br>

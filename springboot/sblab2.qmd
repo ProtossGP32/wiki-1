@@ -142,7 +142,7 @@ Welcome to the cifojava2022-3 wiki!
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab 1: Spring Boot Projects](/springboot/sblab1.qmd)
+[{{< fa solid arrow-left >}} Lab#SB01-1: DataBase](/springboot/sblab1.qmd)
 <br>
 </div>
 <br>
@@ -154,7 +154,7 @@ Welcome to the cifojava2022-3 wiki!
 <br>
 <div class='column right next'>
 <br>
-[Lab 3: Spring Boot Projects  {{< fa solid arrow-right >}}](/springboot/sblab3.qmd)
+[Lab#SB03-1: API  {{< fa solid arrow-right >}}](/springboot/sblab3.qmd)
 <br>
 </div>
 <br>

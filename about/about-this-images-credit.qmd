@@ -50,7 +50,7 @@ categories: [about, images-credit]
 <br>
 <div class='column right next'>
 <br>
-[About learning  {{< fa solid arrow-right >}}](/about/about-learning-intro.qmd)
+[Home {{< fa solid arrow-right >}}](/index.qmd)
 <br>
 </div>
 <br>

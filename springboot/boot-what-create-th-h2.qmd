@@ -416,7 +416,7 @@ Any changes to views or resources can be seen in the browser directly, no need r
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Boot: Fundamentals](/springboot/boot-what-basics.qmd)
+[{{< fa solid arrow-left >}} Spring Boot: create a Project](/springboot/boot-what-create.qmd)
 <br>
 </div>
 <br>
@@ -428,7 +428,7 @@ Any changes to views or resources can be seen in the browser directly, no need r
 <br>
 <div class='column right next'>
 <br>
-[Spring Boot: Annotations  {{< fa solid arrow-right >}}](/springboot/boot-concepts-annotations.qmd)
+[Spring Boot: cycle  {{< fa solid arrow-right >}}](/springboot/boot-what-cycle.qmd)
 <br>
 </div>
 <br>

@@ -313,7 +313,7 @@ BorrowRecord --> BookCopy
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Boot: Data](/springboot/boot-concepts-data.qmd)
+[{{< fa solid arrow-left >}} Spring Boot: JPA](/springboot/boot-concepts-jpa.qmd)
 <br>
 </div>
 <br>
@@ -325,7 +325,7 @@ BorrowRecord --> BookCopy
 <br>
 <div class='column right next'>
 <br>
-[Lab 2: Spring Boot Projects  {{< fa solid arrow-right >}}](/springboot/sblab2.qmd)
+[Lab#SB00-2: CRUD User  {{< fa solid arrow-right >}}](/springboot/sblab0-2.qmd)
 <br>
 </div>
 <br>

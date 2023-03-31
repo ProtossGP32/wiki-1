@@ -38,7 +38,7 @@ format:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} ReactJS Vocabulary](/vocabulary/vocab-reactjs.qmd)
+[{{< fa solid arrow-left >}} ReactJS Vocabulary](/learning/learning-vocab-reactjs.qmd)
 <br>
 </div>
 <br>
@@ -50,7 +50,7 @@ format:
 <br>
 <div class='column right next'>
 <br>
-[IFCD0210 Official Docs  {{< fa solid arrow-right >}}](/ifcd0210/ifcd0210.qmd)
+[Learning: tips  {{< fa solid arrow-right >}}](/learning/learning-how-intro.qmd)
 <br>
 </div>
 <br>

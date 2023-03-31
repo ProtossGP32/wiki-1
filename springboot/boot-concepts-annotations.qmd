@@ -65,7 +65,7 @@ Here are some examples of common annotations used in Spring Boot:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Boot: create a Spring Boot Project](/springboot/boot-what-create.qmd)
+[{{< fa solid arrow-left >}} Spring Boot: Dependency Injection](/springboot/boot-concepts-injection.qmd)
 <br>
 </div>
 <br>

@@ -321,7 +321,7 @@ This page includes the ``layout`` by setting the ``layout:decorator`` attribute 
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Boot: Controller](/springboot/boot-concepts-controller.qmd)
+[{{< fa solid arrow-left >}} Spring Boot: View](/springboot/boot-concepts-view.qmd)
 <br>
 </div>
 <br>

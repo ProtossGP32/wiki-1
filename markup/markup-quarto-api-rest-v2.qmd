@@ -141,7 +141,7 @@ viewof loadingMessage = Inputs.button("...");
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Quarto Markdown: publishing](/markup/markup-quarto-publish.qmd)
+[{{< fa solid arrow-left >}} Quarto Markdown: api rest call](/markup/markup-quarto-api-rest.qmd)
 <br>
 </div>
 <br>

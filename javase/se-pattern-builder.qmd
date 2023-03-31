@@ -113,7 +113,7 @@ In this example, the House class represents the complex object that we want to b
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Creational: Abstract Factory](/javase/se-pattern-abstractfactory.qmd)
+[{{< fa solid arrow-left >}} Abstract Factory](/javase/se-pattern-abstractfactory.qmd)
 <br>
 </div>
 <br>
@@ -125,7 +125,7 @@ In this example, the House class represents the complex object that we want to b
 <br>
 <div class='column right next'>
 <br>
-[Structural: Facade  {{< fa solid arrow-right >}}](/javase/se-pattern-facade.qmd)
+[Facade  {{< fa solid arrow-right >}}](/javase/se-pattern-facade.qmd)
 <br>
 </div>
 <br>

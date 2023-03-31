@@ -24,7 +24,7 @@ About this site
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab 4: Spring Boot Projects `JPA Inherence` strategies](/springboot/sblab4.qmd)
+[{{< fa solid arrow-left >}} Lab#SB04-1: `JPA Inherence` strategies](/springboot/sblab4.qmd)
 <br>
 </div>
 <br>

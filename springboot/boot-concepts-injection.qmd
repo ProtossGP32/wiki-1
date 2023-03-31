@@ -48,7 +48,7 @@ In summary, Dependency Injection (DI) is a design pattern that allows objects to
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Boot: JPA](/springboot/boot-concepts-jpa.qmd)
+[{{< fa solid arrow-left >}} Spring Boot: cycle](/springboot/boot-what-cycle.qmd)
 <br>
 </div>
 <br>
@@ -60,7 +60,7 @@ In summary, Dependency Injection (DI) is a design pattern that allows objects to
 <br>
 <div class='column right next'>
 <br>
-[Spring Boot: Rest  {{< fa solid arrow-right >}}](/springboot/boot-concepts-rest.qmd)
+[Spring Boot: Annotations  {{< fa solid arrow-right >}}](/springboot/boot-concepts-annotations.qmd)
 <br>
 </div>
 <br>

@@ -335,7 +335,7 @@ Links: [orientdb](https://orientdb.com/docs/2.2.x/Teleporter-Table-Per-Concrete-
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab 3: Spring Boot Projects](/springboot/sblab3.qmd)
+[{{< fa solid arrow-left >}} Lab#SB03-1: API](/springboot/sblab3.qmd)
 <br>
 </div>
 <br>
@@ -347,7 +347,7 @@ Links: [orientdb](https://orientdb.com/docs/2.2.x/Teleporter-Table-Per-Concrete-
 <br>
 <div class='column right next'>
 <br>
-[Lab 5: subject  {{< fa solid arrow-right >}}](/springboot/sblab5.qmd)
+[Lab#SB05-1: Advanced  {{< fa solid arrow-right >}}](/springboot/sblab5.qmd)
 <br>
 </div>
 <br>

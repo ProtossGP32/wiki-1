@@ -105,7 +105,7 @@ This is a simple example of how you can use the facade pattern to simplify the i
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Creational: Builder](/javase/se-pattern-builder.qmd)
+[{{< fa solid arrow-left >}} Builder](/javase/se-pattern-builder.qmd)
 <br>
 </div>
 <br>
@@ -117,7 +117,7 @@ This is a simple example of how you can use the facade pattern to simplify the i
 <br>
 <div class='column right next'>
 <br>
-[Structural: Bridge  {{< fa solid arrow-right >}}](/javase/se-pattern-bridge.qmd)
+[Bridge  {{< fa solid arrow-right >}}](/javase/se-pattern-bridge.qmd)
 <br>
 </div>
 <br>

@@ -109,6 +109,12 @@ Overall, reading books can be a valuable way to improve your skills as a program
 <br><br>
 <div class=row>
 <br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} About images credit](/about/about-this-images-credit.qmd)
+<br>
+</div>
+<br>
 <div class='column center'>
 <br>
 [{{< fa solid arrow-up >}} top](#top)
@@ -117,7 +123,7 @@ Overall, reading books can be a valuable way to improve your skills as a program
 <br>
 <div class='column right next'>
 <br>
-[Linux: basic concepts  {{< fa solid arrow-right >}}](/linux/linux-what-basics.qmd)
+[Linux: basic concepts {{< fa solid arrow-right >}}](/linux/linux-what-basics.qmd)
 <br>
 </div>
 <br>

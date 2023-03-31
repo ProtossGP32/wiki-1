@@ -64,7 +64,7 @@ format:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab 5: subject](/springboot/sblab5.qmd)
+[{{< fa solid arrow-left >}} Lab#SB05-1: Advanced](/springboot/sblab5.qmd)
 <br>
 </div>
 <br>

@@ -179,7 +179,7 @@ They provide flexible schemas and **scale easily with large amounts of data and 
 <br>
 <div class='column right next'>
 <br>
-[Lab 1: Spring Boot Projects  {{< fa solid arrow-right >}}](/springboot/sblab1.qmd)
+[Spring Boot: JPA  {{< fa solid arrow-right >}}](/springboot/boot-concepts-jpa.qmd)
 <br>
 </div>
 <br>

@@ -37,7 +37,7 @@ format:
 <br>
 <div class='column right next'>
 <br>
-[General Vocabulary  {{< fa solid arrow-right >}}](/vocabulary/vocab-general.qmd)
+[General Vocabulary  {{< fa solid arrow-right >}}](/learning/learning-vocab-general.qmd)
 <br>
 </div>
 <br>

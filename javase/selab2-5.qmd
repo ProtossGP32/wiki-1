@@ -257,7 +257,7 @@ static void setIn(InputStream in)
 <br>
 <div class='column right next'>
 <br>
-[Java SE Resources  {{< fa solid arrow-right >}}](/javase/resources.qmd)
+[Lab#SE03-1: Library/Book, Core-Model  {{< fa solid arrow-right >}}](/javase/selab3-1.qmd)
 <br>
 </div>
 <br>

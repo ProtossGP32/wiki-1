@@ -91,7 +91,7 @@ host: www.conventionalcommits.org
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} About Taking Notes](/about/about-learning-take-notes.qmd)
+[{{< fa solid arrow-left >}} Taking Notes](/learning/learning-how-take-notes.qmd)
 <br>
 </div>
 <br>
@@ -103,7 +103,7 @@ host: www.conventionalcommits.org
 <br>
 <div class='column right next'>
 <br>
-[About the Useful Questions  {{< fa solid arrow-right >}}](/about/about-learning-questions.qmd)
+[Auto-Evaluate  {{< fa solid arrow-right >}}](/learning/learning-how-auto-evaluate.qmd)
 <br>
 </div>
 <br>

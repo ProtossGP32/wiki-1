@@ -40,7 +40,7 @@ tr:nth-child(5) {
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} IFCD0210 Calendar Backlog](/ifcd0210/ifcd0210calendar.qmd)
+[{{< fa solid arrow-left >}} IFCD0210 Calendar](/ifcd0210/ifcd0210calendar.qmd)
 <br>
 </div>
 <br>

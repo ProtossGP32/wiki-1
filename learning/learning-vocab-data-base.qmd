@@ -39,7 +39,7 @@ format:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Boot Vocabulay](/vocabulary/vocab-spring-boot.qmd)
+[{{< fa solid arrow-left >}} Spring Boot Vocabulary](/learning/learning-vocab-spring-boot.qmd)
 <br>
 </div>
 <br>
@@ -51,7 +51,7 @@ format:
 <br>
 <div class='column right next'>
 <br>
-[ReactJS Vocabulary  {{< fa solid arrow-right >}}](/vocabulary/vocab-reactjs.qmd)
+[ReactJS Vocabulary  {{< fa solid arrow-right >}}](/learning/learning-vocab-reactjs.qmd)
 <br>
 </div>
 <br>
