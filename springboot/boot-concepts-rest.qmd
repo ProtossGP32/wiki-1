@@ -116,10 +116,10 @@ In Spring Boot, the Spring MVC framework is used to build RESTful web services, 
 Spring Boot provides many features to make building RESTful web services easy, such as support for JSON and XML serialization and deserialization, automatic content negotiation, and built-in exception handling.
 :::
 
+
 ## Using Annotations
 
 In this table, we will explore some of the most commonly used annotations in Spring Boot. These annotations can be used to map HTTP requests to controller methods, extract data from the request, bind data to model attributes, and handle exceptions. Understanding these annotations is essential for building Spring Boot applications that are reliable, scalable, and maintainable.
-
 
 
 | Annotation | Description |
@@ -152,6 +152,21 @@ GET, POST, PUT, PATCH, and DELETE are **HTTP methods that are used to perform CR
 
 ![](/images/springboot/swagger-petstore-endpoint-methods.png){width="80&"}
 
+## API Rest clean style
+
+When designing an API in a RESTful style, it's important to follow **some best practices to ensure that your API is easy to understand, maintain, and use.**
+
+Here are some guidelines for creating a clean **RESTful API:**
+
+1. Use HTTP methods: GET, POST, PUT, PATCH, DELETE.
+2. Use resource-oriented URLs **with clear hierarchy, plurals, and nouns: domains**
+3. Use **query parameters** for filtering and pagination.
+4. Use **HTTP status codes** to indicate request results.
+5. Use consistent response formats, such as JSON: @ResponseEntity
+6. Use **versioning** to handle API changes.
+7. Provide **clear documentation** with examples and practices.
+
+![API Rest clean style](/images/springboot/api-style.png){width="40%"}
 
 
 ## Example
