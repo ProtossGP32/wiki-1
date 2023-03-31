@@ -23,10 +23,13 @@ JPA stands for `Java Persistence API`.
 It is a Java specification for **managing, persisting, and accessing relational data** in Java applications. 
 
 JPA is a **standard API for ORM (Object-Relational Mapping)** and provides a way to map Java objects to relational databases.
-
 :::
 
+
 </br>
+
+![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture.png){width="80%"}
+
 
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa){.external}
 - [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/){.external}

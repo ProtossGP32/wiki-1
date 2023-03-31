@@ -17,6 +17,7 @@ In Spring Boot, the **Model-View-Controller (MVC)** pattern is used to separate 
 
 ::: {.summary}
 
+
 📘 **View**
 
 The `view` is responsible **for presenting the data to the user.**
@@ -31,7 +32,9 @@ The view can access the model and use it to generate the `HTML`, `JSON` or `XML`
 
 :::
 
----
+</br>
+
+![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture-6.png){width="80%"}
 
 
 ## Example1: Model

@@ -25,7 +25,9 @@ It is responsible for managing the **state of the application and communicating 
 
 :::
 
----
+</br>
+
+![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture-5.png){width="80%"}
 
 
 ## Overview

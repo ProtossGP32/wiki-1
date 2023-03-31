@@ -24,9 +24,11 @@ In Spring Boot, the **Model-View-Controller (MVC)** pattern is used to separate 
 
 :::
 
----
+</br>
 
-![](/images/springboot/thymeleaf_logo.png){width="50%"}
+![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture-6.png){width="80%"}
+
+![Thymeleaf](/images/springboot/thymeleaf_logo.png){width="30%"}
 
 
 ## Overview

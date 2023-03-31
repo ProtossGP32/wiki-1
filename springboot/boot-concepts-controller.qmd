@@ -25,7 +25,9 @@ In Spring Boot, controllers are implemented as classes with methods that handle 
 
 :::
 
----
+</br>
+
+![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture-4.png){width="80%"}
 
 ## Overwiew
 

@@ -18,29 +18,50 @@ format:
 
 📘 **Dependency Injection**
 
-Dependency injection (DI) is a design pattern that allows objects to receive their dependencies from external sources rather than creating them internally. In other words, it is a way to manage the dependencies between objects in a software application.
+``Dependency injection`` (DI) is a design pattern that allows objects to receive their dependencies from external sources rather than creating them internally. In other words, it is a way to manage the dependencies between objects in a software application.
 
 :::
 
 ---
 
-Dependency injection (DI) is a design pattern that allows objects to receive their dependencies from external sources rather than creating them internally. In other words, it is a way to manage the dependencies between objects in a software application.
+## Overview
 
-In Spring Boot, the dependency injection is provided by the Spring Framework. The Spring container is responsible for creating and managing the objects in the application, and it uses dependency injection to provide the objects with their dependencies.
+![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture-2.png){width="80%"}
 
-There are two types of dependency injection: Constructor injection and setter injection.
+``Dependency injection`` (DI) is a design pattern that **allows objects to receive their dependencies from external sources rather than creating them internally**. In other words, it is a way to manage the dependencies between objects in a software application.
 
-- Constructor injection: The dependencies are provided to the class through its constructor.
-- Setter injection: The dependencies are provided to the class through setter methods.
+In Spring Boot, the ``dependency injection`` is provided by the ``Spring Framework``. The ``Spring container`` is responsible for **creating and managing the objects in the application**, and it uses ``dependency injection`` to provide the objects with their dependencies.
 
-With dependency injection, objects are no longer responsible for creating or managing their dependencies, which makes the code more maintainable and easier to test.
+There are thre types of ``dependency injection``:
 
-The @Autowired annotation is used in Spring Boot to automatically wire a bean from the Spring application context into a class field or method. This allows you to use dependency injection to provide objects with their dependencies without having to manually create or manage them.
+- ``Constructor injection``: The dependencies are provided to the class through its constructor.
+- ``Setter injection``: The dependencies are provided to the class through setter methods.
+- ``Method Injection``: The dependencies are provided to the class through an interface which declares the method(s)
 
-In summary, Dependency Injection (DI) is a design pattern that allows objects to receive their dependencies from external sources rather than creating them internally. Spring Boot uses DI to manage the dependencies between objects and provide them with their dependencies using Constructor injection and setter injection, the @Autowired annotation is used to wire the bean from the Spring application context.
+With ``dependency injectio``n, objects are no longer responsible for creating or managing their dependencies, which makes the code more maintainable and easier to test.
+
+The @Autowired annotation is used in Spring Boot to automatically wire a bean from the Spring application context into a class field or method. This allows you to use ``dependency injection`` to provide objects with their dependencies without having to manually create or manage them.
 
 
+::: {.callout-note}
+## Dependency Injection
+``Dependency Injection`` (DI) is a design pattern that allows objects to receive their dependencies from external sources rather than creating them internally. 
 
+Spring Boot uses DI to manage the dependencies between objects and provide them with their dependencies using Constructor injection and setter injection, the @Autowired annotation is used to wire the bean from the Spring application context.
+:::
+
+## Advantages
+
+- [Dependency Injection](https://umuzi-org.github.io/tech-department/topics/java-specific/introduction-to-spring-boot/part-1/#dependency-injection){.external}
+
+``Inversion of Control`` is a principle in software engineering by which the control of objects or portions of a program is transferred to a container or framework. It’s most often used in the context of object-oriented programming.
+
+By contrast with traditional programming, in which our custom code makes calls to a library, ``IoC`` enables a framework to take control of the flow of a program and make calls to our custom code.
+
+- decoupling the execution of a task from its implementation
+- making it easier to switch between different implementations
+- greater modularity of a program
+- greater ease in testing a program by isolating a component or mocking its dependencies and - allowing components to communicate through contracts
 
 <!--- navLinks -->
 <br><br>

@@ -26,6 +26,7 @@ They are used to provide ``metadata`` about a class, method, or field, and are u
 
 ---
 
+![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture-1.png){.width="80%"}
 
 Here are some examples of common annotations used in Spring Boot:
 
