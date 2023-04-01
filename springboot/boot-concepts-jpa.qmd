@@ -25,10 +25,9 @@ It is a Java specification for **managing, persisting, and accessing relational 
 JPA is a **standard API for ORM (Object-Relational Mapping)** and provides a way to map Java objects to relational databases.
 :::
 
-
 </br>
 
-![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture.png){width="80%"}
+![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture-8.png){width="80%"}
 
 
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa){.external}
@@ -174,13 +173,17 @@ The **Dependency Inversion Principle (DIP)** is a software design principle that
 ## ``@Repository``
 The ``@Repository`` **annotation** follows this principle by allowing the **DAO layer to depend on an interface (abstraction)** instead of directly depending on a concrete implementation.
 
-This allows for easier maintenance, testing, and flexibility in changing the implementation of the DAO layer.
+This allows for easier maintenance, testing, and flexibility in changing the implementation of the ``DAO`` layer.
 :::
 
 
-Dependency Injection (DI) is a design pattern that implements the DIP by injecting dependencies (objects or interfaces) into a class at runtime. In the case of the @Repository annotation, the dependency is the EntityManager object, which is injected into the DAO class using the @PersistenceContext annotation. This allows the DAO to be decoupled from the EntityManager implementation and provides flexibility to use different implementations of the EntityManager.
+``Dependency Injection`` (DI) is a design pattern that **implements the DIP by injecting dependencies (objects or interfaces) into a class at runtime.**
 
-![DIP - [Dependency Inversion Principle](https://www.tutorialsteacher.com/ioc/dependency-inversion-principle){.external}](/images/springboot/dip.png){width="50%"}
+In the case of the @Repository annotation, the dependency is the EntityManager object, which is injected into the ``DAO`` class using the @PersistenceContext annotation. 
+
+This allows the ``DAO`` to be decoupled from the EntityManager implementation and provides flexibility to use different implementations of the EntityManager.
+
+![DIP - [Dependency Inversion Principle](https://www.tutorialsteacher.com/ioc/dependency-inversion-principle){.external}](/images/springboot/dip.png){width="70%"}
 
 
 ::: {.column-margin}

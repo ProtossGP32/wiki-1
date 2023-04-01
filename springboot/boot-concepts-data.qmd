@@ -30,6 +30,10 @@ The projects are developed by working together with many of the companies and de
 
 </br>
 
+![Spring Boot Request-Response Cycle](/images/springboot/springboot-architecture-7.png){width="80%"}
+
+## Overview
+
 ![Spring Data](/images/springboot/springdata.png){width="60%"}
 
 - [Spring Boot Data](https://spring.io/projects/spring-data#overview){.external}
@@ -51,7 +55,7 @@ Possibility to integrate custom repository code - Easy Spring integration via Ja
 :::
 
 
-## Overview
+
 
 ``Spring Boot`` provides support for both ``SQL`` and ``NoSQ``L databases through its ``Spring Data`` module.
 
