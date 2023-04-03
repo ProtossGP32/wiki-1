@@ -170,6 +170,9 @@ Here are some guidelines for creating a clean **RESTful API:**
 
 ![API Rest clean style](/images/springboot/api-style.png){width="40%"}
 
+## API Rest mindmap
+
+![API Rest roadmap-mindset](/images/springboot/REST-API-Mindmap.png){width="40%"}
 
 ## Example
 

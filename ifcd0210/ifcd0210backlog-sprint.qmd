@@ -18,10 +18,10 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #15 | 70 | 03/04 | - | - |
-|  | 71 | 04/04 | - | - |
-|  | 72 | 05/04 | - | - |
-|  | 73 | 06/04 | - | - |
+| #15 | 70 | 03/04 | - LibraryManagement </br> (1) API Rest @ResponseEntity  </br> (2) JPA H2 DB `Book` and `User` | - |
+|  | 71 | 04/04 | - LibraryManagement </br> (1) JPA H2 DB: `Borrow`  | - |
+|  | 72 | 05/04 | - LibraryManagement </br> (1) MongoDB  | - |
+|  | 73 | 06/04 | - LibraryManagement </br> (1) MongoDB | - |
 : Backlog Sprint#15 April 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
