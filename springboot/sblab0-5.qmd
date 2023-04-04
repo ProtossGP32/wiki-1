@@ -29,6 +29,12 @@ We will walk through the steps to set up a `H2 database` in Linux Spring Boot, c
 
 ## Install and create a H2 DB
 
+References:
+
+- [Spring Boot: H2 DB and Thymeleaf](/springboot/boot-what-create-th-h2.qmd)
+- [Spring Boot: Rest](/springboot/boot-concepts-rest.qmd)
+- [Library5](https://github.com/AlbertProfe/cifojava2022-3/tree/master/library5){.external}
+
 Install Java and Spring Boot on your Linux machine or [start from previous project](/springboot/sblab0-4.qmd):
 
 - Download and install Java JDK from the official Oracle website.
@@ -44,15 +50,26 @@ Install Java and Spring Boot on your Linux machine or [start from previous proje
 
 ![Tree-folder project with UserRepository](/images/springboot/LibraryManagementRest-H2-3.png){width="60%"}
 
-### Configure H2 database in LibraryManagmentRest:
+### Configure H2 DB
 
 - `pom.xml`: dependencies H2 and JPA
 - `UserRepository` interface
 - `User` class @Entity
 - `application.properties`
-- modify service to create a User and save it to H2 DB
+- modify `service` to create a user object from API Rest and save it to H2 DB
 
 
+```java
+<dependency>
+  <groupId>com.h2database</groupId>
+  <artifactId>h2</artifactId>
+  <scope>runtime</scope>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+```
 
 ### `application.properties`
 
@@ -217,7 +234,9 @@ This should return a result set containing the User entity you just created.
 
 | Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
-| [Library Management Rest H2 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/4b1fd3c8f9be159c7b0f3f9f400ac3de737ac8e2/LibraryManagementRest){.external}  | add H2 to project: application.properties, @Entity, @UserRepository, POM | [Basic Structure](/images/springboot/LibraryManagementRest-H2-3.png){width="80%"} | [localhost:8090/api/user/createUser](/images/springboot/LibraryManagementRest-H2-4.png){width="80%"} |
+| [Library Management Rest H2 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/4b1fd3c8f9be159c7b0f3f9f400ac3de737ac8e2/LibraryManagementRest){.external}  | add H2 to project: application.properties, @Entity, @UserRepository, POM </br> userRestController: createUser, getAllusers | [Basic Structure](/images/springboot/LibraryManagementRest-H2-3.png){width="80%"} | [localhost:8090/api/user/createUser](/images/springboot/LibraryManagementRest-H2-4.png){width="80%"} |
+| [Library Management Rest H2 0.1](https://github.com/AlbertProfe/CifoJava2023/tree/fe772fd6b4a506e8dc78b68f76aec78abdfcd74f/LibraryManagementRest){.external}  | refactor user to H2, remove HashMap users and add ResponseEntity | - | - |
+| [Library Management Rest H2 0.2](){.external}  | refactor book to H2, remove HashMap books and add ResponseEntity | - | - |
 
 
 <!--- navLinks -->

@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(1) {
+tr:nth-child(2) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -18,9 +18,9 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #15 | 70 | 03/04 | - LibraryManagement </br> (1) API Rest @ResponseEntity  </br> (2) JPA H2 DB `Book` and `User` | - |
-|  | 71 | 04/04 | - LibraryManagement </br> (1) JPA H2 DB: `Borrow`  | - |
-|  | 72 | 05/04 | - LibraryManagement </br> (1) MongoDB  | - |
+| #15 | 70 | 03/04 | - LibraryManagementRest </br> (1) Install, create and set H2 DB  </br> (2) JPA H2 DB `Book` and `User` | [Library Management Rest H2 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/4b1fd3c8f9be159c7b0f3f9f400ac3de737ac8e2/LibraryManagementRest){.external} </br> [Spring Boot: H2 DB and Thymeleaf](/springboot/boot-what-create-th-h2.qmd) </br> [Spring Boot: Rest](/springboot/boot-concepts-rest.qmd) </br> [Lab#SB00-5](/springboot/sblab0-5.qmd) |
+|  | 71 | 04/04 | - LibraryManagementRest </br> (1) API Rest @ResponseEntity </br> (2) JPA H2 DB: refactor HashMap to H2 DB: `Book` </br>  (3) JPA H2 DB: refactor HashMap to H2 DB: `User` </br> (4) JPA H2 DB: optional | [Library Management Rest H2 0.1](https://github.com/AlbertProfe/CifoJava2023/tree/fe772fd6b4a506e8dc78b68f76aec78abdfcd74f/LibraryManagementRest){.external} </br> [Library Management Rest H2 0.2](){.external} |
+|  | 72 | 05/04 | - LibraryManagementRest </br> (1)  JPA H2 DB: @ManyToMany </br> (2)  JPA H2 DB: `Borrow`  | - |
 |  | 73 | 06/04 | - LibraryManagement </br> (1) MongoDB | - |
 : Backlog Sprint#15 April 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
