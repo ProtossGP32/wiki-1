@@ -97,7 +97,7 @@ spring.jpa.defer-datasource-initialization=true
 spring.main.banner-mode=off
 
 #DDL
-#create table book_table (book_id bigint not null, author varchar(255), isbn varchar(255), pages integer not null, published_year integer, book_title varchar(255), primary key (book_id))
+#example: create table book_table (book_id bigint not null, author varchar(255), isbn varchar(255), pages integer not null, published_year integer, book_title varchar(255), primary key (book_id))
 spring.jpa.hibernate.ddl-auto=update
 ```
 
@@ -236,7 +236,9 @@ This should return a result set containing the User entity you just created.
 | -- | -- | -- | -- |
 | [Library Management Rest H2 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/4b1fd3c8f9be159c7b0f3f9f400ac3de737ac8e2/LibraryManagementRest){.external}  | add H2 to project: application.properties, @Entity, @UserRepository, POM </br> userRestController: createUser, getAllusers | [Basic Structure](/images/springboot/LibraryManagementRest-H2-3.png){width="80%"} | [localhost:8090/api/user/createUser](/images/springboot/LibraryManagementRest-H2-4.png){width="80%"} |
 | [Library Management Rest H2 0.1](https://github.com/AlbertProfe/CifoJava2023/tree/fe772fd6b4a506e8dc78b68f76aec78abdfcd74f/LibraryManagementRest){.external}  | refactor user to H2, remove HashMap users and add ResponseEntity | - | - |
-| [Library Management Rest H2 0.2](){.external}  | refactor book to H2, remove HashMap books and add ResponseEntity | - | - |
+| [Library Management Rest H2 0.2](https://github.com/AlbertProfe/CifoJava2023/tree/6584393853ee83a567d6f50e9da1d24cab30e67d/LibraryManagementRest){.external}  | refactor book to H2, remove HashMap books and add ResponseEntity | - | - |
+| [Library Management Rest H2 0.3](https://github.com/AlbertProfe/CifoJava2023/tree/dc5e356288df97e515652eed95f30dbee6e37cc9/LibraryManagementRest){.external}  | refactor borrow to H2, remove HashMap borrows and add ResponseEntity </br> `getAllBorrows`, `populate` , `createBorrow`| - | - |
+| [Library Management Rest H2 0.4](https://github.com/AlbertProfe/CifoJava2023/tree/8a8ed4da847d476ed7fc6c9613314f5e0d34f734/LibraryManagementRest){.external}  | refactor borrow to H2, remove HashMap borrows and add ResponseEntity </br> `returnBook`| - | - |
 
 
 <!--- navLinks -->
