@@ -313,7 +313,7 @@ BorrowRecord --> BookCopy
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Spring Boot: JPA](/springboot/boot-concepts-jpa.qmd)
+[{{< fa solid arrow-left >}} Spring Boot: JPA & Mappings](/springboot/boot-concepts-jpa-2.qmd)
 <br>
 </div>
 <br>

@@ -236,7 +236,7 @@ In this case, the high order modules are the business logic layer and the low or
 <br>
 <div class='column right next'>
 <br>
-[Lab#SB00-1: Library UML  {{< fa solid arrow-right >}}](/springboot/sblab0-1.qmd)
+[Spring Boot: JPA Mappings  {{< fa solid arrow-right >}}](/springboot/boot-concepts-jpa-2.qmd)
 <br>
 </div>
 <br>

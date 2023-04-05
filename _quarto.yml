@@ -296,6 +296,7 @@ website:
             - springboot/boot-concepts-rest.qmd
             - springboot/boot-concepts-data.qmd
             - springboot/boot-concepts-jpa.qmd
+            - springboot/boot-concepts-jpa-2.qmd
          
         - text: "---"  
         - section: "Spring Boot Laboratories"
