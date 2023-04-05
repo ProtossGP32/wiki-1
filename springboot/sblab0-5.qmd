@@ -73,7 +73,9 @@ Install Java and Spring Boot on your Linux machine or [start from previous proje
 
 ### `application.properties`
 
-- Open the `application.properties` file located in the s`rc/main/resources` directory of your Spring Boot project.
+![application properties file](/images/springboot/application-properties.png){width="60%"}
+
+- Open the `application.properties` file located in the `sc/main/resources` directory of your Spring Boot project.
 - Add the following configuration to use the `H2 database`:
 
 ```java
@@ -109,6 +111,31 @@ This is a configuration file in the `application.properties` format for a Spring
 - The `spring.jpa` settings specify the Hibernate dialect to be used for the database, and set defer-datasource-initialization to true to delay database connection until necessary.
 - `spring.main.banner-mode=off` disables the Spring Boot banner during application startup.
 - `spring.jpa.hibernate.ddl-auto=update` instructs Hibernate to automatically update the database schema based on changes to JPA entity classes. In this case, it specifies a single table named book_table with columns for book_id, author, isbn, pages, published_year, and book_title.
+
+### DDL
+
+DDL stands for `Data Definition Language`. **It is a subset of SQL (Structured Query Language) used to define, modify and delete the structure of database objects** like tables, indexes, views, and procedures.
+
+::: {.column-margin}
+DDL commands are used to create or alter the schema of a database, which defines the layout of the data and the relationships between the tables. Some examples of DDL statements include CREATE TABLE, ALTER TABLE, DROP TABLE, CREATE INDEX, and CREATE PROCEDURE.
+:::
+
+::: {.callout-note}
+## `spring.jpa.hibernate.ddl-auto`
+Specifically, the `spring.jpa.hibernate.ddl-auto` **property** is used to control how **Hibernate generates or updates the database schema.** 
+
+The available options are `create`, `create-drop`, `update`, `validate`, and `none`.
+:::
+
+The available options are:
+
+- If set to `create`, Hibernate will create the database schema on application startup.
+- If set to c`reate-drop`, Hibernate will create the schema on startup and drop it on shutdown.
+- If set to `update`", Hibernate will update the schema to match the entity mappings. 
+- If set to `validate`", Hibernate will only validate the schema but not update it. 
+- And if set to `none`, Hibernate will not perform any schema management operations.
+
+It's important to choose the appropriate value for this property based on your specific needs and deployment environment.
 
 
 ### Create a User repository and User entity
@@ -240,6 +267,14 @@ This should return a result set containing the User entity you just created.
 | [Library Management Rest H2 0.3](https://github.com/AlbertProfe/CifoJava2023/tree/dc5e356288df97e515652eed95f30dbee6e37cc9/LibraryManagementRest){.external}  | refactor borrow to H2, remove HashMap borrows and add ResponseEntity </br> `getAllBorrows`, `populate` , `createBorrow`| - | - |
 | [Library Management Rest H2 0.4](https://github.com/AlbertProfe/CifoJava2023/tree/8a8ed4da847d476ed7fc6c9613314f5e0d34f734/LibraryManagementRest){.external}  | refactor borrow to H2, remove HashMap borrows and add ResponseEntity </br> `returnBook`| - | - |
 
+
+### Postman apis
+
+| Domain | Link | Objects |
+| -- | -- | -- |
+| books | [postman link](https://restless-comet-543993.postman.co/workspace/CifoJava2023~7b247b84-dbad-483c-be9a-c0fe5d691413/collection/7473960-c1620d8c-c576-4e34-8af4-0c9f990b6dfa?action=share&creator=7473960){.external} | `book` | 
+| borrow | [postman link](https://restless-comet-543993.postman.co/workspace/CifoJava2023~7b247b84-dbad-483c-be9a-c0fe5d691413/collection/7473960-b26c4d68-8937-49c1-97d1-fc4919283023?action=share&creator=7473960){.external} |  `borrow` | 
+| user | [postman link](https://restless-comet-543993.postman.co/workspace/CifoJava2023~7b247b84-dbad-483c-be9a-c0fe5d691413/collection/7473960-ccbd64c8-014d-4c44-9707-619aee02eeb3?action=share&creator=7473960){.external} | `user` |
 
 <!--- navLinks -->
 <br><br>
