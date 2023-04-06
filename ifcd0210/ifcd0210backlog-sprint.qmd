@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(4) {
+tr:nth-child(1) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -13,16 +13,16 @@ tr:nth-child(4) {
 
 ![Backlog coursedownload](/images/home/backlog.jpg){width="30%"}
 
-## ``Sprint#15`` (April)
+## ``Sprint#16`` (April)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #15 | 70 | 03/04 | - LibraryManagementRest </br> (1) Install, create and set H2 DB  </br> (2) JPA H2 DB `Book` and `User` entities | [Library Management Rest H2 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/4b1fd3c8f9be159c7b0f3f9f400ac3de737ac8e2/LibraryManagementRest){.external} </br> [Spring Boot: H2 DB and Thymeleaf](/springboot/boot-what-create-th-h2.qmd) </br> [Spring Boot: Rest](/springboot/boot-concepts-rest.qmd) </br> [Lab#SB00-5](/springboot/sblab0-5.qmd) |
-|  | 71 | 04/04 | - LibraryManagementRest </br> (1) API Rest @ResponseEntity </br> (2) JPA H2 DB: optional  </br>  (3) JPA H2 DB: refactor HashMap to H2 DB: `User` </br> (4) JPA H2 DB: refactor HashMap to H2 DB: `Book` | [Library Management Rest H2 0.1](https://github.com/AlbertProfe/CifoJava2023/tree/fe772fd6b4a506e8dc78b68f76aec78abdfcd74f/LibraryManagementRest){.external} </br> [Library Management Rest H2 0.2](https://github.com/AlbertProfe/CifoJava2023/tree/6584393853ee83a567d6f50e9da1d24cab30e67d/LibraryManagementRest){.external} |
-|  | 72 | 05/04 | - LibraryManagementRest </br> (1)  JPA H2 DB: populate `Borrow` table </br> (2)  JPA H2 DB: create `Borrow` with foreign Ids (keys) </br> (3)  JPA H2 DB: return `Borrow` with borrowId | [Library Management Rest H2 0.3](https://github.com/AlbertProfe/CifoJava2023/tree/dc5e356288df97e515652eed95f30dbee6e37cc9/LibraryManagementRest){.external} </br> [Library Management Rest H2 0.4](https://github.com/AlbertProfe/CifoJava2023/tree/8a8ed4da847d476ed7fc6c9613314f5e0d34f734/LibraryManagementRest){.external} </br>  |
-|  | 73 | 06/04 | - LibraryManagement </br> (1) JPA H2 DB: `borrowIds` in `user` </br> (2) JPA H2 DB: @OneToMany intro </br> (3) JPA H2 DB: @ManyToMany intro </br>  | [Library Management Rest H2 0.5](https://github.com/AlbertProfe/CifoJava2023/tree/50633e8524313a189d234805beb9234effb65d17/LibraryManagementRest){.external}  |
-: Backlog Sprint#15 April 2023 {tbl-colwidths="[2,2,2,55,39]"}
+| #16 | 74 | 11/04 | - | - |
+|  | 75 | 12/04 | - | - |
+|  | 76 | 13/04 | - | - |
+|  | 77 | 14/04 | - | - |
+: Backlog Sprint#16 April 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
 ::: {.callout-note}
