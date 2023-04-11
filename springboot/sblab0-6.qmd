@@ -26,21 +26,30 @@ Finally, use the repository to perform CRUD operations on your books collection.
 
 </br>
 
+## References
+
+- [Spring Boot Data](/springboot/boot-concepts-data.qmd)
+- [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/){.external}
+- [Spring Boot Integration with MongoDB Tutorial](https://www.mongodb.com/compatibility/spring-boot){.external}
+- [Java - Mapping POJOs](https://www.mongodb.com/developer/languages/java/java-mapping-pojos/){.external}
+- [MongoDB Atlas](https://cloud.mongodb.com/){.external}
+- [Library7](https://github.com/AlbertProfe/cifojava2022-5/wiki/Library7-:-MongoDB-Spring-Boot-Project-with-API-Rest){.external}
+
 ## Example: `Book`
 
-To connect your Spring Boot entity book to MongoDB Atlas, you can follow these steps:
+**To connect your Spring Boot entity book to MongoDB Atlas**, you can follow these steps:
 
-1. Create a MongoDB Atlas account: First, you need to create an account on MongoDB Atlas. You can sign up for a free account with a limit of 512 MB storage.
+1. Create a `MongoDB Atlas account`: First, you need to create an account on MongoDB Atlas. You can sign up for a free account with a limit of 512 MB storage.
 
-2. Create a new project: After logging in, create a new project and give it a name.
+2. **Create a new project**: After logging in, create a new project and give it a name.
 
-3. Create a new cluster: In the project dashboard, click on the "Build a New Cluster" button. Choose a provider, region, and the cluster tier that suits your requirements. Configure your cluster and click "Create Cluster" to start building your cluster.
+3. **Create a new cluster**: In the project dashboard, click on the "Build a New Cluster" button. Choose a provider, region, and the cluster tier that suits your requirements. Configure your cluster and click "Create Cluster" to start building your cluster.
 
-4. Create a database user and IP permission: Once the cluster is ready, create a database user with appropriate permissions.
+4. **Create a database user and IP permission**: Once the cluster is ready, create a database user with appropriate permissions and give network access (add your IP to `IP Access List`).
 
-5. Get connection string: After creating a database user, you will get a connection string that you can use to connect to your MongoDB Atlas cluster. Copy the connection string to use it later.
+5. **Get connection string**: After creating a database user, you will get a connection string that you can use **to connect to your MongoDB Atlas cluster**. Copy the connection string to use it later.
 
-6. Add MongoDB dependency: In your Spring Boot project, add the MongoDB dependency in the pom.xml file:
+6. Add MongoDB `dependency`: In your Spring Boot project, add the MongoDB `dependency` in the `pom.xml` file:
 
 ``` java
 <dependency>
@@ -51,7 +60,7 @@ To connect your Spring Boot entity book to MongoDB Atlas, you can follow these s
 
 
 
-7. Configure application.properties: In the application.properties file, add the following properties:
+7. Configure `application.properties`: In the `application.properties` file, add the following properties:
 
 
 ``` java
@@ -59,9 +68,9 @@ spring.data.mongodb.uri=mongodb+srv://<username>:<password>@<clustername>.mongod
 spring.data.mongodb.database=<dbname>
 ```
 
-Replace <username>, <password>, <clustername>, and <dbname> with your own values.
+Replace `<username>`, ``<password>``, `<clustername>`, and `<dbname>` with your own values.
 
-8. Create Book Entity: Create a Book entity class with annotations.
+8. Create `Book` `Document`: Create a `Book` entity class with annotations.
 
 ``` java
 @Document(collection = "books")
@@ -74,8 +83,8 @@ public class Book {
 }
 ```
 
-9. Create a Book repository: Create a repository interface that extends MongoRepository<Book, String>:
-10. 
+9. Create a `Book` `repository`: Create a repository interface that extends `MongoRepository<Book, String>`:
+
 
 ``` java
 public interface BookRepository extends MongoRepository<Book, String> {
@@ -84,7 +93,7 @@ public interface BookRepository extends MongoRepository<Book, String> {
 ```
 
 
-10. Use the Book repository: You can use the Book repository to perform CRUD operations on your books collection.
+1.  Use the `Book` `repository`: You can use the `Book` `repository` to perform CRUD operations on your books collection.
 
 ``` java
 @Service
