@@ -18,10 +18,10 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #16 | 74 | 11/04 | - | - |
-|  | 75 | 12/04 | - | - |
-|  | 76 | 13/04 | - | - |
-|  | 77 | 14/04 | - | - |
+| #16 | 74 | 11/04 | - NoSQL: what is NoSQL and SQL H2 JPA </br> - MongoDB / dynamoDB | [Spring Boot Data](/springboot/boot-concepts-data.qmd) </br>![employee NoSQL](/images/springboot/nosql_employee.png){width="30%"} - ![SQL is relationnal](/images/springboot/many-to-many-relation%20(1).png){width="30%"}</br> [Google sheet Employee template](https://docs.google.com/spreadsheets/d/1X4r6_FaPeXt11Wil_D9j6fqxJDhAzvL4KJUithBVqGQ/edit?usp=sharing){.external} </br>  [MongoDB Atlas. Fully managed MongoDB in the cloud.](https://cloud.mongodb.com/){.external} </br> [employeeCourse](/springboot/sblab6.qmd){.external}  | 
+|  | 75 | 12/04 | - LibraryManagement </br> (1) MongoDB: API Rest CRUD | [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/){.external} </br> [Spring Boot Integration with MongoDB Tutorial](https://www.mongodb.com/compatibility/spring-boot){.external} |
+|  | 76 | 13/04 | - LibraryManagement </br> (1) MongoDB: Images | - |
+|  | 77 | 14/04 | - LibraryManagement </br> (1) MongoDB: encrypted data | - |
 : Backlog Sprint#16 April 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
