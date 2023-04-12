@@ -243,6 +243,7 @@ public interface BookImageRepository extends MongoRepository<BookImage, String> 
 
 ### API Rest: postman
 
+#### `upload`
 
 - Open Postman and **create a new request.**
 - Set the HTTP method to `"POST"` and set the request URL to `"http://localhost:8090/api/image/upload".`
@@ -256,6 +257,16 @@ public interface BookImageRepository extends MongoRepository<BookImage, String> 
 ![Request Post create bookImage](/images/springboot/LibraryManagementRest-vmongodb-12.png){width="60%"}
 
 ![MongoDB collection document created](/images/springboot/LibraryManagementRest-vmongodb-13.png){width="60%"}
+
+#### `getImage`
+
+- Open Postman and **create a new request.**
+- Set the HTTP method to `"GET"` and set the request URL to `"http://localhost:8090/api/image/getImage".`
+- Click on the "Params" tab and select the "key-value" data: `id: 64367eb2a302f620eea0f1f7` 
+- The response from the server:
+
+
+![Request Get read bookImage](/images/springboot/LibraryManagementRest-vmongodb-15.png){width="60%"}
 
 ## Versions
 
