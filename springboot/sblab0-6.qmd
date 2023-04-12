@@ -26,6 +26,8 @@ Finally, use the repository to perform CRUD operations on your books collection.
 
 </br>
 
+![Basic architecture MongoDB Spring Boot Rest](/images/springboot/mongodb-springboot-rest.png){width="40%"}
+
 ## References
 
 - [Spring Boot Data](/springboot/boot-concepts-data.qmd)
@@ -93,7 +95,7 @@ public interface BookRepository extends MongoRepository<Book, String> {
 ```
 
 
-1.  Use the `Book` `repository`: You can use the `Book` `repository` to perform CRUD operations on your books collection.
+10.  Use the `Book` `repository`: You can use the `Book` `repository` to perform CRUD operations on your books collection.
 
 ``` java
 @Service
@@ -114,9 +116,50 @@ public class BookService {
     }
 }
 ```
-## `BookImage` mongoDB
+## LibraryManagementRest: mongoDB
+
+### mongoDB: `string connection`
+
+![Create account and cluster](/images/springboot/LibraryManagementRest-vmongodb-1.png){width="60%"}
 
 
+![ClusterTest where we will create our db](/images/springboot/LibraryManagementRest-vmongodb-2.png){width="60%"}
+
+
+![Create DB](/images/springboot/LibraryManagementRest-vmongodb-3.png){width="60%"}
+
+
+![DB and Collection name](/images/springboot/LibraryManagementRest-vmongodb-4.png){width="60%"}
+
+
+![Just created LibraryManagmentRest DB](/images/springboot/LibraryManagementRest-vmongodb-5.png){width="60%"}
+
+
+![Creating user to access DB](/images/springboot/LibraryManagementRest-vmongodb-6.png){width="60%"}
+
+
+![Add new user to db](/images/springboot/LibraryManagementRest-vmongodb-7.png){width="60%"}
+
+
+![Network access](/images/springboot/LibraryManagementRest-vmongodb-8.png){width="60%"}
+
+
+![Connect mongoDB to app: string connection](/images/springboot/LibraryManagementRest-vmongodb-9.png){width="60%"}
+
+
+![Connect to Clustertest: connect your application](/images/springboot/LibraryManagementRest-vmongodb-10.png){width="60%"}
+
+![Connect to Clustertest: string connection](/images/springboot/LibraryManagementRest-vmongodb-11.png){width="60%"}
+
+### application.properties
+
+### @Document
+
+### @RestController
+
+### @Repository
+
+### API Rest: postman
 
 
 ## Versions
