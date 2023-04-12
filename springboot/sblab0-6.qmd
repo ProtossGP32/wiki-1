@@ -290,7 +290,7 @@ public interface BookImageRepository extends MongoRepository<BookImage, String> 
 | books | [postman link](https://restless-comet-543993.postman.co/workspace/CifoJava2023~7b247b84-dbad-483c-be9a-c0fe5d691413/collection/7473960-c1620d8c-c576-4e34-8af4-0c9f990b6dfa?action=share&creator=7473960){.external} | `book` | 
 | borrow | [postman link](https://restless-comet-543993.postman.co/workspace/CifoJava2023~7b247b84-dbad-483c-be9a-c0fe5d691413/collection/7473960-b26c4d68-8937-49c1-97d1-fc4919283023?action=share&creator=7473960){.external} |  `borrow` | 
 | user | [postman link](https://restless-comet-543993.postman.co/workspace/CifoJava2023~7b247b84-dbad-483c-be9a-c0fe5d691413/collection/7473960-ccbd64c8-014d-4c44-9707-619aee02eeb3?action=share&creator=7473960){.external} | `user` |
-| bookImage | [postman link](https://restless-comet-543993.postman.co/workspace/CifoJava2023~7b247b84-dbad-483c-be9a-c0fe5d691413/collection/7473960-ccbd64c8-014d-4c44-9707-619aee02eeb3?action=share&creator=7473960){.external} | `bookImage` |
+| bookImage | [postman link](https://restless-comet-543993.postman.co/workspace/CifoJava2023~7b247b84-dbad-483c-be9a-c0fe5d691413/collection/7473960-83279a3e-c512-494c-b04f-b40fdbd9c918?action=share&creator=7473960){.external} | `bookImage` |
 
 
 
