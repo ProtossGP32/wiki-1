@@ -1,5 +1,5 @@
 ---
-title: "Lab#SB00-6: Styling"
+title: "Lab#SB00-7: Styling"
 subtitle: Spring Boot Library Management API Rest and NoSQL-MongoDB refartor
 author: albertprofe
 date: "06/01/2021"
