@@ -1,5 +1,5 @@
 ---
-title: "Lab#SB03-1: API"
+title: "Lab#SB03-1: APIs & cloud"
 subtitle: Spring Boot API Rest
 author: albertprofe
 date: "06/01/2021"
@@ -15,6 +15,8 @@ format:
 
 
 Welcome to the cifojava20Basics22-5 wiki!
+
+- [Postman guide to APIs](https://blog.postman.com/guide-to-apis-rest-soap-graphql-grpc-websockets/){.external}
 
 # Spring Boot Projects
 

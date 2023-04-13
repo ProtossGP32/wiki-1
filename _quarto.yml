@@ -307,6 +307,7 @@ website:
             - springboot/sblab0-4.qmd
             - springboot/sblab0-5.qmd
             - springboot/sblab0-6.qmd
+            - springboot/sblab0-7.qmd
             - text: "---"
             - springboot/sblab1.qmd
             - springboot/sblab2.qmd

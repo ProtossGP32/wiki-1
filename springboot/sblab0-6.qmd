@@ -15,13 +15,13 @@ format:
 
 ::: {.labs}
 
-📘 **Spring Boot Lab#SB00-5: API Rest and NoSQL-MongoDB**
+📘 **Spring Boot Lab#SB00-6: API Rest and NoSQL-MongoDB**
 
-Connecting Spring Boot entity book to MongoDB Atlas can be completed in a few steps. 
+Connecting Spring Boot `entity` book to `MongoDB Atlas` can be completed in a few steps. 
 
-To connect Spring Boot entity book to MongoDB Atlas, create an account, cluster and database user on MongoDB Atlas. Add MongoDB dependency, configure application.properties and create a Book entity and repository.
+To connect Spring Boot entity book to ``MongoDB Atlas``, create an account, cluster and database user on `MongoDB Atlas`. Add `MongoDB dependency`, configure application.properties and create a Book entity and repository.
 
-Finally, use the repository to perform CRUD operations on your books collection.
+Finally, use the repository to perform CRUD operations on your books `collection`.
 :::
 
 </br>
@@ -41,7 +41,7 @@ Finally, use the repository to perform CRUD operations on your books collection.
 
 **To connect your Spring Boot entity book to MongoDB Atlas**, you can follow these steps:
 
-1. Create a `MongoDB Atlas account`: First, you need to create an account on MongoDB Atlas. You can sign up for a free account with a limit of 512 MB storage.
+1. **Create** a `MongoDB Atlas account`: First, you need to create an account on `MongoDB Atlas`. You can sign up for a free account with a limit of **512 MB storage**.
 
 2. **Create a new project**: After logging in, create a new project and give it a name.
 
@@ -51,7 +51,7 @@ Finally, use the repository to perform CRUD operations on your books collection.
 
 5. **Get connection string**: After creating a database user, you will get a connection string that you can use **to connect to your MongoDB Atlas cluster**. Copy the connection string to use it later.
 
-6. Add MongoDB `dependency`: In your Spring Boot project, add the MongoDB `dependency` in the `pom.xml` file:
+6. Add **MongoDB** `dependency`: In your Spring Boot project, add the MongoDB `dependency` in the `pom.xml` file:
 
 ``` java
 <dependency>
@@ -62,7 +62,7 @@ Finally, use the repository to perform CRUD operations on your books collection.
 
 
 
-7. Configure `application.properties`: In the `application.properties` file, add the following properties:
+7. **Configure** `application.properties`: In the `application.properties` file, add the following properties:
 
 
 ``` java
@@ -72,7 +72,7 @@ spring.data.mongodb.database=<dbname>
 
 Replace `<username>`, ``<password>``, `<clustername>`, and `<dbname>` with your own values.
 
-8. Create `Book` `Document`: Create a `Book` entity class with annotations.
+8. **Create** `Book` `Document`: Create a `Book` `Document` class with annotations.
 
 ``` java
 @Document(collection = "books")
@@ -85,7 +85,7 @@ public class Book {
 }
 ```
 
-9. Create a `Book` `repository`: Create a repository interface that extends `MongoRepository<Book, String>`:
+9. **Create** a `Book` `repository`: Create a repository interface that extends `MongoRepository<Book, String>`:
 
 
 ``` java
@@ -95,7 +95,7 @@ public interface BookRepository extends MongoRepository<Book, String> {
 ```
 
 
-10.  Use the `Book` `repository`: You can use the `Book` `repository` to perform CRUD operations on your books collection.
+10.  **Use** the `Book` `repository`: You can use the `Book` `repository` to perform CRUD operations on your books collection.
 
 ``` java
 @Service
@@ -155,23 +155,23 @@ public class BookService {
 
 ![Connect to Clustertest: string connection](/images/springboot/LibraryManagementRest-vmongodb-11.png){width="60%"}
 
-### application.properties
+### `application.properties`
 
-To connect a Spring Boot application to MongoDB, you can use the spring.data.mongodb.uri property in the application.properties file to specify the connection string.
+To connect a Spring Boot application to MongoDB, you can use the spring.data.mongodb.uri property in the `application.properties` file to specify the `connection string`.
 
-The connection string typically consists of the username, password, host, port, and database name. 
+The `connection string` typically consists of the username, password, host, port, and database name. 
 
 ```java
 spring.data.mongodb.uri=mongodb+srv://cifo:1234@clustertest.0h8fd.mongodb.net/LibraryManagementRest
 spring.data.mongodb.database=LibraryManagementRest
 ```
 ::: {.column-margin}
-You can also use a connection string with additional options like SSL, authentication mechanisms, and connection pooling. By placing the connection string in the application.properties file, you can easily configure the connection and change it without modifying the source code.
+You can also use a `connection string` with additional options like SSL, authentication mechanisms, and connection pooling. By placing the connection string in the `application.properties` file, you can easily configure the connection and change it without modifying the source code.
 :::
 
-The Spring Boot MongoDB starter will automatically use the connection string to create a MongoDB client and configure the data source.
+The Spring Boot MongoDB starter will automatically use the `connection string` to create a `MongoDB` client and configure the data source.
 
-### @Document
+### `@Document`
 
 ```java
 @Data
@@ -187,7 +187,7 @@ public class BookImage {
 }
 ```
 
-### @RestController
+### `@RestController`
 
 ```java
 @RestController
@@ -233,7 +233,7 @@ public class BookImageRestController {
 }
 ```
 
-### @Repository
+### `@Repository`
 
 
 ```java
@@ -241,15 +241,19 @@ public class BookImageRestController {
 public interface BookImageRepository extends MongoRepository<BookImage, String> {}
 ```
 
-### API Rest: postman
+## API Rest: postman
 
-#### `upload`
+### `upload`
 
 - Open Postman and **create a new request.**
 - Set the HTTP method to `"POST"` and set the request URL to `"http://localhost:8090/api/image/upload".`
 - Click on the "Body" tab and select the "form-data" radio button. Set the request body to the following key-value:
 
-![ key-value to send an Image](/images/springboot/LibraryManagementRest-vmongodb-14.png){width="60%"}
+![key-value to send an Image](/images/springboot/LibraryManagementRest-vmongodb-14.png){width="60%"}
+
+and the name of the image:
+
+![Image name as a query param](/images/springboot/LibraryManagementRest-vmongodb-16.png){width="60%"}
 
 - This will create a **new bookImage document**, so click on the "Send" button to send the `request`.
 - If the `request` is successful, you should receive a response with a status code of 201 Created and the bookImage document in the response body.
@@ -258,7 +262,7 @@ public interface BookImageRepository extends MongoRepository<BookImage, String> 
 
 ![MongoDB collection document created](/images/springboot/LibraryManagementRest-vmongodb-13.png){width="60%"}
 
-#### `getImage`
+### `getImage`
 
 - Open Postman and **create a new request.**
 - Set the HTTP method to `"GET"` and set the request URL to `"http://localhost:8090/api/image/getImage".`
@@ -275,8 +279,10 @@ public interface BookImageRepository extends MongoRepository<BookImage, String> 
 
 | Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
-| [Library Management Rest MongoDB 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/d56d89b50179209547097c36a2da977a22d33875){.external}  | add MongoDB to project: application.properties, @Document, @Repository, POM </br> BookImageRestController: `upload`, `getImage`, `getDataImage`  | [Folder-tree `bookImage`](/images/springboot/LibraryManagementRest-vmongodb-0.png){width="60%"} | - |
-
+| [Library Management Rest MongoDB 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/d56d89b50179209547097c36a2da977a22d33875/LibraryManagementRest){.external}  | add MongoDB to project: application.properties, @Document, @Repository, POM </br> BookImageRestController: `upload`, `getImage`, `getDataImage`  | [Folder-tree `bookImage`](/images/springboot/LibraryManagementRest-vmongodb-0.png){width="60%"} | - |
+| [Library Management Rest MongoDB 0.1](https://github.com/AlbertProfe/CifoJava2023/tree/ffe874191e40e9f54f81a6e5c883edc581f96f5f/LibraryManagementRest){.external}  | all CRUD operations wiht `bookImage` document  | - | - |
+| [Library Management Rest MongoDB 0.2](){.external}  | add ImageBook Id to books List `book` entity  | - | - |
+| [Library Management Rest MongoDB 0.3](){.external}  | add data encryptation | - | - |
 
 
 ### Postman apis

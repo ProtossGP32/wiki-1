@@ -140,7 +140,16 @@ For example, if a book can have multiple authors and an author can have written 
 [API Rest Library-Book-Author @ManyToMany @OneToMany CRUD with Swagger and Inherence](/springboot/sblab2.qmd#api-rest-library-book-author-manytomany-onetomany-crud-with-swagger-and-inherence)
 :::
 
+## Inherence
 
+Here are some of the most common JPA `inherence cases` used in Spring Boot
+
+
+::: {.callout-tip}
+## Example:
+
+[Spring Boot Projects JPA Inherence strategies](/springboot/sblab0-4.qmd)
+:::
 
 <!--- navLinks -->
 <br><br>
