@@ -282,7 +282,7 @@ and the name of the image:
 | [Library Management Rest MongoDB 0.0](https://github.com/AlbertProfe/CifoJava2023/tree/d56d89b50179209547097c36a2da977a22d33875/LibraryManagementRest){.external}  | add MongoDB to project: application.properties, @Document, @Repository, POM </br> BookImageRestController: `upload`, `getImage`, `getDataImage`  | [Folder-tree `bookImage`](/images/springboot/LibraryManagementRest-vmongodb-0.png){width="60%"} | - |
 | [Library Management Rest MongoDB 0.1](https://github.com/AlbertProfe/CifoJava2023/tree/ffe874191e40e9f54f81a6e5c883edc581f96f5f/LibraryManagementRest){.external}  | all CRUD operations wiht `bookImage` document  | - | - |
 | [Library Management Rest MongoDB 0.2](https://github.com/AlbertProfe/CifoJava2023/tree/1ae3bdbc654df8f25658acf177e8d6b65e6c6c55/LibraryManagementRest){.external}  | add ImageBook Id to books List `book` **entity** </br> and bookId to `imageBook` **document** | - | [1](/images/springboot/LibraryManagementRest-vmongodb-17.png) - [2](/images/springboot/LibraryManagementRest-vmongodb-18.png) |
-| [Library Management Rest MongoDB 0.3](){.external}  | add data encryptation | - | - |
+| <s>[Library Management Rest MongoDB 0.3](){.external}</s>  | add data encryptation | - | - |
 
 
 ### Postman apis
