@@ -314,7 +314,7 @@ and the name of the image:
 <br>
 <div class='column right next'>
 <br>
-[Lab#SB01-1: DataBase  {{< fa solid arrow-right >}}](/springboot/sblab1.qmd)
+[Lab#SB00-7:Styling  {{< fa solid arrow-right >}}](/springboot/sblab0-7.qmd)
 <br>
 </div>
 <br>

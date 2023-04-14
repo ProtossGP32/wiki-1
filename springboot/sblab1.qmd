@@ -68,13 +68,15 @@ Base project:
 - @Entity [Book](https://github.com/AlbertProfe/cifojava2022-4/blob/master/libraryH2Command/src/main/java/com/example/myfirstprojectspring/Book.java)
 - @BookService Read and [Create operations](https://github.com/AlbertProfe/cifojava2022-4/blob/master/libraryH2Command/src/main/java/com/example/myfirstprojectspring/BookService.java)
 - @BookRepository JPA [2.0](https://github.com/AlbertProfe/cifojava2022-4/blob/e5f515ff93a99cc270bcfca47f3b4f0aef63d4b3/libraryH2Command/pom.xml#L23)
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab#SB00-6: Rest & MongoDB](/springboot/sblab0-6.qmd)
+[{{< fa solid arrow-left >}} Lab#SB00-7: Styling](/springboot/sblab0-7.qmd)
 <br>
 </div>
 <br>
