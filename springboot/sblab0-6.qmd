@@ -272,6 +272,30 @@ and the name of the image:
 
 ![Request Get read bookImage](/images/springboot/LibraryManagementRest-vmongodb-15.png){width="60%"}
 
+### `upload` one-to-many `Book`-`BookImage`
+
+![Spring Boot using two very diferent data-soruces](/images/springboot/mongodb-h2.png){width="60%"}
+
+We are going to update `upload` method, the below code is retrieving a book by its ID from a book repository. It then checks if the book exists and sets the book ID for a book image. If the book exists, it saves the book image to the book image repository and adds the book image ID to the book's list of image IDs, and then saves the updated book.
+
+Sharing the IDs is relevant for ensuring that the book and its associated images are properly linked and can be retrieved later.
+
+```java
+  // Finds a book in the book repository by its ID, if present.
+  Optional<Book> book = bookRepository.findById(bookId);
+  // Checks if the book exists and sets the book ID for the book image.
+  if (book.isPresent()) bookImage.setBookId(book.get().getBookId());
+  // If the book doesn't exist, return null.
+  else return null;
+  // Saves the book image to the book image repository.
+  BookImage bookImageSaved = bookImageRepository.save(bookImage);
+  // Adds the book image ID to the book's list of image IDs and saves the updated book.
+  Book bookUpdated = book.get().addBookImageId(bookImageSaved.getId());
+  bookRepository.save(bookUpdated);
+```
+
+
+
 ## Versions
 
 
