@@ -276,9 +276,24 @@ and the name of the image:
 
 ![Spring Boot using two very diferent data-soruces](/images/springboot/mongodb-h2.png){width="60%"}
 
-We are going to update `upload` method, the below code is retrieving a book by its ID from a book repository. It then checks if the book exists and sets the book ID for a book image. If the book exists, it saves the book image to the book image repository and adds the book image ID to the book's list of image IDs, and then saves the updated book.
+We are going to update `upload` method: both classes, `Book` and `BookImage` **will share ids in a one-to-many relationship.**
 
-Sharing the IDs is relevant for ensuring that the book and its associated images are properly linked and can be retrieved later.
+- `Book` will be stored at **local H2 SQL DB**.
+- `BookImage` will be stores at **MongoDB Cloud noSQL DB.**
+  
+The below code is designed to:
+
+- retrieve a book by its ID from a book repository.
+- It then checks if the book exists and sets the book ID for a book image.
+- If the book exists, it saves the book image to the book image repository and adds the book image ID to the book's list of image IDs,
+- and then saves the updated book.
+
+::: {.callout-note}
+## upload image updated
+method Create CRUD API Rest `public BookImage saveBookImage()` on @RestController `public class BookImageRestController{}`:
+
+[upload updated](https://github.com/AlbertProfe/CifoJava2023/blob/44b54624a5a156edabe8095d0a9dc6bf28329591/LibraryManagementRest/src/main/java/com/example/myFirstSpring/restcontroller/BookImageRestController.java#L37){.external}
+:::
 
 ```java
   // Finds a book in the book repository by its ID, if present.
@@ -294,6 +309,14 @@ Sharing the IDs is relevant for ensuring that the book and its associated images
   bookRepository.save(bookUpdated);
 ```
 
+- Open Postman and **create a new request.**
+- Set the HTTP method to `"POST"` and set the request URL to `"http://localhost:8090/api/image/upload".`
+- Click on the "Body" tab and select the "form-data" radio button. Set the request body to the following key-value for both, `name` and `bookId`:
+
+![upload image with bookId @RequestParam](/images/springboot/LibraryManagementRest-vmongodb-17.png){width="60%"} 
+
+
+![getAll bookImages and find out the previous bookId with the bookImageId related](/images/springboot/LibraryManagementRest-vmongodb-18.png){width="60%"}
 
 
 ## Versions
