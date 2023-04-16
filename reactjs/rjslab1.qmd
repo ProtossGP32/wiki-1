@@ -13,19 +13,141 @@ format:
   html
 ---
 
-::: {.lab}
+::: {.labs}
+📘 **React JS Lab#RE01-1: API Rest and Axios**
 
-📘 **lab**
+In this lab, we will be using:
+
+- the ``Open Library API``, which is a ``RESTful API``, to create a React app that will display a list of books.
+- We will use the ``Axios`` library to make HTTP requests to the API and retrieve the data in JSON format.
+- We will display the ``book data`` in a table with four fields for each book: title, year, ISBN, pages, and author.
+- We will also add a ``loading state`` to show the user that the app is retrieving data from the API.
 
 
-
+The lab will demonstrate how to use a RESTful API with React to build a functional web application.
 :::
 
----
+</br>
 
 
-About this site
+## API Rest
 
+![](/images/reactjs/openlibrary-logo-tighter.svg){width="30%"}
+
+::: {.column-margin}
+An API (Application Programming Interface) is a set of protocols, routines, and tools that allow different software applications to communicate with each other. An API acts as a messenger that takes a request from one application and returns a response back to the requesting application.
+:::
+
+``REST (Representational State Transfer)`` is a software architectural style for building web services. It is based on HTTP (Hypertext Transfer Protocol) and is commonly used for creating APIs. A RESTful API allows different software applications to communicate with each other by using HTTP methods like GET, POST, PUT, and DELETE to access and manipulate data.
+
+::: {.column-margin}
+An Open API is an API that is publicly available and can be used by developers to build software applications. An Open API typically includes documentation and developer tools to help developers understand how to use the API.
+:::
+
+
+The Open Library API is a RESTful API that provides access to the data stored in the Open Library project. The Open Library project aims to create a web page for every book ever published. The API allows developers to retrieve information about books, authors, subjects, and more.
+
+The two ``Open Library API`` **endpoints** we are going to use are:
+
+- [Open Library Books](https://openlibrary.org/dev/docs/api/books)
+This endpoint provides documentation for the Open Library Books API. It includes information on how to use the API to search for books, retrieve book details, and access other book-related information.
+- [Open Library Books: get 100 books](https://openlibrary.org/search.json?q=*&limit=100)
+This endpoint is used to retrieve a list of up to 100 books from the Open Library API. The ``q=* `` parameter is used to search for all books, and the limit=100 parameter limits the results to 100 books. The response data is in JSON format and includes information like the book title, author, publication date, and more.
+
+
+
+
+## Create app
+
+
+First, let's create a new React app using ``Create React App`` by running the following command in your terminal:
+
+```js
+npx create-react-app books
+```
+Once the app is created, navigate into the project folder and install Axios, a popular library for making HTTP requests:
+
+```js
+cd books
+npm install axios
+```
+
+Now, let's create a new component called ``BookList`` that will ``fetch`` and display **the list of books**:
+
+```js
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const BookList = () => {
+  const [books, setBooks] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBooks = async () => {
+      
+        const response = await axios.get(
+          'https://openlibrary.org/search.json?q=*&limit=100'
+        );
+        const booksData = response.data.docs;
+        setBooks(booksData);
+        setIsLoading(false);
+    
+    };
+    fetchBooks();
+  }, []);
+
+  return (
+    <>
+    <h1>Books</h1>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {books.map((book) => (
+            <li key={book.key}>
+              <strong>Title:</strong> {book.title} <br />
+              <strong>Year:</strong> {book.publish_year && book.publish_year[0]} <br />
+              <strong>ISBN:</strong> {book.isbn && book.isbn[0]} <br />
+              <strong>Pages:</strong> {book.number_of_pages} <br />
+              <strong>Author:</strong> {book.author_name && book.author_name[0]}
+              </li>
+          ))}
+        </ul>
+      )}
+    </>
+  );
+};
+
+export default BookList;
+```
+
+
+Now, let's add the BookList component to our App component:
+
+
+```js
+import React from "react";
+import BookList from "./BookList";
+
+function App() {
+  return (
+    <>
+      <BookList />
+    </>
+  );
+}
+
+export default App;
+```
+
+Finally, let's start the development server and see the list of books in our browser:
+
+
+```js
+npm start
+```
+
+Open yo browser on`` http://localhost:3000/``
 
 <!--- navLinks -->
 <br><br>
