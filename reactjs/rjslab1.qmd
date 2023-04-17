@@ -24,12 +24,10 @@ In this lab, we will be using:
 - We will also add a ``loading state`` to show the user that the app is retrieving data from the API.
 
 
-The lab will demonstrate how to use a RESTful API with React to build a functional web application.
+The lab will demonstrate **how to use a RESTful API with React to build a functional web application**.
 :::
 
 </br>
-
-
 
 
 ## Install `nodejs` & `npm`
@@ -92,6 +90,8 @@ npx create-react-app books
 
 ![npx create-react-app books](/images/reactjs/create-react-app.png){width="30%"}
 
+![tree-folder project](/images/reactjs/lab-re-1-project.png){width="50%"}
+
 Once the app is created, navigate into the project folder and install Axios, a popular library for making HTTP requests:
 
 ```js
@@ -133,10 +133,10 @@ const BookList = () => {
           {books.map((book) => (
             <li key={book.key}>
               <strong>Title:</strong> {book.title} <br />
-              <strong>Year:</strong> {book.publish_year && book.publish_year[0]} <br />
-              <strong>ISBN:</strong> {book.isbn && book.isbn[0]} <br />
+              <strong>Year:</strong> {book.publish_year} <br />
+              <strong>ISBN:</strong> {book.isbn[0]} <br />
               <strong>Pages:</strong> {book.number_of_pages} <br />
-              <strong>Author:</strong> {book.author_name && book.author_name[0]}
+              <strong>Author:</strong> {book.author_name}
               </li>
           ))}
         </ul>
@@ -175,6 +175,8 @@ npm start
 ```
 
 Open yo browser on`` http://localhost:3000/``
+
+![render localhost:3001](/images/reactjs/lab-re-1-render.png){width="50%"}
 
 <!--- navLinks -->
 <br><br>
