@@ -32,7 +32,7 @@ The lab will demonstrate how to use a RESTful API with React to build a function
 
 ## API Rest
 
-![](/images/reactjs/openlibrary-logo-tighter.svg){width="30%"}
+![REST (Representational State Transfer) - Open Library API is a RESTful API](/images/reactjs/openlibrary-logo-tighter.svg){width="30%"}
 
 ::: {.column-margin}
 An API (Application Programming Interface) is a set of protocols, routines, and tools that allow different software applications to communicate with each other. An API acts as a messenger that takes a request from one application and returns a response back to the requesting application.
@@ -45,7 +45,7 @@ An Open API is an API that is publicly available and can be used by developers t
 :::
 
 
-The Open Library API is a RESTful API that provides access to the data stored in the Open Library project. The Open Library project aims to create a web page for every book ever published. The API allows developers to retrieve information about books, authors, subjects, and more.
+The `Open Library API is a RESTful API` that provides access to the data stored in the Open Library project. The Open Library project aims to create a web page for every book ever published. The API allows developers to retrieve information about books, authors, subjects, and more.
 
 The two ``Open Library API`` **endpoints** we are going to use are:
 
@@ -54,8 +54,12 @@ This endpoint provides documentation for the Open Library Books API. It includes
 - [Open Library Books: get 100 books](https://openlibrary.org/search.json?q=*&limit=100)
 This endpoint is used to retrieve a list of up to 100 books from the Open Library API. The ``q=* `` parameter is used to search for all books, and the limit=100 parameter limits the results to 100 books. The response data is in JSON format and includes information like the book title, author, publication date, and more.
 
+## Install `nodejs` & `npm`
+
+![sudo apt-get install nodejs](/images/reactjs/install-nodejs.png){width="30%"}
 
 
+![sudo apt-get install npm](/images/reactjs/install-npm.png){width="30%"}
 
 ## Create app
 

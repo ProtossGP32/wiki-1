@@ -18,11 +18,11 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #17 | 78 | 17/04 | - | - |
-|  | 79 | 18/04 | - | - |
-|  | 80 | 19/04 | - | - |
-|  | 81 | 20/04 | - | - |
-|  | 82 | 21/04 | - | - |
+| #17 | 78 | 17/04 | - React: </br> (1) Intro </br> (2) Create React Project `npx` | [Create React app](/reactjs/reactjs-what-create.qmd) </br> [Principles](/reactjs/reactjs-what-principles.qmd) </br> [Code sandbox](https://codesandbox.io/dashboard){.external} <br> [Lab#RE00-1](/reactjs/rjslab1.qmd)|
+|  | 79 | 18/04 | - React: </br> (1) Components </br> (2) JSX `.jsx` | [What is JSX](/reactjs/reactjs-what-jsx.qmd)  |
+|  | 80 | 19/04 | - React: </br> (1) css </br> (2) semantic  | [Semantic React](https://react.semantic-ui.com/){.external} </br> [Material React](https://m3.material.io/){.external} |
+|  | 81 | 20/04 | - React: </br> (1) Props and States </br> (2) React is immutable| [Props and states](/reactjs/reactjs-what-props.qmd) |
+|  | 82 | 21/04 | - SCRUM </br> (1) Week retrospective </br> - Vocabulary </br> - Pràctiques </br>| - |
 : Backlog Sprint#17 April 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
