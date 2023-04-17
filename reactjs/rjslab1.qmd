@@ -1,12 +1,12 @@
 ---
-title: "React JS: Lab#RE01-1"
-subtitle: ReactJS labs
+title: "Lab#RE01-1: API Rest Axios"
+subtitle: ReactJS API Rest Axios & Render Component
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: labs
-categories: [reactjs, lab, Lab#RE01]
+description: React JS Labs
+categories: [reactjs, lab]
 toc: true
 number-sections: true
 format:
