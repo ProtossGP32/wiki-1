@@ -58,6 +58,7 @@ This endpoint is used to retrieve a list of up to 100 books from the Open Librar
 
 ![sudo apt-get install nodejs](/images/reactjs/install-nodejs.png){width="30%"}
 
+![install nodejs from [nodejs](https://nodejs.org/en){.external}](/images/reactjs/install-nodejs-19.png){width="30%"}
 
 ![sudo apt-get install npm](/images/reactjs/install-npm.png){width="30%"}
 
@@ -69,6 +70,9 @@ First, let's create a new React app using ``Create React App`` by running the fo
 ```js
 npx create-react-app books
 ```
+
+![npx create-react-app books](/images/reactjs/create-react-app.png){width="30%"}
+
 Once the app is created, navigate into the project folder and install Axios, a popular library for making HTTP requests:
 
 ```js
