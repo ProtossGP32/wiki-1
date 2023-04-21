@@ -22,7 +22,7 @@ tr:nth-child(5) {
 |  | 79 | 18/04 | - React: </br> (1) Components </br> (2) JSX `.jsx` | [What is component](/reactjs/reactjs-what-components.qmd) </br>[What is JSX](/reactjs/reactjs-what-jsx.qmd) </br> [var, let and const](https://www.freecodecamp.org/news/differences-between-var-let-const-javascript/){.external} </br> [Git Code: hola & hola2](https://github.com/AlbertProfe/CifoJava2023-2){.external} |
 |  | 80 | 19/04 | - React: </br> (1) css </br> (2) semantic  | [Semantic React](https://react.semantic-ui.com/){.external} </br> [Material React](https://m3.material.io/){.external} |
 |  | 81 | 20/04 | - React: </br> (1) Props and States </br> (2) React is immutable| [Props and states](/reactjs/reactjs-what-props.qmd) </br> [What is immutability in React](https://reacttraining.com/blog/state-in-react-is-immutable){.external}  </br>[hola3: semantic Cards](https://github.com/AlbertProfe/CifoJava2023-2/tree/7360db4246c11f8600c99f31cdbf6b4f1800d03b){.external} </br> [semantic installation](https://react.semantic-ui.com/usage/){.external} |
-|  | 82 | 21/04 | - SCRUM </br> (1) Week retrospective </br> - Vocabulary </br> - Pràctiques </br>| - |
+|  | 82 | 21/04 | - SCRUM </br> (1) Week retrospective </br> - Vocabulary </br> - Pràctiques </br>| [hola4](https://github.com/AlbertProfe/CifoJava2023-2/tree/9a39be58befadce1a70f6d08497a208a8eec7a11){.external} </br> [Map mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map){.external} |
 : Backlog Sprint#17 April 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
