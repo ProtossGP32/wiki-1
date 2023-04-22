@@ -9,7 +9,7 @@ categories: [ifcd0210, backlog]
 ::: {.summary}
 
 - [December 2022](/ifcd0210/ifcd0210backlog-product.qmd#december-2022)
-- [January 2023](/ifcd0210/ifcd0210backlog-product.qmd#djanuary-2023)
+- [January 2023](/ifcd0210/ifcd0210backlog-product.qmd#january-2023)
 - [February 2023](/ifcd0210/ifcd0210backlog-product.qmd#february-2023)
 - [March 2023](/ifcd0210/ifcd0210backlog-product.qmd#march-2023)
 - [April 2023](/ifcd0210/ifcd0210backlog-product.qmd#april-2023)

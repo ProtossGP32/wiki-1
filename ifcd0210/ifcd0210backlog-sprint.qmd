@@ -18,11 +18,11 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #18 | 83 | 24/04 | - | - |
-|  | 84 | 25/04 | - | - |
-|  | 85 | 26/04 | - | - |
-|  | 86 | 27/04 | - | - |
-|  | 87 | 28/04 | - | - |
+| #18 | 83 | 24/04 | - React: </br> (1) props </br> (2) update/render cycle </br> (3) userState </br> | [Roadmap](/images/reactjs/roadmap.png){width="20%"} </br> [useState](/reactjs/reactjs-hook-state.qmd) |
+|  | 84 | 25/04 | - React: </br> (1) userEffect </br> (2) JS ES6 </br> - Pràctiques </br> | [useEffect](/reactjs/reactjs-hook-effect.qmd) </br> |
+|  | 85 | 26/04 | - React: </br> (1) userReducer </br> (2) JS ES6 </br> (3) conditional render | [useReducer](/reactjs/reactjs-hook-reducer.qmd) </br> [Conditional Render](/reactjs/reactjs-app-conditional-render.qmd) |
+|  | 86 | 27/04 | - React: </br> (1) userReducer </br> (2) JS ES6 </br> | - |
+|  | 87 | 28/04 | - SCRUM: </br> (2) Retrospecive </br>  (1) Lateralization </br> - Pràctiques </br> - Vocabulary </br> | - |
 : Backlog Sprint#18 April 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
