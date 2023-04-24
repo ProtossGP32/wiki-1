@@ -18,7 +18,7 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #18 | 83 | 24/04 | - React: </br> (1) props </br> (2) update/render cycle </br> (3) userState </br> | [Roadmap](/images/reactjs/roadmap.png){width="20%"} </br> [useState](/reactjs/reactjs-hook-state.qmd) |
+| #18 | 83 | 24/04 | - React: </br>  (0) roadmap </br>  (1) props </br> (2) update/render cycle </br> (3) userState </br> (4) project structure: tree-folder </br>  | [Roadmap](/images/reactjs/roadmap.png){width="20%"} </br> [useState](/reactjs/reactjs-hook-state.qmd) </br> [React project structure](/reactjs/reactjs-what-create.qmd#reactjs-project-structure) </br> [router example](https://codesandbox.io/s/to-do-11-hh9efc){.external} |
 |  | 84 | 25/04 | - React: </br> (1) userEffect </br> (2) JS ES6 </br> - Pràctiques </br> | [useEffect](/reactjs/reactjs-hook-effect.qmd) </br> |
 |  | 85 | 26/04 | - React: </br> (1) userReducer </br> (2) JS ES6 </br> (3) conditional render | [useReducer](/reactjs/reactjs-hook-reducer.qmd) </br> [Conditional Render](/reactjs/reactjs-app-conditional-render.qmd) |
 |  | 86 | 27/04 | - React: </br> (1) userReducer </br> (2) JS ES6 </br> | - |
