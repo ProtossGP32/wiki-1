@@ -1,30 +1,42 @@
 ---
-title: "React JS: Lab#RE02-1"
-subtitle: ReactJS labs
+title: "Lab#RE02-1: Router & Hooks"
+subtitle: ReactJS labs, Router & Hooks
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: labs
-categories: [reactjs, lab, Lab#RE02]
+description: React JS Labs
+categories: [reactjs, lab]
 toc: true
 number-sections: true
 format:
   html
 ---
 
-::: {.lab}
 
-📘 **lab**
+::: {.labs}
+📘 **React JS Lab#RE02-1: Router & Hooks**
+
+In this lab, we will be using:
+
+- the ``react-router-dom``, which is a package with bindings for using React Router in web applications.
+- We will use the ``Axios`` library to make HTTP requests to the API and retrieve the data in JSON format.
+- hooks: `useState`, `useEffect`, `useReducer`.
 
 
-
+The lab will demonstrate **how to use a ``react-router-dom`` with React to build a functional web application**.
 :::
 
----
+</br>
 
 
-About this site
+## Install `react-router-dom`
+
+From: [npm pacakge](https://www.npmjs.com/package/react-router-dom){.external} and [react router](/reactjs/reactjs-app-router.qmd)
+
+```js
+npm i react-router-dom
+```
 
 
 
