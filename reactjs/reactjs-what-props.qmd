@@ -1,5 +1,5 @@
 ---
-title: "React JS: props and state"
+title: "React JS: ``props`` and state"
 subtitle: Passing Props to a Component
 author: albertprofe
 date: "06/01/2021"
@@ -13,7 +13,6 @@ format:
   html
 ---
 
-## Passing Props to a Component
 
 ::: {.summary}
 
@@ -146,11 +145,11 @@ export default function Carla() {
 }
 ```
 
-## Stateful and Sateless
+## Pure Components
 
-### Sateful Components
+### Sateful/Stateless Components 
 
-Functions that internally modify the underlying data (props).
+> Sateful Components: Functions that internally modify the underlying data (props).
 
 ```{.jsx .code-overflow-wrap filename="profile.jsx"}
 function Hello({ name }) {
@@ -170,9 +169,9 @@ export default function Hello() {
 }
 ```
 
-### Sateless Components
+> Stateless Components: ``Pure components`` that respond to the underlying data received (``props``), without modifying it.
 
-Pure components that respond to the underlying data received (props), without modifying it. A pure function is a function where the return value is only determined by its input values, without observable side effects.
+A ``pure function`` is a function where the return value is only determined by its input values, without observable side effects.
 
 ```{.jsx .code-overflow-wrap filename="Hello.jsx"}
 function Hello({ name }) {
@@ -191,6 +190,53 @@ export default function Hello() {
   )
 }
 ```
+
+### Keep Components Pure
+
+::: {.callout-important}
+Writing pure functions takes a bit of practice, but it unlocks the power of React’s paradigm
+:::
+
+
+By strictly only [writing](https://react.dev/learn/keeping-components-pure){.external} your components as ``pure functions``, **you can avoid an entire class of baffling bugs and unpredictable behavior as your codebase grows**. To get these benefits, though, there are a few rules you must follow.
+
+- Rendering can happen at any time, so components **should not depend on** each others’ rendering sequence.
+- You **should not mutate any of the inputs that your components use for rendering**. That includes props, state, and context. To update the screen, “set” state instead of mutating preexisting objects.
+- Strive **to express your component’s logic in the JSX you return**. When you need to “change things”, you’ll usually want to do it in an event handler. As a last resort, you can useEffect.
+
+
+
+**React’s rendering process must always be pure.** Components should only return their JSX, and not change any objects or variables that existed before rendering—that would make them impure!
+
+Here is a component **that breaks this rule**:
+
+
+
+
+```{.jsx .code-overflow-wrap filename="Hello.jsx"}
+let guest = 0;
+
+function Cup() {
+  // Bad: changing a preexisting variable!
+  guest = guest + 1;
+  return <h2>Tea cup for guest #{guest}</h2>;
+}
+
+export default function TeaSet() {
+  return (
+    <>
+      <Cup />
+      <Cup />
+      <Cup />
+    </>
+  );
+}
+```
+::: {.column-margin}
+![render](/images/reactjs/ex60.png){width=100%}
+:::
+
+[Detecting impure calculations with StrictMode](https://react.dev/learn/keeping-components-pure#detecting-impure-calculations-with-strict-mode){.external}
 
 ## What is state and rendering: update/render cycle
 
@@ -252,7 +298,7 @@ This approach to state management can help <mark>to ensure that the state of a R
 
 It can also make it easier to debug issues in your application, as you can more easily trace the history of the state and see how it has changed.
 
-## And then, what is a mutation?
+### And then, what is a mutation?
 
 You can store any kind of JavaScript value in state.
 
