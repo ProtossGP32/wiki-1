@@ -33,6 +33,7 @@ editor:
 
 website:
   title: albertprofe wiki
+  favicon: /images/home/favicon.ico
   #cookie-consent:
   #  type: express
   #  style: headline
