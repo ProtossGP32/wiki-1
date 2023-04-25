@@ -147,7 +147,7 @@ export default function Carla() {
 
 ## Pure Components
 
-### Sateful/Stateless Components 
+### Stateful/Stateless Components 
 
 > Sateful Components: Functions that internally modify the underlying data (props).
 
@@ -238,6 +238,18 @@ export default function TeaSet() {
 
 [Detecting impure calculations with StrictMode](https://react.dev/learn/keeping-components-pure#detecting-impure-calculations-with-strict-mode){.external}
 
+::: {.callout-note}
+## Rendering must always be a pure calculation
+- Same inputs, same output.
+- It minds its own business.
+  
+Otherwise, you can encounter **confusing bugs and unpredictable behavior as your codebase grows in complexity**.
+
+When developing in `Strict Mode`, **React calls each component’s function twice**, which can help surface mistakes caused by impure functions.
+:::
+
+
+
 ## What is state and rendering: update/render cycle
 
 [State variables](https://beta.reactjs.org/learn/state-as-a-snapshot#setting-state-triggers-renders){.external} might look like regular JavaScript variables that you can read and write to.
@@ -289,6 +301,44 @@ export default function Counter() {
 ::: {.column-margin}
 ![Next render](/images/reactjs/ex55.png){width=100%}
 :::
+
+### update/render behaviour
+
+Any screen update in a React app happens **in three steps:**
+
+1. Trigger
+2. Render
+3. Paint-Commit
+
+::: {.column-margin}
+You can use `Strict Mode` to find mistakes in your components
+React does not touch the DOM if the rendering result is the same as last time
+:::
+
+[After](https://react.dev/learn/render-and-commit#step-3-react-commits-changes-to-the-dom){.external} rendering (calling) your components, React will modify the `DOM`.
+
+> **React only changes the DOM nodes if there’s a difference between renders**.
+
+For example, here is a component that re-renders with different props passed from its parent every second. Notice how you can add some text into the `<input>`, updating its value, but **the text doesn’t disappear** when the component re-renders:
+
+```js
+export default function Clock({ time }) {
+  return (
+    <>
+      <h1>{time}</h1>
+      <input />
+    </>
+  );
+}
+```
+
+::: {.column-margin}
+![render](/images/reactjs/ex61.png){width=100%}
+:::
+
+
+
+
 
 ## So, Is React immutable?
 
