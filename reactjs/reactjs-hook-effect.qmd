@@ -72,7 +72,7 @@ If your linter is configured for React, it will verify that every reactive value
 
 ## Example 1
 
-In this example, the ``reducer`` manages a state object with one field: ``age``.
+In this example, the ``useEffect`` hook manages a state object with one field: ``count`` and a function-setter `setCalculation`.
 
 ``` {.jsx .code-overflow-wrap filename="App.js"}
 import { useState, useEffect } from "react";
