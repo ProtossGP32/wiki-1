@@ -29,6 +29,7 @@ The lab will demonstrate **how to use a ``react-router-dom`` with React to build
 
 </br>
 
+Reference: [codesandbox React Project to-do-11](https://codesandbox.io/s/to-do-11-hh9efc?file=/src/index.js){.external}
 
 ## Install `react-router-dom`
 
@@ -37,6 +38,91 @@ From: [npm pacakge](https://www.npmjs.com/package/react-router-dom){.external} a
 ```js
 npm i react-router-dom
 ```
+
+> React Router enables "client side routing".
+
+In traditional websites, the browser requests a document from a web server, downloads and evaluates CSS and JavaScript assets, and renders the HTML sent from the server. When the user clicks a link, it starts the process all over again for a new page.
+
+[Client side routing allows](https://reactrouter.com/en/main/start/overview){.external} your app to **update the URL from a link click without making another request for another document from the server.**
+
+Instead, your app can immediately render some new UI and make data requests with fetch to update the page with new information.
+
+[Main Concepts](https://reactrouter.com/en/main/start/concepts){.external}
+
+::: {.callout-note}
+## SPA vs MultiPage
+A Single Page Application (SPA) is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the application. The user interface is designed to provide a seamless experience, without the need for page refreshes.
+
+In contrast, a Multi-Page Application (MPA) consists of multiple pages, each with its own HTML file, that are loaded separately when the user navigates to a different page. Each page typically has its own styles and scripts, which can result in longer load times and a less seamless user experience compared to SPAs.
+:::
+
+## Tree-folder & routes
+
+![](/images/reactjs/lab-re-2-1.png){}
+
+We use `React Router DOM` library to create a web application with multiple pages.
+
+The import statement at the top imports several components from the `React Router DOM `library, including `BrowserRouter`, `Routes`, `Route`, and `Link`. 
+
+> These components are used **to define the routes and navigation** for the application.
+
+> The `Layout`, `Home`, `People`, `Contact`, and `NoPage` components are defined in separate files and imported at the top of the code.
+
+::: {.column-margin}
+The App component is the main component of the application and is exported as the default component. This component returns JSX, which is a syntax extension to JavaScript used to describe how the user interface should look like.
+:::
+
+
+The `<BrowserRouter>` component wraps the `<Routes>` component, indicating that this is the root of the application's routing system.
+
+Within the `<Routes>` component, there is a single `<Route>` component that has a path attribute set to "/". This means that any URL that matches the root of the application will render this component.
+
+The `<Route>` component with the path attribute set to "/" has four nested `<Route>` components inside it, each with a different path attribute and element attribute that points to the component that should be rendered when the corresponding URL is accessed.
+
+- The first nested `<Route>` component has an index attribute, which means it will be rendered when the root URL is accessed. This component renders the Home component.
+- The second nested `<Route>` component has a path attribute set to "/people", which means it will be rendered when the URL ends with "/people". This component renders the People component.
+- The third nested `<Route>` component has a path attribute set to "/contact", which means it will be rendered when the URL ends with "/contact". This component renders the Contact component.
+- The fourth and final nested `<Route>` component has a path attribute set to "*" which means it will be rendered when none of the other routes are matched. This component renders the NoPage component, indicating that the page the user is looking for cannot be found.
+
+
+
+
+```js
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./route/Layout.jsx";
+import Home from "./pages/home/Home.jsx";
+import People from "./pages/people/People.jsx";
+import Contact from "./pages/contact/Contact.jsx";
+import NoPage from "./route/NoPage";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="people" element={<People />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+```
+
+::: {.column-margin}
+![](/images/reactjs/lab-re-2-2.png){}
+:::
+
+## Versions
+
+ Code Version | Commit | Folder-Tree | Screeshoots |
+| -- | -- | -- | -- |
+| Hola5 0.0 | create project with route: [hola 5 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/2404dbaad80566fe038a01e14e910a125089dc08/hola5){.external} | [initial tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render home](/images/reactjs/lab-re-2-2.png){width="80%"} |
+
+
+
 
 
 

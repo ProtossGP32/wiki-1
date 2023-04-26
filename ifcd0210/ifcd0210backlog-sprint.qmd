@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(2) {
+tr:nth-child(3) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -12,7 +12,7 @@ tr:nth-child(2) {
 
 
 ![Backlog coursedownload](/images/home/backlog.jpg){width="30%"}
-
+userEffect: intro 
 ## ``Sprint#18`` (April)
 
 ::: {.column-page-right}
@@ -20,7 +20,7 @@ tr:nth-child(2) {
 | -- | -- | -- | -- | -- |
 | #18 | 83 | 24/04 | - React: </br>  (0) roadmap </br>  (1) props </br> (2) update/render cycle </br> (3) userState: intro </br> (4) project structure: tree-folder </br>  | [Roadmap](/images/reactjs/roadmap.png){width="20%"} </br> [useState](/reactjs/reactjs-hook-state.qmd) </br> [React project structure](/reactjs/reactjs-what-create.qmd#reactjs-project-structure) </br> [route example](https://codesandbox.io/s/to-do-11-hh9efc){.external} |
 |  | 84 | 25/04 | - React: </br> (1) route </br> (2) JS ES6: spread operator </br> <s>(3) userEffect: intro </s></br> (4) update/render cycle: pure component  </br>  - <s><Pràctiques</s></br> | [app route](/reactjs/reactjs-app-router.qmd) </br>  [spread operator](/reactjs/reactjs-es6-spread.qmd) </br>[Keep components pure](/reactjs/reactjs-what-props.qmd#keep-components-pure) </br> [ex1](https://codesandbox.io/s/dd5hyk?file=/App.js&utm_medium=sandpack){.external} -  [ex2](https://codesandbox.io/s/qxptky?file=/App.js:0-73&utm_medium=sandpack){.external} - [ex3](https://codesandbox.io/s/yxnodj?file=/App.js&utm_medium=sandpack){.external} - |
-|  | 85 | 26/04 | - React: </br> (1) userReducer </br> (2) JS ES6 </br> (3) conditional render | [useReducer](/reactjs/reactjs-hook-reducer.qmd) </br> [useEffect](/reactjs/reactjs-hook-effect.qmd) </br> [Conditional Render](/reactjs/reactjs-app-conditional-render.qmd) |
+|  | 85 | 26/04 | - React: </br> (1) intro: userReducer / userEffect  </br> (2) JS ES6 </br> (3) conditional render | [useReducer](/reactjs/reactjs-hook-reducer.qmd) </br> [useEffect](/reactjs/reactjs-hook-effect.qmd) </br> [Conditional Render](/reactjs/reactjs-app-conditional-render.qmd) |
 |  | 86 | 27/04 | - React: </br> (1) userReducer </br> (2) JS ES6 </br> | - |
 |  | 87 | 28/04 | - SCRUM: </br> (1) Retrospecive </br>  (2) Lateralization </br> - Pràctiques </br> - Vocabulary </br> | - |
 : Backlog Sprint#18 April 2023 {tbl-colwidths="[2,2,2,55,39]"}
