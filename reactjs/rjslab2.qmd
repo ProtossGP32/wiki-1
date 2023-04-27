@@ -51,9 +51,9 @@ Instead, your app can immediately render some new UI and make data requests with
 
 ::: {.callout-note}
 ## SPA vs MultiPage
-A Single Page Application (SPA) is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the application. The user interface is designed to provide a seamless experience, without the need for page refreshes.
+A **Single Page Application (SPA)** is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the application. The user interface is designed to provide a seamless experience, without the need for page refreshes.
 
-In contrast, a Multi-Page Application (MPA) consists of multiple pages, each with its own HTML file, that are loaded separately when the user navigates to a different page. Each page typically has its own styles and scripts, which can result in longer load times and a less seamless user experience compared to SPAs.
+In contrast, a **Multi-Page Application (MPA)** consists of multiple pages, each with its own HTML file, that are loaded separately when the user navigates to a different page. Each page typically has its own styles and scripts, which can result in longer load times and a less seamless user experience compared to SPAs.
 :::
 
 ## Tree-folder & routes
@@ -115,12 +115,95 @@ export default function App() {
 ![](/images/reactjs/lab-re-2-2.png){}
 :::
 
+## `useReducer`user profile form
+
+Reference:
+
+- [codesandbox](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external}
+- [React reference manual](https://react.dev/reference/react/useReducer#usage){.external}
+
+### component and route
+
+Create the new component, the route and the link at layout.
+
+
+### `reducer`
+
+This new feature on Hola5 defines a **React component called "Form"** that allows users to modify and display a person's profile information. It uses the `useReducer` hook **to manage the component's state, which is initialized with an object** that contains the person's name, surname, and age.
+
+```js
+{   
+  name: "Taylor",
+  surname: "Feels",
+  age: 42
+}
+```
+
+> The **"reducer"** function defines **how state should be updated based on different types of actions dispatched by the component.** The actions include **incrementing** or **decrementing** the person's age and **changing** their name or surname.
+
+![Basic structure component](/images/reactjs/lab-re-2-4.png){width="80%"}
+
+The component's state is initialized with an object **(1)**
+
+The component renders a form with input fields for the person's name and surname and buttons to increment or decrement their age. It also displays the current values of the person's name, surname, and age.
+
+When the user interacts with the form elements **(5)**, the component dispatches **(3)** the appropriate action to the reducer function **(4)**, which updates the state and causes the component to re-render with the updated values **(5)**.
+
+
+Reducer:
+
+```js
+function reducer(state, action) {
+
+  switch (action.type) {
+
+    case "incremented_age": {
+      return {
+        name: state.name,
+        surname: state.surname,
+        age: state.age + 1
+      };
+    }
+    case "decremented_age": {
+      return {
+        name: state.name,
+        surname: state.initialsurname,
+        age: state.age - 1
+      };
+    }
+    case "changed_name": {
+      return {
+        name: action.nextName,
+        surname: state.surname,
+        age: state.age
+      };
+    }
+    case "changed_surname": {
+      return {
+        name: state.name,
+        surname: action.nextSurName,
+        age: state.age
+      };
+    }
+
+    default: {
+      throw Error("Unknown action: " + action.type);
+    }
+  }
+}
+
+```
+::: {.column-margin}
+![render reducer](/images/reactjs/lab-re-2-3.png){width="80%"}
+:::
+
+
 ## Versions
 
  Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
-| Hola5 0.0 | create project with route: [hola 5 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/2404dbaad80566fe038a01e14e910a125089dc08/hola5){.external} | [initial tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render home](/images/reactjs/lab-re-2-2.png){width="80%"} |
-
+| Hola5 0.0 | create project with route: [hola5 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/2404dbaad80566fe038a01e14e910a125089dc08/hola5){.external} | [initial tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render home](/images/reactjs/lab-re-2-2.png){width="80%"} |
+| Hola5 0.1 | useReducer: user Profile [hola5 0.1](){.external} </br> compoonent useReducer on [codesandbox](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external} | [userReducer tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render reducer](/images/reactjs/lab-re-2-3.png){width="80%"} |
 
 
 
