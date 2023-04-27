@@ -126,7 +126,7 @@ function Counter() {
 <br>
 <div class='column right next'>
 <br>
-[ReactJS: custom hooks  {{< fa solid arrow-right >}}](/reactjs/reactjs-hook-custom.qmd)
+[React JS: useContext  {{< fa solid arrow-right >}}](/reactjs/reactjs-hook-context.qmd)
 <br>
 </div>
 <br>

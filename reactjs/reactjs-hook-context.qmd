@@ -192,7 +192,7 @@ function Button({ children, onClick }) {
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} ReactJS: custom hooks](/reactjs/reactjs-hook-custom.qmd)
+[{{< fa solid arrow-left >}} React JS: useEffect](/reactjs/reactjs-hook-effect.qmd)
 <br>
 </div>
 <br>
@@ -204,7 +204,7 @@ function Button({ children, onClick }) {
 <br>
 <div class='column right next'>
 <br>
-[React JS App: async  {{< fa solid arrow-right >}}](/reactjs/reactjs-app-async.qmd)
+[ReactJS: custom hooks  {{< fa solid arrow-right >}}](/reactjs/reactjs-hook-custom.qmd)
 <br>
 </div>
 <br>

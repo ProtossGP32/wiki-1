@@ -50,7 +50,7 @@ format:
 <br>
 <div class='column right next'>
 <br>
-[Learning: tips  {{< fa solid arrow-right >}}](/learning/learning-how-intro.qmd)
+[Learning: Useful questions  {{< fa solid arrow-right >}}](/learning/learning-how-questions.qmd)
 <br>
 </div>
 <br>

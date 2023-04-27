@@ -350,8 +350,8 @@ website:
             - reactjs/reactjs-hook-reducer.qmd
             - reactjs/reactjs-hook-ref.qmd
             - reactjs/reactjs-hook-effect.qmd
-            - reactjs/reactjs-hook-custom.qmd
             - reactjs/reactjs-hook-context.qmd
+            - reactjs/reactjs-hook-custom.qmd
         - text: "---"  
         - section: "ReactJS: Designing an App"
           contents: 
@@ -420,7 +420,7 @@ website:
         - section: "Learning"
           contents:
             - learning/learning-how-questions.qmd 
-            - learning/learning-how-intro.qmd
+            - learning/learning-how-tips.qmd
             - learning/learning-how-writing.qmd
             - learning/learning-how-take-notes.qmd
             - learning/learning-how-write-comments.qmd

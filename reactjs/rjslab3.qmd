@@ -1,5 +1,5 @@
 ---
-title: "React JS: Lab#RE03-1"
+title: "Lab#RE03-1: to-do app"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"

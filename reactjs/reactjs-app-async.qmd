@@ -181,7 +181,7 @@ function delay(ms) {
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} React JS: useContext](/reactjs/reactjs-hook-context.qmd)
+[{{< fa solid arrow-left >}} React JS: custom hooks](/reactjs/reactjs-hook-custom.qmd)
 <br>
 </div>
 <br>

@@ -84,7 +84,7 @@ format:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Web Vocabulary](/learning/learning-vocab-web.qmd)
+[{{< fa solid arrow-left >}} Useful Questions](/learning/learning-how-questions.qmd)
 <br>
 </div>
 <br>

@@ -1,5 +1,5 @@
 ---
-title: "React JS: Lab#RE04-1"
+title: "Lab#RE04-1: HighCharts"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
