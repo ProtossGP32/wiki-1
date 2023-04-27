@@ -253,6 +253,61 @@ export default function Form() {
   );
 }
 ```
+With handlers, perhaps a more verboise option:
+
+```js
+export default function Form() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  function handleButtonClickIncrement() {
+    dispatch({ type: "incremented_age" });
+  }
+
+  function handleButtonClickDecrement() {
+    dispatch({ type: "decremented_age" });
+  }
+
+  function handleInputChangeName(e) {
+    dispatch({
+      type: "changed_name",
+      nextName: e.target.value
+    });
+  }
+
+  function handleInputChangeSurName(e) {
+    dispatch({
+      type: "changed_surname",
+      nextSurName: e.target.value
+    });
+  }
+
+  return (
+    <>
+      <h1> Person Profile form</h1>
+      <hr />
+      <br />
+      <h3> Modify data</h3>
+      <label>Name</label>{" "}
+      <input value={state.name} onChange={handleInputChangeName} />
+      <label> Surame </label>
+      <input value={state.surname} onChange={handleInputChangeSurName} />
+      <button onClick={handleButtonClickIncrement}>Increment age</button>
+      <button onClick={handleButtonClickDecrement}>Decrement age</button>
+      <br /> <br /> <br />
+      <h3>Person Profile</h3>
+      <p>
+        <strong>Name:</strong> {state.name}
+      </p>
+      <p>
+        <strong>Surname:</strong> {state.surname}
+      </p>
+      <p>
+        <strong>Age:</strong> {state.age}
+      </p>
+    </>
+  );
+}
+```
 
 ## Versions
 
