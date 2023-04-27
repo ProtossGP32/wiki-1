@@ -85,7 +85,7 @@ The `<Route>` component with the path attribute set to "/" has four nested `<Rou
 - The fourth and final nested `<Route>` component has a path attribute set to "*" which means it will be rendered when none of the other routes are matched. This component renders the NoPage component, indicating that the page the user is looking for cannot be found.
 
 
-
+`Route`:
 
 ```js
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -109,6 +109,32 @@ export default function App() {
     </BrowserRouter>
   );
 }
+```
+
+`Layout`, in this particular case we **stack** all components:
+
+```js
+import { Outlet, Link } from "react-router-dom";
+import React from "react";
+import Footer from "./Footer";
+
+export default function Layout() {
+  return (
+    <>
+      <nav>
+        <Link to="/">Home</Link>
+        <span>|</span>
+        <Link to="/people">People</Link>
+        <span>|</span>
+        <Link to="/contact">Contact</Link>
+        <span>|</span>
+      </nav>
+      <Outlet />
+      <Footer />
+    </>
+  );
+}
+
 ```
 
 ::: {.column-margin}
@@ -287,12 +313,21 @@ export default function Form() {
       <hr />
       <br />
       <h3> Modify data</h3>
+
       <label>Name</label>{" "}
-      <input value={state.name} onChange={handleInputChangeName} />
+      <input value={state.name} 
+      onChange={handleInputChangeName} />
+
       <label> Surame </label>
-      <input value={state.surname} onChange={handleInputChangeSurName} />
-      <button onClick={handleButtonClickIncrement}>Increment age</button>
-      <button onClick={handleButtonClickDecrement}>Decrement age</button>
+      <input value={state.surname} 
+      onChange={handleInputChangeSurName} />
+
+      <button onClick={handleButtonClickIncrement}>
+      Increment age</button>
+
+      <button onClick={handleButtonClickDecrement}>
+      Decrement age</button>
+      
       <br /> <br /> <br />
       <h3>Person Profile</h3>
       <p>
