@@ -119,12 +119,17 @@ export default function App() {
 
 Reference:
 
-- [codesandbox](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external}
+- [codesandbox with handlers functions](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external}
+- [codesandbox dispatcher onChange, onClick](https://codesandbox.io/s/usereducer-example-form-v2-pbj3kh?file=/App.js){.external}
 - [React reference manual](https://react.dev/reference/react/useReducer#usage){.external}
 
-### component and route
+### Create `route`
 
-Create the new component, the route and the link at layout.
+To add a `PersonForm` or `Form` component to a new route:
+
+- first import the `PersonForm` **component**.
+- Then, add a new **Route** element under the Layout Route element with a path of "person-form" and an element prop with the `PersonForm` component.
+- Finally, update the `Layout` component to render a **Link** component to the new route.
 
 
 ### `reducer`
@@ -197,13 +202,64 @@ function reducer(state, action) {
 ![render reducer](/images/reactjs/lab-re-2-3.png){width="80%"}
 :::
 
+With or without handlers functions? Best without:
+
+```js
+export default function Form() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <>
+      <h1> Person Profile form</h1>
+      <hr /><br />
+      <h3> Modify data</h3>
+
+      <label>Name</label>
+      <input
+        value={state.name}
+        onChange={(e) =>
+          dispatch({
+            type: "changed_name",
+            nextName: e.target.value
+          })
+        }
+      />
+
+      <label>Surame</label>
+      <input
+        value={state.surname}
+        onChange={(e) =>
+          dispatch({
+            type: "changed_surname",
+            nextSurName: e.target.value
+          })
+        }
+      />
+
+      <button onClick={() => dispatch({ type: "incremented_age" })}>
+        Increment age
+      </button>
+
+      <button onClick={() => dispatch({ type: "decremented_age" })}>
+        Decrement age
+      </button>
+      <br /> <br /> <br />
+
+      <h3>Person Profile</h3>
+      <p><strong>Name:</strong> {state.name}</p>
+      <p><strong>Surname:</strong> {state.surname}</p>
+      <p><strong>Age:</strong> {state.age}</p>
+    </>
+  );
+}
+```
 
 ## Versions
 
  Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
 | Hola5 0.0 | create project with route: [hola5 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/2404dbaad80566fe038a01e14e910a125089dc08/hola5){.external} | [initial tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render home](/images/reactjs/lab-re-2-2.png){width="80%"} |
-| Hola5 0.1 | useReducer: user Profile [hola5 0.1](){.external} </br> compoonent useReducer on [codesandbox](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external} | [userReducer tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render reducer](/images/reactjs/lab-re-2-3.png){width="80%"} |
+| Hola5 0.1 | useReducer: user Profile [hola5 0.1](){.external} </br> compoonent useReducer on [codesandbox with handlers functions](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external} </br> or [codesandbox dispatcher onChange, onClick](https://codesandbox.io/s/usereducer-example-form-v2-pbj3kh?file=/App.js){.external} | [userReducer tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render reducer](/images/reactjs/lab-re-2-3.png){width="80%"} |
 
 
 
