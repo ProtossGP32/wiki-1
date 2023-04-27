@@ -61,7 +61,7 @@ This requires not that the writer make all his sentences short, or that he avoid
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Learning: tips](/learning/learning-how-intro.qmd)
+[{{< fa solid arrow-left >}} Learning: tips](/learning/learning-how-tips.qmd)
 <br>
 </div>
 <br>

@@ -66,7 +66,7 @@ EE provides a set of APIs and tools for developing distributed, transactional, a
 
 JEE is often used for **building large-scale, complex, and mission-critical applications** in industries such as finance, healthcare, and e-commerce.
 
-[Java Vocabulary](/vocabulary/vocab-java-se.qmd)
+[Java Vocabulary](/learning/learning-vocab-java-se.qmd)
 
 <!--- navLinks -->
 <br><br>
