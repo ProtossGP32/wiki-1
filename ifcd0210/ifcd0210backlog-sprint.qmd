@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(1) {
+tr:nth-child(2) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -18,8 +18,8 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #19 | 88 | 02/05 | - useReducer: </br> (1) hola5.personProfile | [hola5 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/aa824232395113d08efd6a86af38ebbc2a1e1e14/hola5){.external} |
-|  | 89 | 03/05 | - useReducer, useRef, useEffect: </br> (1) hola5.clock  </br> - useContext | - |
+| #19 | 88 | 02/05 | + useReducer: </br> (1) hola5.personProfile </br>  ++ Intro to ``Matter of Things`` | [hola5 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/aa824232395113d08efd6a86af38ebbc2a1e1e14/hola5){.external} </br>  [Lab#RE02-1](/reactjs/rjslab2.qmd#usereducer-person-profile-form) |
+|  | 89 | 03/05 | - useReducer, useRef, useEffect: </br> (1) hola5.clock  </br> - useContext |  [hola5 0.2](){.external} </br>  [Lab#RE02-1](/reactjs/rjslab2.qmd#usereducer-useeffect-useref-clock) </br> [useContext](/reactjs/reactjs-hook-context.qmd) |
 |  | 90 | 04/05 | - Lab#RE03-1: to-do | - |
 |  | 91 | 05/05 | - SCRUM </br> (1) attention: the portal to reality (science, reason, imagination, intuition) </br> (2) well types: pareto,approach mode, time management, forget order, decision making, lost. </br> (3) Hemispheres modes: apprehend-compprehend </br> - Vocabulary </br> - Retrospective| - |
 : Backlog Sprint#19 March 2023 {tbl-colwidths="[2,2,2,55,39]"}

@@ -141,13 +141,13 @@ export default function Layout() {
 ![](/images/reactjs/lab-re-2-2.png){}
 :::
 
-## `useReducer`user profile form
+## `useReducer` person profile form
 
 Reference:
 
 - [codesandbox with handlers functions](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external}
 - [codesandbox dispatcher onChange, onClick](https://codesandbox.io/s/usereducer-example-form-v2-pbj3kh?file=/App.js){.external}
-- [React reference manual](https://react.dev/reference/react/useReducer#usage){.external}
+- [React reference manual: useReducer](https://react.dev/reference/react/useReducer#usage){.external}
 
 ### Create `route`
 
@@ -228,7 +228,20 @@ function reducer(state, action) {
 ![render reducer](/images/reactjs/lab-re-2-3.png){width="80%"}
 :::
 
-With or without handlers functions? Best without:
+With or without handlers functions? Best without extra-functions **but be careful with recursion, use arrow functions:**
+
+
+
+```js
+<button onClick={() => dispatch({ type: "incremented_age" })}>
+```
+
+::: {.column-margin}
+[Why does onClick={x()} causes "too many re-renders" error in React?](https://alexsidorenko.com/blog/onclick-too-many-re-renders/){.external}
+
+![recursion](https://alexsidorenko.com/static/376998171a95346fce4bec68c1d39cee/29114/initial-3.png){width="80%"}
+:::
+
 
 ```js
 export default function Form() {
@@ -346,17 +359,68 @@ export default function Form() {
 
 ## `useReducer`, `useEffect`, `useRef` clock
 
-Reference: [codesandbox](https://codesandbox.io/s/usereducer-example-clock-11y79d?file=/App.js){.external} 
+Reference: 
+
+- [codesandbox](https://codesandbox.io/s/usereducer-example-clock-11y79d?file=/App.js){.external}
+- [React reference manual: useEffect](https://react.dev/reference/react/useEffect){.external}
+- [React reference manual: useRef](https://react.dev/reference/react/useRef){.external}
+
 
 This component creates a simple stopwatch with three buttons: `Start`, `Stop`, and `Reset`.
 
+![render clock](/images/reactjs/lab-re-2-7.png){width="80%"}
+
 The state of the stopwatch is managed using the `useReducer` hook, which takes in a reducer function and an initial state.
 
-The `reducer` function is responsible for updating the state based on actions dispatched by the buttons. The initial state includes two properties, `isRunning` and time, which are set to false and 0 respectively.
+The `reducer` function is responsible for updating the state based on actions dispatched by the buttons.
+
+```js
+function reducer(state, action) {
+  switch (action.type) {
+    case "start":
+      return { ...state, isRunning: true };
+    case "stop":
+      return { ...state, isRunning: false };
+    case "reset":
+      return { isRunning: false, time: 0 };
+    case "tick":
+      return { ...state, time: state.time + 1 };
+    default:
+      throw new Error();
+  }
+}
+```
+
+The initial state includes two properties, `isRunning` and ``time``:
+
+```js
+const initialState = {
+  isRunning: false,
+  time: 0
+};
+```
+
 
 The `useEffect` hook is used to start and stop the stopwatch. When the `isRunning` state is true, a timer is started using setInterval that dispatches a tick action every second. When `isRunning` state is false, the timer is cleared using `clearInterval`.
 
+```js
+useEffect(() => {
+    if (!state.isRunning) {
+      return;
+    }
+    idRef.current = setInterval(() => dispatch({ type: "tick" }), 1000);
+    return () => {
+      clearInterval(idRef.current);
+      idRef.current = 0;
+    };
+  }, [state.isRunning]);
+```
+
 The `idRef` is a reference to the timer, and it is updated every time the `useEffect` hook is called.
+
+```js
+  const idRef = useRef(0);
+```
 
 The return statement returns a `JSX` template that displays the stopwatch: there are three buttons: "`Start`", "`Stop`", and "`Reset`" that dispatch start, stop, and reset actions respectively.
 

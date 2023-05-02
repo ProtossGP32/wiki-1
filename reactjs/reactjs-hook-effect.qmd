@@ -19,6 +19,8 @@ format:
 
 ``useEffect`` allows you to perform side effects in your components. Some examples of side effects are: fetching data, directly updating the DOM, and timers.
 
+useEffect lets you [synchronize](https://react.dev/learn/synchronizing-with-effects){.external} a component with an external system.
+
 ``useEffect(setup, dependencies?)``
 
 :::
@@ -62,13 +64,30 @@ If you’re not trying to synchronize with some external system, you probably do
 
 - ``optional dependencies``: The list of all reactive values referenced inside of the setup code. Reactive values include props, state, and all the variables and functions declared directly inside your component body. 
 
-::: {.callout-note collapse="true"}
-If your linter is configured for React, it will verify that every reactive value is correctly specified as a dependency. The list of dependencies must have a constant number of items and be written inline like [dep1, dep2, dep3]. React will compare each dependency with its previous value using the Object.is comparison algorithm. If you don’t specify the dependencies at all, your Effect will re-run after every re-render of the component. See the difference between passing an array of dependencies, an empty array, and no dependencies at all.
+::: {.callout-important collapse="false"}
+- When Strict Mode is on, React will run one extra **development-only setup+cleanup cycle before the first real setup**.
+
+- If some of your dependencies are objects or functions defined inside the component, **there is a risk that they will cause the Effect to re-run more often than needed.**
+
+- If your Effect wasn’t caused by an interaction (like a click), **React will let the browser paint the updated screen first before running your Effect.**
+  
+- If your Effect is doing something visual (for example, positioning a tooltip), and the delay is noticeable (for example, it flickers), **replace useEffect with useLayoutEffect.**
+
+- Even if your Effect was caused by an interaction (like a click), **the browser may repaint the screen before processing the state updates inside your Effect.**
+
+- Effects only run on the client. They don’t run during server rendering.
 :::
 
 
 ### Returns 
 - ``useEffect`` returns undefined.
+
+
+## Synchronizing with Effects
+
+``Effects`` let you run some code after rendering so that you can synchronize your component with some system outside of React.
+
+### Effects & events 
 
 ## Example 1
 
@@ -107,6 +126,45 @@ function Counter() {
 ::: {.column-margin}
 ![``useEffect`` third  render](/images/reactjs/ex29.png){width=100%}
 :::
+
+
+## Example 2
+
+By default ``useEffect`` will trigger anytime an update happens to the component.
+
+This means if the component receives new props from its parent component or even when you change the state locally, **the effect will run again.**
+
+::: {.callout-important}
+## Bad use of useEffect
+If you don’t control the render cycle, **you could run into an infinite loop of updates.**
+:::
+
+
+```js
+const Counter = () => {
+  const [counter, setCounter] = React.useState(0);
+
+  React.useEffect(() => {
+    const s = setInterval(() => {
+      setCounter(c => c + 1);
+    }, 1000);
+  }, []);
+
+  return (
+    <div style={{textAlign: 'center'}}>
+      <h1>Counter: {counter}</h1>
+    </div>
+  );
+};
+```
+
+## Refs
+
+- [codesanbox](https://codesandbox.io/s/useeffect-example-43e65y?file=/App.js){.external}
+- [Exploring the useEffect API with Easy Examples](https://manningbooks.medium.com/exploring-the-useeffect-api-with-easy-examples-7e9382ffef97){.external}
+- [React useEffect hook with code examples](https://linguinecode.com/post/getting-started-with-react-useeffect){.external}
+- [React Core Concept I: Rendering & useState](https://theodorusclarence.com/blog/react-core-concept-rendering-state){.external}
+
 
 <!--- navLinks -->
 <br><br>
