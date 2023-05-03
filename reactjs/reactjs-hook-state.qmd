@@ -161,7 +161,7 @@ During the next render, **React goes through the state queue**:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} React JS ES6: spread operator](/reactjs/reactjs-es6-spread.qmd)
+[{{< fa solid arrow-left >}} React JS: hook rules](/reactjs/reactjs-hook-rules.qmd)
 <br>
 </div>
 <br>

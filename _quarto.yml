@@ -345,7 +345,8 @@ website:
             - reactjs/reactjs-es6-spread.qmd
         - text: "---"
         - section: "ReacJS 18: Hooks"
-          contents: 
+          contents:
+            - reactjs/reactjs-hook-rules.qmd 
             - reactjs/reactjs-hook-state.qmd
             - reactjs/reactjs-hook-reducer.qmd
             - reactjs/reactjs-hook-ref.qmd

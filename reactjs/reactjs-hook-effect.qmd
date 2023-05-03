@@ -31,6 +31,11 @@ useEffect lets you [synchronize](https://react.dev/learn/synchronizing-with-effe
 
 ``useEffect`` accepts two arguments. The second argument is optional.
 
+::: {.column-margin}
+“The question is not ‘when does this effect run,’ the question is ‘with which state does this effect synchronize?’ ”
+– Ryan Florence
+:::
+
 > useEffect(setup, dependencies?)
 
 ``` {.jsx .code-overflow-wrap filename="App.js"}
@@ -82,12 +87,45 @@ If you’re not trying to synchronize with some external system, you probably do
 ### Returns 
 - ``useEffect`` returns undefined.
 
+Dependency array passed to `useEffect`:
+
+- **It’s optional.** If you don’t specify it, **the effect runs after each render.**
+- **If it’s empty `([])`**, the effect runs **once**, after the initial render.
+- It must — or as we’ll see later, should — contain **the list of values used in the effect**. The effect runs after any of these values changes (and after the initial render).
+- The array of dependencies **is not passed as argument to the effect function.**
+
 
 ## Synchronizing with Effects
 
+
+::: {.callout-note}
+## synchronize is a key-word
+“The question is not ‘when does this effect run,’ the question is ‘with which state does this effect synchronize?’”
+
+– Ryan Florence
+:::
+
 ``Effects`` let you run some code after rendering so that you can synchronize your component with some system outside of React.
 
-### Effects & events 
+### Effects & events
+
+> An **event** is an **action triggered by the user or the system**, while an **effect** is a **consequence of an event**, usually referring to a change or action that results from it.
+
+What are the **effects**, really? Examples are:
+
+- Fetching data
+- Reading from local storage
+- Registering and deregistering event listeners
+- Upadating the DOM
+- Timers
+- Updating the document title
+- Updating a state variable based on props change
+- Cleanup operations
+- Triggering animations or transitions
+- Logging or analytics tracking
+- Managing scroll position
+
+React’s effects are a completely different animal **than the lifecycle methods of class-based components**. 
 
 ## Example 1
 
@@ -158,11 +196,13 @@ const Counter = () => {
 };
 ```
 
-## Refs
+## Refs articles
 
 - [codesanbox](https://codesandbox.io/s/useeffect-example-43e65y?file=/App.js){.external}
 - [Exploring the useEffect API with Easy Examples](https://manningbooks.medium.com/exploring-the-useeffect-api-with-easy-examples-7e9382ffef97){.external}
 - [React useEffect hook with code examples](https://linguinecode.com/post/getting-started-with-react-useeffect){.external}
+- [A complete guide to the useEffect React Hook](https://blog.logrocket.com/useeffect-hook-complete-guide/){.external}
+- [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/){.external}
 - [React Core Concept I: Rendering & useState](https://theodorusclarence.com/blog/react-core-concept-rendering-state){.external}
 
 

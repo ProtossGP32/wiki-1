@@ -170,7 +170,7 @@ setPerson({
 <br>
 <div class='column right next'>
 <br>
-[ReactJS: useState  {{< fa solid arrow-right >}}](/reactjs/reactjs-hook-state.qmd)
+[ReactJS: hooks rules  {{< fa solid arrow-right >}}](/reactjs/reactjs-hook-rules.qmd)
 <br>
 </div>
 <br>
