@@ -252,6 +252,8 @@ When developing in `Strict Mode`, **React calls each component’s function twic
 
 ## What is state and rendering: update/render cycle
 
+![React render cycle: trigger-render-paint by @_georgemoller](/images/reactjs/react-cycle.PNG){width="80%"}
+
 [State variables](https://beta.reactjs.org/learn/state-as-a-snapshot#setting-state-triggers-renders){.external} might look like regular JavaScript variables that you can read and write to.
 
 > **However, state behaves more like a snapshot**.

@@ -55,7 +55,7 @@ It can be used to access a **DOM element directly.**
 
 ## Example 1
 
-If you show ``{ref.current}`` in the JSX,** the number won’t update on click**. This is because setting ref.current does not trigger a re-render. Information that’s used for *rendering should be state instead.*
+If you show ``{ref.current}`` in the JSX, **the number won’t update on click**. This is because setting ref.current does not trigger a re-render. Information that’s used for *rendering should be state instead.*
 
 ``` {.jsx .code-overflow-wrap filename="App.js"}
 import { useRef } from 'react';
@@ -74,7 +74,8 @@ export default function Counter() {
         Click me!
       </button>
       // Do not write or read ref.current during rendering.
-      // React expects that the body of your component behaves like a pure function
+      // React expects that the body of your component
+      // behaves like a pure function
       // We do now just for this example
       // If you need use: useState
       <p>You have pressed the button {ref.current} times</p>

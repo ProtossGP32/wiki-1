@@ -74,6 +74,22 @@ npm install eslint-plugin-react-hooks --save-dev
 }
 ```
 
+## Cheatsheet by @_georgemoller
+
+![Hooks: useState, useReducer, useContext ](/images/reactjs/IMG_0931.JPG){width=80%}
+
+![Hooks: useEffect, useLayoutEffect](/images/reactjs/IMG_0932.JPG){width=80%}
+
+![Hooks: useInsertionEffect, useSyncExternalStore](/images/reactjs/IMG_0933.JPG){width=80%}
+
+![Hooks: useCallback, useMemo](/images/reactjs/IMG_0934.JPG){width=80%}
+
+![Hooks: useRef, useImperativeHandle](/images/reactjs/IMG_0935.JPG){width=80%}
+
+![Hooks: useId, useDebugValue](/images/reactjs/IMG_0936.JPG){width=80%}
+
+![Hooks: useEvents, useDeferredValue, useTransition](/images/reactjs/IMG_0937.JPG){width=80%}
+
 
 
 <!--- navLinks -->
