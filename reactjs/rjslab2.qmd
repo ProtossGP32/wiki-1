@@ -390,6 +390,10 @@ function reducer(state, action) {
   }
 }
 ```
+:::{.column-margin}
+The `spread` operator `...` allows you to **expand an iterable object** (like an array or an object) into individual elements or properties: here is used **to copy all the properties of the state object and then override the `isRunning` property** with the value true. 
+:::
+
 
 The initial state includes two properties, `isRunning` and ``time``:
 
@@ -405,16 +409,31 @@ The `useEffect` hook is used to start and stop the stopwatch. When the `isRunnin
 
 ```js
 useEffect(() => {
+
     if (!state.isRunning) {
       return;
     }
-    idRef.current = setInterval(() => dispatch({ type: "tick" }), 1000);
+
+    idRef.current = setInterval(
+      () => dispatch({ type: "tick" }), 1000);
+    
     return () => {
       clearInterval(idRef.current);
       idRef.current = 0;
     };
+
   }, [state.isRunning]);
 ```
+
+::: {.column-margin}
+[setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval){.external}: `setInterval(code, delay)`
+:::
+
+::: {.column-margin}
+[clearInterval](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval){.external}: `clearInterval(intervalID)`
+:::
+
+
 
 The `idRef` is a reference to the timer, and it is updated every time the `useEffect` hook is called.
 
@@ -426,14 +445,80 @@ The return statement returns a `JSX` template that displays the stopwatch: there
 
 ## api Rest
 
+We use the [Axios](https://axios-http.com/docs/intro){.external} library **to fetch data from the [JSONPlaceholder](https://jsonplaceholder.typicode.com/){.external} API**, which provides a fake REST API for testing and prototyping. 
+
+The component initializes a state variable called data using the `useState` hook, and sets **its initial value to an empty array.**
+
+```js
+ const [data, setData] = useState([]);
+```
+
+The `useEffect` hook is used **to fetch the data from the API** and update the data state variable when:
+
+- the **component mounts** or
+- when **the `setData` function is called**.
+  
+The `axios.get()` method is called with **the URL of the API endpoint**:
+
+```js
+const url = "https://jsonplaceholder.typicode.com/todos";
+```
+
+The response is handled with a `then` block that sets the data state variable to the `response` data. If there is an error, it is logged to the console with a `catch` block.
+
+In the component's `return` statement, the fetched data **is rendered using the `.map()` method to loop through each item** in the data array.
+
+The `key` prop is added to each item to help React identify the items and improve performance.
+
+
+```js
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+export default function AxiosApiRest() {
+  const url = "https://jsonplaceholder.typicode.com/todos";
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [setData]);
+
+  return (
+    <>
+      <h1> My data todos from axios</h1>
+      {data &&
+        data.map((item) => {
+          return (
+            <spam key={item.id}>
+              id: {item.id}
+              <spam>userId: {item.userId} </spam>
+              <spam>title: {item.title} </spam>
+              <spam>completed: {item.completed} </spam>
+              <br />
+            </spam>
+          );
+        })}
+    </>
+  );
+}
+```
+
+
 ## Versions
 
  Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
 | Hola5 0.0 | create project with route: [hola5 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/2404dbaad80566fe038a01e14e910a125089dc08/hola5){.external} | [initial tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render home](/images/reactjs/lab-re-2-2.png){width="80%"} |
 | Hola5 0.1 | useReducer: user Profile [hola5 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/aa824232395113d08efd6a86af38ebbc2a1e1e14/hola5){.external} </br> compoonent useReducer on [codesandbox with handlers functions](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external} </br> or [codesandbox dispatcher onChange, onClick](https://codesandbox.io/s/usereducer-example-form-v2-pbj3kh?file=/App.js){.external} | [userReducer tree-folder](/images/reactjs/lab-re-2-6.png){width="60%"} | [render user profile](/images/reactjs/lab-re-2-5.png){width="80%"} |
-| Hola5 0.2 | useReducer, userRef, useEffect: clock [hola5 0.2](https://github.com/AlbertProfe/CifoJava2023-2/tree/127c8b46a2de29de5f21c2a8216e5c465a746933/hola5){.external} </br> compoonent clock on [codesandbox](https://codesandbox.io/s/usereducer-example-clock-11y79d?file=/App.js){.external} </br>  | [clock tree-folder](/images/reactjs/lab-re-2-8.png){width="60%"} | [render clock](/images/reactjs/lab-re-2-10.png){width="80%"} |
-| Hola5 0.3 | api Rest [hola5 0.3](){.external} </br> compoonent api Rest [codesandbox](){.external} </br>  | [api Rest tree-folder](/images/reactjs/lab-re-2-9.png){width="60%"} | [render api Rest](/images/reactjs/lab-re-2-5.png){width="80%"} |
+| Hola5 0.2 | useReducer, userRef, useEffect: clock [hola5 0.2](https://github.com/AlbertProfe/CifoJava2023-2/tree/127c8b46a2de29de5f21c2a8216e5c465a746933/hola5){.external} </br> component clock on [codesandbox](https://codesandbox.io/s/usereducer-example-clock-11y79d?file=/App.js){.external} </br>  | [clock tree-folder](/images/reactjs/lab-re-2-8.png){width="60%"} | [render clock](/images/reactjs/lab-re-2-10.png){width="80%"} |
+| Hola5 0.3 | api Rest [hola5 0.3](){.external} </br> component api Rest [codesandbox](){.external} </br>  | [api Rest tree-folder](/images/reactjs/lab-re-2-9.png){width="60%"} | [render api Rest](/images/reactjs/lab-re-2-5.png){width="80%"} |
 
 
 
