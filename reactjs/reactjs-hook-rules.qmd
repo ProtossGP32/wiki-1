@@ -31,7 +31,7 @@ Reference: [Rules of Hooks](https://legacy.reactjs.org/docs/hooks-rules.html){.e
 `Hooks` are JavaScript functions, but you need to follow two rules when using them. We provide a linter plugin to enforce these rules automatically:
 
 
-### Rule#1: Only Call Hooks at the Top Level
+### Rule #1: Only Call Hooks at the Top Level
 
 > Don’t call Hooks inside loops, conditions, or nested functions. 
 
@@ -41,7 +41,7 @@ By following this rule, you ensure that Hooks are called in the same order each 
 
 That’s what allows React to correctly preserve the state of Hooks between multiple useState and useEffect calls.
 
-### Rule2: Only Call Hooks from React Functions
+### Rule #2: Only Call Hooks from React Functions
 
 > Don’t call Hooks from regular JavaScript functions. Instead, you can:
 

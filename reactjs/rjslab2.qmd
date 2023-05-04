@@ -447,7 +447,7 @@ The return statement returns a `JSX` template that displays the stopwatch: there
 
 ### Axios
 
-Intall `axios` using `npm`:
+Install `axios` using `npm`:
 
 ```js
 $ npm install axios
