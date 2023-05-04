@@ -445,7 +445,29 @@ The return statement returns a `JSX` template that displays the stopwatch: there
 
 ## api Rest
 
+### Axios
+
+Intall `axios` using `npm`:
+
+```js
+$ npm install axios
+```
+
+> `Axios` is a **promise-based HTTP Client for node.js and the browser**.
+> 
+> It is `isomorphic`
+> 
+> On the server-side it uses the native `node.js` http module
+> 
+> On the client (browser) it uses `XMLHttpRequests`.
+
+::: {.column-margin}
+`isomorphic`: it can run in the browser and nodejs with the same codebase.
+:::
+
 We use the [Axios](https://axios-http.com/docs/intro){.external} library **to fetch data from the [JSONPlaceholder](https://jsonplaceholder.typicode.com/){.external} API**, which provides a fake REST API for testing and prototyping. 
+
+### Component
 
 The component initializes a state variable called data using the `useState` hook, and sets **its initial value to an empty array.**
 
@@ -518,7 +540,7 @@ export default function AxiosApiRest() {
 | Hola5 0.0 | create project with route: [hola5 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/2404dbaad80566fe038a01e14e910a125089dc08/hola5){.external} | [initial tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render home](/images/reactjs/lab-re-2-2.png){width="80%"} |
 | Hola5 0.1 | useReducer: user Profile [hola5 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/aa824232395113d08efd6a86af38ebbc2a1e1e14/hola5){.external} </br> compoonent useReducer on [codesandbox with handlers functions](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external} </br> or [codesandbox dispatcher onChange, onClick](https://codesandbox.io/s/usereducer-example-form-v2-pbj3kh?file=/App.js){.external} | [userReducer tree-folder](/images/reactjs/lab-re-2-6.png){width="60%"} | [render user profile](/images/reactjs/lab-re-2-5.png){width="80%"} |
 | Hola5 0.2 | useReducer, userRef, useEffect: clock [hola5 0.2](https://github.com/AlbertProfe/CifoJava2023-2/tree/127c8b46a2de29de5f21c2a8216e5c465a746933/hola5){.external} </br> component clock on [codesandbox](https://codesandbox.io/s/usereducer-example-clock-11y79d?file=/App.js){.external} </br>  | [clock tree-folder](/images/reactjs/lab-re-2-8.png){width="60%"} | [render clock](/images/reactjs/lab-re-2-10.png){width="80%"} |
-| Hola5 0.3 | api Rest [hola5 0.3](){.external} </br> component api Rest [codesandbox](){.external} </br>  | [api Rest tree-folder](/images/reactjs/lab-re-2-9.png){width="60%"} | [render api Rest](/images/reactjs/lab-re-2-5.png){width="80%"} |
+| Hola5 0.3 | api Rest [hola5 0.3](https://github.com/AlbertProfe/CifoJava2023-2/tree/9fccb4721f3c37e17a68927e60812c43c31cf03c/hola5){.external} </br> component api Rest [codesandbox](https://codesandbox.io/s/to-do-11-hh9efc?file=/src/AxiosApiRest.jsx){.external} </br>  | [api Rest tree-folder](/images/reactjs/lab-re-2-9.png){width="60%"} | [render api Rest](/images/reactjs/lab-re-2-11.png){width="80%"} |
 
 
 

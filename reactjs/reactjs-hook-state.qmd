@@ -154,6 +154,91 @@ During the next render, **React goes through the state queue**:
 
 ![React stores *42* as the final result and returns it from ``useState``.](/images/reactjs/react-state-queue-2.png){.external}
 
+## Updating arrays without mutation
+
+### Example 1
+
+Updating arrays without mutation is important in React because it helps to ensure that the state of your application remains predictable and easy to debug. When you mutate an array in place, you change its original value, which can make it difficult to understand what has changed and why.
+
+In React, it's generally recommended to avoid mutating the state directly, and instead to create new copies of the state with the desired changes applied. This ensures that the original state is preserved, and makes it easier to understand how the state of your application is changing over time.
+
+Here's an example of how you might update an **array without mutation in Reac**t using the ``map`` function:
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+const [items, setItems] = useState([1, 2, 3]);
+
+const updateItem = index => {
+  setItems(items.map((item, i) => (i === index ? item * 2 : item)));
+};
+```
+
+::: {.column-margin}
+Updating arrays **without mutation can help to ensure that the state of your code remains predictable and easy to understand**, which can make it easier to develop and maintain.
+:::
+
+In this example, the updateItem function takes an index as an argument, and uses the map function to create a new array with the item at the specified index doubled. The setItems function is then called with the new array, which updates the state of the items array without mutating the original value.
+
+
+### Example 2
+
+[Adding to array](https://beta.reactjs.org/learn/updating-arrays-in-state#adding-to-an-array){.external} with ``useState``:
+
+> And instead of using ``push()``, we will create a **new array which contains the existing items and a new item at the end**. There are multiple ways to do this, but the easiest one is to use the ``...`` array ``spread`` syntax:
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+import { useState } from 'react';
+
+let nextId = 0;
+
+export default function List() {
+  const [name, setName] = useState('');
+  const [artists, setArtists] = useState([]);
+
+  return (
+    <>
+      <h1>Inspiring sculptors:</h1>
+      <input
+        value={name}
+        onChange={e => setName(e.target.value)}
+      />
+      <button onClick={() => {
+        setName('');
+        setArtists([
+          ...artists,
+          { id: nextId++, name: name }
+        ]);
+      }}>Add</button>
+      <ul>
+        {artists.map(artist => (
+          <li key={artist.id}>{artist.name}</li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+```
+
+::: {.column-margin}
+![array using ``... spread`` inital render](/images/reactjs/ex21.png){width=100%}
+:::
+
+::: {.column-margin}
+![array using ``... spread``  new render](/images/reactjs/ex22.png){width=100%}
+:::
+
+
+The array ``spread`` syntax also lets you **prepend an item by placing it before the original** ``...artists``:
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+setArtists([
+  { id: nextId++, name: name },
+  ...artists // Put old items at the end
+]);
+```
+
+In this way, ``spread`` can do the job of both ``push()`` by adding to the end of an array and ``unshift()`` by adding to the beginning of an array.
+
 
 <!--- navLinks -->
 <br><br>
