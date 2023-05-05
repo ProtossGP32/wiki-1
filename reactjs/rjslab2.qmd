@@ -434,17 +434,26 @@ useEffect(() => {
 :::
 
 
-> The combination of (1) the `useEffect` hook (which synchronizes execution with two different sources) and (2) the render cycle trigger-render-paint (due the change of state) **are the core business-logic of this code.**
+> The **core business-logic** of this code is the combination of:
+> 
+>  1. the `useEffect` **hook** (which synchronizes execution with two different sources) and
+> 
+>  2. the render cycle `trigger-render-paint` (due the change of state of `state.time` by `setInterval` and `tick`).
 
-The key-idea of the `useEffect` in this particular use (related to a timer problem) is **the synchronization of the execution with two different sources** and **when and who call the render-cycle**:
-
-- `useEffect`, **first render**: when the component is loaded.
-- `useEffect`, with its dependencies: `state.isRunning`, when user clicks button `start`, `stop` or `reset`.
-- with the change of the **state** the component triggers the **render cycle**: every time clock is ticking, that is, every one second.
+The key-idea of the `useEffect` in this particular use (related to a timer problem) is <mark>the synchronization of the execution with two different triggers</mark>:
 
 ::: {.column-margin}
 **timer**: `setInterval`and `clearInterval`with `idRef`
 :::
+
+- `useEffect`, **first render**: when the component is loaded.
+- `useEffect`, with its **dependencies**: `state.isRunning`, when user clicks button `start`, `stop` or `reset`.
+
+The <mark>core business-logic</mark> is completed with the `render-cycle`. The key-idea here is **when and who call the render-cycle**:
+
+- with the change of the **state** the component triggers the **render cycle**: every time clock is ticking, that is, every one second: `state.time` by `setInterval` and `tick`.
+
+
 
 ![core business-logic Time Manager code](/images/reactjs/lab-re-2-12.png){width="80%"}
 
@@ -455,6 +464,28 @@ The `idRef` is a reference to the timer, and it is updated every time the `useEf
 ```
 
 The return statement returns a `JSX` template that displays the stopwatch: there are three buttons: "`Start`", "`Stop`", and "`Reset`" that dispatch start, stop, and reset actions respectively.
+
+![Cleanup return](/images/reactjs/lab-re-2-13.png){width="80%"}
+
+The `cleanup function` of the `useEffect` hook allows us to stop side effects that no longer need to be executed before our component is unmounted.
+
+```js
+useEffect(() => {
+  // Core business-logic
+  return () => {
+    // Cleanup
+  }
+}, [dependencies])
+```
+
+When to [use](https://hackernoon.com/cleanup-functions-in-reacts-useeffect-hook-explained){.external} a `cleanup function`:
+
+- Canceling a fetch request
+- Cleaning up Timeouts
+- Cleaning up Intervals
+- Cleaning up Event Listeners
+- Cleaning up Web Sockets
+
 
 ## api Rest
 
