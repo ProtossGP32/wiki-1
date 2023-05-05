@@ -446,6 +446,8 @@ The key-idea of the `useEffect` in this particular use (related to a timer probl
 **timer**: `setInterval`and `clearInterval`with `idRef`
 :::
 
+![core business-logic Time Manager code](/images/reactjs/lab-re-2-12.png){width="80%"}
+
 The `idRef` is a reference to the timer, and it is updated every time the `useEffect` hook is called.
 
 ```js
