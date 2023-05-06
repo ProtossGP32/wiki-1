@@ -1,0 +1,21 @@
+---
+title: "The Compound Effect: Jumpstart Your Income, Your Life, Your Success"
+author: "Darren Hardy"
+subtitle: ""
+date: 5/1/2023
+date-modified: last-modified
+date-format: full
+description: "Based on the principle that decisions shape your destiny, this book reveals how small, consistent actions can lead to significant improvements in your life over time."
+categories: [strategy]
+subcategories: [success, self-improvement, business]
+format:
+  html
+---
+
+## Book Image
+
+![](/books/theCompoundEffect.jpg)
+
+## More info
+
+- [The Compound Effect: Jumpstart Your Income, Your Life, Your Success](https://www.amazon.com/Compound-Effect-Jumpstart-Income-Success/dp/159315724X){.external}

@@ -1,0 +1,21 @@
+---
+title: "Ikigai: The Japanese Secret to a Long and Happy Life"
+author: "Héctor García and Francesc Miralles"
+subtitle: ""
+date: "8/29/2017"
+date-modified: "6/6/2022"
+date-format: full
+description: "Explores the concept of ikigai, which translates to 'reason for being' in Japanese, and offers insights on how to find purpose, joy, and fulfillment in life."
+categories: [self-help, personal development]
+subcategories: [happiness, mindfulness]
+format:
+  html
+---
+
+## Book Image
+
+![](/books/ikigai.jpeg)
+
+## More info
+
+- [Ikigai: The Japanese Secret to a Long and Happy Life](https://www.example.com/book/ikigai){.external}

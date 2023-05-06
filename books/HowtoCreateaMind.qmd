@@ -1,0 +1,22 @@
+---
+title: "How to Create a Mind: The Secret of Human Thought Revealed"
+author: "Ray Kurzweil"
+subtitle: "How to Create a Mind: The Secret of Human Thought Revealed"
+date: "2/26/2013"
+date-modified: "4/18/2023"
+date-format: full
+description: "Explores the mysteries of human thought and proposes theories on how to replicate the human mind in artificial intelligence."
+categories: [neuroscience]
+subcategories: [technology, artificial intelligence]
+format:
+  html
+---
+
+## Book Image
+
+![](/books/HowtoCreateaMind.jpeg)
+
+## More info
+
+- [How to Create a Mind: The Secret of Human Thought Revealed](https://www.example.com/book/how-to-create-a-mind){.external}
+

@@ -1,0 +1,21 @@
+---
+title: "The Psychology of Money: Timeless lessons on wealth, greed, and happiness"
+author: "Morgan Housel"
+subtitle: ""
+date: "9/8/2020"
+date-modified: "7/12/2022"
+date-format: full
+description: "Explores the psychological factors that influence our relationship with money, offering valuable insights into wealth accumulation, risk management, and financial well-being."
+categories: [finance, psychology]
+subcategories: [personal finance, behavioral economics]
+format:
+  html
+---
+
+## Book Image
+
+![](/books/psychologyOfMoney.jpeg)
+
+## More info
+
+- [The Psychology of Money: Timeless lessons on wealth, greed, and happiness](https://www.example.com/book/the-psychology-of-money){.external}

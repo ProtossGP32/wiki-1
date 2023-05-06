@@ -1,0 +1,21 @@
+---
+title: "My Life as Quant"
+author: "Emanuel Derman"
+subtitle: ""
+date: "11/5/2004"
+date-modified: "3/22/2023"
+date-format: full
+description: "A memoir by Emanuel Derman, providing insights into the world of quantitative finance and the author's experiences as a physicist-turned-Wall-Street-quant."
+categories: [biography, finance]
+subcategories: []
+format:
+  html
+---
+
+## Book Image
+
+![](/books/myLifeAsQuant.jpeg)
+
+## More info
+
+- [My Life as Quant](https://www.example.com/book/my-life-as-quant){.external}

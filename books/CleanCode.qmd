@@ -1,0 +1,21 @@
+---
+title: "Clean Code: A Handbook of Agile Software Craftsmanship"
+author: "Robert C. Martin"
+subtitle: ""
+date: "8/11/2008"
+date-modified: "5/20/2022"
+date-format: full
+description: "Provides principles and best practices for writing clean, maintainable, and efficient code, helping software developers improve their coding skills and deliver high-quality software."
+categories: [programming]
+subcategories: [software development, agile methodologies]
+format:
+  html
+---
+
+## Book Image
+
+![](/books/CleanCode.jpg)
+
+## More info
+
+- [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.example.com/book/clean-code){.external}

@@ -1,0 +1,21 @@
+---
+title: "The Joy of Living: Unlocking the Secret and Science of Happiness"
+author: "Yongey Mingyur Rinpoche"
+subtitle: ""
+date: "3/6/2007"
+date-modified: "2/14/2023"
+date-format: full
+description: "Blends the ancient wisdom of Tibetan Buddhism with modern scientific insights, offering guidance on finding lasting happiness and peace."
+categories: [religion, psychology]
+subcategories: [buddhism, positive psychology]
+format:
+  html
+---
+
+## Book Image
+
+![](/books/joyOfLiving.jpeg)
+
+## More info
+
+- [The Joy of Living: Unlocking the Secret and Science of Happiness](https://www.example.com/book/the-joy-of-living){.external}

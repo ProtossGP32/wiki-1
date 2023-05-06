@@ -1,0 +1,21 @@
+---
+title: "The Rudest Book Ever"
+author: "Shwetabh Gangwar"
+subtitle: ""
+date: "2/15/2021"
+date-modified: "9/1/2022"
+date-format: full
+description: "Challenges societal norms and offers unconventional advice on topics such as relationships, self-improvement, and personal growth, with a straightforward and direct approach."
+categories: [self-help, social sciences]
+subcategories: [personal development, lifestyle]
+format:
+  html
+---
+
+## Book Image
+
+![](/books/rudestBookEver.jpeg)
+
+## More info
+
+- [The Rudest Book Ever](https://www.example.com/book/rudest-book-ever){.external}

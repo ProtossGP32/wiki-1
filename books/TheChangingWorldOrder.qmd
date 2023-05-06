@@ -1,0 +1,21 @@
+---
+title: "The Changing World Order: Why Nations Succeed and Fail"
+author: "Ray Dalio"
+subtitle: ""
+date: "10/19/2021"
+date-modified: "1/8/2023"
+date-format: full
+description: "Explores the rise and fall of empires and civilizations throughout history, providing insights into the factors that contribute to the success and failure of nations."
+categories: [history, political science]
+subcategories: [international relations, economics]
+format:
+  html
+---
+
+## Book Image
+
+![](/books/changingWorldOrder.jpeg)
+
+## More info
+
+- [The Changing World Order: Why Nations Succeed and Fail](https://www.example.com/book/the-changing-world-order){.external}

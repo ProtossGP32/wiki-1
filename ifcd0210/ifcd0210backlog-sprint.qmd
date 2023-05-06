@@ -18,11 +18,11 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #20 | 92 | 08/05 | - | - |
-|  | 93 | 09/05 | - | - |
-|  | 94 | 10/05 | - | - |
-|  | 95 | 11/05 | - | - |
-|  | 96 | 12/05 | - | - |
+| #20 | 92 | 08/05 | - useEffect, useRef, useReducer: </br> (1) hola5.clock </br> (2) cleanup function </br> - useContext | [useContext](/reactjs/reactjs-hook-context.qmd) |
+|  | 93 | 09/05 | - useEffect, useRef, useReducer, useContext: </br> (1) to-do: useCase, use story & mockup </br> - async | [Lab#RE03-1](/reactjs/rjslab3.qmd) </br> [async](/reactjs/reactjs-app-async.qmd) |
+|  | 94 | 10/05 | - useEffect, useRef, useReducer, useContext: </br> (1) to-do: reducer </br> - highCharts | [Lab#RE03-1](/reactjs/rjslab3.qmd) </br> [HighCharts](https://www.highcharts.com/) |
+|  | 95 | 11/05 | - useEffect, useRef, useReducer, useContext: </br> (1) to-do: context </br>  | - |
+|  | 96 | 12/05 | - SCRUM: </br> (1) </br> - Retrospective </br>  | - |
 : Backlog Sprint#20 May 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
