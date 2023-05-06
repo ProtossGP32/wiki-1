@@ -1,7 +1,7 @@
 ---
-title: "How to Create a Mind: The Secret of Human Thought Revealed"
+title: "How to Create a Mind"
 author: "Ray Kurzweil"
-subtitle: "How to Create a Mind: The Secret of Human Thought Revealed"
+subtitle: "Ray Kurzweil, 2013, How to Create a Mind: The Secret of Human Thought Revealed"
 date: "2/26/2013"
 date-modified: "4/18/2023"
 date-format: full
@@ -18,5 +18,5 @@ format:
 
 ## More info
 
-- [How to Create a Mind: The Secret of Human Thought Revealed](https://www.example.com/book/how-to-create-a-mind){.external}
+- [How to Create a Mind: The Secret of Human Thought Revealed](https://www.amazon.es/How-Create-Mind-Thought-Revealed/dp/0143124048){.external}
 

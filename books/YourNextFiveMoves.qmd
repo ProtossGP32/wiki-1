@@ -1,7 +1,7 @@
 ---
-title: "Your Next Five Moves: Master the Art of Business Strategy"
-author: "Patrick Bet-David"
-subtitle: "Your Next Five Moves: Master the Art of Business Strategy"
+title: "Your Next Five Moves"
+author: "albertprofe"
+subtitle: "Patrick Bet-David, 2020, Your Next Five Moves: Master the Art of Business Strategy"
 date: "9/1/2020"
 date-modified: "6/22/2022"
 date-format: full
@@ -18,4 +18,4 @@ format:
 
 ## More info
 
-- [Your Next Five Moves: Master the Art of Business Strategy](https://www.example.com/book/your-next-five-moves){.external}
+- [Your Next Five Moves: Master the Art of Business Strategy](https://www.amazon.es/Your-Next-Five-Moves-Business-ebook/dp/B08428LMQT){.external}

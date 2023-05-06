@@ -1,12 +1,12 @@
 ---
 title: "The Relaxation Revolution"
 author: "albertprofe"
-subtitle: " William Proctor, Herbert Benson, 2010, The Relaxation Revolution: Enhancing Your Personal Health Through the Science and Genetics of Mind Body Healing"
+subtitle: "William Proctor, Herbert Benson, 2010, The Relaxation Revolution: Enhancing Your Personal Health Through the Science and Genetics of Mind Body Healing"
 date: 1/20/2023
 date-modified: last-modified
 date-format: full
 description: "A comprehensive guide to reducing stress and improving well-being. The Relaxation Revolution provides practical strategies for relaxation and mindfulness, so you can lead a more balanced and fulfilling life."
-categories: [psychology]
+categories: [self-management]
 subcategories: [self-help, psychology, stress]
 format:
     html

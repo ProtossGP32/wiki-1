@@ -1,7 +1,7 @@
 ---
-title: "Consilience: The Unity of Knowledge"
-author: "Edward O. Wilson"
-subtitle: "Consilience: The Unity of Knowledge"
+title: "Consilience"
+author: "albertprofe"
+subtitle: "Edward O. Wilson, 1999, Consilience: The Unity of Knowledge"
 date: "4/29/1999"
 date-modified: "11/5/2021"
 date-format: full
@@ -18,4 +18,4 @@ format:
 
 ## More info
 
-- [Consilience: The Unity of Knowledge](https://www.example.com/book/consilience){.external}
+- [Consilience: The Unity of Knowledge](https://www.amazon.com/Consilience-Knowledge-Edward-Osborne-Wilson/dp/067976867X){.external}

@@ -1,7 +1,7 @@
 ---
-title: "The Second Brain: A Groundbreaking New Understanding Of Nervous Disorders Of The Stomach And Intestine"
-author: "Michael Gershon"
-subtitle: ""
+title: "The Second Brain"
+author: "albertprofe"
+subtitle: "Michael Gershon, 2020, The Second Brain: A Groundbreaking New Understanding Of Nervous Disorders Of The Stomach And Intestine"
 date: "1/2/1999"
 date-modified: "11/14/2022"
 date-format: full

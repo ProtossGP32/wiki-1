@@ -1,12 +1,12 @@
 ---
-title: "Execution: The Discipline of Getting Things Done"
+title: "Execution"
 author: "albertprofe"
 subtitle: "Larry Bossidy, Ram Charan,Charles Burck (with), 2006, Execution: The Discipline of Getting Things Done"
 date: 1/20/2023
 date-modified: last-modified
 date-format: full
 description: "#1 NEW YORK TIMES BESTSELLER - More than two million copies in print! The premier resource for how to deliver results in an uncertain world, whether you're running an entire company or in your first management job. A must-read for anyone who cares about business.--The New York Times"
-categories: [assay]
+categories: [strategy]
 subcategories:  [assay, execution]
 format:
     html

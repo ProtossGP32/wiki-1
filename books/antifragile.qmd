@@ -1,7 +1,7 @@
 ---
-title: "Antifragile: Things That Gain from Disorder (Incerto)"
-author: "Nassim Nicholas Taleb"
-subtitle: "Antifragile: Things That Gain from Disorder (Incerto)"
+title: "Antifragile"
+author: "albertprofe"
+subtitle: "Nassim Nicholas Taleb, 2012, Antifragile: Things That Gain from Disorder (Incerto)"
 date: 5/1/2023
 date-modified: last-modified
 date-format: full

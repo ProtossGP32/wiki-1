@@ -6,8 +6,8 @@ date: "3/6/2007"
 date-modified: "2/14/2023"
 date-format: full
 description: "Blends the ancient wisdom of Tibetan Buddhism with modern scientific insights, offering guidance on finding lasting happiness and peace."
-categories: [neuroscience]
-subcategories: [buddhism, positive psychology]
+categories: [self-management]
+subcategories: [buddhism, psychology, neuroscience]
 format:
   html
 ---

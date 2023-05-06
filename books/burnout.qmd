@@ -6,8 +6,8 @@ date: 1/20/2023
 date-modified: last-modified
 date-format: full
 description: "An early and influential work on the topic of burnout. Herbert Freudenberger explores the causes and symptoms of burnout and provides practical tips for avoiding and overcoming it."
-categories: [psychology]
-subcategories:  [agile, mental health, stress]
+categories: [self-management]
+subcategories:  [agile, psychology, stress]
 format:
     html
 ---

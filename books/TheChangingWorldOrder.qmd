@@ -6,8 +6,8 @@ date: "10/19/2021"
 date-modified: "1/8/2023"
 date-format: full
 description: "Explores the rise and fall of empires and civilizations throughout history, providing insights into the factors that contribute to the success and failure of nations."
-categories: [strategy]
-subcategories: [international relations, economics]
+categories: [finance]
+subcategories: [international-relations, assay]
 format:
   html
 ---
