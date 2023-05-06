@@ -1,5 +1,5 @@
 ---
-title: "The Communication Book: 44 Ideas for Better Conversations Every Day"
+title: "The Communication Book"
 subtitle: "Mikal Nielsen, 2018, The Communication Book: 44 Ideas for Better Conversations Every Day"
 author: "Mikal Nielsen"
 date: 1/20/2023
