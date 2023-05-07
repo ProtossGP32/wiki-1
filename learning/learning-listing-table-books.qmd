@@ -4,10 +4,11 @@ categories: [listing, table]
 listing:
     id: books-table-listing
     contents:
-         - "../books/*.qmd"
+        - "../books/*.qmd"
     sort:
         - "file-modified desc"
-        - "categories desc"
+        - "categories"
+        - "title"
     type: table
     image-align: left
     image-placeholder: "/images/home/frontimagealbertprofeweb.png"

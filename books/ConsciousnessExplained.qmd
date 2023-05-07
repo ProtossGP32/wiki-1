@@ -1,7 +1,7 @@
 ---
 title: "Consciousness Explained"
-author: "Daniel C. Dennett"
-subtitle: "Consciousness Explained"
+author: "albertprofe"
+subtitle: "Daniel C. Dennett, 1991, Consciousness Explained"
 date: 5/1/2023
 date-modified: last-modified
 date-format: full
@@ -19,3 +19,4 @@ format:
 ## More info
 
 - [Consciousness Explained](https://www.amazon.com/dp/0316180661){.external}
+- [Consciousness Explained](https://en.wikipedia.org/wiki/Consciousness_Explained){.external}

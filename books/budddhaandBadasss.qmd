@@ -6,7 +6,7 @@ date: 1/20/2023
 date-modified: last-modified
 date-format: full
 description: "Have You Ever Noticed How Some People Have All the Luck at Work?They generate ideas on the fly. They magnetically attract the right people. Others crave joining their missions, their companies, their teams. They move with fluidity and ease, nailing projects with a smile on their face. Getting the coveted raises and promotions. These superstars are often able to get in the zone, displaying remarkable focus and creativity. They are masters of relationships, forging close ties with their teams and everyone around them. When they do business, it's about win-win. And one of the most unique qualities they seem to have is remarkable luck. Things just go easy for them. It seems like the Universe bends in their favor."
-categories: [assay]
+categories: [strategy]
 subcategories:  [agile, psychology]
 format:
   html

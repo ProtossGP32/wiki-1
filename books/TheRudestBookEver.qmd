@@ -14,7 +14,7 @@ format:
 
 ## Book Image
 
-![](/books/TheRudestBookEver.jpg)
+![](/books/TheRudestBookEver.jpg){width="60%"}
 
 ## More info
 

@@ -6,7 +6,7 @@ date: 1/20/2023
 date-modified: last-modified
 date-format: full
 description: "A profound and compelling exploration of the role of the brain in shaping our civilization. Iain McGilchrist argues that the split between the two hemispheres of the brain has led to a host of cultural and philosophical issues, and offers a compelling vision for how we might heal this divide."
-categories: [neuroscience]
+categories: [neuropsychology]
 subcategories: [brain, philosophy, culture, neuroscience]
 format:
   html

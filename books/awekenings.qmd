@@ -1,12 +1,12 @@
 ---
 title: "Awekenings"
-author: "Oliver Sacks"
-subtitle: "Awekenings"
+author: "albertprofe"
+subtitle: "Oliver Sacks, 1973, Awekenings"
 date: 5/1/2023
 date-modified: last-modified
 date-format: full
 description: "The classic account of survivors of the encephalitic lethargica and their return to the world after decades of “sleep.” This book was the inspiration for the 1990 film starring Robert De Niro and Robin Williams."
-categories: [neuroscience]
+categories: [neuropsychology]
 subcategories: [brain, mind]
 format:
   html
