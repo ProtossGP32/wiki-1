@@ -577,6 +577,93 @@ export default function AxiosApiRest() {
 ```
 ## `useContext` login
 
+Reference: [useContext hook: Example #1](/reactjs/reactjs-hook-context.qmd#example-1)
+
+![useContext: create, provide, consume](/images/reactjs/lab-re-2-14.png){width="80%"}
+
+![useContext: consume in components-tree](/images/reactjs/lab-re-2-15.png){width="80%"}
+
+> **createContext, useContext, useState** working together
+
+In this example, there is a ``currentUser`` state variable which holds an object.
+
+We combine ``{ currentUser, setCurrentUser }`` into a single object and pass it down through the ``context`` inside the ``value={}``.
+
+This lets any component below, such as ``LoginButton``, read both ``currentUser`` and ``setCurrentUser``, and then call ``setCurrentUser`` when needed.
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+import { createContext, useContext, useState } from 'react';
+
+const CurrentUserContext = createContext(null);
+
+export default function MyApp() {
+  const [currentUser, setCurrentUser] = useState(null);
+  return (
+    <CurrentUserContext.Provider
+      value={{
+        currentUser,
+        setCurrentUser
+      }}
+    >
+      <Form />
+    </CurrentUserContext.Provider>
+  );
+}
+
+function Form({ children }) {
+  return (
+    <Panel title="Welcome">
+      <LoginButton />
+    </Panel>
+  );
+}
+
+function LoginButton() {
+  const {
+    currentUser,
+    setCurrentUser
+  } = useContext(CurrentUserContext);
+
+  if (currentUser !== null) {
+    return <p>You logged in as {currentUser.name}.</p>;
+  }
+
+  return (
+    <Button onClick={() => {
+      setCurrentUser({ name: 'Advika' })
+    }}>Log in as Advika</Button>
+  );
+}
+
+function Panel({ title, children }) {
+  return (
+    <section className="panel">
+      <h1>{title}</h1>
+      {children}
+    </section>
+  )
+}
+
+function Button({ children, onClick }) {
+  return (
+    <button className="button" onClick={onClick}>
+      {children}
+    </button>
+  );
+}
+
+```
+
+::: {.column-margin}
+![Initial render](/images/reactjs/ex31.png){width=100%}
+:::
+
+::: {.column-margin}
+![Initial render](/images/reactjs/ex32.png){width=100%}
+:::
+
+
+[Examples of updating context](https://beta.reactjs.org/reference/react/useContext#examples-basic){.external}
 
 
 ## Versions
@@ -587,6 +674,7 @@ export default function AxiosApiRest() {
 | Hola5 0.1 | useReducer: user Profile [hola5 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/aa824232395113d08efd6a86af38ebbc2a1e1e14/hola5){.external} </br> compoonent useReducer on [codesandbox with handlers functions](https://codesandbox.io/s/usereducer-example-form-nuyyyi?file=/App.js){.external} </br> or [codesandbox dispatcher onChange, onClick](https://codesandbox.io/s/usereducer-example-form-v2-pbj3kh?file=/App.js){.external} | [userReducer tree-folder](/images/reactjs/lab-re-2-6.png){width="60%"} | [render user profile](/images/reactjs/lab-re-2-5.png){width="80%"} |
 | Hola5 0.2 | useReducer, userRef, useEffect: clock [hola5 0.2](https://github.com/AlbertProfe/CifoJava2023-2/tree/127c8b46a2de29de5f21c2a8216e5c465a746933/hola5){.external} </br> component clock on [codesandbox](https://codesandbox.io/s/usereducer-example-clock-11y79d?file=/App.js){.external} </br>  | [clock tree-folder](/images/reactjs/lab-re-2-8.png){width="60%"} | [render clock](/images/reactjs/lab-re-2-10.png){width="80%"} |
 | Hola5 0.3 | api Rest [hola5 0.3](https://github.com/AlbertProfe/CifoJava2023-2/tree/9fccb4721f3c37e17a68927e60812c43c31cf03c/hola5){.external} </br> component api Rest [codesandbox](https://codesandbox.io/s/to-do-11-hh9efc?file=/src/AxiosApiRest.jsx){.external} </br>  | [api Rest tree-folder](/images/reactjs/lab-re-2-9.png){width="60%"} | [render api Rest](/images/reactjs/lab-re-2-11.png){width="80%"} |
+| Hola5 0.4 | useContext: fake login [hola5 0.4](https://github.com/AlbertProfe/CifoJava2023-2/tree/78f96c91662ba285880d2cb259b277d76329fd0c/hola5){.external} | [useContxt login tree-folder](/images/reactjs/lab-re-2-16.png){width="60%"} | [render useContext login](/images/reactjs/lab-re-2-17.png){width="80%"} - [render useContext loged](/images/reactjs/lab-re-2-18.png){width="80%"}  |
 
 
 
