@@ -18,7 +18,7 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #20 | 92 | 08/05 | - useEffect, useRef, useReducer: </br> (1) hola5.clock </br> (2) cleanup function </br> - useContext | [useContext](/reactjs/reactjs-hook-context.qmd) |
+| #20 | 92 | 08/05 | - useEffect, useRef, useReducer: </br> (1) hola5.clock </br> (2) cleanup function </br> - useContext: </br> (1) hola5.login </br>  | [useContext](/reactjs/reactjs-hook-context.qmd) </br> [Lab#RE02-1 clock](/reactjs/rjslab2.qmd#usereducer-useeffect-useref-clock) </br> [Lab#RE02-1 login](/reactjs/rjslab2.qmd#usecontext-login) |
 |  | 93 | 09/05 | - useEffect, useRef, useReducer, useContext: </br> (1) to-do: useCase, use story & mockup </br> - async | [Lab#RE03-1](/reactjs/rjslab3.qmd) </br> [async](/reactjs/reactjs-app-async.qmd) |
 |  | 94 | 10/05 | - useEffect, useRef, useReducer, useContext: </br> (1) to-do: reducer </br> - highCharts | [Lab#RE03-1](/reactjs/rjslab3.qmd) </br> [HighCharts](https://www.highcharts.com/) |
 |  | 95 | 11/05 | - useEffect, useRef, useReducer, useContext: </br> (1) to-do: context </br>  | - |
