@@ -44,6 +44,13 @@ This lab is a basic implementation of a **Todo List application** using React. I
 
 We will define an `initial set of todos` and a reducer function that handles various actions like `adding a new todo`, `deleting a todo`, `marking a todo as completed`, and `resetting the list.`
 
+Actions definition:
+
+- `add` action: Adds a new todo item to the list.
+- ``delete`` action: Removes a todo item from the list.
+- ``completed`` action: Toggles the completed status of a todo item.
+- ``reset`` action: Resets the todo list to its initial state.
+
 ```js
 const initialTodos = [
   {
@@ -73,9 +80,72 @@ The `TodoApp component` uses the `useReducer` hook to manage the state of todos 
 
 ## step-by-step code
 
+### Project creation
+
 ::: {.column-margin}
 ![step-by-step cheatsheet](/images/reactjs/todo-app-reducer-context.png){width="30%"}
 :::
+
+First at all we create the React project with `Route` and `Semantic` css Library.
+
+Then, the reducer component: `<ToDoApp />`.
+
+It uses React's `useReducer` hook to manage the state of the todo items. The initial todos are predefined, and the app supports actions like adding a new todo, deleting a todo, and marking a todo as completed. The state of the todos is stored in an array.
+
+We crete a placeholder `useReducer`:
+
+```js
+import { Button, Input, Checkbox } from "semantic-ui-react";
+import { useReducer } from "react";
+
+const initialTodos = [
+  {
+    id: 1,
+    text: "lean how to comunicate",
+    completed: true,
+    author: "Faby",
+    due: 1 / 5 / 2022
+  },
+  {
+    id: 2,
+    text: "road out of hell",
+    complete: false,
+    author: "Alex",
+    due: 1 / 6 / 2022
+  }
+];
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "bla": {
+      return;
+    }
+    case "blabla": {
+      return;
+    }
+    default: {
+      return state;
+    }
+  }};
+
+
+export default function ToDoApp(){
+    const [state, dispacher] = useReducer (reducer, initialTodos);
+
+    return (
+      <>
+        <br />
+        <span>ToDo</span>
+        <Button>Delete</Button>
+        <Input placeholder="Write something" />
+        <Checkbox toggle />
+        <br />
+      </>
+    );
+};
+```
+
+
 
 ## Versions
 
