@@ -81,7 +81,7 @@ The `TodoApp component` uses the `useReducer` hook to manage the state of todos 
 
  Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
-| to-do 0.0 | create project with route: [do-do 0.0](){.external} | [initial tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render home](/images/reactjs/lab-re-2-2.png){width="80%"} |
+| todoApp 0.0 | create project with route: [todoApp 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/c269b2ad6704635e4e966676598fd23428d05bb7/todoapp){.external} | [initial tree-folder](/images/reactjs/lab-re-3-5.png){width="60%"} | [render home](/images/reactjs/lab-re-3-4.png){width="80%"} |
 
 
 
