@@ -453,7 +453,7 @@ The <mark>core business-logic</mark> is completed with the `render-cycle`. The k
 
 - with the change of the **state** the component triggers the **render cycle**: every time clock is ticking, that is, every one second: `state.time` by `setInterval` and `tick`.
 
-
+The return statement returns a `JSX` template that displays the stopwatch: there are three buttons: "`Start`", "`Stop`", and "`Reset`" that dispatch start, stop, and reset actions respectively.
 
 ![core business-logic Time Manager code](/images/reactjs/lab-re-2-12.png){width="80%"}
 
@@ -463,7 +463,7 @@ The `idRef` is a reference to the timer, and it is updated every time the `useEf
   const idRef = useRef(0);
 ```
 
-The return statement returns a `JSX` template that displays the stopwatch: there are three buttons: "`Start`", "`Stop`", and "`Reset`" that dispatch start, stop, and reset actions respectively.
+The returned value of `setInterval`, which represents the `ID` of the interval, is stored in `idRef.current`.
 
 ![Cleanup return](/images/reactjs/lab-re-2-13.png){width="80%"}
 
@@ -484,7 +484,31 @@ When to [use](https://hackernoon.com/cleanup-functions-in-reacts-useeffect-hook-
 - Cleaning up Timeouts
 - Cleaning up Intervals
 - Cleaning up Event Listeners
-- Cleaning up Web Sockets
+- Closing up Web Sockets
+
+```js
+useEffect(() => {
+
+    // ...
+
+    return () => {
+      clearInterval(idRef.current);
+      idRef.current = 0;
+    };
+
+  }, [state.isRunning]);
+```
+
+This `cleanup` function will be executed before the next effect execution or when the component unloads (unmounts). Inside the cleanup function:
+
+- The `clearInterval` function is called with the `idRef.current` value to **clear** the interval and **stop** the **associated callback function from executing.**
+- `idRef.current` is set to 0 to indicate that the interval **has been cleared.**
+
+
+The cleanup return function ensures that any resources or side effects created by the effect **are properly cleaned up and disposed of, preventing memory leaks or unintended behavior.** 
+
+In this case, it ensures that t**he interval is cleared and any associated callbacks are stopped when the component unmounts or when the `isRunning` value changes to false.**
+
 
 
 ## api Rest

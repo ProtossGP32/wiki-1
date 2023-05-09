@@ -15,16 +15,54 @@ format:
 
 ::: {.lab}
 
-📘 **lab**
+📘 **React JS Lab#RE03-1: to-do app**
 
+In this lab, we will be using:
 
+- the ``react-router-dom``, which is a package with bindings for using React Router in web applications.
+- We will use the  [Semantic React](https://react.semantic-ui.com/){.external} to paint some `CSS`.
+- hooks: `useState`, `useEffect`, `useReducer`, `useContext`, `useRef` .
+
+The lab will demonstrate **how to use a ``react-router-dom`` with React to build a functional web application**.
 
 :::
 
----
+</br>
 
+## user-story & mock-up
 
-About this site
+This lab is a basic implementation of a **Todo List application** using React. It utilizes **React hooks** such as `useReducer` and `useContext` for state management.
+
+We will define an `initial set of todos` and a reducer function that handles various actions like `adding a new todo`, `deleting a todo`, `marking a todo as completed`, and `resetting the list.`
+
+```js
+const initialTodos = [
+  {
+    id: 1,
+    text: "lean how to comunicate",
+    completed: true,
+    author: "Faby",
+    due: 1 / 5 / 2022
+  },
+  {
+    id: 2,
+    text: "road out of hell",
+    complete: false,
+    author: "Alex",
+    due: 1 / 6 / 2022
+  }
+];
+```
+
+The `TodoApp component` uses the `useReducer` hook to manage the state of todos and `dispatch` actions based on user interactions. It renders a header, a button to create new todos, and a TodosList component that displays the list of todos.
+
+![](/images/reactjs/lab-re-3-1.png){}
+
+![](/images/reactjs/lab-re-3-2.png){}
+
+![](/images/reactjs/lab-re-3-3.png){}
+
+## Mock-up
 
 
 <!--- navLinks -->
