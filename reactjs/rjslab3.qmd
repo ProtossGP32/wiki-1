@@ -13,21 +13,23 @@ format:
   html
 ---
 
-::: {.lab}
-
+::: {.labs}
 📘 **React JS Lab#RE03-1: to-do app**
 
 In this lab, we will be using:
 
 - the ``react-router-dom``, which is a package with bindings for using React Router in web applications.
-- We will use the  [Semantic React](https://react.semantic-ui.com/){.external} to paint some `CSS`.
-- hooks: `useState`, `useEffect`, `useReducer`, `useContext`, `useRef` .
+- We will use the [Semantic React](https://react.semantic-ui.com/){.external} library to paint some `CSS`.
+  - We could use a [table](https://react.semantic-ui.com/collections/table/){.external} or [list](https://react.semantic-ui.com/elements/list/){.exteranal}
+- We could use [HighCharts](https://www.highcharts.com/){.external} to represent data.
+- hooks: `useReducer`, `useContext`, `useRef` and we could use `useState`.
 
 The lab will demonstrate **how to use a ``react-router-dom`` with React to build a functional web application**.
-
 :::
 
 </br>
+
+Reference: [codesanbox basic to-do](https://codesandbox.io/s/to-do-oh3324?file=/src/todo/TodoApp.jsx){.external}
 
 ## user-story & mock-up
 
@@ -56,13 +58,24 @@ const initialTodos = [
 
 The `TodoApp component` uses the `useReducer` hook to manage the state of todos and `dispatch` actions based on user interactions. It renders a header, a button to create new todos, and a TodosList component that displays the list of todos.
 
-![](/images/reactjs/lab-re-3-1.png){}
+![inital render app](/images/reactjs/lab-re-3-1.png){}
 
-![](/images/reactjs/lab-re-3-2.png){}
+![calendar picker to set date](/images/reactjs/lab-re-3-2.png){}
 
-![](/images/reactjs/lab-re-3-3.png){}
+![creating new todos](/images/reactjs/lab-re-3-3.png){}
 
-## Mock-up
+## step-by-step code
+
+::: {.column-margin}
+![step-by-step cheatsheet](/images/reactjs/todo-app-reducer-context.png){width="30%"}
+:::
+
+## Versions
+
+ Code Version | Commit | Folder-Tree | Screeshoots |
+| -- | -- | -- | -- |
+| to-do 0.0 | create project with route: [do-do 0.0](){.external} | [initial tree-folder](/images/reactjs/lab-re-2-1.png){width="60%"} | [render home](/images/reactjs/lab-re-2-2.png){width="80%"} |
+
 
 
 <!--- navLinks -->
