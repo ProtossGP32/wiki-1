@@ -501,13 +501,13 @@ useEffect(() => {
 
 This `cleanup` function will be executed before the next effect execution or when the component unloads (unmounts). Inside the cleanup function:
 
-- The `clearInterval` function is called with the `idRef.current` value to **clear** the interval and **stop** the **associated callback function from executing.**
+- The `clearInterval` function is called with the `idRef.current` value to **clear** the interval and **stop** the <mark>associated callback function from executing.</mark>
 - `idRef.current` is set to 0 to indicate that the interval **has been cleared.**
 
 
-The cleanup return function ensures that any resources or side effects created by the effect **are properly cleaned up and disposed of, preventing memory leaks or unintended behavior.** 
+The cleanup return function ensures that any resources or side effects created by the effect <mark>are properly cleaned up and disposed of, preventing memory leaks or unintended behavior.</mark> 
 
-In this case, it ensures that t**he interval is cleared and any associated callbacks are stopped when the component unmounts or when the `isRunning` value changes to false.**
+In this case, it ensures that <mark>the interval is cleared and any associated callbacks are stopped when the component unmounts or when the `isRunning` value changes to false.</mark>
 
 
 

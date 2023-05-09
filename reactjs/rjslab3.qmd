@@ -22,14 +22,20 @@ In this lab, we will be using:
 - We will use the [Semantic React](https://react.semantic-ui.com/){.external} library to paint some `CSS`.
   - We could use a [table](https://react.semantic-ui.com/collections/table/){.external} or [list](https://react.semantic-ui.com/elements/list/){.exteranal}
 - We could use [HighCharts](https://www.highcharts.com/){.external} to represent data.
-- hooks: `useReducer`, `useContext`, `useRef` and we could use `useState`.
+- Hooks we are going to use:
+  - to create the basic app: `useReducer`, `useContext`, 
+  - to persist the state values between renders: `useEffect`, `useRef`.
+  - to manage others states o variables: `useState`.
 
 The lab will demonstrate **how to use a ``react-router-dom`` with React to build a functional web application**.
 :::
 
 </br>
 
-Reference: [codesanbox basic to-do](https://codesandbox.io/s/to-do-oh3324?file=/src/todo/TodoApp.jsx){.external}
+Reference:
+- [codesanbox basic todo](https://codesandbox.io/s/todo-app-1-oh3324){.external}
+- [codesanbox useRef todo](https://codesandbox.io/s/todo-app-2-6cfpry){.external}
+
 
 ## user-story & mock-up
 
