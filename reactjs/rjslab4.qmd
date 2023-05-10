@@ -1,12 +1,12 @@
 ---
-title: "Lab#RE04-1: HighCharts"
+title: "Lab#RE04-1: chat & websockets"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
 description: labs
-categories: [reactjs, lab, Lab#RE04]
+categories: [reactjs, lab, Lab#RE05]
 toc: true
 number-sections: true
 format:
@@ -26,15 +26,13 @@ format:
 
 About this site
 
-
-
-<!--- navLinks -->
+About this site<!--- navLinks -->
 <br><br>
 <div class=row>
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} React JS: Lab#RE03-1](/reactjs/rjslab3.qmd)
+[{{< fa solid arrow-left >}} React JS: Lab#RE03-3](/reactjs/rjslab3-3.qmd)
 <br>
 </div>
 <br>
@@ -46,7 +44,7 @@ About this site
 <br>
 <div class='column right next'>
 <br>
-[React JS: Lab#RE05-1  {{< fa solid arrow-right >}}](/reactjs/rjslab5.qmd)
+[ReactJS Resources  {{< fa solid arrow-right >}}](/reactjs/resources.qmd)
 <br>
 </div>
 <br>

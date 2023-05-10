@@ -1,38 +1,40 @@
 ---
-title: "Lab#RE05-1: chat & websockets"
+title: "Lab#RE03-3: API Rest CRUD"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
 description: labs
-categories: [reactjs, lab, Lab#RE05]
+categories: [reactjs, lab, Lab#RE03]
 toc: true
 number-sections: true
 format:
   html
 ---
 
-::: {.lab}
-
-📘 **lab**
-
+::: {.labs}
+📘 **React JS Lab#RE03-3: ``API Rest CRUD``**
 
 
 :::
 
----
+
+</br>
+
+## Overview
 
 
-About this site
 
-About this site<!--- navLinks -->
+
+
+<!--- navLinks -->
 <br><br>
 <div class=row>
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} React JS: Lab#RE04-1](/reactjs/rjslab4.qmd)
+[{{< fa solid arrow-left >}} React JS: Lab#RE03-2](/reactjs/rjslab3-2.qmd)
 <br>
 </div>
 <br>
@@ -44,7 +46,7 @@ About this site<!--- navLinks -->
 <br>
 <div class='column right next'>
 <br>
-[ReactJS Resources  {{< fa solid arrow-right >}}](/reactjs/resources.qmd)
+[React JS: Lab#RE04-1 {{< fa solid arrow-right >}}](/reactjs/rjslab4.qmd)
 <br>
 </div>
 <br>

@@ -173,7 +173,7 @@ export default function ToDoApp(){
 <br>
 <div class='column right next'>
 <br>
-[React JS: Lab#RE04-1  {{< fa solid arrow-right >}}](/reactjs/rjslab4.qmd)
+[React JS: Lab#RE03-2  {{< fa solid arrow-right >}}](/reactjs/rjslab3-2.qmd)
 <br>
 </div>
 <br>
