@@ -155,6 +155,10 @@ Step-by-step new todo creation:
 4. The `reducer` executes a case `add` creating a new state.
 5. As a new state is created, a new render is painted.
 
+::: {.column-margin}
+![Highchart Pie example](/images/reactjs/lab-re-2-19.png){}
+::::
+
 ```js
 import { Button, Input, Checkbox } from "semantic-ui-react";
 import { useReducer } from "react";
