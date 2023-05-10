@@ -153,7 +153,8 @@ Step-by-step new todo creation:
 2. when the button is clicked, it **dispatches** an action of type `"add"` using the `dispatch` function
 3. and calls the `reducer`.
 4. The `reducer` executes a case `add` creating a new state.
-5. As a new state is created, a new render is painted.
+5. As a new state is created,
+6. a new render is painted.
 
 ::: {.column-margin}
 ![Highchart Pie example](/images/reactjs/lab-re-2-19.png){}
