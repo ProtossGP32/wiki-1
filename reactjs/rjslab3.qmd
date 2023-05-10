@@ -145,6 +145,84 @@ export default function ToDoApp(){
 };
 ```
 
+### create new todo
+
+The `<Button>` component is rendered with an **onClick event handler**. When the button is clicked, it **dispatches** an action of type `"add"` using the `dispatch` function and calls the `reducer`.
+
+```js
+  <Button onClick={() => dispatch({ type: "add" })}>Create Todo</Button>
+```
+
+In the reducer, the `spread` operator `(...state)` is used to create a new array that includes all the existing elements without mutating the original state.
+
+```js
+import { Button, Input, Checkbox } from "semantic-ui-react";
+import { useReducer } from "react";
+
+const initialTodos = [
+  // todos objects
+];
+
+function reducer(state, action) {
+  switch (action.type) {
+     case "add": {
+      return [
+        ...state,
+        {
+          id: Date.now(),
+          text: "",
+          author: "",
+          due: "",
+          completed: false
+        }
+      ];
+    }
+    case "blabla": {
+      return;
+    }
+    default: {
+      return state;
+    }
+  }};
+
+
+export default function ToDoApp(){
+    const [state, dispatch] = useReducer(reducer, initialTodos);
+
+    return (
+      <>
+      <div style={{margin: "40px"}}>        
+        <br />
+        <Button onClick={
+          () => dispatch({ type: "add" })}>Create Todo</Button>
+        <br />
+        <span>todo id</span> {" "}
+        <Button>Delete</Button>
+        <Input placeholder="Write something" />
+        <Checkbox toggle />
+        <br />
+        </div>
+
+      </>
+    );
+};
+```
+
+The `spread` operator `(...state)` is used <mark>to create a new array that includes all the elements from the existing state array. This is done to avoid mutating the original state.</mark>
+
+A *new object is created* with the following properties:
+
+- `id`: A unique identifier generated using `Date.now()`. This will ensure that each new item has a unique identifier.
+- `text`: An empty string.
+- `author`: An empty string.
+- `due`: An empty string.
+- `completed`: A boolean value set to false, indicating that the item is not completed.
+  
+The new object is then <mark>added to the end of the new array created at initial load using the spread operator (...state).</mark>
+
+This ensures that the new item is appended to the existing items in the state array.
+
+Finally, the updated array is returned from the reducer function, representing the new state with the newly added item.
 
 
 ## Versions
@@ -152,6 +230,7 @@ export default function ToDoApp(){
  Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
 | todoApp 0.0 | create project with route: [todoApp 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/c269b2ad6704635e4e966676598fd23428d05bb7/todoapp){.external} | [initial tree-folder](/images/reactjs/lab-re-3-5.png){width="60%"} | [render home](/images/reactjs/lab-re-3-4.png){width="80%"} |
+| todoApp 0.1 | create new todo: [todoApp 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/96c8f427a889ccd8f32517c38ee1b8b6a2bd54ba/todoapp){.external} | - | [initial render](/images/reactjs/lab-re-3-7.png) - [tod created render](/images/reactjs/lab-re-3-8.png){width="80%"} |
 
 
 
