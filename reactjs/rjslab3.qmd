@@ -147,13 +147,13 @@ export default function ToDoApp(){
 
 ### create new todo
 
-The `<Button>` component is rendered with an **onClick event handler**. When the button is clicked, it **dispatches** an action of type `"add"` using the `dispatch` function and calls the `reducer`.
+Step-by-step new todo creation:
 
-```js
-  <Button onClick={() => dispatch({ type: "add" })}>Create Todo</Button>
-```
-
-In the reducer, the `spread` operator `(...state)` is used to create a new array that includes all the existing elements without mutating the original state.
+1. The `<Button>` component is rendered with an **onClick event handler**,
+2. when the button is clicked, it **dispatches** an action of type `"add"` using the `dispatch` function
+3. and calls the `reducer`.
+4. The `reducer` executes a case `add` creating a new state.
+5. As a new state is created, a new render is painted.
 
 ```js
 import { Button, Input, Checkbox } from "semantic-ui-react";
@@ -208,6 +208,50 @@ export default function ToDoApp(){
 };
 ```
 
+The `<Button>` component is rendered with an **onClick event handler**. When the button is clicked, it **dispatches** an action of type `"add"` using the `dispatch` function and calls the `reducer`.
+
+```js
+  <Button onClick={() => dispatch({ type: "add" })}>Create Todo</Button>
+```
+
+In the reducer, the `spread` operator `(...state)` is used to create a new array that includes all the existing elements without mutating the original state.
+
+```js
+import { Button, Input, Checkbox } from "semantic-ui-react";
+import { useReducer } from "react";
+
+const initialTodos = [
+  // todos objects
+];
+
+function reducer(state, action) {
+  switch (action.type) {
+     case "add": {
+      return [
+        ...state,
+        {
+          id: Date.now(),
+          text: "",
+          author: "",
+          due: "",
+          completed: false
+        }
+      ];
+    }
+    case "blabla": {
+      return;
+    }
+    default: {
+      return state;
+    }
+  }};
+
+
+export default function ToDoApp(){
+   // render
+};
+```
+
 The `spread` operator `(...state)` is used <mark>to create a new array that includes all the elements from the existing state array. This is done to avoid mutating the original state.</mark>
 
 A *new object is created* with the following properties:
@@ -230,7 +274,7 @@ Finally, the updated array is returned from the reducer function, representing t
  Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
 | todoApp 0.0 | create project with route: [todoApp 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/c269b2ad6704635e4e966676598fd23428d05bb7/todoapp){.external} | [initial tree-folder](/images/reactjs/lab-re-3-5.png){width="60%"} | [render home](/images/reactjs/lab-re-3-4.png){width="80%"} |
-| todoApp 0.1 | create new todo: [todoApp 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/96c8f427a889ccd8f32517c38ee1b8b6a2bd54ba/todoapp){.external} | - | [initial render](/images/reactjs/lab-re-3-7.png) - [tod created render](/images/reactjs/lab-re-3-8.png){width="80%"} |
+| todoApp 0.1 | create new todo: [todoApp 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/96c8f427a889ccd8f32517c38ee1b8b6a2bd54ba/todoapp){.external} | - | [initial render](/images/reactjs/lab-re-3-7.png) - [todo created render](/images/reactjs/lab-re-3-8.png){width="80%"} |
 
 
 
