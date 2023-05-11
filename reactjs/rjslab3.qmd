@@ -35,6 +35,7 @@ The lab will demonstrate **how to use a ``react-router-dom`` with React to build
 Reference:
 
 - [codesanbox basic todo](https://codesandbox.io/s/todo-app-1-oh3324){.external}
+- [codesanbox update handle function todo](https://codesandbox.io/s/todo-app-1-update-1oqrbq){.external}
 - [codesanbox useContext todo](https://codesandbox.io/s/todo-app-2-6cfpry){.external}
 
 
@@ -380,12 +381,176 @@ function appReducer(state, action) {
 ```
 
 
-### update todo
+### update ``chekbox`` todo
+
+::: {.callout-note}
+## JSX elements directly inside a map() call always need keys!
+Keys tell React which array item each component corresponds to, so that it can match them up later. This becomes important if your array items can move (e.g. due to sorting), get inserted, or get deleted. A well-chosen key helps React infer what exactly has happened, and make the correct updates to the DOM tree.
+:::
+
+::: {.column-margin}
+[Rendering Lists](https://react.dev/learn/rendering-lists#why-does-react-need-keys){.external} - 
+[Why does React need keys?](https://react.dev/learn/rendering-lists#why-does-react-need-keys){.external}
+:::
+
+For example, ``React.Fragment`` and a key for our list:
+
+```js
+{state.map((item) => (
+      <React.Fragment key={item.id}>
+        
+      </React.Fragment>
+))}
+```
+
+We could update the ``complete`` field by using a event ``onChange`` that dispatchs as a payload the `item.id` with the ``completed`` type:
 
 
-### `useContext` todo
+```js
+ <input
+    type="checkbox"
+    checked={item.completed}
+    onChange={() => dispatch({ type: "completed", payload: item.id })}
+/>
+```
+And the reducer with the ``completed`` action:
+
+```js
+function appReducer(state, action) {
+  switch (action.type) {
+    // other cases
+    case "completed": {
+      return state.map((item) => {
+        if (item.id === action.payload) {
+          return {
+            ...item,
+            completed: !item.completed
+          };
+        }
+        return item;
+      });
+    }
+    // default case
+}
+
+```
 
 
+### update ``input`` todo
+
+
+We could update the ``input`` common fields -``text``, ``author``, ``due``- by creating a handler function ``handleUpdate``:
+
+```js
+const handleUpdate = (id, field, value) => {
+    dispatch({
+      type: "update",
+      payload: {
+        id,
+        field,
+        value
+      }
+    });
+};
+```
+
+The inputs ``onChange``, now, will call the ``handleUpdate`` function with the ``field``:
+
+```js
+<input
+  type="text"
+  value={item.text}
+  onChange={(e) => handleUpdate(item.id, "text", e.target.value)}
+/>{" "}
+<input
+  type="text"
+  value={item.author}
+  onChange={(e) => handleUpdate(item.id, "author", e.target.value)}
+/>{" "}
+<input
+  type="date"
+  value={item.due}
+  onChange={(e) => handleUpdate(item.id, "due", e.target.value)}
+/>{" "}
+```
+And the reducer with the ``update`` action:
+
+```js
+function appReducer(state, action) {
+  switch (action.type) {
+    // other cases
+    case "update": {
+      const { id, field, value } = action.payload;
+      return state.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            [field]: value
+          };
+        }
+        return item;
+      });
+    }
+    // default case
+}
+
+```
+
+### `useContext`, ``useEffect``, `useRef` todo
+
+The ``useEffect``, ``useRef``, and ``useContext`` hooks are <mark>used to handle different aspects of state management and render lifecycle.</mark>
+
+- ``useEffect``: is used to update the ``stateRef.current`` value whenever the state changes.
+  - It ensures that the stateRef always holds the latest value of state.
+  - The effect is triggered whenever the state dependency changes, which means it will run after every state update.
+
+- ``useRef``: the ``stateRef`` variable is created using ``useRef``. <mark>It creates a mutable reference that persists across renders. </mark>
+  - ``stateRef`` is used to hold the current value of state.
+  - By using useRef, the value can be updated without causing a re-render, and it can be accessed inside the useEffect hook.
+
+- ``useContext``:  the Context is created using ``React.createContext()``, and it is used to share the dispatch function with child components.
+  - By wrapping the components inside ``<Context.Provider value={dispatch}>``, the dispatch function is made available to all components within the ``Context.Provider`` scope.
+  - The child component, ``TodosList``, accesses the ``dispatch`` function using the ``useContext`` hook.
+
+```js
+function appReducer(state, action) {
+  // ---
+}
+
+const Context = React.createContext();
+
+
+export default function TodoApp() {
+  const [state, dispatch] = useReducer(appReducer, initialTodos);
+  const stateRef = useRef(state);
+
+  useEffect(() => {
+    stateRef.current = state;
+  }, [state]);
+
+  return (
+    <Context.Provider value={dispatch}>
+      <h3>List: add, delete, complete and refresh</h3>
+      <button onClick={
+        () => dispatch({ type: "add" })}>Create Todo</button>
+      <br />
+      <br />
+      <TodosList items={stateRef.current} />
+    </Context.Provider>
+  );
+}
+
+function TodosList({ items }) {
+  return items.map((item) => <TodoItem key={item.id} {...item} />);
+}
+
+}
+
+function TodoItem({ id, completed, author, text, due }) {
+  const dispatch = useContext(Context);
+  //..
+}
+```
 
 ## Versions
 
