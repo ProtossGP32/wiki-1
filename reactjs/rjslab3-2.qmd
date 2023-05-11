@@ -56,12 +56,15 @@ Here's a high-level overview of how ``Highcharts`` React works to make data visi
 -  You can explore the `[``Highcharts``](https://www.highcharts.com/){.external} **documentation** to learn about additional features, such as exporting charts, adding annotations, or integrating with external data sources.
 
 
-### Pie Chart
+### References
 
-- [Codesanbox example: todo](http://localhost:7329/reactjs/rjslab3-2.html){.external}
+- [Codesanbox example: highcharts](https://codesandbox.io/s/highcharts-example-r52m80){.external}
+- [Codesanbox example: todo with highcharts](https://codesandbox.io/s/todo-app-3-v08qbi){.external}
 - [Codesanbox example: live random data](https://codesandbox.io/s/react-highcharts-forked-iszykt){.external}
 - [Codesanbox example: bitcoin reatime data stock](https://codesandbox.io/s/jolly-pasteur-99bldy){.external}
 - [HighCharts Demo](https://www.highcharts.com/demo){.external}
+
+## Pie Chart
 
 ### Importing Dependencies
 

@@ -35,7 +35,7 @@ The lab will demonstrate **how to use a ``react-router-dom`` with React to build
 Reference:
 
 - [codesanbox basic todo](https://codesandbox.io/s/todo-app-1-oh3324){.external}
-- [codesanbox useRef todo](https://codesandbox.io/s/todo-app-2-6cfpry){.external}
+- [codesanbox useContext todo](https://codesandbox.io/s/todo-app-2-6cfpry){.external}
 
 
 ## user-story & mock-up
@@ -72,11 +72,11 @@ const initialTodos = [
 
 The `TodoApp component` uses the `useReducer` hook to manage the state of todos and `dispatch` actions based on user interactions. It renders a header, a button to create new todos, and a TodosList component that displays the list of todos.
 
-![inital render app](/images/reactjs/lab-re-3-1.png){}
+![inital render app](/images/reactjs/lab-re-3-1.png){width="80%"}
 
-![calendar picker to set date](/images/reactjs/lab-re-3-2.png){}
+![calendar picker to set date](/images/reactjs/lab-re-3-2.png){width="80%"}
 
-![creating new todos](/images/reactjs/lab-re-3-3.png){}
+![creating new todos](/images/reactjs/lab-re-3-3.png){width="80%"}
 
 ## step-by-step code
 
@@ -272,6 +272,76 @@ The new object is then <mark>added to the end of the new array created at initia
 This ensures that the new item is appended to the existing items in the state array.
 
 Finally, the updated array is returned from the reducer function, representing the new state with the newly added item.
+
+
+### read and render todo
+
+We are going to **map over** our `state` and generating a list of `htmml` elements based on its contents.
+
+::: {.column-margin}
+[Mozilla map docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map){.external}
+:::
+
+Within the mapping function, each item in the <mark>state array is rendered as a set of elements enclosed within an empty fragment `(<>...</>)`.<mark>
+
+::: {.column-margin}
+`(<>...</>)`: this is a common technique in `React` to group multiple elements without adding unnecessary wrapper elements to the `DOM`.
+:::
+
+
+For each `item` in the `state` array, the code generates the following elements:
+
+- `<input type="checkbox">:` This is a `checkbox` input element.
+  - The checked attribute is bound to the item.completed property, which presumably determines whether the `checkbox` should be checked or not.
+- `<input type="text">`: Two text input elements are rendered, each with the `defaultValue` attribute bound:
+  -  to `item.text` and 
+  -  `item.author` respectively.
+  -  These inputs display the default values of the corresponding text and author properties of the `item` object.
+- `<input type="date">`: This is a date input element with the `defaultValue` attribute bound to `item.due`.
+  - It displays the default due date value of the item object.
+- `<button>`: A button element is rendered with the label "Delete".
+
+
+
+### delete todo
+
+We define the operation `delete`:
+
+  - event `onClick` on button
+  - case `delete` on reducer
+  - reducer creates new state which triggers new render with new state
+
+The `button` element, when clicked, **triggers** an action to delete an item. It uses an `onClick` `event` `handler` that `dispatches` <mark> a "delete" action with the item's ID as the payload,<mark> allowing the application to handle the deletion logic based on the dispatched action.
+
+
+```js
+  <Button
+    onClick={() => dispatch({ type: "delete", payload: item.id })}>
+    Delete
+  </Button>
+```
+The reducer case statement for handling the "delete" action filters the state array based on the item's ID, removing the item with the matching ID from the state.
+
+```js
+function appReducer(state, action) {
+  switch (action.type) {
+    //.. other cases
+
+    case "delete": {
+      return state.filter((item) => item.id !== action.payload);
+    }
+    
+    //.. other cases  
+  }
+}
+```
+
+
+### update todo
+
+
+### `useContext` todo
+
 
 
 ## Versions
