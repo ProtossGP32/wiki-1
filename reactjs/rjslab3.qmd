@@ -276,6 +276,49 @@ Finally, the updated array is returned from the reducer function, representing t
 
 ### read and render todo
 
+
+```js
+import React, { useReducer } from "react";
+
+const initialTodos = [
+  // todos initial
+];
+
+function appReducer(state, action) {
+  switch (action.type) {
+    // cases
+}
+
+export default function TodoApp() {
+  const [state, dispatch] = useReducer(appReducer, initialTodos);
+
+  return (
+    <>
+      <h3>List: add, delete, complete and refresh</h3>
+      <button onClick={() => dispatch({ type: "add" })}>
+        Create Todo
+      </button>{" "}
+      <button>Clear Todo</button>
+      <br /> <br />
+      <div style={{ margin: "20px" }}>
+        {state.map((item) => (
+          <>
+            <input type="checkbox"/>
+            <input type="text" defaultValue={item.text} />{" "}
+            <input type="text" defaultValue={item.author} />{" "}
+            <input type="date" defaultValue={item.due} />{" "}
+            <button>
+              Delete
+            </button>
+            <br />
+          </>
+        ))}
+      </div>
+    </>
+  );
+}
+```
+
 We are going to **map over** our `state` and generating a list of `htmml` elements based on its contents.
 
 ::: {.column-margin}
@@ -350,7 +393,7 @@ function appReducer(state, action) {
 | -- | -- | -- | -- |
 | todoApp 0.0 | create project with route: [todoApp 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/c269b2ad6704635e4e966676598fd23428d05bb7/todoapp){.external} | [initial tree-folder](/images/reactjs/lab-re-3-5.png){width="60%"} | [render home](/images/reactjs/lab-re-3-4.png){width="80%"} |
 | todoApp 0.1 | create new todo: [todoApp 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/96c8f427a889ccd8f32517c38ee1b8b6a2bd54ba/todoapp){.external} | - | [initial render](/images/reactjs/lab-re-3-7.png) - [todo created render](/images/reactjs/lab-re-3-8.png){width="80%"} |
-
+| todoApp 0.1 | render todos, clear, delete todo: [todoApp 0.2](https://github.com/AlbertProfe/CifoJava2023-2/tree/9b1cc003788e3335ed04e6630b19e0a2b841c297/todoapp){.external} | - | [initial render](/images/reactjs/lab-re-3-9.png) - [todo created render](/images/reactjs/lab-re-3-10.png){width="80%"} |
 
 
 <!--- navLinks -->
