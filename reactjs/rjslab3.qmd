@@ -410,7 +410,8 @@ We could update the ``complete`` field by using a event ``onChange`` that dispat
  <input
     type="checkbox"
     checked={item.completed}
-    onChange={() => dispatch({ type: "completed", payload: item.id })}
+    onChange={
+      () => dispatch({ type: "completed", payload: item.id })}
 />
 ```
 And the reducer with the ``completed`` action:
@@ -495,6 +496,16 @@ function appReducer(state, action) {
 }
 
 ```
+
+::: {.column-margin}
+An **object initializer** is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces `{}`.
+
+
+`const { id, field, value } = action.payload;`
+
+
+[Object_initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names){.external}
+:::
 
 ### `useContext`, ``useEffect``, `useRef` todo
 
