@@ -71,6 +71,13 @@ const initialTodos = [
 ];
 ```
 
+::: {.column-margin}
+The ``Object`` type represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities. Objects can be created using the ``Object()`` constructor or **the object initializer / literal syntax.**
+
+[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object){.external}
+
+:::
+
 The `TodoApp component` uses the `useReducer` hook to manage the state of todos and `dispatch` actions based on user interactions. It renders a header, a button to create new todos, and a TodosList component that displays the list of todos.
 
 ![inital render app](/images/reactjs/lab-re-3-1.png){width="80%"}

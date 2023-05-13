@@ -1,12 +1,12 @@
 ---
-title: "Lab#RE03-3: API Rest CRUD"
+title: "Lab#RE05-1: chat & websockets"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
 description: labs
-categories: [reactjs, lab, Lab#RE03]
+categories: [reactjs, lab, Lab#RE05]
 toc: true
 number-sections: true
 format:
@@ -14,18 +14,15 @@ format:
 ---
 
 ::: {.labs}
-📘 **React JS Lab#RE03-3: ``API Rest CRUD``**
+
+📘 **lab**
+
 
 
 :::
 
-
 </br>
 
-## Overview
-
-
-[The easiest way to mock REST APIs](https://mockapi.io/){.external}
 
 
 
@@ -36,7 +33,7 @@ format:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} React JS: Lab#RE03-2](/reactjs/rjslab3-2.qmd)
+[{{< fa solid arrow-left >}} React JS: Lab#RE04-1](/reactjs/rjslab4.qmd)
 <br>
 </div>
 <br>
@@ -48,7 +45,7 @@ format:
 <br>
 <div class='column right next'>
 <br>
-[React JS: Lab#RE04-1 {{< fa solid arrow-right >}}](/reactjs/rjslab4.qmd)
+[ReactJS Resources  {{< fa solid arrow-right >}}](/reactjs/resources.qmd)
 <br>
 </div>
 <br>

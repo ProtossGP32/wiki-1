@@ -1,32 +1,46 @@
 ---
-title: "Lab#RE04-1: chat & websockets"
+title: "Lab#RE04-1: CRUD useContext"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
 description: labs
-categories: [reactjs, lab, Lab#RE05]
+categories: [reactjs, lab, Lab#RE04]
 toc: true
 number-sections: true
 format:
   html
 ---
 
-::: {.lab}
+::: {.labs}
+📘 **React JS Lab#RE04-1: CRUD useContext**
 
-📘 **lab**
+In this lab, we will be using:
 
-
-
+- the ``react-router-dom``, which is a package with bindings for using React Router in web applications.
+- the [use Context API](https://react.dev/learn/passing-data-deeply-with-context){.external} and ``useContext``  hooks together to build a fully functional CRUD application that emulates a list of employees.
+-  It will read employee data, create new employees, update employee data, and delete employees.
+  
 :::
 
----
+</br>
 
 
-About this site
+## Overall
 
-About this site<!--- navLinks -->
+
+References:
+
+- [How To Build a CRUD App with React Hooks and the Context API and Tailwind](https://www.digitalocean.com/community/tutorials/react-crud-context-hooks){.exteranal}
+- [Tailwind](https://tailwindcss.com/){.external}
+- [codesandbox basic example with bootstrap](https://codesandbox.io/s/react-crud-context-api-employee-0drnpc){.external}
+- [Reactstrap is a React component library for Bootstrap](https://reactstrap.github.io/?path=/story/home-installation--page){.external}
+- [React Context API: What is it and How it works?](https://www.loginradius.com/blog/engineering/react-context-api/){.exteranl}
+- [Zustand ](https://docs.pmnd.rs/zustand/getting-started/introduction){.external}
+
+
+<!--- navLinks -->
 <br><br>
 <div class=row>
 <br>
@@ -44,7 +58,7 @@ About this site<!--- navLinks -->
 <br>
 <div class='column right next'>
 <br>
-[ReactJS Resources  {{< fa solid arrow-right >}}](/reactjs/resources.qmd)
+[React JS: Lab#RE05-1  {{< fa solid arrow-right >}}](/reactjs/rjslab5.qmd)
 <br>
 </div>
 <br>

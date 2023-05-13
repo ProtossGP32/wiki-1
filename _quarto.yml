@@ -372,6 +372,8 @@ website:
             - reactjs/rjslab3-3.qmd
             - text: "---"
             - reactjs/rjslab4.qmd
+            - text: "---"
+            - reactjs/rjslab5.qmd
         - text: "---" 
         - section: "React JS readings"
           contents: 
