@@ -1,5 +1,5 @@
 ---
-title: "Lab#RE04-1: "
+title: "Lab#RE04-1: feathers"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
@@ -14,11 +14,9 @@ format:
 ---
 
 ::: {.labs}
-📘 **React JS Lab#RE04-1: **
+📘 **React JS Lab#RE04-1: feathers**
 
-In this lab, we will be using:
-
-
+In this lab, we will be using [feathers](https://feathersjs.com/){.external}, the API and Real-timeApplication Framework.
   
 :::
 
@@ -30,12 +28,8 @@ In this lab, we will be using:
 
 References:
 
-- [How To Build a CRUD App with React Hooks and the Context API and Tailwind](https://www.digitalocean.com/community/tutorials/react-crud-context-hooks){.exteranal}
-- [Tailwind](https://tailwindcss.com/){.external}
-- [codesandbox basic example with bootstrap](https://codesandbox.io/s/react-crud-context-api-employee-0drnpc){.external}
-- [Reactstrap is a React component library for Bootstrap](https://reactstrap.github.io/?path=/story/home-installation--page){.external}
-- [React Context API: What is it and How it works?](https://www.loginradius.com/blog/engineering/react-context-api/){.exteranl}
-- [Zustand ](https://docs.pmnd.rs/zustand/getting-started/introduction){.external}
+
+
 
 
 <!--- navLinks -->

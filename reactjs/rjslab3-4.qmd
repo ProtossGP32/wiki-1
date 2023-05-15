@@ -20,7 +20,7 @@ In this lab, we will be using:
 
 - the ``react-router-dom``, which is a package with bindings for using React Router in web applications:
   - the [use Context API](https://react.dev/learn/passing-data-deeply-with-context){.external} and ``useContext``  hooks together to build a fully functional CRUD application that emulates a list of employees.
-  - local storage
+  - `local storage`
   - stores: `redux/reducer`, `Zustand`
 
 :::
@@ -33,11 +33,9 @@ In this lab, we will be using:
 
 References:
 
-
-
-
 - [React Context API: What is it and How it works?](https://www.loginradius.com/blog/engineering/react-context-api/){.exteranl}
 - [Zustand ](https://docs.pmnd.rs/zustand/getting-started/introduction){.external}
+- [useLocalStorage](https://usehooks.com/useLocalStorage/){.external}
 
 
 <!--- navLinks -->
