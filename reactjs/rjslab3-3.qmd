@@ -16,16 +16,47 @@ format:
 ::: {.labs}
 📘 **React JS Lab#RE03-3: ``API Rest CRUD``**
 
+A `CRUD` (Create, Read, Update, Delete) Todo app with RESTful API integration:
+
+- Using `Axios` and `Fetch`
+  - `Axios` and `Fetch` are **JavaScript libraries used for making HTTP requests to the API endpoints.**
+  - `Axios` or `Fetch` can be used to send HTTP requests to these endpoints, allowing data manipulation through CRUD operations.
+- Server side implemented with `MockAPI`:
+  - by utilizing MockAPI, developers can create custom API endpoints to mimic server-side functionality.
+- The Todo app allows users to create, view, update, and delete tasks.
+- This integration <mark>will build a fully functional Todo application with API communication and data persistence.</mark>
+
 
 :::
 
 
 </br>
 
-## Overview
+References:
+
+- [The easiest way to mock REST APIs](https://mockapi.io/){.external}
+- [codesanbox api rest CRUD axios/fetch](){.external}
+
+## mock api
+
+> `MockAPI.io` is a web service that allows developers **to create and simulate RESTful APIs for testing and development purposes.**
+
+![mockapi creating scheme-model](/images/reactjs/lab-re-3-11.png){width="50%"}
+
+With `MockAPI.io`, developers can easily generate custom API endpoints and define the responses they want to receive when those endpoints are called. It provides a user-friendly interface to create, manage, and configure mock APIs, making it simple to simulate different scenarios and test how an application interacts with an API.
+
+`MockAPI.io` supports various HTTP methods, request headers, query parameters, and response types, allowing developers to mimic real API behavior. It's a valuable tool for rapid prototyping, integration testing, and mocking data during development.
+
+## axios
 
 
-[The easiest way to mock REST APIs](https://mockapi.io/){.external}
+## fetch
+
+
+## step-by-step todo api rest
+
+
+
 
 
 
@@ -48,7 +79,7 @@ format:
 <br>
 <div class='column right next'>
 <br>
-[React JS: Lab#RE04-1 {{< fa solid arrow-right >}}](/reactjs/rjslab4.qmd)
+[React JS: Lab#RE03-4 {{< fa solid arrow-right >}}](/reactjs/rjslab3-4.qmd)
 <br>
 </div>
 <br>

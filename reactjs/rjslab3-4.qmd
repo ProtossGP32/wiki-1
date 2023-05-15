@@ -1,5 +1,5 @@
 ---
-title: "Lab#RE04-1: "
+title: "Lab#RE03-4: store"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
@@ -14,12 +14,15 @@ format:
 ---
 
 ::: {.labs}
-📘 **React JS Lab#RE04-1: **
+📘 **React JS Lab#RE03-4: store**
 
 In this lab, we will be using:
 
+- the ``react-router-dom``, which is a package with bindings for using React Router in web applications:
+  - the [use Context API](https://react.dev/learn/passing-data-deeply-with-context){.external} and ``useContext``  hooks together to build a fully functional CRUD application that emulates a list of employees.
+  - local storage
+  - stores: `redux/reducer`, `Zustand`
 
-  
 :::
 
 </br>
@@ -30,10 +33,9 @@ In this lab, we will be using:
 
 References:
 
-- [How To Build a CRUD App with React Hooks and the Context API and Tailwind](https://www.digitalocean.com/community/tutorials/react-crud-context-hooks){.exteranal}
-- [Tailwind](https://tailwindcss.com/){.external}
-- [codesandbox basic example with bootstrap](https://codesandbox.io/s/react-crud-context-api-employee-0drnpc){.external}
-- [Reactstrap is a React component library for Bootstrap](https://reactstrap.github.io/?path=/story/home-installation--page){.external}
+
+
+
 - [React Context API: What is it and How it works?](https://www.loginradius.com/blog/engineering/react-context-api/){.exteranl}
 - [Zustand ](https://docs.pmnd.rs/zustand/getting-started/introduction){.external}
 
@@ -44,7 +46,7 @@ References:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} React JS: Lab#RE03-4](/reactjs/rjslab3-4.qmd)
+[{{< fa solid arrow-left >}} React JS: Lab#RE03-3](/reactjs/rjslab3-3.qmd)
 <br>
 </div>
 <br>
@@ -56,7 +58,7 @@ References:
 <br>
 <div class='column right next'>
 <br>
-[React JS: Lab#RE05-1  {{< fa solid arrow-right >}}](/reactjs/rjslab5.qmd)
+[React JS: Lab#RE04-1  {{< fa solid arrow-right >}}](/reactjs/rjslab4.qmd)
 <br>
 </div>
 <br>
