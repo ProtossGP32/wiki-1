@@ -19,7 +19,7 @@ tr:nth-child(2) {
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
 | #21 | 97 | 15/05 | - axios, fetch </br> (1) api rest mockapi </br> - useRef, useReducer, useContext: </br>  (1) to-do: context API </br> | [codesandbox api rest todo cards](https://6kgxh7.csb.app/){.external} </br>  [deployed api rest todo cards](https://6kgxh7.csb.app/){.external} </br> [mock api](https://mockapi.io/){.external} </br> [Lab#RE02-3](/reactjs/rjslab3-2.qmd) |
-|  | 98 | 16/05 | - highcharts: </br> (1) to-do: visualisation data </br> (2) import data </br> - styling | [styling](/reactjs/reactjs-app-styling.qmd) |
+|  | 98 | 16/05 | - highcharts: </br> (1) to-do: visualisation data </br> (2) import data json </br>  (3) function calculate </br> - styling | [styling](/reactjs/reactjs-app-styling.qmd) |
 |  | 99 | 17/05 | - axios, fetch </br> (1) to-do: api rest consume data </br> (2) to-do: async</br>  | - |
 |  | 100 | 18/05 | - store </br> (1) redux/reducer </br> local storage | - |
 |  | 101 | 19/05 | - SCRUM: </br> (0) How rich (abundance/scarcity) is created? </br> (1) Why just left mode is wrong?  </br> (2) The map is no the territory: fishing factory </br> (3) Right mode: living in the ambiguity</br> (4) Taleb/McGilchrist: Simple/Complicated/Complex </br>  (5) What is a problem? Why science is losing prestige? </br> (6)  Mountain Manifesto </br> - Retrospective  | - |
