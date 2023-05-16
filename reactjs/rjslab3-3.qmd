@@ -23,7 +23,7 @@ A `CRUD` (Create, Read, Update, Delete) Todo app with RESTful API integration:
   - `Axios` or `Fetch` can be used to send HTTP requests to these endpoints, allowing data manipulation through CRUD operations.
 - Fake server-side implemented with `MockAPI`:
   - by utilizing MockAPI, developers can create custom API endpoints to mimic server-side functionality.
-- The Todo app allows users to create, view, update, and delete tasks.
+- The Todo app allows users to `create`, `read`, `update`, and `delete` tasks.
 - This integration <mark>will build a fully functional Todo application with API communication and data persistence.</mark>
 
 
@@ -49,9 +49,25 @@ With `MockAPI.io`, developers can easily generate custom API endpoints and defin
 
 ## axios
 
+> `Axios` is a JavaScript library used **for making HTTP requests in React applications**.
+
+It provides an **easy-to-use** and consistent API for performing **asynchronous operations**, such as fetching data from an API.
+
+`Axios` supports features like interceptors, automatic request/response transformation, and error handling. It works both in the browser and Node.js environments and offers support for various request methods (`GET`, `POST`, `PUT`, `DELETE`, etc.).
+
+`Axios` simplifies the process of making HTTP requests by providing a higher-level abstraction and allowing developers to handle responses and errors more efficiently.
+
 
 ## fetch
 
+> `Fetch` is a built-in web API in modern browsers that allows **making HTTP requests in React applications and other JavaScript environments**.
+
+
+It provides a **native and low-level way of fetching resources from a server**.
+
+`Fetch` operates using Promises, **enabling asynchronous operations and providing a more modern alternative to the older XMLHttpRequest (XHR) approach.** 
+
+`Fetch` supports sending requests and receiving responses, but it lacks <mark>some advanced features provided by libraries like Axios, such as automatic request/response transformation and interceptors.</mark>
 
 ## step-by-step todo api rest
 
