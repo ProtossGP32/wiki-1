@@ -84,8 +84,31 @@ It provides a **native and low-level way of fetching resources from a server**.
 ![Render todo with grid, cards and CRUD operations, [render deployed](https://6kgxh7.csb.app/todoapp){.external}](/images/reactjs/lab-re-3-12.png){}
 
 
-### Basic structure
+### General idea
 
+Let's create first at all our core components:
+
+- The ``CreateTodo`` component is responsible for rendering a form to create a new Todo item. It uses React's useState hook to manage the state of input fields.
+- The ``UpdateTodo`` component displays a checkbox that represents the completion status of a Todo item. It receives the Todo object as a prop and handles the update of the completion status.
+- The ``ReadTodos`` component renders a list of Todo items fetched from an API. It uses React's useState hook to manage the state of the Todo items.
+- The ``DeleteTodo`` component displays a button to delete a Todo item. It receives the Todo object as a prop and handles the deletion.
+
+> The main ``Todos`` component is responsible for managing the state of all Todo items. 
+
+It fetches the Todo items from an API using the ``useEffect`` hook and stores them in the state using the ``useState`` hook.
+
+It also provides the necessary functions:
+
+- ``addTodo``,
+- ``updateTodo``
+- ``deleteTodo``
+- ``fetchTodos`` 
+  
+to manipulate the ``Todo`` items through the ``ApiContext``, which is created using React's createContext hook.
+
+The ``Todos`` component renders the ``CreateTodo`` component and the ``ReadTodos`` component within a container. 
+
+The ``ApiContext.Provider`` wraps these components to provide access to the Todo items and manipulation functions throughout the component tree.
 
 ```js
 import React, { useState, useEffect, useContext } from "react";
@@ -190,8 +213,6 @@ const Todos = () => {
 };
 
 export default Todos;
-
-
 
 ```
 

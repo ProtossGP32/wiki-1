@@ -25,6 +25,38 @@ In this lab, we will be using [feathers](https://feathersjs.com/){.external}, th
 
 ## Overall
 
+- [Quick start](https://feathersjs.com/guides/basics/starting.html){.external}
+- [Node.js CRUD App Using React and FeathersJS](https://www.sitepoint.com/crud-app-node-react-feathersjs/){.external}
+
+You can create a new ``Feathers`` application by running
+
+```js
+ npm create feathers <name>
+```
+Once the ``Feathers`` CLI is installed you may keep with the project.
+
+::: {.column-margin}
+Since the generated application is using modern features like **ES modules**, the ``Feathers`` CLI requires ``Node 16`` or newer.
+:::
+
+
+You need to define your project.
+
+- choose if you want to use JavaScript or TypeScript.
+- When presented with the project name, just hit enter, or enter a name (no spaces).
+- Next, write a short description for your application.
+- Confirm the next questions with the default selection by pressing Enter.
+- If you choose a database other than SQLite, make sure it is reachable at the connection string.
+- using MongoDB is nece, change the database selection.
+
+Once you confirm the last prompt, the final selection should look similar to this:
+
+![Prompt feathers](/images/reactjs/lab-re-4-1.png){}
+
+## API Server with Feathers
+
+
+
 
 References:
 
