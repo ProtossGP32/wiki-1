@@ -22,7 +22,7 @@ A `CRUD` (Create, Read, Update, Delete) Todo app with RESTful API integration:
   - `Axios` and `Fetch` are **JavaScript libraries used for making HTTP requests to the API endpoints.**
   - `Axios` or `Fetch` can be used to send HTTP requests to these endpoints, allowing data manipulation through CRUD operations.
 - Fake server-side implemented with `MockAPI`:
-  - by utilizing MockAPI, developers can create custom API endpoints to mimic server-side functionality.
+  - by utilizing ``MockAPI``, developers can create custom API endpoints to mimic server-side functionality.
 - The Todo app allows users to `create`, `read`, `update`, and `delete` tasks.
 - This integration <mark>will build a fully functional Todo application with API communication and data persistence.</mark>
 
@@ -32,10 +32,18 @@ A `CRUD` (Create, Read, Update, Delete) Todo app with RESTful API integration:
 
 </br>
 
-References:
+## Overview
+
+From previous [lab](/reactjs/rjslab3-2.qmd), we are going to persist data on server by API Rest using ``Axios`` (or ``fetch``)`. 
+
+### References:
 
 - [The easiest way to mock REST APIs](https://mockapi.io/){.external}
-- [codesanbox api rest CRUD axios/fetch](){.external}
+- [Quick start guide mockapi.io](https://github.com/mockapi-io/docs/wiki/Quick-start-guide){.external}
+
+#### Todo
+
+- [codesanbox api rest CRUD axios/fetch: todo-app-4](https://codesandbox.io/s/todo-app-4-6kgxh7?file=/src/todo/TodoApp.jsx){.external}
 
 ## mock api
 
@@ -52,6 +60,8 @@ With `MockAPI.io`, developers can easily generate custom API endpoints and defin
 > `Axios` is a JavaScript library used **for making HTTP requests in React applications**.
 
 It provides an **easy-to-use** and consistent API for performing **asynchronous operations**, such as fetching data from an API.
+
+![Axios example [Request Config](https://axios-http.com/docs/req_config){.external}](/images/reactjs/lab-re-3-13.png){}
 
 `Axios` supports features like interceptors, automatic request/response transformation, and error handling. It works both in the browser and Node.js environments and offers support for various request methods (`GET`, `POST`, `PUT`, `DELETE`, etc.).
 
@@ -71,8 +81,119 @@ It provides a **native and low-level way of fetching resources from a server**.
 
 ## step-by-step todo api rest
 
+![Render todo with grid, cards and CRUD operations, [render deployed](https://6kgxh7.csb.app/todoapp){.external}](/images/reactjs/lab-re-3-12.png){}
 
 
+### Basic structure
+
+
+```js
+import React, { useState, useEffect, useContext } from "react";
+import {Container, Card, Checkbox, Button, Form, Divider,Icon } 
+from "semantic-ui-react";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+
+// https://github.com/mockapi-io/docs/wiki/Quick-start-guide
+// API Context
+const ApiContext = React.createContext();
+
+// API_URL mockapi.io
+const API_URL = "https://645fbe7.mockapi.io/v1/";
+
+// Custom Hook to use API Context
+const useApiContext = () => useContext(ApiContext);
+
+// CreateTodo Component
+const CreateTodo = () => {
+  const [text, setText] = useState("");
+  const [author, setAuthor] = useState("");
+  const [due, setDue] = useState("");
+  const { addTodo } = useApiContext();
+
+  // to-do
+
+  return (
+    <Form>
+    
+    </Form>
+  );
+};
+
+// UpdateTodo Component
+const UpdateTodo = ({ todo }) => {
+  // to-do
+  return (
+    <Checkbox toggle checked={todo.completed} 
+      onChange={handleUpdateTodo} />
+  );
+};
+
+// ReadTodos Component
+const ReadTodos = () => {
+  // to-do
+
+  return (
+    <Card.Group>
+      {todos.map((todo) => (
+        // to-do
+      ))}
+    </Card.Group>
+  );
+};
+
+// DeleteTodo Component
+const DeleteTodo = ({ todo }) => {
+  // to-do
+  return <Button onClick={handleDeleteTodo}>Delete</Button>;
+};
+
+// -------------------------------------------------------------
+// Main Todos Component ----------------------------------------
+//--------------------------------------------------------------
+
+const Todos = () => {
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+
+  const fetchTodos = async () => {
+    // to-do
+  };
+
+
+  const addTodo = (newTodo) => {
+    // to-do
+  };
+
+  const updateTodo = async (id) => {
+    // to-do
+  };
+
+  const deleteTodo = async (id) => {
+    // to-do
+  };
+
+  return (
+    <ApiContext.Provider 
+      value={{ todos, addTodo, updateTodo, deleteTodo }}>
+      <Container>
+        <h1>Todos</h1>
+        <CreateTodo />
+        <Divider />
+        <ReadTodos />
+      </Container>
+    </ApiContext.Provider>
+  );
+};
+
+export default Todos;
+
+
+
+```
 
 
 

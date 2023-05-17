@@ -72,7 +72,28 @@ That's precisely what ``asynchronous`` functions can do.
 ::: {.column-margin}
 Best with async/await but [promises must be studied](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API){.external} 
 :::
-## ``async`` function
+
+
+## Asynchronous programming
+
+``Asynchronous`` programming is a <mark>programming paradigm that enables the execution of tasks independently, without waiting for previous tasks to complete.<mark>
+
+It allows programs to handle multiple operations **concurrently**, enhancing efficiency and responsiveness.
+
+> In asynchronous programming, tasks are initiated and then executed in the **background**, allowing the program to continue its execution **without being blocked by long-running operations.**
+
+::: {.callout-note}
+## Non-blocking
+Non-blocking refers to the characteristic of a program or system that doesn't halt or get stuck waiting for a resource or operation.
+
+In the context of asynchronous programming, non-blocking refers:
+
+- to the ability of a task or operation to **proceed independently** without blocking other tasks from executing.
+- It ensures that tasks can **run concurrently without causing delays,** allowing for efficient utilization of system resources and improved overall performance.
+- Non-blocking operations are often used **in conjunction with asynchronous programming** to achieve scalability and responsiveness in applications.
+:::
+
+### ``async`` function
 
 The ``async`` and ``await`` keywords enable ``asynchronous``, **promise-based behavior to be written in a cleaner style**, avoiding the need to explicitly configure **promise chains**.
 
