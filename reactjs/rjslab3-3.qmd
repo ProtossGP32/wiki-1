@@ -238,7 +238,7 @@ Code `ToDoGrid.js` uses this libreries and tools:
 - `Semantic` CSS
 - `Axios` Api Rest
 - Components `.jsx`
-- React Hooks
+- React Hooks: `useState`, `useEffect` and `useContext` (as API Context custom)
 - [uuidv4](https://www.npmjs.com/package/uuidv4){.external}
 - [mockapi.io](https://mockapi.io/){.external}
 - and NodeJS/npm
@@ -494,6 +494,11 @@ export default Todos;
 
 
 ### Creating domains: decoupling
+
+References:
+
+- [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect#fetching-data){.external}
+- [Syncronyzing with effects: Fetching Data](https://react.dev/learn/synchronizing-with-effects#fetching-data){.external}
 
 
 ## Versions
