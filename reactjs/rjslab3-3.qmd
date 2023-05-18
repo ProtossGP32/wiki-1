@@ -84,7 +84,7 @@ It provides a **native and low-level way of fetching resources from a server**.
 ![Render todo with grid, cards and CRUD operations, [render deployed](https://6kgxh7.csb.app/todoapp){.external}](/images/reactjs/lab-re-3-12.png){}
 
 
-### General idea: scheema
+### General idea: schema
 
 Let's create first at all our core components:
 
@@ -97,9 +97,12 @@ Let's create first at all our core components:
 
 It fetches the Todo items from an API using the ``useEffect`` hook and stores them in the state using the ``useState`` hook.
 
+
+![General schema){.external}](/images/reactjs/lab-re-3-14.png){}
+
 It also provides the necessary functions:
 
-- ``addTodo``,
+- ``addTodo``
 - ``updateTodo``
 - ``deleteTodo``
 - ``fetchTodos`` 
@@ -265,7 +268,7 @@ import { v4 as uuidv4 } from "uuid";
 const ApiContext = React.createContext();
 
 // API_URL mockapi.io
-const API_URL = "https://645fbe78ca2d89f7e74cf4c9.mockapi.io/v1/";
+const API_URL = "https://y45yh6y55dgfh.mockapi.io/v1/";
 
 // Custom Hook to use API Context
 const useApiContext = () => useContext(ApiContext);
