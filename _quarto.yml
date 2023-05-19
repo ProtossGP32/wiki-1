@@ -371,6 +371,7 @@ website:
             - reactjs/rjslab3-2.qmd
             - reactjs/rjslab3-3.qmd
             - reactjs/rjslab3-4.qmd
+            - reactjs/rjslab3-5.qmd
             - text: "---"
             - reactjs/rjslab4.qmd
             - text: "---"

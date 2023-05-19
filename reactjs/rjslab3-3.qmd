@@ -1,5 +1,5 @@
 ---
-title: "Lab#RE03-3: API Rest CRUD"
+title: "Lab#RE03-3: API Rest Mono"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
@@ -508,8 +508,7 @@ References:
 
 Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
-| todoApp 0.3 | add ToDoGrid component to project: [todoApp 0.3](){.external} | [initial tree-folder](/images/reactjs/lab-re-3-5.png){width="60%"} | [render todoGrid](/images/reactjs/lab-re-3-4.png){width="80%"} |
-| todoApp 0.4 | ToDoGrid decoupling with domains: [todoApp 0.4](){.external} | - | [render todoGrid](/images/reactjs/lab-re-3-7.png) - [todo created render](/images/reactjs/lab-re-3-8.png){width="80%"} |
+| todoApp 0.3 | add ToDoGrid component to project: [todoApp 0.3](https://github.com/AlbertProfe/CifoJava2023-2/tree/bf0d3f8c8d075b59a21d05ed5340e27849383b24/todoapp){.external} | [initial tree-folder](/images/reactjs/lab-re-3-15.png){width="60%"} | [render todoGrid](/images/reactjs/lab-re-3-12.png){width="80%"} |
 
 
 
