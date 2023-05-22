@@ -25,8 +25,6 @@ A `CRUD` (Create, Read, Update, Delete) Todo app with RESTful API integration:
   - by utilizing ``MockAPI``, developers can create custom API endpoints to mimic server-side functionality.
 - The Todo app allows users to `create`, `read`, `update`, and `delete` tasks.
 - This integration <mark>will build a fully functional Todo application with API communication and data persistence.</mark>
-
-
 :::
 
 
@@ -246,8 +244,8 @@ Code `ToDoGrid.js` uses this libreries and tools:
 - [mockapi.io](https://mockapi.io/){.external}
 - and NodeJS/npm
 
-<details>
-<summary>Code</summary>
+#### createContext
+
 ```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
 
 import React, { useState, useEffect, useContext } from "react";
@@ -273,6 +271,24 @@ const API_URL = "https://y45yh6y55dgfh.mockapi.io/v1/";
 // Custom Hook to use API Context
 const useApiContext = () => useContext(ApiContext);
 
+//....
+```
+
+`const ApiContext = React.createContext();`
+Creates a new `context` object called `ApiContext` using the `createContext`, this context object will be used <mark>to share data and functions between components.</mark>
+
+`const API_URL = "https://y45yh6y55dgfh.mockapi.io/v1/";`
+Sets the value of the constant `API_URL` to be the URL of a mock API. This URL is used to make HTTP requests and interact with the API in the application.
+
+`const useApiContext = () => useContext(ApiContext);`
+Defines a custom hook called `useApiContext`. This hook uses the `useContext` hook from React to retrieve the current value of the ApiContext. It provides a convenient way to access the context and its associated data and functions within components.
+
+
+
+#### CreateTodo
+
+```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
+//....
 // CreateTodo Component
 const CreateTodo = () => {
   const [text, setText] = useState("");
@@ -350,7 +366,29 @@ const CreateTodo = () => {
     </Form>
   );
 };
+//....
+```
 
+#### updateTodo
+
+The line of code `const { addTodo } = useApiContext();` is using the `useApiContext` custom hook to access the `addTodo` function from the `API context.`::
+
+:::{.callout-note}
+## `const { addTodo } = useApiContext();`
+This line of code enables the component to call the addTodo function and utilize its functionality, such as adding a new todo item to the application's state or performing any other actions associated with adding todos.
+:::
+
+The `useApiContext` hook is a custom hook that internally uses the `useContext` hook from React. It allows components to access the values provided by the `ApiContext.Provider` higher up in the component tree.
+
+By calling `useApiContext`, the component can retrieve the addTodo function from the API context. 
+
+::: {.column-margin}
+The destructuring assignment { addTodo } extracts the addTodo function from the returned object, making it available for use within the component.
+:::
+
+
+
+```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
 // UpdateTodo Component
 const UpdateTodo = ({ todo }) => {
   const { updateTodo } = useApiContext();
@@ -360,10 +398,16 @@ const UpdateTodo = ({ todo }) => {
   };
 
   return (
-    <Checkbox toggle checked={todo.completed} onChange={handleUpdateTodo} />
+    <Checkbox toggle checked={todo.completed} 
+    onChange={handleUpdateTodo} />
   );
 };
+//....
+```
 
+#### ReadTodos
+
+```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
 // ReadTodos Component
 const ReadTodos = () => {
   const { todos } = useApiContext();
@@ -373,10 +417,14 @@ const ReadTodos = () => {
       {todos.map((todo) => (
         <Card key={todo.id}>
           <Card.Content>
-            <Card.Description>id: {todo.id}</Card.Description>
-            <Card.Header>{todo.text}</Card.Header>
-            <Card.Meta>Author: {todo.author}</Card.Meta>
-            <Card.Description>Due: {todo.due}</Card.Description>
+            <Card.Description>id: {todo.id}
+            </Card.Description>
+            <Card.Header>{todo.text}
+            </Card.Header>
+            <Card.Meta>Author: {todo.author}
+            </Card.Meta>
+            <Card.Description>Due: {todo.due}
+            </Card.Description>
             <br />
             <UpdateTodo todo={todo} />
           </Card.Content>
@@ -388,7 +436,11 @@ const ReadTodos = () => {
     </Card.Group>
   );
 };
+//....
+```
+#### DeleteTodo
 
+```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
 // DeleteTodo Component
 const DeleteTodo = ({ todo }) => {
   const { deleteTodo } = useApiContext();
@@ -397,9 +449,17 @@ const DeleteTodo = ({ todo }) => {
     deleteTodo(todo.id);
   };
 
-  return <Button onClick={handleDeleteTodo}>Delete</Button>;
+  return <Button 
+  onClick={handleDeleteTodo}>Delete</Button>;
 };
+//....
+```
 
+#### Main component: Todos
+
+Main component and Axios functions.
+
+```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
 // Main Todos Component
 const Todos = () => {
   const [todos, setTodos] = useState([]);
@@ -410,23 +470,14 @@ const Todos = () => {
 
   const fetchTodos = async () => {
     try {
-      const response = await axios.get(`${API_URL}/todo`);
+      const response = 
+      await axios.get(`${API_URL}/todo`);
       setTodos(response.data);
     } catch (error) {
       console.error(error);
     }
   };
 
-  /*
-  const addTodo = async (newTodo) => {
-    try {
-      const response = await axios.post('/api/todos', newTodo); 
-      setTodos([...todos, response.data]);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-*/
 
   const addTodo = (newTodo) => {
     fetch(`${API_URL}/todo/`, {
@@ -470,7 +521,8 @@ const Todos = () => {
   const deleteTodo = async (id) => {
     try {
       await axios.delete(`${API_URL}/todo/${id}`);
-      const filteredTodos = todos.filter((todo) => todo.id !== id);
+      const filteredTodos = 
+      todos.filter((todo) => todo.id !== id);
       setTodos(filteredTodos);
     } catch (error) {
       console.error(error);
@@ -478,7 +530,8 @@ const Todos = () => {
   };
 
   return (
-    <ApiContext.Provider value={{ todos, addTodo, updateTodo, deleteTodo }}>
+    <ApiContext.Provider 
+    value={{ todos, addTodo, updateTodo, deleteTodo }}>
       <Container>
         <h1>Todos</h1>
         <CreateTodo />
@@ -493,7 +546,7 @@ const Todos = () => {
 
 export default Todos;
 ```
-</details>
+
 
 
 ### Creating domains: decoupling
