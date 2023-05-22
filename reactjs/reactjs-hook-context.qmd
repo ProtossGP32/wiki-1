@@ -102,7 +102,7 @@ The big issue that comes up is figuring out [how components should communicate w
 
 [useContext React documentation](https://beta.reactjs.org/reference/react/useContext){.external} and [React useContext Hook w3 schools](https://www.w3schools.com/REACT/react_usecontext.asp){.external}
 
-## Example 1
+## Example#1
 
 > **createContext, useContext, useState** working together
 
@@ -185,6 +185,133 @@ function Button({ children, onClick }) {
 
 
 [Examples of updating context](https://beta.reactjs.org/reference/react/useContext#examples-basic){.external}
+
+
+## Example#2
+
+Reference:
+
+- [Understanding the React Context API](https://www.digitalocean.com/community/tutorials/react-context-api){.external}
+
+In this example we’ll explain how to use the new context API in as few words as possible. We’ll create a **simple Locale context that provides the language preference** between `English` and `French` to components in the app.
+
+To `create` a new context, use React’s new `createContext` function:
+
+```js
+export const LocaleContext = React.createContext('en');
+```
+
+### Provider
+
+The `Provider` component is used to wrap components in the tree that will need access to the value from the context.
+
+Here let’s create a `LocaleProvider` component that wraps our `LocaleContext’s` provider and offers a way to change the context’s locale value:
+
+```js
+import React from 'react';
+
+export const LocaleContext = React.createContext();
+
+class LocaleProvider extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.changeLocale = () => {
+      this.setState(state => {
+        const newLocale = state.locale === 'en' ?
+         'fr' : 'en';
+        return {
+          locale: newLocale
+        };
+      });
+    };
+
+    this.state = {
+      locale: 'en',
+      changeLocale: this.changeLocale
+    };
+  }
+
+  render() {
+    return (
+      <LocaleContext.Provider value={this.state}>
+        {this.props.children}
+      </LocaleContext.Provider>
+    );
+  }
+}
+
+export default LocaleProvider;
+```
+
+### Using the provider
+
+
+We can make use of our `provider` at the top level of our App component:
+
+
+```js
+import React, { Component } from 'react';
+
+import LocaleProvider from './context/LocaleContext';
+import Greeting from './Greeting';
+import ToggleLocale from './ToggleLocale';
+
+class App extends Component {
+  render() {
+    return (
+      <LocaleProvider>
+        <Greeting />
+        <ToggleLocale />
+      </LocaleProvider>
+    );
+  }
+}
+
+export default App;
+```
+
+### Consumer
+
+Now all that’s left to do is access the values from the context using the `Consumer` component.
+
+Our `Greeting` component looks like this:
+
+```js
+import React from 'react';
+
+import { LocaleContext } from './context/LocaleContext';
+
+export default () => {
+  return (
+    <LocaleContext.Consumer>
+      {localeVal =>
+        localeVal.locale === 'en' ? 
+        <h1>Welcome!</h1> : <h1>Bienvenue!</h1>
+      }
+    </LocaleContext.Consumer>
+  );
+};
+
+```
+And our `ToggleLocale` component looks like this:
+
+```js
+import React from 'react';
+
+import { LocaleContext } from './context/LocaleContext';
+
+export default () => {
+  return (
+    <LocaleContext.Consumer>
+      {localeVal => (
+        <button 
+        onClick={localeVal.changeLocale}>Change language</button>
+      )}
+    </LocaleContext.Consumer>
+  );
+};
+```
 
 <!--- navLinks -->
 <br><br>
