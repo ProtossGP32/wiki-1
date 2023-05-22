@@ -503,6 +503,8 @@ References:
 - [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect#fetching-data){.external}
 - [Syncronyzing with effects: Fetching Data](https://react.dev/learn/synchronizing-with-effects#fetching-data){.external}
 
+Before coding it let's discuss the right approach to work it with [domains](/reactjs/rjslab3-4.qmd) at next lab, [Lab#RE03-4](/reactjs/rjslab3-4.qmd).
+
 
 ## Versions
 

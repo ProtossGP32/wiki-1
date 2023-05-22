@@ -13,17 +13,17 @@ tr:nth-child(5) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
-## ``Sprint#21`` (May)
+## ``Sprint#22`` (May)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #21 | 97 | 15/05 | - axios, fetch </br> (1) api rest mockapi </br> - useRef, useReducer, useContext: </br>  (1) to-do: context API </br> | [Lab#RE03-3](/reactjs/rjslab3-3.qmd) </br>  [codesandbox api rest todo cards](https://6kgxh7.csb.app/){.external} </br>  [deployed api rest todo cards](https://6kgxh7.csb.app/){.external} </br> [mock api](https://mockapi.io/){.external} </br>  |
-|  | 98 | 16/05 | - highcharts: </br> (1) to-do: visualisation data </br> (2) import data json </br>  (3) function calculate </br> - styling |  [Lab#RE03-2](/reactjs/rjslab3-2.qmd) </br>  [codesanbox highcharts: todo-app-3](https://codesandbox.io/s/todo-app-3-v08qbi){.external}  </br>  [styling](/reactjs/reactjs-app-styling.qmd) </br>   |
-|  | 99 | 17/05 | - axios, fetch </br> (1) to-do: api rest consume data </br> (2) to-do: async </br>  |  [Lab#RE03-3](/reactjs/rjslab3-3.qmd) </br>  [codesanbox rest axios/fetch: todo-app-4](https://codesandbox.io/s/todo-app-4-6kgxh7?file=/src/todo/TodoApp.jsx){.external} </br> [async](/reactjs/reactjs-app-async.qmd) - [async docs mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#try_it){.external}  </br> [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect#fetching-data){.external}   </br>  |
-|  | 100 | 18/05 | - <s>store </br> (1) redux/reducer </br> local storage </s></br> - axios, fetch </br> (1) to-do: api rest consume data </br> (2) to-do: async </br> - React paradigm-core: </br> (1) immutable/mutable  </br> (2) sync/async </br> (3) scope (API Context/useContext/Providers)  </br> (4) render cycle: trigger/render/paint  </br> | [Fetching data](https://react.dev/learn/synchronizing-with-effects#fetching-data){.external} |
-|  | 101 | 19/05 | - SCRUM: </br> (0) How rich (abundance/scarcity) is created? </br> (1) Why just left mode is wrong?  </br> (2) The map is no the territory: fishing factory </br> (3) Right mode: living in the ambiguity</br> (4) Taleb/McGilchrist: Simple/Complicated/Complex </br>  (5) What is a problem? Why science is losing prestige? </br> (6)  Mountain Manifesto </br> - Retrospective  | [Al Pacino best speech - Any Given Sunday - 1080p HD](https://www.youtube.com/watch?v=f1yWSePMqsk){.external} <br/> [Mountain Manifesto](https://dark-mountain.net/about/manifesto/){.external} </br>  [The world is not a problem - Iain McGilchrist and Dougald Hine](https://www.youtube.com/watch?v=PSFdJ7fRDjM){.external}      |
-: Backlog Sprint#21 May 2023 {tbl-colwidths="[2,2,2,55,39]"}
+| #22 | 102 | 22/05 | - useContext to-do CRUD api rest  | [Lab#RE03-3](/reactjs/rjslab3-3.qmd) |
+|  | 103 | 23/05 | - useContext to-do CRUD api rest: </br> (1) domains API Rest | [Lab#RE03-4](/reactjs/rjslab3-4.qmd) |
+|  | 104 | 24/05 | - useContext to-do CRUD api rest: </br> (1) domains useContext </br> (2) components </br> - websockets: </br> (1) general approach & use-story </br> (2) mock-up | [Lab#RE03-4](/reactjs/rjslab3-4.qmd) |
+|  | 105 | 25/05 | - local.storage </br> - websockets: </br> (1) general approach & domains | - |
+|  | 106 | 26/05 | - SCRUM </br> - Retrospective | - |
+: Backlog Sprint#22 May 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
 ::: {.callout-note}
