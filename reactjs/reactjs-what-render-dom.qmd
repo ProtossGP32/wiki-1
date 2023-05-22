@@ -55,7 +55,32 @@ The diffing algorithm used by React is based on a concept called ``reconciliatio
 
 This process helps to minimize the number of ``DOM`` manipulations that are required, and makes React updates faster and more efficient.
 
+## How it works?
 
+[Reconciliation](https://legacy.reactjs.org/docs/reconciliation.html){.external}
+
+When parsing JSX, React uses its internal ``reconciler``, called the **Reconciler**.
+
+::: {.callout-note}
+## Reconciler
+Reconciler works **to convert JSX syntax into function calls that create React elements**.
+
+These elements describe the desired structure and properties of UI components.
+:::
+
+React then uses these elements to build a **virtual representation of the DOM**, known as the "``Virtual DOM``."
+
+The ``Reconciler`` is responsible <mark>for comparing the previous and new versions of the Virtual DOM. It identifies the specific changes needed to update the real DOM efficiently. This process is known as "reconciliation" or "diffing."<mark>
+
+During reconciliation, the ``Reconciler`` examines the differences between the previous and new Virtual DOM representations and calculates the minimal set of changes required.
+
+It determines which parts of the **real DOM** need to be added, removed, or modified to reflect the updated component state.
+
+Once the necessary changes are identified, the ``Reconciler`` applies them to the real DOM, selectively updating only the affected elements.
+
+This ensures that the **actual browser DOM reflects the new component state accurately**. The updated content is then rendered on the screen.
+
+By using this approach, React optimizes performance by minimizing direct interactions with the browser DOM and only updating the necessary parts.
 
 <!--- navLinks -->
 <br><br>

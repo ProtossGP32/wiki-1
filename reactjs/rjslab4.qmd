@@ -1,5 +1,5 @@
 ---
-title: "Lab#RE04-1: feathers"
+title: "Lab#RE04-1: server"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
@@ -14,9 +14,12 @@ format:
 ---
 
 ::: {.labs}
-📘 **React JS Lab#RE04-1: feathers**
+📘 **React JS Lab#RE04-1: feathers / spring boot**
 
-In this lab, we will be using [feathers](https://feathersjs.com/){.external}, the API and Real-timeApplication Framework.
+In this lab, we will be using:
+
+- [feathers](https://feathersjs.com/){.external}, the API and Real-time Application Framework.
+- [Spring Boot](/spring/spring-basics.qmd) 
   
 :::
 
@@ -53,12 +56,13 @@ Once you confirm the last prompt, the final selection should look similar to thi
 
 ![Prompt feathers](/images/reactjs/lab-re-4-1.png){}
 
-## API Server with Feathers
+## API REST Server with Feathers
 
 
 
+## API REST Server with spring boot
 
-References:
+
 
 
 

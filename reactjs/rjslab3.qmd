@@ -572,7 +572,7 @@ function TodoItem({ id, completed, author, text, due }) {
 
 ## Versions
 
- Code Version | Commit | Folder-Tree | Screeshoots |
+| Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
 | todoApp 0.0 | create project with route: [todoApp 0.0](https://github.com/AlbertProfe/CifoJava2023-2/tree/c269b2ad6704635e4e966676598fd23428d05bb7/todoapp){.external} | [initial tree-folder](/images/reactjs/lab-re-3-5.png){width="60%"} | [render home](/images/reactjs/lab-re-3-4.png){width="80%"} |
 | todoApp 0.1 | create new todo: [todoApp 0.1](https://github.com/AlbertProfe/CifoJava2023-2/tree/96c8f427a889ccd8f32517c38ee1b8b6a2bd54ba/todoapp){.external} | - | [initial render](/images/reactjs/lab-re-3-7.png) - [todo created render](/images/reactjs/lab-re-3-8.png){width="80%"} |

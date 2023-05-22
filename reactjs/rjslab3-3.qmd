@@ -84,7 +84,9 @@ It provides a **native and low-level way of fetching resources from a server**.
 
 ### General idea: schema
 
-Let's create first at all our core components:
+#### Components
+
+Let's create first at all our **core components:**
 
 - The ``CreateTodo`` component is responsible for rendering a form to create a new Todo item. It uses React's useState hook to manage the state of input fields.
 - The ``UpdateTodo`` component displays a checkbox that represents the completion status of a Todo item. It receives the Todo object as a prop and handles the update of the completion status.
@@ -96,22 +98,20 @@ Let's create first at all our core components:
 It fetches the Todo items from an API using the ``useEffect`` hook and stores them in the state using the ``useState`` hook.
 
 
-![General schema){.external}](/images/reactjs/lab-re-3-14.png){}
+![General schema](/images/reactjs/lab-re-3-14.png){}
 
-It also provides the necessary functions:
+It also provides the necessary functions to manipulate the ``Todo`` items through the ``ApiContext``, which is created using React's ``createContext`` hook:
 
 - ``addTodo``
 - ``updateTodo``
 - ``deleteTodo``
 - ``fetchTodos`` 
   
-to manipulate the ``Todo`` items through the ``ApiContext``, which is created using React's createContext hook.
+The ``ApiContext.Provider`` wraps these components to provide access to the Todo items and manipulation functions **throughout the component tree.**
 
-The ``Todos`` component renders the ``CreateTodo`` component and the ``ReadTodos`` component within a container. 
+At the end, **the main component**  ``Todos`` component renders the ``CreateTodo`` component and the ``ReadTodos`` component within a container. 
 
-The ``ApiContext.Provider`` wraps these components to provide access to the Todo items and manipulation functions throughout the component tree.
-
-```js
+```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
 import React, { useState, useEffect, useContext } from "react";
 import {Container, Card, Checkbox, Button, Form, Divider,Icon } 
 from "semantic-ui-react";
@@ -171,11 +171,30 @@ const DeleteTodo = ({ todo }) => {
   // to-do
   return <Button onClick={handleDeleteTodo}>Delete</Button>;
 };
+```
 
+#### Axios and Main Component
+
+Main component and Axios functions.
+
+- We use the ``ApiContext.Provider`` component to <mark>provide a context that includes the todos array, addTodo function, updateTodo function, and deleteTodo function to its child components. </mark>
+- The ``todos`` state is <mark>initialized as an empty array using the ``useState`` hook.</mark>
+- Axios functions:
+  - ``fetchTodos`` retrieves todos from the API and sets them in the state.
+  - ``addTodo`` sends a new todo to the API and updates the local state.
+  - ``updateTodo`` toggles the completed property of a todo.
+  - ``deleteTodo`` removes a todo from the API and updates the state.
+- The component renders **child components within a Container component**, including a:
+  -  ``heading``,
+  -  a component for creating new todos (``CreateTodo``),
+  -  a ``divider``, and 
+  -  a component for reading/displaying existing todos (``ReadTodos``).
+  
+
+```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
 // -------------------------------------------------------------
 // Main Todos Component ----------------------------------------
 //--------------------------------------------------------------
-
 const Todos = () => {
   const [todos, setTodos] = useState([]);
 
@@ -216,6 +235,25 @@ const Todos = () => {
 export default Todos;
 
 ```
+
+#### context
+
+We create a <mark>empty custom context called ``ApiContext`` using ``React.createContext()``.</mark> 
+
+
+::: {.callout-note}
+## Key-idea context
+
+``ApiContext`` is used to provide data and functions related to todos to its child components.
+
+The data and functions (todos, addTodo, updateTodo, deleteTodo) are passed as **values** to the ``ApiContext.Provider`` component.
+
+
+This makes them accessible to any **descendant component that consumes** the ``ApiContext`` using the ``useContext`` hook.
+:::
+
+
+#### async
 
 ::: {.callout-note}
 ## async
@@ -274,14 +312,11 @@ const useApiContext = () => useContext(ApiContext);
 //....
 ```
 
-`const ApiContext = React.createContext();`
-Creates a new `context` object called `ApiContext` using the `createContext`, this context object will be used <mark>to share data and functions between components.</mark>
-
-`const API_URL = "https://y45yh6y55dgfh.mockapi.io/v1/";`
-Sets the value of the constant `API_URL` to be the URL of a mock API. This URL is used to make HTTP requests and interact with the API in the application.
-
-`const useApiContext = () => useContext(ApiContext);`
-Defines a custom hook called `useApiContext`. This hook uses the `useContext` hook from React to retrieve the current value of the ApiContext. It provides a convenient way to access the context and its associated data and functions within components.
+| Line | Explanations |
+| -- | -- |
+| `const ApiContext =` </br> `React.createContext();` | Creates a new `context` object called `ApiContext` using the `createContext`, this context object will be used <mark>to share data and functions between components.</mark> |
+| `const API_URL =`</br> `"https://y45yh6y55dgfh.mockapi.io/v1/";` | Sets the value of the constant `API_URL` to be the URL of a mock API. This URL is used to make HTTP requests and interact with the API in the application. |
+| `const useApiContext =` </br> `() => useContext(ApiContext);` | Defines a custom hook called `useApiContext`. This hook uses the `useContext` hook from React to retrieve the current value of the ApiContext. It provides a convenient way to access the context and its associated data and functions within components. |
 
 
 
@@ -371,11 +406,11 @@ const CreateTodo = () => {
 
 #### updateTodo
 
-The line of code `const { addTodo } = useApiContext();` is using the `useApiContext` custom hook to access the `addTodo` function from the `API context.`::
+The line of code `const { addTodo } = useApiContext();` is using the `useApiContext` custom hook to access the `addTodo` function from the `API context.`
 
 :::{.callout-note}
 ## `const { addTodo } = useApiContext();`
-This line of code enables the component to call the addTodo function and utilize its functionality, such as adding a new todo item to the application's state or performing any other actions associated with adding todos.
+This line of code enables the component to call the ``addTodo`` function and utilize its functionality, such as adding a new todo item to the application's state or performing any other actions associated with adding todos.
 :::
 
 The `useApiContext` hook is a custom hook that internally uses the `useContext` hook from React. It allows components to access the values provided by the `ApiContext.Provider` higher up in the component tree.
@@ -383,7 +418,7 @@ The `useApiContext` hook is a custom hook that internally uses the `useContext` 
 By calling `useApiContext`, the component can retrieve the addTodo function from the API context. 
 
 ::: {.column-margin}
-The destructuring assignment { addTodo } extracts the addTodo function from the returned object, making it available for use within the component.
+The **destructuring** assignment ``{ addTodo }`` extracts the ``addTodo`` function from the returned object, making it available for use within the component.
 :::
 
 
@@ -457,7 +492,13 @@ const DeleteTodo = ({ todo }) => {
 
 #### Main component: Todos
 
-Main component and Axios functions.
+Main component and Axios **implemented** functions:
+
+- The ``fetchTodos`` function is called when the component mounts, which retrieves todos from an API endpoint using axios and sets the todos in the state.
+- The ``addTodo`` function sends a new todo object to the API endpoint using a POST request and updates the local todos state with the new todo. It also handles error cases.
+- The ``updateTodo`` function toggles the completed property of a todo item with a given id by sending a PUT request to the API endpoint and updating the local todos state accordingly.
+- The ``deleteTodo`` function deletes a todo item with a given id by sending a DELETE request to the API endpoint and updates the local todos state by filtering out the deleted todo.
+
 
 ```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
 // Main Todos Component
@@ -546,6 +587,15 @@ const Todos = () => {
 
 export default Todos;
 ```
+
+The context enables the sharing of todos data and related functions across multiple components without the need for **prop drilling.**
+
+The ``CreateTodo`` component uses the useApiContext custom hook to access the ``addTodo`` function from the context. It allows users to create a new todo and calls the ``addTodo`` function to add the new todo to the list.
+
+Similarly, the ``UpdateTodo`` component uses the useApiContext hook to access the ``updateTodo`` function from the context. It provides a checkbox to toggle the completion status of a todo.
+
+The ``ReadTodos`` component uses the useApiContext hook to access the todos array from the context. It displays the existing todos and provides the ability to update and delete them.
+
 
 
 

@@ -6,7 +6,7 @@ date: "06/01/2021"
 date-modified: last-modified
 date-format: full
 description: labs
-categories: [reactjs, lab, Lab#RE04]
+categories: [reactjs, lab, Lab#RE03]
 toc: true
 number-sections: true
 format:
@@ -32,8 +32,10 @@ References:
 
 - [useContext](/reactjs/reactjs-hook-context.qmd)
 - [async](/reactjs/reactjs-app-async.qmd)
-- [codesanbox todo-app-5-domain](https://codesandbox.io/s/todo-app-5-domain-7l18sb){.external}
-- [codesanbox todo-app-6](https://codesandbox.io/s/todo-app-6-9q6lzy){.external}
+- ``todo`` refactored to domains:
+  - component and sevice layer, [codesanbox todo-app-5-domain](https://codesandbox.io/s/todo-app-5-domain-7l18sb){.external}
+- ``todo`` refactored to domains: 
+  - three components and sevice layer, [codesanbox todo-app-6](https://codesandbox.io/s/todo-app-6-9q6lzy){.external}
 
 
 ## Approach
@@ -97,7 +99,7 @@ If your [Effect fetches something](https://react.dev/learn/synchronizing-with-ef
 
 > You can’t “undo” a network request that already happened, but your cleanup function should ensure that the fetch that’s not relevant anymore does not keep affecting your application. If the userId changes from 'Alice' to 'Bob', cleanup ensures that the 'Alice' response is ignored even if it arrives after 'Bob'.
 
-## `async`/`sync`: passing down `async` functions
+### `async`/`sync`: passing down `async` functions
 
 ![coupled UI components](/images/reactjs/lab-re-3-18.png){width="40%"}
 
@@ -108,26 +110,35 @@ Passing asynchronous functions as props <mark>can lead to some drawbacks and is 
 - `Code Duplication`: If multiple components require access to the same asynchronous function, passing it as a prop to each component results in code duplication. You'll need to repeat the prop declaration and handling in each component, leading to redundant code. This can make it more difficult to maintain and update the codebase.
 
 
-### using Context
+#### using Context
 
 ::: {.callout-note}
-Instead of passing asynchronous functions as props, <mark>using a shared context and provider pattern, such as React Context, allows you to decouple the components and provide a centralized location for managing and accessing shared state and functions.</mark>
+Instead of passing ``asynchronous`` functions as props, <mark>using a shared context and provider pattern, such as React Context, allows you to decouple the components and provide a centralized location for managing and accessing shared state and functions.</mark>
 
 By using a context, you can **avoid prop drilling** and provide a **clean and efficient** way to access the **asynchronous functions from any component within the context's scope.**
 :::
 
-- Additionally, using a provider and context pattern allows for better **separation of concerns**.
-  - The provider handles the implementation details and provides the necessary functions, while the components consuming the context can focus on rendering and utilizing the shared data and functionality without worrying about how it is implemented or passed down through props.
-- Using context allows you to create a **central place to manage and access the asynchronous function**, making it available to any component that needs it within the context's scope.
-  - This avoids the need for prop drilling, where you would have to pass the function down through multiple levels of components as props.
+- Additionally, using a ``provider`` and ``context`` pattern allows for better **separation of concerns**.
+  - The ``provider`` handles the implementation details and provides the necessary functions, while the components consuming the context can focus on rendering and utilizing the shared data and functionality without worrying about how it is implemented or passed down through props.
+- Using ``context`` allows you to create a **central place to manage and access the asynchronous function**, making it available to any component that needs it within the context's scope.
+  - This avoids the need for **prop drilling**, where you would have to pass the function down through multiple levels of components as props.
 
 ::: {.callout-warning}
-Propagating the asynchronous function via props can work, but it may lead to some issues. Asynchronous operations like API requests typically have a delay in fetching data, and the results may not be available immediately. If you pass the function as a prop and try to execute it synchronously within a component, you won't be able to wait for the response or handle any errors properly. It can lead to unpredictable behavior and may cause the component to render with incomplete or incorrect data.
+Propagating the asynchronous function via props can work, **but it may lead to some issues.**
+
+Asynchronous operations like API requests typically have a delay in fetching data, and the results may not be available immediately.
+
+If you pass the function as a prop and try to execute it synchronously within a component, you won't be able to wait for the response or handle any errors properly.
+
+It can lead to unpredictable behavior and may cause the component to render with incomplete or incorrect data.
 :::
 
 
-By using context, you can handle the asynchronous behavior appropriately, whether it's using async/await or promises, and ensure that the components consuming the context can work with the asynchronous function correctly.
+By using ``context``, you can handle the ``asynchronous`` behavior appropriately, whether it's using async/await or promises, and ensure that the components consuming the context can work with the ``asynchronous`` function correctly.
 
+## step-by-step todo api rest domains
+
+ ![todo domains schema](/images/reactjs/todo-domains-schema.jpg){width="60%"}
 
 ## Versions
 
