@@ -40,6 +40,37 @@ References:
 
 ## Approach
 
+### Hexagonal Architecture
+
+The architecture by domains to decoupled concerns, with a `service layer` handling **CRUD operations** and using a provider and `context` in React, shares some similarities with the `Hexagonal Architecture` (also known as Ports and Adapters Architecture).
+
+:::{.column-margin}
+[Onion architecture](/javase/selab3-2.qmd) already used in other labs. Very similar to Hexagonal one.
+:::
+
+![Hexagonal Architecture](/images/home/hexagonal.png){width="50%"}
+
+In the `Hexagonal Architecture`, the core principle is <mark>to decouple the application's business logic from its external dependencies, such as databases, APIs, or user interfaces.<mark>
+
+It promotes the use of ports and adapters to **isolate** and **abstract** these dependencies.
+
+In our architecture, the `service layer` acts as an adapter that interfaces with external dependencies (such as the API through Axios) and **exposes a clean interface (the CRUD operations)** for the application's business logic (the React components) to interact with.
+
+The `provider` and `context` in React provide a way to **propagate this functionality throughout the component tree, decoupling it from individual component props.**
+
+::: {.callout-note}
+## Has our App an `Hexagonal Architecture`?
+While not an exact implementation of `Hexagonal Architecture`, the separation of concerns, decoupling of dependencies, and focus on clean interfaces align with the principles of `Hexagonal Architecture`.
+
+This allows for better maintainability, testability, and flexibility in the application's design.
+:::
+
+
+
+
+
+
+
 ### Decoupling the communication layer
   
 Decoupling the communication layer by creating a separate service in React JSX and JS architecture brings several benefits:
