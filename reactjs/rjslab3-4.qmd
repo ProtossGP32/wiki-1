@@ -138,7 +138,258 @@ By using ``context``, you can handle the ``asynchronous`` behavior appropriately
 
 ## step-by-step todo api rest domains
 
- ![todo domains schema](/images/reactjs/todo-domains-schema.jpg){width="60%"}
+![todo domains schema](/images/reactjs/todo-domains-schema.jpg){width="60%"}
+
+### Service: `TodoService.js`
+
+The `TodoService` is a **JavaScript object** that <mark>provides methods for performing various operations related to managing TODO items.</mark>
+
+:::{.callout-note}
+## object literal notation in JavaScript
+It is defined using **object literal notation in JavaScript**.
+
+`Object literal notation` is a way to define objects directly in the code without using a class or constructor function.
+
+In the code, the `TodoService` object is created using `curly braces {}` and contains properties that are assigned `arrow` functions as their values.
+
+Each property represents a different operation related to managing TODO items.
+
+The methods defined within the TodoService object can be called as functions, such as T`odoService.getAllTodos()`, `TodoService.createTodo()`, `TodoService.updateTodo()`, and `TodoService.deleteTodo()`.
+:::
+
+It utilizes the `Axios` library to make `HTTP` requests to a specified `API base URL`. The data handled by the `TodoService`:
+
+- `Get All Todos`: This method retrieves all the TODO items from the API and returns the response data, which represents a collection of TODO items.
+- `Create Todo`: This method sends a POST request to the API with a new TODO item as the payload. It expects the response data to represent the newly created TODO item.
+- `Update Todo`: This method sends a PUT request to the API, updating an existing TODO item with the provided data. It expects the response data to represent the updated TODO item.
+- `Delete Todo`: This method sends a DELETE request to the API, deleting the TODO item with the specified ID. It expects the response data to indicate the success of the deletion operation.
+
+
+::: {.column-margin}
+The data handled by TodoService consists of TODO items and their associated properties, such as ID, title, description, status, etc. The specific structure and format of the TODO data are determined by the API being used.
+:::
+
+```{.js .code-overflow-wrap filename="ToDoService.js"}
+import axios from "axios";
+
+///`${API_URL}/todo`
+// https://github.com/mockapi-io/docs/wiki/Quick-start-guide
+// API_URL mockapi.io
+const API_BASE_URL = "https://645.mockapi.io/v1";
+
+const TodoService = {
+  getAllTodos: async () => {
+    try {
+      const response = 
+        await axios.get(`${API_BASE_URL}/todo`);
+      //console.log("retrieving todos:", response.data);
+      return response.data;
+    } catch (error) {
+      console.error("Error retrieving todos:", error);
+      throw error;
+    }
+  },
+
+  createTodo: async (todo) => {
+    try {
+      const response = 
+        await axios.post(`${API_BASE_URL}/todo`, todo);
+      return response.data;
+    } catch (error) {
+      console.error("Error creating todo:", error);
+      throw error;
+    }
+  },
+
+  updateTodo: async (todo) => {
+    try {
+      const response = 
+        await axios.put(`${API_BASE_URL}/todo/${todo.id}`, todo);
+      return response.data;
+    } catch (error) {
+      console.error("Error updating todo:", error);
+      throw error;
+    }
+  },
+
+  deleteTodo: async (todoId) => {
+    try {
+      const response = 
+        await axios.delete(`${API_BASE_URL}/todo/${todoId}`);
+      return response.data;
+    } catch (error) {
+      console.error("Error deleting todo:", error);
+      throw error;
+    }
+  }
+};
+
+export default TodoService;
+```
+
+### Service: `TodoContext.js`
+
+The `TodoContext` is a React `context` created using the `createContext` function. 
+
+It serves as:
+
+- a **repository** of data related to TODO items in the React domain.
+- a provider **access** to the `TodoService` functions, which utilize `Axios` to interact with an external API for data operations.
+- a state manager, the `TodoProvider` component is responsible for **managing the state of the TODO** items using the `useState` hook.
+
+| Code | Description |
+| -- | -- |
+| useEffect | is used to **fetch** the initial TODO items when the component mounts. The `fetchTodos` function makes an asynchronous call to `TodoService.getAllTodos()` and updates the state with the retrieved data. |
+| createTodo | **adds** a new TODO item by making a request to TodoService.createTodo() and updates the state by appending the created TODO item. |
+| updateTodo| **updates** an existing TODO item by calling TodoService.updateTodo(), modifying the corresponding TODO item in the state. |
+| deleteTodo | **deletes** a TODO item by invoking TodoService.deleteTodo() and removes the deleted item from the state. |
+| TodoContext.Provider  | **wraps** the children components, providing the todos state and the CRUD functions (createTodo, updateTodo, deleteTodo) through the context's value. |
+: TodoContext` and `TodoProvider` {tbl-colwidths="[20,80]"}
+
+::: {.column-margin}
+
+The `TodoContext` and `TodoProvider` facilitate the **management** of TODO data in the React application by utilizing the `TodoService` functions to interact with an API, and provide the data and functions through the context to be consumed by JSX components in an immutable domain.
+:::
+
+
+```{.js .code-overflow-wrap filename="ToDoContext.js"}
+import React, { createContext, useState, useEffect } 
+  from "react";
+import TodoService from "./TodoService";
+
+const TodoContext = createContext();
+
+const TodoProvider = ({ children }) => {
+  const [todos, setTodos] = useState([]);
+
+  //
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+
+  //
+  const fetchTodos = async () => {
+    try {
+      const todos = await TodoService.getAllTodos();
+      setTodos(todos);
+      //console.log("todos:", todos);
+    } catch (error) {
+      console.error("Error fetching todos:", error);
+    }
+  };
+
+  //
+  const createTodo = async (todo) => {
+    try {
+      const createdTodo = await TodoService.createTodo(todo);
+      setTodos((prevTodos) => [...prevTodos, createdTodo]);
+    } catch (error) {
+      console.error("Error creating todo:", error);
+    }
+  };
+
+  //
+  const updateTodo = async (updatedTodo) => {
+    try {
+      await TodoService.updateTodo(updatedTodo);
+      setTodos((prevTodos) => {
+        const updatedTodos = [...prevTodos];
+        const todoIndex = updatedTodos.findIndex(
+          (todo) => todo.id === updatedTodo.id
+        );
+        updatedTodos[todoIndex] = updatedTodo;
+        return updatedTodos;
+      });
+    } catch (error) {
+      console.error("Error updating todo:", error);
+    }
+  };
+
+  //
+  const deleteTodo = async (todoId) => {
+    try {
+      await TodoService.deleteTodo(todoId);
+      setTodos((prevTodos) => 
+        prevTodos.filter((todo) => todo.id !== todoId));
+    } catch (error) {
+      console.error("Error deleting todo:", error);
+    }
+  };
+
+  //
+  return (
+    <TodoContext.Provider 
+      value={{ todos, createTodo, updateTodo, deleteTodo }}>
+      {children}
+    </TodoContext.Provider>
+  );
+};
+
+export { TodoContext, TodoProvider };
+```
+
+## Main Component: `ToDoApp.jsx`
+
+
+
+
+```{.js .code-overflow-wrap filename="ToDoApp.jsx"}
+import React, { useContext } from "react";
+import TodoAdd from "./TodoAdd";
+import TodoList from "./TodoList";
+import { TodoContext, TodoProvider } from "../service/TodoContext.js";
+
+const TodoApp = () => {
+  const { todos, createTodo, updateTodo, deleteTodo } = useContext(TodoContext);
+
+  const handleCreateTodo = (todo) => {
+    createTodo(todo);
+  };
+
+  const handleUpdateTodo = (todo) => {
+    updateTodo(todo);
+  };
+
+  const handleDeleteTodo = (todoId) => {
+    deleteTodo(todoId);
+  };
+
+  return (
+    <div>
+      <h1>Todo App</h1>
+      <TodoAdd onCreate={handleCreateTodo} />
+      <TodoList
+        todos={todos}
+        onDelete={handleDeleteTodo}
+        onUpdate={handleUpdateTodo}
+      />
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <TodoProvider>
+      <TodoApp />
+    </TodoProvider>
+  );
+};
+
+export default App;
+
+```
+
+
+```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
+
+
+```
+
+
+```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
+
+
+```
 
 ## Versions
 
