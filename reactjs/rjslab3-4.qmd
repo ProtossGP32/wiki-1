@@ -33,9 +33,11 @@ References:
 - [useContext](/reactjs/reactjs-hook-context.qmd)
 - [async](/reactjs/reactjs-app-async.qmd)
 - ``todo`` refactored to domains:
-  - component and sevice layer, [codesanbox todo-app-5-domain](https://codesandbox.io/s/todo-app-5-domain-7l18sb){.external}
+  - **one** component and sevice layer, [codesanbox todo-app-5-domain](https://codesandbox.io/s/todo-app-5-domain-7l18sb){.external}
 - ``todo`` refactored to domains: 
-  - three components and sevice layer, [codesanbox todo-app-6](https://codesandbox.io/s/todo-app-6-9q6lzy){.external}
+  - **three** components and sevice layer, [codesanbox todo-app-6](https://codesandbox.io/s/todo-app-6-9q6lzy){.external}
+- ``todo`` refactored to domains: 
+  - **four** components, sevice layer and context content list, [codesanbox todo-app-7](https://codesandbox.io/s/todo-app-7-jpgpg0){.external}
 
 
 ## Approach
@@ -48,7 +50,7 @@ The architecture by domains to decoupled concerns, with a `service layer` handli
 [Onion architecture](/javase/selab3-2.qmd) already used in other labs. Very similar to Hexagonal one.
 :::
 
-![Hexagonal Architecture](/images/home/hexagonal.png){width="50%"}
+![[Hexagonal Architecture](https://picodotdev.github.io/blog-bitix/2020/12/tipos-de-arquitecturas-de-aplicaciones-de-software/){.external}](/images/home/hexagonal.png){width="50%"}
 
 In the `Hexagonal Architecture`, the core principle is <mark>to decouple the application's business logic from its external dependencies, such as databases, APIs, or user interfaces.<mark>
 
@@ -64,11 +66,6 @@ While not an exact implementation of `Hexagonal Architecture`, the separation of
 
 This allows for better maintainability, testability, and flexibility in the application's design.
 :::
-
-
-
-
-
 
 
 ### Decoupling the communication layer
@@ -434,16 +431,149 @@ export default App;
 
 ### Component: `ToDoAdd.jsx`
 
+`ToDoAdd.jsx` is used for creating new todo items.
+
+It renders a *form* with input fields for entering the text, author, and due date of a new todo item. It uses React's ``useState`` hook to manage the state of the input values. When the form is ``submitted``, the ``onCreate`` function is called with an object containing the entered values.
+
+The component exports the ``TodoAdd`` component using the ``export default`` statement, allowing it to be imported and used in other files.
+
 ```{.js .code-overflow-wrap filename="ToDoAdd.jsx"}
+import React from "react";
 
+// CRUD: create
+const TodoAdd = ({ onCreate }) => {
+  const [text, setText] = React.useState("");
+  const [author, setAuthor] = React.useState("");
+  const [due, setDue] = React.useState("");
 
+  const handleSubmit = () => {
+    onCreate({
+      text: text,
+      author: author,
+      due
+    });
+  };
+
+  return (
+    <>
+      <hr />
+      <h2>Create new Todo</h2>
+      <hr />
+      <form onSubmit={handleSubmit}>
+        <p>
+          <label> Text</label>
+          <br />
+          <input
+            type="text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Enter author name"
+          />
+        </p>
+        <p>
+          <label> Author</label>
+          <br />
+          <input
+            type="text"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+            placeholder="Enter author name"
+          />
+        </p>
+        <p>
+          <label> Due</label>
+          <br />
+          <input
+            type="date"
+            value={due}
+            onChange={(e) => setDue(e.target.value)}
+          />
+        </p>
+
+        <button type="submit">Add Todo</button>
+      </form>
+      <br />
+      <hr />
+    </>
+  );
+};
+
+export default TodoAdd;
 ```
 ### Component: `ToDoList.jsx`
 
+The `ToDoList.jsx` consists of two components: 
+
+- ``TodoItem``: this component renders a single todo item with its details such as text, id, due date, author, and completion status.
+  - It also provides options to delete the item and update its completion status.
+-  ``TodoList``: this component renders a list of todo items.
+   -  It maps over the todos array and renders a TodoItem component for each item. It also handles the loading state when the todos array is null.
+
+The components are exported using the **export default** statement, indicating that they can be imported and used in other files.
 
 ```{.js .code-overflow-wrap filename="ToDoList.jsx"}
+import React from "react";
 
+// CRUD: read and render item from list
+const TodoItem = ({ todo, onDelete, onUpdate }) => {
+  const handleDelete = () => {
+    onDelete(todo.id);
+  };
 
+  const handleUpdate = () => {
+    onUpdate(todo);
+  };
+
+  return (
+    <>
+      <h4> {todo.text}</h4>
+      <p>
+        Id: {todo.id}, Date: {todo.due}, <strong>{todo.author} </strong>
+      </p>
+
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <button onClick={handleDelete}>Delete</button>
+        <div>
+          Completed:{" "}
+          <input
+            type="checkbox"
+            value={todo.completed}
+            onChange={handleUpdate}
+          ></input>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <hr />
+    </>
+  );
+};
+
+// CRUD: read and create list
+const TodoList = ({ todos, onDelete, onUpdate }) => {
+  //console.log("todos list", todos);
+  if (todos === null) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <>
+      <h2>Todos List</h2>
+      <hr />
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          onDelete={onDelete}
+          onUpdate={onUpdate}
+        />
+      ))}
+    </>
+  );
+};
+
+export default TodoList;
 ```
 
 ## Versions
