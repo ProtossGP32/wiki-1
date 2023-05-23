@@ -244,7 +244,7 @@ It serves as:
 | updateTodo| **updates** an existing TODO item by calling TodoService.updateTodo(), modifying the corresponding TODO item in the state. |
 | deleteTodo | **deletes** a TODO item by invoking TodoService.deleteTodo() and removes the deleted item from the state. |
 | TodoContext.Provider  | **wraps** the children components, providing the todos state and the CRUD functions (createTodo, updateTodo, deleteTodo) through the context's value. |
-: TodoContext` and `TodoProvider` {tbl-colwidths="[20,80]"}
+: `TodoContext` and `TodoProvider` {tbl-colwidths="[20,80]"}
 
 ::: {.column-margin}
 
@@ -328,8 +328,27 @@ const TodoProvider = ({ children }) => {
 export { TodoContext, TodoProvider };
 ```
 
-## Main Component: `ToDoApp.jsx`
+### Main Component: `ToDoApp.jsx`
 
+The main component is `TodoApp`, which renders a:
+
+- `header`, 
+- a `TodoAdd` component for creating new TODO items, and 
+- a `TodoList` component for displaying the list of TODO items.
+
+Within TodoApp, the `useContext` hook is used to access the `TodoContext` and retrieve the `todos`, `createTodo`, `updateTodo`, and `deleteTodo` functions from the **context**.
+
+Handlers:
+
+- The `handleCreateTodo` function calls **createTodo** when a new TODO item is created in the `TodoAdd` component.
+- The `handleUpdateTodo` function invokes **updateTodo** when a TODO item is updated in the `TodoList` component.
+- The `handleDeleteTodo` function calls **deleteTodo** when a TODO item is deleted in the `TodoList` component.
+
+The App component **wraps** the `TodoApp` component with the `TodoProvider`, <mark>providing the necessary context and functions to manage the TODO items.</mark>
+
+::: {.column-margin}
+The **code-architecture** establishes a connection between the TODO data management in `TodoProvider` and the rendering of components in `TodoApp` using the `TodoContext`. It allows for seamless communication and manipulation of TODO items within the React application.
+:::
 
 
 
@@ -337,10 +356,12 @@ export { TodoContext, TodoProvider };
 import React, { useContext } from "react";
 import TodoAdd from "./TodoAdd";
 import TodoList from "./TodoList";
-import { TodoContext, TodoProvider } from "../service/TodoContext.js";
+import { TodoContext, TodoProvider } 
+  from "../service/TodoContext.js";
 
 const TodoApp = () => {
-  const { todos, createTodo, updateTodo, deleteTodo } = useContext(TodoContext);
+  const { todos, createTodo, updateTodo, deleteTodo } = 
+    useContext(TodoContext);
 
   const handleCreateTodo = (todo) => {
     createTodo(todo);
@@ -380,13 +401,16 @@ export default App;
 ```
 
 
-```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
+### Component: `ToDoAdd.jsx`
+
+```{.js .code-overflow-wrap filename="ToDoAdd.jsx"}
 
 
 ```
+### Component: `ToDoList.jsx`
 
 
-```{.js .code-overflow-wrap filename="ToDoGrid.jsx"}
+```{.js .code-overflow-wrap filename="ToDoList.jsx"}
 
 
 ```
