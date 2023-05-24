@@ -14,17 +14,507 @@ format:
 ---
 
 ::: {.labs}
+📘  **React JS Lab#RE05-1: chat & websockets**
 
-📘 **lab**
+In this lab, we will be using:
 
-
+- the ``react-router-dom``, which is a package with bindings for using React Router in web applications:
+- ``websockets``, provided by **ReactJS** framework and:
+  - useState
+  - useEffect
+  - useContext
+- ``AWS``, **Amanzon Web Services**, architecture as a server-side:
+  - Lambda
+  - DynamoDB
+  - API Gateway
+  - Cloudwatch
 
 :::
 
 </br>
 
+Reference:
+
+- [codesanbox myChat](https://codesandbox.io/s/mychat-1-ktru2t?file=/src/chat/SocketProvider.js:1278-1317){.external}
+- [myChat docs, backend & frontend](https://sites.google.com/view/devopscifo/labs/1-chat-app){.external}
+
+## Overall
+
+``WebSockets`` is a <mark>communication protocol that enables real-time, bidirectional communication between a client (usually a web browser) and a server</mark>. It provides a persistent connection that allows for efficient data exchange without the need for repeated HTTP requests.
+
+``WebSockets`` are particularly useful for applications that require instant updates, such as real-time chat applications, collaborative editing tools, and live data streaming.
+
+In React, you can leverage the power of ``WebSockets`` by using libraries like ``Socket.IO`` or the native ``WebSocket`` API. These libraries enable you to establish a WebSocket connection, send and receive messages, and handle events for seamless real-time communication in your React applications.
 
 
+## Project Architecture
+
+![General architecture](/images/reactjs/AWS-Lambda-and-DynamoDB-Architecture.png){width="60%"}
+
+
+## Backend: AWS
+
+For a chat app backend architecture using AWS Lambda, DynamoDB, and API Gateway for WebSockets, here's a high-level overview:
+
+1. ``API Gateway Configuration``:
+   - Create an API Gateway WebSocket API to handle incoming WebSocket connections.
+   - Define routes and integration with Lambda functions to handle various WebSocket events (e.g., connection, disconnection, message sending).
+
+2. ``Lambda Functions``:
+   - Implement Lambda functions to handle WebSocket events, such as connection, disconnection, and message handling.
+   - Use the AWS SDK to interact with DynamoDB for storing and retrieving chat messages and user information.
+   - Implement business logic for handling WebSocket events and updating the chat state in DynamoDB.
+
+3. ``DynamoDB``:
+   - Create a DynamoDB table to store chat messages and user information.
+   - Define appropriate table schema to support the chat app requirements.
+   - Use DynamoDB Streams to capture changes in the chat state for real-time updates.
+
+4. ``Lambda-DynamoDB Integration``:
+   - Configure Lambda functions to subscribe to the DynamoDB Streams associated with the chat table.
+   - Use the stream events to capture updates and propagate them to connected WebSocket clients.
+   - Update the chat state in DynamoDB based on WebSocket events and user interactions.
+
+5. ``Authentication and Authorization``:
+   - Implement user authentication and authorization mechanisms using AWS Cognito, IAM, or custom solutions.
+   - Ensure that WebSocket connections are authenticated and authorized to perform specific actions.
+
+6. ``Additional Services``:
+   - Utilize other AWS services as needed, such as AWS S3 for file storage, AWS CloudFront for content delivery, or AWS CloudWatch for monitoring and logging.
+
+7. ``Scalability and High Availability``:
+   - Configure auto-scaling settings for Lambda functions and DynamoDB to handle varying chat loads.
+   - Utilize AWS Elastic Load Balancer or AWS API Gateway's WebSocket APIs to distribute WebSocket connections across multiple instances.
+
+This architecture leverages AWS Lambda for serverless compute, DynamoDB for storing chat data, API Gateway for WebSocket communication, and additional services for authentication, authorization, and scalability. It provides a scalable, real-time chat backend that can handle WebSocket connections, manage chat messages, and provide a reliable experience to users.
+
+### Test backend
+
+
+- Web test websocket: [Websocket King](https://websocketking.com/){.external}
+
+![Test app with websocketking](/images/reactjs/lab-re-5-3.png){width="60%"}
+
+``Websocket King`` is a <mark>web tool used to test the functionality and performance of WebSocket connections<mark>.
+
+With ``Websocket King``, you can **simulate** ``WebSocket`` communication by connecting to the ``WebSocket`` ``endpoint`` of your AWS backend.
+
+It provides an intuitive interface to send and receive ``WebSocket`` messages, monitor the connection status, and analyze the received data. By using ``Websocket King`` to test your AWS backend, you can ensure that the ``WebSocket`` communication is working correctly, validate the message handling, and assess the overall performance and reliability of your backend implementation.
+
+
+## Frontend: ReactJS
+
+Let's now to create the front-end of ``myChat`` App with ``ReactJS`` and websockets.
+
+### Websockets JS
+
+```{.js .code-overflow-wrap filename="ToDoService.js"}
+  const socket = new WebSocket(endpoint);
+```
+
+We can use the newly created WebSocket ***by utilizing the lifecycle methods and state management provided by the framework.** Here's a general outline of how you can incorporate WebSockets in a React component:
+
+Inside your component, initialize the WebSocket connection with the useEffect hook.
+
+
+```{.js .code-overflow-wrap filename="ToDoService.js"}
+useEffect(() => {
+  const socket = new WebSocket(endpoint);
+
+  // Add event listeners and handle WebSocket events
+
+  // Clean up the WebSocket connection on component unmount
+  return () => {
+    socket.close();
+  };
+}, []);
+```
+
+
+Add event listeners to handle WebSocket events such as onopen, onmessage, onclose, and onerror. For example:
+
+
+```{.js .code-overflow-wrap filename="ToDoService.js"}
+socket.onopen = () => {
+  console.log("WebSocket connection established.");
+};
+
+socket.onmessage = (event) => {
+  console.log("Received message:", event.data);
+  // Update React state or trigger necessary actions based on the received message
+};
+
+socket.onclose = () => {
+  console.log("WebSocket connection closed.");
+};
+
+socket.onerror = (error) => {
+  console.error("WebSocket error:", error);
+};
+```
+
+
+Inside your component, you can interact with the WebSocket connection as needed. For example, you can send messages using the send method:
+
+
+```{.js .code-overflow-wrap filename="ToDoService.js"}
+const sendMessage = (message) => {
+  if (socket.readyState === WebSocket.OPEN) {
+    socket.send(message);
+  } else {
+    console.error("WebSocket connection is not open.");
+  }
+};
+```
+
+Update the component's state or trigger necessary actions based on the received messages. We can use React's state management, such as ``useState``, to store and update data in response to ``WebSocket`` events or a ``useContext`` to manage data.
+
+
+
+### Mock-up and tree-folder
+
+![folder-tree](/images/reactjs/websockets-tree.png){width="40%"}
+
+![Mockup to enter room](/images/reactjs/lab-re-5-1.png){width="60%"}
+
+![Mockup conversation](/images/reactjs/lab-re-5-2.png){width="60%"}
+
+
+### Step-by-step code
+
+
+#### `SocketProvider.js`
+
+```{.js .code-overflow-wrap filename="SocketProvider.js"}
+import { useState, useRef, useEffect, createContext } from "react";
+import React from "react";
+
+//https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
+//https://reactjs.org/docs/context.html
+//ceate context we will use as store of websockets
+export const WebsocketContext = createContext(false, null, () => {});
+// ..........................................ready...message...send
+
+// Make sure to put WebsocketProvider higher up in
+// the component tree than any consumers
+const SocketProvider = ({ children }) => {
+  //two hooks to control states of connection and getting messages
+  const [isReady, setIsReady] = useState(false);
+  const [message, setMessage] = useState(null);
+
+  //hook to control websocket persistence over re-renders and component tree
+  // to any consumer
+  const websocket = useRef(null);
+  // aws endpoint
+  var protocol = "wss://";
+  //var word = "no-connection";
+  var word = "4rytv4evb2";
+  var domain = ".execute-api.eu-central-1.amazonaws.com/test";
+  var endpoint = protocol + word + domain;
+
+  //hook to execute every render () => { function, how many renders we want}
+  // void > just one render at first
+  //[] > every new state
+  //[dependency] > depends on functions within dependency
+  useEffect(() => {
+    //create socket object
+    const socket = new WebSocket(endpoint);
+    //if we open, set isReady to true
+    socket.onopen = () => setIsReady(true);
+    //if we close, set isReady to false
+    socket.onclose = () => setIsReady(false);
+    //if we get a message, set message on that event (JSON)
+    socket.onmessage = (event) => setMessage(event.data);
+    websocket.current = socket;
+    //close socket on return, that is, useEffect may use
+    //this feature as optional, in this case we use it
+    //to clean-up and close when exit the tab
+    return () => {
+      socket.close();
+    };
+  }, []);
+
+  //create  variable JSON with the 3 websocket-states we will use
+  //along the component tree: connection (isReady), get messages from server,
+  //sendind messages : function
+  const actionsWebSocket = [
+    isReady,
+    message,
+    //function to send ws WHEN it is called
+    websocket.current?.send.bind(websocket.current)
+  ];
+
+  //ending component: we call context => WebsoockettContext
+  //so socket provider is a component which returns a context
+  //And this context goes with explicit props: actionsWebSocket
+  return (
+    <WebsocketContext.Provider value={actionsWebSocket}>
+      {children}
+    </WebsocketContext.Provider>
+  );
+};
+
+export default SocketProvider;
+
+```
+
+#### `Chat.jsx`
+
+```{.js .code-overflow-wrap filename="Chat.jsx"}
+import React from "react";
+import SocketProvider from "./SocketProvider";
+import ChatRoom from "./ChatRoom";
+
+export default function Chat() {
+  return (
+    <>
+      <h1>Chat</h1>
+      <hr />
+
+      <SocketProvider>
+        <ChatRoom />
+      </SocketProvider>
+    </>
+  );
+}
+
+
+```
+
+#### `ChatRoom.jsx`
+
+```{.js .code-overflow-wrap filename="ChatRoom.jsx"}
+import React from "react";
+import { useContext, useState } from "react";
+import { WebsocketContext } from "./SocketProvider";
+import Conversation from "./Conversation";
+
+export default function ChatRoom() {
+  //use it just like a hook: useContext gets as initial value
+  //the content WebSocketContext
+  const [ready, message, send] = useContext(WebsocketContext);
+  //two useStates to control inpus from user: userId and chatId
+  const [chatId, setChatId] = useState("");
+  const [userId, setUserId] = useState("");
+
+  //just to parse message JSON-aws (quasi JSON) from server to JSON and string
+  let messageToShow = "";
+  let messageJSON = JSON.parse(message);
+  const messageString = JSON.stringify(message);
+  //console.log("messageJSON: " + messageJSON);
+  //to print the connection after log in if it exists
+
+  let isLogin = messageString.length > 4;
+  if (!isLogin) messageToShow = "not logged-in";
+  else
+    messageToShow =
+      messageJSON.action + " (connectionId: " + messageJSON.connectionId + ")";
+
+  //functio to send login data to server
+  const sendLogin = () => {
+    let data = {
+      action: "login",
+      chatId: chatId,
+      userId: userId
+    };
+    if (ready) send(JSON.stringify(data));
+  };
+
+  //props to tree-component downstairs
+  let props = {
+    userId: userId,
+    chatId: chatId
+  };
+
+  //view.......................................
+  //conditional render.........................
+  return (
+    <>
+      <div>
+        <h3>Chat Room</h3>
+        <p>
+          Status connection: <b> {JSON.stringify(ready)}</b>
+        </p>
+
+        {ready && !isLogin ? (
+          <>
+            <label> UserId </label>
+            <input
+              type="text"
+              placeholder="Alex"
+              onChange={(e) => setUserId(e.target.value)}
+            />
+            <label> ChatId </label>
+            <input
+              type="text"
+              placeholder="chatReactAWS"
+              onChange={(e) => setChatId(e.target.value)}
+            />
+            <br />
+
+            <button onClick={sendLogin}>Enter chat room</button>
+
+            <p>
+              Status log in: <b> {messageToShow}</b>
+            </p>
+          </>
+        ) : (
+          ""
+        )}
+
+        {isLogin ? <Conversation {...props} /> : ""}
+      </div>
+    </>
+  );
+}
+```
+
+
+#### `Conversation.js`
+
+```{.js .code-overflow-wrap filename="Conversation.jsx"}
+import React from "react";
+import { useContext, useState, useReducer, useEffect } from "react";
+import { WebsocketContext } from "./SocketProvider";
+
+export default function Conversation(props) {
+  // use it just like a hook
+  const [ready, message, send] = useContext(WebsocketContext);
+  const [state, dispatch] = useReducer(conversationReducer, []);
+  const [text, setText] = useState("");
+
+  function conversationReducer(state, action) {
+    switch (action.type) {
+      case "send": {
+        let data = {
+          action: "conversation",
+          chatId: props.chatId,
+          userId: props.userId,
+          text: action.payload
+        };
+        if (ready) send(JSON.stringify(data));
+
+        return [
+          ...state,
+          {
+            id: Date.now(),
+            time: Date.now(),
+            chatId: props.chatId,
+            userId: props.userId,
+            text: action.payload
+          }
+        ];
+      }
+      case "receive": {
+        return [
+          ...state,
+          {
+            id: Date.now(),
+            time: JSON.parse(message).time,
+            chatId: JSON.parse(message).chatId,
+            userId: JSON.parse(message).userId,
+            text: JSON.parse(message).text
+          }
+        ];
+      }
+      case "login": {
+        return [
+          ...state,
+          {
+            id: Date.now(),
+            userId: "status",
+            time: JSON.parse(message).time,
+            text:
+              JSON.parse(message).action +
+              " at " +
+              JSON.parse(message).time +
+              " with connection:  " +
+              JSON.parse(message).connectionId
+          }
+        ];
+      }
+
+      default: {
+        return state;
+      }
+    }
+  }
+
+  useEffect(() => {
+    var isConverastion = false;
+    let stringMessage = JSON.stringify(message);
+    if (!stringMessage.includes("sent at")) {
+      isConverastion = JSON.parse(message).action === "conversation";
+      if (isConverastion) dispatch({ type: "receive", payload: message });
+      else dispatch({ type: "login", payload: message });
+    }
+    console.log("isConverastion: " + isConverastion + " - message: " + message);
+  }, [message]);
+
+  let propsConversationLines = {
+    state: state,
+    userId: props.userId
+  };
+
+  return (
+    <>
+      <div>
+        <h2>Conversation</h2>
+        <hr />
+        <div
+          style={{
+            color: "black",
+            backgroundColor: "azure",
+            padding: "10px",
+            width: "400px",
+            fontFamily: "Helvetica",
+            fontSize: "13px"
+          }}
+        >
+          <ConversationsList {...propsConversationLines} />
+        </div>
+        <br />
+        <input
+          type="text"
+          name="content"
+          placeholder="say hello"
+          onChange={(e) => setText(e.target.value)}
+        />
+
+        <button onClick={() => dispatch({ type: "send", payload: text })}>
+          {" "}
+          Send
+        </button>
+      </div>
+    </>
+  );
+}
+
+function ConversationsList(propsConversationLines) {
+  return propsConversationLines.state.map((item) => (
+    <>
+      {propsConversationLines.userId === item.userId ? (
+        <p
+          style={{
+            textAlign: "right"
+          }}
+        >
+          {item.userId}: {item.text}
+        </p>
+      ) : (
+        <p
+          style={{
+            textAlign: "left"
+          }}
+        >
+          {item.userId}: {item.text}
+        </p>
+      )}
+    </>
+  ));
+}
+
+```
 
 
 <!--- navLinks -->
