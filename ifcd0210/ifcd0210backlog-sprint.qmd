@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(3) {
+tr:nth-child(4) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -20,7 +20,7 @@ tr:nth-child(3) {
 | -- | -- | -- | -- | -- |
 | #22 | 102 | 22/05 | + useContext to-do CRUD api rest </br> ++ React paradigm: how to manage data </br> (1) context </br> (2) redux </br> (3) local storage  </br> just api rest </br> ++ Virtual DOM| [Lab#RE03-3](/reactjs/rjslab3-3.qmd) </br> [virtual DOM](/reactjs/reactjs-what-render-dom.qmd) </br> ![todo domains schema](/images/reactjs/todo-domains-schema.jpg) </br> [useForm](https://usehooks-ts.com/react-hook/use-fetch){.external} </br> [redux](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow){.external} </br> ![redux](/images/reactjs/redux-fig.gif) |
 |  | 103 | 23/05 | - useContext to-do CRUD api rest: </br> (1) mono API Rest </br> (1) domains API Rest | [Lab#RE03-3](/reactjs/rjslab3-3.qmd) </br> [Lab#RE03-4](/reactjs/rjslab3-4.qmd) |
-|  | 104 | 24/05 | - useContext to-do CRUD api rest: </br> (1) domains useContext </br> (2) components </br> - websockets: </br> (1) general approach & use-story </br> <s>(2) mock-up </s> | [Lab#RE03-4](/reactjs/rjslab3-4.qmd) </br> [codesanbox websocket context AWS](https://codesandbox.io/s/mychat-1-ktru2t?file=/src/chat/SocketProvider.js){.external}|
+|  | 104 | 24/05 | - useContext to-do CRUD api rest: </br> (1) domains useContext </br> (2) components </br> - <s> websockets: </br> (1) general approach & use-story </br> (2) mock-up </s> | [Lab#RE03-4](/reactjs/rjslab3-4.qmd) </br> [What is JavaScript Object Literal?](https://playcode.io/javascript/object-literal){.external}  </br> [codesanbox websocket context AWS](https://codesandbox.io/s/mychat-1-ktru2t?file=/src/chat/SocketProvider.js){.external}  </br>  [MindValley Barcelona](https://www.mindvalley.com/films/barcelona-experiment/invite){.external} |
 |  | 105 | 25/05 | - local.storage </br> - websockets: </br> (1) general approach & domains </br>(2) mock-up </br> | - |
 |  | 106 | 26/05 | - SCRUM </br> - Retrospective | [Lab#RE05-1](/reactjs/rjslab5.qmd) |
 : Backlog Sprint#22 May 2023 {tbl-colwidths="[2,2,2,55,39]"}
