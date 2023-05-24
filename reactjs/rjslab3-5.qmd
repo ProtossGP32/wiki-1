@@ -1,5 +1,5 @@
 ---
-title: "Lab#RE03-5: store"
+title: "Lab#RE03-5: data management"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
@@ -14,7 +14,7 @@ format:
 ---
 
 ::: {.labs}
-📘 **React JS Lab#RE03-5: store**
+📘 **React JS Lab#RE03-5: data management**
 
 In this lab, we will be using:
 
@@ -50,6 +50,24 @@ We could add to our App:
 - some **performance optimization**: Techniques like [memoization](https://www.topcoder.com/thrive/articles/memoization-in-react-js){.external}, virtualization, and code splitting.
 - **Server-side Rendering (SSR) and Static Site Generation (SSG):** SSR and SSG techniques, like ``Next.js`` allow rendering React components on the server-side or generating static HTML files, improving SEO and initial load times.
 :::
+
+### Data Management in React: Context, Redux, and Local Storage
+
+Data management in React can be achieved using Context, Redux, and local storage. `Context` simplifies state management, `Redux` offers scalability, and `local storage` provides persistent storage for offline functionality.
+
+|           | Context                     | Redux                      | Local Storage               |
+| --------- | --------------------------- | -------------------------- | --------------------------- |
+| **Pros**      |                            |                            |                             |
+|           | Simplifies state management | Centralized state management | Persistent data storage     |
+|           | Lightweight and easy to use| Powerful and scalable       | No server-side dependency    |
+|           | No third-party dependencies| Optimized for large apps    | Supports offline functionality|
+| **Cons**      |                            |                            |                             |
+|           | Limited to one component tree| Steeper learning curve      | Limited storage capacity     |
+|           | May lead to prop drilling  | Boilerplate code            | Not suitable for sensitive data|
+|           | Performance impact with deeply nested consumers | Adds complexity to smaller apps | Synchronous operations may block UI |
+
+
+
 References:
 
 - [React Context API: What is it and How it works?](https://www.loginradius.com/blog/engineering/react-context-api/){.exteranl}
