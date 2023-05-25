@@ -305,6 +305,10 @@ const TodoProvider = ({ children }) => {
       console.error("Error fetching todos:", error);
     }
   };
+```
+
+
+```{.js .code-overflow-wrap filename="ToDoContext.js"}
 
   //
   const createTodo = async (todo) => {
@@ -315,7 +319,9 @@ const TodoProvider = ({ children }) => {
       console.error("Error creating todo:", error);
     }
   };
+```
 
+```{.js .code-overflow-wrap filename="ToDoContext.js"}
   //
   const updateTodo = async (updatedTodo) => {
     try {
@@ -332,7 +338,9 @@ const TodoProvider = ({ children }) => {
       console.error("Error updating todo:", error);
     }
   };
+```
 
+```{.js .code-overflow-wrap filename="ToDoContext.js"}
   //
   const deleteTodo = async (todoId) => {
     try {
@@ -528,10 +536,13 @@ const TodoItem = ({ todo, onDelete, onUpdate }) => {
     <>
       <h4> {todo.text}</h4>
       <p>
-        Id: {todo.id}, Date: {todo.due}, <strong>{todo.author} </strong>
+        Id: {todo.id}, 
+        Date: {todo.due}, 
+        by <strong>{todo.author} </strong>
       </p>
 
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div style={{ display: "flex", 
+                    justifyContent: "space-between" }}>
         <button onClick={handleDelete}>Delete</button>
         <div>
           Completed:{" "}
@@ -550,6 +561,10 @@ const TodoItem = ({ todo, onDelete, onUpdate }) => {
   );
 };
 
+//....
+```
+
+```{.js .code-overflow-wrap filename="ToDoList.jsx"}
 // CRUD: read and create list
 const TodoList = ({ todos, onDelete, onUpdate }) => {
   //console.log("todos list", todos);
