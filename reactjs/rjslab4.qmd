@@ -84,6 +84,80 @@ Once you confirm the last prompt, the final selection should look similar to thi
 
 ![Prompt feathers](/images/reactjs/lab-re-4-1.png){}
 
+### Creating a project
+
+Install
+
+```js
+npm install @feathersjs/feathers --save
+npm install -g @feathersjs/cli
+```
+
+Help
+```js
+feathers --help
+```
+
+Creation
+
+```js
+albert@albert-virtual-machine:~/MyProjects/MyFeathers/TodoRest$ feathers -V
+5.0.5
+
+feathers g app
+albert@albert-virtual-machine:~/MyProjects/MyFeathers/TodoRest$ feathers g app
+? Do you want to use JavaScript or TypeScript? JavaScript
+? What is the name of your application? TodoRest
+? Write a short description Backend API Rest for ReactJS Todo
+? Which HTTP framework do you want to use? KoaJS (recommended)
+? What APIs do you want to offer? HTTP (REST), Real-time
+? Which package manager are you using? npm
+? Generate client? Can be used with React, Angular, Vue, React Native, Node.js 
+etc. No
+? What is your preferred schema (model) definition format? Schemas allow to 
+type, validate, secure and populate your data and configuration TypeBox 
+(recommended)
+? Which database are you connecting to? Databases can be added at any time 
+MongoDB
+? Enter your database connection string 
+mongodb+srv://cifo:1234@clustertest.0h5f7.mongodb.net/todo
+```
+
+
+Create Service
+
+```js
+albert@albert-virtual-machine:~/MyProjects/MyFeathers/TodoRest$ feathers generate service
+? What is the name of your service? todoapirest
+? Which path should the service be registered on? todo
+? Does this service require authentication? No
+? What database is the service using? MongoDB
+? Which schema definition format do you want to use? Schemas allow to type, 
+validate, secure and populate data TypeBox  (recommended)
+    Wrote file src/services/todo/todo.schema.js
+    Wrote file src/services/todo/todo.js
+    Updated src/services/index.js
+    Wrote file test/services/todo/todo.test.js
+    Wrote file src/services/todo/todo.class.js
+
+
+```
+
+#### Initial render feathers project
+
+
+After install and create, we could execute the project `npm start` and check the **endpoint**.
+
+At browser, `http://localhost:3030/` (it is the base URL for a `Feathers` server) we will consume the data. 
+
+By making HTTP requests to this `endpoint` using different methods (GET, POST, PUT, DELETE), along with appropriate paths and parameters, we can perform CRUD (Create, Read, Update, Delete) operations on the corresponding resources exposed by the Feathers server, thus interacting with the API and manipulating data.
+
+After check all CRUD operations are working we will use this endopont to serve our [React todo app](/reactjs/rjslab3-3.qmd)
+
+::: {.column-margin}
+![initial render on `http://localhost:3030/`](/images/reactjs/lab-re-4-2.png){width="60%"}
+:::
+
 
 ## API REST Server with spring boot
 
