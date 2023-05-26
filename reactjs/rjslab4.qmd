@@ -33,11 +33,19 @@ For many reasons described below the use of a React App with a Spring Boot/Feath
 
 Creating a server for a React `Todo` application is essential for several reasons:
 
-- `Data Persistence`: A server allows you to store and retrieve data from a database or a file system. In the case of a todo application, you need to store the todo items, their status, and any other relevant information. A server enables you to save this data and retrieve it whenever necessary, ensuring that the todos remain persistent even if the user refreshes the page or closes the application.
-- `User Authentication`: If you want to add user accounts and authentication to your todo application, a server is required. It allows you to handle user registration, login, and session management. With a server, you can securely authenticate users and restrict access to certain features or data based on user permissions.
-- `API Integration`: In many cases, todo applications need to integrate with external services or APIs. For example, you may want to sync todos with a cloud storage service or send notifications to users. A server acts as an intermediary between your React application and these external APIs, handling the necessary requests and responses.
-- `Server-side Operations`: Some operations are better suited to be performed on the server side. For instance, if you need to calculate statistics or generate reports based on the todos, it's more efficient to offload these tasks to the server rather than executing them in the client's browser.
-- `Scalability and Performance`: As your todo application grows and handles more users and data, a server allows you to scale your infrastructure to meet the demand. You can distribute the load across multiple servers or utilize cloud services that provide auto-scaling capabilities, ensuring optimal performance and responsiveness.
+- `Data Persistence`: A server allows you to **store and retrieve data from a database or a file system.**
+  - In the case of a `todo` application, you need to store the `todo` items, their status, and any other relevant information.
+  - A server enables you to save this data and retrieve it whenever necessary, ensuring that the `todos` remain persistent even if the user **refreshes** the page or closes the application.
+- `User Authentication`: If you want to add **user accounts and authentication** to your todo application, a server is required.
+  - It allows you to handle user registration, login, and session management.
+  - With a server, you can securely authenticate users and restrict access to certain features or data based on user permissions.
+- `API Integration`: In many cases, `todo` applications need to **integrate with external services or APIs**.
+  - For example, you may want to sync todos with a cloud storage service or send notifications to users.
+  - A server acts as an intermediary between your React application and these external APIs, handling the necessary requests and responses.
+- `Server-side Operations`: Some operations are better suited to be performed on the server side.
+  - For instance, if you need to **calculate statistics or generate reports based on the `todos`**, it's more efficient to offload these tasks to the server rather than executing them in the client's browser.
+- `Scalability and Performance`: As your `todo` application grows and handles more users and data, a server **allows you to scale your infrastructure to meet the demand.**
+  - You can distribute the load across multiple servers or utilize cloud services that provide auto-scaling capabilities, ensuring optimal performance and responsiveness.
 
 
 
@@ -54,7 +62,11 @@ The `Todo` React code can be deployed and **served using various frameworks and 
 5. **AWS**: [Amazon Web Services (AWS)](https://aws.amazon.com/) offers a range of services for deploying React applications. You can use AWS Amplify, AWS Elastic Beanstalk, or AWS Lambda, depending on your specific needs.
 
 
+Let's study three of them as a model of server implementation to our `React Todo`:
 
+- a lighter weight one with `NodeJS`, `FeathersJS`,
+-  a natural leader `Java EE`, `Spring Boot`,
+-   and a seveless cloud option, `AWS`
 
 
 ## API REST Server with Feathers
@@ -272,17 +284,17 @@ Additionally, AWS provides monitoring, logging, and security features, ensuring 
 
 Here's how each component plays a role in this architecture:
 
-1. ``AWS API Gateway``: API Gateway acts as a front-end to your backend services. 
-   1. It allows you to create a RESTful API that can receive requests from your Todo React app and route them to the appropriate backend services.
-   2. With API Gateway, you can define API endpoints, set up authentication and authorization, perform request validation, and handle rate limiting.
+1. ``AWS API Gateway``: API Gateway acts as a **front-end to your backend services**. 
+   1. It allows you to create a **RESTful** API that can receive requests from your `Todo` React app and route them to the appropriate backend services.
+   2. With API Gateway, you can define API **endpoints**, set up **authentication** and **authorization**, perform request validation, and handle rate limiting.
    3. It also integrates well with other AWS services, making it easy to connect with Lambda and DynamoDB.
 2. ``AWS Lambda``: Lambda is a serverless compute service that allows you to run code without provisioning or managing servers.
-   1. In the context of a Todo React app, you can write your backend logic as individual Lambda functions. Each function can handle a specific task, such as creating a new task, updating a task, or retrieving a list of tasks.
+   1. In the context of a `Todo` React app, you can write your **backend logic as individual Lambda functions**. Each function can handle a specific task, such as creating a new task, updating a task, or retrieving a list of tasks.
    2. Lambda functions can be written in various programming languages, including JavaScript, which makes it convenient for integration with your React app.
    3. API Gateway can be configured to trigger the appropriate Lambda function based on the incoming request, and the function can then process the request and return a response.
-3. ``Amazon DynamoD``B: DynamoDB is a fully managed NoSQL database service offered by AWS.
-   1.  It provides high scalability, low latency, and automatic scaling, making it a great choice for storing and retrieving task data for a Todo app.
-   2.  DynamoDB organizes data in tables, and each table consists of items (representing tasks in this case) and attributes (representing properties of each task).
+3. ``Amazon DynamoDb``: DynamoDB is a **fully managed NoSQL database service offered by AWS.**
+   1.  It provides high scalability, low latency, and automatic scaling, making it a great choice for storing and retrieving task data for a `Todo` app.
+   2.  DynamoDB organizes data in **tables**, and each table consists of items (representing tasks in this case) and attributes (representing properties of each task).
    3.  You can store and retrieve task data using DynamoDB APIs, and Lambda functions can interact with DynamoDB to perform CRUD operations on the tasks.
 
 
@@ -305,7 +317,7 @@ Here's how each component plays a role in this architecture:
 <br>
 <div class='column right next'>
 <br>
-[React JS: Lab#RE05-1  {{< fa solid arrow-right >}}](/reactjs/rjslab5.qmd)
+[React JS: Lab#RE05-1  {{< fa solid arrow-right >}}](/reactjs/rjslab5-1.qmd)
 <br>
 </div>
 <br>

@@ -1,0 +1,81 @@
+---
+title: "Lab#RE05-1: chat & websockets"
+subtitle: ReactJS labs
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: labs
+categories: [reactjs, lab, Lab#RE05]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.labs}
+📘  **React JS Lab#RE05-1: chat & websockets**
+
+In this lab, we will be using:
+
+- the ``react-router-dom``, which is a package with bindings for using React Router in web applications:
+- ``websockets``, provided by **ReactJS** framework and:
+  - useState
+  - useEffect
+  - useContext
+- ``AWS``, **Amanzon Web Services**, architecture as a server-side:
+  - Lambda
+  - DynamoDB
+  - API Gateway
+  - Cloudwatch
+
+:::
+
+</br>
+
+Reference:
+
+- [codesanbox myChat](https://codesandbox.io/s/mychat-1-ktru2t?file=/src/chat/SocketProvider.js:1278-1317){.external}
+- [myChat docs, backend & frontend](https://sites.google.com/view/devopscifo/labs/1-chat-app){.external}
+
+## Overall
+
+``WebSockets`` is a <mark>communication protocol that enables real-time, bidirectional communication between a client (usually a web browser) and a server</mark>. It provides a persistent connection that allows for efficient data exchange without the need for repeated HTTP requests.
+
+``WebSockets`` are particularly useful for applications that require instant updates, such as real-time chat applications, collaborative editing tools, and live data streaming.
+
+In React, you can leverage the power of ``WebSockets`` by using libraries like ``Socket.IO`` or the native ``WebSocket`` API. These libraries enable you to establish a WebSocket connection, send and receive messages, and handle events for seamless real-time communication in your React applications.
+
+
+## Project Architecture
+
+![General architecture](/images/reactjs/AWS-Lambda-and-DynamoDB-Architecture.png){width="60%"}
+
+## Websockets
+
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} React JS: Lab#RE04-1](/reactjs/rjslab4.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[React JS: Lab#RE05-2  {{< fa solid arrow-right >}}](/reactjs/rjslab5-2.qmd)
+<br>
+</div>
+<br>
+</div>
