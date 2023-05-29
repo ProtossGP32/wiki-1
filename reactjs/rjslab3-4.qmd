@@ -595,7 +595,7 @@ export default TodoList;
 
 Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
-| todoApp 0.4 | ToDoGrid decoupling with domains: [todoApp 0.4](){.external} | - | [render todoGrid](/images/reactjs/lab-re-3-7.png) - [todo created render](/images/reactjs/lab-re-3-8.png){width="80%"} |
+| todoApp 0.4 | ToDoGrid decoupling with domains: [todoApp 0.4](https://github.com/AlbertProfe/CifoJava2023-2/tree/6335c5ce04c37b81c4bcae473a623444797538e0/todoapp){.external} | - | - |
 
 
 <!--- navLinks -->
