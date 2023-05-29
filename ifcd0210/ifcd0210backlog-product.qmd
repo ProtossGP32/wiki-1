@@ -159,11 +159,11 @@ categories: [ifcd0210, backlog]
 |  | 99 | 17/05 | + axios, fetch </br> (1) to-do: api rest consume data </br> (2) to-do: async </br>  |  [Lab#RE03-3](/reactjs/rjslab3-3.qmd) </br>  [codesanbox rest axios/fetch: todo-app-4](https://codesandbox.io/s/todo-app-4-6kgxh7?file=/src/todo/TodoApp.jsx){.external} </br> [async](/reactjs/reactjs-app-async.qmd) - [async docs mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#try_it){.external}  </br> [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect#fetching-data){.external}   </br>  |
 |  | 100 | 18/05 | - <s>store </br> (1) redux/reducer </br> local storage </s></br> + axios, fetch </br> (1) to-do: api rest consume data </br> (2) to-do: async </br> + React paradigm-core: </br> (1) immutable/mutable  </br> (2) sync/async </br> (3) scope (API Context/useContext/Providers)  </br> (4) render cycle: trigger/render/paint  </br> | [Fetching data](https://react.dev/learn/synchronizing-with-effects#fetching-data){.external} |
 |  | 101 | 19/05 | + SCRUM: </br> (0) How rich (abundance/scarcity) is created? </br> (1) Why just left mode is wrong?  </br> (2) The map is no the territory: fishing factory </br> (3) Right mode: living in the ambiguity</br> (4) Taleb/McGilchrist: Simple/Complicated/Complex </br>  (5) What is a problem? Why science is losing prestige? </br> (6)  Mountain Manifesto </br> + Retrospective  | [Al Pacino best speech - Any Given Sunday - 1080p HD](https://www.youtube.com/watch?v=f1yWSePMqsk){.external} <br/> [Mountain Manifesto](https://dark-mountain.net/about/manifesto/){.external} </br>  [The world is not a problem - Iain McGilchrist and Dougald Hine](https://www.youtube.com/watch?v=PSFdJ7fRDjM){.external}      |
-| #22 | 102 | 22/05 | - | - |
-|  | 103 | 23/05 | - | - |
-|  | 104 | 24/05 | - | - |
-|  | 105 | 25/05 | - | - |
-|  | 106 | 26/05 | - | - |
+| **#22** | **102** | **22/05** | + useContext to-do CRUD api rest </br> ++ React paradigm: how to manage data </br> (1) context </br> (2) redux </br> (3) local storage  </br> just api rest </br> ++ Virtual DOM| [Lab#RE03-3](/reactjs/rjslab3-3.qmd) </br> [virtual DOM](/reactjs/reactjs-what-render-dom.qmd) </br> ![todo domains schema](/images/reactjs/todo-domains-schema.jpg) </br> [useForm](https://usehooks-ts.com/react-hook/use-fetch){.external} </br> [redux](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow){.external} </br> ![redux](/images/reactjs/redux-fig.gif) |
+|  | 103 | 23/05 | + useContext to-do CRUD api rest: </br> (1) mono API Rest </br> (1) domains API Rest | [Lab#RE03-3](/reactjs/rjslab3-3.qmd) </br> [Lab#RE03-4](/reactjs/rjslab3-4.qmd) |
+|  | 104 | 24/05 | + useContext to-do CRUD api rest: </br> (1) domains useContext </br> (2) api rest data acces layer  </br> - <s> websockets: </br> (1) general approach & use-story </br> (2) mock-up </s> | [Lab#RE03-4](/reactjs/rjslab3-4.qmd) </br> [What is JavaScript Object Literal?](https://playcode.io/javascript/object-literal){.external}  </br> [codesanbox websocket context AWS](https://codesandbox.io/s/mychat-1-ktru2t?file=/src/chat/SocketProvider.js){.external}  </br>  [MindValley Barcelona](https://www.mindvalley.com/films/barcelona-experiment/invite){.external} |
+|  | 105 | 25/05 | - <s>local.storage</s> </br> - useContext to-do CRUD api rest: </br> (1) domains useContext </br> (2) components </br> + websockets: </br> (1) general approach & domains </br>(2) mock-up </br> |  [Lab#RE03-4](/reactjs/rjslab3-4.qmd) </br>  [Lab#RE04-1](/reactjs/rjslab4.qmd) </br> [Lab#RE05-1](/reactjs/rjslab5-1.qmd) |
+|  | 106 | 26/05 | + useContext to-do CRUD api rest: </br> (1) domains useContext </br> (2) whole app architecture  </br> + SCRUM </br> (1) Beyond SCRUM </br> (2) Beyond SCRUM: Netflix  </br> - <s>Retrospective</s> |  [Lab#RE03-4](/reactjs/rjslab3-4.qmd) </br> [Lab#RE05-1](/reactjs/rjslab5-1.qmd) </br> </br>  [Agile Netflix](https://www.youtube.com/watch?v=sV3B9Zgz_go){.external} - [Beyond](https://www.linkedin.com/posts/mark-lambertz_beyond-scrum-when-talking-to-engineers-activity-6944719050744709120-R82j?trk=public_profile_like_view){.external} - [Netflix agile: 5 lessons](https://smartbear.com/blog/5-lessons-agile-teams-can-learn-from-netflix/){.external} - [Professional sports team: build to win](https://summation.net/2009/07/22/netflix-values-we-are-a-professional-sports-team-not-a-family/){.external} - [No rules rules](https://www.norulesrules.com/){.external} |
 | #23 | 107 | 29/05 | - | - |
 |  | 108 | 30/05 | - | - |
 |  | 109 | 31/05 | - | - |
@@ -179,6 +179,7 @@ categories: [ifcd0210, backlog]
 |  | 113 | 07/06 | - | - |
 |  | 114 | 08/06 | - | - |
 |  | 115 | 09/06 | - | - |
+|  | 116 | 12/06 | - | - |
 : Backlog course June 2023 table {tbl-colwidths="[2,2,2,64,30]"}
 
 ## July 2023
