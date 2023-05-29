@@ -74,7 +74,9 @@ Let's study three of them as a model of server implementation to our `React Todo
 - [Quick start](https://feathersjs.com/guides/basics/starting.html){.external}
 - [Node.js CRUD App Using React and FeathersJS](https://www.sitepoint.com/crud-app-node-react-feathersjs/){.external}
 
-You can create a new ``Feathers`` application by running
+Let's outline a few strategies we can employ to achieve our objective. 
+
+First, you need to create a new ``Feathers`` application by running
 
 ```js
  npm create feathers <name>
@@ -88,12 +90,12 @@ Since the generated application is using modern features like **ES modules**, th
 
 You need to define your project.
 
-- choose if you want to use JavaScript or TypeScript.
-- When presented with the project name, just hit enter, or enter a name (no spaces).
-- Next, write a short description for your application.
+- choose if you want to use ````JavaScript```` or TypeScript.
+- When presented with the ``project name``, just hit enter, or enter a name (no spaces).
+- Next, write a short ``description`` for your application.
 - Confirm the next questions with the default selection by pressing Enter.
-- If you choose a database other than SQLite, make sure it is reachable at the connection string.
-- using MongoDB is nece, change the database selection.
+- If you choose a database other than ``SQLite``, make sure it is reachable at the connection string.
+- using ``MongoDB`` is nice, so, you should change the database selection.
 
 Once you confirm the last prompt, the final selection should look similar to this:
 
@@ -101,19 +103,20 @@ Once you confirm the last prompt, the final selection should look similar to thi
 
 ### Creating a project
 
-Install
+``Install``
 
 ```js
 npm install @feathersjs/feathers --save
 npm install -g @feathersjs/cli
 ```
 
-Help
+``Help``
+
 ```js
 feathers --help
 ```
 
-Creation
+``Creation``
 
 ```js
 albert@albert-virtual-machine:~/MyProjects/MyFeathers/TodoRest$ feathers -V
@@ -139,7 +142,7 @@ mongodb+srv://cifo:1234@clustertest.0h5f7.mongodb.net/todo
 ```
 
 
-Create Service
+``Create Service``
 
 ```js
 albert@albert-virtual-machine:~/MyProjects/MyFeathers/TodoRest$ feathers generate service
@@ -165,7 +168,7 @@ After install and create, we could execute the project `npm start` and check the
 
 At browser, `http://localhost:3030/` (it is the base URL for a `Feathers` server) we will consume the data. 
 
-By making HTTP requests to this `endpoint` using different methods (GET, POST, PUT, DELETE), along with appropriate paths and parameters, we can perform CRUD (Create, Read, Update, Delete) operations on the corresponding resources exposed by the Feathers server, thus interacting with the API and manipulating data.
+By making HTTP requests to this `endpoint` using different methods (GET, POST, PUT, DELETE), along with appropriate paths and parameters, we can perform CRUD (Create, Read, Update, Delete) operations on the corresponding resources exposed by the ``Feathers`` server, thus interacting with the API and manipulating data.
 
 After check all CRUD operations are working we will use this endopont to serve our [React todo app](/reactjs/rjslab3-3.qmd)
 
@@ -176,7 +179,9 @@ After check all CRUD operations are working we will use this endopont to serve o
 
 ## API REST Server with Spring Boot
 
-Let's create a Spring Boot server. It will publish our todo API Rest with a `command-line runner` that interacts with a `Todo` model.
+We could create a Spring Boot server. It will publish our todo API Rest with a `command-line runner` that interacts with a `Todo` model.
+
+Let's draw some ideas to approach this solution.
 
 - Create a new `Spring Boot` project using your preferred IDE or the [Spring Initializr](https://start.spring.io/){.external}. Include the necessary dependencies for RESTful web services and JPA (Java Persistence API).
 - Create a `Todo` `entity` class to represent our `Todo` model. This class will have the properties id, text, completed, author, and due.
@@ -272,6 +277,8 @@ public class TodoController implements CommandLineRunner {
 
 ``AWS API Gateway``, ``AWS Lambda``, and ``Amazon DynamoDB`` are indeed <mark>a great combination for building a serverless backend for a Todo React app<mark>.
 
+Let's explore some options for addressing this issue.
+
 ::: {.column-margin}
 By combining these AWS services, we can create a scalable and cost-effective serverless backend for our Todo React app.
 :::
@@ -282,7 +289,7 @@ The architecture eliminates the need for managing servers, allows for automatic 
 Additionally, AWS provides monitoring, logging, and security features, ensuring the reliability and security of your application.
 :::
 
-Here's how each component plays a role in this architecture:
+Here's how each component could play a role in this architecture:
 
 1. ``AWS API Gateway``: API Gateway acts as a **front-end to your backend services**. 
    1. It allows you to create a **RESTful** API that can receive requests from your `Todo` React app and route them to the appropriate backend services.
@@ -317,7 +324,7 @@ Here's how each component plays a role in this architecture:
 <br>
 <div class='column right next'>
 <br>
-[React JS: Lab#RE05-1  {{< fa solid arrow-right >}}](/reactjs/rjslab5-1.qmd)
+[React JS: Lab#RE04-2  {{< fa solid arrow-right >}}](/reactjs/rjslab4-2.qmd)
 <br>
 </div>
 <br>

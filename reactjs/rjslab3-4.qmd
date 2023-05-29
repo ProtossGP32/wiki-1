@@ -279,6 +279,7 @@ It serves as:
 The `TodoContext` and `TodoProvider` facilitate the **management** of TODO data in the React application by utilizing the `TodoService` functions to interact with an API, and provide the data and functions through the context to be consumed by JSX components in an immutable domain.
 :::
 
+``fetchTodos``
 
 ```{.js .code-overflow-wrap filename="ToDoContext.js"}
 import React, { createContext, useState, useEffect } 
@@ -307,6 +308,7 @@ const TodoProvider = ({ children }) => {
   };
 ```
 
+``createTodo``
 
 ```{.js .code-overflow-wrap filename="ToDoContext.js"}
 
@@ -321,10 +323,16 @@ const TodoProvider = ({ children }) => {
   };
 ```
 
+``updateTodo``
+
 ```{.js .code-overflow-wrap filename="ToDoContext.js"}
-  //
-  const updateTodo = async (updatedTodo) => {
+ //
+  const updateTodo = async (todoToUpdate) => {
     try {
+      const updatedTodo = {
+        ...todoToUpdate,
+        completed: !todoToUpdate.completed
+      };
       await TodoService.updateTodo(updatedTodo);
       setTodos((prevTodos) => {
         const updatedTodos = [...prevTodos];
@@ -339,6 +347,8 @@ const TodoProvider = ({ children }) => {
     }
   };
 ```
+
+``deleteTodo``
 
 ```{.js .code-overflow-wrap filename="ToDoContext.js"}
   //

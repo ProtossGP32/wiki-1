@@ -99,7 +99,7 @@ Redux guides you towards writing code that is **predictable** and **testable**, 
 
 ## local storage
 
-Let's add local storage to our basic [todo](https://codesandbox.io/s/todo-app-4-6kgxh7?file=/src/todo/TodoApp.jsx:0-6107){.external}
+We could add local storage to our basic [todo](https://codesandbox.io/s/todo-app-4-6kgxh7?file=/src/todo/TodoApp.jsx:0-6107){.external}
 
 The ``todos`` state is **stored in the local storage using the ``localStorage.setItem`` method.**
 

@@ -1,0 +1,116 @@
+---
+title: "Lab#RE04-2: Spring Boot & ReactJS"
+subtitle: ReactJS labs
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: labs
+categories: [reactjs, lab, Lab#RE04]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.labs}
+📘 **React JS Lab#RE04-1: Spring Boot and ReactJS**
+
+In this lab, we will be using Spring Boot server to feed our React `Todo` app through API Rest.
+
+For many reasons described [in the previous article](/reactjs/rjslab4.qmd) the use of a React App with a Spring Boot is a very good option:
+
+- [Spring Boot](/spring/spring-basics.qmd): [Spring Boot](https://spring.io/projects/spring-boot){.external} makes it easy to create **stand-alone, production-grade** Spring based Applications that you can "just run".
+- [React](https://react.dev/){.external}, the library for web and native user interfaces.
+  
+:::
+
+</br>
+
+## user-story and mock-up
+
+![Mock-up Spring Boot and ReactJS todo](/images/reactjs/spring-react.jpg){width="40%"}
+
+## general step-by-step
+
+To create an architecture using Spring Boot, MongoDB, and React for managing a Todo object, you can follow the steps outlined below:
+
+Backend Architecture (Spring Boot and MongoDB):
+
+1. Set up the Spring Boot project:
+   - Create a new Spring Boot project using your preferred IDE or use the Spring Initializr (https://start.spring.io/).
+   - Include the necessary dependencies, such as Spring Web, Spring Data MongoDB, and any additional libraries you might need.
+
+2. Create the Todo model:
+   - Define a Todo class with the required fields (e.g., id, title, description, status, etc.).
+   - Annotate the class with `@Document` to map it to a MongoDB collection.
+   - Use appropriate annotations like `@Id`, `@Field`, etc., to define the mapping of the fields.
+
+3. Create a CRUD repository:
+   - Create an interface that extends `MongoRepository<Todo, String>`.
+   - This repository will provide the basic CRUD operations (create, read, update, delete) for the Todo model.
+   - Customize the repository with additional methods if needed.
+
+4. Create a REST controller:
+   - Create a controller class annotated with `@RestController`.
+   - Inject the Todo repository into the controller using `@Autowired`.
+   - Define REST endpoints using `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`, etc., for CRUD operations.
+   - Implement the necessary request mappings for each operation using the repository methods.
+
+Frontend Architecture (React with Axios and Context):
+
+1. Set up the React project:
+   - Create a new React project using create-react-app or your preferred method.
+   - Set up any additional configurations or dependencies required.
+
+2. Create a data access layer:
+   - Create a file for making HTTP requests using Axios (e.g., api.js).
+   - Define functions for each CRUD operation, making the corresponding API calls to the backend.
+   - Handle responses and errors as needed.
+
+3. Set up a context:
+   - Create a context file (e.g., TodoContext.js) to manage the state and actions related to the Todo object.
+   - Define the necessary context provider component, which will wrap the root component.
+   - Implement state management functions (e.g., addTodo, deleteTodo, updateTodo) within the context provider.
+
+4. Create React components:
+   - Create React components for displaying Todo objects (e.g., TodoList, TodoItem, TodoForm).
+   - Use the context to access and modify the Todo state and perform CRUD operations.
+   - Render the Todo components within your application's layout.
+
+With this architecture in place, your Spring Boot backend will expose RESTful endpoints for CRUD operations on the Todo object, while the React frontend can consume those APIs using Axios for data retrieval, creation, updating, and deletion. The context layer in React will handle state management and provide access to the Todo data throughout the application.
+
+
+## step-by-step code
+
+
+## Versions
+
+Code Version | Commit | Folder-Tree | Screeshoots |
+| -- | -- | -- | -- |
+| todoApp-server 0.1 | ToDo: [todoApp-Server 0.1](){.external} | - | - |
+| todoApp-front 0.1 | ToDo: [todoApp-Front 0.1](){.external} | - | - |
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} React JS: Lab#RE04-1](/reactjs/rjslab4-1.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[React JS: Lab#RE05-1  {{< fa solid arrow-right >}}](/reactjs/rjslab5-1.qmd)
+<br>
+</div>
+<br>
+</div>
