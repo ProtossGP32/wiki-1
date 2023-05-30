@@ -120,15 +120,21 @@ The **context-axios** layer in React will handle state management and provide ac
 
 ## API rest documentation
 
+to-do
+
 ## step-by-step code
 
+to-do
 
 ## Versions
 
 Code Version | Commit | Folder-Tree | Screeshoots |
 | -- | -- | -- | -- |
-| todoApp-server 0.1 | ToDo: [todoApp-Server 0.1](){.external} | - | - |
-| todoApp-front 0.1 | ToDo: [todoApp-Front 0.1](){.external} | - | - |
+| todoApp-server 0.1 | ToDo: Just a refactored draft, only findAll works - [todoApp-Back 0.1](https://github.com/AlbertProfe/CifoJava2023-3/tree/51db9e4c2f06af47ef017ba98ca29906c07f3449/todoapp-back){.external} | - | - |
+| todoApp-front 0.1 |  ToDo: Just a refactored draft, only findAll works - [todoApp-Front 0.1](https://github.com/AlbertProfe/CifoJava2023-3/tree/51db9e4c2f06af47ef017ba98ca29906c07f3449/todoapp-front){.external} | - | - |
+
+
+
 
 <!--- navLinks -->
 <br><br>
