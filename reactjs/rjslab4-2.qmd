@@ -199,7 +199,15 @@ MongoDB will store this kind of object:
 
 ### Backend: Spring Boot todo
 
+First, create and install dependencies (pom.xml) Spring Boot:
+
 ![folder-tree Spring Boot, [IntellIJIdea](/devops/devops-ide-intelljidea.qmd), todo](/images/reactjs/lab-re-4-6.png){width="40%"}
+
+You may read about Spring Boot creation [here](/springboot/boot-what-create-th-h2.qmd)
+
+#### Java classes
+
+Model:
 
 ```{.java .code-overflow-wrap filename="Todo.java"}
 package com.example.myFirstSpring.model;
@@ -229,6 +237,30 @@ public class Todo {
 
 ```
 
+#### `@CrossOrigin`
+
+By default, <mark>web browsers enforce the same-origin policy, which means that a web page can only make requests to the same origin (domain, protocol, and port) from which it was loaded.<mark>
+
+ However, in the case of a React.js app consuming a Spring Boot API running on a different origin (such as `http://localhost:3000` for the React.js development server), the **same-origin** policy would block the **API requests.**
+
+The `@CrossOrigin(origins = "http://localhost:3000")` annotation in the Spring Boot controller allows the API to respond to requests from the specified origin, in this case, `http://localhost:3000`, which is where the React.js app is hosted during development.
+
+This enables the React.js app to successfully consume the API's endpoints and access the necessary data.
+
+```{.java .code-overflow-wrap filename="Todo.java"}
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@CrossOrigin(origins = "http://localhost:3000")
+@Document(collection = "todo")
+public class Todo {
+   //...
+}
+```
+
+`TodoRepository`
+
+
 ```{.java .code-overflow-wrap filename="TodoRepository.java"}
 package com.example.myFirstSpring.repository;
 
@@ -241,6 +273,9 @@ public interface TodoRepository extends MongoRepository<Todo, String> {
     void deleteTodoById(String id);
 }
 ```
+
+`TodoRestController`
+
 
 ```{.java .code-overflow-wrap filename="TodoRestController.java"}
 package com.example.myFirstSpring.restcontroller;
