@@ -126,12 +126,14 @@ This documentation provides an overview of the REST API endpoints implemented us
 
 ![Published docs API Rest](/images/reactjs/lab-re-4-7.png){width="40%"}
 
-Operation | Base URL + Path | Query |JSON | Description |
-| -- | -- | -- | -- |
-| GET | `http://localhost:9898/todo` | `/` | | Retrieves a list of all todo items. |
-| POST | `http://localhost:9898/todo` | `/createTodo` | **body/raw/JSON** | Creates a new todo item. |
-| DELETE | `http://localhost:9898/todo` | `/?id=4` | id as a param | Deletes all todo items. |
-| PUT | `http://localhost:9898/todo` | - | | Updates an existing todo item. |
+Base URL : `http://localhost:9898`
+
+Operation | Path | Query | JSON | Description |
+| -- | -- | -- | -- | -- |
+| GET | `/todo` | `/` |  {`todo items`} | Retrieves a list of all todo items. |
+| POST | `/todo` | `/createTodo` | {`todo item`} **body/raw/JSON** | Creates a new todo item. |
+| DELETE | `/todo` | `/?id=4` | `id` as a **param** | Deletes all todo items. |
+| PUT | `/todo` | - | - | Updates an existing todo item. |
 
 
 
@@ -318,7 +320,9 @@ public class TodoRestController {
 
       if (todoCreated != null) {
          headers.add("statusOperation", "success");
-         return ResponseEntity.accepted().headers(headers).body(todoCreated);
+         return ResponseEntity.accepted()
+            .headers(headers)
+            .body(todoCreated);
       } else {
          headers.add("statusOperation", "not created");
          return ResponseEntity.accepted().body(null);
