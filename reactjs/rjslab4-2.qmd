@@ -120,11 +120,215 @@ The **context-axios** layer in React will handle state management and provide ac
 
 ## API rest documentation
 
-to-do
+This documentation provides an overview of the REST API endpoints implemented using Spring Boot's Rest Controller, which will be consumed by a React JS frontend. The API endpoints allow CRUD (Create, Read, Update, Delete) operations on a "todo" resource.
+
+[Published docs](https://documenter.getpostman.com/view/7473960/2s93mATzRb){.external} by **Postman**.
+
+![Published docs API Rest](/images/reactjs/lab-re-4-7.png){width="40%"}
+
+Operation | Base URL + Path | Query |JSON | Description |
+| -- | -- | -- | -- |
+| GET | `http://localhost:9898/todo` | `/` | | Retrieves a list of all todo items. |
+| POST | `http://localhost:9898/todo` | `/createTodo` | **body/raw/JSON** | Creates a new todo item. |
+| DELETE | `http://localhost:9898/todo` | `/?id=4` | id as a param | Deletes all todo items. |
+| PUT | `http://localhost:9898/todo` | - | | Updates an existing todo item. |
+
+
 
 ## step-by-step code
 
-to-do
+### MongoDB
+
+[To connect a Spring Boot project](/springboot/sblab0-6.qmd) to [MongoDB](/springboot/boot-concepts-data.qmd), you can configure the **connection string** in the `application.properties` file. 
+
+Here's a **short intro and very general** on how to do that:
+
+First, make sure you have added the necessary dependencies for MongoDB in your pom.xml file. Include the following dependencies:
+
+```js
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-mongodb</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.mongodb</groupId>
+    <artifactId>mongo-java-driver</artifactId>
+</dependency>
+```
+
+Next, open the `application.properties` file located in the `src/main/resources` directory of your `Spring Boot` project.
+
+Add the following properties to the file to configure the `MongoDB` **connection**:
+
+```js
+spring.data.mongodb.host=your-mongodb-host
+spring.data.mongodb.port=your-mongodb-port
+spring.data.mongodb.database=your-mongodb-database
+```
+
+
+Replace the placeholders (your-mongodb-host, your-mongodb-port, and your-mongodb-database) with the appropriate values for your MongoDB instance.
+
+Optionally, if your MongoDB server requires authentication, you can add the following properties to the application.properties file:
+
+```js
+spring.data.mongodb.username=your-mongodb-username
+spring.data.mongodb.password=your-mongodb-password
+```
+
+Replace your-mongodb-username and your-mongodb-password with the appropriate credentials for your MongoDB instance.
+
+
+![folder-tree ReactJS todo](/images/reactjs/lab-re-4-5.png){width="80%"}
+
+MongoDB will store this kind of object:
+
+```json
+{
+   "_id":"4",
+   "text":"test rafa 3",   
+   "author":"rafa",
+   "due":{"$date":{"$numberLong":"1685311200000"}},
+   "completed":true,
+   "_class":"com.example.myFirstSpring.model.Todo"}
+```
+
+
+
+### Backend: Spring Boot todo
+
+![folder-tree Spring Boot, [IntellIJIdea](/devops/devops-ide-intelljidea.qmd), todo](/images/reactjs/lab-re-4-6.png){width="40%"}
+
+```{.java .code-overflow-wrap filename="Todo.java"}
+package com.example.myFirstSpring.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.time.LocalDate;
+import org.bson.types.Binary;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Document(collection = "todo")
+public class Todo {
+
+    @Id
+    private String id;
+    private String text;
+    private String author;
+    private LocalDate due;
+    private boolean completed;
+    //private Binary image;
+}
+
+```
+
+```{.java .code-overflow-wrap filename="TodoRepository.java"}
+package com.example.myFirstSpring.repository;
+
+import com.example.myFirstSpring.model.Todo;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import java.util.Optional;
+
+public interface TodoRepository extends MongoRepository<Todo, String> {
+    Optional<Todo> findTodoById(String id);
+    void deleteTodoById(String id);
+}
+```
+
+```{.java .code-overflow-wrap filename="TodoRestController.java"}
+package com.example.myFirstSpring.restcontroller;
+
+import com.example.myFirstSpring.model.Todo;
+import com.example.myFirstSpring.repository.TodoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.HashMap;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/todo")
+public class TodoRestController {
+    //here we are creating our end-point rest API
+    @Autowired
+    TodoRepository todoRepository;
+
+
+    //CRUD: read
+    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping
+    public ResponseEntity<Iterable<Todo>> getAllTodos() {
+        //
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("operation", "findAll");
+        headers.add("version", "api 1.0");
+        headers.add("statusOperation", "success");
+
+        return ResponseEntity.accepted()
+         .headers(headers)
+         .body(todoRepository
+         .findAll());
+    }
+```
+
+```{.java .code-overflow-wrap filename="TodoRestController.java"}
+
+  @DeleteMapping
+   public ResponseEntity<Todo> deleteTodo(@RequestParam String id) {
+      //
+      HttpHeaders headers = new HttpHeaders();
+      headers.add("operation", "deleteBook");
+      headers.add("version", "api 1.0");
+
+      Optional<Todo> todoFound = todoRepository.findTodoById(id);
+      boolean isTodo = todoFound.isPresent();
+      if (isTodo) {
+         //Optional<Book> deletedBook = 
+         //bookservice.deleteBookById(id);
+         todoRepository.deleteTodoById(id);
+         headers.add("operationStatus", "deleted");
+         return ResponseEntity.accepted()
+            .headers(headers)
+            .body(todoFound
+            .get());
+      } else {
+         headers.add("operationStatus", "not found");
+         return ResponseEntity.accepted().body(null);
+      }
+   }
+```
+
+```{.java .code-overflow-wrap filename="TodoRestController.java"}
+
+   @PostMapping(path = "createTodo", consumes = "application/JSON")
+   public ResponseEntity<Todo> addTodo(@RequestBody Todo todo) {
+      //
+      HttpHeaders headers = new HttpHeaders();
+      headers.add("operation", "createTodo");
+      headers.add("version", "api 1.0");
+      headers.add("statusOperation", "success");
+
+      Todo todoCreated = todoRepository.save(todo);
+
+      if (todoCreated != null) {
+         headers.add("statusOperation", "success");
+         return ResponseEntity.accepted().headers(headers).body(todoCreated);
+      } else {
+         headers.add("statusOperation", "not created");
+         return ResponseEntity.accepted().body(null);
+      }
+   }
+```
+
+### FrontEnd: ReactJS todo
+
+![folder-tree ReactJS, [Visual Code](/devops/devops-ide-visualcode.qmd), todo](/images/reactjs/lab-re-4-4.png){width="40%"}
 
 ## Versions
 
