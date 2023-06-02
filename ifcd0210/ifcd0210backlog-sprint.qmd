@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(4) {
+tr:nth-child(5) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -20,8 +20,8 @@ tr:nth-child(4) {
 | -- | -- | -- | -- | -- |
 | #23 | 107 | 29/05 | - Spring Boot Todo & React Todo **Draft** </br> (1) API Rest ``@RestController`` </br> (2) MongoDB </br>  (3) RestJS: Axios & Context ``Data Acces Layer`` | [A's team, Talent Density , Candor, Remove control](https://admiredleadership.com/resource/no-rules-rules-leadership/){.external} </br>![Spring Boot & ReactJS todo](/images/reactjs/spring-react.jpg) |
 |  | 108 | 30/05 |  - Spring Boot Todo & React Todo </br> (1) API Rest ``@RestController`` </br> (2) MongoDB </br>  (3) RestJS: Axios & Context ``Data Acces Layer`` |  [ReactJS](https://react.dev/){.external} </br>  [ReactJS to React: 18 is the turning point](https://www.youtube.com/watch?v=1LkOa7Ky2ak&ab_channel=Academind){.external} </br> </br> [Spring Boot and ReactJS: LAB#RE04-2](/reactjs/rjslab4-2.qmd) </br>|
-|  | 109 | 31/05 | - Spring Boot Todo & React Todo </br> (1) API Rest ``@RestController`` </br> (2) MongoDB </br>  (3) RestJS: Axios & Context ``Data Acces Layer`` </br> - <s>websockets: </br> (1) general approach & domains </br>(2) mock-up </s> </br> | [Spring Boot and ReactJS: LAB#RE04-2](/reactjs/rjslab4-2.qmd) </br> [Published docs API Rest](https://documenter.getpostman.com/view/7473960/2s93mATzRb){.external}  |
-|  | 110 | 01/06 | - websockets: </br> (1) data access layer & context </br>(2) components </br>  | - |
+|  | 109 | 31/05 | - Spring Boot Todo & React Todo </br> (1) API Rest ``@RestController`` </br> (2) MongoDB </br>  (3) RestJS: Axios & Context ``Data Acces Layer`` </br> - <s>websockets: </br> (1) general approach & domains </br>(2) mock-up </s> </br> | [Spring Boot and ReactJS: LAB#RE04-2](/reactjs/rjslab4-2.qmd) </br> [Published docs API Rest](https://documenter.getpostman.com/view/7473960/2s93mATzRb){.external} </br> [System Design bytebytyego.com](https://blog.bytebytego.com/){.external} |
+|  | 110 | 01/06 | - Spring Boot Todo & React Todo </br> (1) API Rest ``@RestController`` </br> (2) MongoDB </br>  (3) RestJS: Axios & Context ``Data Acces Layer`` </br>  - <s>websockets: </br> (1) data access layer & context </br>(2) components </s></br>  | [Spring Boot and ReactJS: LAB#RE04-2](/reactjs/rjslab4-2.qmd) </br> [Published docs API Rest](https://documenter.getpostman.com/view/7473960/2s93mATzRb){.external}  |
 |  | 111 | 02/06 | - Group Project | - |
 : Backlog Sprint#23 May 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
