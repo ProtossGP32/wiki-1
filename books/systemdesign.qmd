@@ -5,7 +5,7 @@ subtitle: "bytebytego.com, 2022, System Design: the big archive"
 date: 5/1/2023
 date-modified: last-modified
 date-format: full
-description: "This book explores how systems can benefit from shocks and uncertainty, and provides insights into how we can design more robust systems and institutions."
+description: ""
 categories: [design]
 subcategories: [system-design, devops]
 format:
@@ -24,21 +24,16 @@ A little background: I’ve been consistently posting on LinkedIn for 7 months n
 
 Here are some sample topics:
 
-🔹 Why is Redis fast?
+- Why is Redis fast?
+- How to scale a website to support millions of users?
+- How does HTTPs work?
+- What happens when you type a URL into your browser?
+- How to avoid double charge?
+- Why is Kafka fast?
+  
 
-🔹 How to scale a website to support millions of users?
 
-🔹 How does HTTPs work?
-
-🔹 What happens when you type a URL into your browser?
-
-🔹 How to avoid double charge?
-
-🔹 Why is Kafka fast?
-
-I hope this PDF can be helpful.
-
-Follow me (Alex Xu) on LinkedIn or Twitter, or subscribe to my newsletter to receive updates: https://bit.ly/3FEGliw
+Follow me (**Alex Xu**) on LinkedIn or Twitter, or subscribe to my newsletter to receive updates: https://bit.ly/3FEGliw
 
 ## Book
 
