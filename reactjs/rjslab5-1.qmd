@@ -49,12 +49,75 @@ In React, you can leverage the power of ``WebSockets`` by using libraries like `
 
 ## Project Architecture
 
+We could use [Spring Boot](https://github.com/AlbertProfe/cifojava2022-5/wiki/Library8-:-Websockets-Spring-Boot-Project-with-JS-Web-Client-SockJS-&-Stomp){.external} as a server for our `MyChat app`, instead we are going to design an `AWS architecture`:
+
 ![General architecture](/images/reactjs/AWS-Lambda-and-DynamoDB-Architecture.png){width="60%"}
 
 ## Websockets
 
+::: {.calout-note}
+`WebSocket` is a computer communications protocol, <mark>providing full-duplex communication channels over a single TCP connection./<mark> The current API specification allowing web applications to use this protocol is known as **WebSockets**.
+
+:::
+
+### Websocket vs. HTTP
+`WebSocket` is distinct from `HTTP`. Both protocols are located at **layer 7 in the OSI model** and depend on `TCP` at layer 4.
+
+Although they are different, the [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API){.external} <mark>is designed to work over HTTP ports 443 and 80 as well as to support HTTP proxies and intermediaries</mark>, thus making it compatible with HTTP. To achieve compatibility, the WebSocket handshake uses the HTTP Upgrade header to change from the HTTP protocol to the WebSocket protocol.
+
+![Websocket vs HTTP](/images/reactjs/ws-http.png){width="40%"}
+
+### Websocket client
+
+#### Instance methods
+
+`WebSocket.close()`: Closes the connection.
+
+`WebSocket.send()`: Enqueues data to be transmitted.
+
+#### Events
+
+Listen to these events using `addEventListener()` or by assigning an event listener to the oneventname property of this interface.
+
+`close`: Fired when a connection with a WebSocket is closed. Also available via the onclose property
+
+`error`: Fired when a connection with a WebSocket has been closed because of an error, such as when some data couldn't be sent. Also available via the onerror property.
+
+`message`: Fired when data is received through a WebSocket. Also available via the onmessage property.
+
+`open`: Fired when a connection with a WebSocket is opened. Also available via the onopen property.
+
+#### Example: Websocket client
+
+```js
+// Creates new WebSocket object with a wss URI as the parameter
+const socket = new WebSocket('wss://game.example.com/ws/updates');
+
+// Fired when a connection with a WebSocket is opened
+socket.onopen = function () {
+  setInterval(function() {
+    if (socket.bufferedAmount == 0)
+      socket.send(getUpdateData());
+  }, 50);
+};
+
+// Fired when data is received through a WebSocket
+socket.onmessage = function(event) {
+  handleUpdateData(event.data);
+};
+
+// Fired when a connection with a WebSocket is closed
+socket.onclose = function(event) {
+  onSocketClose(event);
+};
+
+// Fired when a connection with a WebSocket has been closed because of an error
+socket.onerror = function(event) {
+  onSocketError(event);
+};
 
 
+```
 
 <!--- navLinks -->
 <br><br>
