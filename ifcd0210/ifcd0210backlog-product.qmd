@@ -164,22 +164,21 @@ categories: [ifcd0210, backlog]
 |  | 104 | 24/05 | + useContext to-do CRUD api rest: </br> (1) domains useContext </br> (2) api rest data acces layer  </br> - <s> websockets: </br> (1) general approach & use-story </br> (2) mock-up </s> | [Lab#RE03-4](/reactjs/rjslab3-4.qmd) </br> [What is JavaScript Object Literal?](https://playcode.io/javascript/object-literal){.external}  </br> [codesanbox websocket context AWS](https://codesandbox.io/s/mychat-1-ktru2t?file=/src/chat/SocketProvider.js){.external}  </br>  [MindValley Barcelona](https://www.mindvalley.com/films/barcelona-experiment/invite){.external} |
 |  | 105 | 25/05 | - <s>local.storage</s> </br> - useContext to-do CRUD api rest: </br> (1) domains useContext </br> (2) components </br> + websockets: </br> (1) general approach & domains </br>(2) mock-up </br> |  [Lab#RE03-4](/reactjs/rjslab3-4.qmd) </br>  [Lab#RE04-1](/reactjs/rjslab4.qmd) </br> [Lab#RE05-1](/reactjs/rjslab5-1.qmd) |
 |  | 106 | 26/05 | + useContext to-do CRUD api rest: </br> (1) domains useContext </br> (2) whole app architecture  </br> + SCRUM </br> (1) Beyond SCRUM </br> (2) Beyond SCRUM: Netflix  </br> - <s>Retrospective</s> |  [Lab#RE03-4](/reactjs/rjslab3-4.qmd) </br> [Lab#RE05-1](/reactjs/rjslab5-1.qmd) </br> </br>  [Agile Netflix](https://www.youtube.com/watch?v=sV3B9Zgz_go){.external} - [Beyond](https://www.linkedin.com/posts/mark-lambertz_beyond-scrum-when-talking-to-engineers-activity-6944719050744709120-R82j?trk=public_profile_like_view){.external} - [Netflix agile: 5 lessons](https://smartbear.com/blog/5-lessons-agile-teams-can-learn-from-netflix/){.external} - [Professional sports team: build to win](https://summation.net/2009/07/22/netflix-values-we-are-a-professional-sports-team-not-a-family/){.external} - [No rules rules](https://www.norulesrules.com/){.external} |
-| #23 | 107 | 29/05 | - | - |
-|  | 108 | 30/05 | - | - |
-|  | 109 | 31/05 | - | - |
-|  | 110 | 01/06 | - | - |
-|  | 111 | 02/06 | - | - |
+| **#23** | **107** | **29/05** | + Spring Boot Todo & React Todo **Draft** </br> (1) API Rest ``@RestController`` </br> (2) MongoDB </br>  (3) RestJS: Axios & Context ``Data Acces Layer`` | [A's team, Talent Density , Candor, Remove control](https://admiredleadership.com/resource/no-rules-rules-leadership/){.external} </br>![Spring Boot & ReactJS todo](/images/reactjs/spring-react.jpg) |
+|  | 108 | 30/05 |  + Spring Boot Todo & React Todo </br> (1) API Rest ``@RestController`` </br> (2) MongoDB </br>  (3) RestJS: Axios & Context ``Data Acces Layer`` |  [ReactJS](https://react.dev/){.external} </br>  [ReactJS to React: 18 is the turning point](https://www.youtube.com/watch?v=1LkOa7Ky2ak&ab_channel=Academind){.external} </br> </br> [Spring Boot and ReactJS: LAB#RE04-2](/reactjs/rjslab4-2.qmd) </br>|
+|  | 109 | 31/05 | + Spring Boot Todo & React Todo </br> (1) API Rest ``@RestController`` </br> (2) MongoDB </br>  (3) RestJS: Axios & Context ``Data Acces Layer`` </br> - <s>websockets: </br> (1) general approach & domains </br>(2) mock-up </s> </br> | [Spring Boot and ReactJS: LAB#RE04-2](/reactjs/rjslab4-2.qmd) </br> [Published docs API Rest](https://documenter.getpostman.com/view/7473960/2s93mATzRb){.external} </br> [System Design bytebytyego.com](https://blog.bytebytego.com/){.external} |
+|  | 110 | 01/06 | + Spring Boot Todo & React Todo </br> (1) API Rest ``@RestController`` </br> (2) MongoDB </br>  (3) RestJS: Axios & Context ``Data Acces Layer`` </br>  - <s>websockets: </br> (1) data access layer & context </br>(2) components </s></br>  | [Spring Boot and ReactJS: LAB#RE04-2](/reactjs/rjslab4-2.qmd) </br> [Published docs API Rest](https://documenter.getpostman.com/view/7473960/2s93mATzRb){.external}  |
+|  | 111 | 02/06 | + Group Project | - |
 : Backlog course May 2023 table {tbl-colwidths="[2,2,2,64,30]"}
 
 ## June 2023
 
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #24 | 112 | 06/06 | - | - |
-|  | 113 | 07/06 | - | - |
-|  | 114 | 08/06 | - | - |
-|  | 115 | 09/06 | - | - |
-|  | 116 | 12/06 | - | - |
+| #24 | 112 | 07/06 | - | - |
+|  | 113 | 08/06 | - | - |
+|  | 114 | 09/06 | - | - |
+|  | 115 | 12/06 | - | - |
 : Backlog course June 2023 table {tbl-colwidths="[2,2,2,64,30]"}
 
 ## July 2023

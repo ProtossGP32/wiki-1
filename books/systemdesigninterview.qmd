@@ -5,7 +5,7 @@ subtitle: "Alex Xu, 2022, System Design Interview:  An insider's guide"
 date: 5/1/2023
 date-modified: last-modified
 date-format: full
-description: ""
+description: "System Design Interview"
 categories: [design]
 subcategories: [system-design, devops]
 format:
