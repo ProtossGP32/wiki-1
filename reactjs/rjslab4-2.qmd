@@ -141,6 +141,11 @@ Operation | Query | JSON | Description |
 
 ## step-by-step code
 
+### UML: Spring Boot - ReactJS todo
+
+
+![[UML Spring Boot ReactJS](https://viewer.diagrams.net/?target=blank&highlight=0000ff&edit=_blank&nav=1&title=Copia%20de%20SpringBoot-ReactJS-Todo.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1736H1eQoV8XwtieR0mkLv0yemiLpx0vy%26export%3Ddownload), viewer draw.io by Ruben B.](/images/reactjs/springboot-react-uml.png){width="80%"}
+
 ### MongoDB
 
 [To connect a Spring Boot project](/springboot/sblab0-6.qmd) to [MongoDB](/springboot/boot-concepts-data.qmd), you can configure the **connection string** in the `application.properties` file. 
@@ -199,9 +204,8 @@ MongoDB will store this kind of object:
 
 
 
-### Backend: Spring Boot todo
 
-![[UML Spring Boot ReactJS](https://viewer.diagrams.net/?target=blank&highlight=0000ff&edit=_blank&nav=1&title=Copia%20de%20SpringBoot-ReactJS-Todo.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1736H1eQoV8XwtieR0mkLv0yemiLpx0vy%26export%3Ddownload), viewer draw.io by Ruben B.](/images/reactjs/springboot-react-uml.png){width="80%"}
+### Backend: Spring Boot todo
 
 First, create and install dependencies (pom.xml) `Spring Boot`:
 
