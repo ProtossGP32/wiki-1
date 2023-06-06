@@ -1,7 +1,7 @@
 ---
 title: "System Design"
 author: "albertprofe"
-subtitle: "bytebytego.com, 2022, System Design: the big archive"
+subtitle: "Alex Xu, 2022, System Design: the big archive"
 date: 5/1/2023
 date-modified: last-modified
 date-format: full

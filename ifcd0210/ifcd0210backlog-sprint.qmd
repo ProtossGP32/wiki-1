@@ -18,9 +18,9 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #24 | 112 | 06/06 | - websockets: </br> (1) data access layer & context </br>(2) components </br>   | - |
-|  | 113 | 07/06 | - websockets: </br> (1) data access layer & context </br>(2) components </br> | - |
-|  | 114 | 08/06 | - websockets: </br> (1) data access layer & context </br>(2) components </br> | - |
+| #24 | 112 | 06/06 | - websockets: </br> (1) Architecture: ReactJS - AWS </br>(2) lambda & components </br>  | [MyChat: Architecture](/reactjs/rjslab5-1.qmd) |
+|  | 113 | 07/06 | - websockets: </br> (1) AWS: backend </br>(2) API Gateway </br> | [MyChat: AWS](/reactjs/rjslab5-2.qmd) |
+|  | 114 | 08/06 | - websockets: </br> (1) ReactJS: data access layer & context </br>(2) components </br> | [MyChat: ReactJS](/reactjs/rjslab5-3.qmd) |
 |  | 115 | 09/06 | - Formació Copmplementària | - |
 |  | 116 | 12/06 | - Formació Copmplementària | - |
 : Backlog Sprint#24 June 2023 {tbl-colwidths="[2,2,2,55,39]"}
