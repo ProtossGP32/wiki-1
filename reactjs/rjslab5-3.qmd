@@ -81,7 +81,8 @@ socket.onopen = () => {
 
 socket.onmessage = (event) => {
   console.log("Received message:", event.data);
-  // Update React state or trigger necessary actions based on the received message
+  // Update React state or trigger necessary actions 
+  //based on the received message
 };
 
 socket.onclose = () => {
@@ -142,7 +143,8 @@ const SocketProvider = ({ children }) => {
   const [isReady, setIsReady] = useState(false);
   const [message, setMessage] = useState(null);
 
-  //hook to control websocket persistence over re-renders and component tree
+  //hook to control websocket persistence over
+  // re-renders and component tree
   // to any consumer
   const websocket = useRef(null);
   // aws endpoint
@@ -152,7 +154,8 @@ const SocketProvider = ({ children }) => {
   var domain = ".execute-api.eu-central-1.amazonaws.com/test";
   var endpoint = protocol + word + domain;
 
-  //hook to execute every render () => { function, how many renders we want}
+  //hook to execute every render () => 
+  //{ function, how many renders we want}
   // void > just one render at first
   //[] > every new state
   //[dependency] > depends on functions within dependency
@@ -175,7 +178,8 @@ const SocketProvider = ({ children }) => {
   }, []);
 
   //create  variable JSON with the 3 websocket-states we will use
-  //along the component tree: connection (isReady), get messages from server,
+  //along the component tree: connection (isReady), 
+  //get messages from server,
   //sendind messages : function
   const actionsWebSocket = [
     isReady,
@@ -223,6 +227,23 @@ export default function Chat() {
 
 #### `ChatRoom.jsx`
 
+![ChatRoom component explanation](/images/reactjs/lab-re-5-4.png){width="60%"}
+
+1. Declare function and export
+2. `useContext`: it just like a hook: useContext gets as initial value
+   1. `const [ready, message, send] = useContext(WebsocketContext);`
+3. two `useStates` to control inpus from user: userId and chatId
+   1. `const [chatId, setChatId] = useState("");`
+   2. `const [userId, setUserId] = useState("");`
+4. Parse message JSON-aws (quasi JSON) from server to JSON and string
+5. Calculate boolean `isLogin`: `let isLogin = messageString.length > 4;`
+6. if-else with `isLogin` to print wether the user is logged or not
+7. function **to send login data to server**
+8. Packing `props` to tree-component downstairs
+9. Render
+
+
+
 ```{.js .code-overflow-wrap filename="ChatRoom.jsx"}
 import React from "react";
 import { useContext, useState } from "react";
@@ -237,7 +258,8 @@ export default function ChatRoom() {
   const [chatId, setChatId] = useState("");
   const [userId, setUserId] = useState("");
 
-  //just to parse message JSON-aws (quasi JSON) from server to JSON and string
+  //just to parse message JSON-aws (quasi JSON) 
+  //from server to JSON and string
   let messageToShow = "";
   let messageJSON = JSON.parse(message);
   const messageString = JSON.stringify(message);
@@ -248,7 +270,8 @@ export default function ChatRoom() {
   if (!isLogin) messageToShow = "not logged-in";
   else
     messageToShow =
-      messageJSON.action + " (connectionId: " + messageJSON.connectionId + ")";
+      messageJSON.action + 
+      " (connectionId: " + messageJSON.connectionId + ")";
 
   //functio to send login data to server
   const sendLogin = () => {
@@ -311,6 +334,8 @@ export default function ChatRoom() {
 
 
 #### `Conversation.js`
+
+![Conversation component explanation](/images/reactjs/lab-re-5-5.png){width="60%"}
 
 ```{.js .code-overflow-wrap filename="Conversation.jsx"}
 import React from "react";
@@ -388,7 +413,8 @@ export default function Conversation(props) {
       if (isConverastion) dispatch({ type: "receive", payload: message });
       else dispatch({ type: "login", payload: message });
     }
-    console.log("isConverastion: " + isConverastion + " - message: " + message);
+    console.log("isConverastion: " 
+      + isConverastion + " - message: " + message);
   }, [message]);
 
   let propsConversationLines = {
@@ -421,7 +447,8 @@ export default function Conversation(props) {
           onChange={(e) => setText(e.target.value)}
         />
 
-        <button onClick={() => dispatch({ type: "send", payload: text })}>
+        <button onClick={() => 
+          dispatch({ type: "send", payload: text })}>
           {" "}
           Send
         </button>
