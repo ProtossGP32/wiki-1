@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(1) {
+tr:nth-child(3) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
