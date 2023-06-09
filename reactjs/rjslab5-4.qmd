@@ -1,0 +1,122 @@
+---
+title: "Lab#RE05-4: chat & ws"
+subtitle: ReactJS labs
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: labs
+categories: [reactjs, lab, Lab#RE05]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.labs}
+📘  **React JS Lab#RE05-1: chat & websockets**
+
+In this lab, we will be using:
+
+- the ``react-router-dom``, which is a package with bindings for using React Router in web applications:
+- ``websockets``, provided by **ReactJS** framework and:
+  - useState
+  - useEffect
+  - useContext
+- ``AWS``, **Amanzon Web Services**, architecture as a server-side:
+  - Lambda
+  - DynamoDB
+  - API Gateway
+  - Cloudwatch
+
+:::
+
+</br>
+
+Reference:
+
+- [codesanbox myChat](https://codesandbox.io/s/mychat-1-ktru2t?file=/src/chat/SocketProvider.js:1278-1317){.external}
+- [myChat docs, backend & frontend](https://sites.google.com/view/devopscifo/labs/1-chat-app){.external}
+
+![General architecture](/images/reactjs/AWS-Lambda-and-DynamoDB-Architecture.png){width="60%"}
+
+
+## Backend: websockets
+
+
+JSON websocket example scheme, `login`:
+
+```js
+{
+   "action": "login",
+   "chatId": "DEVOPS",
+   "userId": "albert"
+ 
+}
+```
+
+
+JSON websocket example scheme, `conversation`:
+
+```js
+{
+ "chatId": "DEVOPS",
+ "userId": "ALBET#1666862612315",
+ "connectionid": "aqEgvdwRFiACEYw=",
+ "requesttime": "27/Oct/2022:09:23:31 +0000",
+ "sourceip": "83.247.137.2",
+ "text": "ASDFA",
+ "timestampEpoch": 1666862612315
+}
+```
+
+
+
+### Test backend
+
+
+- Web test websocket: [Websocket King](https://websocketking.com/){.external}
+
+![Test app with websocketking](/images/reactjs/lab-re-5-3.png){width="60%"}
+
+``Websocket King`` is a <mark>web tool used to test the functionality and performance of WebSocket connections<mark>.
+
+With ``Websocket King``, you can **simulate** ``WebSocket`` communication by connecting to the ``WebSocket`` ``endpoint`` of your AWS backend.
+
+It provides an intuitive interface to send and receive ``WebSocket`` messages, monitor the connection status, and analyze the received data. By using ``Websocket King`` to test your AWS backend, you can ensure that the ``WebSocket`` communication is working correctly, validate the message handling, and assess the overall performance and reliability of your backend implementation.
+
+
+![Test app with websocketking: connecting with the endpoint proporcionated by API gateway AWS](/images/reactjs/lab-re-5-11.png){width="60%"}
+
+![Test app with websocketking: connected with the endpoint proporcionated by API gateway AWS](/images/reactjs/lab-re-5-12.png){width="60%"}
+
+![Test app with websocketking: **sending a websocket with a mistake**, sever error](/images/reactjs/lab-re-5-13.png){width="60%"}
+
+![Test app with websocketking:  **sending a websocket**, logged properly](/images/reactjs/lab-re-5-14.png){width="60%"}
+
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[React JS: Lab#RE05-3 {{< fa solid arrow-right >}}](/reactjs/rjslab5-3.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[React JS: Lab#RE05-5 {{< fa solid arrow-right >}}](/reactjs/rjslab5-5.qmd)
+<br>
+</div>
+<br>
+</div>
