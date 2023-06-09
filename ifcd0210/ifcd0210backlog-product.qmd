@@ -175,13 +175,16 @@ categories: [ifcd0210, backlog]
 
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #24 | 112 | 07/06 | - | - |
-|  | 113 | 08/06 | - | - |
-|  | 114 | 09/06 | - | - |
-|  | 115 | 12/06 | - | - |
+| **#24** | **112** | **06/06** | + websockets: </br> (1) Architecture: ReactJS - AWS </br>(2) lambda & components </br>  | [MyChat: Architecture](/reactjs/rjslab5-1.qmd) |
+|  | 113 | 07/06 | + websockets: </br> (1) AWS: backend </br>(2) API Gateway </br> | [MyChat: AWS](/reactjs/rjslab5-2.qmd) |
+|  | 114 | 08/06 | + websockets: </br> (1) ReactJS: data access layer & context </br>(2) components </br> | [MyChat: ReactJS](/reactjs/rjslab5-3.qmd)  </br> ![AWS and ReactJS Draft MyChat](/images/reactjs/react-aws-draft.jpg)|
+|  | 115 | 09/06 | + Formació Copmplementària | - |
+|  | 116 | 12/06 | + Formació Copmplementària | - |
 : Backlog course June 2023 table {tbl-colwidths="[2,2,2,64,30]"}
 
 ## July 2023
+
+Finishing `Pràctiques`
 
 :::
 
