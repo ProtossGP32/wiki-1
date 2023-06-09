@@ -436,6 +436,7 @@ website:
             - learning/learning-how-writing.qmd
             - learning/learning-how-take-notes.qmd
             - learning/learning-how-write-comments.qmd
+            - learning/learning-how-document.qmd
             - learning/learning-how-auto-evaluate.qmd
         - text: "---"
         - section: "Books & Articles"
