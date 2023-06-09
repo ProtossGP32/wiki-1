@@ -180,7 +180,7 @@ Connecting to wss://xxxxxx.execute-api.eu-central-1.amazonaws.com/test
 
 ```js
 11:24 21.27
-Disconnected from wss://4rytv4evb2.execute-api.eu-central-1.amazonaws.com/test
+Disconnected from wss://xxxxx.execute-api.eu-central-1.amazonaws.com/test
 11:14 21.32
 {
   "action": "conversation",
@@ -228,7 +228,7 @@ Connecting to wss://xxxxxxx.execute-api.eu-central-1.amazonaws.com/test
 
 ```js
 11:24 21.34
-Disconnected from wss://4rytv4evb2.execute-api.eu-central-1.amazonaws.com/test
+Disconnected from wss://xxxxx.execute-api.eu-central-1.amazonaws.com/test
 11:14 21.36
 "sent at 09/Jun/2023:09:14:19 +0000"
 11:14 19.25
