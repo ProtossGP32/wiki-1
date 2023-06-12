@@ -1,5 +1,5 @@
 ---
-title: "Lab#RE05-4: chat & ws"
+title: "Lab#RE05-4: chat: test ws AWS"
 subtitle: ReactJS labs
 author: albertprofe
 date: "06/01/2021"
@@ -14,7 +14,7 @@ format:
 ---
 
 ::: {.labs}
-📘  **React JS Lab#RE05-1: chat & websockets**
+📘  **React JS Lab#RE05-4: chat & websockets**
 
 In this lab, we will be using:
 

@@ -14,7 +14,7 @@ format:
 ---
 
 ::: {.labs}
-📘  **React JS Lab#RE05-3: chat & websockets**
+📘  **React JS Lab#RE05-3: chat & AWS**
 
 In this lab, we will be using:
 
@@ -98,6 +98,7 @@ JSON websocket example scheme:
 
 ```js
 {
+ "action": "conversation",
  "chatId": "DEVOPS",
  "userId": "ALBET#1666862612315",
  "connectionid": "aqEgvdwRFiACEYw=",
@@ -115,6 +116,11 @@ AWS DynamoDB is a fully managed, serverless, key-value NoSQL database designed t
 
 
 [DynamoDB](https://sites.google.com/view/devopscifo/labs/1-chat-app/aws-chat-back/dynamodb){.external}
+
+## AWS IAM Permissions & Billing Console
+
+[IAM Permissions & Billing Console](https://sites.google.com/view/devopscifo/labs/1-chat-app/aws-chat-back#h.1b44t74yhmjf){.external}
+
 
 <!--- navLinks -->
 <br><br>

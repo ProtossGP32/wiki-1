@@ -148,7 +148,7 @@ socket.onerror = function(event) {
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} React JS: Lab#RE04-1](/reactjs/rjslab4.qmd)
+[{{< fa solid arrow-left >}} React JS: Lab#RE04-2](/reactjs/rjslab4-2.qmd)
 <br>
 </div>
 <br>

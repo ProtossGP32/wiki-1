@@ -14,7 +14,7 @@ format:
 ---
 
 ::: {.labs}
-📘  **React JS Lab#RE05-1: chat & websockets**
+📘  **React JS Lab#RE05-2: chatchat backend AWS**
 
 In this lab, we will be using:
 
