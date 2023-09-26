@@ -1,0 +1,47 @@
+---
+title: "IFCT034PO Docs"
+categories: [ifct034po, training] 
+---
+
+## Objectius
+- Dissenyar i implementar arquitectures JAVA.
+
+## Presentació
+
+[Presentation IFCT03PO October 2023](https://cloud.albertprofe.dev/index.php/s/iHjKXL9WP8DoCSY)
+
+## Entorn professional i ocupacions
+El programador s'encarrega de **crear**, escriure, verificar i mantenir programari informàtic. També resol errors, elabora la documentació tècnica i els manuals, i ajuda als usuaris.
+
+El professional desenvolupa la seva activitat per compte propi, en empreses de serveis, altres empreses o entitats de qualsevol mida a l'àrea de desenvolupament.
+
+**Ocupacions**: Programadors informàtics, dissenyadors de pàgines web, analistes i dissenyadors de software i multimèdia no classificats i analistes-programadors web i multimèdia Tecnologies: Java, bases de dades, SQL, proves unitàries i desplegament d’aplicacions
+
+## Calendar 2023 Java IFCT034PO
+
+![Calendar IFCT034PO](/images/ifct034po/calendar2.png)
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Articles cards](/learning/learning-listing-card-articles.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[IFCD0210 Official Docs  {{< fa solid arrow-right >}}](/ifcd0210/ifcd0210.qmd)
+<br>
+</div>
+<br>
+</div>

@@ -33,7 +33,7 @@ intranet i extranet.
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Articles cards](/learning/learning-listing-card-articles.qmd)
+[{{< fa solid arrow-left >}} IFCT034PO Docs ](/ifct034po/ifct034po.qmd)
 <br>
 </div>
 <br>
@@ -45,7 +45,7 @@ intranet i extranet.
 <br>
 <div class='column right next'>
 <br>
-[IFCD0210 Init Mail  {{< fa solid arrow-right >}}](/ifcd0210/ifcd0210initemail.qmd)
+[IFCD0210 Initial mail {{< fa solid arrow-right >}}](/ifcd0210/ifcd0210initemail.qmd)
 <br>
 </div>
 <br>

@@ -58,7 +58,7 @@ website:
       - sidebar:reactjs
       - sidebar:scrum
       - sidebar:learning
-      - sidebar:ifcd
+      - sidebar:training
       - sidebar:about
 
   sidebar:
@@ -449,11 +449,14 @@ website:
             - learning/learning-listing-table-articles.qmd
             - learning/learning-listing-card-articles.qmd
             
-    - id: "ifcd"
-      title: "IFCD0210"
+    - id: "training"
+      title: "Training"
       contents:
-        - text: "WebApp IFCD0210"
+        - text: "Training Courses"
         - text: "---"
+        - section: "IFCT034PO Docs"
+          contents:
+            - ifct034po/ifct034po.qmd
         - section: "IFCD0210 Docs"
           contents:
             - ifcd0210/ifcd0210.qmd
