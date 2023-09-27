@@ -1,0 +1,58 @@
+---
+title: "IFCT034PO Sprint Backlog"
+categories: [ifct034po, backlog]
+---
+
+<style>
+tr:nth-child(1) {
+  background-color: #b2b2b2!important;
+  color: #f4f4f4!important;
+}
+</style>
+
+
+![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
+
+## ``Sprint#1`` (October)
+
+::: {.column-page-right}
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+| #1 | 1 | 03/10/2023 | - Introduction to course IFCT034PO</br> - Setting of all tools we are going to need** | - |
+|  | 2 | 04/10/2023 | - Quarto create and Publish in GitHub</br> - Create VM and IDEs - Accounts - MOOC | - |
+|  | 3 | 05/10/2023 | - Linux VM VirtualBox over Windows</br> - What is a Dependency Management, Maven | - |
+|  | 4 | 06/10/2023 | - Quarto create and Publish in GitHub with adavnced tools | - |
+: Backlog course December 2022 table {tbl-colwidths="[2,2,2,60,34]"}
+:::
+
+::: {.callout-note}
+- `-` topic planned or pending
+- `+` topic done in class
+- `++` new topic not planned
+:::
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} IFCT034PO Docs](/ifct034po/ifct034po.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[IFCT034PO Product Backlog  {{< fa solid arrow-right >}}](/ifct034po/ifct034pobacklog-product.qmd)
+<br>
+</div>
+<br>
+</div>
