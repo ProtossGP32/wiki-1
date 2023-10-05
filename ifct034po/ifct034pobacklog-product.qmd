@@ -19,7 +19,7 @@ categories: [ifct034po, backlog]
 
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #1 | 1 | 03/10/2023 | - Introduction to course IFCT034PO</br> - Setting of all tools we are going to need** | - |
+| #1 | 1 | 03/10/2023 | - Introduction to course IFCT034PO</br> - Setting of all tools we are going to need | - |
 |  | 2 | 04/10/2023 | - Quarto create and Publish in GitHub</br> - Create VM and IDEs - Accounts - MOOC | - |
 |  | 3 | 05/10/2023 | - Linux VM VirtualBox over Windows</br> - What is a Dependency Management, Maven | - |
 |  | 4 | 06/10/2023 | - Quarto create and Publish in GitHub with adavnced tools | - |

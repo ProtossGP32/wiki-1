@@ -16,7 +16,7 @@ categories: [ifct034po, training]
 
 - [Presentation IFCT03PO October 2023](https://cloud.albertprofe.dev/index.php/s/iHjKXL9WP8DoCSY){.external}
 - [Fitxa del curs](https://cloud.albertprofe.dev/index.php/s/DHzAEr5NbWCD5fL){.external}
-- [Formulari alta alumne](https://cloud.albertprofe.dev/index.php/s/iHjKXL9WP8DoCSY){.external}
+- [Formulari alta alumne](https://cloud.albertprofe.dev/index.php/apps/forms/s/xBFqg5iwp4rrAK7FKfPs6cCj){.external}
 
 ## Continguts
 
