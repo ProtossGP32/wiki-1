@@ -88,7 +88,7 @@ sudo apt install ./code_1.74.1-1671015296_amd64.deb
 
 1. ```sudo apt-get install openjdk-11-jdk```
 2. ```sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup```
-3. ```sudo apt update```
+3. ```sudo apt update``` (previous upgrade)
 4. ```sudo apt install snapd```
 5. **log out** and then **log in**
 6. ```snap install hello-world```
