@@ -80,6 +80,31 @@ sudo apt install ./code_1.74.1-1671015296_amd64.deb
 **[Timeshift](https://community.linuxmint.com/software/view/timeshift) is a system restore utility which takes snapshots of the system at regular intervals**. These snapshots can be restored at a later date to undo system changes. Creates incremental snapshots using rsync or BTRFS snapshots using BTRFS tools.
 
 ![Timeshift](https://community.linuxmint.com/img/screenshots/timeshift.png){width=60%}
+
+
+## TMCBeans MOOC Helsinki Java 2023
+
+
+
+1. ```sudo apt-get install openjdk-11-jdk```
+2. ```sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup```
+3. ```sudo apt update```
+4. ```sudo apt install snapd```
+5. **log out** and then **log in**
+6. ```snap install hello-world```
+  
+    hello-world 6.4 from Canonical✓ installed
+7. ```hello-world```
+  
+    Hello World!
+8. ```sudo snap install --classic tmcbeans```
+
+References:
+
+- [Install snapd on Linux Mint 2023 ](https://snapcraft.io/docs/installing-snap-on-linux-mint){.external}
+- [TMCBeans Helsinki Linux](https://www.mooc.fi/en/installation/netbeans/){.external}
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>
