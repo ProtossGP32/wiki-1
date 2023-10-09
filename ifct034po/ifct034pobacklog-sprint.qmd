@@ -18,7 +18,7 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #2 | 5 | 09/10/2023 | - Sprint Boot Thymeleaf MVC </br>  - MV | - [Spring Boot Thymeleaf](https://albertprofe.dev/springboot/boot-what-create-th-h2.html) |
+| #2 | 5 | 09/10/2023 | - Sprint Boot Thymeleaf MVC </br>  - MV: just Model and View </br> - DDD: Domain-Driven Design</br> - Why DDD is so important | - [Spring Boot Thymeleaf](https://albertprofe.dev/springboot/boot-what-create-th-h2.html) </br> - [DDD and coupling](https://albertprofe.dev/javase/se-concepts-coupling.html) </br> - [anti-domain-driven design](https://www.flickr.com/photos/belleville/59241228/){.external} </br> - [What is a car](https://www.youtube.com/watch?v=SfeUHYwrM0g){.external} </br> - [Spring Boot Request-Response Cycle](https://albertprofe.dev/springboot/boot-what-cycle.html)|
 |  | 6 | 10/10/2023 | - Sprint Boot Thymeleaf MVC </br>  | - [Thymeleaf](https://albertprofe.dev/springboot/boot-concepts-th.html)|
 |  | 7 | 11/10/2023  | - Sprint Boot Thymeleaf MVC </br>  |  - [View](https://albertprofe.dev/springboot/boot-concepts-view.html) |
 : Backlog course December 2022 table {tbl-colwidths="[2,2,2,60,34]"}
