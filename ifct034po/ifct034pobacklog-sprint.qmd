@@ -4,7 +4,7 @@ categories: [ifct034po, backlog]
 ---
 
 <style>
-tr:nth-child(1) {
+tr:nth-child(2) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -13,14 +13,14 @@ tr:nth-child(1) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
-## ``Sprint#2`` (October)
+## ``Sprint#2: Thymeleaf`` (October)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
 | #2 | 5 | 09/10/2023 | - Sprint Boot Thymeleaf MVC </br>  - MV: just Model and View </br> - DDD: Domain-Driven Design</br> - Why DDD is so important | - [Spring Boot Thymeleaf](https://albertprofe.dev/springboot/boot-what-create-th-h2.html) </br> - [DDD and coupling](https://albertprofe.dev/javase/se-concepts-coupling.html) </br> - [anti-domain-driven design](https://www.flickr.com/photos/belleville/59241228/){.external} </br> - [What is a car](https://www.youtube.com/watch?v=SfeUHYwrM0g){.external} </br> - [Spring Boot Request-Response Cycle](https://albertprofe.dev/springboot/boot-what-cycle.html)|
-|  | 6 | 10/10/2023 | - Sprint Boot Thymeleaf MVC </br>  | - [Thymeleaf](https://albertprofe.dev/springboot/boot-concepts-th.html)|
-|  | 7 | 11/10/2023  | - Sprint Boot Thymeleaf MVC </br>  |  - [View](https://albertprofe.dev/springboot/boot-concepts-view.html) |
+|  | 6 | 10/10/2023 | -  use-story > use-case (DDD) + functional-diagram (UML) > pseudo-code > code </br> - Sprint Boot Thymeleaf MVC </br>  - Code: controllerView, Thymeleaf tags: **th:atribute="...."** | - [View](https://albertprofe.dev/springboot/boot-concepts-view.html)  </br> - [Thymeleaf](https://albertprofe.dev/springboot/boot-concepts-th.html) </br> - [Code Github controllerView](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external} </br> - [Thymeleaf](https://www.thymeleaf.org/){.external}  |
+|  | 7 | 11/10/2023  | - Sprint Boot Thymeleaf MVC </br>  |  -[View](https://albertprofe.dev/springboot/boot-concepts-view.html)  </br> - [Thymeleaf](https://albertprofe.dev/springboot/boot-concepts-th.html) </br> - [Code Github controllerView](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external}|
 : Backlog course December 2022 table {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
