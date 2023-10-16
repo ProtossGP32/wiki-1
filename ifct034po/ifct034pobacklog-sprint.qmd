@@ -4,7 +4,7 @@ categories: [ifct034po, backlog]
 ---
 
 <style>
-tr:nth-child(3) {
+tr:nth-child(1) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -13,15 +13,17 @@ tr:nth-child(3) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
-## ``Sprint#2: Thymeleaf`` (October)
+## ``Sprint#3: Thymeleaf & API Rest`` (October)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #2 | 5 | 09/10/2023 | - Sprint Boot Thymeleaf MVC </br>  - MV: just Model and View </br> - DDD: Domain-Driven Design</br> - Why DDD is so important | - [Spring Boot Thymeleaf](https://albertprofe.dev/springboot/boot-what-create-th-h2.html) </br> - [DDD and coupling](https://albertprofe.dev/javase/se-concepts-coupling.html) </br> - [anti-domain-driven design](https://www.flickr.com/photos/belleville/59241228/){.external} </br> - [What is a car](https://www.youtube.com/watch?v=SfeUHYwrM0g){.external} </br> - [Spring Boot Request-Response Cycle](https://albertprofe.dev/springboot/boot-what-cycle.html)|
-|  | 6 | 10/10/2023 | -  use-story > use-case (DDD) + functional-diagram (UML) > pseudo-code > code </br> - Sprint Boot Thymeleaf MVC </br>  - Code: controllerView, Thymeleaf tags: **th:attribute="...."** | - [View](https://albertprofe.dev/springboot/boot-concepts-view.html)  </br> - [Thymeleaf](https://albertprofe.dev/springboot/boot-concepts-th.html) </br> - [Code Github controllerView](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external} </br> - [Thymeleaf](https://www.thymeleaf.org/){.external} </br> -  [DemoJavaboot](https://github.com/AlbertProfe/demoJavaBoot){.external} |
-|  | 7 | 11/10/2023  | - Sprint Boot Thymeleaf MVC **Review** </br> - <S>Tag TH: text, link, each </s> </br> - OOP: Person, attributes, constructor, methods, **new** object  </br>  - Microservices vs. Monolitic  </br>  - Spring Boot networking APIs: Rest, SOAP (WSDL), WebSocket, Server-side render TH |   - [View](https://albertprofe.dev/springboot/boot-concepts-view.html)  </br> - [Thymeleaf](https://albertprofe.dev/springboot/boot-concepts-th.html) </br> - [Code Github controllerView](https://github.com/AlbertProfe/CifoJava2023/tree/master/controllerView){.external} </br> - [Java MOOC Object](https://java-programming.mooc.fi/part-4/2-objects-in-a-list){.external}  </br> - [Oracle Java Basic 7h](https://learn.oracle.com/ols/learning-path/java-explorer/88323/79726){.external}|
-: Backlog course December 2022 table {tbl-colwidths="[2,2,2,60,34]"}
+| #3 | 8 | 16/10/2023 | - Thymeleaf </br> - Tags attributes TH: text, link, each </br> Spring Boot create **fake** @Service </br> - Git and Github  |  |
+|  | 9 | 17/10/2023 | - Java SE UML and debugger  </br> - Git and Github: VisualCode Git tool  |  |
+|  | 10 | 18/10/2023 | - API Rest Introduction: @RestController  </br> - Postman:intall, create account and docs  |  |
+|  | 11 | 19/10/2023 | - Thymeleaf CRUD: create, resad, delete  </br> - Fake data, **JavaFaker** at @Service |  |
+|  | 12 | 20/10/2023 | - Thymeleaf CRUD: update |  |
+: Backlog course October 2023 table {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
 ::: {.callout-note}
