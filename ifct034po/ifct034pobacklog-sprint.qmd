@@ -18,7 +18,7 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #3 | 8 | 16/10/2023 | - Thymeleaf </br> - Tags attributes TH: text, link, each </br> - Spring Boot create **fake** @Service </br> - Git and Github  |  |
+| #3 | 8 | 16/10/2023 | - Thymeleaf </br> - Tags attributes TH: text, link, each </br> - Spring Boot create **fake** @Service </br> - Git and Github  </br> - Immutability |  |
 |  | 9 | 17/10/2023 | - Java SE UML and debugger  </br> - Git and Github: VisualCode Git tool  |  |
 |  | 10 | 18/10/2023 | - API Rest Introduction: @RestController  </br> - Postman:intall, create account and docs  |  |
 |  | 11 | 19/10/2023 | - Thymeleaf CRUD: create, resad, delete  </br> - Fake data, **JavaFaker** at @Service |  |
