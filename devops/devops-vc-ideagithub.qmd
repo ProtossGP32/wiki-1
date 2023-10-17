@@ -19,7 +19,29 @@ format:
 
 ## Overview: how to connect local IntelJIdea with remote repository on GitHub
 
+## Set up tools
 
+
+to-do
+
+- GitHub account
+- Install IntellJIdea local
+- Install git local
+- Permssion IntellJIdea to write GitHub
+- CLI gh
+  
+
+## Create local/remote repos and first commit/push
+
+
+
+to-do
+
+
+## Second commit/push and beyond
+
+
+to-dp
 
 
 <!--- navLinks -->
