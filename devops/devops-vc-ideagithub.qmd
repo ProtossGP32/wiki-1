@@ -1,0 +1,47 @@
+---
+title: "Idea and GitHub 2023"
+subtitle: Software code version control
+author: albertprofe
+date: "10/16/2023"
+date-modified: last-modified
+date-format: full
+description: GitHub is a software development platform in the cloud. It's used for storing, tracking, and collaborating on software projects.
+categories: [devops, github]
+toc: true
+number-sections: true
+highlight-style: pygments
+format:
+  html
+---
+
+
+
+
+## Overview: how to connect local IntelJIdea with remote repository on GitHub
+
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} GitHub](/devops/devops-vc-github.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[IDE: Visual Code  {{< fa solid arrow-right >}}](/devops/devops-ide-visualcode.qmd)
+<br>
+</div>
+<br>
+</div>

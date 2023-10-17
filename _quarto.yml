@@ -126,6 +126,7 @@ website:
           contents: 
             - devops/devops-vc-git.qmd
             - devops/devops-vc-github.qmd
+            - devops/devops-vc-ideagithub.qmd
         - text: "---" 
         - section: "IDEs"
           contents: 

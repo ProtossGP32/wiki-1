@@ -51,6 +51,21 @@ Git also supports binary assets such as pictures, but those formats don’t supp
 
 [more info on ](https://sites.google.com/view/devopscifo/git)
 
+## git is immutable
+
+![In short, immutable means: unchanging over time or unable to change](/images/devops/dictionary-immutable.png)
+
+> **Immutable object**
+> In object-oriented and functional programming, an immutable object is an object whose state cannot be modified after it is created. This is in contrast to a mutable object, which can be modified after it is created (from [Wikipedia](https://en.wikipedia.org/wiki/Immutable_object?ref=blog.git-init.com)).
+
+![Commits can never be tampered with or modified once they are created!](/images/devops/commit-snapshots.001.jpeg)
+
+So, what does immutable snapshots refer to? In Git, **all commits are immutable snapshots of your project (ignored files excluded) at a specific point in time**.
+
+This means that each and <mark>every commit contains a unique representation of your entire project, not just the modified or added files (deltas)</mark>, at the time the commit was created. Apart from the actual files, each commit is also infused with relevant metadata; all of which is immutable!
+
+check oot this article for more [info](https://blog.git-init.com/immutable-snapshot-in-git/) about immutability
+
 ## Install git linux
 
 **Debian / Ubuntu / Mint ``apt-get``**
