@@ -19,10 +19,14 @@ format:
 
 ## Overview: how to connect local IntelJIdea with remote repository on GitHub
 
+In the fast-paced world of software development, <mark>collaborating with remote teams and utilizing version control systems like GitHub has become an indispensable part of the process of software devolopment</mark>.
+
+> Connecting your local IntelliJ IDEA, a popular integrated development environment (IDE), with a remote repository on GitHub is a fundamental skill for developers looking to streamline their workflow and contribute to open-source projects or work with distributed teams.
+
+
+
 ## Set up tools
 
-
-to-do
 
 - GitHub account
 - Install IntellJIdea local
@@ -33,15 +37,126 @@ to-do
 
 ## Create local/remote repos and first commit/push
 
+Open Idea IDE and an empty project
+
+![](/images/devops/ghIdea-1.png)
+
+Create a new file
+
+![](/images/devops/ghIdea-2.png)
+
+File created
+
+![](/images/devops/ghIdea-3.png)
+
+Create a local repository with the visual tool Idea git
+
+![](/images/devops/ghIdea-4.png)
 
 
-to-do
+A **local repository created by the visual tool "Idea git" (or IntelliJ IDEA's built-in Git integration) refers to a version control system repository that exists on your local development machine within the IntelliJ IDEA IDE**.
+
+It is a <mark>dedicated space where you can store and manage your project's source code</mark>, track changes, and work on your codebase while benefiting from Git's version control capabilities.
+
+Here are some key features and attributes of a local repository created by the Idea Git tool:
+
+- **Version Control**: The local repository allows you to track changes made to your project's source code over time. You can create commits to record modifications, revert to previous states, and manage your project's history effectively.
+
+- **Isolation**: It's a self-contained workspace where you can work on your project independently without affecting the code in the remote repository or the work of other collaborators.
+
+- **Branching**: Local repositories support the creation and management of branches. You can develop new features or fix issues in separate branches without altering the main codebase.
+
+- **Commit History**: Idea Git provides a visual representation of your commit history, making it easy to see the changes made to your project and who made them. This is crucial for tracking progress and debugging.
+
+- **Conflict Resolution**: If you're collaborating with others, you can resolve merge conflicts within the local repository before pushing changes to the remote repository. Idea Git offers tools to help with conflict resolution.
+
+- **Offline Work**: You can continue working on your project and making commits even when you don't have an internet connection. Once you're online, you can synchronize your local repository with the remote one.
+
+- **Security and Backup**: Your code is stored securely on your local machine. You can back it up independently from the remote repository, ensuring data safety.
+
+In summary, a local repository created by the visual tool Idea Git in IntelliJ IDEA serves as a critical component in the Git workflow. It allows you to manage your codebase efficiently, experiment with new features, and collaborate with a level of control and isolation that is essential for software development. When you're satisfied with your changes and ready to share them with others, you can then push your commits to the remote repository on platforms like GitHub, GitLab, or Bitbucket.
+
+Local repository created
+
+![](/images/devops/ghIdea-5.png)
+
+Create a remote repository on GitHub
+
+![](/images/devops/ghIdea-6.png)
+
+Make it public and save the **URL https**
+
+![](/images/devops/ghIdea-7.png)
+
+URL new remote repository on GitHub created:
+
+-https://github.com/AlbertProfe/gitIdea.git
+
+![](/images/devops/ghIdea-8.png)
+
+Be careful with **unversioned files**, all this information is in the **Idea Commit Tool.**
+
+![](/images/devops/ghIdea-10.png)
+
+**Changes files** are not the same as **unversioned files**
+
+![](/images/devops/ghIdea-14.png)
+
+Write down the text for the first commit and the tool will ask you for a <mark>remote repository, created before!</mark>
+
+> A "commit"
+> in Git is like taking a snapshot of your code at a specific point in time. It records the changes you've made to your code, along with a message describing what those changes are. Each commit represents a discrete set of changes and creates a new point in your project's history. Committing is a way to save your work and create a clear, organized timeline of your project's development.
+
+![](/images/devops/ghIdea-11.png)
+
+Write dwon (or copy-paste) the remote repository url
+
+![](/images/devops/ghIdea-12.png)
+
+
+Now you can **push** the commit to remote repository.
+
+![](/images/devops/ghIdea-13.png)
+
+Overall screen a all controls
+
+![](/images/devops/ghIdea-15.png)
+
+Commit **pushed** to **remote repository**
+
+![](/images/devops/ghIdea-16.png)
+
+Let's chechk on github if the commit is threre:
+
+![](/images/devops/ghIdea-17.png)
+
 
 
 ## Second commit/push and beyond
 
+Write second commit
 
-to-dp
+![](/images/devops/ghIdea-18.png)
+
+Select the changes
+
+![](/images/devops/ghIdea-19.png)
+
+Commit and push
+
+![](/images/devops/ghIdea-20.png)
+
+Pushed
+
+![](/images/devops/ghIdea-21.png)
+
+Check out the commit on github
+
+![](/images/devops/ghIdea-22.png)
+
+Watch out the two commits
+
+![](/images/devops/ghIdea-23.png)
 
 
 <!--- navLinks -->
