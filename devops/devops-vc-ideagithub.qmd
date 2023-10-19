@@ -28,11 +28,11 @@ In the fast-paced world of software development, <mark>collaborating with remote
 ## Set up tools
 
 
-- GitHub account
-- Install IntellJIdea local
-- Install git local
-- Permssion IntellJIdea to write GitHub
-- CLI gh
+- GitHub [account](https://github.com/)
+- Install [IntellJIdea](/devops/devops-ide-intelljidea.qmd) local
+- Install [git](/devops/devops-vc-git.qmd)local
+- [Permssion](/devops/devops-vc-github.qmd) IntellJIdea to write GitHub
+- CLI [gh](https://cli.github.com/)
   
 
 ## Create local/remote repos and first commit/push
