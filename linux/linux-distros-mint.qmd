@@ -85,7 +85,6 @@ sudo apt install ./code_1.74.1-1671015296_amd64.deb
 ## TMCBeans MOOC Helsinki Java 2023
 
 
-
 1. You can install OpenJDK with the following terminal command (works for Ubuntu):
    
   ``` js
@@ -143,7 +142,13 @@ sudo apt install ./code_1.74.1-1671015296_amd64.deb
   ```
   
 
+## simplescreenrecorder
 
+- [simplescreenrecorder](https://community.linuxmint.com/software/view/simplescreenrecorder){.external}
+
+## curl
+
+- [curl](https://community.linuxmint.com/software/view/curl){.external}
 
 References:
 
