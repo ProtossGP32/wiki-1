@@ -177,7 +177,7 @@ Watch out the two commits
 <br>
 <div class='column right next'>
 <br>
-[IDE: Visual Code  {{< fa solid arrow-right >}}](/devops/devops-ide-visualcode.qmd)
+[Git-gh CLI  {{< fa solid arrow-right >}}](/devops/devops-ide-gitgh.qmd)
 <br>
 </div>
 <br>
