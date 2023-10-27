@@ -21,14 +21,24 @@ format:
 
 In the fast-paced world of software development, <mark>collaborating with remote teams and utilizing version control systems like GitHub has become an indispensable part of the process of software devolopment</mark>.
 
+Working with a remote repository and daily commits via CLI is vital in modern software development. It fosters collaboration, streamlines version control, and encourages best practices.
 
+1. **Collaboration**: Remote repos enable seamless teamwork by providing a shared codebase.
+2. **Version Control**: Daily commits maintain a clear history, aiding debugging and change tracking.
+3. **Backup**: The remote repo serves as a backup, safeguarding your work.
+4. **Code Quality**: Regular commits promote modular, well-documented code and best practices.
+5. **CI/CD**: Automated testing and deployment are triggered by code commits.
+6. **Remote Work**: Facilitates remote work and flexible development.
+7. **Documentation**: Commit messages document changes and aid in understanding code history.
+8. **Code Review**: Daily commits simplify code reviews and collaboration.
+9. **Learning**: A consistent opportunity for learning and growth through commit history analysis.
 
 
 ## Set up tools
 
 
 - GitHub [account](https://github.com/)
-- Install [git](/devops/devops-vc-git.qmd)local
+- Install [git](/devops/devops-vc-git.qmd) local
 - [Permssion](/devops/devops-vc-github.qmd) to write GitHub
 - CLI [gh](https://cli.github.com/)
   
@@ -37,40 +47,56 @@ In the fast-paced world of software development, <mark>collaborating with remote
 
 In these six steps, you're setting up and pushing a project to a remote GitHub repository.
 
-- Firstly, you initialize a local Git repository with git init, creating a version control system.
-- Then, you stage all changes with git add --all, preparing them for commit.
-- In step 3, you use the GitHub CLI to create a new public repository on GitHub.
-- Step 4 involves committing your changes with git commit --all, accompanied by a commit message.
-- In step 5, you set up a connection to the remote repository using git remote add origin.
-- Finally, you push your local changes to GitHub with git push origin master, effectively syncing your local and remote repositories.
+- **Firstly**, you initialize a local Git repository with **git init**, creating a version control system.
+- Then, you stage all changes with **git add --all**, preparing them for commit.
+- In step 3, you use the <mark>GitHub CLI to create a new public repository on GitHub.</mark>
+- Step 4 involves committing your changes with **git commit --all**, accompanied by a commit message.
+- In step 5, you set up a connection to the remote repository using **git remote add origin**.
+- **Finally**, you **push** your local changes to GitHub with git push origin master, effectively **syncing** your local and remote repositories.
 
-### Step1
+### Step1: Initialization
 
 ```js
 albert@albert-virtual-machine:~/Desktop/git$ git init
 Initialized empty Git repository in /home/albert/Desktop/git/.git/
 ```
 
-In this initial step, you're initializing a new Git repository on your local machine. The command git init is used to create an empty Git repository. After executing this command, Git responds with a message indicating that it has successfully initialized an empty repository in the specified directory, which in this case is /home/albert/Desktop/git/.git/. This means you've set up a local Git repository on your computer where you can start tracking and versioning your project.
+In this initial step, you're initializing a new Git repository on your **local machine**.
 
-### Step2
+![Initializing a new Git repository](/images/devops/gitgh1.png)
+
+The command git init is used to create an empty Git repository. After executing this command, <mark>Git responds with a message indicating that it has successfully initialized an empty repository in the specified directory</mark>, which in this case is **/home/albert/Desktop/git/.git/**.
+
+This means you've set up a local Git repository on your computer where you can start tracking and versioning your project.
+
+### Step2: Adding Files
 
 ```js
 albert@albert-virtual-machine:~/Desktop/git$ git add --all
 ```
 
-In this step, you're using the git add --all command to stage all the changes in your working directory for the next commit. Staging means you're telling Git which files you want to include in the next commit. By using the --all option, you're adding all changes, including new files, modifications, and deletions, to the staging area.
+In this step, you're using the **git add --all** command to stage all the changes in your working directory for the next commit.
+
+<mark>Staging means you're telling Git which files you want to include in the next commit.</mark>
+
+By using the **--all** option, you're adding all changes, including new files, modifications, and deletions, to the **staging area.**
 
 
-### Step3
+### Step3: GitHub Repo
 
 ```js
 albert@albert-virtual-machine:~/Desktop/git$ gh repo create testcli --public
 ✓ Created repository AlbertProfe/testcli on GitHub
 ```
-Here, you're creating a new GitHub repository named "testcli" and making it public using the GitHub CLI (gh). The command gh repo create testcli --public initiates the repository creation process. After successful execution, you receive a confirmation message that the repository "AlbertProfe/testcli" has been created on GitHub.
+Here, you're creating a new **GitHub repository named "testcli"** and making it public using the <mark>GitHub CLI (gh).</mark>
 
-### Step4
+![Creating a new **GitHub repository named "testcli"**](/images/devops/gitgh2.png)
+
+The command **gh repo create testcli --public** initiates the repository creation process.
+
+After successful execution, you receive a confirmation message that the repository **"AlbertProfe/testcli"** has been created on GitHub.
+
+### Step4: Commit
 
 ```js
 git commit --all
@@ -79,17 +105,26 @@ git commit --all
  create mode 100644 person.md
 ```
 
-With this step, you've committed your changes to the local Git repository. The command git commit --all has committed your staged changes with a commit message "hi." The response from Git shows that one file was changed, adding two insertions, and a new file named "person.md" was created.
+With this step, you've committed your changes to the local Git repository.
 
-### Step5
+The command **git commit --all** has committed your staged changes with a commit message **"hi."**
+
+The response from Git shows that one file was changed, adding two insertions, and a new file named **"person.md"** was created.
+
+### Step5: Link Local to Remote
 
 ```js
 albert@albert-virtual-machine:~/Desktop/git$ git remote add origin https://github.com/AlbertProfe/testcli.git
 ```
-You're setting the remote repository for your local Git repository. The command git remote add origin https://github.com/AlbertProfe/testcli.git associates your local Git repository with the GitHub repository you created earlier. This allows you to push your local commits to the remote repository on GitHub.
+
+You're setting the **remote repository** for your local Git repository.
+
+The command git remote add origin **https://github.com/AlbertProfe/testcli.git** associates your local Git repository with the GitHub repository you created earlier.
+
+This allows you to push your local commits to the remote repository on GitHub.
 
 
-### Step6
+### Step6: Push
 
 ```js
 albert@albert-virtual-machine:~/Desktop/git$ git push origin master
@@ -101,7 +136,11 @@ To https://github.com/AlbertProfe/testcli.git
  * [new branch]      master -> master
 ```
 
-In the final step, you're pushing your local commits to the remote repository on GitHub. The command git push origin master sends your changes to the "master" branch of the remote repository. Git enumerates the objects, counts them, and writes them to the remote repository, effectively updating the GitHub repository with your local changes. The output shows the progress and confirms that the "master" branch on GitHub has been updated with the changes from your local repository.
+In the final step, you're pushing your local commits to the remote repository on GitHub. The command **git push origin master** sends your changes to the "master" branch of the remote repository.
+
+Git enumerates the objects, counts them, and writes them to the remote repository, effectively updating the GitHub repository with your local changes.
+
+The output shows the progress and confirms that the "master" branch on GitHub has been updated with the changes from your local repository.
 
 
 <!--- navLinks -->
