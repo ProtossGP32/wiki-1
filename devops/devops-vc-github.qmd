@@ -101,7 +101,7 @@ IntelliJ IDEA lets you manage [Git](https://www.jetbrains.com/help/idea/2022.3
 <br>
 <div class='column right next'>
 <br>
-[Idea and Github 2023  {{< fa solid arrow-right >}}](/devops/devops-vd-ideagithub.qmd)
+[Idea and Github 2023  {{< fa solid arrow-right >}}](/devops/devops-vc-ideagithub.qmd)
 <br>
 </div>
 <br>
