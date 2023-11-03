@@ -5,7 +5,7 @@ categories: [ifct034po, backlog]
 
 
 <style>
-tr:nth-child(4) {
+tr:nth-child(1) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -14,7 +14,7 @@ tr:nth-child(4) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
-## ``Sprint#5: CRUD & H2 Author-Book-Comments`` (November)
+## ``Sprint#6: CRUD & H2 Author-Book-Comments`` (November)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
