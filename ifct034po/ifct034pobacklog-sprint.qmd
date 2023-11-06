@@ -19,7 +19,7 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #6 | 22 | 06/11/2023 | - monitorBook: JPA @OneToMany, @ManyToOne </br> - Model: Author, Comment, User, Person </br> - API Rest: Book-Author  |  |
+| #6 | 22 | 06/11/2023 | - monitorBook: JPA @OneToMany, @ManyToOne </br> - Model: Author, Comment, User, Person </br> - API Rest: Book-Author  | [UML author-book-comment](/images/ifct034po/uml-author-book-comment.jpg) </br>  - [@ManyToMany oracle](https://docs.oracle.com/javaee%2F6%2Fapi%2F%2F/javax/persistence/ManyToMany.html)  </br>  - [Query Methods JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.named-queries)  </br> -  [JPA Data](/springboot/boot-concepts-data.qmd) </br> - [@OneToMany example author-book](https://github.com/AlbertProfe/cifojava2022-3/tree/5b17db1bba7a81711c65a9db10c6a7a27c791780/library2/src/main/java/io/company/library/model) |
 |  | 23 | 07/11/2023 | - monitorBook: JPA @OneToMany, @ManyToOne </br> - Model: Author, Comment, User, Person </br> - API Rest: Book-Author-Comment  |  |
 |  | 24 | 08/11/2023 | - monitorBook: JPA Ihnerence strategies </br> - Model: Author, Comment, User, Person </br> - API Rest: Book-Author-User-Person  |  |
 |  | 25 | 09/11/2023 | - FCOO03 |  |
