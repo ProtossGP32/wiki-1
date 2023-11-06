@@ -46,11 +46,11 @@ categories: [ifct034po, backlog]
 
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #6 | 22 | 06/11/2023 |  |  |
-|  | 23 | 07/11/2023 |  |  |
-|  | 24 | 08/11/2023 |  |  |
-|  | 25 | 09/11/2023 |  |  |
-|  | 26 | 10/11/2023 |  |  |
+| #6 | 22 | 06/11/2023 | - monitorBook: JPA @OneToMany, @ManyToOne </br> - Model: Author, Comment, User, Person </br> - API Rest: Book-Author  |  |
+|  | 23 | 07/11/2023 | - monitorBook: JPA @OneToMany, @ManyToOne </br> - Model: Author, Comment, User, Person </br> - API Rest: Book-Author-Comment  |  |
+|  | 24 | 08/11/2023 | - monitorBook: JPA Ihnerence strategies </br> - Model: Author, Comment, User, Person </br> - API Rest: Book-Author-User-Person  |  |
+|  | 25 | 09/11/2023 | - FCOO03 |  |
+|  | 26 | 10/11/2023 | - FCOO03 |  |
 : Backlog course November 2023 table {tbl-colwidths="[2,2,2,60,34]"}
 
 
