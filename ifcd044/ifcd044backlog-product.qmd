@@ -1,0 +1,67 @@
+---
+title: "IFCD044 Product Backlog"
+categories: [ifcd044, backlog]
+---
+
+
+![Backlog course](/images/home/backlog.jpg){width="30%"}
+
+::: {.summary}
+
+- [November 2023](/ifct034po/ifct034pobacklog-product.qmd#november-2023)
+- [December 2023](/ifct034po/ifct034pobacklog-product.qmd#december-2023)
+
+:::
+
+::: {.column-page-right}
+
+## November 2023
+
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+: Backlog course November 2023 table {tbl-colwidths="[2,2,2,60,34]"}
+
+## December 2023
+
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+: Backlog course December 2023 table {tbl-colwidths="[2,2,2,60,34]"}
+
+
+
+
+:::
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} IFCT034PO Sprint Backlog](/ifct034po/ifct034pobacklog-sprint.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[IFCD0210 Official Docs  {{< fa solid arrow-right >}}](/ifcd0210/ifcd0210.qmd)
+<br>
+</div>
+<br>
+</div>

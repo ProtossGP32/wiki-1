@@ -422,7 +422,7 @@ website:
       title: "Learning"
       contents: 
         - text: "Vocabulary"
-        - text: "---"  
+        - text: "---"
         - section: "Vocabulary"
           contents: 
             - learning/learning-vocab-general.qmd
@@ -455,6 +455,12 @@ website:
       title: "Training"
       contents:
         - text: "Training Courses"
+        - text: "---"
+        - section: "IFCD044 Docs"
+          contents:
+            - ifcd044/ifcd044.qmd
+            - ifcd044/ifcd044backlog-sprint.qmd
+            - ifcd044/ifcd044backlog-product.qmd
         - text: "---"
         - section: "IFCT034PO Docs"
           contents:

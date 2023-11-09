@@ -1,0 +1,58 @@
+---
+title: "IFCD044 Sprint Backlog"
+categories: [ifcd044, backlog]
+---
+
+
+<style>
+tr:nth-child(1) {
+  background-color: #b2b2b2!important;
+  color: #f4f4f4!important;
+}
+</style>
+
+
+![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
+
+## ``Sprint#1: SCRUM Intro`` (November)
+
+::: {.column-page-right}
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+: Backlog course November 2023 table {tbl-colwidths="[2,2,2,60,34]"}
+:::
+
+::: {.callout-note}
+- `-` > topic planned and done
+- `- ` <s>done</s> > topic not done in class (pending)
+- `++` new topic not planned
+:::
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} IFCT034PO Docs](/ifct034po/ifct034po.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[IFCT034PO Product Backlog  {{< fa solid arrow-right >}}](/ifct034po/ifct034pobacklog-product.qmd)
+<br>
+</div>
+<br>
+</div>

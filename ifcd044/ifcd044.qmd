@@ -1,0 +1,67 @@
+---
+title: "IFCD044 Docs"
+categories: [ifcd044, training] 
+---
+
+## Identificació del Certificat de Professionalitat
+
+- Nom del Curs: Desenvolupament de programari amb metodologies àgils: SCRUM
+- Hores: 110 h
+- Família professional: Informàtica i Comunicacions
+- Àrea Professional: Desenvolupament
+- Especialitat: IFCD044
+- Nivell: 3
+
+## Presentació
+
+
+## Continguts
+
+### Mòdul 1: Desenvolupament de programari amb metodologies àgils: SCRUM
+
+1. Metodologies àgils
+2. Mètodes
+3. Scrum
+4. Spring MVC
+5. Eines de gestió
+
+### Objectius
+
+> Gestionar projectes de desenvolupament de programari aplicant la metodologia àgil SCRUM.
+
+### Entorn professional i ocupacions
+
+El/la professional gestiona la planificació, el desenvolupament i la execució dels projectes TIC adaptant-se a les incidències que puguin sortir per tal de portar-ho a bon terme fent servir les metodologies àgils com SCRUM.
+
+**Ocupacions**: Consultors, analistes, analistes-programadors, tècnics, administradors i personal que hagi de gestionar o participar en projectes informàtics o de l'àmbit tecnològic.
+
+
+## Calendar 2023 SCRUM IFCD044
+
+![Calendar IFCD044](/images/ifcd044/Calendari%202023%20SCRUM.png)
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Articles cards](/learning/learning-listing-card-articles.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[IFCT034PO Sprint Backlog {{< fa solid arrow-right >}}](/ifct034po/ifct034pobacklog-sprint.qmd)
+<br>
+</div>
+<br>
+</div>
