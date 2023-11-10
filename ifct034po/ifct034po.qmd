@@ -51,7 +51,7 @@ El professional desenvolupa la seva activitat per compte propi, en empreses de s
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Articles cards](/learning/learning-listing-card-articles.qmd)
+[{{< fa solid arrow-left >}} IFCD044 docs](/ifcd044/ifcd044backlog-product.qmd)
 <br>
 </div>
 <br>

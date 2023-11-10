@@ -48,7 +48,7 @@ categories: [ifcd044, backlog]
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} IFCT034PO Sprint Backlog](/ifct034po/ifct034pobacklog-sprint.qmd)
+[{{< fa solid arrow-left >}} IFCD044 Sprint Backlog](/ifcd044/ifcd044backlog-sprint.qmd)
 <br>
 </div>
 <br>
@@ -60,7 +60,7 @@ categories: [ifcd044, backlog]
 <br>
 <div class='column right next'>
 <br>
-[IFCD0210 Official Docs  {{< fa solid arrow-right >}}](/ifcd0210/ifcd0210.qmd)
+[IFCT03PO Official Docs  {{< fa solid arrow-right >}}](/ifct034po/ifct034po.qmd)
 <br>
 </div>
 <br>

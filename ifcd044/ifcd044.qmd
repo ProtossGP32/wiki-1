@@ -63,7 +63,7 @@ El/la professional gestiona la planificació, el desenvolupament i la execució 
 <br>
 <div class='column right next'>
 <br>
-[IFCT034PO Sprint Backlog {{< fa solid arrow-right >}}](/ifct034po/ifct034pobacklog-sprint.qmd)
+[IFCD044 Sprint Backlog {{< fa solid arrow-right >}}](/ifcd044/ifcd044backlog-sprint.qmd)
 <br>
 </div>
 <br>
