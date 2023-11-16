@@ -19,6 +19,10 @@ categories: [ifcd044, training]
 
 ## Calendar 2023 SCRUM IFCD044
 
+- Inici i final de curs: **des de 15 de Novembre a 15 de Desembre**
+- Total Sprints: **#5**
+
+
 ![Calendar IFCD044](/images/ifcd044/Calendari%202023%20SCRUM.png)
 
 
