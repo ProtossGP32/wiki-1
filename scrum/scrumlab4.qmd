@@ -56,7 +56,9 @@ During each sprint, teams work collaboratively within their roles, with daily st
 
 ## Product Creation
 
-Teams initiate the product creation process by conducting thorough market research and identifying customer needs. The programmer and design roles collaborate on prototyping and development, ensuring alignment with user requirements. Agile principles, such as user feedback loops, guide iterative improvements. The documentation team creates user-friendly guides, contributing to a positive user experience. Continuous integration and testing are prioritized, ensuring a high-quality product. Regular demonstrations during sprints facilitate feedback, enabling quick adjustments. This emphasis on the iterative development cycle ensures that the final product not only meets technical specifications but is also well-aligned with customer expectations and market demands.
+Teams initiate the product creation process by conducting thorough market research and identifying customer needs. The programmer and design roles collaborate on prototyping and development, ensuring alignment with user requirements. Agile principles, such as user feedback loops, guide iterative improvements.
+
+The documentation team creates user-friendly guides, contributing to a positive user experience. Continuous integration and testing are prioritized, ensuring a high-quality product. Regular demonstrations during sprints facilitate feedback, enabling quick adjustments. This emphasis on the iterative development cycle ensures that the final product not only meets technical specifications but is also well-aligned with customer expectations and market demands.
 
 ## Marketing and Sales Integration
 The marketing and sales teams synchronize efforts to align promotional activities with product releases. Feedback from sales efforts informs marketing strategies, creating a feedback loop for continuous improvement.
@@ -66,9 +68,19 @@ Teams are responsible for financial aspects, including budgeting, cost estimatio
 
 # Tools
 
+We propose a <mark>versatile toolkit comprising Figma, Canva, Airtable, AppSheet, GitHub Wiki, HRef, and Buffer.</mark>
+
+However, <mark>it's crucial to emphasize that these tools serve as a proposal, not a prescription.</mark>
+
+Each group **has the autonomy to thoughtfully select the tools that best align with their project's unique characteristics, goals, and team dynamics.**
+
+This flexibility ensures that teams can tailor their toolset to enhance collaboration, streamline development, and optimize project management in a way that suits their specific needs and preferences.
+
+
 ## Tool Integration for Seamless Collaboration
 
 - **Figma** for Design Collaboration: Figma facilitates collaborative design, allowing the design team to create interactive prototypes and share them in real-time. Design iterations are streamlined, promoting efficient communication and alignment with user expectations.
+- **Canva** a versatile graphic design platform, extends its utility to web design within our proposed toolkit. Teams can leverage Canva's intuitive interface and pre-designed templates to craft visually appealing web elements, such as banners, logos, and social media graphics. This tool simplifies the design process, enabling even those without extensive graphic design skills to create professional-looking web assets.
 - **Airtable** for Project Management: Airtable serves as a centralized project management tool. Teams can create custom workflows, track tasks, and manage sprints collaboratively. Its flexibility accommodates the diverse needs of each role, providing a dynamic platform for project organization.
 - **AppSheet** for Rapid App Prototyping: AppSheet integrates seamlessly with Google Sheets, enabling rapid app prototyping. The programming team can quickly iterate on app functionalities, and the entire team can provide feedback through the intuitive interface, fostering collaboration and swift adjustments.
 - **HRef** for Marketing Campaigns: HRef is utilized for creating engaging marketing campaigns. The marketing team designs landing pages, tracks user interactions, and adjusts campaigns based on real-time analytics. This tool streamlines the marketing process and enhances the team's ability to adapt to changing market dynamics.
@@ -87,11 +99,11 @@ Teams utilize these tools within an integrated workflow. Figma prototypes inform
 
 HRef data is incorporated into Airtable for comprehensive analytics. This interconnected toolset ensures seamless collaboration, allowing teams to focus on their specific responsibilities while maintaining visibility into the broader project landscape.
 
-## Flexibility in Project Depth
+# Flexibility in Project Depth
 
 **Students have the flexibility to choose the project depth, whether delivering a comprehensive product or focusing on a mockup.**
 
-This approach allows teams to adapt based on their skill sets, time constraints, and project goals. The emphasis remains on collaborative learning, iterative development, and effective use of tools to simulate real-world scenarios in Agile product development.
+> This approach allows teams to adapt based on their **skill sets, time constraints, and project goals**. The emphasis remains on collaborative learning, iterative development, and effective use of tools to simulate real-world scenarios in Agile product development.
 
 
 
