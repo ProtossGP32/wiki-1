@@ -1,0 +1,59 @@
+---
+title: "Week 12: Beyond SCRUM"
+subtitle: SCRUM Week 12
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: description
+categories: [scrum, scrum-week12, beyond-scrum]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+# Beyond SCRUM
+
+
+## [Is SpaceX using Scrum?](https://www.quora.com/Is-SpaceX-using-Scrum){.external}
+
+![SpaceX is currently using a methodologies pool](/images/scrum/spacex.png){width=70%}
+
+At the very beginning, when they were just a startup, they used all Lean Startup tips to achieve the success. They did unscalable things, bought some spares for rockets in usual computer shops, made some spares by themselves, etc. 
+
+::: {.column-margin}
+All of these were a total craziness for classical aerospace companies. But it was the key benefit how they competed mastodons, like **Lockheed** and **Boeing**. 
+:::
+
+Testing of hypotheses, tight budgets, and continuous innovations made the appreciable contribution to company success. 
+
+> All Elon’s companies use Silicon Valley startup approach to achieve success. And this is what distinguishes them among all other classical companies from the industry
+
+Perhaps, it’s not a classical ``Scrum`` approach like software companies use, but it’s from the field of Kaizen and The Toyota Way. This is how startups should behave.
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Week 9: Albertus' Dylemma](/scrum/scrum-week9.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[SCRUM Lab#SC00: Timetable  {{< fa solid arrow-right >}}](/scrum/scrumlab0.qmd)
+<br>
+</div>
+<br>
+</div>

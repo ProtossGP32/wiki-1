@@ -413,6 +413,8 @@ website:
             - scrum/scrum-week8.qmd
             - scrum/scrum-week9.qmd
             - scrum/scrum-week10.qmd
+            - scrum/scrum-week11.qmd
+            - scrum/scrum-week12.qmd
         - text: "---"  
         - section: "SCRUM: Laboratories"
           contents: 

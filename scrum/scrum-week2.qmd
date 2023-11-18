@@ -13,7 +13,78 @@ format:
   html
 ---
 
-# User stories, tasks and habits
+# User stories
+
+A user story is an informal, natural language description of features of a software system. They are written from the perspective of an end user or user of a system, and may be recorded on index cards, Post-it notes, or digitally in project management software.
+
+User stories serve a number of key benefits:
+
+    Stories keep the focus on the user. A to-do list keeps the team focused on tasks that need to be checked off, but a collection of stories keeps the team focused on solving problems for real users.
+
+    Stories enable collaboration. With the end goal defined, the team can work together to decide how best to serve the user and meet that goal.
+
+    Stories drive creative solutions. Stories encourage the team to think critically and creatively about how to best solve for an end goal.
+
+    Stories create momentum. With each passing story, the development team enjoys a small challenge and a small win, driving momentum. 
+
+
+https://drive.google.com/file/d/1x5zCKDVmYGZqz-IGOI4LIMP5BoXU1Hzl/view
+
+Planning poker 
+
+
+Invest
+
+invest criteria 
+
+Acceptance Criteria 
+
+
+user stories 
+
+examples 
+
+writing user stories 
+
+# Tasks
+
+https://sites.google.com/view/gestioprojectes/llegir/setmana2#h.v10cfrby7m05
+https://sites.google.com/view/gestioprojectes/llegir/setmana2#h.5avysevw2lf2
+
+# Planning poker
+
+Planning poker, also called Scrum poker, is a consensus-based, gamified technique for estimating, mostly used for timeboxing in Agile principles. In planning poker, members of the group make estimates by playing numbered cards face-down to the table, instead of speaking them aloud. The cards are revealed, and the estimates are then discussed. By hiding the figures in this way, the group can avoid the cognitive bias of anchoring, where the first number spoken aloud sets a precedent for subsequent estimates.
+Fibonacci
+
+Planning poker game 
+
+Scrumpoker online 
+
+
+# Habits
+
+Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones
+
+No matter your goals, Atomic Habits offers a proven framework for improving—every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.
+
+
+If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights.
+
+
+Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. 
+
+
+Learn how to:
+
+- Make time for new habits (even when life gets crazy);
+
+- Overcome a lack of motivation and willpower;
+
+- Design your environment to make success easier;
+
+- Get back on track when you fall of
+
+# References
 
 - [Week 2: User stories, tasks and habits](https://sites.google.com/view/gestioprojectes/llegir/setmana2){.external}
 

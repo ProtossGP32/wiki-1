@@ -1,0 +1,71 @@
+---
+title: "Week 11: Emotions"
+subtitle: SCRUM Week 11
+author: Albert R.
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: description
+categories: [scrum, scrum-week9, emotions]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+# Emotions
+
+
+https://sites.google.com/view/gestioprojectes/llegir/setmana2
+
+
+Agile Manifesto
+
+Agile Manifesto 12 principles
+
+Scale SCRUM Nexus
+
+the rider and the elephant
+
+The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt 
+
+The central metaphor of these four chapters is that the mind is divided, like a rider on an elephant, and the rider’s job is to serve the elephant. 
+
+    The rider is our conscious reasoning—the stream of words and images of which we are fully aware. 
+
+    The elephant is the other 99 percent of mental processes—the ones that occur outside of awareness but that actually govern most of our behavior. 
+
+I developed this metaphor in my last book, The Happiness Hypothesis, where I described how the rider and elephant work together,  sometimes poorly, as we stumble through life in search of meaning and connection. 
+
+In this book I’ll use the metaphor to solve puzzles such as why it seems like everyone (else) is a hypocrite and why political partisans are so willing to believe outrageous lies and conspiracy theories. I’ll also use the metaphor to show you how you can better persuade people who seem unresponsive to reason.
+
+https://books.google.es/books?id=XsrhU2vV5PIC
+https://www.goodreads.com/book/show/30231743-are-we-smart-enough-to-know-how-smart-animals-are
+https://sites.google.com/view/gestioprojectes/llegir/setmana1#h.hi50twwmdmer
+
+https://www.goodreads.com/book/show/389530.Chimpanzee_Politics
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Week 10: Before SCRUM](/scrum/scrum-week10.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Week 12: Beyond SCRUM  {{< fa solid arrow-right >}}](/scrum/scrum-week12.qmd)
+<br>
+</div>
+<br>
+</div>
