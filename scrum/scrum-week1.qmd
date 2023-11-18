@@ -15,7 +15,7 @@ format:
 
 # Meetings
 
-![meetings](/scrum/effective-meetings-1.jpg){width="30%"}
+![meetings](/images/scrum/effective-meetings-1.jpg){width="30%"}
 
 **Effective and productive meetings are crucial for collaboration, decision-making, and achieving organizational goals.**
 
@@ -50,7 +50,7 @@ Conclude the meeting by summarizing **key takeaways and action items**. Assign r
 
 In the Scrum framework, the question **"What is your impediment?"** is significant because it aligns with the core principles of transparency, inspection, and adaptation. Scrum is an agile project management framework that emphasizes collaboration, flexibility, and continuous improvement. The concept of impediments plays a crucial role in fostering an environment where teams can identify and overcome obstacles to their productivity. The question encourages a negative logic, where impediments are seen as opportunities for improvement rather than just problems.
 
-![Impediment](/scrum/impediment.jpg){width="30%"}
+![Impediment](/images/scrum/impediment.jpg){width="30%"}
 
 Impediments are essential with a **negative logic perspective**:
 
@@ -117,7 +117,7 @@ These activities **demand unique neural networks, with planning requiring execut
 Understanding these neurological differences sheds light on the intricate interplay between cognition and action, providing insights into how the brain navigates diverse mental processes.
 :::
 
-![plan-execute-review-reflexion](/scrum/wintheday.jpg){width="30%"}
+![plan-execute-review-reflexion](/images/scrum/wintheday.jpg){width="30%"}
 
 ## Cognitive Load and Focus
 

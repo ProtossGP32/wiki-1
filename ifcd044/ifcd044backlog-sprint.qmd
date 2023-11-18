@@ -14,7 +14,7 @@ tr:nth-child(1) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
-## ``Sprint#2: user stories & communication`` (November)
+## ``Sprint#2: user-stories & communication`` (November)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |

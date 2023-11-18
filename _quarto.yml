@@ -414,6 +414,14 @@ website:
             - scrum/scrum-week9.qmd
             - scrum/scrum-week10.qmd
         - text: "---"  
+        - section: "SCRUM: Laboratories"
+          contents: 
+            - scrum/scrumlab0.qmd
+            - scrum/scrumlab1.qmd
+            - scrum/scrumlab2.qmd
+            - scrum/scrumlab3.qmd
+            - scrum/scrumlab4.qmd
+        - text: "---"  
         - section: "Resources"
           contents:
              - scrum/resources.qmd

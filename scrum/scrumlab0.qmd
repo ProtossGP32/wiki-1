@@ -1,20 +1,23 @@
 ---
-title: "Week 10: Beyond SCRUM"
-subtitle: SCRUM Week 10
+title: "SCRUM Lab#SC00: Timetable"
+subtitle: Lab
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
-categories: [scrum, scrum-week10, beyond-scrum]
+description: lab
+categories: [scrum, lab]
 toc: true
 number-sections: true
 format:
   html
 ---
 
-# Beyond SCRUM
+::: {.labs}
+📘 **SCRUM Lab#SC00: Timetable**
 
+
+:::
 
 
 
@@ -24,7 +27,7 @@ format:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Week 9: Albertus' Dylemma](/scrum/scrum-week9.qmd)
+[{{< fa solid arrow-left >}} Week 10: Beyond SCRUM](/scrum/scrum-week10.qmd)
 <br>
 </div>
 <br>
@@ -36,7 +39,7 @@ format:
 <br>
 <div class='column right next'>
 <br>
-[SCRUM Lab#SC00: Timetable  {{< fa solid arrow-right >}}](/scrum/scrumlab0.qmd)
+[SCRUM Lab#SC01: Paper Airplanes {{< fa solid arrow-right >}}](/scrum/scrumlab1.qmd)
 <br>
 </div>
 <br>
