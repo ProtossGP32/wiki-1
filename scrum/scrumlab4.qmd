@@ -50,9 +50,11 @@ Through this **comprehensive approach**, students are well-equipped to navigate 
 
 This includes feature implementation, marketing campaigns, documentation refinement, sales outreach, and retrospectives for continuous improvement.
 
-# Execution
+# Product, Sell, Scale: sprinting
 
 During each sprint, teams work collaboratively within their roles, with daily stand-ups for progress updates. The Agile framework ensures adaptability to changing priorities and allows for continuous refinement based on feedback.
+
+![](/images/scrum/producttosell.png){width="60%"}
 
 ## Product Creation
 
@@ -61,10 +63,12 @@ Teams initiate the product creation process by conducting thorough market resear
 The documentation team creates user-friendly guides, contributing to a positive user experience. Continuous integration and testing are prioritized, ensuring a high-quality product. Regular demonstrations during sprints facilitate feedback, enabling quick adjustments. This emphasis on the iterative development cycle ensures that the final product not only meets technical specifications but is also well-aligned with customer expectations and market demands.
 
 ## Marketing and Sales Integration
-The marketing and sales teams synchronize efforts to align promotional activities with product releases. Feedback from sales efforts informs marketing strategies, creating a feedback loop for continuous improvement.
 
-## Financial Planning
-Teams are responsible for financial aspects, including budgeting, cost estimation, and revenue projections. Financial discussions occur regularly to ensure alignment with project goals and realistic expectations.
+The **marketing and sales** teams synchronize efforts to align promotional activities with product releases. Feedback from sales efforts informs marketing strategies, creating a feedback loop for continuous improvement.
+
+## Financial Planning and scalling
+
+Teams are responsible for **financial aspects**, including budgeting, cost estimation, and revenue projections. Financial discussions occur regularly to ensure alignment with project goals and realistic expectations.
 
 # Tools
 
@@ -110,7 +114,7 @@ HRef data is incorporated into Airtable for comprehensive analytics. This interc
 # References
 
 - [5 Types of Scrum Meetings](https://number8.com/en/blog/5-types-of-scrum-meetings/)
-
+- [Scaling Your Product – thriving in the market](https://www.boldare.com/services/scaling-your-product-thriving-in-the-market/)
 
 
 
