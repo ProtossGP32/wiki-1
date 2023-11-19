@@ -1,19 +1,19 @@
 ---
-title: "Week 11: Emotions"
+title: "Week 11: Team dynamics"
 subtitle: SCRUM Week 11
 author: Albert R.
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
 description: description
-categories: [scrum, scrum-week9, emotions]
+categories: [scrum, scrum-week9, team-dynamics]
 toc: true
 number-sections: true
 format:
   html
 ---
 
-# Emotions
+# Team dynamics
 
 
 https://sites.google.com/view/gestioprojectes/llegir/setmana2
@@ -42,7 +42,6 @@ In this book I’ll use the metaphor to solve puzzles such as why it seems like 
 https://books.google.es/books?id=XsrhU2vV5PIC
 https://www.goodreads.com/book/show/30231743-are-we-smart-enough-to-know-how-smart-animals-are
 https://sites.google.com/view/gestioprojectes/llegir/setmana1#h.hi50twwmdmer
-
 https://www.goodreads.com/book/show/389530.Chimpanzee_Politics
 
 

@@ -31,7 +31,9 @@ In groups of 4-5, each student assumes a **crucial role for a holistic project e
 
 > This lab provides students with a practical understanding of Agile principles within the context of a product development project. By integrating roles, planning sprints, and emphasizing adaptability, students gain valuable insights into collaborative project management.
 
+::: {.callout-important}
 The experience <mark>extends beyond technical implementation, incorporating marketing, documentation, sales, and financial considerations, **reflecting the multidimensional nature of real-world** product development.</mark>
+:::
 
 Through this **comprehensive approach**, students are well-equipped to navigate the complexities of Agile project management in diverse professional settings.
 
@@ -48,7 +50,9 @@ Through this **comprehensive approach**, students are well-equipped to navigate 
 
 <mark>Teams design **five sprints**, with each focusing on specific aspects of the product development lifecycle.</mark>
 
+::: {.callout-important}
 This includes feature implementation, marketing campaigns, documentation refinement, sales outreach, and retrospectives for continuous improvement.
+:::
 
 # Sprinting: product, sell, scale 
 
@@ -60,7 +64,11 @@ During each sprint, teams work collaboratively within their roles, with daily st
 
 Teams initiate the product creation process by conducting thorough market research and identifying customer needs. The programmer and design roles collaborate on prototyping and development, ensuring alignment with user requirements. Agile principles, such as user feedback loops, guide iterative improvements.
 
-The documentation team creates user-friendly guides, contributing to a positive user experience. Continuous integration and testing are prioritized, ensuring a high-quality product. Regular demonstrations during sprints facilitate feedback, enabling quick adjustments. This emphasis on the iterative development cycle ensures that the final product not only meets technical specifications but is also well-aligned with customer expectations and market demands.
+The documentation team creates user-friendly guides, contributing to a positive user experience. Continuous integration and testing are prioritized, ensuring a high-quality product. Regular demonstrations during sprints facilitate feedback, enabling quick adjustments. 
+
+::: {.callout-important}
+This **emphasis on the iterative development cycle ensures** that the final product not only meets technical specifications but is also **well-aligned with customer expectations and market demands.**
+:::
 
 ## Marketing and Sales
 
@@ -83,12 +91,18 @@ This flexibility ensures that teams can tailor their toolset to enhance collabor
 
 ## Tool Integration for Seamless Collaboration
 
-- **Figma** for Design Collaboration: Figma facilitates collaborative design, allowing the design team to create interactive prototypes and share them in real-time. Design iterations are streamlined, promoting efficient communication and alignment with user expectations.
-- **Canva** a versatile graphic design platform, extends its utility to web design within our proposed toolkit. Teams can leverage Canva's intuitive interface and pre-designed templates to craft visually appealing web elements, such as banners, logos, and social media graphics. This tool simplifies the design process, enabling even those without extensive graphic design skills to create professional-looking web assets.
-- **Airtable** for Project Management: Airtable serves as a centralized project management tool. Teams can create custom workflows, track tasks, and manage sprints collaboratively. Its flexibility accommodates the diverse needs of each role, providing a dynamic platform for project organization.
-- **AppSheet** for Rapid App Prototyping: AppSheet integrates seamlessly with Google Sheets, enabling rapid app prototyping. The programming team can quickly iterate on app functionalities, and the entire team can provide feedback through the intuitive interface, fostering collaboration and swift adjustments.
-- **HRef** for Marketing Campaigns: HRef is utilized for creating engaging marketing campaigns. The marketing team designs landing pages, tracks user interactions, and adjusts campaigns based on real-time analytics. This tool streamlines the marketing process and enhances the team's ability to adapt to changing market dynamics.
-- **Buffer** for Adaptive Planning: Buffer is introduced to the project management toolkit, providing a dedicated space for teams to incorporate time buffers. This ensures flexibility in the project timeline, allowing for unforeseen challenges or additional iterations. Teams can allocate buffer time strategically within sprints, enhancing adaptability without compromising project timelines.
+- **Figma** for Design Collaboration: Figma facilitates collaborative design, allowing the design team to create interactive prototypes and share them in real-time. Design iterations are streamlined, promoting efficient communication and alignment with user expectations. [Learn more about Figma](https://www.figma.com/)
+
+- **Canva** a versatile graphic design platform, extends its utility to web design within our proposed toolkit. Teams can leverage Canva's intuitive interface and pre-designed templates to craft visually appealing web elements, such as banners, logos, and social media graphics. This tool simplifies the design process, enabling even those without extensive graphic design skills to create professional-looking web assets. [Explore Canva](https://www.canva.com/)
+
+- **Airtable** for Project Management: Airtable serves as a centralized project management tool. Teams can create custom workflows, track tasks, and manage sprints collaboratively. Its flexibility accommodates the diverse needs of each role, providing a dynamic platform for project organization. [Discover Airtable](https://www.airtable.com/)
+
+- **AppSheet** for Rapid App Prototyping: AppSheet integrates seamlessly with Google Sheets, enabling rapid app prototyping. The programming team can quickly iterate on app functionalities, and the entire team can provide feedback through the intuitive interface, fostering collaboration and swift adjustments. [Explore AppSheet](https://www.appsheet.com/)
+
+- **HRef** for Marketing Campaigns: HRef is utilized for creating engaging marketing campaigns. The marketing team designs landing pages, tracks user interactions, and adjusts campaigns based on real-time analytics. This tool streamlines the marketing process and enhances the team's ability to adapt to changing market dynamics. [Learn more about HRef](https://href.li/)
+
+- **Buffer** for Adaptive Planning: Buffer is introduced to the project management toolkit, providing a dedicated space for teams to incorporate time buffers. This ensures flexibility in the project timeline, allowing for unforeseen challenges or additional iterations. Teams can allocate buffer time strategically within sprints, enhancing adaptability without compromising project timelines. [Discover Buffer](https://buffer.com/)
+
 
 ## Documentation
 
@@ -96,10 +110,13 @@ This flexibility ensures that teams can tailor their toolset to enhance collabor
   
 > The documentation team can create and edit pages collaboratively, ensuring that user manuals, guides, and technical documentation are easily accessible and consistently updated.
 
+With **Markdown**, teams easily create and edit pages, capturing project insights and guidelines. This linkable knowledge hub enhances transparency and fosters effective communication, providing a centralized resource accessible to all stakeholders. Discover the power of [GitHub Wiki](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
+
+
 
 ## Integration Strategy
 
-Teams utilize these tools within an integrated workflow. Figma prototypes inform AppSheet development tasks in Airtable. GitHub Wiki links serve as a reference hub for all teams, fostering cross-functional awareness.
+> Teams utilize these tools within an integrated workflow. Figma prototypes inform AppSheet development tasks in Airtable. GitHub Wiki links serve as a reference hub for all teams, fostering cross-functional awareness.
 
 HRef data is incorporated into Airtable for comprehensive analytics. This interconnected toolset ensures seamless collaboration, allowing teams to focus on their specific responsibilities while maintaining visibility into the broader project landscape.
 
@@ -115,6 +132,7 @@ HRef data is incorporated into Airtable for comprehensive analytics. This interc
 
 - [5 Types of Scrum Meetings](https://number8.com/en/blog/5-types-of-scrum-meetings/)
 - [Scaling Your Product – thriving in the market](https://www.boldare.com/services/scaling-your-product-thriving-in-the-market/)
+
 
 
 

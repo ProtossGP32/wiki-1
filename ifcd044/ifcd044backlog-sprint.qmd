@@ -19,11 +19,11 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #2 | 4 | 20/11/2023 |  |  |
-|  | 5 | 21/11/2023 |  |  |
-|  | 6 | 22/11/2023 |  |  |
-|  | 7 | 23/11/2023 |  |  |
-|  | 8 | 24/11/2023 |  |  |
+| #2 | 4 | 20/11/2023 | - User stories, tasks, done and habits </br> - What is an habit and how to change it? </br> - 3 pillars, 4 foundations and SCRUM definition  | - [Week 2: User stories, tasks and habits](http://localhost:3695/scrum/scrum-week2.html)  |
+|  | 5 | 21/11/2023 | - Kanban </br> - Business Model Generation </br> - Invest  </br> - Acceptance Criteria </br> |  - [What is kanban?](https://www.atlassian.com/agile/kanban#) </br> - [What is a kanban board?](https://www.atlassian.com/agile/kanban/boards)|
+|  | 6 | 22/11/2023 |  - How to deliver value </br> - Writing </br> - WH-questions  </br >  |  |
+|  | 7 | 23/11/2023 |  - Communication  </br>  - How to deliver value </br> - Pareto  |  |
+|  | 8 | 24/11/2023 | - The mom test </br> - Mind's Limit Found: 4 Things at Once </br> - Multitasking |  |
 : Backlog course November 2023 table {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
