@@ -51,7 +51,6 @@ This section contains the definition of ``Scrum``. This definition consists of:
 ## The Three Pillars of Empiricism (Scrum)
 
 
-
 <mark>Empiricism means working in a fact-based, experience-based, and evidence-based manner. Scrum implements an empirical process where progress is based on observations of reality, **not fictitious plans**</mark>.
 
 Scrum also **places great emphasis on mind-set and cultural shift to achieve business and organizational Agility.**
@@ -133,6 +132,19 @@ Through this work we have come to value:
 > **Responding to change** over following a plan
 
 That is, while there is value in the items on the right, **we value the items on the left more.**
+
+# SCRUM: the book
+
+- [Scrum: The Art of Doing Twice the Work in Half the Time](/books/scrum.qmd)
+
+
+<mark>The definitive book on the Scrum methodology from its co-creator and the CEO of Scrum, Inc., Jeff Sutherland.<mark>
+
+> Scrum is the revolutionary approach to project management and team building that has helped to transform everything from software companies to the US military to healthcare in major American hospitals. In this major new book its originator, Jeff Sutherland, explains precisely and step by step how it operates - and how it can be made to work for anyone, anywhere,
+> 
+> Take the FBI attempt to digitize its records, for example. As with so many software projects the first attempt failed, having taken four years and cost over $400 million.
+> 
+> Then the FBI turned to Scrum, and just over a year later unveiled a functioning system that cost less than a tenth of the first project and employed a tenth of the staff. And it’s not just grand projects that Scrum can help with.
 
 
 <!--- navLinks -->

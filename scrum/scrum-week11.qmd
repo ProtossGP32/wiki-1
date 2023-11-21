@@ -15,36 +15,46 @@ format:
 
 # Team dynamics
 
+## Origins
 
-https://sites.google.com/view/gestioprojectes/llegir/setmana2
+https://www.goodreads.com/author/show/112082.Frans_de_Waal
+https://www.goodreads.com/book/show/389530.Chimpanzee_Politics
+https://www.goodreads.com/book/show/30231743-are-we-smart-enough-to-know-how-smart-animals-are
+https://books.google.es/books?id=XsrhU2vV5PIC
+
+
+# Behavioral Economics
+
+
+##  From Cashews to Nudges: The Evolution of 
+
+https://www.nobelprize.org/uploads/2018/01/thaler-lecture.pdf
+
+## Incentives
 
 https://www.youtube.com/watch?v=u6XAPnuFjJc&feature=youtu.be
 
-Agile Manifesto
-
-Agile Manifesto 12 principles
-
-Scale SCRUM Nexus
-
-the rider and the elephant
+# The rider and the Elephant
 
 The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt 
 
 The central metaphor of these four chapters is that the mind is divided, like a rider on an elephant, and the rider’s job is to serve the elephant. 
 
-    The rider is our conscious reasoning—the stream of words and images of which we are fully aware. 
-
-    The elephant is the other 99 percent of mental processes—the ones that occur outside of awareness but that actually govern most of our behavior. 
+- The **rider** is our conscious reasoning—the stream of words and images of which we are fully aware. 
+- The **elephant** is the other 99 percent of mental processes—the ones that occur outside of awareness but that actually govern most of our behavior. 
 
 I developed this metaphor in my last book, The Happiness Hypothesis, where I described how the rider and elephant work together,  sometimes poorly, as we stumble through life in search of meaning and connection. 
 
 In this book I’ll use the metaphor to solve puzzles such as why it seems like everyone (else) is a hypocrite and why political partisans are so willing to believe outrageous lies and conspiracy theories. I’ll also use the metaphor to show you how you can better persuade people who seem unresponsive to reason.
 
-https://books.google.es/books?id=XsrhU2vV5PIC
-https://www.goodreads.com/book/show/30231743-are-we-smart-enough-to-know-how-smart-animals-are
-https://sites.google.com/view/gestioprojectes/llegir/setmana1#h.hi50twwmdmer
-https://www.goodreads.com/book/show/389530.Chimpanzee_Politics
 
+
+
+
+
+# References
+
+https://sites.google.com/view/gestioprojectes/llegir/setmana2
 
 <!--- navLinks -->
 <br><br>
