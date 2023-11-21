@@ -17,6 +17,27 @@ format:
 
 - [Week 4: ScrumMaster, how it works](https://sites.google.com/view/gestioprojectes/llegir/setmana4){.external}
 
+Organizations across all industries globally are hiring Scrum masters because they are experts in handling challenging tasks.
+They address complex issues during the lifecycle of a project, ranging from motivating, leading, and training the team to respect the timelines; coordinating with the stakeholders, product owners, managers, and developers; and onboarding project teams. 
+A Scrum master acts as a bridge between a product/business owner to facilitate accountability at every level. 
+They ensure that everyone is on the same page and help the team meet deadlines and deliverables within budget.
+
+
+Organizations across all industries globally are hiring Scrum masters because they are experts in handling challenging tasks.
+They address complex issues during the lifecycle of a project, ranging from motivating, leading, and training the team to respect the timelines; coordinating with the stakeholders, product owners, managers, and developers; and onboarding project teams. 
+A Scrum master acts as a bridge between a product/business owner to facilitate accountability at every level. 
+They ensure that everyone is on the same page and help the team meet deadlines and deliverables within budget.
+
+Changes as a Scrum Master:
+
+Product vision
+More ownership
+Better quality
+Less centralised management
+Better planning
+Better product
+
+
 
 <!--- navLinks -->
 <br><br>
