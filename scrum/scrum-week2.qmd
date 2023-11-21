@@ -98,7 +98,7 @@ Such **PBIs** may be used in a [Scrum](https://www.scrum.org/) backlog, [Kanban]
 
 # Planning poker
 
-![Planning poker](/images/scrum/poker.png)
+![Planning poker following Fibonacci numbers](/images/scrum/poker.png)
 
 ::: {.callout-note}
 Planning poker, also called Scrum poker, is a consensus-based, gamified technique for estimating, mostly used for timeboxing in Agile principles.
@@ -106,14 +106,27 @@ Planning poker, also called Scrum poker, is a consensus-based, gamified techniqu
 In planning poker, members, *estimators* of the group make estimates by playing numbered cards face-down to the table, instead of speaking them aloud.
 :::
 
+::: {.column-margin}
+The use of the Fibonacci sequence (e.g., 1, 2, 3, 5, 8, 13) in estimation during Agile practices like Scrum is not rooted in neuroscience per se but is more aligned with cognitive and psychological principles. The Fibonacci sequence is often used to represent story points, which are a measure of effort or complexity.
+:::
+
 Each **estimator** has a physical or virtual deck of cards. These Planning Poker cards display values like 1, 2, 3, 5, 8, 13, 20, 40 and 100 (the modified [Fibonacci](https://www.youtube.com/watch?v=SjSHVDfXHQ4&ab_channel=TED) numbers sequence). The values represent the number of story points, ideal days, or other units in which the team estimates.
+
+
+So, the cards are revealed, and the estimates are then discussed. By hiding the figures in this way, the group can avoid the cognitive bias of anchoring, where the first number spoken aloud sets a precedent for subsequent estimates.
 
 ::: {.column-margin}
 [Welcome to my open source Planning Poker web app](https://scrumpoker.online/)
 :::
  
+## Criticism
 
-So, the cards are revealed, and the estimates are then discussed. By hiding the figures in this way, the group can avoid the cognitive bias of anchoring, where the first number spoken aloud sets a precedent for subsequent estimates.
+While Planning Poker is a popular estimation technique in Scrum, it has potential [drawbacks](https://medium.com/agilelab/why-i-stopped-using-planning-poker-f6e7f1e6dbda).
+
+It can be **time-consuming**, especially in larger teams, leading to extended planning sessions. The subjective nature of the method may result in biased estimates, as individuals with more influence can sway the consensus. Additionally, team members might **hesitate to challenge senior members' estimates**, hindering accurate assessments.
+
+Misinterpretation of story points and the gamification aspect may also undermine the seriousness of the process. <mark>Striking a balance between efficiency and precision is crucial to mitigate these issues and ensure Planning Poker's effectiveness in Scrum.</mark>
+
 
 # Habits
 
