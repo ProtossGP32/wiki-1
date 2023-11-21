@@ -132,21 +132,48 @@ Misinterpretation of story points and the gamification aspect may also undermine
 
 [Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones](/books/atomicHabits.qmd)
 
-No matter your goals, Atomic Habits offers a proven framework for improving—every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.
+No matter your goals, [Atomic Habits](https://jamesclear.com/atomic-habits) offers a proven framework for improving—every day. **James Clear**, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.
 
 
-If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights.
+If you're having [trouble changing your habits](https://levelup.gitconnected.com/applying-what-ive-learnt-in-atomic-habits-into-coding-cb268137ea35), the problem isn't you. The problem is your system.
+
+<mark>Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change.</mark> You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights.
 
 
-Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. 
+**James Clear** is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. 
 
 
 Learn how to:
 
-- Make time for new habits (even when life gets crazy);
-- Overcome a lack of motivation and willpower;
+- **Make time for new habits** (even when life gets crazy);
+- **Overcome a lack of motivation** and willpower;
 - Design your environment to make success easier;
 - Get back on track when you fall of
+
+## Build identity-based habits
+
+![Outcome-based habits vs Identity-based habits](/images/scrum/habits0.png){width="60%"}
+
+::: {.callout-important}
+The ultimate form of intrinsic motivation is when **a habit becomes part of your identity.**
+
+If you want to build a reading habit, your goal is not to read books but to become a reader. If you want to build a running habit, your goal is not to run a marathon but to become a runner.
+:::
+
+## The Habit Loop
+
+The cue triggers a craving. Then it motivates a response. And it provides a reward, which satisfies the craving and finally becomes associated with the cue.
+
+- Cue
+- Craving
+- Response
+- Reward
+
+![Cue -> Craving -> Response -> Reward](/images/scrum/habits1.png){width="60%"}
+
+
+
+![Cue: make it obvious; Craving: make it attractive; Response: make it easy; Reward: make it satisfying](/images/scrum/habits2.png){width="60%"}
 
 # References
 
