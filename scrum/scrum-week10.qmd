@@ -14,6 +14,9 @@ format:
 ---
 
 # Before SCRUM
+
+
+
 https://sites.google.com/view/gestioprojectes/llegir/setmana3
 Toyota SCRUM
 
@@ -49,9 +52,9 @@ Toyota doesn't fire anyone, still now
 
 Lean ... Build a tower, build a team 
 
+https://increment.com/testing/what-broke-the-bank/
 
-
-
+https://archive.nytimes.com/www.nytimes.com/interactive/2011/05/18/business/delta-northwest-merger-graphic.html
 https://archive.nytimes.com/www.nytimes.com/interactive/2011/05/18/business/delta-northwest-merger-graphic.html
 
 https://increment.com/testing/what-broke-the-bank/
