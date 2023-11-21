@@ -84,7 +84,6 @@ he [INVEST mnemonic](https://en.wikipedia.org/wiki/INVEST_(mnemonic)) for **Agil
 Such **PBIs** may be used in a [Scrum](https://www.scrum.org/) backlog, [Kanban](https://kanbanize.com/kanban-resources/getting-started/what-is-kanban) board, or [XP](http://www.extremeprogramming.org/) project.
 
 
-
 | Letter | Meaning      | Description                                              |
 |--------|--------------|----------------------------------------------------------|
 | I      | Independent  | The PBI should be self-contained.                         |
@@ -94,9 +93,7 @@ Such **PBIs** may be used in a [Scrum](https://www.scrum.org/) backlog, [Kanban]
 | S      | Small        | PBIs should not be so big as to become impossible to plan/task/prioritize within a level of accuracy. |
 | T      | Testable     | The PBI or its related description must provide the necessary information to make test development possible. |
 
-
-
-# Planning poker
+## Planning poker
 
 ![Planning poker following Fibonacci numbers](/images/scrum/poker.png)
 
@@ -127,8 +124,50 @@ It can be **time-consuming**, especially in larger teams, leading to extended pl
 
 Misinterpretation of story points and the gamification aspect may also undermine the seriousness of the process. <mark>Striking a balance between efficiency and precision is crucial to mitigate these issues and ensure Planning Poker's effectiveness in Scrum.</mark>
 
+# Themes and Epics
+
+
+![[How To: An Online Backlog Refinement](https://www.scrumdesk.com/wp-content/uploads/BF-featured.jpg)](/images/scrum/user-stories-epics-themes-features-quote.png){width="60%"}
+
+
+## Themes
+
+A collection of stories by category. Like a jar for cookies, it's a container of stories. By its nature, an epic can also be a theme in itself. They should refer to a <mark>business goal.</mark>
+
+> An example of a theme: **“Agile Board”**.
+
+## Epics
+
+<mark>An epic is a larger story. A requirement that is too big to deliver in a single sprint and need to be broken into smaller deliverables (stories)<mark>. Epics are progressively broken into a set of smaller user stories at the appropriate time.
+
+> An example epic: **“As a team leader, I want to be have an agile SCRUM board so that I can easily manage the work of my team"**.
+
+
+## User-Stories or just stories
+
+Often referred to as <mark>Product Backlog Item or Work Item.<mark>
+
+> An example user story: “As a team leader, I want to be able to see tasks as cards on an agile SCRUM board so that I can easily see who's working on what".
+
+## Tasks
+
+<mark>he elements that build up for a story</mark>. Some teams don't divide their stories into tasks, as they prefer to work vertically. Splitting stories into tasks encourages teams to split work horizontally.
+
+> An example of a task: **“Create collapse/expand buttons”**.
+
+::: {.callout-note}
+Tasks often follow the **SMART acronym**: specific, measurable, achievable, relevant, time-boxed (although what the letters stand for seems to be hotly debated).
+:::
 
 # Habits
+
+![[Habit at Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/habit)](/images/scrum/habit_definition.png){width="60%"}
+
+> A **habit** is a [routine of behavior](https://en.wikipedia.org/wiki/Habit) that is repeated regularly and tends to occur **subconsciously**.
+
+![F. Alexander, about habits](/images/scrum/quote_habit.png){width="40%"}
+
+## Atomic Habits
 
 [Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones](/books/atomicHabits.qmd)
 
@@ -184,7 +223,7 @@ The cue triggers a craving. Then it motivates a response. And it provides a rewa
 - [Definition of Done vs Acceptance Criteria](https://www.visual-paradigm.com/scrum/definition-of-done-vs-acceptance-criteria/)
 - [Planning poker](https://www.mountaingoatsoftware.com/agile/planning-poker)
 - [What is the Scrum I-N-V-E-S-T Criteria?](https://www.linkedin.com/pulse/what-scrum-invest-criteria-ryan-hart-mba)
-
+- [How to manage Epics](https://www.redmineup.com/pages/blog/how-to-manage-epics-user-stories-in-redmine)
 
 
 <!--- navLinks -->
