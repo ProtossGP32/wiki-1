@@ -142,9 +142,14 @@ That is, while there is value in the items on the right, **we value the items on
 
 > Scrum is the revolutionary approach to project management and team building that has helped to transform everything from software companies to the US military to healthcare in major American hospitals. In this major new book its originator, Jeff Sutherland, explains precisely and step by step how it operates - and how it can be made to work for anyone, anywhere,
 > 
-> Take the FBI attempt to digitize its records, for example. As with so many software projects the first attempt failed, having taken four years and cost over $400 million.
+> Take the **FBI attempt to digitize its records, for example**. As with so many software projects the first attempt failed, having taken four years and cost over $400 million.
 > 
 > Then the FBI turned to Scrum, and just over a year later unveiled a functioning system that cost less than a tenth of the first project and employed a tenth of the staff. And it’s not just grand projects that Scrum can help with.
+
+
+- [Agile Project Success and Failure (The Story of the FBI Sentinel Program)](https://insights.sei.cmu.edu/documents/4082/2017_017_001_495733.pdf)
+
+![](/images/scrum/sentinel.pdf){height="550px" width="100%"}
 
 
 <!--- navLinks -->

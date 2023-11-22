@@ -122,7 +122,22 @@ It translates into a:
 
 And there are more negative side-effects: because of our brains’ plasticity, when we consistently engage in multi-tasking we reshape our brains for the worse, and we become habituated to this counterproductive way of working. 
 
-# Halo effect
+# Bias
+
+## Cognitive bias
+
+A <mark>cognitive bias is a systematic pattern of deviation from norm or rationality in judgment</mark>.
+
+I[ndividuals create their own "subjective reality"](https://en.wikipedia.org/wiki/Cognitive_bias) from their perception of the input. An individual's construction of reality, not the objective input, may dictate their behavior in the world.
+
+![Cognitive bias codex](/images/scrum/cognitive_bias.jpg)
+
+## List & codex
+
+- [List of cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases)
+- [Codex](https://upload.wikimedia.org/wikipedia/commons/6/65/Cognitive_bias_codex_en.svg)
+
+## Halo effect
 
 ::: {.callout-note}
 The **halo effect** is a **cognitive bias** that occurs when an initial positive judgment about a person unconsciously colors the perception of the individual as a whole.
