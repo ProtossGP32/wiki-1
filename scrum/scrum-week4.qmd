@@ -15,29 +15,90 @@ format:
 
 # ScrumMaster, how it works
 
+
+> Organizations across all industries globally are hiring **Scrum masters** because they are experts in handling challenging tasks.
+>
+> They address complex issues during the lifecycle of a project, ranging from motivating, leading, and training the team to respect the timelines; coordinating with the stakeholders, product owners, managers, and developers; and onboarding project teams.
+
+
+A **Scrum master** acts as a bridge between a product/business owner to facilitate accountability at every level. 
+<mark>They ensure that everyone is **on the same page** and help the team meet deadlines and deliverables within **budget.**</mark>
+
+![ScrumMaster quote](/images/scrum/scrummaster2.png){width="60%"}
+
+Changes as a **Scrum Master**:
+
+- Product vision
+- More ownership
+- Better quality
+- Less centralised management
+- Better planning
+- Better product
+
+# How ScrumMaster relates to others
+
+![ScrumMaster](/images/scrum/scrummaster1.png){width="60%"}
+
+The Scrum Master serves the **Scrum Team in several ways**, including:
+
+- Coaching the team members in self-management and cross-functionality;
+- Helping the Scrum Team focus on creating high-value Increments that meet the Definition of Done;
+- Causing the removal of impediments to the Scrum Team’s progress; and,
+- Ensuring that all Scrum events take place and are positive, productive, and kept within the timebox.
+
+The Scrum Master serves the **Product Owner in several ways,** including:
+
+- Helping find techniques for effective Product Goal definition and Product Backlog management;
+- Helping the Scrum Team understand the need for clear and concise Product Backlog items;
+- Helping establish empirical product planning for a complex environment; and,
+- Facilitating stakeholder collaboration as requested or needed.
+
+The Scrum Master serves **the organization in several ways**, including:
+
+- [Leading, training, and coaching the organization in its Scrum adoption](https://www.scrum.org/resources/blog/scrum-master-works-three-levels);
+- Planning and advising Scrum implementations within the organization;
+- Helping employees and stakeholders understand and enact an empirical approach for complex work; and,
+- Removing barriers between stakeholders and Scrum Teams.
+
+# Servant-leader
+
+[Servant leadership](https://www.investopedia.com/terms/s/servant-leadership.asp) and traditional leadership employ different techniques and offer vastly different outcomes.
+
+::: {.column-margin}
+![Servant Leadership](/images/scrum/servantleader.png)
+:::
+
+::: {.callout-important}
+With a **traditional leadership approach**, the leader encourages people to do their jobs by providing them with **guidance, direction and motivation**.
+
+The main focus of a traditional leader is to improve the business position of the company or the organization in the market.
+:::
+
+<mark>A servant leader shares power, puts the needs of the employees first and helps people develop and perform as highly as possible</mark>. 
+
+Instead of the people working to serve the leader, **the leader exists to serve the people**. As stated by its founder, **Robert K. Greenleaf**, a Servant Leader should be focused on:
+
+> "Do those served grow as persons? Do they, while being served, become healthier, wiser, freer, more autonomous, more likely themselves to become servants?"
+
+::: {.callout-tip}
+Servant leadership occurs when t**he leader's main goal and responsibility is to provide service to their people**.
+
+A servant leader focuses on the people that are directly below them, rather than the company as a whole. In servant leadership, the leader ensures that the followers are growing in all areas — their profession, knowledge, autonomy and even their health and physical development.
+:::
+
+
+# On the same page
+
+When using the idiomatic phrase **on the same page**, <mark>you are referring to a situation where two or more people generally agree or understand the same situation.</mark> This can be related to a specific event or given information, or it can infer an assumption or body of knowledge.
+
+Despite its very [literal inception](https://theteamcanvas.com/) of two or more people being on the same physical book page, when used figuratively, it creates an analogy to help explain that the [parties involved have the same understanding of something.](https://www.scrum.org/resources/its-important-be-same-page)
+
+
+# What is TeamWork
+
+# References
+
 - [Week 4: ScrumMaster, how it works](https://sites.google.com/view/gestioprojectes/llegir/setmana4){.external}
-
-Organizations across all industries globally are hiring Scrum masters because they are experts in handling challenging tasks.
-They address complex issues during the lifecycle of a project, ranging from motivating, leading, and training the team to respect the timelines; coordinating with the stakeholders, product owners, managers, and developers; and onboarding project teams. 
-A Scrum master acts as a bridge between a product/business owner to facilitate accountability at every level. 
-They ensure that everyone is on the same page and help the team meet deadlines and deliverables within budget.
-
-
-Organizations across all industries globally are hiring Scrum masters because they are experts in handling challenging tasks.
-They address complex issues during the lifecycle of a project, ranging from motivating, leading, and training the team to respect the timelines; coordinating with the stakeholders, product owners, managers, and developers; and onboarding project teams. 
-A Scrum master acts as a bridge between a product/business owner to facilitate accountability at every level. 
-They ensure that everyone is on the same page and help the team meet deadlines and deliverables within budget.
-
-Changes as a Scrum Master:
-
-Product vision
-More ownership
-Better quality
-Less centralised management
-Better planning
-Better product
-
-
 
 <!--- navLinks -->
 <br><br>

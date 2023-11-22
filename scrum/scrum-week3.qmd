@@ -56,11 +56,15 @@ Precision in language choice minimizes confusion and facilitates seamless dialog
 
 A <mark>common and concrete vocabulary establishes a baseline for meaningful communication</mark>, fostering connection and collaboration. 
 
+- [Vocabulary SCRUM](/learning/learning-vocab-scrum.qmd)
+
 ## Writing
 
 <mark>In effective writing, clarity is paramount. Clearly articulate your message, tailoring it to your audience's needs.</mark>
 
 Use concise language to convey ideas efficiently, avoiding unnecessary complexity. Employ a feedback loop, welcome input, and adapt your writing style accordingly. Illustrate points with relevant examples for enhanced understanding. Positive reinforcement in your writing can engage readers, and thoughtful follow-up ensures the communication loop is complete. By concentrating on these principles—clarity, conciseness, adaptability, engagement, and follow-up—you create written communication that is not only informative but also impactful and conducive to meaningful interactions.
+
+- [Writting](/learning/learning-how-writing.qmd)
 
 ## Speaking
 
@@ -68,7 +72,9 @@ Use concise language to convey ideas efficiently, avoiding unnecessary complexit
 
 Actively listen, responding thoughtfully to promote engagement. Positive reinforcement in speech fosters a collaborative atmosphere. Adapt your speaking style based on feedback, ensuring effective communication. Utilize relevant examples and visuals to enhance understanding. Follow up verbally to reinforce key points and maintain connections. By concentrating on clarity, audience adaptation, engagement, feedback, and reinforcement, your spoken communication becomes not just informative but also impactful, fostering meaningful interactions and connections with your audience.
 
-# Parecto Principle
+- [Tips](/learning/learning-how-tips.qmd)
+
+# Pareto Principle
 
 ::: {.callout-important}
 The **Pareto principle** states that for many outcomes, roughly 80% of consequences come from 20% of causes (the "vital few").
@@ -128,7 +134,11 @@ And there are more negative side-effects: because of our brains’ plasticity, w
 
 A <mark>cognitive bias is a systematic pattern of deviation from norm or rationality in judgment</mark>.
 
-I[ndividuals create their own "subjective reality"](https://en.wikipedia.org/wiki/Cognitive_bias) from their perception of the input. An individual's construction of reality, not the objective input, may dictate their behavior in the world.
+::: {.column-margin}
+![](/images/scrum/bias-cheatsheet.jpg)
+:::
+
+[Individuals create their own "subjective reality"](https://en.wikipedia.org/wiki/Cognitive_bias) from their perception of the input. An individual's construction of reality, not the objective input, may dictate their behavior in the world.
 
 ![Cognitive bias codex](/images/scrum/cognitive_bias.jpg)
 
