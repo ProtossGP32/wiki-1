@@ -165,7 +165,7 @@ Tasks often follow the **SMART acronym**: specific, measurable, achievable, rele
 
 > A **habit** is a [routine of behavior](https://en.wikipedia.org/wiki/Habit) that is repeated regularly and tends to occur **subconsciously**.
 
-![F. Alexander, about habits](/images/scrum/quote_habit.png){width="40%"}
+![[F. Alexander](https://en.wikipedia.org/wiki/F._Matthias_Alexander), about habits](/images/scrum/quote_habit.png){width="40%"}
 
 ## Atomic Habits
 
@@ -218,7 +218,7 @@ The cue triggers a craving. Then it motivates a response. And it provides a rewa
 
 - [Week 2: User stories, tasks and habits](https://sites.google.com/view/gestioprojectes/llegir/setmana2){.external}
 - [User stories with examples and a template](https://www.atlassian.com/agile/project-management/user-stories)
-- [10 TIPS FOR WRITING GOOD USER STORIES](https://www.romanpichler.com/blog/10-tips-writing-good-user-stories/)
+- [Ten tips for writing good user stories](https://www.romanpichler.com/blog/10-tips-writing-good-user-stories/)
 - [How to Write User Stories in Agile Software Development](https://www.easyagile.com/blog/how-to-write-good-user-stories-in-agile-software-development/)
 - [Definition of Done vs Acceptance Criteria](https://www.visual-paradigm.com/scrum/definition-of-done-vs-acceptance-criteria/)
 - [Planning poker](https://www.mountaingoatsoftware.com/agile/planning-poker)

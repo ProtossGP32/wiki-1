@@ -15,7 +15,7 @@ format:
 
 # Meetings
 
-![meetings](/images/scrum/effective-meetings-1.jpg){width="30%"}
+![Meetings](/images/scrum/effective-meetings-1.jpg){width="30%"}
 
 **Effective and productive meetings are crucial for collaboration, decision-making, and achieving organizational goals.**
 
@@ -23,29 +23,54 @@ format:
 A well-organized meeting not only enhances productivity but also fosters a positive work culture. To ensure a productive meeting, it's essential to focus on time management, clearly defined roles, the right number of participants, established goals, and meaningful conclusions.
 :::
 
-## Time Management
+There are five main types of meetings:
 
-**Time is a precious resource, and effective time management is key to a successful meeting**. Begin by setting a realistic agenda with specific time allocations for each agenda item. Stick to the schedule to avoid wasting time and ensure that discussions remain focused and purposeful. Assign a timekeeper to help monitor the clock and remind participants of time constraints.
+- Brainstorming or innovation meetings
+- Planning meetings
+- Kick-off meetings
+- Retrospective or post-mortem meetings
+- Decision-making or problem-solving meetings
 
-## Roles of the Meeting
-
-Assigning **specific roles ensures that everyone contributes to the meeting's success**. Designate a facilitator to guide the discussion, a note-taker to record key points, and a timekeeper to manage the schedule. Having clearly defined roles helps streamline the meeting process and ensures that each aspect is adequately addressed.
-
-## Number of Participants
-
-**Determining the appropriate number of participants is crucial**. Too many attendees can lead to a lack of focus and increased likelihood of off-topic discussions. On the other hand, too few participants may result in a limited range of perspectives. Aim for a balance that allows for diverse input without sacrificing efficiency. Consider inviting only those individuals whose presence is essential to achieving the meeting's goals.
 
 ## Goal Meeting
 
-**Clearly defined goals give purpose to a meeting and help participants understand the expected outcomes.** Begin by stating the meeting's objectives at the outset, ensuring that they align with the organization's overall mission. Break down larger goals into manageable tasks and prioritize them. This approach keeps discussions on track and ensures that participants leave with a sense of accomplishment.
+- **Clearly defined goals give purpose to a meeting and help participants understand the expected outcomes.** Begin by stating the meeting's objectives at the outset, ensuring that they align with the organization's overall mission.
+  
+- **Break down larger goals into manageable tasks and prioritize them**. This approach keeps discussions on track and ensures that participants leave with a sense of accomplishment.
 
-## Common Boycotts and Solutions
+## Roles & Number of Participants
 
-Meetings are susceptible to various behaviors that can **hinder productivity**. Common issues include late arrivals, multitasking, and disengagement. Encourage punctuality by starting and ending on time, implement a no-device policy to minimize distractions, and actively involve all participants to maintain engagement. Addressing these issues head-on fosters a more respectful and focused meeting environment.
+Having clearly defined roles helps streamline the meeting process and ensures that each aspect is adequately addressed.
+
+- Assigning **specific roles ensures that everyone contributes to the meeting's success**.
+  
+- Designate a **facilitator to guide the discussion**, a note-taker to record key points, and a timekeeper to manage the schedule. 
+
+- **Determining the appropriate number of participants is crucial**. Too many attendees can lead to a lack of focus and increased likelihood of off-topic discussions. On the other hand, too few participants may result in a limited range of perspectives. Aim for a balance that allows for diverse input without sacrificing efficiency.
+  
+- <mark>Consider inviting only those individuals whose presence is essential to achieving the meeting's goals.</mark>
+
+## Time Management
+
+- **Time is a precious resource, and effective time management is key to a successful meeting**. Begin by setting a realistic agenda with specific time allocations for each agenda item.
+  
+- Stick to the schedule to avoid **wasting time** and ensure that discussions remain focused and purposeful. Assign a timekeeper to help monitor the clock and remind participants of time constraints.
+
+
+
+## Common Boycotts
+
+- Meetings are susceptible to various behaviors that can **hinder productivity**. <mark>Common issues include late arrivals, multitasking, and disengagement. Encourage punctuality by starting and ending on time, implement a no-device policy to minimize distractions, and actively involve all participants to maintain engagement</mark>. Addressing these issues head-on fosters a more respectful and focused meeting environment.
 
 ## Next to
 
-Conclude the meeting by summarizing **key takeaways and action items**. Assign responsibilities for follow-up tasks and set deadlines. Provide a forum for participants to share feedback on the meeting process, allowing for continuous improvement. A well-concluded meeting not only ensures that goals are met but also sets the stage for future productive collaborations.
+A well-concluded meeting not only ensures that goals are met but also sets the stage for future productive collaborations.
+
+- Conclude the meeting by summarizing **key takeaways and action items**.
+  
+- **Assign responsibilities for follow-up tasks and set deadlines**.
+  
+- Provide a **forum for participants to share feedback on the meeting process, allowing for continuous improvement**.
 
 
 # Impediments
@@ -88,13 +113,22 @@ Let's explore each of these concepts and understand their relevance in the conte
 
 ## Keep It Simple
 
+![Kiss](/images/scrum/keep-it-simple-stupid.jpg){width="40%"}
+
 The "keep it simple" concept is a fundamental principle in agile methodologies, including Scrum. By breaking down complex tasks into smaller, more manageable units, Scrum teams can maintain focus and clarity. Iteration, in the form of sprints in Scrum, embodies this simplicity principle.
 
 - **Incremental Progress**: Scrum emphasizes short, time-boxed iterations (sprints) where the team delivers a potentially shippable product increment. This incremental approach allows for continuous improvement and simplifies the development process.
 - **Feedback Loops**: Frequent iterations provide opportunities for regular feedback from stakeholders. This ensures that the product aligns with evolving requirements, promoting simplicity by addressing issues early in the development process.
 
 ## Lindy Effect & Turkey Parable
-[Nassim Nicholas Taleb's Turkey Parable](https://www.forbes.com/sites/hillennevins/2021/11/24/the-parable-of-the-turkey/) illustrates the idea of the [Lindy effect](https://en.wikipedia.org/wiki/Lindy_effect), suggesting that the longer something survives, the longer its life expectancy. In the context of Scrum:
+
+![Turkey *pavoland*](/images/scrum/Nassim%20Taleb's%20Black%20Swan%20Thanksgiving%20Turkey.png){width="60%"}
+
+[Nassim Nicholas Taleb's Turkey Parable](https://www.forbes.com/sites/hillennevins/2021/11/24/the-parable-of-the-turkey/) illustrates the idea of the [Lindy effect](https://en.wikipedia.org/wiki/Lindy_effect), suggesting that the longer something survives, the longer its life expectancy. Sometimes a [dramatic event](https://www.businessinsider.com/nassim-talebs-black-swan-thanksgiving-turkey-2014-11) and *unexpected* terminates the expectatives and lifecycle of the product.  
+
+- The problem that **Taleb** is really attacking in his book is forecasting, particularly economic forecasting, and the practice of using past events to predict the future. 
+
+In the context of Scrum:
 
 - **Incremental Learning**: Each iteration in Scrum is an opportunity for the team to learn and adapt. The Lindy effect supports the idea that the longer a project survives and adapts through iterations, the more likely it is to continue thriving and improving.
 - **Risk Mitigation**: The Turkey Parable serves as a cautionary tale about avoiding assumptions. In Scrum, regular iterations provide opportunities to reassess assumptions, identify risks early, and adapt plans accordingly, reducing the likelihood of unwarranted assumptions leading to project failure.
@@ -172,6 +206,7 @@ By balancing cognitive load, clear tasks, follow-through, and adaptability, team
 - [These 12 Meeting Mistakes Cost Companies $37 Billion A Year In Lost Productivity](https://www.businessinsider.com/common-meeting-mistakes-2014-11?IR=T)
 - [The 16 best ways to sabotage your organization's productivity, from a CIA manual published in 1944](https://www.businessinsider.com/oss-manual-sabotage-productivity-2015-11?IR=T)
 - [Simple Sabottage Manual -strategic Services-](https://drive.google.com/file/d/1xXsLu2TXqbkuL_QIFKAOkofi8eVS12Lk/view)
+- [Meetings Types](https://meetingnotes.com/blog/types-of-meetings)
 
 
 

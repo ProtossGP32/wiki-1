@@ -65,7 +65,7 @@ The Scrum Master serves **the organization in several ways**, including:
 [Servant leadership](https://www.investopedia.com/terms/s/servant-leadership.asp) and traditional leadership employ different techniques and offer vastly different outcomes.
 
 ::: {.column-margin}
-![Servant Leadership](/images/scrum/servantleader.png)
+![Servant Leadership](/images/scrum/servantleader.png){width="60%"}
 :::
 
 ::: {.callout-important}
@@ -86,19 +86,81 @@ Servant leadership occurs when t**he leader's main goal and responsibility is to
 A servant leader focuses on the people that are directly below them, rather than the company as a whole. In servant leadership, the leader ensures that the followers are growing in all areas — their profession, knowledge, autonomy and even their health and physical development.
 :::
 
+## Team Leader vs Scrum Master
+
+The [Scrum Master role is definitely not a “manager” role](https://extremeuncertainty.com/scrum-master-vs-team-leader/), and <mark>the Scrum Master is not directly in charge of any person or piece of work.</mark>
+
+::: {.column-margin}
+**Team Leader is an old and established role**. Its real meaning varies from context to context. And from what type of team and what type of specialist.
+:::
+
+Earlier versions of the Scrum Guide emphasised this and referred to the role as a **servant leader role**.
+
+While they are not a manager, and definitely **not** a project manager, <mark>a good Scrum Master is in fact a leader</mark>.
+
+They are meant to challenge the team and push them out of their comfort zone. They are not meant to be a passive listener and just a meeting organizer or facilitator. 
+
 
 # On the same page
 
-When using the idiomatic phrase **on the same page**, <mark>you are referring to a situation where two or more people generally agree or understand the same situation.</mark> This can be related to a specific event or given information, or it can infer an assumption or body of knowledge.
+When using the idiomatic phrase **on the same page**, <mark>you are referring to a situation where two or more people generally agree or understand the same situation.</mark> This can be related to a specific event or given information.
 
-Despite its very [literal inception](https://theteamcanvas.com/) of two or more people being on the same physical book page, when used figuratively, it creates an analogy to help explain that the [parties involved have the same understanding of something.](https://www.scrum.org/resources/its-important-be-same-page)
+Despite its very literal inception of two or more people being on the same physical book page, when used figuratively, it creates an analogy to help explain that the [parties involved have the same understanding of something.](https://www.scrum.org/resources/its-important-be-same-page)
+
+## Team canvas
+
+![[Team canvas](https://theteamcanvas.com/) is Business Model Canvas](/images/scrum/team-canvas.png){width="80%"}
+
+::: {.column-margin}
+![Business Model Generation](/images/scrum/1200px-Business_Model_Canvas.png){width="70%"}
+
+Business Model Generation teaches you how to systematically understand, design and differentiate your business model.
+:::
 
 
-# What is TeamWork
+The [Team canvas](https://theteamcanvas.com/) is <mark>Business Model Canvas for teamwork. It is a free tool for leaders, facilitators and consultants to organize [team alignment](http://masterfacilitator.com/wp-content/uploads/2016/12/Team-Canvas-v.-0.8.pdf){.external} meetings and **bring members on the same page**</mark>, resolve conflicts and build productive culture, fast. 
+
+
+# What is a WorkTeam
+
+A team (or a work team) is a group of people with complementary skills who work **in alignment** to achieve a specific goal.
+
+::: {.callout-note}
+**Alignment, in the context of the workplace**, implies a:
+
+- <mark>commonality of purpose,an intense teamfocus, improved efficiency and cohesion;synchronized and coordinated effort; 
+- an almost intuitive understanding of how to complement one another’s efforts, as seen in fast-moving team sports like hockey or basketball;
+-  and integrating one’s personal interests with those of the team or organization.</mark>
+
+In other words, it is that group state where members are:
+
+- ‘on the same page’,
+- ‘rowing in the same direction’, and
+- ‘fighting the same battles’.
+:::
+
+## The 5 Stages of Team Development
+
+Understanding the [five stages of team development](https://www.teamwork.com/blog/the-5-stages-of-team-development-what-you-need-to-know/) enables you to get teams started, resolve conflicts more smoothly, share information effectively, achieve top results, and then review outcomes to keep finding ways to improve.
+
+![Stages Team](/images/scrum/stages_team.png){width="80%"}
+
+- **Forming**: This is where team members first meet. It’s important for team leaders to facilitate the introductions and highlight each person’s skills and background. Team members are also given project details and the opportunity to organize their responsibilities.
+- **Storming**: At this stage, team members openly share ideas and use this as an opportunity to stand out and be accepted by their peers. Team leaders help teams in this stage by having a plan in place to manage competition among team members, make communication easier, and make sure projects stay on track.
+- **Norming**: By now, teams have figured out how to work together. There’s no more internal competition, and responsibilities and goals are clear. Each person works more efficiently because he or she has learned how to share their ideas and listen to feedback while working toward a common goal.
+- **Performing**: There’s a high level of cohesion and trust between team members. Teams are functioning at peak efficiency with less oversight from team leaders. Issues still come up, but at this point, teams have strategies for resolving problems without compromising timelines and progress.
+- **Adjourning**: Teams complete their project and debrief on what went well and what could be improved for future projects. Afterwards, team members move on to new projects. Now let’s look at how to use this model to amplify 
 
 # References
 
+- [‘Getting on the Same Page’: Creating Team Alignment for Team Success](https://silverconsultinginc.com/getting-on-the-same-page-creating-teamalignmentfor-team-success/){.external}
 - [Week 4: ScrumMaster, how it works](https://sites.google.com/view/gestioprojectes/llegir/setmana4){.external}
+- [7 Industries That Look for Scrum Master Certification in 2021](https://www.greycampus.com/blog/agile-and-scrum/industries-hiring-scrum-masters){.external}
+- [Business Model Generation](https://www.strategyzer.com/library/business-model-generation){.external}
+- [Master the practice of innovation](https://www.strategyzer.com/){.external}
+- [The Business Model Canvas](https://www.strategyzer.com/library/the-business-model-canvas){.external}
+- [Teamwork Skills: Definition and Examples](https://hk.indeed.com/career-advice/career-development/teamwork-skills){.external}
+- [Global Culture Report](https://www.octanner.com/global-culture-report){.external}
 
 <!--- navLinks -->
 <br><br>

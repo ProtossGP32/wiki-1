@@ -20,6 +20,8 @@ format:
 https://sites.google.com/view/gestioprojectes/llegir/setmana3
 Toyota SCRUM
 
+![Taiichi Ohno](/images/scrum/taiichiOhno.jpg)
+
 Taiichi Ohno
 
     You are a cost >>> First reduce waste.
@@ -59,6 +61,8 @@ https://archive.nytimes.com/www.nytimes.com/interactive/2011/05/18/business/delt
 
 https://increment.com/testing/what-broke-the-bank/
 
+
+![Taiichi Ohno](/images/scrum/agilehistory-11.png)
 
 <!--- navLinks -->
 <br><br>

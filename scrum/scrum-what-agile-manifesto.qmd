@@ -18,7 +18,7 @@ format:
 [Through this work we have come to value](https://agilemanifesto.org/){.external}  
 [Principles behind the Agile Manifesto](https://agilemanifesto.org/principles.html){.external}
 
-![Agile Software Development](/images/scrum/agile-maifesto.jpg)
+![Agile Software Development](/images/scrum/agile-maifesto.jpg){width="60%"}
 
 1. 
 > Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
