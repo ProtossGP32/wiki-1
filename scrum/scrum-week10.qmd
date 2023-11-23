@@ -15,54 +15,72 @@ format:
 
 # Before SCRUM
 
+# Agile history
+
+![Agile history from Toyota, Crystal, Refactorin to SCRUM](/images/scrum/agilehistory-11.png)
+
+From Toyota's manufacturing principles to the Agile Manifesto and Scrum, agile methodologies have continually adapted, fostering collaboration, adaptability, and customer-centricity in software development processes.
+
+Agile methodologies have evolved over decades, with roots tracing back to post-World War II Japan. In 1945, Toyota implemented concepts influenced by W. Edwards Deming's Total Quality Management, shaping the Toyota Production System (TPS). TPS emphasized continuous improvement, flexibility, and customer value.
+
+In the 1980s, Toyota engineer Taiichi Ohno introduced Lean Manufacturing, influencing agile practices by emphasizing efficiency and eliminating waste.
+
+Crystal Clear, an agile methodology developed by Alistair Cockburn in the 1990s, emphasized communication and teamwork. Concurrently, Martin Fowler's "Refactoring" book highlighted iterative code improvement.
+
+In the 1990s and early 2000s, Jeff Sutherland and Ken Schwaber independently developed Scrum. Rooted in empirical process control theory, Scrum formalized roles (Scrum Master, Product Owner, and Development Team) and events (Sprints) to enhance software development agility.
+
+The software development industry began adopting agile principles in the 1990s. A seminal moment was the publication of the Agile Manifesto in 2001, where software developers articulated values such as individuals and interactions over processes and tools.
+
+# Toyota SCRUM
+
+[Toyota Connected uses Scrum combined with the Toyota Production System to deliver Lean Production](https://www.infoq.com/articles/scrum-the-toyota-way/), enabling teams to deliver rapid PDCA cycles. Scrum of Scrums, Meta Scrum, and the chief product owner, are some of the approaches used to scale Scrum for multiple teams and products. Agility is not the goal. It’s a result, an outcome. 
+
+::: {.callout-note}
+
+- There is no one-size-fits-all approach to being agile, or to scaling Scrum
+- Lean and Agile are different things, but are great partners
+- You can be lean without being agile, and you can be agile without being lean
+- Executives must be fully engaged and part of the process
+- Understanding complexity and multi-team systems is critical for success  
+
+:::
+## Taiichi Ohno
+
+![Taiichi Ohno](/images/scrum/taiichiOhno.jpg){width="40%"}
+
+**Taiichi Ohno philosophy:**
+
+- You are a cost >>> First reduce waste.
+- First say, "I can do it." >>>  And try before everything.
+- The workplace is a teacher >>> You can find answers only in the workplace.
+- Do anything immediately  >>> Starting something right now is the only way to win.
+- Once you start something, persevere with it >>> Do not give up until you finish it.
+- Explain difficult things in an easy-to-understand manner >>> Repeat things that are easy to understand.
+- Waste is hidden. Do not hide it >>>  Make problems visible.
+- Valueless motions are equal to shortening one's life.
+- Re-improve what was improved for further improvement.
+- Wisdom is given equally to everybody. The point is whether one can exercise it.
+
+# SCRUM experinces
+
+## Banc de Sabadell & British bank TSB
+
+[What broke the bank](https://increment.com/testing/what-broke-the-bank/)
+![](/images/scrum/tsb.png)
+
+## Delta and Northwest merger 
+
+[How to Merge Two Airlines](https://archive.nytimes.com/www.nytimes.com/interactive/2011/05/18/business/delta-northwest-merger-graphic.html)
+![](/images/scrum/2airlines.gif)
 
 
-https://sites.google.com/view/gestioprojectes/llegir/setmana3
-Toyota SCRUM
-
-![Taiichi Ohno](/images/scrum/taiichiOhno.jpg)
-
-Taiichi Ohno
-
-    You are a cost >>> First reduce waste.
-
-    First say, "I can do it." >>>  And try before everything.
-
-    The workplace is a teacher >>> You can find answers only in the workplace.
-
-    Do anything immediately  >>> Starting something right now is the only way to win.
-
-    Once you start something, persevere with it >>> Do not give up until you finish it.
-
-    Explain difficult things in an easy-to-understand manner >>> Repeat things that are easy to understand.
-
-    Waste is hidden. Do not hide it >>>  Make problems visible.
-
-    Valueless motions are equal to shortening one's life.
-
-    Re-improve what was improved for further improvement.
-
-    Wisdom is given equally to everybody. The point is whether one can exercise it.
-
-A Brief History of Scrum (Time)
-
-Scrum The Toyota Way
-
-14 principles Toyota 
-
-Toyota doesn't fire anyone, still now 
-
-Lean ... Build a tower, build a team 
-
-https://increment.com/testing/what-broke-the-bank/
-
-https://archive.nytimes.com/www.nytimes.com/interactive/2011/05/18/business/delta-northwest-merger-graphic.html
-https://archive.nytimes.com/www.nytimes.com/interactive/2011/05/18/business/delta-northwest-merger-graphic.html
-
-https://increment.com/testing/what-broke-the-bank/
 
 
-![Taiichi Ohno](/images/scrum/agilehistory-11.png)
+# References
+
+- [SCRUM: Week3](https://sites.google.com/view/gestioprojectes/llegir/setmana3)
+- [A Brief History of Scrum (Time)](https://medium.com/serious-scrum/scrum-a-walk-down-history-lane-b180fb19288f){.external}
+- [Toyota Mejora continua](http://scrumizate.com/post/45/los-14-principios-del-modelo-toyota-para-la-mejora-continua-en-scrum){.external}
 
 <!--- navLinks -->
 <br><br>

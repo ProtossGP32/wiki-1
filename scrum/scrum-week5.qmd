@@ -18,7 +18,7 @@ format:
 ::: {.callout-note}
 Your mindset is a [set of beliefs that shape how you make sense of the world and yourself](https://www.verywellmind.com/what-is-a-mindset-2795025). It influences how you think, feel, and behave in any given situation. It means that what you believe about yourself impacts your actions and output.
 
-It is alos decise in **decision-making process**.
+It is also decisive in **decision-making process**, creating **habits** and at **problem-solving**.
 :::
 
 
@@ -29,16 +29,16 @@ Mindsets can influence how people <mark>behave in a wide range of situations in 
 
 # Fixed vs Growth mindset
 
-![Fixed vs Growth mindset](/images/scrum/fixed_growth.png){width="40%"}
+![Fixed vs Growth mindset](/images/scrum/fixed_growth.png){width="80%"}
 
 
-> "I've seen so many people with this one consuming goal of proving themselves in the classroom, in their careers, and in their relationships.
+> I've seen so many people with this one consuming goal of proving themselves in the classroom, in their careers, and in their relationships.
 > 
 > Every situation calls for a confirmation of their intelligence, personality, or character.
 > 
 > Every situation is evaluated: Will I succeed or fail? Will I look smart or dumb? Will I be accepted or rejected? Will I feel like a winner or a loser?
 > 
-> — Carol Dweck
+> —— Carol Dweck
 
 Carol Dweck's groundbreaking work explores the dichotomy between **fixed and growth mindsets**.
 
@@ -50,12 +50,14 @@ Dweck's research underscores the transformative power of cultivating a growth mi
 # Purpose
 
 
->“The two most important days in your life are the day you are born and the day you find out why.""
+> “The two most important days in your life are the day you are born and the day you find out why."
 >
 > ―― Mark Twain
 
 > “The mass of men lead lives of quiet desperation. What is called resignation is confirmed desperation...
+> 
 > A stereotyped but unconscious despair is concealed even under what are called the games and amusements of mankind.
+> 
 > There is no play in them, for this comes after work. But it is a characteristic of wisdom not to do desperate things.”
 > 
 > ―― Henry David Thoreau
@@ -88,7 +90,7 @@ Day by day, you affirm your worthiness to lead a happy life and your ability to 
 
 Soviet-Harvard dellusion is that **academic knowledge is superior and that we must understand the mechanism in order to understand the effectiveness of phenomenology.**
 
-![Soviet-Harvard dellusion](/images/scrum/harvard-soviet.png)
+![Soviet-Harvard dellusion](/images/scrum/harvard-soviet.png){width="90%"}
 
 ::: {.callout-tip}
 **The Soviet-Harvard Delusion**: Real knowledge comes from the process of Random Tinkering (antifragile) → Heuristics (technology) → Practice and Apprenticeship –> Random Tinkering (antifragile) → Heuristics (technology) → Practice and Apprenticeship

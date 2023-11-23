@@ -51,6 +51,10 @@ With only 18 minutes to build their towers, teams often follow a similar constru
 
 - [Marshmallow Tower Challenge](https://www.teachingentrepreneurship.org/marshmallow-spaghetti-tower-building-competition/)
 
+
+<div style="max-width:854px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/lang/en/tom_wujec_build_a_tower_build_a_team" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>

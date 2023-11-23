@@ -111,6 +111,14 @@ All these concepts are building the [user-story driven-aproach](/scrum/scrum-wee
 
 Let's explore each of these concepts and understand their relevance in the context of **Scrum**.
 
+## Less Wrong
+
+![Less Wrong](/images/scrum/lessWrong.png)
+
+In human behavior and **decision-making**, being [less wrong](https://www.lesswrong.com/) involves <mark>acknowledging the uncertainty inherent in complex situations. Instead of seeking absolute certainty, individuals focus on minimizing errors and learning from mistakes.</mark>
+
+It emphasizes a humble approach to decision-making, recognizing that perfection is elusive, and <mark>continuous improvement comes from adapting based on feedback and experience</mark>.
+
 ## Keep It Simple
 
 ![Kiss](/images/scrum/keep-it-simple-stupid.jpg){width="40%"}

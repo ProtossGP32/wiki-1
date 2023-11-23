@@ -17,12 +17,18 @@ format:
 
 # First at all, the Team
 
+::: {.callout-note}
+According to the Scrum Guide, the **Development Team** “consists of professionals who do the work of delivering a potentially releasable Increment of “Done” product at the end of each Sprint.
 
-<mark>According to the Scrum Guide, the **Development Team** “consists of professionals who do the work of delivering a potentially releasable Increment of “Done” product at the end of each Sprint. Only members of the Development Team create the Increment. Development Teams are structured and empowered by the organization to organize and manage their own work.”</mark>
+Only members of the Development Team <mark>create the Increment</mark>. **Development Teams** are structured by the organization to organize and manage their own work.”</mark>
+:::
 
-![Development Team](/images/scrum/Product-team-in-Scrum.png)
 
-Development Teams are hence essential to Scrum’s built-in checks & balances as the Development Team has the sole control over the Sprint Backlog and is watching over the Definition of "Done". Generally, Development Teams need to have the following characteristics to be successful:
+![Development Team](/images/scrum/Product-team-in-Scrum.png){width="60%"}
+
+Development Teams are hence essential to Scrum’s built-in checks & balances as the Development Team <mark>has the sole control over the Sprint Backlog and is watching over the Definition of "Done"</mark>.
+
+Generally, **Development Teams** need to have the following characteristics to be successful:
 
 - They are **self-organizing**. No one (not even the Scrum Master) tells the Development Team how to turn Product Backlog into Increments of potentially releasable functionality;
 - Development Teams are **cross-functional**, with all the skills as a team necessary to create a product Increment;
@@ -33,7 +39,17 @@ Development Teams are hence essential to Scrum’s built-in checks & balances as
 
 # The specialist role
 
-The role of a specialist in a team can be crucial for the success of a project. Specialists bring deep expertise in a specific area, and their contributions can enhance the overall quality and efficiency of the team's work. Here are a few aspects of a specialist's role in a team:
+The <mark>role of a specialist in a team can be crucial for the success of a project.</mark> Specialists bring deep expertise in a specific area, and their contributions can enhance the overall quality and efficiency of the team's work.
+
+::: {.callout-important}
+While the traditional roles are **well-established in Scrum** (Scrum Master, Team, Product Owner), <mark>some companies may introduce additional roles based on their specific needs or organizational structure</mark>.
+
+It's important to note that while **deviations from the standard roles might work for some organizations**, it's crucial to ensure that the essence and principles of Scrum are maintained for the effective implementation of agile practices.
+
+If a "specialist" role is introduced, <mark>it's essential to clarify its responsibilities, interactions with other roles</mark>, and how it contributes to the overall success of the Scrum team.
+:::
+
+Here are a few aspects of a specialist's role in a team:
 
 - **Expertise**: Specialists typically have a high level of expertise in a specific domain, whether it's in technology, design, operations, or another field. This expertise is valuable for solving complex problems and making informed decisions within their domain.
 - **Problem Solving**: Specialists are often called upon to solve intricate problems that require their specific knowledge and skills. Their ability to analyze and address challenges in their area of expertise can be critical for the team's success.
