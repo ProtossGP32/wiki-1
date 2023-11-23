@@ -188,7 +188,7 @@ Understanding the [five stages of team development](https://www.teamwork.com/blo
 - [Teamwork Skills: Definition and Examples](https://hk.indeed.com/career-advice/career-development/teamwork-skills){.external}
 - [Global Culture Report](https://www.octanner.com/global-culture-report){.external}
 - [Scrum Master vs Project Manager — An Overview of the Differences](https://www.scrum.org/resources/blog/scrum-master-vs-project-manager-overview-differences){.external}
-
+- [People are called a team in Scrum, but are they really a team?](https://www.scrum.org/resources/blog/people-are-called-team-scrum-are-they-really-team)
 
 <!--- navLinks -->
 <br><br>
