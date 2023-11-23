@@ -35,6 +35,32 @@ Changes as a **Scrum Master**:
 - Better planning
 - Better product
 
+
+# What a Scrum Master does
+
+Some examples of what a Scrum Master should do include:
+
+- A Scrum Master might be teaching people about Agility and the Scrum Framework. You could therefore see the Scrum Master as a teacher;
+- A Scrum Master might be having some coaching conversations with the Product Owner, managers, customers, Development Teams and other people or stakeholders in the organization, in order to help them gain a better understanding of Scrum. You could therefore see the Scrum Master as a coach for the Product Owner, Development Team(s) and the organization;
+- A Scrum Master might be facilitating some of the Scrum Events, such as the Sprint Planning, Sprint Review or Sprint Retrospective. This doesn't mean booking (conference) rooms. It means gathering observations, preparing the Event, coaching and facilitating people during the Event, etc. You could therefore see the Scrum Master as a facilitator;
+- A Scrum Master might be leading an Agile or Scrum implementation in the organization, working with all the different stakeholders (employees, managers, customers, the board of directors and others) in order to plan and manage the Agile implementation. A Scrum Master is therefore a (servant) leader;
+
+
+# What a Scrum Master does not do
+
+So, what a Scrum Master should not (ever) do is creating, managing or communicating:
+
+- Creating and managing the business case;
+- Managing changes and change requests (to Scope, Time and Budget);
+- Creating and managing project plans, including the Project Initiation Document, Project Plan, Gantt Charts and others;
+- Tracking and measuring project/team progress;
+- The project results and/or output;
+- The Product Backlog and/or the Product Backlog Items. The Scrum Master has no role regarding the business requirements;
+- Project Risks & Opportunities (unless scrum implementation related);
+- Team Performance and HR-processes (including Performance Management);
+- And many others… (Including the accountabilities/ responsibilities of a Project Manager…);
+
+
 # How ScrumMaster relates to others
 
 ![ScrumMaster](/images/scrum/scrummaster1.png){width="60%"}
@@ -161,6 +187,8 @@ Understanding the [five stages of team development](https://www.teamwork.com/blo
 - [The Business Model Canvas](https://www.strategyzer.com/library/the-business-model-canvas){.external}
 - [Teamwork Skills: Definition and Examples](https://hk.indeed.com/career-advice/career-development/teamwork-skills){.external}
 - [Global Culture Report](https://www.octanner.com/global-culture-report){.external}
+- [Scrum Master vs Project Manager — An Overview of the Differences](https://www.scrum.org/resources/blog/scrum-master-vs-project-manager-overview-differences){.external}
+
 
 <!--- navLinks -->
 <br><br>
