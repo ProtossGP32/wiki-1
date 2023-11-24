@@ -77,6 +77,38 @@ The software development industry began adopting agile principles in the 1990s. 
 
 # SCRUM experiences
 
+## Why Do Managers Hate Agile?
+
+- [Why Do Managers Hate Agile?](https://www.forbes.com/sites/stevedenning/2015/01/26/why-do-managers-hate-agile/?sh=6c301c1a3a57){.external}
+
+> Why don’t Agile and management get along?
+>  In a poll last Wednesday of some 400 people working in many different firms where the practices known as Agile and Scrum are being implemented,
+> 
+> **88% reported tension** between the way Agile/Scrum teams are managed in their organization and the way the rest of the organization is managed.
+> 
+> Only **8% reported "no tension."**
+
+
+![The vertical world of hierachical bureaucracy](/images/scrum/vertical-world-of-hierarchical-bureaucracy.png){width="50%"}
+
+As **Gary Hamel** has noted, hierarchical bureaucracy solved two essential problems:
+
+- getting **semiskilled employees to perform repetitive activities** competently and efficiently;
+- **coordinating those efforts** so that products could be produced in large quantities.
+
+In a stable environment, these liabilities didn’t matter much.
+
+Change wasn’t important. (...) With semi-skilled employees performing repetitive tasks, **collaboration wasn’t important**. And who really cared if the workers were dispirited? It was enough that they had their job and their paycheck.
+
+<mark>Then the world became turbulent</mark>
+
+But the world changed and the marketplace became turbulent. There were a number of factors: Globalization, deregulation, and new technology, particularly the Internet. The Internet changed everything.
+
+<mark>The answer was, collaboration, teamwork, Agile.</mark>
+
+![The horizontal world of Agile](/images/scrum/horitzontal-world-of-Agile.png){width="50%"}
+
+
 ## Banc de Sabadell & British bank TSB
 
 [What broke the bank](https://increment.com/testing/what-broke-the-bank/){.external}
@@ -97,7 +129,6 @@ The software development industry began adopting agile principles in the 1990s. 
 
 - [Surprise: Microsoft Is Agile](https://www.forbes.com/sites/stevedenning/2015/10/27/surprise-microsoft-is-agile/?sh=78b0178f2867){.external}
 - [Microsoft's 16 Keys To Being Agile At Scale](https://www.forbes.com/sites/stevedenning/2015/10/29/microsofts-sixteen-keys-to-becoming-agile-at-scale/?sh=1ad018e315ce){.external}
-- [Why Do Managers Hate Agile?](https://www.forbes.com/sites/stevedenning/2015/01/26/why-do-managers-hate-agile/?sh=6c301c1a3a57){.external}
 - [What is Scrum?](https://learn.microsoft.com/en-us/devops/plan/what-is-scrum){.external}
 - [Azure Boards](https://azure.microsoft.com/en-us/products/devops/boards/){.external}
 
