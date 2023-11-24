@@ -80,6 +80,19 @@ Share how mindset influences learning, effort, and achievement.
 
 ![Mindset: The New Psychology of Success](/images/scrum/mindset.jpg){width="30%"}
 
+- **"Stolen Focus: Why You Can't Pay Attention"** by Johann Hari:
+  Investigate the impact of modern distractions on attention spans.
+  Examine strategies for reclaiming focus in a world full of interruptions.
+
+  ![Stolen Focus: Why You Can't Pay Attention](/books/StolenFocus.png){width="30%"}
+
+- **"The Master and His Emissary: The Divided Brain and the Making of the Western World"** by Iain McGilchrist:
+  Delve into the intricate relationship between the brain's hemispheres.
+  Explore McGilchrist's thesis on how this division shapes human culture and civilization.
+
+  ![The Master and His Emissary: The Divided Brain and the Making of the Western World](/books/themasterandhisemissary.jpg){width="30%"}
+
+
 # References
 
 - [Week1](https://sites.google.com/view/gestioprojectes/llegir/setmana1)
