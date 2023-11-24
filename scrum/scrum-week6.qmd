@@ -89,6 +89,28 @@ So, what a **Product Owner** should not do is:
 - Being a Manager. Meaning that a **Product Owner** is not responsible for team performance or HR-processes, such as performance management. Of course, a **Product Owner** can share feedback with team members, just like every other person in the company could. But a **Product Owner** is not a “team boss”, not a “manager” and not “HR-responsible”.
 
 
+# Product backlog
+
+::: {.callout-note}
+The **Product Backlog**’s purpose is to represent all of the work the Scrum Team knows it needs to do in order to deliver the product. Teams can use the Product Backlog to make decisions about what they should do next. 
+:::
+
+![](/images/scrum/ScrumBoard-1024x431.jpg)
+
+
+The Product Backlog consists of:
+
+- **Product Backlog items (PBIs)** - each of which represents something that needs to be done. 
+- A **Product Goal** - that describes the Scrum Team’s current long-term objective for the product.
+
+
+Product Backlogs are a single, transparent way to find the Scrum Team’s current knowledge of all work that must be done. They are kept as an ordered list.
+
+- **Single**: There should be only one Product Backlog per product. This means that there are no separate backlogs for different types of PBIs, for example no backlog for defect reports or for UX work. - **Everything** lives in the same Product Backlog. Additionally, if multiple Scrum Teams are working on the same product, they use the same backlog.
+- **Transparent**: it should be easily accessible and used to drive a shared understanding of the PBIs among the Scrum Team and stakeholders.
+- **Current**: The Product Backlog is “emergent” meaning that it grows, shrinks and evolves over time. It is not a static artifact, it is updated frequently based on information uncovered during development as well as from stakeholders, customers and the market.
+- **Ordered**: The order of the PBIs is decided by the Product Owner. The order may be based on factors such as business value, risk, return on investment or dependencies.
+
 # References
 
 - [Less: Product Owner](https://less.works/less/framework/product-owner){.external}

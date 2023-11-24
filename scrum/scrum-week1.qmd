@@ -143,7 +143,21 @@ In the context of Scrum:
 
 ## Path Dependence
 
-Path dependence refers to the idea that the current state and future developments are influenced by historical factors and decisions. In the context of Scrum iterations:
+![[Start-Ups Are Path Dependent](https://www.linkedin.com/pulse/week-1-start-ups-path-dependent-jonah-mcintire){.external}](/images/scrum/pathdependence.jpeg){width="70%"}
+
+<mark>[Path dependence](https://thecomplexityproject.com/path-dependency-and-your-life-path/) refers to the idea that the current state and future developments are influenced by historical factors and decisions.</mark>
+
+::: {.callout-important}
+**What Is Path Dependency?**
+
+[Path dependency](https://www.wallstreetmojo.com/path-dependency/) in economics refers to the **tendency to rely on past practices, decisions, and actions for the outcome rather than current conditions.**
+
+Thus, those who repeat the same strategies will almost certainly get the same results.
+
+As a result, it can greatly impact economic or market development.
+:::
+
+In the context of **Scrum iterations**:
 
 - **Adaptive Evolution**: Scrum's iterative nature acknowledges that the development path is not always predictable. Path dependence suggests that the current state of the project is influenced by past decisions. Scrum embraces this reality by allowing teams to adapt and change direction as needed during each iteration.
 - **Continuous Improvement**: Each iteration builds on the progress of the previous ones. The path taken by the team is influenced by past decisions and learning experiences. Scrum's focus on inspecting and adapting allows the team to continuously improve their path based on feedback and changing circumstances.
