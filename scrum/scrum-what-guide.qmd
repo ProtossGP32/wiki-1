@@ -31,11 +31,10 @@ This HTML version of the Scrum Guide is a direct port of the November 2020 versi
 
 ## Agile-essentials SCRUM overwiew
 
-[The Scrum Framework by Scrum Inc.](https://www.thinglink.com/scene/535528547733733377){.external}.
-
-[Suggested Reading for Professional Scrum Master](https://www.scrum.org/resources/suggested-reading-professional-scrum-master){.external}
-
-[Guia rápida implementar SCRUM](https://docs.google.com/presentation/d/e/2PACX-1vSRksLX681ZSipA3F7O92B0T4q7mfN9JMpNbdGKP72EkWMKWfUwPsfPNjcWTMKk2VmVjeWhr2Nv_WH1/pub?start=false&loop=false&delayms=3000&slide=id.p){.external}
+- [Resource Center](https://www.scrum.org/resource-center)
+- [The Scrum Framework by Scrum Inc.](https://www.thinglink.com/scene/535528547733733377){.external}.
+- [Suggested Reading for Professional Scrum Master](https://www.scrum.org/resources/suggested-reading-professional-scrum-master){.external}
+- [Guia rápida implementar SCRUM](https://docs.google.com/presentation/d/e/2PACX-1vSRksLX681ZSipA3F7O92B0T4q7mfN9JMpNbdGKP72EkWMKWfUwPsfPNjcWTMKk2VmVjeWhr2Nv_WH1/pub?start=false&loop=false&delayms=3000&slide=id.p){.external}
 
 ---
 
@@ -47,12 +46,34 @@ We are uncovering better ways of developing software by doing it and helping oth
 
 [Through this work we have come to value](https://agilemanifesto.org/){.extarnal}
 
-- Individuals and interactions **over** processes and tools
-- Working software **over** comprehensive documentatio
-- Customer collaboration **over** contract negotiation
-- Responding to change **over** following a plan
+### 3-Pillars
+
+<mark>Transparency, Inspection and adaptation</mark>
+
+### 4-Foundations
+
+- **Individuals and interactions over** processes and tools
+- **Working software over** comprehensive documentatio
+- **Customer collaboration over** contract negotiation
+- **Responding to change over** following a plan
 
 That is, while there is value in the items on the right, we value the items on the left more.
+
+### 12-Principles
+
+[12 principles](/scrum/scrum-what-agile-manifesto.qmd)
+
+# Artifacts
+
+In archeology, an artifact is an object of cultural significance. In medicine, artifacts are something not normally present, or unexpected. In Scrum, our use of the word “artifact” is closer to the way software developers use it: important information needed during the development of a product. 
+
+![](/images/scrum/artifacts.png)
+
+Scrum has three artifacts: 
+
+- Product Backlog
+- Sprint Backlog
+- Increment
 
 ## Backlog
 
@@ -80,7 +101,7 @@ contains all committed User Stories for the current Sprint broken down into Task
 shows the amount of work remaining per Sprint. It shows the correlation between work remaining at any point in time and the progress of the Team.
 :::
 
-## Core concpets: invest - user story - done - poker
+# Core concepts: invest - user story - done - poker
 
 > The acronym INVEST helps to remember a widely accepted set of criteria, or checklist, to assess the quality of a user story. If the story fails to meet one of these criteria, the team may want to reword it, or even consider a rewrite (which often translates into physically tearing up the old story card and writing a new one).
 
@@ -126,6 +147,27 @@ list of activities that must be fulfilled in order to consider US done
 ## Planning poker
 also called Scrum poker, is a consensus-based, gamified technique for estimating by playing numbered cards face-down to the table, instead of speaking them aloud. 
 :::
+
+# Events
+
+::: {.callout-note}
+The Scrum events are key elements of the Scrum Framework. They provide regular opportunities for enacting the Scrum pillars of Inspection, Adaptation and Transparency. In addition, they help teams keep aligned with the Sprint and Product Goals, improve Developer productivity, remove impediments and reduce the need to schedule too many additional meetings.
+:::
+
+There are five Scrum events (the Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective), each with their own purpose, time constraints and participants.
+
+![](/images/scrum/events.png)
+
+## Purpose
+
+While learning the details of each is very important for effective Scrum, at the highest level*, the purpose of each is actually quite simple:
+
+- **Sprint** - All work in Scrum is done in a series of short projects called Sprints. This enables rapid feedback loops.
+- **Sprint Planning** - The Sprint starts with a planning session in which the Developers plan the work they intend to do in the Sprint. This plan creates a shared understanding and alignment among the team.
+- **Daily Scrum** - The Developers meet daily to inspect their progress toward the Sprint Goal, discuss any challenges they’ve run into and tweak their plan for the next day as needed. 
+- **Sprint Review** - At the end of the Sprint, the Sprint Team meets with stakeholders to show what they have accomplished and get feedback.
+- **Sprint Retrospective** - Finally, the Scrum Team gets together to discuss how the Sprint went and if there are things they could do differently and improve in the next Sprint.
+
 
 
 <!--- navLinks -->
