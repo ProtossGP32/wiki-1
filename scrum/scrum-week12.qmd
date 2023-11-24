@@ -16,23 +16,81 @@ format:
 # Beyond SCRUM
 
 
-## [Is SpaceX using Scrum?](https://www.quora.com/Is-SpaceX-using-Scrum){.external}
+# [Is SpaceX using Scrum?](https://www.quora.com/Is-SpaceX-using-Scrum){.external}
+
+## Pitch Elevetor
+
+![](/images/scrum/elomusk_pitch_serchingrockets.png)
+
+## Approach
 
 ![SpaceX is currently using a methodologies pool](/images/scrum/spacex.png){width=70%}
 
-At the very beginning, when they were just a startup, they used all Lean Startup tips to achieve the success. They did unscalable things, bought some spares for rockets in usual computer shops, made some spares by themselves, etc. 
+At the very beginning, when they were just a startup, they used all **Lean Startup** tips to achieve the success. They did **unscalable things**, bought some spares for rockets in usual computer shops, made some spares by themselves, etc. 
 
 ::: {.column-margin}
 All of these were a total craziness for classical aerospace companies. But it was the key benefit how they competed mastodons, like **Lockheed** and **Boeing**. 
 :::
 
-Testing of hypotheses, tight budgets, and continuous innovations made the appreciable contribution to company success. 
+<mark>Testing of hypotheses, tight budgets, and continuous innovations made the appreciable contribution to company success.</mark>
 
-> All Elon’s companies use Silicon Valley startup approach to achieve success. And this is what distinguishes them among all other classical companies from the industry
+> All Elon’s companies use **Silicon Valley startup approach** to achieve success. And this is what distinguishes them among all other classical companies from the industry
 
-Perhaps, it’s not a classical ``Scrum`` approach like software companies use, but it’s from the field of Kaizen and The Toyota Way. This is how startups should behave.
+Perhaps, it’s [not a classical](https://www.nextbigfuture.com/2018/12/reverse-engineering-spacex-to-learn-how-to-speed-up-technological-development.html) ``Scrum`` approach like software companies use, but it’s from the field of **Kaizen and The Toyota Way**. This is how startups should behave.
 
-https://sites.google.com/view/gestioprojectes/llegir/setmana3
+## Difficulties
+
+![](/images/scrum/spacex-anyone-eng.png)
+
+## Elon Musk SpaceX Agile 5 steps
+
+::: {.column-margin}
+
+![](/images/scrum/eng_design_princiles_elon_min-768x1024.png)
+:::
+
+### Make requirements less dumb
+
+- Your requirements are dumb especially if a smart person gives them to you because you may not question them enough. Everyone is wrong sometimes.
+- People will put you in an unnecessarily small box. Make your box bigger.
+- Requirements must have an owner (a person not a department) who is responsible for maintaining information about the need to continue.
+
+### Always be deleting part of the process
+
+- If you are not occasionally adding things back in, you are not deleting enough. 
+- The bias tends to be adding things to processes which are “in case we need it”.
+- This is how processes get out of control and lengthier than truly needed
+
+
+### Simplify or optimize
+
+- It is very common for smart people to optimize processes that should not exist. 
+- We are trained to answer questions and solve problems… don’t be afraid to say that this problem is dumb
+
+### Accelerate cycle time
+
+- Go faster through each process.
+- Don’t do this before you get through the first 3 steps
+
+
+### Automate
+
+- Find ways to achieve process steps with little or no human intervention or cycle time. 
+- Create automated feedback and process controls
+
+## Presentation
+
+{{< video https://youtu.be/t705r8ICkRw >}}
+
+{{< video https://youtu.be/SA8ZBJWo73E >}}
+
+
+
+# References
+
+- [SCRUM: week3](https://sites.google.com/view/gestioprojectes/llegir/setmana3){.external}
+- [Omelek island](https://www.google.com/maps/place/Omelek/@39.2365592,156.1759816,15214886m/data=!3m1!1e3!4m6!3m5!1s0x65ac1cca85935f45:0xf70d55b30051cef!8m2!3d9.0480678!4d167.7428834!16zL20vMDgxcTMw?entry=ttu){.external}
+- [Inside the eight desperate weeks that saved SpaceX from ruin](https://arstechnica.com/science/2018/09/inside-the-eight-desperate-weeks-that-saved-spacex-from-ruin/){.external}
 
 <!--- navLinks -->
 <br><br>

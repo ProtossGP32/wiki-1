@@ -79,11 +79,11 @@ A well-concluded meeting not only ensures that goals are met but also sets the s
 In the Scrum framework, the question **"What is your impediment?"** is significant because it aligns with the core principles of transparency, inspection, and adaptation. Scrum is an agile project management framework that emphasizes collaboration, flexibility, continuous improvement and [user-story driven-aproach](/scrum/scrum-week2.qmd).
 :::
 
-The concept of <mark>impediments plays a crucial role in fostering an environment where teams can identify and overcome obstacles to their productivity</mark>. The question encourages a **negative logic**, where **impediments are seen as opportunities for improvement** rather than just problems.
+The concept of <mark>impediments plays a crucial role in fostering an environment where teams can identify and overcome obstacles to their productivity</mark>. The question encourages a **negative logic**, where **impediments are seen as opportunities for improvement** rather than just [problems](https://www.youtube.com/watch?v=MauMiCL7G9Y).
 
-![Impediment](/images/scrum/impediment.jpg){width="30%"}
+![Impediment to action advances ation, what stands in the way becomes the way](/images/scrum/impediment.jpg){width="30%"}
 
-Impediments are essential with a **negative logic perspective**:
+[Impediments](https://www.youtube.com/watch?v=JgN5fgQxE-E) are essential with a **negative logic perspective**:
 
 - **Promotes Transparency**: By asking about impediments, Scrum emphasizes the importance of transparency within the team. Team members are encouraged to openly discuss and share any challenges or roadblocks they are facing. This transparency allows for a clear understanding of the current state of the project.
 
