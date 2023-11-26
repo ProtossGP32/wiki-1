@@ -13,13 +13,13 @@ format:
   html
 ---
 
-# Team dynamics
+# Origins
 
-## Origins
+## Social Organization
 
 ![Frans de Waal](/images/scrum/fransdeWaal.jpg)
 
-> An incredible insight into the takeovers and social organization of a chimp colony in the Netherlands. "The behavior of our closest relatives provides clues about human nature. Apart from political maneuvering, chimpanzees show many behaviors that parallel those of humans, from tool technology to intercommunity warfare. In fact, our place among the primates is increasingly a backdrop of substantial similarity. Our uniqueness breaks down as we study our relatives.
+> An incredible insight into the takeovers and **social organization of a chimp colony** in the Netherlands. "The behavior of our closest relatives provides clues about human nature. Apart from political maneuvering, chimpanzees show many behaviors that parallel those of humans, from tool technology to intercommunity warfare. In fact, our place among the primates is increasingly a backdrop of substantial similarity. Our uniqueness breaks down as we study our relatives.
 
 
 Every country has its **Dick Cheneys** and **Ted Kennedys** operating behind the scenes.
@@ -35,18 +35,48 @@ The will to power is a human universal. Our species has been engaged in Machiave
 - [Are We Smart Enough to Know How Smart Animals Are?](https://www.goodreads.com/book/show/30231743-are-we-smart-enough-to-know-how-smart-animals-are){.external}
 - [Chimpanzee Politics: Power and Sex Among Apes Summary](https://blas.com/chimpanzee-politics/){.external}
 
-# Cultural Negotiation
+## Cultural Negotiation
 
 - [Cultural Negotation Formulas](https://drive.google.com/drive/folders/1aCpDFulr7pjPdtHynODWmhpgxW8UCIDh){.external}
 
+# Social dynamics
 
-# Minority Rules: the super-pareto
+## The status game
+
+- [The status game](/books/statusGame.qmd)
+
+### The Status Game roots
+
+**The Status Game** often involves social interactions where individuals seek to establish and maintain their position within a **social hierarchy**. Key concepts within this realm include:
+
+- **Social Hierarchies**: Understanding societies' hierarchical structures and navigating to secure one's position.
+  
+- **Symbolic Capital**: Accumulating resources, attributes, or achievements that confer status within a social context.
+
+- **Social Comparison**: Constant assessment of one's status relative to others, driving behaviors and choices.
+
+
+### Understanding Status Games: Virtue, Competition, and Dominance
+
+In the realm of status games, three prominent games often come to the forefront:
+
+- **Virtue Game**: In the Virtue Game, individuals seek status through moral and ethical excellence. Displaying qualities such as honesty, integrity, and altruism becomes a means to elevate one's standing in social hierarchies.
+
+- **Competition Game**: The Competition Game revolves around outperforming peers in various domains, including career achievements, skills, or talents. Success in this game is often measured by surpassing others in a competitive environment.
+
+- **Dominance Game**: The Dominance Game involves asserting power and control to secure a higher status. Individuals may employ tactics such as influence, authority, or manipulation to establish dominance and command respect within social structures.
+
+<mark>These three games collectively illustrate the diverse strategies individuals employ to navigate social hierarchies and gain recognition within their communities</mark>.
+
+Each game reflects different values, priorities, and approaches to achieving status in a given context.
+
+
+## Minority Rules: the super-pareto
 
 ::: {.callout-important}
 The **Minority Rules concept**, popularized by **Nassim Nicholas Taleb**, suggests that a small, committed minority can have a disproportionate impact on a larger population. Taleb argues that throughout history, transformative ideas or behaviors often originated from a determined minority, influencing the majority.
 
 This phenomenon contrasts with traditional democratic views. Taleb emphasizes the power of persistence and conviction, positing that even a small group with strong beliefs can shape societal norms. The Minority Rules principle underscores the nonlinear nature of influence, where committed outliers, rather than conformist majorities, drive significant societal changes.
-
 :::
 
 <mark>The main idea behind complex systems is that the ensemble behaves in ways not predicted by the components. The interactions matter more than the nature of the units.</mark>
@@ -61,8 +91,18 @@ The rule we discuss in this chapter is the **minority rule**.
 
 - [The Most Intolerant Wins: The Dictatorship of the Small Minority](https://nassimtaleb.org/tag/minority-rule/){.external}
 
+## Milgram's Experiments and the Perils of Obedience
 
-# Sociogram
+::: {.callout-important}
+Milgram's Experiments, conducted by psychologist **Stanley Milgram in the 1960s**, aimed to study obedience to authority figures. Participants were instructed to administer increasingly severe electric shocks to a person (a confederate) in another room, even when protests were heard.
+
+<mark>The shocks were simulated, but the study revealed the alarming extent to which people would comply with authority, even when it conflicted with their moral beliefs.</mark>
+
+This highlighted the perils of blind obedience, illustrating the potential for individuals to engage in harmful actions under authoritative influence. Milgram's work raised ethical concerns but significantly contributed to our <mark>understanding of human behavior in social contexts</mark>.
+:::
+
+
+# Social tool: Sociogram
 
 ![Sociogram example](/images/scrum/sociogram.png)
 
@@ -122,39 +162,38 @@ Thaler's contributions emphasize that economic decision-making is influenced by 
 
 ## Incentives
 
-- [RSA ANIMATE: Drive: The surprising truth about what motivates us](https://www.youtube.com/watch?v=u6XAPnuFjJc&feature=youtu.be){.external}
+- [RSA Animate: Drive: The surprising truth about what motivates us](https://www.youtube.com/watch?v=u6XAPnuFjJc&feature=youtu.be){.external}
 
 
-# The rider and the Elephant
+# Emotions
 
-The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt 
+![Emotion -- Ian McGilChirst](/images/scrum/emotion.jpg){width="70%"}
 
-The central metaphor of these four chapters is that the mind is divided, like a rider on an elephant, and the rider’s job is to serve the elephant. 
+**Ian McGilchrist**, a psychiatrist and neuroscientist, is renowned for his work on the divided brain. In ["The Master and His Emissary,"](/books/theMasterAndHisEmissary.qmd) he explores <mark>how the left and right hemispheres process information differently, impacting our perception of the world.</mark>
+
+**McGilchrist** underscores the **holistic and embodied nature of emotions**, viewing them as complex phenomena arising from the integration of cognitive, sensory, and bodily processes. His perspective invites a comprehensive understanding of emotions, emphasizing their **multidimensional nature in the context of brain hemispheric specialization.**
+
+
+::: {.callout-note}
+**Ian McGilchrist**'s exploration extends to the <mark>social dimension of emotions, emphasizing their role in connecting people amidst ambiguous and contradictory information that simple words or data alone cannot fully express</mark>.
+
+**Emotions**, in his view, serve as a crucial bridge in interpersonal communication, allowing individuals to navigate complex social scenarios where the nuances of emotion convey meaning beyond the limitations of explicit language or straightforward data.
+:::
+
+This social aspect of emotions highlights their significance in fostering understanding, empathy, and shared experiences within the intricacies of human relationships and societal dynamics.
+
+## Moral emotions: The rider and the Elephant
+
+- [The Righteous Mind: Why Good People Are Divided by Politics and Religion](/books/theRighteousMind.qmd) by **Jonathan Haidt.**
+
+The central metaphor of these four chapters is that the mind is divided, like a rider on an elephant, and <mark> the rider’s job is to serve the elephant.</mark> 
 
 - The **rider** is our conscious reasoning—the stream of words and images of which we are fully aware. 
 - The **elephant** is the other 99 percent of mental processes—the ones that occur outside of awareness but that actually govern most of our behavior. 
 
-I developed this metaphor in my last book, The Happiness Hypothesis, where I described how the rider and elephant work together,  sometimes poorly, as we stumble through life in search of meaning and connection. 
+**Jonathan Haidt** developed this metaphor in his last book, **The Happiness Hypothesis**, where he described how the rider and elephant work together, sometimes poorly, as we stumble through life in search of **meaning and connection**. 
 
-In this book I’ll use the metaphor to solve puzzles such as why it seems like everyone (else) is a hypocrite and why political partisans are so willing to believe outrageous lies and conspiracy theories. I’ll also use the metaphor to show you how you can better persuade people who seem unresponsive to reason.
-
-
-# Milgram's Experiments and the Perils of Obedience
-
-::: {.callout-important}
-Milgram's Experiments, conducted by psychologist **Stanley Milgram in the 1960s**, aimed to study obedience to authority figures. Participants were instructed to administer increasingly severe electric shocks to a person (a confederate) in another room, even when protests were heard.
-
-<mark>The shocks were simulated, but the study revealed the alarming extent to which people would comply with authority, even when it conflicted with their moral beliefs.</mark>
-
-This highlighted the perils of blind obedience, illustrating the potential for individuals to engage in harmful actions under authoritative influence. Milgram's work raised ethical concerns but significantly contributed to our <mark>understanding of human behavior in social contexts</mark>.
-:::
-
-- [The Dark side of Science: The Milgram Experiment (1963) (Short Documentary)](https://www.youtube.com/watch?v=8bbVFeTIIg8){.external}
-- [Induction: Processes of Inference, Learning, and Discovery](https://www.google.com/search?kgmid=/g/1ydwn3qgc&hl=en-ES&kgs=e5ef35219b8759db&q=Induction:+Processes+of+Inference,+Learning,+and+Discovery+John+Henry+Holland&shndl=0&source=sh/x/kp&entrypoint=sh/x/kp){.external}
-- [ What Was the Milgram Experiment? Milgram's Famous and Controversial Studies of Obedience](https://www.verywellmind.com/the-milgram-obedience-experiment-2795243){.external}
-
-
-
+In this book he uses the metaphor to solve puzzles such as why it seems like everyone (else) is a hypocrite and why political partisans are so willing to believe outrageous lies and conspiracy theories. He also use the metaphor to show you <mark>how you can better persuade people who seem unresponsive to reason.</mark>
 
 
 
@@ -162,8 +201,10 @@ This highlighted the perils of blind obedience, illustrating the potential for i
 # References
 
 - [SCRUM: week2](https://sites.google.com/view/gestioprojectes/llegir/setmana2)
-
-
+- [The Dark side of Science: The Milgram Experiment (1963) (Short Documentary)](https://www.youtube.com/watch?v=8bbVFeTIIg8){.external}
+- [Induction: Processes of Inference, Learning, and Discovery](https://www.google.com/search?kgmid=/g/1ydwn3qgc&hl=en-ES&kgs=e5ef35219b8759db&q=Induction:+Processes+of+Inference,+Learning,+and+Discovery+John+Henry+Holland&shndl=0&source=sh/x/kp&entrypoint=sh/x/kp){.external}
+- [ What Was the Milgram Experiment? Milgram's Famous and Controversial Studies of Obedience](https://www.verywellmind.com/the-milgram-obedience-experiment-2795243){.external}
+- [RSA Animate: Drive: The surprising truth about what motivates us](https://www.youtube.com/watch?v=u6XAPnuFjJc&feature=youtu.be){.external}
 
 <!--- navLinks -->
 <br><br>

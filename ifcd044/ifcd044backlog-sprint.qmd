@@ -5,7 +5,7 @@ categories: [ifcd044, backlog]
 
 
 <style>
-tr:nth-child(5) {
+tr:nth-child(1) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -19,11 +19,11 @@ tr:nth-child(5) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #3  | 9 | 27/11/2023 |  |  |
-|  | 10 | 28/11/2023 |  |  |
-|  | 11 | 29/11/2023 |  |  |
-|  | 12  | 30/11/2023 |  |  |
-|  | 13 | 01/12/2023 |  |  |
+| #3  | 9 | 27/11/2023 | - SCRUM: the Guide, concepts and execution </br> - Principles | - [Guide](/scrum/scrum-what-guide.qmd) </br> - [Principles](/scrum/scrum-what-agile-manifesto.qmd)|
+|  | 10 | 28/11/2023 | - Scrum Master </br> | - [Scrum Master](/scrum/scrum-week4.qmd) |
+|  | 11 | 29/11/2023 | - Mindset  </br> | - [Mindset](/scrum/scrum-week5.qmd) |
+|  | 12  | 30/11/2023 | - Product Owner and Product Backlog </br> | - [Product Owner](/scrum/scrum-week6.qmd) |
+|  | 13 | 01/12/2023 | - Team, Scrum Master and Product Owner </br> |  |
 : Sprint Backlog course November 2023 table {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
