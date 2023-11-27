@@ -17,6 +17,16 @@ format:
 
 # Resources
 
+## Web
+
+- [Resource Center](https://www.scrum.org/resource-center)
+- [The Scrum Framework by Scrum Inc.](https://www.thinglink.com/scene/535528547733733377){.external}.
+- [Suggested Reading for Professional Scrum Master](https://www.scrum.org/resources/suggested-reading-professional-scrum-master){.external}
+- [Guia rápida implementar SCRUM](https://docs.google.com/presentation/d/e/2PACX-1vSRksLX681ZSipA3F7O92B0T4q7mfN9JMpNbdGKP72EkWMKWfUwPsfPNjcWTMKk2VmVjeWhr2Nv_WH1/pub?start=false&loop=false&delayms=3000&slide=id.p){.external}
+
+## Books
+
+- [Scrum success stories](https://blog.crisp.se/2008/01/03/henrikkniberg/1199379900000)
 
 
 <!--- navLinks -->

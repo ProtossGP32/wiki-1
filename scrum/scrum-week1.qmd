@@ -1,5 +1,5 @@
 ---
-title: "Week 1: Meetings and impediments"
+title: "Week 1: Meetings, Impediments and Iterations"
 subtitle: SCRUM Week 1
 author: albertprofe
 date: "06/01/2021"
@@ -12,6 +12,19 @@ number-sections: true
 format:
   html
 ---
+
+::: {.summary}
+
+📘 **Summary: SCRUM Week 1 - Meetings, Impediments and Iterations**
+
+
+**Effective and well-organized meetings are fundamental to SCRUM Agile, playing a pivotal role in collaboration, decision-making, and achieving organizational goals**. The key to productive meetings lies in clear goal-setting, defined roles, and an optimal number of participants. Time management is crucial, ensuring discussions remain focused and purposeful. Common issues like late arrivals and multitasking can hinder productivity and should be addressed proactively.
+
+**Impediments, in the SCRUM framework, are viewed through a negative logic perspective, considering them as opportunities for improvement rather than obstacles**. This approach promotes transparency, early issue identification, continuous improvement, collaboration, adaptability to change, and a culture of accountability within the team.
+
+**Iterations are essential in SCRUM**, aligning with the "keep it simple" concept, the Lindy effect, and path dependence. **By breaking down complex tasks into manageable units, SCRUM teams ensure incremental progress, frequent feedback loops, and adaptive evolution.** Time-boxing activities in SCRUM, based on cognitive load and focus principles, enhances efficiency, promotes simplicity, and facilitates continuous improvement through clear differentiation of activities and follow-through.
+
+:::
 
 # Meetings
 

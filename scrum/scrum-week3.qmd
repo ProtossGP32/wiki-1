@@ -1,5 +1,5 @@
 ---
-title: "Week 3: Communication and value"
+title: "Week 3: Delivering Value & Communication"
 subtitle: SCRUM Week 3
 author: albertprofe
 date: "06/01/2021"
@@ -13,7 +13,25 @@ format:
   html
 ---
 
-# Communication: deliver value
+
+::: {.summary}
+
+📘 **Summary: SCRUM Week 3 - Delivering Value & Communication**
+
+
+In SCRUM Agile methodology, **effective communication and value delivery play pivotal roles in fostering collaboration and project success**. Communication should be clear, concise, and tailored to the audience, ensuring messages resonate with their needs and interests. Actively listening, providing practical solutions, and setting clear expectations are essential components of effective communication. Encouraging a feedback loop and following up on interactions contribute to ongoing improvement and commitment.
+
+The importance of a **common vocabulary cannot be overstated. Using the right words ensures clarity, reduces misunderstandings, and promotes shared understanding—crucial for effective collaboration**. This principle extends to both written and spoken communication. In writing, clarity is paramount, and a feedback loop ensures the message is received as intended. In speaking, prioritizing clarity, adapting to the audience, and utilizing positive reinforcement contribute to impactful communication.
+
+Additionally, the **Pareto Principle underscores the significance of focusing efforts on the vital few aspects that yield the most significant results.** Multitasking is discouraged as it hampers productivity and quality, leading to cognitive deficits. Finally, an awareness of cognitive biases, such as the halo effect, emphasizes the need for objective judgment to avoid distorted perceptions.
+
+
+:::
+
+</br></br>
+
+
+# Communication
 
 ::: {.callout-tip}
 Effective communication hinges on delivering value to your audience. Understand their needs, tailoring messages to resonate with their interests and knowledge. 
@@ -59,6 +77,11 @@ A <mark>common and concrete vocabulary establishes a baseline for meaningful com
 - [Vocabulary SCRUM](/learning/learning-vocab-scrum.qmd)
 
 ## Writing
+
+![Jeff Bezos on Why, What, etc..](/images/scrum/jeff_bezos.jpg)
+
+
+{{< tweet user=BrianJi id=1728585281685614776 >}}
 
 <mark>In effective writing, clarity is paramount. Clearly articulate your message, tailoring it to your audience's needs.</mark>
 

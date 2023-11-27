@@ -1,5 +1,5 @@
 ---
-title: "Week 2: User stories, tasks and habits"
+title: "Week 2: User stories, Tasks and Habits"
 subtitle: SCRUM Week 2
 author: albertprofe
 date: "06/01/2021"
@@ -14,12 +14,33 @@ format:
 ---
 
 
-![Backlog items and the tasks are crucial for smooth and successful sprint delivery](/images/scrum/itemContent.jpg)
+::: {.summary}
+
+📘 **Summary: SCRUM Week 2 - User stories, Tasks and Habits**
+
+
+In Scrum Agile, the effective management of **user stories, tasks, and habits plays a pivotal role in achieving successful sprint deliveries**.
+
+**User stories, often expressed as Product Backlog Items (PBIs), drive the development process by focusing on end-user needs**. They keep the team oriented towards problem-solving and encourage collaboration, creativity, and momentum. Writing user stories involves defining the "done" state, outlining subtasks, considering user personas, and incorporating ordered steps.
+
+**Tasks, specific actionable pieces of work, contribute to completing PBIs during a sprint**. They break down work, promote collaboration, and provide clarity on incremental product delivery. The INVEST criteria guide the creation of quality PBIs, emphasizing characteristics like independence, negotiability, and value.
+
+**Planning poker, a consensus-based estimation technique**, aids in assigning story points to tasks. While popular, it has potential drawbacks, such as time consumption and potential biases, necessitating a balance between efficiency and precision.
+
+**Themes and epics** categorize stories by business goals and serve as larger requirements, respectively. User stories or work items are components of epics, and tasks contribute to building stories. Developing good habits is essential, and James Clear's **"Atomic Habits"** provides a proven framework for habit formation, emphasizing identity-based habits and the habit loop.
+
+
+:::
+
+</br></br>
+
 
 
 [Having the **right size for the Backlog items and the tasks** is crucial for smooth and successful sprint delivery](https://mohamedradwan.com/2017/12/05/requirements-epic-feature-user-story-task-size-and-estimation-in-agile-and-scrum/).
 
 <mark>Agile and Scrum is a **User Story** or **Product Backlog Item (PBI)** *driven approach*, this approach is overcoming some of the major notches in delivering the product that customer is seeking to have.</mark>
+
+![Backlog items and the tasks are crucial for smooth and successful sprint delivery](/images/scrum/itemContent.jpg)
 
 # User stories
 
