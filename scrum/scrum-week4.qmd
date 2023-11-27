@@ -13,7 +13,29 @@ format:
   html
 ---
 
-# ScrumMaster, how it works
+
+
+::: {.summary}
+
+📘 **Summary: SCRUM Week 4 - ScrumMaster, how it works**
+
+
+The role of a ScrumMaster stands out as crucial for success in Agile methodologies. Acting as a **linchpin between stakeholders, product owners, and development teams**, a ScrumMaster takes on **multifaceted responsibilities.**
+
+They ensure **cohesion, motivation, and adherence to timelines within budget constraints. Akin to a servant-leader, a ScrumMaster coaches, facilitates, and removes impediments, steering teams towards high-value increments and adherence to the Definition of Done.**
+
+Contrary to traditional leadership, a ScrumMaster shares power, prioritizing the team's growth and well-being. **They do not engage in traditional managerial tasks** but focus on help teams to self-manage and excel.
+
+The ScrumMaster **serves the Scrum Team, Product Owner, and the organization at large**, playing a pivotal role in Scrum adoption and implementation.
+
+
+:::
+
+</br></br>
+
+![ScrumMaster](/images/scrum/scrum-master-responsible-for-process-success.png){width="70%"}
+
+# ScrumMaster, overview
 
 
 > Organizations across all industries globally are hiring **Scrum masters** because they are experts in handling challenging tasks.

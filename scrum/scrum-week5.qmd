@@ -13,7 +13,35 @@ format:
   html
 ---
 
-# Mindset, the key to everything
+
+
+::: {.summary}
+
+📘 **Summary: SCRUM Week 5 - Mindset, the key to everything**
+
+
+Week 5 of SCRUM focuses on the pivotal role of mindset in personal and professional success.
+
+The mindset, **defined as a set of beliefs shaping one's perception of the world, influences decision-making, habits, and problem-solving.**
+
+Stanford psychologist **Carol Dweck**'s research distinguishes between **fixed and growth mindsets**, emphasizing the transformative power of cultivating a growth mindset. Those with a growth mindset embrace challenges, persist in setbacks, and view effort as a path to mastery, fostering resilience and a passion for lifelong development.
+
+The discussion extends to the importance of **purpose in life**, emphasizing happiness, impact, and service. The process of understanding personal purpose involves continual self-reflection. Additionally, the episode delves into the benefits of journaling for immediate and long-term health.
+
+The **Soviet-Harvard delusion** challenges the idea that academic knowledge alone is superior, advocating for a process of random tinkering, heuristics, practice, and apprenticeship.
+
+The shift in management paradigms, customer-centric approaches, and the significance of having **"skin in the game"** are explored. The concept of **antifragility** is introduced, encouraging individuals and organizations to thrive and grow stronger in the face of adversity.
+
+**Keywords**: Mindset, SCRUM, Growth Mindset, Purpose, Soviet-Harvard Delusion, Skin in the Game, Antifragility.
+
+
+:::
+
+</br></br>
+
+
+
+# Mindset, overview
 
 ::: {.callout-note}
 Your mindset is a [set of beliefs that shape how you make sense of the world and yourself](https://www.verywellmind.com/what-is-a-mindset-2795025). It influences how you think, feel, and behave in any given situation. It means that what you believe about yourself impacts your actions and output.
@@ -84,6 +112,26 @@ The [first step](https://www.linkedin.com/pulse/why-finding-your-purpose-most-im
 
 
 Day by day, you affirm your worthiness to lead a happy life and your ability to make a positive impact on the world. You endeavor to discover what is most powerful, most motivated and most moral in you and seek to use that to serve the needs of others.
+
+
+## Journaling
+
+
+{{< video ttps://www.youtube.com/watch?v=wAZn9dF3XTo >}}
+
+**20 de nov. 2023  Huberman Lab**
+
+> In this episode, I explain a specific writing protocol shown in hundreds of scientific studies to significantly improve immediate and long-term health. I explain how to implement this specific protocol, which takes only four days and 15-30 minutes per day.
+> 
+> I also explain the mechanism for how the four-day writing protocol affects neuroplasticity (brain rewiring) and brain function in the short and long term. I explain how these brain changes positively impact our physical health, including our system's immune function and thus our ability to combat infections, improve sleep, reduce feelings of physical and emotional pain, lower anxiety, and bring about healing from traumas.
+> 
+> This episode ought to be of interest to anyone seeking better mental and/or physical health through the use of brief yet highly effective science-supported protocols.
+
+## Mindset goal
+
+{{< tweet user=hubermans id=1728508443391410401 >}}
+
+
 
 
 # The Soviet Union delusion
