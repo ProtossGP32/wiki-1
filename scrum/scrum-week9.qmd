@@ -13,8 +13,29 @@ format:
   html
 ---
 
-::: {.callout-tip}
-**Albertus' Dylema - Navigating the Programmer's Oasis**
+::: {.summary}
+
+📘 **Summary: SCRUM Week 9 - Albertus' Dylemma**
+
+Albertus' Dylemma explores **the mental challenges faced by programmers throughout the workweek**, symbolized by a **diminishing canteen of creative energy**.
+
+The dilemma arises from the misconception that working harder will replenish this energy, **leading to exhaustion and a productivity trap: the well**.
+
+To **break free**, programmers **must strategically pause, reflect, and make informed decisions**.
+
+Embracing intermittent coding preserves mental energy, ensuring a successful journey from code to relaxation.
+
+Albertus' Dylemma serves as a **guiding philosophy for maintaining balance**, resulting in a clear-minded, stress-free programmer celebrating a job well done by week's end.
+
+:::
+
+</br></br>
+
+![](/images/scrum/sahara-desert-morroco-800x800.jpg){width="80%"}
+
+::: {.callout-tip title="Albertus' Dylema - Navigating the Programmer's Oasis" icon=false}
+
+</br>
 
 ![In the vast landscape of the workweek](/images/scrum/albertus1.jpg){width="60%"}
 

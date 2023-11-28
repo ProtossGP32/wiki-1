@@ -33,7 +33,7 @@ The Product Owner must possess entrepreneurial qualities, a clear vision, and de
 
 </br></br> 
 
-# Product Owner
+# Product Owner, overview
 
 ::: {.callout-note}
 The **Product Owner** is the Team member who knows **what the customer wants and the relative business value of those wants**. He or she can then translate the customer's wants and values back to the Scrum team.

@@ -13,7 +13,29 @@ format:
   html
 ---
 
-# Before SCRUM
+::: {.summary}
+
+📘 **Summary: SCRUM Week 9 - Albertus' Dylemma**
+
+Before SCRUM, software development primarily followed methodologies like Waterfall, V-Model, Incremental Model, and Spiral Model, which had their advantages but **lacked flexibility and early adaptability**.
+
+The **Project Management Office (PMO)** provided organizational standards.
+
+**Agile principles evolved from Toyota's manufacturing principles**, Lean Manufacturing, Crystal Clear, and Refactoring. In the 1990s, **Jeff Sutherland and Ken Schwaber independently developed SCRUM,** formalizing roles and events.
+
+The **Agile Manifesto in 2001 marked a pivotal moment**. SCRUM's integration with Toyota Production System at Toyota Connected exemplifies its effectiveness in Lean Production. Embracing SCRUM requires understanding complexity, teamwork, and continual improvement. Agile isn't a goal; it's an outcome.
+
+:::
+
+</br></br>
+
+
+
+# Agile and Managment history
+
+## Agile and Managment 1945-2000
+
+Before SCRUM, software development primarily followed methodologies like Waterfall, V-Model, Incremental Model, and Spiral Model:
 
 ::: {.column-page-right}
 
@@ -29,7 +51,7 @@ format:
 
 
 
-# Agile history
+# Agile milestones
 
 ![Agile history from Toyota, Crystal, Refactorin to SCRUM](/images/scrum/agilehistory-11.png)
 

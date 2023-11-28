@@ -5,7 +5,7 @@ categories: [ifcd044, backlog]
 
 
 <style>
-tr:nth-child(1) {
+tr:nth-child(2) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -19,7 +19,7 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #3  | 9 | 27/11/2023 | - SCRUM: the **Guide**, concepts and execution, Sprint Zero </br> - Class projects Review  </br> - Principles  | - [Guide](/scrum/scrum-what-guide.qmd) </br> - [Principles](/scrum/scrum-what-agile-manifesto.qmd)|
+| #3  | 9 | 27/11/2023 | - SCRUM: the **Guide**, concepts and execution, Sprint Zero </br> - Class projects Review  </br> - <s>Principles</s>  | - [Guide](/scrum/scrum-what-guide.qmd) </br> - [Principles](/scrum/scrum-what-agile-manifesto.qmd)|
 |  | 10 | 28/11/2023 | - **Scrum Master** </br> - What is and what is not </br> - On the same page </br> - Servent-leader </br>| - [Scrum Master](/scrum/scrum-week4.qmd) |
 |  | 11 | 29/11/2023 | - Mindset  </br>  - **Nicholas Taleb**, Skin in the Game, Antifragile and the Soviet-Harvard dellusion  </br> | - [Mindset](/scrum/scrum-week5.qmd) |
 |  | 12  | 30/11/2023 | - **Product Owner** and Product Backlog </br>  - What is and what is not </br>   | - [Product Owner](/scrum/scrum-week6.qmd) |
