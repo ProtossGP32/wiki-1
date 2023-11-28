@@ -186,6 +186,15 @@ Thaler's contributions emphasize that economic decision-making is influenced by 
 
 # Emotions
 
+![The mind creates abyss, and the heart crosses it](/images/scrum/themindcreatesbridges.jpg)
+
+::: {.column-margin}
+
+Contemporary [theories](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8228195/){.external} of emotion converge around the key role of the amygdala as the central subcortical emotional brain structure that constantly evaluates and integrates a variety of sensory information from the surroundings and assigns them appropriate values of emotional dimensions, such as valence, intensity, and approachability.
+:::
+
+## Social bonding and complex information
+
 ![Emotion -- Ian McGilChirst](/images/scrum/emotion.jpg){width="70%"}
 
 **Ian McGilchrist**, a psychiatrist and neuroscientist, is renowned for his work on the divided brain. In ["The Master and His Emissary,"](/books/theMasterAndHisEmissary.qmd) he explores <mark>how the left and right hemispheres process information differently, impacting our perception of the world.</mark>
@@ -214,7 +223,19 @@ The central metaphor of these four chapters is that the mind is divided, like a 
 
 In this book he uses the metaphor to solve puzzles such as why it seems like everyone (else) is a hypocrite and why political partisans are so willing to believe outrageous lies and conspiracy theories. He also use the metaphor to show you <mark>how you can better persuade people who seem unresponsive to reason.</mark>
 
+## Emotions as GPS: Better Decision-Making"
 
+- [A Clinical Psychologist Explains How Your Emotions Can Help You Make Better Decisions](https://www.vunela.com/a-clinical-psychologist-explains-how-your-emotions-can-help-you-make-better-decisions/){.external}
+
+<mark>Emotions act as an internal GPS, signaling us through feelings and thoughts to guide decision-making and behavior.</mark>
+
+When triggered, emotions swiftly **inform us about a situation's alignment with our goals**.
+
+For instance, anxiety during a negotiation signals a need for further evaluation. While emotions lack precision, their speed provides a quick appraisal of experiences. Suppressing emotions may seem tempting, but evolved over millennia, **they serve a purpose — alerting us to potential red flags**.
+
+In business and personal relationships, emotions play a pivotal role, influencing reactions to situations like dealing with narcissistic personalities. Understanding our emotional responses equips us to navigate complex dynamics, contributing to better decision-making and successful outcomes. Embracing emotions as valuable cues enhances emotional intelligence and empowers us to leverage this innate information system for optimal results in various aspects of life.
+
+> Emotions are not particularly sophisticated or precise, but their speed and utility make up for what they lack in sophistication and precision. **Emotions**, when they are not disordered, **provide information about your circumstances in a simple, quick way** that does not involve a lot of cognition (thinking about it). 
 
 
 # References
