@@ -15,7 +15,7 @@ format:
 
 ::: {.summary}
 
-📘 **Summary: SCRUM Week 9 - Albertus' Dylemma**
+📘 **Summary: SCRUM Week 10 - Before SCRUM**
 
 Before SCRUM, software development primarily followed methodologies like Waterfall, V-Model, Incremental Model, and Spiral Model, which had their advantages but **lacked flexibility and early adaptability**.
 

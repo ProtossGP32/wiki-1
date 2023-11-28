@@ -32,12 +32,13 @@ Additionally, the mention of **LeSS (Large-Scale Scrum)** underscores the applic
 
 </br> </br>
 
-# Beyond SCRUM
+# Beyond SCRUM examples
 
+## SpaceX
 
-# [Is SpaceX using Scrum?](https://www.quora.com/Is-SpaceX-using-Scrum){.external}
+- [Is SpaceX using Scrum?](https://www.quora.com/Is-SpaceX-using-Scrum){.external}
 
-## Pitch Elevetor
+**Elevator Pitch**
 
 ![](/images/scrum/elomusk_pitch_serchingrockets.png)
 
