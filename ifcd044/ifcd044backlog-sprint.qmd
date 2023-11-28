@@ -5,7 +5,7 @@ categories: [ifcd044, backlog]
 
 
 <style>
-tr:nth-child(2) {
+tr:nth-child(3) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -19,9 +19,9 @@ tr:nth-child(2) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #3  | 9 | 27/11/2023 | - SCRUM: the **Guide**, concepts and execution, Sprint Zero </br> - Class projects Review  </br> - <s>Principles</s>  | - [Guide](/scrum/scrum-what-guide.qmd) </br> - [Principles](/scrum/scrum-what-agile-manifesto.qmd)|
-|  | 10 | 28/11/2023 | - **Scrum Master** </br> - What is and what is not </br> - On the same page </br> - Servent-leader </br>| - [Scrum Master](/scrum/scrum-week4.qmd) |
-|  | 11 | 29/11/2023 | - Mindset  </br>  - **Nicholas Taleb**, Skin in the Game, Antifragile and the Soviet-Harvard dellusion  </br> | - [Mindset](/scrum/scrum-week5.qmd) |
+| #3  | 9 | 27/11/2023 | - SCRUM: the **Guide**, concepts and execution, Sprint Zero </br> - Class projects Review  </br> - <s>Principles</s> </br>++ Product Owner & Product Backlog: from a piece of paper to Jire  | - [Guide](/scrum/scrum-what-guide.qmd) </br> - [Principles](/scrum/scrum-what-agile-manifesto.qmd)|
+|  | 10 | 28/11/2023 | - **Scrum Master** </br> - What is and what is not </br> - On the same page </br> - Servent-leader </br> ++ How important is cultural context: world lead industries (Germany, Japan, China) </br> ++ From Zero to One: the most difficult step </br> ++ We must map catalan agile companies  </br></br>  *Homework: </br> Scrum Guide </br>  Principles </br> I, as a studennt, wanto to have some **metrics to** ...*  </br>  Servent Leader  | - [Scrum Master](/scrum/scrum-week4.qmd) |
+|  | 11 | 29/11/2023 | - Mindset  </br>  - **Nicholas Taleb**, Skin in the Game, Antifragile and the Soviet-Harvard dellusion  </br>  - Book Presentation: The trap of intelligence  </br>  - React path | - [Mindset](/scrum/scrum-week5.qmd) |
 |  | 12  | 30/11/2023 | - **Product Owner** and Product Backlog </br>  - What is and what is not </br>   | - [Product Owner](/scrum/scrum-week6.qmd) |
 |  | 13 | 01/12/2023 | - **Team**, Scrum Master, Product Owner, Specialist </br> |  |
 : Sprint Backlog course November 2023 table {tbl-colwidths="[2,2,2,60,34]"}
