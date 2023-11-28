@@ -1,5 +1,5 @@
 ---
-title: "Week 11: Team dynamics"
+title: "Week 11: Team Dynamics"
 subtitle: SCRUM Week 11
 author: Albert R.
 date: "06/01/2021"
@@ -12,6 +12,25 @@ number-sections: true
 format:
   html
 ---
+
+
+
+::: {.summary}
+
+📘 **Summary: SCRUM Week 11 - Team Dynamics**
+
+**Team Dynamics of SCRUM explores the intricate dynamics of team interactions, drawing parallels from chimpanzee politics and human behavior**.
+
+**Frans de Waal**'s insights into chimp colonies reveal underlying power struggles reminiscent of human political maneuvering. The discussion on **social hierarchies introduces the Status Game**, encompassing **Virtue**, **Competition**, and **Dominance** games as strategies for securing social standing. The **Minority Rules** concept emphasizes the impact of determined minorities on societal norms. **Milgram's Experiments** shed light on blind obedience to authority, exposing the perils of moral compromise.
+
+The introduction of the **Sociogram** as a tool for mapping group relationships enhances leaders' understanding of team dynamics. **Behavioral Economics**, exemplified by R**ichard H. Thaler**'s work, challenges traditional economic models, emphasizing **the role of emotions in decision-making**.
+
+**Ian McGilchrist's exploration of the divided brain highlights the social dimension of emotions**, crucial for interpersonal communication. The metaphor of the **rider and elephant** in **moral emotions**, as presented by **Jonathan Haidt**, further delves into the complexities of human behavior. The week concludes by referencing additional resources for deeper exploration.
+
+:::
+
+</br></br>
+
 
 # Origins
 

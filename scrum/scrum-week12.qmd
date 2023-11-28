@@ -13,6 +13,25 @@ format:
   html
 ---
 
+
+
+::: {.summary}
+
+📘 **Summary: SCRUM Week 12 - Beyond SCRUM**
+
+
+The article "Beyond SCRUM" delves into unconventional yet effective approaches to project management, drawing insights from **SpaceX and Big Tech**.
+
+SpaceX initially adopted **Lean Startup practices, engaging in unorthodox strategies like purchasing rocket spares from regular stores**.This departure from traditional aerospace norms allowed them to outcompete industry giants. **Elon Musk's Agile 5 steps** emphasize making requirements smarter, constantly refining processes, simplifying, accelerating cycle time, and automating. The accompanying video presentations provide a deeper understanding of these principles.
+
+In contrast, the exploration of how Big Tech manages projects reveals a diverse landscape where success varies based on company size and industry focus. Notably, **the absence of dedicated Project Managers or Product Owners in Big Tech emphasizes the role of Product Managers in defining strategy and execution steps**.
+
+Additionally, the mention of **LeSS (Large-Scale Scrum)** underscores the application of Scrum principles to multiple teams working collaboratively on a single product.
+
+:::
+
+</br> </br>
+
 # Beyond SCRUM
 
 
@@ -49,34 +68,34 @@ Perhaps, it’s [not a classical](https://www.nextbigfuture.com/2018/12/reverse-
 ![](/images/scrum/eng_design_princiles_elon_min-768x1024.png)
 :::
 
-### Make requirements less dumb
+- **Make requirements less dumb**
 
-- Your requirements are dumb especially if a smart person gives them to you because you may not question them enough. Everyone is wrong sometimes.
-- People will put you in an unnecessarily small box. Make your box bigger.
-- Requirements must have an owner (a person not a department) who is responsible for maintaining information about the need to continue.
+  - Your requirements are dumb especially if a smart person gives them to you because you may not question them enough. Everyone is wrong sometimes.
+  - People will put you in an unnecessarily small box. Make your box bigger.
+  - Requirements must have an owner (a person not a department) who is responsible for maintaining information about the need to continue.
 
-### Always be deleting part of the process
+- Always be **deleting** part of the process
 
-- If you are not occasionally adding things back in, you are not deleting enough. 
-- The bias tends to be adding things to processes which are “in case we need it”.
-- This is how processes get out of control and lengthier than truly needed
-
-
-### Simplify or optimize
-
-- It is very common for smart people to optimize processes that should not exist. 
-- We are trained to answer questions and solve problems… don’t be afraid to say that this problem is dumb
-
-### Accelerate cycle time
-
-- Go faster through each process.
-- Don’t do this before you get through the first 3 steps
+  - If you are not occasionally adding things back in, you are not deleting enough. 
+  - The bias tends to be adding things to processes which are “in case we need it”.
+  - This is how processes get out of control and lengthier than truly needed
 
 
-### Automate
+- **Simplify** or optimize
 
-- Find ways to achieve process steps with little or no human intervention or cycle time. 
-- Create automated feedback and process controls
+  - It is very common for smart people to optimize processes that should not exist. 
+  - We are trained to answer questions and solve problems… don’t be afraid to say that this problem is dumb
+
+- **Accelerate cycle time**
+
+  - Go faster through each process.
+  - Don’t do this before you get through the first 3 steps
+
+
+- **Automate**
+
+  - Find ways to achieve process steps with little or no human intervention or cycle time. 
+  - Create automated feedback and process controls
 
 ## Presentation
 
