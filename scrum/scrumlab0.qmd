@@ -98,7 +98,7 @@ Students will gain practical experience in organizing their time and minds, honi
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Week 10: Beyond SCRUM](/scrum/scrum-week10.qmd)
+[{{< fa solid arrow-left >}} Week 12: Beyond SCRUM](/scrum/scrum-week12.qmd)
 <br>
 </div>
 <br>
@@ -110,7 +110,7 @@ Students will gain practical experience in organizing their time and minds, honi
 <br>
 <div class='column right next'>
 <br>
-[SCRUM Lab#SC01: Paper Airplanes {{< fa solid arrow-right >}}](/scrum/scrumlab1.qmd)
+[SCRUM Lab#SC01: Paper airplanes {{< fa solid arrow-right >}}](/scrum/scrumlab1.qmd)
 <br>
 </div>
 <br>

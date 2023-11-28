@@ -423,6 +423,7 @@ website:
             - scrum/scrumlab2.qmd
             - scrum/scrumlab3.qmd
             - scrum/scrumlab4.qmd
+            - scrum/scrumlab5.qmd
         - text: "---"  
         - section: "Resources"
           contents:

@@ -156,7 +156,7 @@ HRef data is incorporated into Airtable for comprehensive analytics. This interc
 <br>
 <div class='column right next'>
 <br>
-[SCRUM: resources  {{< fa solid arrow-right >}}](/scrum/resources.qmd)
+[SCRUM Lab#SC05: Tests  {{< fa solid arrow-right >}}](/scrum/scrumlab5.qmd)
 <br>
 </div>
 <br>

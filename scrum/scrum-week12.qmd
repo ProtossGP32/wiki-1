@@ -165,7 +165,7 @@ LeSS is Scrum—Large-Scale Scrum (LeSS) isn’t new and improved Scrum. And it�
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Week 9: Albertus' Dylemma](/scrum/scrum-week9.qmd)
+[{{< fa solid arrow-left >}} Week 11: Team Dynamics ](/scrum/scrum-week11.qmd)
 <br>
 </div>
 <br>
