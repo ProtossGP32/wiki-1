@@ -17,14 +17,18 @@ format:
 
 ## The 2020 Scrum Guide
 
+::: {.column-page-right}
 
 <iframe 
-  width="780"
-  height="500" 
+  width="100%"
+  height="900" 
   src="https://scrumguides.org/scrum-guide.html"
   title="The 2020 Scrum Guide">
 </iframe>
 
+:::
+
+</br>
 [The 2020 Scrum Guide](https://scrumguides.org/scrum-guide.html){.external}
 
 This HTML version of the Scrum Guide is a direct port of the November 2020 version available [as a PDF here](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf#zoom=100){.external} or [original 2013](https://scrumguides.org/docs/scrumguide/v1/Scrum-Guide-US.pdf){.external}.
