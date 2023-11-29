@@ -5,7 +5,7 @@ author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description:  The Product Owner is a crucial team member responsible for understanding customer needs and the business value
 categories: [scrum, scrum-week6, product-owner]
 toc: true
 number-sections: true
@@ -20,7 +20,7 @@ format:
 📘 **Summary: SCRUM Week 6 - Product Owner, how it works**
 
 
-In SCRUM Agile, the Product Owner is a crucial team member r**esponsible for understanding customer needs and the business value associated with those needs**.
+In SCRUM Agile, the Product Owner is a crucial team member **responsible for understanding customer needs and the business value associated with those needs**.
 
 The Product Owner **translates customer requirements to the Scrum team, ensuring the correct implementation of the product vision.**
 
