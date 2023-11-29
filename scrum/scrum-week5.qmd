@@ -49,7 +49,7 @@ Mindset, Growth & Fixed Mindset, Purpose, Soviet-Harvard Delusion, Skin in the G
 </br></br>
 
 
-![The **magic** you are looking for... is in the work **you are avoiding**](/images/scrum/magic_what_avoiding.jpg)
+![The **magic** you are looking for... is in the work **you are avoiding**](/images/scrum/magic_what_avoiding.jpg){width="40%"}
 
 
 # Mindset, overview
