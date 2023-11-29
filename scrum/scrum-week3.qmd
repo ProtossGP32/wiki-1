@@ -25,11 +25,12 @@ The importance of a **common vocabulary cannot be overstated. Using the right wo
 
 Additionally, the **Pareto Principle underscores the significance of focusing efforts on the vital few aspects that yield the most significant results.** Multitasking is discouraged as it hampers productivity and quality, leading to cognitive deficits. Finally, an awareness of cognitive biases, such as the halo effect, emphasizes the need for objective judgment to avoid distorted perceptions.
 
-
+Keywords: Delivering Value, Communication, Common Vocabulary, Pareto Principle, Multitasking, Cognitive Bias, Halo Effect, Effective Writing, Effective Speaking, The Mom Test
 :::
 
 </br></br>
 
+![[Effective communication](https://atonce.com/blog/effective-communication){.external}](/images/scrum/effective-communication-overview.png){width="70%"}
 
 # Communication
 

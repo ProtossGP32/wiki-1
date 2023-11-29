@@ -24,6 +24,7 @@ format:
 
 **Iterations are essential in SCRUM**, aligning with the "keep it simple" concept, the Lindy effect, and path dependence. **By breaking down complex tasks into manageable units, SCRUM teams ensure incremental progress, frequent feedback loops, and adaptive evolution.** Time-boxing activities in SCRUM, based on cognitive load and focus principles, enhances efficiency, promotes simplicity, and facilitates continuous improvement through clear differentiation of activities and follow-through.
 
+Keywords: Meetings, Impediments, Iterations, Agile, Collaboration, Decision-making, Productivity, Time management, Cognitive load, Continuous improvement, Negative logic, Transparency, Lindy effect, Path dependence
 :::
 
 # Meetings

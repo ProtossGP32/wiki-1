@@ -29,7 +29,7 @@ In Scrum Agile, the effective management of **user stories, tasks, and habits pl
 
 **Themes and epics** categorize stories by business goals and serve as larger requirements, respectively. User stories or work items are components of epics, and tasks contribute to building stories. Developing good habits is essential, and James Clear's **"Atomic Habits"** provides a proven framework for habit formation, emphasizing identity-based habits and the habit loop.
 
-
+Keywords: User stories, Tasks, Habits, Sprint deliveries, Product Backlog Items (PBIs), Planning poker, INVEST criteria, Themes, Epics, Definition of Done (DoD), Acceptance Criteria, Incremental product delivery
 :::
 
 </br></br>
