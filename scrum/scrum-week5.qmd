@@ -40,6 +40,8 @@ The shift in management paradigms, customer-centric approaches, and the signific
 </br></br>
 
 
+![](/images/scrum/magic_what_avoiding.jpg)
+
 
 # Mindset, overview
 
@@ -160,18 +162,16 @@ Soviet-Harvard dellusion is that **academic knowledge is superior and that we mu
 
 ![](/images/scrum/Principle1%20Companies%20Depend%20on%20Customers%20and%20Investors%20for%20Resources.png){width="80%"}
 
-<mark>he shift in management paradigms from the traditional approach of strict control in the 1970s to a more customer and investor-centric approach reflects broader changes in the business landscape, economic environment, and evolving theories of management</mark>. Here are some key factors that have contributed to this shift:
+<mark>The shift in management paradigms from the traditional approach of strict control in the 1970s to a more customer and investor-centric approach reflects broader changes in the business landscape, economic environment, and evolving theories of management</mark>. Here are some key factors that have contributed to this shift:
 
 - **Globalization**: In the 1970s, businesses were generally more localized, and global competition was not as intense as it is today. With the advent of globalization, companies have had to adapt to a more interconnected and competitive world. This shift necessitated a focus on understanding and meeting the needs of diverse customer bases across different regions.
 - Technological Advances:& Information Age:
   - **The rise of the information age**, particularly with the widespread adoption of the internet, has empowered consumers with access to vast amounts of information. This has given rise to more informed and discerning customers who demand transparency, quality, and responsiveness from the companies they engage with.
   - **Advances in technology have enabled more efficient communication**, data analysis, and production processes. Companies now have the tools to gather and analyze customer feedback in real-time, allowing them to tailor products and services to meet customer demands more effectively.
-- Rise of **Shareholder Value**: In the 1970s, the focus was often on maintaining stable operations and hierarchical control. Over time, there has been a shift toward a greater emphasis on shareholder value. This change has been driven by the belief that by maximizing shareholder value, companies can attract more investment, which is essential for growth and competitiveness.
+- Rise of **Shareholder Value** and **Private Equity**: In the 1970s, the focus was often on maintaining stable operations and hierarchical control. Over time, there has been a shift toward a greater emphasis on shareholder value. This change has been driven by the belief that by maximizing shareholder value, companies can attract more investment, which is essential for growth and competitiveness.
 - **Customer-Centric Approaches**: The concept of being **customer-centric** has gained prominence. Instead of just producing what a company thinks is best, there is a greater emphasis on understanding customer needs, preferences, and feedback. Companies that prioritize customer satisfaction are often more successful in building brand loyalty and gaining a competitive edge.
 - **Agile and Collaborative Management**: The hierarchical, top-down management style of the past has given way to more agile and collaborative approaches. With the pace of change in the business environment, companies need to be nimble and responsive. This requires empowering employees at all levels to contribute to decision-making and innovation.
-Rise of Entrepreneurial Culture:
-
-The entrepreneurial spirit has become more valued within organizations. Managers are encouraged to think creatively, take calculated risks, and foster innovation. This contrasts with the more bureaucratic and risk-averse culture that was prevalent in some organizations in the 1970s.
+- **Rise of Entrepreneurial Culture**: The <mark>entrepreneurial spirit has become more valued within organizations</mark>. Managers are encouraged to think creatively, take calculated risks, and foster innovation. This contrasts with the more bureaucratic and risk-averse culture that was prevalent in *some/most organizations in the 1970s.*
 
 # Skin in the game
 
@@ -187,11 +187,20 @@ For example, if you're giving advice on investments, having "skin in the game" m
 The idea is that when people have a direct, **personal connection to the consequences of their decisions,** they are likely to make more careful and informed choices, as they are personally accountable for the outcomes.
 
 
+> Most people you run into in real life... plumbers, taki drivers, accountants, tax advisors, garbage collecotrs... pay a price for their mistakes.
+>
+>  -- Nassim Nicholas Taleb, *Skin in the game*
+
 ![Examples Skin in the game](/images/scrum/asymmetries.jpg){width="80%"}
 
 # Antifragile
 
-  
+::: {.column-margin}
+
+![](/images/scrum/wrong_reallity_does.png)
+
+:::
+
 [Antifragile](https://fs.blog/an-antifragile-way-of-life/) is another concept introduced by Nassim Nicholas Taleb. <mark>It refers to systems, entities, or things that not only withstand shocks and uncertainty but actually benefit and improve from them. In other words, antifragility goes beyond mere resilience; it's about thriving and growing stronger in the face of adversity.</mark>
 
 Taleb contrasts **antifragility** with **fragility** and **robustness**.
@@ -206,15 +215,15 @@ In practical terms, individuals, systems, or organizations that embrace antifrag
 
 **Anitfragile rules**
 
-- Stick to simple rules
-- Build in redundancy and layers (no single point of failure)
+- Stick to **simple rules**
+- **Build in redundancy and layers** (no single point of failure)
 - Resist the urge to suppress randomness
-- Make sure that you have your soul in the game
-- Experiment and tinker — take lots of small risks
-- Avoid risks that, if lost, would wipe you out completely
+- Make sure that you have **your skin (soul) in the game**
+- Experiment and tinker — take lots of **small risks**
+- Avoid risks that, if lost, would **wipe you out completely**
 - Don’t get consumed by data
 - Keep your options open
-- Focus more on avoiding things that don’t work than trying to find out what does work
+- <mark>Focus more on avoiding things that don’t work than trying to find out what does work</mark>
 - Respect the old — look for habits and rules that have been around for a long time
 
 # References
