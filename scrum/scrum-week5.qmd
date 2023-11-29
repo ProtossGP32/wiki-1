@@ -5,7 +5,7 @@ author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description: Week 5 of SCRUM focuses on the pivotal role of mindset in personal and professional success.
 categories: [scrum, scrum-week5, mindset]
 toc: true
 number-sections: true
@@ -32,7 +32,17 @@ The **Soviet-Harvard delusion** challenges the idea that academic knowledge alon
 
 The shift in management paradigms, customer-centric approaches, and the significance of having **"skin in the game"** are explored. The concept of **antifragility** is introduced, encouraging individuals and organizations to thrive and grow stronger in the face of adversity.
 
-**Keywords**: Mindset, SCRUM, Growth Mindset, Purpose, Soviet-Harvard Delusion, Skin in the Game, Antifragility, Fixed Mindset, Customer-Centric Approaches, Entrepreneurial Culture.
+
+:::
+
+
+</br>
+
+::: {.keywords}
+
+**Summary: SCRUM Week 5 - Mindset, the key to everything**
+
+Mindset, SCRUM, Growth Mindset, Purpose, Soviet-Harvard Delusion, Skin in the Game, Antifragility, Fixed Mindset, Customer-Centric Approaches, Entrepreneurial Culture.
 
 :::
 

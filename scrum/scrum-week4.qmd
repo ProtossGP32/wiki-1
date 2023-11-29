@@ -5,7 +5,7 @@ author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description: The role of a ScrumMaster stands out as crucial for success in Agile methodologies.
 categories: [scrum, scrum-week4, scrummaster]
 toc: true
 number-sections: true
@@ -28,7 +28,16 @@ Contrary to traditional leadership, a ScrumMaster shares power, prioritizing the
 
 The ScrumMaster **serves the Scrum Team, Product Owner, and the organization at large**, playing a pivotal role in Scrum adoption and implementation.
 
-Keywords: ScrumMaster, Servant-Leader, Multifaceted Responsibilities, Traditional Leadership, Scrum Team, Product Owner, Organization, Teaching, Facilitating, Empirical Approach.
+
+:::
+
+</br>
+
+::: {.keywords}
+
+**Summary: SCRUM Week 4 - ScrumMaster, how it works**
+
+ScrumMaster, Servant-Leader, Multifaceted Responsibilities, Traditional Leadership, Scrum Team, Product Owner, Organization, Teaching, Facilitating, Empirical Approach.
 
 :::
 

@@ -5,7 +5,7 @@ author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description: Effective and well-organized meetings are fundamental to SCRUM Agile
 categories: [scrum, scrum-week1, meetings, impediments]
 toc: true
 number-sections: true
@@ -24,7 +24,17 @@ format:
 
 **Iterations are essential in SCRUM**, aligning with the "keep it simple" concept, the Lindy effect, and path dependence. **By breaking down complex tasks into manageable units, SCRUM teams ensure incremental progress, frequent feedback loops, and adaptive evolution.** Time-boxing activities in SCRUM, based on cognitive load and focus principles, enhances efficiency, promotes simplicity, and facilitates continuous improvement through clear differentiation of activities and follow-through.
 
-Keywords: Meetings, Impediments, Iterations, Agile, Collaboration, Decision-making, Productivity, Time management, Cognitive load, Continuous improvement, Negative logic, Transparency, Lindy effect, Path dependence
+
+:::
+
+</br>
+
+::: {.keywords}
+
+**Keywords: SCRUM Week 1 - Meetings, Impediments and Iterations**
+
+Meetings, Impediments, Iterations, Agile, Collaboration, Decision-making, Productivity, Time management, Cognitive load, Continuous improvement, Negative logic, Transparency, Lindy effect, Path dependence.
+
 :::
 
 # Meetings
@@ -243,6 +253,7 @@ By balancing cognitive load, clear tasks, follow-through, and adaptability, team
 - [The 16 best ways to sabotage your organization's productivity, from a CIA manual published in 1944](https://www.businessinsider.com/oss-manual-sabotage-productivity-2015-11?IR=T)
 - [Simple Sabottage Manual -strategic Services-](https://drive.google.com/file/d/1xXsLu2TXqbkuL_QIFKAOkofi8eVS12Lk/view)
 - [Meetings Types](https://meetingnotes.com/blog/types-of-meetings)
+
 
 
 

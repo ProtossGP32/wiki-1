@@ -5,7 +5,7 @@ author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description: In Scrum Agile, the effective management of user stories, tasks, and habits plays a pivotal role in achieving successful sprint deliveries.
 categories: [scrum, scrum-week2, user-story]
 toc: true
 number-sections: true
@@ -29,7 +29,18 @@ In Scrum Agile, the effective management of **user stories, tasks, and habits pl
 
 **Themes and epics** categorize stories by business goals and serve as larger requirements, respectively. User stories or work items are components of epics, and tasks contribute to building stories. Developing good habits is essential, and James Clear's **"Atomic Habits"** provides a proven framework for habit formation, emphasizing identity-based habits and the habit loop.
 
-Keywords: User stories, Tasks, Habits, Sprint deliveries, Product Backlog Items (PBIs), Planning poker, INVEST criteria, Themes, Epics, Definition of Done (DoD), Acceptance Criteria, Incremental product delivery
+
+:::
+
+
+</br>
+
+::: {.keywords}
+
+**Keywords: SCRUM Week 2 - User stories, Tasks and Habits**
+
+User stories, Tasks, Habits, Sprint deliveries, Product Backlog Items (PBIs), Planning poker, INVEST criteria, Themes, Epics, Definition of Done (DoD), Acceptance Criteria, Incremental product delivery.
+
 :::
 
 </br></br>

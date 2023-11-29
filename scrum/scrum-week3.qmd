@@ -5,7 +5,7 @@ author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description: In SCRUM Agile methodology, effective communication and value delivery play pivotal roles in fostering collaboration and project success
 categories: [scrum, scrum-wewek3, communication]
 toc: true
 number-sections: true
@@ -25,7 +25,18 @@ The importance of a **common vocabulary cannot be overstated. Using the right wo
 
 Additionally, the **Pareto Principle underscores the significance of focusing efforts on the vital few aspects that yield the most significant results.** Multitasking is discouraged as it hampers productivity and quality, leading to cognitive deficits. Finally, an awareness of cognitive biases, such as the halo effect, emphasizes the need for objective judgment to avoid distorted perceptions.
 
-Keywords: Delivering Value, Communication, Common Vocabulary, Pareto Principle, Multitasking, Cognitive Bias, Halo Effect, Effective Writing, Effective Speaking, The Mom Test
+:::
+
+
+
+</br>
+
+::: {.keywords}
+
+**Summary: SCRUM Week 3 - Delivering Value & Communication**
+
+Delivering Value, Communication, Common Vocabulary, Pareto Principle, Multitasking, Cognitive Bias, Halo Effect, Effective Writing, Effective Speaking, The Mom Test.
+
 :::
 
 </br></br>
