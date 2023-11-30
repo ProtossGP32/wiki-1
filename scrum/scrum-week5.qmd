@@ -158,15 +158,6 @@ Soviet-Harvard dellusion is that **academic knowledge is superior and that we mu
 ![Soviet-Harvard dellusion ](/images/scrum/soviet-hardvard-delusion.png)
 
 
-# from Coca-cola hilltop to Nixon's purpose of life
-
-{{< video https://www.youtube.com/watch?v=C2406n8_rUw >}}
-
-{{< video https://www.youtube.com/watch?v=Pc3IfB23W4c >}}
-
-
-
-
 # Who is on control
 
 ![](/images/scrum/Principle1%20Companies%20Depend%20on%20Customers%20and%20Investors%20for%20Resources.png){width="80%"}
@@ -253,6 +244,47 @@ These two modes of perception cascade into wildly different hemispheric personal
 
 {{< video https://www.youtube.com/watch?v=dFs9WO2B8uI >}}
 
+
+# From Coca-cola hilltop to Nixon's purpose of life
+
+## Coca-Cola commercial "Hilltop" 
+
+{{< video https://www.youtube.com/watch?v=C2406n8_rUw >}}
+
+Interpreting the **Coca-Cola commercial** from 1971, known as **"Hilltop",** through the lens of **Ian McGilchrist's right hemisphere perspective** involves focusing on its <mark>emotional and experiential elements, emphasizing connection, unity, and the present moment. The right hemisphere is often associated with holistic thinking, creativity, and a sense of interconnectedness.</mark>
+
+::: {.callout-note}
+In this interpretation, the commercial can be seen as a celebration of shared human experiences, emphasizing the joy of coming together. The vibrant scenes of people from different cultures atop a hill, singing **"I'd Like to Buy the World a Coke,"** can be viewed as a representation of a harmonious and utopian world. The right hemisphere tends to appreciate the beauty of the whole rather than breaking it down into individual components, so the emphasis is on the collective experience of enjoying a Coca-Cola.
+:::
+
+The commercial's setting on a hilltop, **away from the complexities of daily life, may be seen as an escape into a simpler, more idealized reality**. It portrays a vision of a world where people connect on a deeper, emotional level, transcending the divisions that exist in the everyday world. The **right hemisphere often engages with experiences in a more intuitive and non-linear manner, so the dreamlike quality of the commercial may resonate with this perspective, emphasizing feelings and connections over logical analysis.**
+
+The absence of specific product details or practical considerations in the commercial aligns with the right hemisphere's tendency to focus on the **overall experience rather than the details**. It fosters a sense of unity and common humanity, tapping into the emotional and experiential aspects of sharing a simple pleasure like a Coca-Cola.
+
+
+## Great Leap Forward in China during the late 1950s
+
+{{< video https://www.youtube.com/watch?v=0pjCn43RQ6Y >}}
+
+One historical example of **hierarchical structures dominated by left hemisphere thinking, leading to disastrous consequences, is the planning and execution of the Great Leap Forward in China during the late 1950s**. This initiative was spearheaded by **Mao Zedong**, the leader of the **Chinese Communist Party**, and aimed at rapidly transforming China from an agrarian society into an industrialized socialist nation.
+
+**Great Leap Forward (1958-1962):**
+
+- **Left Hemisphere Dominance:** The campaign was characterized by an authoritarian, top-down approach, reflecting left hemisphere traits such as centralized planning, strict control, and a focus on quantitative measures. The emphasis was on achieving ambitious economic and agricultural targets through detailed plans and directives.
+- **Disastrous Consequences:** The rigid and hierarchical structure of the Great Leap Forward led to catastrophic results. Agricultural practices were restructured without considering the practical knowledge of local farmers, and unrealistic production targets were set. The emphasis on quantity over quality and the suppression of dissenting opinions resulted in widespread famine, economic collapse, and a significant loss of life.
+- **Lack of Feedback and Adaptability:** The hierarchical nature of the campaign stifled open communication and constructive feedback. Lower-level officials and workers were often afraid to report failures or question the feasibility of the set goals, contributing to the implementation of impractical policies and the concealment of actual conditions.
+
+::: {.callout-important}
+
+The Great Leap Forward resulted in one of the most significant humanitarian disasters in history, with estimates of tens of millions of deaths due to famine, malnutrition, and related causes. This example underscores the potential dangers of hierarchical structures dominated by left hemisphere thinking when practical realities, local knowledge, and adaptability are disregarded in pursuit of ideologically driven goals.
+:::
+
+## Nixon's purpose of life
+
+
+{{< video https://www.youtube.com/watch?v=Pc3IfB23W4c >}}
+
+> This attitude toward hard work and a sense of purpose was one of his most deeply ingrained beliefs.
 
 
 # References
