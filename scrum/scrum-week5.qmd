@@ -162,7 +162,7 @@ Soviet-Harvard dellusion is that **academic knowledge is superior and that we mu
 
 {{< video https://www.youtube.com/watch?v=C2406n8_rUw >}}
 
-{{< video ttps://www.youtube.com/watch?v=Pc3IfB23W4c >}}
+{{< video https://www.youtube.com/watch?v=Pc3IfB23W4c >}}
 
 
 
@@ -235,9 +235,35 @@ In practical terms, individuals, systems, or organizations that embrace antifrag
 - <mark>Focus more on avoiding things that don’t work than trying to find out what does work</mark>
 - Respect the old — look for habits and rules that have been around for a long time
 
+
+# The divided mind
+
+> The divided nature of our reality has been a consistent observation since humanity has been sufficiently self-conscious to reflect on it. [… He names a few key examples …] What all these point to is the fundamentally divided nature of mental experience. When one puts that together with the fact that the brain is divided into two relatively independent chunks which just happen to mirror the very dichotomies that are being pointed to — alienation versus engagement, abstraction versus incarnation, the categorical versus the unique, the general versus the particular, the part versus the whole, and so on — it seems like a metaphor that might have some literal truth. But if it turns out to be ‘just’ a metaphor, I will be content. I have a high regard for metaphor. It is how we come to understand the world.
+>
+>  -- Ian McGilchrist
+
+
+::: {.callout-note}
+In "The Divided Brain", McGilchrist digests study after study, replacing the popular and superficial notion of the hemispheres as respectively logical and creative in nature with <mark>the idea that they pay attention in fundamentally different ways, the left being detail-oriented, the right being whole-oriented.</mark>
+:::
+
+
+These two modes of perception cascade into wildly different hemispheric personalities, and in fact reflect yet a further asymmetry in their status, that of the right's more immediate relationship with physical bodies (our own as well as others) and external reality as represented by the senses, a relationship that makes it the mediator, the first and last stop, of all experience.
+
+
+{{< video https://www.youtube.com/watch?v=dFs9WO2B8uI >}}
+
+
+
 # References
 
 - [Week 5: Mindset, the key to everything](https://sites.google.com/view/gestioprojectes/llegir/setmana5){.external}
+- [A tale of two hemispheres](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2828853/){.external}
+- [The Divided Brain](https://thedividedbrain.com/){.external}
+- [Can the divided brain tell us anything about the ultimate nature of reality? Dr Iain McGilchrist](https://www.rcpsych.ac.uk/docs/default-source/members/sigs/spirituality-spsig/iain-mcgilchrist-can-the-divided-brain-tell-us-anything-about-the-ultimate-nature-of-reality.pdf?sfvrsn%3Da1e381e1_2){.external}
+- [The Master and His Emissary](https://en.wikipedia.org/wiki/The_Master_and_His_Emissary#Part_One:_The_Divided_Brain){.external}
+
+
 
 
 <!--- navLinks -->
