@@ -5,7 +5,7 @@ author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description: Before SCRUM, software development primarily followed methodologies like Waterfall, V-Model
 categories: [scrum, scrum-week10, before-scrum]
 toc: true
 number-sections: true
@@ -27,9 +27,20 @@ The **Agile Manifesto in 2001 marked a pivotal moment**. SCRUM's integration wit
 
 :::
 
+
+
+</br>
+
+::: {.keywords}
+
+**Keywords: SCRUM Week 10 - Before SCRUM**
+
+Waterfall Model, V-Model, Incremental Model, Spiral Model, Project Management Office (PMO), Agile Principles, Toyota Production System (TPS), Lean Manufacturing, Crystal Clear, Refactoring, Toyota Connected, Lean Production, Taiichi Ohno.
+
+
+:::
+
 </br></br>
-
-
 
 # Agile and Managment history
 

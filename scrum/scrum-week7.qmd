@@ -5,13 +5,14 @@ author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description: In "Managing Time and Mind" the narrative challenges the conventional emphasis on time management alone
 categories: [scrum, scrum-week7, mindset, time-management]
 toc: true
 number-sections: true
 format:
   html
 ---
+
 
 
 ::: {.summary}
@@ -25,6 +26,16 @@ The article introduces the myth of time management, arguing that success is not 
 Drawing from **Dr. Stephen R. Covey's concept of "sharpening the saw"**, it highlights the foundational role of mental well-being in effective time management.
 
 Supported by **neuroscience**, the piece underscores that a cluttered mind impedes productivity and advocates for practices like meditation and mindfulness to enhance cognitive abilities. The practical shift involves aligning tasks with mental rhythms, emphasizing breaks, and incorporating mindfulness exercises. Ultimately, the article contends that mindful time management, integrating both time and mind, fosters true efficiency, balance, and well-being in navigating the complexities of modern life.
+
+:::
+
+</br>
+
+::: {.keywords}
+
+**Keywords: SCRUM Week 7 - Managing Time and Mind**
+
+Managing Time and Mind, Sharpening the Saw, Neuroscience, Productivity, Mindfulness, Meditation, Emotional Intelligence, Present Moment Awareness, Cognitive Functions, Mindful Time Management, Symbiotic, Well-being.
 
 :::
 

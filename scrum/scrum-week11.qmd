@@ -5,7 +5,7 @@ author: Albert R.
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description: Team Dynamics of SCRUM explores the intricate dynamics of team interactions
 categories: [scrum, scrum-week9, team-dynamics]
 toc: true
 number-sections: true
@@ -26,6 +26,17 @@ format:
 The introduction of the **Sociogram** as a tool for mapping group relationships enhances leaders' understanding of team dynamics. **Behavioral Economics**, exemplified by R**ichard H. Thaler**'s work, challenges traditional economic models, emphasizing **the role of emotions in decision-making**.
 
 **Ian McGilchrist's exploration of the divided brain highlights the social dimension of emotions**, crucial for interpersonal communication. The metaphor of the **rider and elephant** in **moral emotions**, as presented by **Jonathan Haidt**, further delves into the complexities of human behavior. The week concludes by referencing additional resources for deeper exploration.
+
+:::
+
+
+</br>
+
+::: {.keywords}
+
+**Keywords: SCRUM Week 11 - Team Dynamics**
+
+Team Dynamics, Frans de Waal, Social Hierarchies, Virtue Game, Competition Game, Dominance Game, Minority Rules, Nassim Nicholas Taleb, Milgram's Experiments, Sociogram, Behavioral Economics, Richard H. Thaler, Nudges, Incentives, Ian McGilchrist, The Master and His Emissary, Jonathan Haidt, Moral Emotions, The Righteous Mind, Emotions as GPS
 
 :::
 

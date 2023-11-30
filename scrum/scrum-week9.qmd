@@ -5,7 +5,7 @@ author: Albert R.
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: description
+description: Albertus' Dylemma explores **the mental challenges faced by programmers throughout the workweek
 categories: [scrum, scrum-week9, albertusDylemma]
 toc: true
 number-sections: true
@@ -28,6 +28,17 @@ Embracing intermittent coding preserves mental energy, ensuring a successful jou
 Albertus' Dylemma serves as a **guiding philosophy for maintaining balance**, resulting in a clear-minded, stress-free programmer celebrating a job well done by week's end.
 
 :::
+
+</br>
+
+::: {.keywords}
+
+**Keywords: Week 9 - Albertus' Dylemma**
+
+Albertus' Dylemma, Mental Challenges, Creative-Mind-Brain Energy, Productivity Trap, Strategic Pause, Informed Decisions, Intermittent Coding, Balance, Clear-minded, Stress-free, Coding Desert, Journey, Programmer's Oasis, Reflection, Decision-making, Desert Wisdom, Coding Legacy
+
+:::
+
 
 </br></br>
 
