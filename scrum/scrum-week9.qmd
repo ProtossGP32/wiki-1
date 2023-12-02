@@ -42,7 +42,11 @@ Albertus' Dilemma, Mental Challenges, Creative-Mind-Brain Energy, Productivity T
 
 </br></br>
 
-![](/images/scrum/sahara-desert-morroco-800x800.jpg){width="80%"}
+![Programming means choosing a path where there is no path and few resources and each decision conditions the next and drains resources](/images/scrum/sahara-desert-morroco-800x800.jpg){width="80%"}
+
+# What is a dilemma?
+
+![[Dictionary dilemma](https://dictionary.cambridge.org/dictionary/english/dilemma#google_vignette){.external}](/images/scrum/dilemma.png){width="60%"}
 
 # Albertus' Dilemma: The Comic
 
