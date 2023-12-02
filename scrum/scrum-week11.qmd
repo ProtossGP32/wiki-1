@@ -206,7 +206,7 @@ Contemporary [theories](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8228195/){.
 
 ## Social bonding and complex information
 
-![Emotion -- Ian McGilChirst](/images/scrum/emotion.jpg){width="70%"}
+![Emotion -- Ian McGilChrist](/images/scrum/emotion.jpg){width="70%"}
 
 **Ian McGilchrist**, a psychiatrist and neuroscientist, is renowned for his work on the divided brain. In ["The Master and His Emissary,"](/books/theMasterAndHisEmissary.qmd) he explores <mark>how the left and right hemispheres process information differently, impacting our perception of the world.</mark>
 
