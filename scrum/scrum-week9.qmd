@@ -5,7 +5,7 @@ author: Albert R.
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: Albertus' Dilemma explores **the mental challenges faced by programmers throughout the workweek
+description: Albertus' Dilemma explores the mental challenges faced by programmers throughout the workweek
 categories: [scrum, scrum-week9, albertusDilemma]
 toc: true
 number-sections: true
@@ -43,6 +43,8 @@ Albertus' Dilemma, Mental Challenges, Creative-Mind-Brain Energy, Productivity T
 </br></br>
 
 ![](/images/scrum/sahara-desert-morroco-800x800.jpg){width="80%"}
+
+# Albertus' Dilemma: The Comic
 
 ::: {.callout-tip title="Albertus' Dilemma - Navigating the Programmer's Oasis" icon=false}
 
@@ -82,7 +84,7 @@ The code produced throughout the week reflects the clarity of their mind—a cle
 
 :::
 
-# Albertus' Dilemma
+# Overview
 
 ```{mermaid}
 
@@ -97,7 +99,7 @@ C --> A
 
 
 ```
-## Introduction
+# Introduction
 
 As a future developer I want to relate the struggles and reflect the mentality that you, my fellow reader and potential developer, should avoid.
 
@@ -111,7 +113,7 @@ First of all you need to understand the concept of [iteration](https://en.wikipe
 With that in mind, we just need to start.
 :::
 
-## Albertus' Dilemma... What are we talking about?
+# Albertus' Dilemma... What are we talking about?
 
 You surely noticed the flowchart above. It's such a common pattern for us who just started programming. Have you ever feel identified with it?
 
