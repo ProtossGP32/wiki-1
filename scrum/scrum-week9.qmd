@@ -1,12 +1,12 @@
 ---
-title: "Week 9: Albertus' Dylemma"
+title: "Week 9: Albertus' Dilemma"
 subtitle: SCRUM Week 9
 author: Albert R.
 date: "06/01/2021"
 date-modified: last-modified
 date-format: full
-description: Albertus' Dylemma explores **the mental challenges faced by programmers throughout the workweek
-categories: [scrum, scrum-week9, albertusDylemma]
+description: Albertus' Dilemma explores **the mental challenges faced by programmers throughout the workweek
+categories: [scrum, scrum-week9, albertusDilemma]
 toc: true
 number-sections: true
 format:
@@ -15,9 +15,9 @@ format:
 
 ::: {.summary}
 
-📘 **Summary: SCRUM Week 9 - Albertus' Dylemma**
+📘 **Summary: SCRUM Week 9 - Albertus' Dilemma**
 
-Albertus' Dylemma explores **the mental challenges faced by programmers throughout the workweek**, symbolized by a **diminishing canteen of creative energy**.
+Albertus' Dilemma explores **the mental challenges faced by programmers throughout the workweek**, symbolized by a **diminishing canteen of creative energy**.
 
 The dilemma arises from the misconception that working harder will replenish this energy, **leading to exhaustion and a productivity trap: the well**.
 
@@ -25,7 +25,7 @@ To **break free**, programmers **must strategically pause, reflect, and make inf
 
 Embracing intermittent coding preserves mental energy, ensuring a successful journey from code to relaxation.
 
-Albertus' Dylemma serves as a **guiding philosophy for maintaining balance**, resulting in a clear-minded, stress-free programmer celebrating a job well done by week's end.
+Albertus' Dilemma serves as a **guiding philosophy for maintaining balance**, resulting in a clear-minded, stress-free programmer celebrating a job well done by week's end.
 
 :::
 
@@ -33,9 +33,9 @@ Albertus' Dylemma serves as a **guiding philosophy for maintaining balance**, re
 
 ::: {.keywords}
 
-**Keywords: Week 9 - Albertus' Dylemma**
+**Keywords: Week 9 - Albertus' Dilemma**
 
-Albertus' Dylemma, Mental Challenges, Creative-Mind-Brain Energy, Productivity Trap, Strategic Pause, Informed Decisions, Intermittent Coding, Balance, Clear-minded, Stress-free, Coding Desert, Journey, Programmer's Oasis, Reflection, Decision-making, Desert Wisdom, Coding Legacy
+Albertus' Dilemma, Mental Challenges, Creative-Mind-Brain Energy, Productivity Trap, Strategic Pause, Informed Decisions, Intermittent Coding, Balance, Clear-minded, Stress-free, Coding Desert, Journey, Programmer's Oasis, Reflection, Decision-making, Desert Wisdom, Coding Legacy
 
 :::
 
@@ -44,7 +44,7 @@ Albertus' Dylemma, Mental Challenges, Creative-Mind-Brain Energy, Productivity T
 
 ![](/images/scrum/sahara-desert-morroco-800x800.jpg){width="80%"}
 
-::: {.callout-tip title="Albertus' Dylema - Navigating the Programmer's Oasis" icon=false}
+::: {.callout-tip title="Albertus' Dilemma - Navigating the Programmer's Oasis" icon=false}
 
 </br>
 
@@ -52,13 +52,13 @@ Albertus' Dylemma, Mental Challenges, Creative-Mind-Brain Energy, Productivity T
 
 In the vast landscape of the workweek, each programmer embarks with a <mark>canteen full of precious water, symbolizing their mental energy</mark>. Monday marks the beginning of the journey, the oasis brimming with potential. But as the relentless sun of tasks beats down, the water supply diminishes.
 
-By Tuesday, the once-full canteen is distressingly dry—a programmer stranded in the midweek desert, parched for creativity and focus. <mark>The Albertus Dylema unfolds as a dilemma rooted in the illusion that **working harder and longer** will miraculously refill the canteen.</mark>
+By Tuesday, the once-full canteen is distressingly dry—a programmer stranded in the midweek desert, parched for creativity and focus. <mark>The Albertus Dilemma unfolds as a dilemma rooted in the illusion that **working harder and longer** will miraculously refill the canteen.</mark>
 
 The paradox arises: **the more they toil in the arid landscape, the deeper they dig themselves into a well of exhaustion**. The coding well, ever-expanding with each line of code, becomes a **trap**. Blind to their own depletion, programmers find themselves ensnared, the oasis of productivity slipping further away.
 
-![To break free from Albertus Dylema](/images/scrum/albertus2.jpg){width="60%"}
+![To break free from Albertus Dilemma](/images/scrum/albertus2.jpg){width="60%"}
 
-To break free from Albertus Dylema, programmers must recognize the futility of digging deeper. Instead, they must **pause**, survey the desert, and conserve the remaining droplets of mental energy. The oasis can only be replenished through strategic reflection and intelligent **decision-making**.
+To break free from Albertus Dilemma, programmers must recognize the futility of digging deeper. Instead, they must **pause**, survey the desert, and conserve the remaining droplets of mental energy. The oasis can only be replenished through strategic reflection and intelligent **decision-making**.
 
 ![Coding without a clear path forward is akin to stumbling into the well](/images/scrum/albertus5.jpg){width="60%"}
 
@@ -66,11 +66,11 @@ To break free from Albertus Dylema, programmers must recognize the futility of d
 
 ![The trap well of ignorance and bad decision-making](/images/scrum/albertus6.jpg){width="60%"}
 
-Thus, the sage programmer embraces the art of **intermittent coding**, preserving **mental water in the vast desert**. They understand that productivity is not a bottomless well, but a <mark>delicate oasis to be nurtured</mark>. Albertus' Dylema teaches the profound lesson that the journey from coding to completion requires a balance of diligence, strategic thinking, and the wisdom to discern when to rest and when to forge ahead.
+Thus, the sage programmer embraces the art of **intermittent coding**, preserving **mental water in the vast desert**. They understand that productivity is not a bottomless well, but a <mark>delicate oasis to be nurtured</mark>. Albertus' Dilemma teaches the profound lesson that the journey from coding to completion requires a balance of diligence, strategic thinking, and the wisdom to discern when to rest and when to forge ahead.
 
 ![The code produced throughout the week reflects the clarity of their mind](/images/scrum/albertus3.jpg){width="60%"}
 
-As the week unfolds, the sage programmer, having embraced the lessons of Albertus Dylema, emerges unscathed by the pitfalls of the coding desert. By judiciously **preserving mental energy**, they reach Friday with a canteen still brimming with vitality. Instead of succumbing to exhaustion, they find themselves relaxed and content, basking in the success of their strategic approach.
+As the week unfolds, the sage programmer, having embraced the lessons of Albertus Dilemma, emerges unscathed by the pitfalls of the coding desert. By judiciously **preserving mental energy**, they reach Friday with a canteen still brimming with vitality. Instead of succumbing to exhaustion, they find themselves relaxed and content, basking in the success of their strategic approach.
 
 ![The unwise code of Friday's night working hard](/images/scrum/albertus7.jpg){width="60%"}
 
@@ -78,11 +78,11 @@ As the week unfolds, the sage programmer, having embraced the lessons of Albertu
 
 ![Friday becomes a celebration](/images/scrum/albertus4.jpg){width="60%"}
 
-The code produced throughout the week reflects the clarity of their mind—a clean and elegant manifestation of thoughtful problem-solving. The sage programmer, having navigated the desert wisely, not only secures their own well-being but crafts a legacy of efficient and mindful coding. <mark>Albertus Dylema becomes not just a dilemma to overcome but a guiding philosophy, ensuring that the oasis of productivity is always within reach, and the journey from code to relaxation is a harmonious and successful one.</mark>
+The code produced throughout the week reflects the clarity of their mind—a clean and elegant manifestation of thoughtful problem-solving. The sage programmer, having navigated the desert wisely, not only secures their own well-being but crafts a legacy of efficient and mindful coding. <mark>Albertus Dilemma becomes not just a dilemma to overcome but a guiding philosophy, ensuring that the oasis of productivity is always within reach, and the journey from code to relaxation is a harmonious and successful one.</mark>
 
 :::
 
-# Albertus' Dylemma
+# Albertus' Dilemma
 
 ```{mermaid}
 
@@ -101,7 +101,7 @@ C --> A
 
 As a future developer I want to relate the struggles and reflect the mentality that you, my fellow reader and potential developer, should avoid.
 
-My pourpose is to stablish some patterns of productive thinking to help you to get out from the *Valley of Dispair* a.k.a. (and from now on) **The Pitt** that most likely you would fall into.
+My purpose is to stablish some patterns of productive thinking to help you to get out from the *Valley of Despair* a.k.a. (and from now on) **The Pitt** that most likely you would fall into.
 Trust me, I've been there...Actually I AM constantly there, that's why I want to reflect that in this kind of journal.
 
 ::: {.callout-caution collapse="true"}
@@ -111,7 +111,7 @@ First of all you need to understand the concept of [iteration](https://en.wikipe
 With that in mind, we just need to start.
 :::
 
-## Albertus' Dylemma... What are we talking about?
+## Albertus' Dilemma... What are we talking about?
 
 You surely noticed the flowchart above. It's such a common pattern for us who just started programming. Have you ever feel identified with it?
 
@@ -121,7 +121,7 @@ You'll probably see straight how to get from A to B, but from B to C you see it 
 Yes, I always trick to myself like that...
 
 ::: {.callout-note}
-## When we talk about **Albertus' Dylemma**:   
+## When we talk about **Albertus' Dilemma**:   
 It is that moment when you either need to stop, take two steps back and think what led you into this **or** keep hitting the wall (and the keyboard with your pointless code).
 :::
 

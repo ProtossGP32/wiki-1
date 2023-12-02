@@ -147,7 +147,7 @@ Here are a few aspects of a specialist's role in a team:
 <br>
 <div class='column right next'>
 <br>
-[Week 9: Albertus' Dylemma  {{< fa solid arrow-right >}}](/scrum/scrum-week9.qmd)
+[Week 9: Albertus' Dilemma  {{< fa solid arrow-right >}}](/scrum/scrum-week9.qmd)
 <br>
 </div>
 <br>

@@ -14,13 +14,13 @@ tr:nth-child(5) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
-## ``Sprint#4: Time and Dylemma`` (Decenmber)
+## ``Sprint#4: Time and Dilemma`` (December)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #4 | 14 | 04/12/2023 | - Four different cognitive load, time-boxing and job-type in *SCRUM events*: </br> **(1) Planning**: listing, pareto, goal, time management, decisionMaking  </br> **(2) Executing**: creativity, getting thinks done, Albertus' dylemma, problem-solving  </br> **(3) Reviewing**: anti-fragile, feedback analysis, listening, communication  </br> **(4) Reflecting**: metrics, decisionMaking, impediments  | - [Does planning help for execution? The complex relationship between planning and execution](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7428192/){.external} </br> [Brain Activity Associated with the Planning Process during the Long-Time Learning of the Tower of Hanoi (ToH) Task: A Pilot Study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9654550/){.external} |
-|  | 15 | 05/12/2023 | - Albertus' Dylemma | - [Albertus' Dylemma](/scrum/scrum-week9.qmd) |
+| #4 | 14 | 04/12/2023 | - Four different cognitive load, time-boxing and job-type in *SCRUM events*: </br> **(1) Planning**: listing, pareto, goal, time management, decisionMaking  </br> **(2) Executing**: creativity, getting thinks done, Albertus' dilemma, problem-solving, focus  </br> **(3) Reviewing**: anti-fragile, feedback analysis, listening, communication, selling  </br> **(4) Reflecting**: metrics, impediments, understanding, optimal solution, decisionMaking, meeting rules  | - [Does planning help for execution? The complex relationship between planning and execution](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7428192/){.external} </br> - [Brain Activity Associated with the Planning Process during the Long-Time Learning of the Tower of Hanoi (ToH) Task: A Pilot Study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9654550/){.external} |
+|  | 15 | 05/12/2023 | - Albertus' Dilemma | - [Albertus' Dilemma](/scrum/scrum-week9.qmd) |
 : Sprint Backlog course December 2023 table {tbl-colwidths="[2,2,2,60,34]"}
 :::
 

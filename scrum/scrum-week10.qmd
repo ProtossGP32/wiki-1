@@ -183,7 +183,7 @@ But the world changed and the marketplace became turbulent. There were a number 
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Week 9: Albertus' Dylemma](/scrum/scrum-week9.qmd)
+[{{< fa solid arrow-left >}} Week 9: Albertus' Dilemma](/scrum/scrum-week9.qmd)
 <br>
 </div>
 <br>
