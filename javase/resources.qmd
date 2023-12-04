@@ -26,6 +26,26 @@ format:
 - [Object-Oriented Programming with Java, part I Week 6](https://materiaalit.github.io/2013-oo-programming/part1/week-6/)
 :::
 
+## Helsinki’s (MOOC) on programming Java
+
+::: {.callout-note}
+Welcome to the University of Helsinki’s free massive open online course (MOOC) on programming! This is an updated version of our popular course Object-Oriented Programming with Java.
+
+:::
+
+During this course, you will learn the basics of computer programming, along with algorithms and object-oriented programming through the Java programming language. The course includes comprehensive materials and plenty of programming exercises - all of which are tested using our automatic testing service Test My Code.
+
+- [Java Programming](https://java-programming.mooc.fi/){.external}
+- [Java Programming I - Part 1](https://java-programming.mooc.fi/part-1){.external}
+- [Java Programming II - Part 8](https://java-programming.mooc.fi/part-8){.external}
+- [TMC - Test My Code](https://tmc.mooc.fi/){.external}
+- [Download and install NetBeans - TMC](https://www.mooc.fi/en/installation/netbeans/){.external}
+
+Java Mooc article:
+
+- [Java Mooc Helsinki](/javase/se-what-moochelsinki.qmd)
+
+
 ## Books
 
 - [Design Patterns: Elements of Reusable Object-Oriented Software
