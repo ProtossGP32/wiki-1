@@ -41,6 +41,8 @@ Managing Time and Mind, Sharpening the Saw, Neuroscience, Productivity, Mindfuln
 
 </br></br>
 
+![[A Time for Everything](https://www.biblegateway.com/passage/?search=Ecclesiastes%203&version=ESV){.external}: For everything there is a season, and a time for every matter under heaven](/images/scrum/eclesiastes3.png)
+
 # What is Time Management?
 
 ![Time Management Mind Map: Improve Productivity Effectively](/images/scrum/time-management.png){width="50%"}
@@ -99,7 +101,10 @@ Time management is an essential life skill to learn for boosting efficiency, eff
   - Additionally, be aware of your mental state when planning tasks—tackling complex problems during your mental peak and more routine tasks during lower-energy periods.
 
 - **Conclusion**
-  - As we navigate the complexities of modern life, the realization dawns that time management alone is an incomplete strategy. To unlock true productivity, we must recognize the profound impact of managing our minds. By cultivating a mindful approach to time management, we not only enhance our efficiency but also foster a sense of balance and well-being. After all, a mind in harmony is the true orchestrator of a productive life.
+  - As we navigate the complexities of programming and decision making, the realization dawns that time management alone is an incomplete strategy. To unlock true productivity:
+    -  we must recognize the profound impact of managing our minds.
+    -  By cultivating a mindful approach to time management, we not only enhance our efficiency but also foster a sense of balance and well-being.
+    -  After all, a mind in harmony is the true orchestrator of a productive life.
 
 # References
 
