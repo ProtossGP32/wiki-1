@@ -62,6 +62,11 @@ During this course, you will learn the basics of computer programming, along wit
 
 ### Create an account 
 
+This course uses [mooc.fi](https://java-programming.mooc.fi/sign-up){.external} accounts. If you have previously done mooc.fi -courses, you can log in with your existing account. On this page you can create a new account, which works on majority of mooc.fi courses and services.
+
+- [Create TMC account](https://java-programming.mooc.fi/sign-up){.external}
+
+![](/images/javase/mooc0-create-account.png)
 
 ### Log in to the development environment
 
