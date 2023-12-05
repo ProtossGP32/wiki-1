@@ -154,6 +154,63 @@ You can submit your solution either after all tests have passed, or separately b
 ::: {.callout-important Title="Checking your points"}
 You can check your points by logging in to [tmc.mooc.fi](https://tmc.mooc.fi/){.external} Use your MOOC.fi account to log in to the service.
 :::
+
+
+## TMCBeans does NOT start
+
+### Windows
+
+#### Step-by-step
+
+1. Go to **C:\Program** **Files\TMCBeans\etc**
+2. Open **tmcbeans.conf** on any text editor
+3. Find **jdkhome** line and uncomment it by removing the "#" at the beggining of the line
+4. Add the path to your JDK on it - it could be **jdkhome="C:\Program Files\Zulu\zulu-11"** but your's will be different
+
+
+#### Screenshots
+
+First at all localice all your JDK-JRE packages.
+
+![](/images/javase/mooc10.png)
+
+Remember that TMCBeans runs with JDK-11
+
+![](/images/javase/mooc11.png)
+
+TMCBeans does NOT run with JDK above 11
+
+![](/images/javase/mooc12.png)
+
+
+Open the file and modify the line where the TMCBeans execute JDK-JRE
+
+![](/images/javase/mooc13.png)
+
+![](/images/javase/mooc14.png)
+
+Be careful, in Windows you will need Administrator permission to save the configuration file.
+
+![](/images/javase/mooc15.png)
+
+
+## Linux
+
+Para el tmcbeans debes en linux trabajar con jdk8 o jdk11, pero nunca con superiores.
+
+Por lo tanto:
+
+- setea tu sistema a 8:
+  - https://askubuntu.com/questions/121654/how-to-set-default-java-version
+
+Sino, es un tema de local path java variables:
+
+- local path variable:
+  - https://www.ibm.com/docs/ja/b2b-integrator/6.0.3?topic=variables-setting-java-linux
+  - https://docs.oracle.com/cd/E19062-01/sun.mgmt.ctr36/819-5418/gaznb/index.html
+
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>
