@@ -162,10 +162,10 @@ You can check your points by logging in to [tmc.mooc.fi](https://tmc.mooc.fi/){.
 
 #### Step-by-step
 
-1. Go to **C:\Program** **Files\TMCBeans\etc**
+1. Go to ```C:\ProgramFiles\TMCBeans\etc```
 2. Open **tmcbeans.conf** on any text editor
-3. Find **jdkhome** line and uncomment it by removing the "#" at the beggining of the line
-4. Add the path to your JDK on it - it could be **jdkhome="C:\Program Files\Zulu\zulu-11"** but your's will be different
+3. Find **jdkhome** line and **uncomment it by removing the "#"** at the beggining of the line
+4. Add the path to your JDK on it - it could be ```jdkhome="C:\Program Files\Zulu\zulu-11``` but your's will be different
 
 
 #### Screenshots
@@ -196,18 +196,16 @@ Be careful, in Windows you will need Administrator permission to save the config
 
 ## Linux
 
-Para el tmcbeans debes en linux trabajar con jdk8 o jdk11, pero nunca con superiores.
+For tmcbeans you must work with jdk8 or jdk11 in Linux, but never with higher ones. Therefore:
 
-Por lo tanto:
+- Set up your system to 8:
+  - [How to set default Java version?](https://askubuntu.com/questions/121654/how-to-set-default-java-version){.external}
 
-- setea tu sistema a 8:
-  - https://askubuntu.com/questions/121654/how-to-set-default-java-version
+Otherwise, it is a matter of **local path java variables**:
 
-Sino, es un tema de local path java variables:
-
-- local path variable:
-  - https://www.ibm.com/docs/ja/b2b-integrator/6.0.3?topic=variables-setting-java-linux
-  - https://docs.oracle.com/cd/E19062-01/sun.mgmt.ctr36/819-5418/gaznb/index.html
+- Local Path Variable:
+  - [Setting Java variables on Linux](https://www.ibm.com/docs/ja/b2b-integrator/6.0.3?topic=variables-setting-java-linux){.external}
+  - [To Set PATH on Linux](https://docs.oracle.com/cd/E19062-01/sun.mgmt.ctr36/819-5418/gaznb/index.html){.external}
 
 
 
