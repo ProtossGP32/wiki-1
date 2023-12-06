@@ -10,13 +10,14 @@ categories: [ifcd0210, training]
 
 ### 2023
 
-- Dimarts 19/12/2023,
+- Dimarts 19/12/2023
 - Dijous 21/12/2023
 - Divendres 22/12/2023
+- [Calendar 2023](/ifcd0210-24/Calendari%202023.pdf)
 
 ### 2024
 
-- [Calendar 2024](/ifcd0210-24/Calendari%202023.pdf)
+![Calendar 2024](/ifcd0210-24/2024-calendar.png)
 
 # Subjects
 
@@ -46,19 +47,19 @@ Always in **Quarto/Wiki .md format** and code in GitHub **repositories** or Orga
 
 | Code | Date | Description|
 |---|---|---|
-| **MF01-0491**  |   | **Front-end** |
+| **MF01-0491**  | **19/12/2023**  | **Front-end** |
 | UF01-1841 |   | Prototip [WebApp Quarto](/markup/markup-quarto-create.qmd): web multipage, markdwon/HTML, with github repository and gh-pages deployement |
 | UF02-1842 | | WebApp Quarto amb [advanced features](/markup/markup-quarto-basics.qmd): markdown basics, figures, tables, Mermaid Diagrams, callout, cross-references, code highlighted   |
 | UF03-1843 |   | WebApp Quarto amb [Document Listings](https://quarto.org/docs/websites/website-listings.html){.external} |
-| MF01-0492 |   | Prova objectiva i prova pràctica</br>  - WebApp Quarto amb [Api REST call to server and render the data from JSON](/markup/markup-quarto-api-rest.qmd), from cloud-external server or Spring Boot local server </br>  - WebApp Quarto amb a [Observable JS script cell](/markup/markup-quarto-code.qmd#observable-js) |
-| **MF02-0492**  |   | **Back-end** |
+| MF01-0491 | 27/02/2024  | Prova objectiva i prova pràctica</br>  - WebApp Quarto amb [Api REST call to server and render the data from JSON](/markup/markup-quarto-api-rest.qmd), from cloud-external server or Spring Boot local server </br>  - WebApp Quarto amb a [Observable JS script cell](/markup/markup-quarto-code.qmd#observable-js) |
+| **MF02-0492**  | **29/02/2024**  | **Back-end** |
 | UF01-1844 |   | Laboratori app MVC amb Spring Boot Thyemeleaf (alternatiu Rest) un objecte amb totes les operacions CRUD |
 | UF02-1845 |   | Laboratori app Spring Boot Thyemeleaf (opcional Rest) amb H2 JPA (alternatiu objectes amb Composition/Inherence) |
 | UF03-1846 |   | Laboratori app web amb React Hooks |
-| MF02-0492 |   | Prova objectiva i prova pràctica (triar una opció)</br>  - Laboratori app Spring Boot amb React </br>  - Laboratori Spring Boot Server-Data API Rest amb Spring Boot Client-Web-Thymeleaf </br>  -  Laboratori app Spring Boot Thynmeleaf deployat a AWS </br> -  Laboratori app web amb React Hooks amb Data API Rest |
-| **MF03-0493**  |   | **Project** |
+| MF02-0492 | 24/05/2024  | Prova objectiva i prova pràctica (triar una opció)</br>  - Laboratori app Spring Boot amb React </br>  - Laboratori Spring Boot Server-Data API Rest amb Spring Boot Client-Web-Thymeleaf </br>  -  Laboratori app Spring Boot Thynmeleaf deployat a AWS </br> -  Laboratori app web amb React Hooks amb Data API Rest |
+| **MF03-0493**  | **27/05/2024**  | **Project** |
 | UF01 |   | Crear app web CRUD amb db en servidor remot Spring Boot i gestió de dades amb API fetch (opcional altres tech) JS React |
-| MF03-0493 |   | Prova objectiva i prova pràctica |
+| MF03-0493 |  21/06/2024 | Prova objectiva i prova pràctica |
 : Deliveries table {tbl-colwidths="[20,20,60]"}
 
 <!--- navLinks -->
