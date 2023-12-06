@@ -467,6 +467,13 @@ website:
       contents:
         - text: "Training Courses"
         - text: "---"
+        - section: "IFCD0210-24 Docs"
+          contents:
+            - ifcd0210-24/ifcd0210-24.qmd
+            - ifcd0210-24/ifcd0210deliveries-24.qmd
+            - ifcd0210-24/ifcd0210backlog-sprint-24.qmd
+            - ifcd0210-24/ifcd0210backlog-product-24.qmd
+        - text: "---"
         - section: "IFCD044 Docs"
           contents:
             - ifcd044/ifcd044.qmd

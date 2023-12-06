@@ -1,0 +1,86 @@
+---
+title: "IFCD0210 Deliveries"
+categories: [ifcd0210, training]
+---
+
+
+![Backlog course](/images/home/deliveries.jpg){width="30%"}
+
+# Calendar 2023/2024
+
+### 2023
+
+- Dimarts 19/12/2023,
+- Dijous 21/12/2023
+- Divendres 22/12/2023
+
+### 2024
+
+- [Calendar 2024](/ifcd0210-24/Calendari%202023.pdf)
+
+# Subjects
+
+
+IFCD0210, **Desenvolupament d’aplicacions amb tecnologies web**, 600h
+
+
+| Code | Description | Hours|
+|---|---|---|
+| **MF0491_3** | **Programació web en l'entorn client** | **180h** |
+| UF1841 | Elaboración de documentos web mediante lenguajes de marca | 60h |
+| UF1842 | Aplicaciones técnicas de usabilidad y accesibilidad en el entorno cliente | 90h |
+| UF1843 | Programació web en l'entorn client | 30h |
+| **MF0492_3** |  **Programació web en l'entorn servidor** | **240h** |
+| UF1844 |  Desarrollo de aplicaciones web en el entorno servidor | 90h |
+| UF1845 |  Acceso a datos en aplicaciones web del entorno servidor | 90h |
+| UF1846 |  Desarrollo de aplicaciones web distribuidas | 60h |
+| **MF0493_3** |  **Implantació d'aplicacions web en entorns d'internet, intranet i extranet** | **90h**| 
+| FCOO03 |  Formació complementària  | 10h | 
+| MP0391|  Mòdul de pràctiques professionals no laborals  |  80h | 
+: IFCD0210, Desenvolupament d’aplicacions amb tecnologies web, 600h table {tbl-colwidths="[10,80,10]"}
+
+# Deliveries
+
+Always in **Quarto/Wiki .md format** and code in GitHub **repositories** or Organizations. Deliveries **via github** or similar: 
+
+
+| Code | Date | Description|
+|---|---|---|
+| **MF01-0491**  |   | **Front-end** |
+| UF01-1841 |   | Prototip [WebApp Quarto](/markup/markup-quarto-create.qmd): web multipage, markdwon/HTML, with github repository and gh-pages deployement |
+| UF02-1842 | | WebApp Quarto amb [advanced features](/markup/markup-quarto-basics.qmd): markdown basics, figures, tables, Mermaid Diagrams, callout, cross-references, code highlighted   |
+| UF03-1843 |   | WebApp Quarto amb [Document Listings](https://quarto.org/docs/websites/website-listings.html){.external} |
+| MF01-0492 |   | Prova objectiva i prova pràctica</br>  - WebApp Quarto amb [Api REST call to server and render the data from JSON](/markup/markup-quarto-api-rest.qmd), from cloud-external server or Spring Boot local server </br>  - WebApp Quarto amb a [Observable JS script cell](/markup/markup-quarto-code.qmd#observable-js) |
+| **MF02-0492**  |   | **Back-end** |
+| UF01-1844 |   | Laboratori app MVC amb Spring Boot Thyemeleaf (alternatiu Rest) un objecte amb totes les operacions CRUD |
+| UF02-1845 |   | Laboratori app Spring Boot Thyemeleaf (opcional Rest) amb H2 JPA (alternatiu objectes amb Composition/Inherence) |
+| UF03-1846 |   | Laboratori app web amb React Hooks |
+| MF02-0492 |   | Prova objectiva i prova pràctica (triar una opció)</br>  - Laboratori app Spring Boot amb React </br>  - Laboratori Spring Boot Server-Data API Rest amb Spring Boot Client-Web-Thymeleaf </br>  -  Laboratori app Spring Boot Thynmeleaf deployat a AWS </br> -  Laboratori app web amb React Hooks amb Data API Rest |
+| **MF03-0493**  |   | **Project** |
+| UF01 |   | Crear app web CRUD amb db en servidor remot Spring Boot i gestió de dades amb API fetch (opcional altres tech) JS React |
+| MF03-0493 |   | Prova objectiva i prova pràctica |
+: Deliveries table {tbl-colwidths="[20,20,60]"}
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} IFCD0210 Official Docs ](/ifcd0210-24/ifcd0210-24.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[IFCD0210 Sprint Backlog {{< fa solid arrow-right >}}](/ifcd0210-24/ifcd0210backlog-sprint-24.qmd)
+<br>
+</div>
+<br>
+</div>

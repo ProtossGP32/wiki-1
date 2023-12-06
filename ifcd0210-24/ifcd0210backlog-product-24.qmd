@@ -1,0 +1,126 @@
+---
+title: "IFCD0210 Product Backlog"
+categories: [ifcd0210, backlog]
+---
+
+
+![Backlog course](/images/home/backlog.jpg){width="30%"}
+
+::: {.summary}
+
+- [December 2023](/ifcd0210/ifcd0210backlog-product.qmd#december-2023)
+- [January 2024](/ifcd0210/ifcd0210backlog-product.qmd#january-2024)
+- [February 2024](/ifcd0210/ifcd0210backlog-product.qmd#february-2024)
+- [March 2024](/ifcd0210/ifcd0210backlog-product.qmd#march-2024)
+- [April 2024](/ifcd0210/ifcd0210backlog-product.qmd#april-2024)
+- [May 2024](/ifcd0210/ifcd0210backlog-product.qmd#may-2024)
+- [June 2024](/ifcd0210/ifcd0210backlog-product.qmd#june-2024)
+- [July 2024](/ifcd0210/ifcd0210backlog-product.qmd#july-2024)
+
+:::
+
+::: {.column-page-right}
+
+## December 2023
+
+
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+| **#1** | **1** | **19/12/2023** |  |  |
+|  | 2 | 21/12/2023 |  |  |
+|  | 3 | 22/12/2023 |  |  |
+: Backlog course December 2023 table {tbl-colwidths="[2,2,2,60,34]"}
+
+## January 2024
+
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+: Backlog course January 2024 table {tbl-colwidths="[2,2,2,60,34]"}
+
+
+
+## February 2024
+
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+: Backlog course February 2024 table {tbl-colwidths="[2,2,2,64,30]"}
+
+## March 2024
+
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+: Backlog course March 2024 table {tbl-colwidths="[2,2,2,64,30]"}
+
+## April 2024
+
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+: Backlog course April 2024 table {tbl-colwidths="[2,2,2,64,30]"}
+
+## May 2024
+
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+: Backlog course May 2024 table {tbl-colwidths="[2,2,2,64,30]"}
+
+## June 2024
+
+| Sprint | Day | Date | Topics |  Details Topics |
+| -- | -- | -- | -- | -- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  | + Formació Copmplementària | - |
+|  |  |  | + Formació Copmplementària | - |
+: Backlog course June 2024 table {tbl-colwidths="[2,2,2,64,30]"}
+
+## July 2024
+
+Finishing `Pràctiques`
+
+:::
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} IFCD0210 Sprint Backlog](/ifcd0210-24/ifcd0210backlog-sprint-24.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[IFCD044 Official Docs  {{< fa solid arrow-right >}}](/ifcd044/ifcd044.qmd)
+<br>
+</div>
+<br>
+</div>

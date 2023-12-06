@@ -22,8 +22,8 @@ tr:nth-child(1) {
 | #5 | 16 | 11/12/2023 |  |  |
 |  | 17 | 12/12/2023 |  |  |
 |  | 18 | 13/12/2023 |  |  |
-|  | 19 | 14/12/2023 | RECURSOS  FCOO03_ca |  |
-|  | 20 | 15/12/2023 | RECURSOS  FCOO03_ca |  |
+|  | 19 | 14/12/2023 | FCOO03 Inserció Laboral, sensibilització medi ambiental igualtat de gènere |  |
+|  | 20 | 15/12/2023 | FCOO03 Inserció Laboral, sensibilització medi ambiental igualtat de gènere |  |
 : Sprint Backlog course December 2023 table {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
