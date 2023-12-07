@@ -1,16 +1,17 @@
 ---
-title: "IFCD0210 Deliveries"
+title: "IFCD0210 Calendar & Deliveries"
 categories: [ifcd0210, training]
 ---
 
 
-![Backlog course](/images/home/deliveries.jpg){width="30%"}
+![Calendar & Deliveries](/images/home/deliveries.jpg){width="30%"}
 
 # Calendar 2023/2024
 
 ### 2023
 
 - Dimarts 19/12/2023
+- *Dimecres 20/12/2023 ?*
 - Dijous 21/12/2023
 - Divendres 22/12/2023
 - [Calendar 2023](/ifcd0210-24/Calendari%202023.pdf)
@@ -22,27 +23,31 @@ categories: [ifcd0210, training]
 # Subjects
 
 
-IFCD0210, **Desenvolupament d’aplicacions amb tecnologies web**, 600h
+#### IFCD0210, Desenvolupament d’aplicacions amb tecnologies web
 
 
-| Code | Description | Hours|
+| Code | Description | Hours |
 |---|---|---|
 | **MF0491_3** | **Programació web en l'entorn client** | **180h** |
-| UF1841 | Elaboración de documentos web mediante lenguajes de marca | 60h |
-| UF1842 | Aplicaciones técnicas de usabilidad y accesibilidad en el entorno cliente | 90h |
-| UF1843 | Programació web en l'entorn client | 30h |
+| UF1841 | Elaboració de documents web mitjançant llenguatges de marca | 60h |
+| UF1842 |  Desenvolupament i reutilització de components programari i multimèdia mitjançant llenguatges de guió | 90h |
+| UF1843 |  Aplicacions tècniques d'usabilitat i accessibilitat a l'entorn client | 30h |
 | **MF0492_3** |  **Programació web en l'entorn servidor** | **240h** |
-| UF1844 |  Desarrollo de aplicaciones web en el entorno servidor | 90h |
-| UF1845 |  Acceso a datos en aplicaciones web del entorno servidor | 90h |
-| UF1846 |  Desarrollo de aplicaciones web distribuidas | 60h |
+| UF1844 |  Desenvolupament d'aplicacions web a l'entorn servidor | 90h |
+| UF1845 |  Accés a dades en aplicacions web de l'entorn servidor | 90h |
+| UF1846 |  Desenvolupament d'aplicacions web distribuïdes | 60h |
 | **MF0493_3** |  **Implantació d'aplicacions web en entorns d'internet, intranet i extranet** | **90h**| 
 | FCOO03 |  Formació complementària  | 10h | 
 | MP0391|  Mòdul de pràctiques professionals no laborals  |  80h | 
 : IFCD0210, Desenvolupament d’aplicacions amb tecnologies web, 600h table {tbl-colwidths="[10,80,10]"}
 
+#### Product Backlog and Planning
+
+User stories, tasks and hours/task planning: [Forecast IFCD0210-24](https://cloud.albertprofe.dev/index.php/s/BZ2Q9N53KiwdMWS){.external}
+
 # Deliveries
 
-Always in **Quarto/Wiki .md format** and code in GitHub **repositories** or Organizations. Deliveries **via github** or similar: 
+Always in **Quarto/Wiki .md format** and code in GitHub **repositories** (or Organizations). Deliveries **via github** or similar: 
 
 
 | Code | Date | Description|
