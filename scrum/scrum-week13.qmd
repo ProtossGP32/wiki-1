@@ -1,0 +1,173 @@
+---
+title: "Week 13: Decision Making and Intuition"
+subtitle: SCRUM Week 13
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: Decision-making involves reliable information, a holistic context, and the right mental state.
+categories: [scrum, scrum-week12, Decision-Making]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.summary}
+
+📘 **Summary: SCRUM Week 13 - Decision Making**
+
+Week 13 of SCRUM explores the nuanced dynamics of decision-making, emphasizing the multifaceted process that involves reliable information, a holistic context, and the right mental state. A good decision, it suggests, emerges from a well-informed mind operating within a balanced and energized mental state, harmonizing emotions and thoughts within a clear purpose and understanding.
+
+The discussion delves into intuition, highlighting its quick and beneficial nature, rooted in deep-seated knowledge. Notably, the subconscious brain utilizes prior experience to make fast, often high-quality decisions. Drawing on insights from Daniel Kahneman, the distinction between slow, deliberate thinking and fast, intuitive thinking is explored. The latter, often hidden, plays a significant role in daily decisions but can lead to mistakes when handling tasks better suited for the former.
+
+Cognitive biases, systematic patterns of deviation from rationality, are introduced, emphasizing their impact on decision-making. The Halo Effect, a cognitive bias where initial positive judgments influence overall perceptions, is discussed, showcasing how first impressions can shape subsequent evaluations.
+
+:::
+
+
+</br>
+
+::: {.keywords}
+
+**Keywords: SCRUM Week 13 - Decision Making**
+
+Decision Making, Intuition, Daniel Kahneman, Slow Thinking, Fast Thinking, Cognitive Bias, Halo Effect, Context, Mental State, Emotions, Thoughts.
+
+:::
+
+</br> </br>
+
+# How to make a good decision
+
+Making a sound decision is a multifaceted process that hinges on several crucial factors:
+
+::: {.column-margin}
+
+[Decision-making](https://www.umassd.edu/fycm/decision-making/process/){.external}, is the process of making choices by identifying a decision, gathering information, and [assessing alternative resolutions](https://www.umassd.edu/media/umassdartmouth/fycm/decision_making_process.pdf).
+
+![Decision-making process](/images/scrum/decisionmaking-1.png){width="80%"}
+
+:::
+
+- Firstly, **access to reliable, valuable, and diverse information** is paramount. A comprehensive understanding requires a thorough exploration of various perspectives and angles.
+- It's **essential to consider the 'why' behind the decision and understand the broader context** in which it unfolds. This ensures that decisions are not made in isolation but are informed by a holistic view of the situation.
+- Equally critical is the **right mental state**.
+  - A well-rested and energized brain is more adept at processing information and engaging in thoughtful analysis.
+  - Managing emotions is pivotal; decisions should not be clouded by impulsive reactions but grounded in a balanced emotional state. Embracing a spectrum of thoughts, from creative ideation to critical evaluation, facilitates a comprehensive decision-making process.
+  - Moreover, cultivating mindfulness and self-awareness contributes to a stable mental state, enabling individuals to navigate decision-making with clarity and focus.
+
+In essence, <mark>a good decision is the product of a well-informed mind, fueled by valuable insights and diverse perspectives, operating within a balanced and energized mental state that harmonizes emotions and thoughts within the context of a purpose, clear goal and understanding</mark>. This holistic approach ensures thoughtful, informed, and effective decision-making in both personal and professional spheres.
+
+
+
+# Daniel Kahneman
+
+Prof **Daniel Kahneman**, from Princeton University, started a revolution in our understanding of the human mind. It's a revolution that led to him winning a Nobel Prize.
+
+::: {.column-margin}
+
+[Noise: A Flaw in Human Judgment](https://www.goodreads.com/en/book/show/55339408){.external}, From the bestselling author of Thinking, Fast and Slow and the co-author of Nudge, a groundbreaking exploration of why most people make bad judgments, and how to control for that noise.​
+
+![Noise: A Flaw in Human Judgment](/images/scrum/noise.jpg){width="40%"}
+
+:::
+
+His insight into the way our minds work springs from the mistakes that we make. Not random mistakes, but systematic errors that we all make, all the time, without realising.
+
+
+Prof Kahneman and his late colleague Amos Tversky, who worked at the Hebrew University of Jerusalem and Stanford University, **realised that we actually have two systems of thinking**:
+
+- there's the **deliberate, logical part of your mind** that is capable of analysing a problem and coming up with a rational answer.
+- But then there is another system in your mind that is **intuitive, fast and automatic.**
+
+## Deliberate thinking
+
+This is the part of your mind that you are aware of. It's expert at solving problems, but it is slow, requires a great deal of energy, and is extremely lazy.
+
+Even the act of walking is enough to occupy most of your attentive mind.
+
+## Automatic thinking
+
+But then there is another system in your mind that is intuitive, fast and automatic. This fast way of thinking is **incredibly powerfu**l**, but totally hidden.
+
+<mark>It is so powerful, it is actually responsible for most of the things that you say, do, think and believe</mark>.
+
+And yet you have no idea this is happening. This system is your **hidden auto-pilot, and it has a mind of its own.** It is sometimes known as the stranger within.
+
+Most of the time, our fast, intuitive mind is in control, efficiently taking charge of all the thousands of decisions we make each day. The problem comes when we allow our fast, intuitive system to make decisions that we really should pass over to our slow, logical system. This is where the mistakes creep in.
+
+# Intuition
+
+::: {.callout-note}
+Intuition is not logical. It is not the result of a set of considered steps that can be shared or explained. Instead, while based on deep-seated knowledge, the process feels natural, almost instinctual.
+:::
+
+
+And yet, while intuition is **quick and usually beneficial,** it is not always entirely accurate. The **subconscious brain attempts to recognize, process, and use patterns of thinking based on prior experience and a best guess.**
+
+Paradoxically, intuition feels unknowable. After all, you cannot explain the thinking behind **a snap decision that appears out of nowhere.*
+
+*It just happens.*
+
+While intuition occurs in your day-to-day life, it is sometimes most apparent in the decisions of experts. The specialist draws on years of experience, held in unconscious frameworks, to make fast, high-quality decisions, [Nalliah, 2016](https://pubmed.ncbi.nlm.nih.gov/27981996/){.exteranl}
+
+# Cognitive bias
+
+A <mark>cognitive bias is a systematic pattern of deviation from norm or rationality in judgment</mark>.
+
+::: {.column-margin}
+![](/images/scrum/bias-cheatsheet.jpg)
+:::
+
+[Individuals create their own "subjective reality"](https://en.wikipedia.org/wiki/Cognitive_bias) from their perception of the input. An individual's construction of reality, not the objective input, may dictate their behavior in the world.
+
+![Cognitive bias codex](/images/scrum/cognitive_bias.jpg)
+
+## List & codex
+
+- [List of cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases)
+- [Codex](https://upload.wikimedia.org/wikipedia/commons/6/65/Cognitive_bias_codex_en.svg)
+
+## Halo effect
+
+::: {.callout-note}
+The **halo effect** is a **cognitive bias** that occurs when an initial positive judgment about a person unconsciously colors the perception of the individual as a whole.
+:::
+
+When forming a first impression, observing an initial attractive feature—perhaps beauty or strength—can make the person appealing, **making it difficult to revise that impression based on new or opposing information**. For example, an attractive individual may also be perceived as interesting, ambitious, or funny, whether or not that assessment is warranted.
+
+# References
+
+
+- [Halo effed](https://www.psychologytoday.com/intl/basics/halo-effect) / [First idea](https://www.strategyzer.com/library/dont-fall-in-love-with-your-first-idea)
+- [How do we really make decisions?](https://www.bbc.com/news/science-environment-26258662){.external}
+- [How You Really Make Decisions](https://www.bbc.co.uk/programmes/b03wyr3c){.external}
+- [What Is Intuition and Why Is It Important? 5 Examples](https://positivepsychology.com/intuition/){.external}
+- [How to Develop Your Intuitive Decision MakingV](https://www.globalcognition.org/intuitive-decision-making/){.external}
+- [What are some examples of successful leaders who rely on intuition in decision-making?](https://www.linkedin.com/advice/1/what-some-examples-successful-leaders-who-rely){.external}
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Week 11: Emotions and Thoughts ](/scrum/scrum-week12.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Week 14: Beyond SCRUM  {{< fa solid arrow-right >}}](/scrum/scrum-week14.qmd)
+<br>
+</div>
+<br>
+</div>

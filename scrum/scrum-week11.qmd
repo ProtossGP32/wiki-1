@@ -25,8 +25,6 @@ format:
 
 The introduction of the **Sociogram** as a tool for mapping group relationships enhances leaders' understanding of team dynamics. **Behavioral Economics**, exemplified by R**ichard H. Thaler**'s work, challenges traditional economic models, emphasizing **the role of emotions in decision-making**.
 
-**Ian McGilchrist's exploration of the divided brain highlights the social dimension of emotions**, crucial for interpersonal communication. The metaphor of the **rider and elephant** in **moral emotions**, as presented by **Jonathan Haidt**, further delves into the complexities of human behavior. The week concludes by referencing additional resources for deeper exploration.
-
 :::
 
 
@@ -36,7 +34,7 @@ The introduction of the **Sociogram** as a tool for mapping group relationships 
 
 **Keywords: SCRUM Week 11 - Team Dynamics**
 
-Team Dynamics, Frans de Waal, Social Hierarchies, Virtue Game, Competition Game, Dominance Game, Minority Rules, Nassim Nicholas Taleb, Milgram's Experiments, Sociogram, Behavioral Economics, Richard H. Thaler, Nudges, Incentives, Ian McGilchrist, The Master and His Emissary, Jonathan Haidt, Moral Emotions, The Righteous Mind, Emotions as GPS
+Team Dynamics, Frans de Waal, Social Hierarchies, Virtue Game, Competition Game, Dominance Game, Minority Rules, Nassim Nicholas Taleb, Milgram's Experiments, Sociogram, Behavioral Economics, Richard H. Thaler, Nudges, Incentives
 
 :::
 
@@ -194,59 +192,6 @@ Thaler's contributions emphasize that economic decision-making is influenced by 
 
 - [RSA Animate: Drive: The surprising truth about what motivates us](https://www.youtube.com/watch?v=u6XAPnuFjJc&feature=youtu.be){.external}
 
-
-# Emotions
-
-![The mind creates abyss, and the heart crosses it](/images/scrum/themindcreatesbridges.jpg)
-
-::: {.column-margin}
-
-Contemporary [theories](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8228195/){.external} of emotion converge around the key role of the amygdala as the central subcortical emotional brain structure that constantly evaluates and integrates a variety of sensory information from the surroundings and assigns them appropriate values of emotional dimensions, such as valence, intensity, and approachability.
-:::
-
-## Social bonding and complex information
-
-![Emotion -- Ian McGilChrist](/images/scrum/emotion.jpg){width="70%"}
-
-**Ian McGilchrist**, a psychiatrist and neuroscientist, is renowned for his work on the divided brain. In ["The Master and His Emissary,"](/books/theMasterAndHisEmissary.qmd) he explores <mark>how the left and right hemispheres process information differently, impacting our perception of the world.</mark>
-
-**McGilchrist** underscores the **holistic and embodied nature of emotions**, viewing them as complex phenomena arising from the integration of cognitive, sensory, and bodily processes. His perspective invites a comprehensive understanding of emotions, emphasizing their **multidimensional nature in the context of brain hemispheric specialization.**
-
-
-::: {.callout-note}
-**Ian McGilchrist**'s exploration extends to the <mark>social dimension of emotions, emphasizing their role in connecting people amidst ambiguous and contradictory information that simple words or data alone cannot fully express</mark>.
-
-**Emotions**, in his view, serve as a crucial bridge in interpersonal communication, allowing individuals to navigate complex social scenarios where the nuances of emotion convey meaning beyond the limitations of explicit language or straightforward data.
-:::
-
-This social aspect of emotions highlights their significance in fostering understanding, empathy, and shared experiences within the intricacies of human relationships and societal dynamics.
-
-## Moral emotions: The rider and the Elephant
-
-- [The Righteous Mind: Why Good People Are Divided by Politics and Religion](/books/theRighteousMind.qmd) by **Jonathan Haidt.**
-
-The central metaphor of these four chapters is that the mind is divided, like a rider on an elephant, and <mark> the rider’s job is to serve the elephant.</mark> 
-
-- The **rider** is our conscious reasoning—the stream of words and images of which we are fully aware. 
-- The **elephant** is the other 99 percent of mental processes—the ones that occur outside of awareness but that actually govern most of our behavior. 
-
-**Jonathan Haidt** developed this metaphor in his last book, **The Happiness Hypothesis**, where he described how the rider and elephant work together, sometimes poorly, as we stumble through life in search of **meaning and connection**. 
-
-In this book he uses the metaphor to solve puzzles such as why it seems like everyone (else) is a hypocrite and why political partisans are so willing to believe outrageous lies and conspiracy theories. He also use the metaphor to show you <mark>how you can better persuade people who seem unresponsive to reason.</mark>
-
-## Emotions as GPS: Better Decision-Making"
-
-- [A Clinical Psychologist Explains How Your Emotions Can Help You Make Better Decisions](https://www.vunela.com/a-clinical-psychologist-explains-how-your-emotions-can-help-you-make-better-decisions/){.external}
-
-<mark>Emotions act as an internal GPS, signaling us through feelings and thoughts to guide decision-making and behavior.</mark>
-
-When triggered, emotions swiftly **inform us about a situation's alignment with our goals**.
-
-For instance, anxiety during a negotiation signals a need for further evaluation. While emotions lack precision, their speed provides a quick appraisal of experiences. Suppressing emotions may seem tempting, but evolved over millennia, **they serve a purpose — alerting us to potential red flags**.
-
-In business and personal relationships, emotions play a pivotal role, influencing reactions to situations like dealing with narcissistic personalities. Understanding our emotional responses equips us to navigate complex dynamics, contributing to better decision-making and successful outcomes. Embracing emotions as valuable cues enhances emotional intelligence and empowers us to leverage this innate information system for optimal results in various aspects of life.
-
-> Emotions are not particularly sophisticated or precise, but their speed and utility make up for what they lack in sophistication and precision. **Emotions**, when they are not disordered, **provide information about your circumstances in a simple, quick way** that does not involve a lot of cognition (thinking about it). 
 
 
 # References

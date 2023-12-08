@@ -163,33 +163,6 @@ It translates into a:
 
 And there are more negative side-effects: because of our brains’ plasticity, when we consistently engage in multi-tasking we reshape our brains for the worse, and we become habituated to this counterproductive way of working. 
 
-# Bias
-
-## Cognitive bias
-
-A <mark>cognitive bias is a systematic pattern of deviation from norm or rationality in judgment</mark>.
-
-::: {.column-margin}
-![](/images/scrum/bias-cheatsheet.jpg)
-:::
-
-[Individuals create their own "subjective reality"](https://en.wikipedia.org/wiki/Cognitive_bias) from their perception of the input. An individual's construction of reality, not the objective input, may dictate their behavior in the world.
-
-![Cognitive bias codex](/images/scrum/cognitive_bias.jpg)
-
-## List & codex
-
-- [List of cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases)
-- [Codex](https://upload.wikimedia.org/wikipedia/commons/6/65/Cognitive_bias_codex_en.svg)
-
-## Halo effect
-
-::: {.callout-note}
-The **halo effect** is a **cognitive bias** that occurs when an initial positive judgment about a person unconsciously colors the perception of the individual as a whole.
-:::
-
-When forming a first impression, observing an initial attractive feature—perhaps beauty or strength—can make the person appealing, **making it difficult to revise that impression based on new or opposing information**. For example, an attractive individual may also be perceived as interesting, ambitious, or funny, whether or not that assessment is warranted.
-
 
 
 
@@ -197,7 +170,6 @@ When forming a first impression, observing an initial attractive feature—perha
 
 - [Week 3: Communication and value](https://sites.google.com/view/gestioprojectes/llegir/setmana3){.external}
 - [Pareto Wikipedia definition](https://en.wikipedia.org/wiki/Pareto_principle) / [Pareto](https://sites.google.com/view/gestioprojectes/llegir/setmana3/pareto)
-- [Halo effed](https://www.psychologytoday.com/intl/basics/halo-effect) / [First idea](https://www.strategyzer.com/library/dont-fall-in-love-with-your-first-idea)
 - [Multitasking](https://sites.google.com/view/gestioprojectes/llegir/setmana3/multitasking) / [The Real Cost of Multitasking (A.K.A. Context Switching)](https://www.linkedin.com/pulse/real-cost-multitasking-aka-context-switching-tuomo-vauhkonen)
 
 

@@ -43,7 +43,7 @@ categories: [ifcd0210, training]
 
 #### Product Backlog and Planning
 
-User stories, tasks and hours/task planning: [Forecast IFCD0210-24](https://cloud.albertprofe.dev/index.php/s/BZ2Q9N53KiwdMWS){.external}
+User stories, tasks and hours/task planning: [planning IFCD0210-24](https://cloud.albertprofe.dev/index.php/s/BZ2Q9N53KiwdMWS){.external}
 
 # Deliveries
 
