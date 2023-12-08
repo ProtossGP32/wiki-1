@@ -137,6 +137,54 @@ The **halo effect** is a **cognitive bias** that occurs when an initial positive
 
 When forming a first impression, observing an initial attractive feature—perhaps beauty or strength—can make the person appealing, **making it difficult to revise that impression based on new or opposing information**. For example, an attractive individual may also be perceived as interesting, ambitious, or funny, whether or not that assessment is warranted.
 
+
+
+# Strategic Thinking
+
+## Purpose, Intuition, Decision-Making and Mindset
+
+
+![](/images/scrum/mindset-decsionMaking.png)
+
+::: {.callout-note title="Strategic Thinking: Navigating Purposeful Decisions"}
+
+
+**Strategic thinking** transcends the immediate and involves purposefully integrating key elements — purpose, intuition, decision-making, and mindset.
+
+- **Purpose:**
+  - A guiding force that aligns decisions with overarching goals.
+  - Provides clarity on values and contributes to meaningful outcomes.
+  
+- **Intuition:**
+  - Acts as a silent partner, drawing on accumulated knowledge and experiences.
+  - Guides decision-makers in navigating uncertainty and complexity.
+  
+- **Decision-Making:**
+  - Informed by both purpose and intuition for optimal outcomes.
+  - Considers potential consequences and aligns with long-term objectives.
+  
+- **Mindset:**
+  - A right mindset -survival and growth- creates the context for purposeful thinking.
+  - Shapes the approach to decision-making, it is key to success.
+
+
+
+:::
+
+
+In the domain of <mark>strategic thinking and mindset-driven decision-making, intuition plays a pivotal role alongside purpose</mark>.
+
+
+- **Intuition**, often considered the **silent partner in the decision-making process**, draws on accumulated knowledge, experiences, and a deep understanding of the context. It acts as an internal compass, guiding decision-makers when faced with uncertainty or compl**exity.
+- **Strategic thinking, when coupled with a **purpose-driven mindset**, allows individuals to tap into their intuitive insights. This fusion enables decision-makers to navigate through ambiguity with a sense of confidence, as their intuition becomes a valuable tool for quick and informed choices.
+- **Intuition complements strategic thinking** by providing a nuanced understanding of the situation, often offering unconventional perspectives that align with the overarching purpose.
+
+In essence, a **purpose-driven mindset** enhances the reliability of intuition, ensuring that intuitive insights align with the broader mission and values.
+
+This synergy results in decisions that not only contribute to immediate objectives but also resonate with the greater purpose, fostering a strategic and intuitive approach that is both effective and meaningful.
+
+
+
 # References
 
 
