@@ -67,7 +67,7 @@ DevOps tools and culture are to work together to achieve supply development with
 <br>
 <div class='column right next'>
 <br>
-[How to document: Quarto and Obsidian  {{< fa solid arrow-right >}}](/devops/devops-doc-quarto.qmd)
+[DevOps: Software Lifecycle {{< fa solid arrow-right >}}](/devops/devops-what-lifecycle.qmd)
 <br>
 </div>
 <br>

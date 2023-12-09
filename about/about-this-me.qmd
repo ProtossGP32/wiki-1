@@ -50,7 +50,7 @@ Hi, this is **alberprofe** speaking! My fields of expertise are:
 <br>
 <div class='column right next'>
 <br>
-[About this site  {{< fa solid arrow-right >}}](/about/about-this-site.qmd)
+[About a developer {{< fa solid arrow-right >}}](/about/about-this-developer.qmd)
 <br>
 </div>
 <br>

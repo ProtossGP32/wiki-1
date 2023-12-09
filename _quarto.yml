@@ -117,6 +117,7 @@ website:
             - devops/devops-what-intro.qmd
             - devops/devops-what-overview.qmd
             - devops/devops-what-immutable.qmd
+            - devops/devops-what-lifecycle.qmd
         - text: "---"  
         - section: "Documentation"
           contents: 
@@ -506,6 +507,7 @@ website:
         - section: "About me and this site"
           contents: 
             - about/about-this-me.qmd
+            - about/about-this-developer.qmd
             - about/about-this-site.qmd
             - about/about-this-images-credit.qmd
        

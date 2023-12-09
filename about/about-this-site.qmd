@@ -141,16 +141,17 @@ ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruc
 
 [ChatGPT](https://chat.openai.com/chat)
 
----
 
-[{{< fa solid arrow-up >}} top](#top)
+
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} About me](/about/about-this-me.qmd)
+[{{< fa solid arrow-left >}} About a developer ](/about/about-this-developer.qmd)
 <br>
 </div>
 <br>
