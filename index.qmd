@@ -14,7 +14,7 @@ format:
 <style>
 
 body {
-    background: linear-gradient(0deg, rgba(136,138,136,1) 40%, rgba(220,220,220,1) 52%);
+    background: radial-gradient(circle, rgba(197,197,215,1) 35%, rgba(142,176,182,1) 100%);
   }
 
 .grid-container {
@@ -88,8 +88,7 @@ body {
   <div class='grid-item'>
   <div class='homecard'>
 
-  📘 <b> Agile methodologies</b> and Project Management
-
+  <h2>Agile</h2>
 
   [SCRUM](/scrum/scrum-what-concepts.qmd) framework</br>
   [Before SCRUM](/scrum/scrum-week10.qmd)</br>
@@ -99,12 +98,13 @@ body {
   [Mindset](/scrum/scrum-week5.qmd), the key for everything</br>
   [Emotions](/scrum/scrum-week12.qmd) and Thoughts</br>
   Managing mind and [time](/scrum/scrum-week7.qmd)</br>
-  [Beyond SCRUM](/scrum/scrum-week14.qmd)</br>
+  [Beyond SCRUM](/scrum/scrum-week14.qmd)
   
   </div>
   </div>
 
   <div class='grid-item'>
+
   ![](images/home/2.gif){width="100%"}
   </div>
 
@@ -124,7 +124,7 @@ body {
   <div class='grid-item'>
   <div class='homecard'>
 
-  📘 **Architecture** System Design and Design-Patterns
+  <h2>Architecture</H2>
 
   DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf){.external}</br>
   [Spring Boot](https://spring.io/){.external}</br>
@@ -144,7 +144,7 @@ body {
 <div class='grid-item'>
 <div class='homecard'>
 
-  📘 <b>Algorithmic</b> micro-development and paradigms
+  <H2>Algorithmic</H2> micro-development and paradigms
 
   Scripting: [BASH](/linux/linux-what-bash.qmd), (short for “Bourne again shell”) is a Unix shell</br>
   Structured and Procedural: C</br>
@@ -168,13 +168,12 @@ body {
   <div class='grid-item'>
   <div class='homecard'>
 
- 📘 **Control Version Systems**
+ <H2>Control Version Systems</H2>
 
   [Git](https://git-scm.com/){.external}</br>
   [Git](/devops/devops-vc-git.qmd), a version control system used for source code management</br>
   [GitHub](https://github.com/){.external}</br>
-  GitLab</br>
-  Subversion</br>
+  GitLab /   Subversion</br>
   [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023</br>
   [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)</br>
   IDE: [Visual Code](/devops/devops-ide-visualcode.qmd)</br>
@@ -190,7 +189,7 @@ body {
 <div class='grid-item'>
 <div class='homecard'>
 
-📘 **DevOps** from Test to Deploy, through Documentation
+<H2>DevOps</H2>
 
   [about this site](about/about-this-site.qmd), for documentation example.</br>
   [JUnit for Spring Boot](https://junit.org/junit5/){.external}</br>
@@ -212,7 +211,7 @@ body {
 <div class='grid-item'>
 <div class='homecard'>
 
-📘 **Artificial Intelligence**
+<H2>Artificial Intelligence</H2>
 
   [Artificial Intelligence (AI):](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp){.external} What It Is and How It Is Used</br>
   Machine Learning</br>
@@ -220,7 +219,7 @@ body {
   [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607){.external} text-to-image tool</br>
   [ChatGPT](https://openai.com/blog/chatgpt){.external}</br>
   Artificial General Intelligence (AGI)</br>
-  AI is categorized into four types: Reactive, Limited memory, Theory-of-mind and Self-aware</br>
+  AI is categorized into four types</br>
 
 </div>
 </div>
