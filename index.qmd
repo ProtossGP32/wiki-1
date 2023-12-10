@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: ""
 filters:
    - lightbox
 lightbox: auto
@@ -12,26 +12,32 @@ format:
 ---
 
 <style>
+
 body {
-  background: rgb(220,220,220);
+    background: linear-gradient(0deg, rgba(136,138,136,1) 0%, rgba(220,220,220,1) 52%);
   }
 
-  .grid-container1 {
+.grid-container {
   display: grid;
-  grid-template-columns: 40% 60%; /* Columns take 30% and 70% of the container width */
-  gap: 1rem;
+  grid-template-columns: 50% 50%; /* Columns take 30% and 70% of the container width */
+ 
 }
 
-  .grid-container2 {
+.grid-container1 {
+  display: grid;
+  grid-template-columns: 40% 60%; /* Columns take 30% and 70% of the container width */
+
+}
+
+.grid-container2 {
   display: grid;
   grid-template-columns: 60% 40%; /* Columns take 30% and 70% of the container width */
-  gap: 1rem;
+
 }
 
 .grid-item {
-  border: 1px solid #ddd;
+  
   padding: 1rem;
-
 }
 
 
@@ -53,19 +59,29 @@ body {
       "sidebar"
       "footer";
   }
+    .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
 }
 
 </style>
 
+<!-- https://www.turing.com/kb/responsive-layouts-using-css-grid -->
+
 ::: {.column-page}
-![](images/home/frontimagealbertprofeweb2.png)
+![](images/home/frontimagealbertprofeweb3.png)
 :::
 
 
 <div class='grid-container1'>
 
   <div class='grid-item'>
-  <div class='devskills'>
+  <div class='homecard'>
 
   📘 **Project Management** and Agile methodologies
 
@@ -96,12 +112,13 @@ body {
   </div>
 
   <div class='grid-item'>
-  <div class='devskills'>
+  <div class='homecard'>
 
   📘 **Architecture** System Design and Design-Patterns
 
   - DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf){.external}
   - [Spring Boot](https://spring.io/){.external}
+  - SPA, multi-page and server side rendering
   - Cloud: [AWS](https://aws.amazon.com/){.external}
   - APIs: REST, Websockets, SOAP, GraphQL
   - [Kafka](https://kafka.apache.org/intro){.external}, event streaming, queues and real-time data capturing
@@ -112,7 +129,7 @@ body {
 
 
 <div class='grid-item'>
-<div class='devskills'>
+<div class='homecard'>
 
   📘 <b>Algorithmic</b>
   micro-development and paradigms
@@ -125,11 +142,6 @@ body {
 </div>
 </div>
 
-<div class='grid-item'>
-
-![](images/home/4.gif){width="60%"}
-</div>
-
 
 <div class='grid-container2'>
   <div class='grid-item'>
@@ -138,7 +150,7 @@ body {
   </div>
 
   <div class='grid-item'>
-  <div class='devskills'>
+  <div class='homecard'>
 
  📘 **Control Version Systems**
 
@@ -156,17 +168,13 @@ body {
 </div>
 
 
-<div class='grid-item'>
-
-![](images/home/5.gif){width="60%"}
-</div>
 
 
 
 <div class='grid-item'>
-<div class='devskills'>
+<div class='homecard'>
 
-📘**DevOps**
+📘 **DevOps**
 
 from Test to Deploy, through Documentation
 
@@ -185,23 +193,24 @@ from Test to Deploy, through Documentation
 
 
 <div class='grid-item'>
-<div class='devskills'>
+<div class='homecard'>
 
 📘 **AI**
 
-  - [Artificial Intelligence (AI): What It Is and How It Is Used](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp){.external}
+  - [Artificial Intelligence (AI):](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp){.external} What It Is and How It Is Used
   - machine learning
-  - natural language
-  - prompts
-  - [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607){.external} text-to-image tool and [ChatGPT](https://openai.com/blog/chatgpt){.external}
+  - natural language & prompts
+  - [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607){.external} text-to-image tool
+  - [ChatGPT](https://openai.com/blog/chatgpt){.external}
   - Artificial General Intelligence (AGI)
+  - AI is categorized into four types: Reactive, Limited memory, Theory-of-mind and Self-aware
 
 </div>
 </div>
 
   <div class='grid-item'>
 
-![](images/home/6.gif){width="90%"}
+![](images/home/6.gif){width="100%"}
 
   </div>
 
@@ -247,7 +256,7 @@ public class BookRestController {
 
 ## Code react
 
-React.js is a JavaScript library used for **building user interfaces**. It is maintained by Facebook and a community of individual developers and companies. React allows developers to create **large web applications that use data which can change over time, without reloading the page**.
+[React.js is a JavaScript](/reactjs/reactjs-what-principles.qmd) library used for **building user interfaces**. It is maintained by Facebook and a community of individual developers and companies. React allows developers to create **large web applications that use data which can change over time, without reloading the page**.
 
 ```{.js .code-overflow-wrap filename="MyApp.jsx"}
 
@@ -269,6 +278,50 @@ export default function MyApp() {
 }
 
 ```
+## Code bash
 
+**Bash (short for “Bourne again shell”) is a Unix shell and command language** which was the default shell on Unix systems at the time. [Bash](/linux/linux-what-bash.qmd) is a command-line interface (CLI) that allows users to enter commands and execute programs, as well as perform various other tasks such as managing files, manipulating text, and interacting with other programs.
+
+```{.bash .code-overflow-wrap filename="introduction.sh"}
+#!/usr/bin/env bash
+# First line of the script is the shebang which tells the system how to execute
+# the script: https://en.wikipedia.org/wiki/Shebang_(Unix)
+# As you already figured, comments start with #. Shebang is also a comment.
+
+# Simple hello world example:
+echo "Hello world!" # => Hello world!
+
+# Each command starts on a new line, or after a semicolon:
+echo "This is the first command"; echo "This is the second command"
+# => This is the first command
+# => This is the second command
+
+# Declaring a variable looks like this:
+variable="Some string"
+
+# But not like this:
+variable = "Some string" # => returns error "variable: command not found"
+# Bash will decide that `variable` is a command it must execute and give an error
+# because it can't be found.
+
+# Nor like this:
+variable= "Some string" # => returns error: "Some string: command not found"
+# Bash will decide that "Some string" is a command it must execute and give an
+# error because it can't be found. In this case the "variable=" part is seen
+# as a variable assignment valid only for the scope of the "Some string"
+# command.
+```
 
 :::
+
+<div class='grid-container'>
+<div class='grid-item'>
+
+![](images/home/4.gif){width="100%"}
+</div>
+
+<div class='grid-item'>
+
+![](images/home/5.gif){width="100%"}
+</div>
+</div>
