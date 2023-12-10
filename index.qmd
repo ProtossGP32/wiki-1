@@ -14,7 +14,7 @@ format:
 <style>
 
 body {
-    background: linear-gradient(0deg, rgba(136,138,136,1) 0%, rgba(220,220,220,1) 52%);
+    background: linear-gradient(0deg, rgba(136,138,136,1) 40%, rgba(220,220,220,1) 52%);
   }
 
 .grid-container {
@@ -78,22 +78,28 @@ body {
 :::
 
 
+
+<div style="background-color:#003366;">
+
+::: {.column-body}
+
 <div class='grid-container1'>
 
   <div class='grid-item'>
   <div class='homecard'>
 
-  📘 **Project Management** and Agile methodologies
+  📘 <b> Agile methodologies</b> and Project Management
 
 
-  - [SCRUM](/scrum/scrum-what-concepts.qmd) framework for project management
-  - [beyond SCRUM](/scrum/scrum-week14.qmd) and [before SCRUM](/scrum/scrum-week10.qmd)
-  - SCRUM of SCRUM: [Less](/scrum/scrum-week14.qmd#scrum-of-scrum-less)
-  - Team Work and [Team Dynamics](/scrum/scrum-week11.qmd)
-  - [Mindset](/scrum/scrum-week5.qmd), the key for everything
-  - [Emotions](/scrum/scrum-week12.qmd) and Thoughts
-  - Managing mind and [time](/scrum/scrum-week7.qmd)
-
+  [SCRUM](/scrum/scrum-what-concepts.qmd) framework</br>
+  [Before SCRUM](/scrum/scrum-week10.qmd)</br>
+  SCRUM of SCRUM: [Less](/scrum/scrum-week14.qmd#scrum-of-scrum-less)</br>
+  Team Work</br>
+  [Team Dynamics](/scrum/scrum-week11.qmd)</br>
+  [Mindset](/scrum/scrum-week5.qmd), the key for everything</br>
+  [Emotions](/scrum/scrum-week12.qmd) and Thoughts</br>
+  Managing mind and [time](/scrum/scrum-week7.qmd)</br>
+  [Beyond SCRUM](/scrum/scrum-week14.qmd)</br>
   
   </div>
   </div>
@@ -104,6 +110,10 @@ body {
 
 </div>
 
+
+:::
+
+</div>
 
 <div class='grid-container2'>
   <div class='grid-item'>
@@ -116,30 +126,36 @@ body {
 
   📘 **Architecture** System Design and Design-Patterns
 
-  - DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf){.external}
-  - [Spring Boot](https://spring.io/){.external}
-  - SPA, multi-page and server side rendering
-  - Cloud: [AWS](https://aws.amazon.com/){.external}
-  - APIs: REST, Websockets, SOAP, GraphQL
-  - [Kafka](https://kafka.apache.org/intro){.external}, event streaming, queues and real-time data capturing
+  DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf){.external}</br>
+  [Spring Boot](https://spring.io/){.external}</br>
+  SPA, multi-page and server side rendering</br>
+  Cloud: [AWS](https://aws.amazon.com/){.external}</br>
+  APIs: REST, Websockets, SOAP, GraphQL</br>
+  [Kafka](https://kafka.apache.org/intro){.external}, event streaming</br>
   
   </div>
   </div>
 </div>
 
+<div style="background-color:#003366;">
+
+::: {.column-body}
 
 <div class='grid-item'>
 <div class='homecard'>
 
-  📘 <b>Algorithmic</b>
-  micro-development and paradigms
+  📘 <b>Algorithmic</b> micro-development and paradigms
 
-  - Scripting: [BASH](/linux/linux-what-bash.qmd), (short for “Bourne again shell”) is a Unix shell
-  - Structured and Procedural: C
-  - OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/){.external}
-  - COP (Components-Oriented Programming): [React JS](https://reactjs.org/){.external} and [React TS](https://www.typescriptlang.org/docs/handbook/react.html){.external}
+  Scripting: [BASH](/linux/linux-what-bash.qmd), (short for “Bourne again shell”) is a Unix shell</br>
+  Structured and Procedural: C</br>
+  OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/){.external}</br>
+  COP (Components-Oriented Programming): [React JS](https://reactjs.org/){.external} and [React TS](https://www.typescriptlang.org/docs/handbook/react.html){.external}</br>
 
 </div>
+</div>
+
+:::
+
 </div>
 
 
@@ -154,67 +170,68 @@ body {
 
  📘 **Control Version Systems**
 
-  - [Git](https://git-scm.com/){.external}
-  - and [Git](/devops/devops-vc-git.qmd), a version control system used for source code management
-  - [GitHub](https://github.com/){.external}
-  - GitLab
-  - Subversion
-  - [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023
-  - [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)
-  - IDE: [Visual Code](/devops/devops-ide-visualcode.qmd)
+  [Git](https://git-scm.com/){.external}</br>
+  [Git](/devops/devops-vc-git.qmd), a version control system used for source code management</br>
+  [GitHub](https://github.com/){.external}</br>
+  GitLab</br>
+  Subversion</br>
+  [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023</br>
+  [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)</br>
+  IDE: [Visual Code](/devops/devops-ide-visualcode.qmd)</br>
   
   </div>
   </div>
 </div>
 
+<div style="background-color:#003366;">
 
-
-
+::: {.column-body}
 
 <div class='grid-item'>
 <div class='homecard'>
 
-📘 **DevOps**
+📘 **DevOps** from Test to Deploy, through Documentation
 
-from Test to Deploy, through Documentation
+  [about this site](about/about-this-site.qmd), for documentation example.</br>
+  [JUnit for Spring Boot](https://junit.org/junit5/){.external}</br>
+  [Jest for JS React](https://jestjs.io/){.external}</br>
+  Deploy on Heroku, Netlify, AWS Amplify</br>
+  [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/){.external} and [k8s](https://kubernetes.io/){.external}</br>
 
-  - [about this site](about/about-this-site.qmd), for documentation example.
-  - [JUnit for Spring Boot](https://junit.org/junit5/){.external}
-  - [Jest for JS React](https://jestjs.io/){.external}
-  - Deploy on Heroku, Netlify, AWS Amplify
-  - [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/){.external} and [k8s](https://kubernetes.io/){.external}
+
 
 
 </div>
 </div>
 
+:::
+
+</div>
 
 <div class='grid-container1'>
-
-
 <div class='grid-item'>
 <div class='homecard'>
 
-📘 **AI**
+📘 **Artificial Intelligence**
 
-  - [Artificial Intelligence (AI):](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp){.external} What It Is and How It Is Used
-  - machine learning
-  - natural language & prompts
-  - [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607){.external} text-to-image tool
-  - [ChatGPT](https://openai.com/blog/chatgpt){.external}
-  - Artificial General Intelligence (AGI)
-  - AI is categorized into four types: Reactive, Limited memory, Theory-of-mind and Self-aware
+  [Artificial Intelligence (AI):](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp){.external} What It Is and How It Is Used</br>
+  Machine Learning</br>
+  Natural language & prompts</br>
+  [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607){.external} text-to-image tool</br>
+  [ChatGPT](https://openai.com/blog/chatgpt){.external}</br>
+  Artificial General Intelligence (AGI)</br>
+  AI is categorized into four types: Reactive, Limited memory, Theory-of-mind and Self-aware</br>
 
 </div>
 </div>
 
-  <div class='grid-item'>
+<div class='grid-item'>
 
 ![](images/home/6.gif){width="100%"}
 
-  </div>
-
 </div>
+</div>
+
 
 
 ::: {.column-page}
@@ -311,9 +328,13 @@ variable= "Some string" # => returns error: "Some string: command not found"
 # as a variable assignment valid only for the scope of the "Some string"
 # command.
 ```
-
+</br>
 :::
 
+<div style="background-color:#003366;">
+
+::: {.column-body}
+<br>
 <div class='grid-container'>
 <div class='grid-item'>
 
@@ -324,4 +345,8 @@ variable= "Some string" # => returns error: "Some string: command not found"
 
 ![](images/home/5.gif){width="100%"}
 </div>
+</div>
+
+:::
+
 </div>
