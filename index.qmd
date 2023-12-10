@@ -20,19 +20,19 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 50% 50%; /* Columns take 30% and 70% of the container width */
- grid-auto-rows: 1fr;
+
 }
 
 .grid-container1 {
   display: grid;
   grid-template-columns: 40% 60%; /* Columns take 30% and 70% of the container width */
-grid-auto-rows: 1fr;
+
 }
 
 .grid-container2 {
   display: grid;
   grid-template-columns: 60% 40%; /* Columns take 30% and 70% of the container width */
-grid-auto-rows: 1fr;
+
 }
 
 .grid-item {
@@ -42,7 +42,7 @@ grid-auto-rows: 1fr;
 
 .homecard{
     padding: 6px 16px 16px 16px;
-    background:#ddd6c7;
+    background: white;
     border: #ffffff6b;
     color: #003366;
     border-radius: 10px 10px 10px 10px;
