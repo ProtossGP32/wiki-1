@@ -103,6 +103,18 @@ a:active {
 
 <!-- https://www.turing.com/kb/responsive-layouts-using-css-grid -->
 
+<div style="background-color:#003366;">
+
+::: {.column-body}
+
+<h1 style="color:#FFFFFF;text-align:center;"><b>Developing webApp tech </b></h1>
+</br>
+
+:::
+
+</div>
+</br>
+
 ::: {.column-page}
 ![](images/home/frontimagealbertprofeweb3.png)
 :::
@@ -129,7 +141,7 @@ a:active {
   [Emotions](/scrum/scrum-week12.qmd) and Thoughts</br>
   Managing mind and [time](/scrum/scrum-week7.qmd)</br>
   [Beyond SCRUM](/scrum/scrum-week14.qmd)
-  
+  </br> </br> </br>
   </div>
   </div>
 
@@ -162,7 +174,7 @@ a:active {
   Cloud: [AWS](https://aws.amazon.com/)</br>
   APIs: REST, Websockets, SOAP, GraphQL</br>
   [Kafka](https://kafka.apache.org/intro), event streaming</br>
-  
+   </br> </br> 
   </div>
   </div>
 </div>
@@ -180,7 +192,7 @@ a:active {
   Structured and Procedural: C</br>
   OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/)</br>
   COP (Components-Oriented Programming): [React JS](https://reactjs.org/) and [React TS](https://www.typescriptlang.org/docs/handbook/react.html)</br>
-
+ </br> </br> 
 </div>
 </div>
 
@@ -206,7 +218,7 @@ a:active {
   [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023</br>
   [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)</br>
   IDE: [Visual Code](/devops/devops-ide-visualcode.qmd)</br>
-  
+   </br> </br> 
   </div>
   </div>
 </div>
@@ -225,7 +237,7 @@ a:active {
   [Jest for JS React](https://jestjs.io/)</br>
   Deploy on Heroku, Netlify, AWS Amplify</br>
   [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/) and [k8s](https://kubernetes.io/)</br>
-
+ </br> </br> 
 </div>
 </div>
 
@@ -246,7 +258,7 @@ a:active {
   [ChatGPT](https://openai.com/blog/chatgpt)</br>
   Artificial General Intelligence (AGI)</br>
   AI is categorized into four types</br>
-
+ </br> </br> 
 </div>
 </div>
 
@@ -257,16 +269,29 @@ a:active {
 </div>
 </div>
 
+<div style="background-color:#003366;">
 
+::: {.column-body}
+
+<h1 style="color:#FFFFFF;"><b>Developing... everywhere! Front & back-end examples</b></h1>
+</br>
+
+:::
+
+</div>
 
 ::: {.column-page}
 
-## Code Spring Boot
+## Spring Boot
 
 With Spring Boot in your app, just a few lines of code is all you need to start building services like a boss.
 
 
 [Java Spring Framework (Spring Framework)](https://www.ibm.com/topics/java-spring-boot){.external} is a popular, open source, enterprise-level framework for creating **standalone**, **production-grade applications** that run on the Java Virtual Machine (JVM).
+
+
+<details>
+<summary>Code: `hello.java`</summary>
 
 ``` {.java filename="hello.java" code-block-background=true}
 package com.example.myFirstSpring.restcontroller;
@@ -295,10 +320,14 @@ public class BookRestController {
     }
 }
 ```
+</details>
 
-## Code react
+## React
 
 [React.js is a JavaScript](/reactjs/reactjs-what-principles.qmd) library used for **building user interfaces**. It is maintained by Facebook and a community of individual developers and companies. React allows developers to create **large web applications that use data which can change over time, without reloading the page**.
+
+<details>
+<summary>Code: `MyApp.jsx`</summary>
 
 ```{.js .code-overflow-wrap filename="MyApp.jsx"}
 
@@ -320,39 +349,113 @@ export default function MyApp() {
 }
 
 ```
-## Code bash
+</details>
+
+## Bash
 
 **Bash (short for “Bourne again shell”) is a Unix shell and command language** which was the default shell on Unix systems at the time. [Bash](/linux/linux-what-bash.qmd) is a command-line interface (CLI) that allows users to enter commands and execute programs, as well as perform various other tasks such as managing files, manipulating text, and interacting with other programs.
 
-```{.bash .code-overflow-wrap filename="introduction.sh"}
-#!/usr/bin/env bash
-# First line of the script is the shebang which tells the system how to execute
-# the script: https://en.wikipedia.org/wiki/Shebang_(Unix)
-# As you already figured, comments start with #. Shebang is also a comment.
+<details>
+<summary>Code: `writenavigation.sh`</summary>
 
-# Simple hello world example:
-echo "Hello world!" # => Hello world!
+``` {.bash .code-overflow-wrap filename="writenavigation.sh"  }
+#!/bin/bash
 
-# Each command starts on a new line, or after a semicolon:
-echo "This is the first command"; echo "This is the second command"
-# => This is the first command
-# => This is the second command
+# Initialize an empty array
+files=()
+titles=()
+# Initialize a counter variable
+counter=0
+op_counter=0
+# Generate the log file name using the current date and time
+log_file="$(date +"%Y%m%d-%H%M%S")-log-write-navLinks.txt"
+# Initialize a string variable
+path_qmd=''
+title=''
+title_line=''
 
-# Declaring a variable looks like this:
-variable="Some string"
+# Open the log file for writing
+exec 3> "_logs/${log_file}"
 
-# But not like this:
-variable = "Some string" # => returns error "variable: command not found"
-# Bash will decide that `variable` is a command it must execute and give an error
-# because it can't be found.
+echo "***************** Extracting **********************" >&3
 
-# Nor like this:
-variable= "Some string" # => returns error: "Some string: command not found"
-# Bash will decide that "Some string" is a command it must execute and give an
-# error because it can't be found. In this case the "variable=" part is seen
-# as a variable assignment valid only for the scope of the "Some string"
-# command.
+# Read the input code line by line
+while IFS= read -r line; do
+  # If the line ends with ".qmd", add it to the array
+  if [[ $line == *".qmd" ]]; then
+    let counter++
+    # Extract path qmd file and add to array files
+    path_qmd="$(echo "$line" | tr -d ':' | sed 's/- //g' | tr -d ' ' | sed 's/file//g')"
+    files+=("$path_qmd")
+    # Extract title from qmd file and add to array titles
+    title_line=$(awk 'NR==2 {print}' "../${path_qmd}")
+    title=$(sed 's/.*"\(.*\)".*/\1/' <<< "$title_line")
+    titles+=("$title")
+    # Write a message to the log file indicating that .qmd path has been extracted
+    echo "$(date +"%Y-%m-%d %H:%M:%S") - extracting from _quarto.yml and .qmd file' $counter: $path_qmd > $title" >&3
+    echo " _quarto.yml/.qmd file' $counter: $path_qmd > $title" >&3
+  fi
+done < "../_quarto.yml"
+
+echo "***************** Writing  ************************" >&3
+
+# Loop through the array of .qmd files
+for ((i=0; i<${#files[@]}; i++)); do
+  # Open the .qmd file
+  file="${files[i]}"
+  let op_counter++
+  echo "$(date +"%Y-%m-%d %H:%M:%S") - Operation #($op_counter): **${file}**" >&3
+  echo 'operartion:' $op_counter' > writing to: '$file
+  
+  # Delete qmd rows navLinks
+  # Search for the line containing the string "<!--- navLinks -->"
+  lineNumber_navLinks_is=$(grep -c "<!--- navLinks -->" "../${file}")
+  # If the line was found, delete all lines after it
+  if [ "$lineNumber_navLinks_is" -gt 0 ]; then
+    # Store the line number of the first match
+    lineNumber_navLinks=$(grep -n "<!--- navLinks -->" "../${file}" | awk -F: '{print $1}')
+    # Delete all lines after the line number
+    let lineNumber_navLinks++; 
+    echo "lineNumber_navLinks:" $lineNumber_navLinks
+    sed -i "$lineNumber_navLinks,\$d" "../${file}"
+  else
+    echo "<!--- navLinks -->" >> "../${file}"
+  fi
+    
+  # Write the columns callout init in anycase to .qmd file  
+  echo "<br><br>" >> "../${file}"
+  echo ":::: {.columns}" >> "../${file}"
+
+  # Append a link to the previous file
+  if [[ $i -gt 0 ]]; then 
+    echo "::: {.column .previous width="40%"} [{{< fa solid arrow-left >}} "${titles[i-1]}"]("${files[i-1]}"):::" >> "../${file}"
+    # Write the operation to the log file
+    echo "$(date +"%Y-%m-%d %H:%M:%S") - #$: Added  "${titles[i-1]}" to previous file ${files[i-1]} to ${file}" >&3
+  else
+    # Write a message to the log file indicating that no previous file was found
+    echo "$(date +"%Y-%m-%d %H:%M:%S") - #$op_counter: No previous file found for ${file}" >&3
+  fi
+  # # Write the top arrow callout in anycase to .qmd file  
+  echo ":::{.column .center width=20%} [{{< fa solid arrow-up >}} top](#top) :::" >> "../${file}"
+
+  # Append a link to the next file
+  if [[ $i -lt $(( ${#files[@]} - 1 )) ]]; then
+    echo "::: {.column .next width="40%"} ["${titles[i+1]} " {{< fa solid arrow-right >}}]("${files[i+1]}"):::" >> "../${file}"
+    # Write the operation to the log file
+    echo "$(date +"%Y-%m-%d %H:%M:%S") - #$op_counter: Added "${files[i+1]}" to next file ${files[i+1]} to ${file}" >&3
+  else
+    # Write a message to the log file indicating that no next file was found
+    echo "$(date +"%Y-%m-%d %H:%M:%S") - #$op_counter: No next file found for ${file}" >&3
+  fi
+  # Write the columns callout end in anycase to .qmd file  
+  echo "::::" >> "../${file}"  
+done
+
+# Close the log file
+exec 3>&-
 ```
+
+</details>
 </br>
 
 :::
