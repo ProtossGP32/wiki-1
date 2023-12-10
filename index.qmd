@@ -6,147 +6,209 @@ lightbox: auto
 format:
   html:
     toc: false
+    html-math-method: katex
+    css: styles.css
     highlight-style: atom-one
-    
 ---
 
-
 <style>
-
 body {
-  background-image: linear-gradient(0deg, rgba(196,255,14,1) 0%, rgba(126,217,87,1) 72%);
+  background: rgb(220,220,220);
+  }
+
+  .grid-container1 {
+  display: grid;
+  grid-template-columns: 40% 60%; /* Columns take 30% and 70% of the container width */
+  gap: 1rem;
+}
+
+  .grid-container2 {
+  display: grid;
+  grid-template-columns: 60% 40%; /* Columns take 30% and 70% of the container width */
+  gap: 1rem;
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .grid-container1 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
+   .grid-container2 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
 }
 
 </style>
 
-
-
 ::: {.column-page}
-![](images/home/frontimagealbertprofeweb.png)
+![](images/home/frontimagealbertprofeweb2.png)
 :::
 
 
+<div class='grid-container1'>
+
+  <div class='grid-item'>
+  <div class='devskills'>
+
+  📘 **Project Management** and Agile methodologies
 
 
+  - [SCRUM](/scrum/scrum-what-concepts.qmd) framework for project management
+  - [beyond SCRUM](/scrum/scrum-week14.qmd) and [before SCRUM](/scrum/scrum-week10.qmd)
+  - SCRUM of SCRUM: [Less](/scrum/scrum-week14.qmd#scrum-of-scrum-less)
+  - Team Work and [Team Dynamics](/scrum/scrum-week11.qmd)
+  - [Mindset](/scrum/scrum-week5.qmd), the key for everything
+  - [Emotions](/scrum/scrum-week12.qmd) and Thoughts
+  - Managing mind and [time](/scrum/scrum-week7.qmd)
 
-</br>
-
-::: {.column-page}
-## Skills developer
-:::: {.columns}
-
-::: {.column width="33%"}
-::: {.devskills}
-
-📘 **Algorithmic**
-
-micro-development and paradigms
-
-- Scripting: BASH
-- Structured and Procedural: C
-- OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/)
-- COP (Components-Oriented Programming): [React JS](https://reactjs.org/) and [React TS](https://www.typescriptlang.org/docs/handbook/react.html)
   
-:::
+  </div>
+  </div>
 
-:::
+  <div class='grid-item'>
+  ![](images/home/2.gif){width="100%"}
+  </div>
 
-::: {.column width="33%"}
+</div>
 
-::: {.devskills}
 
-📘 **Architecture**
+<div class='grid-container2'>
+  <div class='grid-item'>
 
-System Design and Design-Patterns
+  ![](images/home/3.gif){width="100%"}
+  </div>
 
-- DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf)
-- [Spring Boot](https://spring.io/)
-- Cloud: [AWS](https://aws.amazon.com/)
+  <div class='grid-item'>
+  <div class='devskills'>
+
+  📘 **Architecture** System Design and Design-Patterns
+
+  - DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf){.external}
+  - [Spring Boot](https://spring.io/){.external}
+  - Cloud: [AWS](https://aws.amazon.com/){.external}
+  - APIs: REST, Websockets, SOAP, GraphQL
+  - [Kafka](https://kafka.apache.org/intro){.external}, event streaming, queues and real-time data capturing
   
-:::
+  </div>
+  </div>
+</div>
 
 
-:::
+<div class='grid-item'>
+<div class='devskills'>
 
-::: {.column width="34%"}
-::: {.devskills}
-📘 **Project Management**
+  📘 <b>Algorithmic</b>
+  micro-development and paradigms
 
-- SCRUM and
-- beyond SCRUM
-- Laas
-- and Team Work
+  - Scripting: [BASH](/linux/linux-what-bash.qmd), (short for “Bourne again shell”) is a Unix shell
+  - Structured and Procedural: C
+  - OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/){.external}
+  - COP (Components-Oriented Programming): [React JS](https://reactjs.org/){.external} and [React TS](https://www.typescriptlang.org/docs/handbook/react.html){.external}
+
+</div>
+</div>
+
+<div class='grid-item'>
+
+![](images/home/4.gif){width="60%"}
+</div>
+
+
+<div class='grid-container2'>
+  <div class='grid-item'>
+
+  ![](images/home/1.gif){width="100%"}
+  </div>
+
+  <div class='grid-item'>
+  <div class='devskills'>
+
+ 📘 **Control Version Systems**
+
+  - [Git](https://git-scm.com/){.external}
+  - and [Git](/devops/devops-vc-git.qmd), a version control system used for source code management
+  - [GitHub](https://github.com/){.external}
+  - GitLab
+  - Subversion
+  - [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023
+  - [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)
+  - IDE: [Visual Code](/devops/devops-ide-visualcode.qmd)
   
-:::
+  </div>
+  </div>
+</div>
+
+
+<div class='grid-item'>
+
+![](images/home/5.gif){width="60%"}
+</div>
 
 
 
-:::
-
-::::
-
-:::
-
-
-
-
-
-
-
-::: {.column-page}
-
-:::: {.columns}
-
-::: {.column width="33%"}
-::: {.devskills}
-
-📘 **AI**
-
-- machine learning
-- natural language
-- prompts
-  
-:::
-
-
-
-:::
-
-::: {.column width="33%"}
-::: {.devskills}
-
-📘 **Control Version Systems**
-
-- [Git](https://git-scm.com/)
-- [GitHub](https://github.com/)
-- GitLab
-- Subversion
-  
-:::
-
-:::
-
-::: {.column width="34%"}
-::: {.devskills}
+<div class='grid-item'>
+<div class='devskills'>
 
 📘**DevOps**
 
 from Test to Deploy, through Documentation
 
-- [about this site](about/about-this-site.qmd), for documentation example.
-- [JUnit for Spring Boot](https://junit.org/junit5/)
-- [Jest for JS React](https://jestjs.io/)
-- Deploy on Heroku, Netlify, AWS Amplify
-- [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/) and [k8s](https://kubernetes.io/)
-  
-:::
+  - [about this site](about/about-this-site.qmd), for documentation example.
+  - [JUnit for Spring Boot](https://junit.org/junit5/){.external}
+  - [Jest for JS React](https://jestjs.io/){.external}
+  - Deploy on Heroku, Netlify, AWS Amplify
+  - [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/){.external} and [k8s](https://kubernetes.io/){.external}
 
 
-:::
+</div>
+</div>
 
-::::
 
-:::
+<div class='grid-container1'>
+
+
+<div class='grid-item'>
+<div class='devskills'>
+
+📘 **AI**
+
+  - [Artificial Intelligence (AI): What It Is and How It Is Used](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp){.external}
+  - machine learning
+  - natural language
+  - prompts
+  - [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607){.external} text-to-image tool and [ChatGPT](https://openai.com/blog/chatgpt){.external}
+  - Artificial General Intelligence (AGI)
+
+</div>
+</div>
+
+  <div class='grid-item'>
+
+![](images/home/6.gif){width="90%"}
+
+  </div>
+
+</div>
+
+
+::: {.column-page}
 
 ## Code Spring Boot
 
@@ -209,4 +271,4 @@ export default function MyApp() {
 ```
 
 
-
+:::
