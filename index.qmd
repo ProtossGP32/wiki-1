@@ -20,19 +20,19 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 50% 50%; /* Columns take 30% and 70% of the container width */
- 
+ grid-auto-rows: 1fr;
 }
 
 .grid-container1 {
   display: grid;
   grid-template-columns: 40% 60%; /* Columns take 30% and 70% of the container width */
-
+grid-auto-rows: 1fr;
 }
 
 .grid-container2 {
   display: grid;
   grid-template-columns: 60% 40%; /* Columns take 30% and 70% of the container width */
-
+grid-auto-rows: 1fr;
 }
 
 .grid-item {
@@ -40,7 +40,37 @@ body {
   padding: 1rem;
 }
 
+.homecard{
+    padding: 6px 16px 16px 16px;
+    background:#ddd6c7;
+    border: #ffffff6b;
+    color: #003366;
+    border-radius: 10px 10px 10px 10px;
+    text-align:center;
+    font: "Impact";
+    font-size: 14px;
 
+a:link {
+  color: #003366;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:  #003366;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: grey;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: grey;
+  background-color: transparent;
+  text-decoration: underline;
+}
+}
 
 @media screen and (max-width: 960px) {
   .grid-container1 {
@@ -88,7 +118,7 @@ body {
   <div class='grid-item'>
   <div class='homecard'>
 
-  <h2>Agile</h2>
+  <h1><b>Agile</b></h1>
 
   [SCRUM](/scrum/scrum-what-concepts.qmd) framework</br>
   [Before SCRUM](/scrum/scrum-week10.qmd)</br>
@@ -124,14 +154,14 @@ body {
   <div class='grid-item'>
   <div class='homecard'>
 
-  <h2>Architecture</H2>
+  <h1><b>Architecture</b></h1>
 
-  DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf){.external}</br>
-  [Spring Boot](https://spring.io/){.external}</br>
+  DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf)</br>
+  [Spring Boot](https://spring.io/)</br>
   SPA, multi-page and server side rendering</br>
-  Cloud: [AWS](https://aws.amazon.com/){.external}</br>
+  Cloud: [AWS](https://aws.amazon.com/)</br>
   APIs: REST, Websockets, SOAP, GraphQL</br>
-  [Kafka](https://kafka.apache.org/intro){.external}, event streaming</br>
+  [Kafka](https://kafka.apache.org/intro), event streaming</br>
   
   </div>
   </div>
@@ -144,12 +174,12 @@ body {
 <div class='grid-item'>
 <div class='homecard'>
 
-  <H2>Algorithmic</H2> micro-development and paradigms
+  <h1><b>Code</b></h1>
 
   Scripting: [BASH](/linux/linux-what-bash.qmd), (short for “Bourne again shell”) is a Unix shell</br>
   Structured and Procedural: C</br>
-  OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/){.external}</br>
-  COP (Components-Oriented Programming): [React JS](https://reactjs.org/){.external} and [React TS](https://www.typescriptlang.org/docs/handbook/react.html){.external}</br>
+  OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/)</br>
+  COP (Components-Oriented Programming): [React JS](https://reactjs.org/) and [React TS](https://www.typescriptlang.org/docs/handbook/react.html)</br>
 
 </div>
 </div>
@@ -157,7 +187,6 @@ body {
 :::
 
 </div>
-
 
 <div class='grid-container2'>
   <div class='grid-item'>
@@ -168,12 +197,12 @@ body {
   <div class='grid-item'>
   <div class='homecard'>
 
- <H2>Control Version Systems</H2>
+ <h1><b>Version Control</b></h1>
 
-  [Git](https://git-scm.com/){.external}</br>
+
   [Git](/devops/devops-vc-git.qmd), a version control system used for source code management</br>
-  [GitHub](https://github.com/){.external}</br>
-  GitLab /   Subversion</br>
+  [GitHub](https://github.com/) / [Git](https://git-scm.com/)</br>
+  GitLab /  Subversion</br>
   [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023</br>
   [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)</br>
   IDE: [Visual Code](/devops/devops-ide-visualcode.qmd)</br>
@@ -189,16 +218,13 @@ body {
 <div class='grid-item'>
 <div class='homecard'>
 
-<H2>DevOps</H2>
+ <h1><b>DevOps</b></h1>
 
   [about this site](about/about-this-site.qmd), for documentation example.</br>
-  [JUnit for Spring Boot](https://junit.org/junit5/){.external}</br>
-  [Jest for JS React](https://jestjs.io/){.external}</br>
+  [JUnit for Spring Boot](https://junit.org/junit5/)</br>
+  [Jest for JS React](https://jestjs.io/)</br>
   Deploy on Heroku, Netlify, AWS Amplify</br>
-  [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/){.external} and [k8s](https://kubernetes.io/){.external}</br>
-
-
-
+  [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/) and [k8s](https://kubernetes.io/)</br>
 
 </div>
 </div>
@@ -211,13 +237,13 @@ body {
 <div class='grid-item'>
 <div class='homecard'>
 
-<H2>Artificial Intelligence</H2>
+ <h1><b>AI</b></h1>
 
-  [Artificial Intelligence (AI):](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp){.external} What It Is and How It Is Used</br>
+  [Artificial Intelligence (AI):](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp) What It Is and How It Is Used</br>
   Machine Learning</br>
   Natural language & prompts</br>
-  [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607){.external} text-to-image tool</br>
-  [ChatGPT](https://openai.com/blog/chatgpt){.external}</br>
+  [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607) text-to-image tool</br>
+  [ChatGPT](https://openai.com/blog/chatgpt)</br>
   Artificial General Intelligence (AGI)</br>
   AI is categorized into four types</br>
 
@@ -328,23 +354,15 @@ variable= "Some string" # => returns error: "Some string: command not found"
 # command.
 ```
 </br>
+
 :::
 
 <div style="background-color:#003366;">
 
 ::: {.column-body}
-<br>
-<div class='grid-container'>
-<div class='grid-item'>
 
-![](images/home/4.gif){width="100%"}
-</div>
-
-<div class='grid-item'>
-
-![](images/home/5.gif){width="100%"}
-</div>
-</div>
+<h1 style="color:#FFFFFF;"><b>The Magic you are looking for is... in the work you are avoiding</b></h1>
+</br>
 
 :::
 
