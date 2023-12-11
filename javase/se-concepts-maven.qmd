@@ -97,7 +97,7 @@ Together, the groupId and artifactId help to uniquely identify a project within 
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Java MOOC Helsinki](/javase/se-what-moochelsinki.qmd)
+[{{< fa solid arrow-left >}} Java MOOC Helsinki Syllabus](/javase/se-what-moocsyllabus.qmd)
 <br>
 </div>
 <br>
