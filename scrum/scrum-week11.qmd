@@ -220,7 +220,7 @@ Thaler's contributions emphasize that economic decision-making is influenced by 
 <br>
 <div class='column right next'>
 <br>
-[Week 12: Beyond SCRUM  {{< fa solid arrow-right >}}](/scrum/scrum-week12.qmd)
+[Week 12: Emotions and Thoughts  {{< fa solid arrow-right >}}](/scrum/scrum-week12.qmd)
 <br>
 </div>
 <br>

@@ -195,7 +195,7 @@ But the world changed and the marketplace became turbulent. There were a number 
 <br>
 <div class='column right next'>
 <br>
-[Week 11: Emotions {{< fa solid arrow-right >}}](/scrum/scrum-week11.qmd)
+[Week 11: Team Dynamics {{< fa solid arrow-right >}}](/scrum/scrum-week11.qmd)
 <br>
 </div>
 <br>

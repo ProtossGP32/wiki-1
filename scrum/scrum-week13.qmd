@@ -214,7 +214,7 @@ This synergy results in decisions that not only contribute to immediate objectiv
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Week 11: Emotions and Thoughts ](/scrum/scrum-week12.qmd)
+[{{< fa solid arrow-left >}} Week 12: Emotions and Thoughts ](/scrum/scrum-week12.qmd)
 <br>
 </div>
 <br>
