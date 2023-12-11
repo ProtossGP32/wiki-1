@@ -52,26 +52,28 @@ body {
     font-family: "Oswald";
     font-size: 16px;
 
-a:link {
-  color: #003366;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color:  #003366;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: grey;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: grey;
-  background-color: transparent;
-  text-decoration: underline;
-}
+
+  a:link {
+    color: #003366;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color:  #003366;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: grey;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: grey;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
 }
 
 @media screen and (max-width: 960px) {
@@ -111,14 +113,14 @@ a:active {
 
 
 ::: {.column-page}
-![](images/home/frontimagealbertprofeweb3.png)
+![](images/home/frontimagealbertprofeweb2.png)
 :::
 
 </div>
 
 </br>
 
-<div style="background-color:rgba(63,72,204,255);">
+<div style="background-color:rgba(217,210,194,255);">
 
 ::: {.column-body}
 
@@ -259,7 +261,7 @@ a:active {
 </div>
 </div>
 
-<div style="background-color:rgba(63,72,204,255);">
+<div style="background-color:rgba(217,210,194,255);">
 
 ::: {.column-body}
 
@@ -450,7 +452,7 @@ exec 3>&-
 
 :::
 
-<div style="background-color:rgba(63,72,204,255);">
+<div style="background-color:rgba(217,210,194,255);">
 
 ::: {.column-body}
 
