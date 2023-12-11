@@ -11,7 +11,6 @@ categories: [ifcd0210, training]
 ### 2023
 
 - Dimarts 19/12/2023
-- *Dimecres 20/12/2023 ?*
 - Dijous 21/12/2023
 - Divendres 22/12/2023
 - [Calendar 2023](/ifcd0210-24/Calendari%202023.pdf)
@@ -19,6 +18,8 @@ categories: [ifcd0210, training]
 ### 2024
 
 ![Calendar 2024](/ifcd0210-24/2024-calendar.png)
+
+- [Calendar 2024](/ifcd0210-24/Calendari%202024.pdf)
 
 # Subjects
 
