@@ -46,7 +46,7 @@ body {
     padding: 6px 16px 16px 16px;
     background: white;
     border: #ffffff6b;
-    color: #003366;
+    color: grey;
     border-radius: 10px 10px 10px 10px;
     text-align:center;
     font-family: "Oswald";
@@ -54,17 +54,17 @@ body {
 
 
   a:link {
-    color: #003366;
+    color: #A9A9A9;
     background-color: transparent;
     text-decoration: none;
   }
   a:visited {
-    color:  #003366;
+    color:  #787878;
     background-color: transparent;
     text-decoration: none;
   }
   a:hover {
-    color: grey;
+    color: black;
     background-color: transparent;
     text-decoration: underline;
   }
@@ -113,7 +113,7 @@ body {
 
 
 ::: {.column-page}
-![](images/home/frontimagealbertprofeweb2.png)
+![](images/home/frontimagealbertprofeweb4.png)
 :::
 
 </div>
@@ -131,11 +131,11 @@ body {
 
   <h1><b>Agile</b></h1>
 
-  [SCRUM](/scrum/scrum-what-concepts.qmd) framework</br>
-  [Before SCRUM](/scrum/scrum-week10.qmd)</br>
+  [SCRUM](/scrum/scrum-what-concepts.qmd) agile framework</br>
+  [Before SCRUM](/scrum/scrum-week10.qmd) management</br>
   SCRUM of SCRUM: [Less](/scrum/scrum-week14.qmd#scrum-of-scrum-less)</br>
-  Team Work</br>
-  [Team Dynamics](/scrum/scrum-week11.qmd)</br>
+  Team Work, What is it?</br>
+  [Team Dynamics](/scrum/scrum-week11.qmd), how to manage</br>
   [Mindset](/scrum/scrum-week5.qmd), the key for everything</br>
   [Emotions](/scrum/scrum-week12.qmd) and Thoughts</br>
   Managing mind and [time](/scrum/scrum-week7.qmd)</br>
@@ -165,11 +165,12 @@ body {
 
   <h1><b>Architecture</b></h1>
 
-  DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf)</br>
-  [Spring Boot](https://spring.io/)</br>
+  DDD: Domain-driven design</br>
+  [Microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf) design system</br>
+  [Spring Boot](https://spring.io/) framework</br>
   SPA, Single Page App</br> 
   Multi-page and server side rendering</br>
-  Cloud: [AWS](https://aws.amazon.com/)</br>
+  Cloud serveless: [AWS](https://aws.amazon.com/)</br>
   APIs: REST, Websockets, SOAP, GraphQL</br>
   [Kafka](https://kafka.apache.org/intro), event streaming</br>
    </br> 
@@ -208,13 +209,15 @@ body {
  <h1><b>Version Control</b></h1>
 
 
-  [Git](/devops/devops-vc-git.qmd), a version control system used for source code management</br>
-  [GitHub](https://github.com/) / [Git](https://git-scm.com/)</br>
-  GitLab /  Subversion</br>
+  [Git](/devops/devops-vc-git.qmd), a version control system</br>
+  [Git](https://git-scm.com/) is used for source code management</br>
+  [GitHub](https://github.com/) git on cloud</br>
+  GitLab / Subversion</br>
   [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023</br>
   [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)</br>
-  IDE: [Visual Code](/devops/devops-ide-visualcode.qmd)</br>
-   </br> </br> 
+  [CLI gH](https://cli.github.com/), brings GitHub to your terminal: free and open source</br>
+  IDE: [Visual Code](/devops/devops-ide-visualcode.qmd) / IntellJ Idea</br>
+ 
   </div>
   </div>
 </div>
@@ -265,7 +268,7 @@ body {
 
 ::: {.column-body}
 
-<h1 style="color:#FFFFFF;"><b>Developing... everywhere! Front & back-end examples</b></h1>
+<h1 style="color:grey;"><b>Developing... everywhere! Front & back-end examples</b></h1>
 </br>
 
 :::
@@ -456,7 +459,7 @@ exec 3>&-
 
 ::: {.column-body}
 
-<h1 style="color:#FFFFFF;"><b>The Magic you're looking for is... in the work you're avoiding</b></h1>
+<h1 style="color:grey;"><b>The Magic you're looking for is... in the work you're avoiding</b></h1>
 </br>
 
 :::
