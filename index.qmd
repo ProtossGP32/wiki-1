@@ -11,10 +11,12 @@ format:
     highlight-style: atom-one
 ---
 
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+
 <style>
 
 body {
-    background: radial-gradient(circle, rgba(197,197,215,1) 35%, rgba(142,176,182,1) 100%);
+    background: rgb(224,224,224);
   }
 
 .grid-container {
@@ -47,8 +49,8 @@ body {
     color: #003366;
     border-radius: 10px 10px 10px 10px;
     text-align:center;
-    font: "Impact";
-    font-size: 14px;
+    font-family: "Oswald";
+    font-size: 16px;
 
 a:link {
   color: #003366;
@@ -103,23 +105,14 @@ a:active {
 
 <!-- https://www.turing.com/kb/responsive-layouts-using-css-grid -->
 
-<div style="background-color:#003366;">
 
-::: {.column-body}
 
-<h1 style="color:#FFFFFF;text-align:center;"><b>Developing webApp tech </b></h1>
-</br>
-
-:::
-
-</div>
-</br>
 
 ::: {.column-page}
 ![](images/home/frontimagealbertprofeweb3.png)
 :::
 
-
+</br>
 
 <div style="background-color:#003366;">
 
@@ -141,7 +134,7 @@ a:active {
   [Emotions](/scrum/scrum-week12.qmd) and Thoughts</br>
   Managing mind and [time](/scrum/scrum-week7.qmd)</br>
   [Beyond SCRUM](/scrum/scrum-week14.qmd)
-  </br> </br> </br>
+  </br> </br>
   </div>
   </div>
 
@@ -153,9 +146,7 @@ a:active {
 </div>
 
 
-:::
 
-</div>
 
 <div class='grid-container2'>
   <div class='grid-item'>
@@ -170,18 +161,17 @@ a:active {
 
   DDD: Domain-driven design and [microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf)</br>
   [Spring Boot](https://spring.io/)</br>
-  SPA, multi-page and server side rendering</br>
+  SPA, Single Page App</br> 
+  Multi-page and server side rendering</br>
   Cloud: [AWS](https://aws.amazon.com/)</br>
   APIs: REST, Websockets, SOAP, GraphQL</br>
   [Kafka](https://kafka.apache.org/intro), event streaming</br>
-   </br> </br> 
+   </br> 
   </div>
   </div>
 </div>
 
-<div style="background-color:#003366;">
 
-::: {.column-body}
 
 <div class='grid-item'>
 <div class='homecard'>
@@ -192,7 +182,7 @@ a:active {
   Structured and Procedural: C</br>
   OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/)</br>
   COP (Components-Oriented Programming): [React JS](https://reactjs.org/) and [React TS](https://www.typescriptlang.org/docs/handbook/react.html)</br>
- </br> </br> 
+ </br> 
 </div>
 </div>
 
@@ -237,7 +227,7 @@ a:active {
   [Jest for JS React](https://jestjs.io/)</br>
   Deploy on Heroku, Netlify, AWS Amplify</br>
   [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/) and [k8s](https://kubernetes.io/)</br>
- </br> </br> 
+ </br> 
 </div>
 </div>
 
@@ -258,7 +248,7 @@ a:active {
   [ChatGPT](https://openai.com/blog/chatgpt)</br>
   Artificial General Intelligence (AGI)</br>
   AI is categorized into four types</br>
- </br> </br> 
+ </br> 
 </div>
 </div>
 
@@ -464,7 +454,7 @@ exec 3>&-
 
 ::: {.column-body}
 
-<h1 style="color:#FFFFFF;"><b>The Magic you are looking for is... in the work you are avoiding</b></h1>
+<h1 style="color:#FFFFFF;"><b>The Magic you're looking for is... in the work you're avoiding</b></h1>
 </br>
 
 :::
