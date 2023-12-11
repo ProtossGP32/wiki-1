@@ -227,7 +227,7 @@ Otherwise, it is a matter of **local path java variables**:
 <br>
 <div class='column right next'>
 <br>
-[Java SE: Maven  {{< fa solid arrow-right >}}](/javase/se-concepts-maven.qmd)
+[{{< fa solid arrow-left >}} Java SE: Mooc Helsinki Syllabus](/javase/se-what-moocsyllabus.qmd)
 <br>
 </div>
 <br>

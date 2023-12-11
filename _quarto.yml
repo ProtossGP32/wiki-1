@@ -202,6 +202,7 @@ website:
             - javase/se-what-basics.qmd
             - javase/se-what-principles.qmd
             - javase/se-what-moochelsinki.qmd
+            - javase/se-what-moocsyllabus.qmd
         - text: "---"
         - section: "Java Create Project"
           contents:
