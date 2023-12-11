@@ -114,7 +114,7 @@ a:active {
 
 </br>
 
-<div style="background-color:#003366;">
+<div style="background-color:rgba(63,72,204,255);">
 
 ::: {.column-body}
 
@@ -213,7 +213,7 @@ a:active {
   </div>
 </div>
 
-<div style="background-color:#003366;">
+<div style="background-color:rgba(63,72,204,255);">
 
 ::: {.column-body}
 
@@ -259,7 +259,7 @@ a:active {
 </div>
 </div>
 
-<div style="background-color:#003366;">
+<div style="background-color:rgba(63,72,204,255);">
 
 ::: {.column-body}
 
@@ -450,7 +450,7 @@ exec 3>&-
 
 :::
 
-<div style="background-color:#003366;">
+<div style="background-color:rgba(63,72,204,255);">
 
 ::: {.column-body}
 
