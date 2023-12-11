@@ -106,11 +106,15 @@ a:active {
 <!-- https://www.turing.com/kb/responsive-layouts-using-css-grid -->
 
 
+<div style="background-color:rgba(126,217,87,255);">
+
 
 
 ::: {.column-page}
 ![](images/home/frontimagealbertprofeweb3.png)
 :::
+
+</div>
 
 </br>
 
@@ -213,9 +217,7 @@ a:active {
   </div>
 </div>
 
-<div style="background-color:rgba(63,72,204,255);">
 
-::: {.column-body}
 
 <div class='grid-item'>
 <div class='homecard'>
@@ -231,9 +233,7 @@ a:active {
 </div>
 </div>
 
-:::
 
-</div>
 
 <div class='grid-container1'>
 <div class='grid-item'>
