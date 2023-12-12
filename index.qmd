@@ -11,7 +11,7 @@ format:
     highlight-style: atom-one
 ---
 
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
 
 <style>
 
@@ -43,36 +43,33 @@ body {
 }
 
 .homecard{
+
     padding: 6px 16px 16px 16px;
     background: white;
     border: #ffffff6b;
     color: grey;
     border-radius: 10px 10px 10px 10px;
     text-align:center;
-    font-family: "Oswald";
+    font-family: "Roboto";
     font-size: 16px;
 
+    
+    a:link {
+      color: #A9A9A9;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:visited {
+      color:  #A9A9A9;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:hover {
+      color: black;
+      background-color: transparent;
+      text-decoration: underline;
+    }
 
-  a:link {
-    color: #A9A9A9;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:visited {
-    color:  #787878;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:hover {
-    color: black;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  a:active {
-    color: grey;
-    background-color: transparent;
-    text-decoration: underline;
-  }
 
 }
 
@@ -215,7 +212,7 @@ body {
   GitLab / Subversion</br>
   [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023</br>
   [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)</br>
-  [CLI gH](https://cli.github.com/), brings GitHub to your terminal: free and open source</br>
+  [CLI gH](https://cli.github.com/), to your terminal</br>
   IDE: [Visual Code](/devops/devops-ide-visualcode.qmd) / IntellJ Idea</br>
  
   </div>
