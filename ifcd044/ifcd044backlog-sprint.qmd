@@ -5,7 +5,7 @@ categories: [ifcd044, backlog]
 
 
 <style>
-tr:nth-child(3) {
+tr:nth-child(4) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -22,7 +22,7 @@ tr:nth-child(3) {
 | #5 | 16 | 11/12/2023 | - Before SCRUM </br>  - <s>**Team Dynamics**: We are not Rationals </s> </br> - Mindset: survival vs growth </br>  ++ **smarter not harder**: *decision making* </br>(0) the illusion of knowledge </br> (1) agile: imepdimetns, iteration and grow **+1%** </br> (3) intuition & creativity | - [Before SCRUM](/scrum/scrum-week10.qmd)   </br> - [The soviet union delusion](/scrum/scrum-week5.qmd#the-soviet-union-delusion) </br> - [Antifragile](/scrum/scrum-week5.qmd#antifragile)  </br> - [Mindset matters](/scrum/scrum-week5.qmd#mindset-matters) </br></br> - [S&P 500: $100 in 1957 → $67,136.47 in 2023](https://www.officialdata.org/us/stocks/s-p-500/){.external} / [S&P-1](/images/ifcd044/sp1.png) / [S&P-2](/images/ifcd044/sp2.png) |
 |  | 17 | 12/12/2023 | - <s>**Emotions** and Thoughts </br> - Moral Emotions and Rider/Elephant </s> </br> - Team Dynamics: We are not Rationals  </br>  - What is the illusion of knowledge? There is a unique tool, *master-key*, to solve all questions: knowing everything  </br> - **Debate**: the main source of knowledge acquisition | - [Team Dynamics](/scrum/scrum-week11.qmd) </br >  - [The illusion of knowledge II](https://www.singulart.com/en/artworks/anja-spagl--the-illusion-of-knowledge-ii--1804525){.external} </br> ![](/images/scrum/theillusionofknowledge.png) |
 |  | 18 | 13/12/2023 | - **Emotions** and Thoughts </br> - Moral Emotions and Rider/Elephant </br> | [Emotions and Thoughts](/scrum/scrum-week13.qmd) |
-|  | 19 | 14/12/2023 | FCOO03 Inserció Laboral, sensibilització medi ambiental igualtat de gènere </br>  </br>  - **Decision Making** </br>  - Book: Range & Generalists  </br> - Books presentation: Focus, Master and his Emissary, The righteous mind | - [Range: Why Generalists triumph in a specialized world](https://davidepstein.com/the-range/){.external}  |  |
+|  | 19 | 14/12/2023 | FCOO03 Inserció Laboral, sensibilització medi ambiental igualtat de gènere </br>  </br>  - **Decision Making** </br>  - Book: Range & Generalists  </br> - Books presentation: Focus, Master and his Emissary, The Righteous Mind | - [Range: Why Generalists triumph in a specialized world](https://davidepstein.com/the-range/){.external}  |  |
 |  | 20 | 15/12/2023 | FCOO03 Inserció Laboral, sensibilització medi ambiental igualtat de gènere </br>  </br>  - Beyond SCRUM |  |
 : Sprint Backlog course December 2023 table {tbl-colwidths="[2,2,2,60,34]"}
 :::

@@ -7,7 +7,6 @@ format:
   html:
     toc: false
     html-math-method: katex
-    css: styles.css
     highlight-style: atom-one
 ---
 
@@ -15,450 +14,89 @@ format:
 
 <style>
 
-body {
-    background: rgb(224,224,224);
-  }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 50% 50%; /* Columns take 30% and 70% of the container width */
 
+
+.animated-text {
+  font-size: 204px;
+  color: #000;
+  font-family; 'Roboto';
+  text-align: center;
 }
-
-.grid-container1 {
-  display: grid;
-  grid-template-columns: 40% 60%; /* Columns take 30% and 70% of the container width */
-
+.animated-text-back {
+  margin-right: 50px;
+  margin-left: 50px;
 }
-
-.grid-container2 {
-  display: grid;
-  grid-template-columns: 60% 40%; /* Columns take 30% and 70% of the container width */
-
-}
-
-.grid-item {
-  
-  padding: 1rem;
-}
-
-.homecard{
-
-    padding: 6px 16px 16px 16px;
-    background: white;
-    border: #ffffff6b;
-    color: grey;
-    border-radius: 10px 10px 10px 10px;
-    text-align:center;
-    font-family: "Roboto";
-    font-size: 16px;
-
-    
-    a:link {
-      color: #A9A9A9;
-      background-color: transparent;
-      text-decoration: none;
-    }
-    a:visited {
-      color:  #A9A9A9;
-      background-color: transparent;
-      text-decoration: none;
-    }
-    a:hover {
-      color: black;
-      background-color: transparent;
-      text-decoration: underline;
-    }
+.letter {
+  display: inline-block;
+  animation: letterAnimation 1s ease-in-out infinite;
+  background-color: green; 
+  color: white;
 
 
 }
-
-@media screen and (max-width: 960px) {
-  .grid-container1 {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "content"
-      "sidebar"
-      "footer";
-  }
-   .grid-container2 {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "content"
-      "sidebar"
-      "footer";
-  }
-    .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "content"
-      "sidebar"
-      "footer";
-  }
+@keyframes letterAnimation {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
 }
+
+#spin {
+  color:white;
+}
+#spin:after {
+  content:"";
+  animation: spin 16s linear infinite;
+}
+@keyframes spin {
+  0% { content:"JAVA";background-color:blue;}
+  10% { content:"REACT"; }
+  20% { content:"SPRING BOOT"; }
+  30% { content:"BASH"; }
+  40% { content:"SCRUM"; }
+  50% { content: "LINUX"; }
+  60% { content: "API REST"; }
+  70% { content: "HOOKS"; }
+  80% { content: "MARKDOWN"; }
+  90% { content: "QUARTO";background-color: red; }
+}
+
 
 </style>
 
-<!-- https://www.turing.com/kb/responsive-layouts-using-css-grid -->
+::: {.column-screen}
 
-
-<div style="background-color:rgba(126,217,87,255);">
-
-
-
-::: {.column-page}
-![](images/home/frontimagealbertprofeweb4.png)
-:::
-
-</div>
-
-</br>
-
-<div style="background-color:rgba(217,210,194,255);">
-
-::: {.column-body}
-
-<div class='grid-container1'>
-
-  <div class='grid-item'>
-  <div class='homecard'>
-
-  <h1><b>Agile</b></h1>
-
-  [SCRUM](/scrum/scrum-what-concepts.qmd) agile framework</br>
-  [Before SCRUM](/scrum/scrum-week10.qmd) management</br>
-  SCRUM of SCRUM: [Less](/scrum/scrum-week14.qmd#scrum-of-scrum-less)</br>
-  Team Work, What is it?</br>
-  [Team Dynamics](/scrum/scrum-week11.qmd), how to manage</br>
-  [Mindset](/scrum/scrum-week5.qmd), the key for everything</br>
-  [Emotions](/scrum/scrum-week12.qmd) and Thoughts</br>
-  Managing mind and [time](/scrum/scrum-week7.qmd)</br>
-  [Beyond SCRUM](/scrum/scrum-week14.qmd)
-  </br> </br>
-  </div>
-  </div>
-
-  <div class='grid-item'>
-
-  ![](images/home/2.gif){width="100%"}
-  </div>
-
-</div>
-
-
-
-
-<div class='grid-container2'>
-  <div class='grid-item'>
-
-  ![](images/home/3.gif){width="100%"}
-  </div>
-
-  <div class='grid-item'>
-  <div class='homecard'>
-
-  <h1><b>Architecture</b></h1>
-
-  DDD: Domain-driven design</br>
-  [Microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf) design system</br>
-  [Spring Boot](https://spring.io/) framework</br>
-  SPA, Single Page App</br> 
-  Multi-page and server side rendering</br>
-  Cloud serveless: [AWS](https://aws.amazon.com/)</br>
-  APIs: REST, Websockets, SOAP, GraphQL</br>
-  [Kafka](https://kafka.apache.org/intro), event streaming</br>
-   </br> 
-  </div>
-  </div>
-</div>
-
-
-
-<div class='grid-item'>
-<div class='homecard'>
-
-  <h1><b>Code</b></h1>
-
-  Scripting: [BASH](/linux/linux-what-bash.qmd), (short for “Bourne again shell”) is a Unix shell</br>
-  Structured and Procedural: C</br>
-  OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/)</br>
-  COP (Components-Oriented Programming): [React JS](https://reactjs.org/) and [React TS](https://www.typescriptlang.org/docs/handbook/react.html)</br>
- </br> 
-</div>
+<div class="animated-text">
+<p>Code </br><b><span id="spin"></span></b></br>Learn</p>
 </div>
 
 :::
 
-</div>
+<div style="text-align:center;">
 
-<div class='grid-container2'>
-  <div class='grid-item'>
-
-  ![](images/home/1.gif){width="100%"}
-  </div>
-
-  <div class='grid-item'>
-  <div class='homecard'>
-
- <h1><b>Version Control</b></h1>
+[SCRUM](/scrum/scrum-what-concepts.qmd) agile framework |   [Before SCRUM](/scrum/scrum-week10.qmd) management | SCRUM of SCRUM: [Less](/scrum/scrum-week14.qmd#scrum-of-scrum-less) | Team Work, What is it? | [Team Dynamics](/scrum/scrum-week11.qmd), how to manage  | [Mindset](/scrum/scrum-week5.qmd), the key for everything  | [Emotions](/scrum/scrum-week12.qmd) and Thoughts | Managing mind and [time](/scrum/scrum-week7.qmd) | [Beyond SCRUM](/scrum/scrum-week14.qmd)
 
 
-  [Git](/devops/devops-vc-git.qmd), a version control system</br>
-  [Git](https://git-scm.com/) is used for source code management</br>
-  [GitHub](https://github.com/) git on cloud</br>
-  GitLab / Subversion</br>
-  [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023</br>
-  [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)</br>
-  [CLI gH](https://cli.github.com/), to your terminal</br>
-  IDE: [Visual Code](/devops/devops-ide-visualcode.qmd) / IntellJ Idea</br>
+DDD: Domain-driven design |  [Microservices](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf) design system |  [Spring Boot](https://spring.io/) framework | SPA, Single Page App |    Multi-page and server side rendering |    Cloud serveless: [AWS](https://aws.amazon.com/) |  APIs: REST, Websockets, SOAP, GraphQL |  [Kafka](https://kafka.apache.org/intro), event streaming 
  
-  </div>
-  </div>
-</div>
 
+Scripting: [BASH](/linux/linux-what-bash.qmd), (short for “Bourne again shell”) is a Unix shell |  Structured and Procedural: C |   OOP (Object-Oriented Programming): [Java SE](https://java-programming.mooc.fi/) |  COP (Components-Oriented Programming): [React JS](https://reactjs.org/) and [React TS](https://www.typescriptlang.org/docs/handbook/react.html)  
+ 
+ 
 
-
-<div class='grid-item'>
-<div class='homecard'>
-
- <h1><b>DevOps</b></h1>
-
-  [about this site](about/about-this-site.qmd), for documentation example.</br>
-  [JUnit for Spring Boot](https://junit.org/junit5/)</br>
-  [Jest for JS React](https://jestjs.io/)</br>
-  Deploy on Heroku, Netlify, AWS Amplify</br>
-  [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/) and [k8s](https://kubernetes.io/)</br>
- </br> 
-</div>
-</div>
-
-
-
-<div class='grid-container1'>
-<div class='grid-item'>
-<div class='homecard'>
-
- <h1><b>AI</b></h1>
-
-  [Artificial Intelligence (AI):](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp) What It Is and How It Is Used</br>
-  Machine Learning</br>
-  Natural language & prompts</br>
-  [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607) text-to-image tool</br>
-  [ChatGPT](https://openai.com/blog/chatgpt)</br>
-  Artificial General Intelligence (AGI)</br>
-  AI is categorized into four types</br>
- </br> 
-</div>
-</div>
-
-<div class='grid-item'>
-
-![](images/home/6.gif){width="100%"}
-
-</div>
-</div>
-
-<div style="background-color:rgba(217,210,194,255);">
-
-::: {.column-body}
-
-<h1 style="color:grey;"><b>Developing... everywhere! Front & back-end examples</b></h1>
-</br>
-
-:::
-
-</div>
-
-::: {.column-page}
-
-## Spring Boot
-
-With Spring Boot in your app, just a few lines of code is all you need to start building services like a boss.
-
-
-[Java Spring Framework (Spring Framework)](https://www.ibm.com/topics/java-spring-boot){.external} is a popular, open source, enterprise-level framework for creating **standalone**, **production-grade applications** that run on the Java Virtual Machine (JVM).
-
-
-<details>
-<summary>Code: `hello.java`</summary>
-
-``` {.java filename="hello.java" code-block-background=true}
-package com.example.myFirstSpring.restcontroller;
-
-import com.example.myFirstSpring.model.Book;
-import com.example.myFirstSpring.service.BookService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import java.util.HashMap;
-
-@RestController
-@RequestMapping("/api/book")
-public class BookRestController {
-
-    @Autowired
-    BookService bookService;
-
-    @GetMapping ("/books")
-    public HashMap<String, Book> getAllBooks(){
-
-      return bookService.getAllBooks();
-
-
-    }
-}
-```
-</details>
-
-## React
-
-[React.js is a JavaScript](/reactjs/reactjs-what-principles.qmd) library used for **building user interfaces**. It is maintained by Facebook and a community of individual developers and companies. React allows developers to create **large web applications that use data which can change over time, without reloading the page**.
-
-<details>
-<summary>Code: `MyApp.jsx`</summary>
-
-```{.js .code-overflow-wrap filename="MyApp.jsx"}
-
-function MyButton() {
-  return (
-    <button>
-      I'm a button
-    </button>
-  );
-}
-
-export default function MyApp() {
-  return (
-    <div>
-      <h1>Welcome to my app</h1>
-      <MyButton />
-    </div>
-  );
-}
-
-```
-</details>
-
-## Bash
-
-**Bash (short for “Bourne again shell”) is a Unix shell and command language** which was the default shell on Unix systems at the time. [Bash](/linux/linux-what-bash.qmd) is a command-line interface (CLI) that allows users to enter commands and execute programs, as well as perform various other tasks such as managing files, manipulating text, and interacting with other programs.
-
-<details>
-<summary>Code: `writenavigation.sh`</summary>
-
-``` {.bash .code-overflow-wrap filename="writenavigation.sh"  }
-#!/bin/bash
-
-# Initialize an empty array
-files=()
-titles=()
-# Initialize a counter variable
-counter=0
-op_counter=0
-# Generate the log file name using the current date and time
-log_file="$(date +"%Y%m%d-%H%M%S")-log-write-navLinks.txt"
-# Initialize a string variable
-path_qmd=''
-title=''
-title_line=''
-
-# Open the log file for writing
-exec 3> "_logs/${log_file}"
-
-echo "***************** Extracting **********************" >&3
-
-# Read the input code line by line
-while IFS= read -r line; do
-  # If the line ends with ".qmd", add it to the array
-  if [[ $line == *".qmd" ]]; then
-    let counter++
-    # Extract path qmd file and add to array files
-    path_qmd="$(echo "$line" | tr -d ':' | sed 's/- //g' | tr -d ' ' | sed 's/file//g')"
-    files+=("$path_qmd")
-    # Extract title from qmd file and add to array titles
-    title_line=$(awk 'NR==2 {print}' "../${path_qmd}")
-    title=$(sed 's/.*"\(.*\)".*/\1/' <<< "$title_line")
-    titles+=("$title")
-    # Write a message to the log file indicating that .qmd path has been extracted
-    echo "$(date +"%Y-%m-%d %H:%M:%S") - extracting from _quarto.yml and .qmd file' $counter: $path_qmd > $title" >&3
-    echo " _quarto.yml/.qmd file' $counter: $path_qmd > $title" >&3
-  fi
-done < "../_quarto.yml"
-
-echo "***************** Writing  ************************" >&3
-
-# Loop through the array of .qmd files
-for ((i=0; i<${#files[@]}; i++)); do
-  # Open the .qmd file
-  file="${files[i]}"
-  let op_counter++
-  echo "$(date +"%Y-%m-%d %H:%M:%S") - Operation #($op_counter): **${file}**" >&3
-  echo 'operartion:' $op_counter' > writing to: '$file
+[Git](/devops/devops-vc-git.qmd), a version control system |  [Git](https://git-scm.com/) is used for source code management |   [GitHub](https://github.com/) git on cloud |  GitLab / Subversion |   [Idea](/devops/devops-vc-ideagithub.qmd) and GitHub 2023 |  [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd) |  [CLI gH](https://cli.github.com/), to your terminal |   IDE: [Visual Code](/devops/devops-ide-visualcode.qmd) / IntellJ Idea 
+ 
   
-  # Delete qmd rows navLinks
-  # Search for the line containing the string "<!--- navLinks -->"
-  lineNumber_navLinks_is=$(grep -c "<!--- navLinks -->" "../${file}")
-  # If the line was found, delete all lines after it
-  if [ "$lineNumber_navLinks_is" -gt 0 ]; then
-    # Store the line number of the first match
-    lineNumber_navLinks=$(grep -n "<!--- navLinks -->" "../${file}" | awk -F: '{print $1}')
-    # Delete all lines after the line number
-    let lineNumber_navLinks++; 
-    echo "lineNumber_navLinks:" $lineNumber_navLinks
-    sed -i "$lineNumber_navLinks,\$d" "../${file}"
-  else
-    echo "<!--- navLinks -->" >> "../${file}"
-  fi
-    
-  # Write the columns callout init in anycase to .qmd file  
-  echo "<br><br>" >> "../${file}"
-  echo ":::: {.columns}" >> "../${file}"
 
-  # Append a link to the previous file
-  if [[ $i -gt 0 ]]; then 
-    echo "::: {.column .previous width="40%"} [{{< fa solid arrow-left >}} "${titles[i-1]}"]("${files[i-1]}"):::" >> "../${file}"
-    # Write the operation to the log file
-    echo "$(date +"%Y-%m-%d %H:%M:%S") - #$: Added  "${titles[i-1]}" to previous file ${files[i-1]} to ${file}" >&3
-  else
-    # Write a message to the log file indicating that no previous file was found
-    echo "$(date +"%Y-%m-%d %H:%M:%S") - #$op_counter: No previous file found for ${file}" >&3
-  fi
-  # # Write the top arrow callout in anycase to .qmd file  
-  echo ":::{.column .center width=20%} [{{< fa solid arrow-up >}} top](#top) :::" >> "../${file}"
+[about this site](about/about-this-site.qmd), for documentation example. |  [JUnit for Spring Boot](https://junit.org/junit5/) |  [Jest for JS React](https://jestjs.io/) |  Deploy on Heroku, Netlify, AWS Amplify |  [Jenkins](https://www.jenkins.io/), [Docker](https://www.docker.com/) and [k8s](https://kubernetes.io/) 
+ 
 
-  # Append a link to the next file
-  if [[ $i -lt $(( ${#files[@]} - 1 )) ]]; then
-    echo "::: {.column .next width="40%"} ["${titles[i+1]} " {{< fa solid arrow-right >}}]("${files[i+1]}"):::" >> "../${file}"
-    # Write the operation to the log file
-    echo "$(date +"%Y-%m-%d %H:%M:%S") - #$op_counter: Added "${files[i+1]}" to next file ${files[i+1]} to ${file}" >&3
-  else
-    # Write a message to the log file indicating that no next file was found
-    echo "$(date +"%Y-%m-%d %H:%M:%S") - #$op_counter: No next file found for ${file}" >&3
-  fi
-  # Write the columns callout end in anycase to .qmd file  
-  echo "::::" >> "../${file}"  
-done
 
-# Close the log file
-exec 3>&-
-```
 
-</details>
-</br>
+[Artificial Intelligence (AI):](https://www.investopedia.com/terms/a/artificial-intelligence-ai.asp) What It Is and How It Is Used |  Machine Learning |  Natural language & prompts |  [DALL-E](https://www.investopedia.com/openai-rolls-out-upgraded-ai-image-generation-tool-with-dall-e-3-7972607) text-to-image tool |  [ChatGPT](https://openai.com/blog/chatgpt) |  Artificial General Intelligence (AGI) |  AI is categorized into four types  
 
-:::
 
-<div style="background-color:rgba(217,210,194,255);">
+<div>
 
-::: {.column-body}
 
-<h1 style="color:grey;"><b>The Magic you're looking for is... in the work you're avoiding</b></h1>
-</br>
 
-:::
-
-</div>
