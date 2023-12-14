@@ -216,7 +216,7 @@ G --> A
 <br>
 <div class='column right next'>
 <br>
-[Week 10: Beyond SCRUM  {{< fa solid arrow-right >}}](/scrum/scrum-week10.qmd)
+[Week 10: Before SCRUM  {{< fa solid arrow-right >}}](/scrum/scrum-week10.qmd)
 <br>
 </div>
 <br>
