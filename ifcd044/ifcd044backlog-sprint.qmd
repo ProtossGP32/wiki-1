@@ -23,7 +23,7 @@ tr:nth-child(4) {
 |  | 17 | 12/12/2023 | - <s>**Emotions** and Thoughts </br> - Moral Emotions and Rider/Elephant </s> </br> - Team Dynamics: We are not Rationals  </br>  - What is the illusion of knowledge? There is a unique tool, *master-key*, to solve all questions: knowing everything  </br> - **Debate**: the main source of knowledge acquisition | - [Team Dynamics](/scrum/scrum-week11.qmd) </br >  - [The illusion of knowledge II](https://www.singulart.com/en/artworks/anja-spagl--the-illusion-of-knowledge-ii--1804525){.external} </br> ![](/images/scrum/theillusionofknowledge.png) |
 |  | 18 | 13/12/2023 | - **Emotions** and Thoughts </br> - Moral Emotions and Rider/Elephant </br> | [Emotions and Thoughts](/scrum/scrum-week13.qmd) |
 |  | 19 | 14/12/2023 | FCOO03 Inserció Laboral, sensibilització medi ambiental igualtat de gènere </br>  </br>  - **Decision Making** </br>  - Book: Range & Generalists  </br> - Books presentation: Focus, Master and his Emissary, The Righteous Mind | - [Range: Why Generalists triumph in a specialized world](https://davidepstein.com/the-range/){.external}  |  |
-|  | 20 | 15/12/2023 | FCOO03 Inserció Laboral, sensibilització medi ambiental igualtat de gènere </br>  </br>  - Beyond SCRUM |  |
+|  | 20 | 15/12/2023 | FCOO03 Inserció Laboral, sensibilització medi ambiental igualtat de gènere </br>  </br>  - Beyond SCRUM  </br> - Recommended books </br>  - Finance: basics </br> - Mental Energy: basics |  - [SCRUM test](/scrum/scrumlab5.qmd) </br> - [Books](/learning/learning-listing-card-books.qmd)  </br>  - [Brain Energy](/books/brainenergy.qmd) </br>  - [The Compound Effect](/books/theCompoundEffect.qmd)|
 : Sprint Backlog course December 2023 table {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
