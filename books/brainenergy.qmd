@@ -75,13 +75,20 @@ The later is a condition in which **insulin** in the bloodstream -responsible fo
 That is, <mark>the cells resist the action of insulin, resulting in higher concentrations of glucose (sugar) in the blood</mark>.
 
 ::: {.column-margin} 
-Although the evolutionary reasons for insulin resistance are unknown, it may be that lower concentrations of glucose within the cell walls give the mitochondria inside more time to process the carbohydrate without production of excess reactive oxygen species.
+Although the evolutionary reasons for [insulin resistance](/books/brainenenegy-inulin.png){.external} are unknown, it may be that lower concentrations of glucose within the cell walls give the mitochondria inside more time to process the carbohydrate without production of excess reactive oxygen species.
 :::
-
 
 Overworked mitochondria can be more prone to damage by ROS, and <mark>damaged mitochondria in the brain are less effective for powering essential cognitive processes.</mark>
 
-![Inuslin-gluocose balance](/books/brainenenegy-inulin.png)
+
+::: {#fig-insulin layout-ncol=3}
+![Inuslin-gluocose balance](/books/insulin1.png)
+
+![Inuslin Diabetes Type I](/books/insulin2.png)
+
+![Inuslin Diabetes Type II](/books/insulin3.png)
+
+:::
 
 ## More info
 

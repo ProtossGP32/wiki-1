@@ -13,6 +13,30 @@ format:
   html
 ---
 
+# Summary
+
+
+## **Java Programming I**
+
+
+- **Part 1**: Printing, input, Variables, Calculating with numbers, Conditional statements
+- **Part 2**: Recurring problems and patterns, Repeating functionality, More loops, **Methods**
+- **Part 3**: Discovering errors, Lists, Arrays, Using strings
+- **Part 4**: Introduction to object-oriented, Programming Objects in a list, Files and reading data
+- **Part 5**: Learning object-oriented programming, overloading methods and constructors, Primitive and reference variables, **Objects and references**
+- **Part 6**: Objects on a list and a list as part of an object, Separating the user interface from program logic, Introduction to testing
+- **Part 7**: Programming paradigms, Algorithms, Larger programming exercises
+
+
+## Java Programming II
+
+- **Part 8**: **Hashmaps**, fetching and grouping information
+- **Part 9**: Class inheritance, **Interfaces**, Interfaces, Object polymorphism
+- **Part 10**: Handling collections as streams, The Comparable Interface, Other useful techniques
+- **Part 11**: **Class diagrams**, Packages, Exceptions, Processing files
+- **Part 12**: Type parameters, ArrayList and hash table, Randomness, Multidimensional data
+- **Part 13**: Graphical user interfaces, UI components and their layout, Event handling, Application's launch parameters, Multiple views
+- **Part 14**: Data visualization, Multimedia in programs, Larger application: Asteroids, **Maven and third-party libraries**
 
 
 # **Java Programming I**
@@ -86,9 +110,11 @@ Context introduction to coding now a days.
 - You know how to create methods and how to call them from both the main program (the `main` method) as well as from inside other methods.
 - You can create parameterized and non-parameterized methods, and you can create methods that return a value.
 
-**5. Summary:**
+::: {.callout-note title="Conclusion"}
 
 - We took our first steps towards managing program complexity: loop structures can be used to execute program code time and again and custom methods allow for dividing a program into smaller, more manageable parts.
+
+:::
 
 
 ## Part 3
@@ -120,11 +146,11 @@ Context introduction to coding now a days.
 - Revising reading, printing and comparing Strings.
 - Knowing how to split a string into several pieces.
 
-**5. Summary:**
+::: {.callout-note title="Conclusion"}
 
 - In this part we have taken the first steps towards effective data management: by using lists and arrays we can store almost unlimited amounts of data for the duration of program execution.
 - We have also practiced string handling and splitting strings into smaller substrings.
-
+:::
 
 ## Part 4
 
@@ -147,11 +173,11 @@ Context introduction to coding now a days.
 - You know what a file and a filesystem are, and are able to add an empty text file into the filesystem.
 - You know how to create and write a program that reads data from a file.
 
-**4. Summary:**
+::: {.callout-note title="Conclusion"}
 
 - We learned classes and objects to suit our programming needs.
 - We defined constructors, methods, and object variables for the classes, and grew used to printing object-related information with their toString method. We also practised handling objects on a list.
-
+:::
 
 ## Part 5
 
@@ -183,13 +209,13 @@ Context introduction to coding now a days.
 - You can create a method that returns an object.
 - You can create the method equals, which can be used to check if two objects of the same type have the same contents or state.
 
-**5. Conclusion:**
+::: {.callout-note title="Conclusion"}
 
 - We took a deep dive into the world of objects.
 - We examined the differences between primitive and reference variables.
 - We learned to overload methods and constructors, and we practiced using objects as object variables, method parameters, and method return values.
 - We created methods that compare objects with each other, and we saw how objects are handled with objects in them.
-
+:::
 
 ## Part 6
 
@@ -213,10 +239,10 @@ Context introduction to coding now a days.
 - You know about test-driven software development.
 
 
-**4. Complex programs:**
+::: {.callout-note title="Complex programs"}
 
 - When you learn programming, you also develop a better eye for reading code (yours and others). In this part we understood the use of lists and practiced separating the UI from the program logic.
-
+:::
 
 ## Part 7
 
@@ -237,13 +263,13 @@ Context introduction to coding now a days.
 
 - Some extensive exercises. There is no predefined structure for these tasks — think about the classes and objects that will help you complete the task while you're completing it.
 
-**4. Conclusions:**
+::: {.callout-note title="Conclusion"}
 
 - During the first seven parts you've become familiar with the basics of programming and produced many functioning program.
 - You now know how to use variables, conditionals, loops and methods.
 - You know that the naming of variables and methods affects the understandability of your programs.
 - You've also dived deeper into the world of object-oriented programming, and structuring your programs in an object-oriented fashion.
-
+:::
 
 # Java Programming II
 
@@ -281,13 +307,12 @@ Context introduction to coding now a days.
 - You are familiar with the concept of inheritance hierarchy.
 - You understand that an object can be represented through all of its actual types.
 
-**3. Summary:**
+::: {.callout-note title="Conclusion"}
 
 - You learned some of the properties of object-oriented programming.
 - Programmers can expect all objects to have the methods `toString`, `hashCode` and `equals` because each object is of type `Object` in addition to their own type.
-
 - Inheritance and interfaces allow use to implement methods and constructors that handle many kinds of objects. This enables us to easily extend programs and it helps with solving problems with classes and objects.
-
+:::
 
 ## Part 10
 
@@ -314,7 +339,7 @@ Context introduction to coding now a days.
 - You understand enumerated (enum) types and know when to use them.
 - You know how to use an iterator to go through collections of data.
 
-**4. Summary:**
+
 
 
 ## Part 11
@@ -343,10 +368,10 @@ Context introduction to coding now a days.
 - You will refresh your memories of reading from files.
 - You will be able to write to a file.
 
-**5. Conclusion:**
+::: {.callout-note title="Conclusion"}
 
 - Self-reflexion on learning goals.
-
+:::
 
 ## Part 12
 
@@ -375,13 +400,13 @@ Context introduction to coding now a days.
 - Know ways to represent multidimensional data.
 - Can create and use multidimensional arrays.
 
-**5. Summary:**
+::: {.callout-note title="Conclusion"}
 
 - Lists and hashmap are the most commonly used datastructures in programming.
 - Understanding and using these datastructures are a part of every computers scientists (and programmers) basic knowledge.
 - In this part we looked into the implementation of hashmaps and lists and got introduced to generics in java.
 - We also touched on randomness and multidimensional data.
-
+:::
 
 ## Part 13
 
@@ -410,13 +435,14 @@ Context introduction to coding now a days.
 - You know methods for changing the view.
 - You know methods for separating the application logic and the user interface logic.
 
-**6. Summary:**
+::: {.callout-note title="Conclusion"}
 
 - We took our first steps towards creating a graphical user interface.
 - We learned to use program windows, add UI components and event handling.
 - Altough we used the JavaFX library the principles of graphical user interfaces are the same in other libraris.
 - We also learned event based programming.
 
+:::
 
 ## Part 14
 
@@ -448,13 +474,13 @@ Context introduction to coding now a days.
 - Can implement an application which uses a third party library.
 - Know that an application can be packaged and shared with others, and that applications shared this way do not require a development environment to work.
 
-**5. Conclusion:**
+::: {.callout-note title="Conclusion"}
 
 - We looked into data visualization, displaying media programmatically and some third party libraries.
 - With the knowledge from this course you should be able to create your own programs with some research and it's in fact recommended to hone your programming skills with small projects.
 - Some of the things left out of this course are: test and deployment automation, build systems, web server programming and much more.
 
-
+:::
 
 
 <!--- navLinks -->
