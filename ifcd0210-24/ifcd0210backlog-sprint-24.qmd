@@ -13,15 +13,15 @@ tr:nth-child(1) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
-## ``Set Up Tools/Methodologies/Subjects`` (December 2023)
+##  ``Sprint#1: Set Up Tools/Methodologies/Paths`` (December 2023)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #1 | 1 | 19/12/2023 |  |  |
-|  | 2 | 21/12/2023 |  |  |
-|  | 3 | 22/12/2023 |  |  |
-: Backlog Sprint#SetUp December 2023 {tbl-colwidths="[2,2,2,55,39]"}
+| #1 | 1 | 19/12/2023 | - Course Presentation </br>  - Methodologies introduction: learning, sprints & paths  </br> - **Course Syllabus**: </br>Java MOOC, Front, Server, Project, SCRUM, Git & DevOps, Linux and OS </br>  - Set up tools: Linux, Network, Account, IDEs, Git, Documentation | -[Mooc Java](/javase/se-what-moocsyllabus.qmd)  </br> - [Answering the useful (right?) questions](/learning/learning-how-questions.qmd) |
+|  | 2 | 21/12/2023 | - Set up tools: Linux, Network, Account, IDEs, Git, Documentation </br> - IDE: IntelliJ Idea </br> - Maven & Java SE project</br> | - [Idea](/devops/devops-ide-intelljidea.qmd) |
+|  | 3 | 22/12/2023 |  - Set up tools: Linux, Network, Account, IDEs, Git, Documentation </br> - IDE: Visual Code </br> - Create React App </br> | - [Visual Code](/devops/devops-ide-visualcode.qmd) |
+: Backlog Sprint#1 December 2023 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
 ::: {.callout-note}

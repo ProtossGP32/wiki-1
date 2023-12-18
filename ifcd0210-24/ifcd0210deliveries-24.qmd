@@ -8,6 +8,12 @@ categories: [ifcd0210, training]
 
 # Calendar 2023/2024
 
+**Inici-final de curs**: 19/12/2023-27/06/2024
+
+- **Sprints 2023:** December: 1
+- **Sprints 2024:** January: 4 / February: 4 / March: 3 / April: 5 / May: 4 / June: 4
+- Pràctiques: July 2024
+
 ### 2023
 
 - Dimarts 19/12/2023
