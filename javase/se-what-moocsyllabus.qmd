@@ -8,15 +8,16 @@ date-format: full
 description: Java SE training by MOOC Helsinki Programming Java Syllabus
 categories: [javase, training, helsinki, mooc]
 toc: true
-number-sections: true
+number-sections: false
 format:
   html
 ---
 
+
+
 # Summary
 
-
-## **Java Programming I**
+### Java Programming I
 
 
 - **Part 1**: Printing, input, Variables, Calculating with numbers, Conditional statements
@@ -28,7 +29,7 @@ format:
 - **Part 7**: Programming paradigms, Algorithms, Larger programming exercises
 
 
-## Java Programming II
+### Java Programming II
 
 - **Part 8**: **Hashmaps**, fetching and grouping information
 - **Part 9**: Class inheritance, **Interfaces**, Interfaces, Object polymorphism
@@ -39,10 +40,16 @@ format:
 - **Part 14**: Data visualization, Multimedia in programs, Larger application: Asteroids, **Maven and third-party libraries**
 
 
-# **Java Programming I**
+::: {.column-margin}
+![](/images/javase/helsikikisyllabus.png)
+:::
+
+# Detailed Syllabus
+
+## Java Programming I
 
 
-## Part 1
+### Part 1
 
 > The first part focuses on taking the plunge with programming and getting familiar with all the required tools.
 
@@ -81,7 +88,7 @@ Context introduction to coding now a days.
 
 :::
 
-## Part 2
+### Part 2
 
 > The second part focuses on repetition in programs and on how to divide functionality into distinct units.
 
@@ -117,7 +124,7 @@ Context introduction to coding now a days.
 :::
 
 
-## Part 3
+### Part 3
 
 > The main themes in the third part are adding information to list and array data structures, and handling information in string form.
 
@@ -152,7 +159,7 @@ Context introduction to coding now a days.
 - We have also practiced string handling and splitting strings into smaller substrings.
 :::
 
-## Part 4
+### Part 4
 
 > The main theme of the fourth part is object-oriented programming. You will learn to read data from files and to represent and handle information with the help of objects.
 
@@ -179,7 +186,7 @@ Context introduction to coding now a days.
 - We defined constructors, methods, and object variables for the classes, and grew used to printing object-related information with their toString method. We also practised handling objects on a list.
 :::
 
-## Part 5
+### Part 5
 
 > The fifth part continues with object-oriented programming, which was introduced in the fourth part.
 
@@ -217,7 +224,7 @@ Context introduction to coding now a days.
 - We created methods that compare objects with each other, and we saw how objects are handled with objects in them.
 :::
 
-## Part 6
+### Part 6
 
 > The sixth part handles objects consisting of objects, and we'll take a look at separating the text user interface and the program logic.
 
@@ -244,7 +251,7 @@ Context introduction to coding now a days.
 - When you learn programming, you also develop a better eye for reading code (yours and others). In this part we understood the use of lists and practiced separating the UI from the program logic.
 :::
 
-## Part 7
+### Part 7
 
 > In the seventh part we'll focus on general programming paradigms and algorithms.
 
@@ -271,10 +278,10 @@ Context introduction to coding now a days.
 - You've also dived deeper into the world of object-oriented programming, and structuring your programs in an object-oriented fashion.
 :::
 
-# Java Programming II
+## Java Programming II
 
 
-## Part 8
+### Part 8
 
 > Recap parts 1 - 7, Hashmaps, fetching and grouping information.
 
@@ -283,7 +290,7 @@ Context introduction to coding now a days.
 - You will brush up on the contents of the parts 1-7
 
 
-## Part 9
+### Part 9
 
 > The ninth part focuses on two essential concepts of object oriented programming, namely inheritance and interfaces. You will learn to create classes that inherit another classes, and also classes that implement one or more interfaces. You are also going to notice that an object can be represented by any of its actual types.
 
@@ -314,7 +321,7 @@ Context introduction to coding now a days.
 - Inheritance and interfaces allow use to implement methods and constructors that handle many kinds of objects. This enables us to easily extend programs and it helps with solving problems with classes and objects.
 :::
 
-## Part 10
+### Part 10
 
 > In the tenth part we introduce handling collections with streams. You'll learn how to create a stream from a collection, filter the values of a stream, transform the values of a stream, and collect values of a stream to another collection. We introduce the concept lambda expression, and you'll learn to use it in your programs. You will also learn how to order objects using the Java Comparable interface, and some other useful techniques like regular expressions, enumerate type and iterator.
 
@@ -342,7 +349,7 @@ Context introduction to coding now a days.
 
 
 
-## Part 11
+### Part 11
 
 > In the eleventh part you'll learn to decypher simple class diagrams. You'll become familiar with packages in Java and learn what the different parts of an `import` statement mean. You'll practise using exceptions in Java: how to throw and handle them. You'll take another look at reading data from a file, and learn to write data to a file.
 
@@ -373,7 +380,7 @@ Context introduction to coding now a days.
 - Self-reflexion on learning goals.
 :::
 
-## Part 12
+### Part 12
 
 > In the twelfth part we will introduce type parameters and you will learn what `ArrayList<String>;` actually means. You will learn to implement classes that use type parameters. You will get to understand how ArrayList and HashMap are implemented, and you will implement your own versions as well. You will learn how to create random numbers, and practice using some Java tools to create random numbers. You will learn how multidimensional data can be presented, and how to use multidimensional arrays.
 
@@ -408,7 +415,7 @@ Context introduction to coding now a days.
 - We also touched on randomness and multidimensional data.
 :::
 
-## Part 13
+### Part 13
 
 > The thirteenth part introduces the topics of creating graphical user interfaces and the kinds of components that are used in them. You will learn to handle different events that occur in graphical user interfaces, and practise creating applications that contain multiple views.
 
@@ -444,7 +451,7 @@ Context introduction to coding now a days.
 
 :::
 
-## Part 14
+### Part 14
 
 > In the fourteenth part you will learn methods for data visualization and acquaint yourself with Java's existing charts (line chart, bar chart). You will learn to make simple drawings and take a look at image processing. You will also learn to play audio files.
 
