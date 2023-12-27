@@ -30,21 +30,22 @@ categories: [ifcd0210, training]
 # Syllabus
 
 
-
-| Code | Description | Hours |
-|---|---|---|
-| **MF0491_3** | **Programació web en l'entorn client** | **180h** |
-| UF1841 | Elaboració de documents web mitjançant llenguatges de marca: [MarkUp intro](/markup/markup-lang-intro.qmd), [Quarto](/markup/markup-quarto-create.qmd) | 60h |
-| UF1842 |  Desenvolupament i reutilització de components programari i multimèdia mitjançant llenguatges de guió: [Deep Dive Into Modern Web Development](https://fullstackopen.com/en/){.external}, [Full Stack Web Development](https://studies.helsinki.fi/courses/course-implementation/otm-dbf5a51d-2121-4110-af0f-f1e8f0b74fb9){.external}, [Full Stack ](https://www.helsinki.fi/en/admissions-and-education/open-university/multidisciplinary-themed-modules/full-stack){.external} | 90h |
-| UF1843 |  Aplicacions tècniques d'usabilitat i accessibilitat a l'entorn client: [React](/reactjs/reactjs-what-create.qmd) | 30h |
-| **MF0492_3** |  **Programació web en l'entorn servidor** | **240h** |
-| UF1844 |  Desenvolupament d'aplicacions web a l'entorn servidor: [Mooc Java](/javase/se-what-moocsyllabus.qmd), [Spring Boot](/springboot/boot-what-basics.qmd), [Git](https://learngitbranching.js.org/){.external} | 90h |
-| UF1845 |  Accés a dades en aplicacions web de l'entorn servidor: [Spring Data](/springboot/boot-concepts-data.qmd) | 90h |
-| UF1846 |  Desenvolupament d'aplicacions web distribuïdes: [Spring JPA H2](/springboot/boot-what-create-th-h2.qmd) | 60h |
-| **MF0493_3** |  **Implantació d'aplicacions web en entorns d'internet, intranet i extranet** | **90h**| 
-| FCOO03 |  Formació complementària  | 10h | 
-| MP0391|  Mòdul de pràctiques professionals no laborals  |  80h | 
-: IFCD0210, Desenvolupament d’aplicacions amb tecnologies web, 600h table {tbl-colwidths="[10,80,10]"}
+::: {.column-page-right}
+| Code | Description | Syllabus |  Hours |
+|---|---|---|---|
+| **MF0491_3** | **Programació web en l'entorn client** | | **180h** |
+| UF1841 | Elaboració de documents web mitjançant llenguatges de marca | [MarkUp intro](/markup/markup-lang-intro.qmd), [Quarto](/markup/markup-quarto-create.qmd) | 60h |
+| UF1842 |  Desenvolupament i reutilització de components programari i multimèdia mitjançant llenguatges de guió  |  [Deep Dive Into Modern Web Development](https://fullstackopen.com/en/){.external}, [Full Stack Web Development](https://studies.helsinki.fi/courses/course-implementation/otm-dbf5a51d-2121-4110-af0f-f1e8f0b74fb9){.external}, [Full Stack ](https://www.helsinki.fi/en/admissions-and-education/open-university/multidisciplinary-themed-modules/full-stack){.external} | 90h |
+| UF1843 |  Aplicacions tècniques d'usabilitat i accessibilitat a l'entorn client  |  [React](/reactjs/reactjs-what-create.qmd) | 30h |
+| **MF0492_3** |  **Programació web en l'entorn servidor** | |  **240h** |
+| UF1844 |  Desenvolupament d'aplicacions web a l'entorn servidor  |  [Mooc Java](/javase/se-what-moocsyllabus.qmd), [Spring Boot](/springboot/boot-what-basics.qmd), [Git](https://learngitbranching.js.org/){.external} | 90h |
+| UF1845 |  Accés a dades en aplicacions web de l'entorn servidor | [Spring Data](/springboot/boot-concepts-data.qmd) | 90h |
+| UF1846 |  Desenvolupament d'aplicacions web distribuïdes |  [Spring JPA H2](/springboot/boot-what-create-th-h2.qmd) | 60h |
+| **MF0493_3** |  **Implantació d'aplicacions web en entorns d'internet, intranet i extranet** | | **90h**| 
+| FCOO03 |  Formació complementària  |  | 10h | 
+| MP0391|  Mòdul de pràctiques professionals no laborals  |  |  80h | 
+: IFCD0210, Desenvolupament d’aplicacions amb tecnologies web, 600h table {tbl-colwidths="[10,40,40,10]"}
+:::
 
 #### Product Backlog and Planning
 

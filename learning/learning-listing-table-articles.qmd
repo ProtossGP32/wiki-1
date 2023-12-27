@@ -30,10 +30,10 @@ listing:
 
 You can look up the following table listing for additional information:
 
-::: {.column-page-left}
+
 ::: {#articles-table-listing}
 :::
-:::
+
 
 <!--- navLinks -->
 <br><br>
