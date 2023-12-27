@@ -16,10 +16,9 @@ listing:
     filter-ui: [title, genre]
     type: default
     image-align: left
-    image-placeholder: "/images/home/frontimagealbertprofeweb.png"
     fields: [image, categories, title, description, reading-time, date, author, file-modified]
     date-format: full
-    categories: true  
+    categories: true
 ---
 
 ![Reading is essential for those who seek to rise above the ordinary. - Jim Rohn](/images/about/books.jpg){width="35%"}

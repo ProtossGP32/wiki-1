@@ -23,10 +23,10 @@ listing:
     sort-ui: [title, categories]
     filter-ui: [title]
     image-align: left
-    image-placeholder: "/images/home/frontimagealbertprofeweb.png"
     fields: [image, categories, title, description, reading-time, date, author, file-modified]
     date-format: full
-    categories: cloud  
+    categories: cloud
+    image-height: 160px
 ---
 
 You can look up the following card listing for additional information:

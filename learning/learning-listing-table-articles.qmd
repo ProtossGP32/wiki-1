@@ -21,12 +21,11 @@ listing:
         - "categories"
     type: table
     image-align: left
-    image-placeholder: "/images/home/frontimagealbertprofeweb.png"
     fields: [image, categories, title, reading-time, file-modified]
     table-hover: true
     date-format: full
-    categories: cloud
-    image-height: 50px   
+    categories: cloud 
+    image-height: 160px 
 ---
 
 You can look up the following table listing for additional information:
