@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(3) {
+tr:nth-child(1) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -13,15 +13,16 @@ tr:nth-child(3) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
-##  ``Sprint#1: Set Up Tools/Methodologies/Paths`` (December 2023)
+##  ``Sprint#2: Git-UML`` (January 2024)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #1 | 1 | 19/12/2023 | - Course Presentation </br>  - Methodologies introduction: learning, sprints & paths  </br> - **Course Syllabus**: </br>Java Helsinki MOOC, Full Stack, Front-end, Server, Project, SCRUM, Git & DevOps, Linux and OS </br>  - Set up tools: Linux, Network, Account, IDEs, Git, Documentation | - [Mooc Java](/javase/se-what-moocsyllabus.qmd) </br>  - [Deep Dive Into Modern Web Development](https://fullstackopen.com/en/){.external} / [Full Stack Web Development, Open Uni: Full Stack Web Development 5 cr](https://studies.helsinki.fi/courses/course-implementation/otm-dbf5a51d-2121-4110-af0f-f1e8f0b74fb9){.external}  / [Full Stack ](https://www.helsinki.fi/en/admissions-and-education/open-university/multidisciplinary-themed-modules/full-stack){.external}</br> - [Answering the useful (right?) questions](/learning/learning-how-questions.qmd) |
-|  | 2 | 21/12/2023 | - Set up tools: Linux, Network, Account, IDEs, Git, Documentation </br> - <s>IDE: IntelliJ Idea </br> - Maven & Java SE project</br></s> ++ IDE: TMC-NetBeans </br> ++ Manage Time&Mind: </br> (1) Keep Calm & Walk Away: Negative Logic, Pavoland, One tool JUST TO one problem, Optimal Solution, Give Up, Stress, Burnt out </br> (2) Plan your energy: match energy with tasks </br> ++ Bash example scripting | - [Idea](/devops/devops-ide-intelljidea.qmd) </br> - [Pavoland](/scrum/scrum-week1.qmd#lindy-effect--turkey-parable) </br> - [Bash executable](/linux/linux-distros-mint.qmd#make-a-bash-script-executable) </br> - [What is Bash?](/linux/linux-what-bash.qmd) </br> - [TMCBeans MOOC Helsinki Java 2023](/linux/linux-distros-mint.qmd#tmcbeans-mooc-helsinki-java-2023)  |
-|  | 3 | 22/12/2023 |  - Set up tools: Linux, Network, Account, IDEs, Git, Documentation <s></br> - IDE: Visual Code </br> - Create React App </br></s> ++ UML </br> ++ Documentation: quarto & .md | - [Visual Code](/devops/devops-ide-visualcode.qmd) </br> - [Quarto Create](/markup/markup-quarto-create.qmd) </br> -[Lab#SE00-1](/javase/selab0-1.qmd) </br> - [UML](/javase/se-pattern-uml.qmd)|
-: Backlog Sprint#1 December 2023 {tbl-colwidths="[2,2,2,55,39]"}
+| #2 | 4 | 08/01/2024 | - Linux </br>  - Bash |  |
+|  | 5 | 09/01/2024 | - Git </br>  - Quarto |   |
+|  | 6 | 11/01/2024 | - UML |  |
+|  | 7 | 12/01/2024 | - UML |  |
+: Backlog Sprint#1 January 2024 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
 ::: {.callout-note}

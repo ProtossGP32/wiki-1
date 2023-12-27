@@ -41,8 +41,12 @@ Or you may go through GUI: **Update Manager**:
 
 1. Create a **new text file** with all the software you need with a **.sh extension** and code it as ``#!/bin/bash`` (that is, copy that line to the top of it)
 
-[devtools.sh](https://gist.github.com/AlbertProfe/aa473648bf9ecd8fd106be7facfb90a1)
+[devtools.sh](https://gist.github.com/AlbertProfe/aa473648bf9ecd8fd106be7facfb90a1){.external}
+
+<details>
+<summary>Code</summary>
 <script src="https://gist.github.com/AlbertProfe/aa473648bf9ecd8fd106be7facfb90a1.js"></script>
+</details>
 
 2. **Make the file executable**, open the command line and run: ``chmod u+x devtools.sh``. You are giving permissions to execute this file: **it will grant only the owner of that file execution permissions.**
 
@@ -50,6 +54,8 @@ Or you may go through GUI: **Update Manager**:
 
 
 4. Be careful with certain packages and tools do not work under ``apt get install``, you will need to use ``snap``
+
+
 
 ``` js
 snap
@@ -72,6 +78,49 @@ sudo snap install --dangerous obsidian_1.0.3_amd64.snap --classic
 visual code educational
 wget https://az764295.vo.msecnd.net/stable/1ad8d514439d5077d2b0b7ee64d2ce82a9308e5a/code_1.74.1-1671015296_amd64.deb
 sudo apt install ./code_1.74.1-1671015296_amd64.deb
+```
+
+### Create an Installer Bash Script  
+
+``` js
+#!/bin/bash
+
+# Read the CSV file and install each app
+installed=0
+not_installed=0
+now=`date`
+sudo apt-get update
+echo -e "\nInstall execution long" >> installed_apps.log
+echo -e "$now\n" >> installed_apps.log
+while IFS=';' read -r app package_manager; do
+    if [ "$package_manager" = "apt" ]; then
+        if ! command -v "$app" &> /dev/null; then
+            sudo apt-get install -y "$app"
+            echo -e "\t$app installed/error" >> installed_apps.log
+            ((installed++))
+        else
+            echo -e "\t$app already exists" >> installed_apps.log
+            ((not_installed++))
+        fi
+    elif [ "$package_manager" = "snap" ]; then
+        if ! command -v "$app" &> /dev/null; then
+            sudo snap install "$app"
+            echo -e "\t$app installed/error" >> installed_apps.log
+            ((installed++))
+        else
+            echo -e "\t$app already exists" >> installed_apps.log
+            ((not_installed++))
+        fi
+    fi
+done < apps.csv
+
+echo "Total apps: $((installed + not_installed))"
+echo "Installed/tried apps: $installed"
+echo "Existing apps: $not_installed"
+
+echo -e "\nTotal apps: $((installed + not_installed))" >> installed_apps.log
+echo "Installed/tried apps: $installed" >> installed_apps.log
+echo "Existing apps: $not_installed" >> installed_apps.log
 ```
 
 
@@ -146,11 +195,25 @@ sudo apt install ./code_1.74.1-1671015296_amd64.deb
 
 - [simplescreenrecorder](https://community.linuxmint.com/software/view/simplescreenrecorder){.external}
 
+**Simple Screen Recorder** is, despite its name, an <mark>actually feature-rich screen recorder</mark>.
+
+The name reflects the fact that it **is simple to use unlike many other free screen recording applications available**. It can be easily configured to start recording from an intuitive wizard-like interface.
+
+It can record the entire screen or part of it directly. The recording can be paused and resumed at any time. Many different file formats and codecs are supported. To perform an X11 recording, all it takes is selecting an area on the root window with the mouse, choosing an output file and pressing record, either by using the mouse or using a hotkey.
+
+![Feature-Rich Screen Recorder For X11 And OpenGL](/images/linux/simplescreenrecorder.png)
+
 ## curl
 
 - [curl](https://community.linuxmint.com/software/view/curl){.external}
 
-References:
+![Command Line Tool For Transferring Data With URL Syntax](/images/linux/curl.png)
+
+<mark>Curl is a command line tool for transferring data with URL syntax, supporting DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP</mark>.
+
+curl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload, proxies, cookies, user+password authentication (Basic, Digest, NTLM, Negotiate, kerberos...), file transfer resume, proxy tunneling and a busload of other useful tricks.
+
+## References
 
 - [Install snapd on Linux Mint 2023 ](https://snapcraft.io/docs/installing-snap-on-linux-mint){.external}
 - [TMCBeans Helsinki Linux](https://www.mooc.fi/en/installation/netbeans/){.external}

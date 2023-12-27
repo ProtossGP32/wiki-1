@@ -26,19 +26,31 @@ categories: [ifcd0210, backlog]
 
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| **#1** | **1** | **19/12/2023** |  |  |
-|  | 2 | 21/12/2023 |  |  |
-|  | 3 | 22/12/2023 |  |  |
+| #1 | 1 | 19/12/2023 | - Course Presentation </br>  - Methodologies introduction: learning, sprints & paths  </br> - **Course Syllabus**: </br>Java Helsinki MOOC, Full Stack, Front-end, Server, Project, SCRUM, Git & DevOps, Linux and OS </br>  - Set up tools: Linux, Network, Account, IDEs, Git, Documentation | - [Mooc Java](/javase/se-what-moocsyllabus.qmd) </br>  - [Deep Dive Into Modern Web Development](https://fullstackopen.com/en/){.external} / [Full Stack Web Development, Open Uni: Full Stack Web Development 5 cr](https://studies.helsinki.fi/courses/course-implementation/otm-dbf5a51d-2121-4110-af0f-f1e8f0b74fb9){.external}  / [Full Stack ](https://www.helsinki.fi/en/admissions-and-education/open-university/multidisciplinary-themed-modules/full-stack){.external}</br> - [Answering the useful (right?) questions](/learning/learning-how-questions.qmd) |
+|  | 2 | 21/12/2023 | - Set up tools: Linux, Network, Account, IDEs, Git, Documentation </br> - <s>IDE: IntelliJ Idea </br> - Maven & Java SE project</br></s> ++ IDE: TMC-NetBeans </br> ++ Manage Time&Mind: </br> (1) Keep Calm & Walk Away: Negative Logic, Pavoland, One tool JUST TO one problem, Optimal Solution, Give Up, Stress, Burnt out </br> (2) Plan your energy: match energy with tasks </br> ++ Bash example scripting | - [Idea](/devops/devops-ide-intelljidea.qmd) </br> - [Pavoland](/scrum/scrum-week1.qmd#lindy-effect--turkey-parable) </br> - [Bash executable](/linux/linux-distros-mint.qmd#make-a-bash-script-executable) </br> - [What is Bash?](/linux/linux-what-bash.qmd) </br> - [TMCBeans MOOC Helsinki Java 2023](/linux/linux-distros-mint.qmd#tmcbeans-mooc-helsinki-java-2023)  |
+|  | 3 | 22/12/2023 |  - Set up tools: Linux, Network, Account, IDEs, Git, Documentation <s></br> - IDE: Visual Code </br> - Create React App </br></s> ++ UML </br> ++ Documentation: quarto & .md | - [Visual Code](/devops/devops-ide-visualcode.qmd) </br> - [Quarto Create](/markup/markup-quarto-create.qmd) </br> -[Lab#SE00-1](/javase/selab0-1.qmd) </br> - [UML](/javase/se-pattern-uml.qmd)|
 : Backlog course December 2023 table {tbl-colwidths="[2,2,2,60,34]"}
 
 ## January 2024
 
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| #2 | 4 | 08/01/2024 |  |  |
+|  | 5 | 09/01/2024 |  |  |
+|  | 6 | 11/01/2024 |  |  |
+|  | 7 | 12/01/2024 |  |  |
+| #3 | 8 | 15/01/2024 |  |  |
+|  | 9 | 16/01/2024 |  |  |
+|  | 10 | 18/01/2024 |  |  |
+|  | 11 | 19/01/2024 |  |  |
+| #4 | 12 | 22/01/2024 |  |  |
+|  | 13 | 23/01/2024 |  |  |
+|  | 14 | 25/01/2024 |  |  |
+|  | 15 | 26/01/2024 |  |  |
+| #5 | 16 | 29/01/2024 |  |  |
+|  | 17 | 30/01/2024 |  |  |
+|  | 18 | 31/01/2024 |  |  |
+|  | 19 | 01/02/2024 |  |  |
 : Backlog course January 2024 table {tbl-colwidths="[2,2,2,60,34]"}
 
 
@@ -47,20 +59,40 @@ categories: [ifcd0210, backlog]
 
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| #6 | 20 | 05/02/2024 |  |  |
+|  | 21 | 06/02/2024 |  |  |
+|  | 22 | 08/02/2024 |  |  |
+|  | 23 | 09/02/2024 |  |  |
+| #7 | 24 | 12/02/2024 |  |  |
+|  | 25 | 13/02/2024 |  |  |
+|  | 26 | 15/02/2024 |  |  |
+|  | 27 | 16/02/2024 |  |  |
+| #8 | 28 | 19/02/2024 |  |  |
+|  | 29 | 20/02/2024 |  |  |
+|  | 30 | 22/02/2024 |  |  |
+|  | 31 | 23/02/2024 |  |  |
+| #9 | 32 | 26/02/2024 |  |  |
+|  | 33 | 27/02/2024 |  |  |
+|  | 34 | 29/02/2024 |  |  |
+|  | 35 | 01/03/2024 |  |  |
 : Backlog course February 2024 table {tbl-colwidths="[2,2,2,64,30]"}
 
 ## March 2024
 
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| #10 | 36 | 04/03/2024 |  |  |
+|  | 37 | 05/03/2024 |  |  |
+|  | 38 | 07/03/2024 |  |  |
+|  | 39 | 08/03/2024 |  |  |
+| #11 | 40 | 11/03/2024 |  |  |
+|  | 41 | 12/03/2024 |  |  |
+|  | 42 | 14/03/2024 |  |  |
+|  | 43 | 15/03/2024 |  |  |
+| #12 | 44 | 18/03/2024 |  |  |
+|  | 45 | 19/03/2024 |  |  |
+|  | 46 | 21/03/2024 |  |  |
+|  | 47 | 22/03/2024 |  |  |
 : Backlog course March 2024 table {tbl-colwidths="[2,2,2,64,30]"}
 
 ## April 2024
