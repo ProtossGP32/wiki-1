@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(1) {
+tr:nth-child(3) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -18,9 +18,9 @@ tr:nth-child(1) {
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #2 | 4 | 08/01/2024 | - Linux </br>  - Bash |  |
-|  | 5 | 09/01/2024 | - Git </br>  - Quarto |   |
-|  | 6 | 11/01/2024 | - UML |  |
+| #2 | 4 | 08/01/2024 | - Linux </br> <s> - Bash  </br> </s> - Time Management categories: </br>  (1) Mindset/Grow </br>  (2) Execution/Code-Algorithm </br> (3) Architecture/Programming </br> (4) Learning/A-Ha-Moment </br> (5) Personal/Path </br>  -  4 cognitive tempos: Plan - Execute - Revision - Reflection </br>  How does brain learn? Picnic > Mechanism > Consolidate  </br> - Intro API Rest | - [Simple, complicate, complex problem](https://www.conversationagent.com/2015/11/simple-complicated-and-complex-problems.html){.external} <br> ![Simple, Complicated, Complex](/images/ifcd0210-24/simple-complicated-complexi.png)  </br> - [Api Rest](/markup/markup-quarto-api-rest.qmd) |
+|  | 5 | 09/01/2024 | - <s>Git </br>  - Quarto</s> </br>  - Intro Architecture: request response cycle, SPA & Server-side rendering, JPA </br>  Time Management Tasks: </br> (1) Mooc </br> (2) Notes / Documentation / Reading / Prepare classes & lessons / Vocabulary </br> (3) Architecture / UML / Domains </br> (4) Personal Project </br> (5) Linux Devops </br> (6) Timetable <br> - Linux install soft: apt / snap / software manager  </br></br> *Homework: request/response cycle, MVC, SPA versus server-side rendering* | - [Request Response Cycle](/springboot/boot-what-cycle.qmd) </br> - [MVC](/springboot/spring-mvc.qmd) </br> ![Spring Boot flow architecture](/images/springboot/springboot-architecture-2.png)  </br>  - [Spring Boot flow](/springboot/boot-concepts-injection.qmd)|
+|  | 6 | 11/01/2024 | - UML | - [UML](/javase/se-pattern-uml.qmd)  |
 |  | 7 | 12/01/2024 | - UML |  |
 : Backlog Sprint#1 January 2024 {tbl-colwidths="[2,2,2,55,39]"}
 :::
