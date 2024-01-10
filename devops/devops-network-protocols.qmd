@@ -93,7 +93,7 @@ The SRE engineer needs assistance from an on-call developer. They hold a video c
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Server-Client architecture](/devops/devops-network-serverclient.qmd.qmd)
+[{{< fa solid arrow-left >}} Client-Server architecture](/devops/devops-network-clientserver.qmd)
 <br>
 </div>
 <br>
