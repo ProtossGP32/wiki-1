@@ -1,0 +1,45 @@
+---
+title: "Network: gRPC"
+subtitle: Network gRPC
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: description
+categories: [devops, network, gRPC]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+# Overview
+
+
+
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} API rest](/devops/devops-network-rest.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Websockets {{< fa solid arrow-right >}}](/devops/devops-network-websocket.qmd)
+<br>
+</div>
+<br>
+</div>

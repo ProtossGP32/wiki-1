@@ -122,7 +122,23 @@ website:
         - section: "Documentation"
           contents: 
             - devops/devops-doc-quarto.qmd
-        - text: "---"  
+        - text: "---"
+        - section: "Network protocols"
+          contents:
+            - devops/devops-network-basics.qmd
+            - devops/devops-network-clientserver.qmd
+            - devops/devops-network-protocols.qmd
+            - devops/devops-network-dns.qmd
+            - devops/devops-network-rest.qmd
+            - devops/devops-network-grpc.qmd
+            - devops/devops-network-websocket.qmd
+            - devops/devops-network-smtp.qmd
+            - devops/devops-network-ping.qmd
+            - devops/devops-network-udp.qmd
+            - devops/devops-network-webhook.qmd
+            - devops/devops-network-soap.qmd
+            - devops/devops-network-graphql.qmd
+        - text: "---"
         - section: "Version Control"
           contents: 
             - devops/devops-vc-git.qmd
