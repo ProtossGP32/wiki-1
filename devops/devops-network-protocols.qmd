@@ -22,7 +22,7 @@ Network protocols serve as the linchpin in facilitating data exchange, ensuring 
 
 From the ubiquitous HTTP/HTTPS governing web applications to the specialized protocols like SQL for database communication, each plays a crucial role in orchestrating the flow of information.
 
-![API-protocols](/images/devops/api-protocls.png)
+![API-protocols](/images/devops/api-protocls.png){width="60%"}
 
 This article is about the significance of these protocols in maintaining efficiency, security, and standardization in client-server systems.
 
@@ -46,42 +46,44 @@ A protocol in the context of computing is a set of rules or standards that gover
 
 
 
-# Relevant Network Protocols
+# Relevant Network Protocols & APIs
 
-1. DNS (Domain Name Service)
+1.**DNS (Domain Name Service)**
 When we type a URL (Uniform Resource Locator) in a web browser, a DNS resolver translates the hostname of the URL to an IP address. This helps us locate the web resources. The DNS resolver communicates with a hierarchy of name servers to retrieve this mapping. More details will follow.
 
-2. API Rest
+2. **API Rest**
 The user interacts with the website via a REST API, which leverages HTTP to manage request methods. When a user decides to purchase an iPhone, an order is created on the website.
    - Representational State Transfer, an architectural style for designing networked applications, using standard HTTP methods (GET, POST, PUT, DELETE) to manipulate resources.
 
-1. gRPC (HTTP/2)
+1. **gRPC (HTTP/2)**
 The order service talks to the payment service to create a payment transaction. In a microservice architecture, this is usually done via gRPC, which is based on HTTP/2.
 
    - A high-performance, language-agnostic remote procedure call (RPC) framework for efficient communication between distributed systems, often used in microservices architectures.
 
-1. WebSocket
+1. **WebSocket**
 The client-side applications establish a WebSocket with the backend. This results in a full-duplex communication channel over a single TCP connection. This way, client-side applications can receive push notifications. For example, the success of a payment transaction can be pushed to the user’s device.
 
    - A protocol that enables bidirectional, real-time communication between a client and server over a single, long-lived connection, ideal for applications requiring low-latency updates, such as chat or gaming.
 
-1. SMTP
+1. **SMTP**
 The email notification service sends an official email to the user’s email address using SMTP (Simple Mail Transfer Protocol).
 
-1. Ping (ICMP)
+1. **Ping (ICMP)**
 The SRE (Site Reliability Engineering) engineer notices a slowdown in one of the payment service instances and uses the ping command to check the availability of the server.
 
-1. Video call (UDP)
+1. **Video call (UDP)**
 The SRE engineer needs assistance from an on-call developer. They hold a video call via Zoom, which uses UDP instead of TCP.
 
-1. SOAP: A protocol for exchanging structured information in the implementation of web services, known for its strict standards and XML-based message format.
+1. **SOAP** A protocol for exchanging structured information in the implementation of web services, known for its strict standards and XML-based message format.
 
-2. GraphQL: A query language and runtime for APIs that allows clients to request only the data they need, reducing over-fetching and under-fetching of data.
+2. **GraphQL** A query language and runtime for APIs that allows clients to request only the data they need, reducing over-fetching and under-fetching of data.
 
-3.  Webhook: A mechanism for real-time communication where an application sends HTTP POST requests to a predefined URL to notify and trigger actions in another system.
+3.  **Webhook** A mechanism for real-time communication where an application sends HTTP POST requests to a predefined URL to notify and trigger actions in another system.
 
 
+# References
 
+- [A guide to the different types of APIs](https://blog.postman.com/different-types-of-apis/){.external}
 
 
 
