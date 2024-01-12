@@ -44,7 +44,7 @@ Clients, Articulation of Needs, Payment as Approval, Collaboration, Feedback as 
 
 # Clients
 
-![What do clients want?](/scrum/client.png){width="60%"}
+![What do clients want?](/images/scrum/client.png){width="60%"}
 
 
 Clients often struggle to articulate their needs precisely, but that's not a hitch. The key is, they can pinpoint what resonates with their vision.

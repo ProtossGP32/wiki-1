@@ -12,10 +12,10 @@ categories: [ifcd0210, training]
 - Qualificació professional de referència: IFC154_3 - Desenvolupament d'aplicacions amb tecnologies web
 
 
-[![IFCD0210 fitxa](/images/ifcd0210/ifcd0210_fitxa.png)](/ifcd0210/IFCD0210_ficha.pdf){#ifcd0210-fitxa}
+[![IFCD0210 fitxa](/images/ifcd0210/ifcd0210_fitxa.png)](/images/ifcd0210/IFCD0210_ficha.pdf){#ifcd0210-fitxa}
 
-- [IFCD0210 fitxa-es .pdf](/ifcd0210/IFCD0210_ficha.pdf)
-- [IFCD0210 fitxa-cat .pdf](/ifcd0210/IFCD0210-cat.pdf)
+- [IFCD0210 fitxa-es .pdf](/images/ifcd0210/IFCD0210_ficha.pdf)
+- [IFCD0210 fitxa-cat .pdf](/images/ifcd0210/IFCD0210-cat.pdf)
 
 ## Relació d'unitats de competència que configuren el certificat de professionalitat
 - UC0491_3: Desenvolupar elements de programari en l'entorn client.

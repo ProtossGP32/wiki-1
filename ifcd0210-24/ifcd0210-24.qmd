@@ -13,10 +13,10 @@ categories: [ifcd0210, training]
 - Qualificació professional de referència: IFC154_3 - Desenvolupament d'aplicacions amb tecnologies web
 
 
-[![IFCD0210 fitxa](/images/ifcd0210/ifcd0210_fitxa.png){width="60%"}](/ifcd0210/IFCD0210_ficha.pdf){#ifcd0210-fitxa}
+[![IFCD0210 fitxa](/images/ifcd0210/ifcd0210_fitxa.png){width="60%"}](/images/ifcd0210/IFCD0210_ficha.pdf){#ifcd0210-fitxa}
 
-- [IFCD0210 fitxa-es .pdf](/ifcd0210/IFCD0210_ficha.pdf)
-- [IFCD0210 fitxa-cat .pdf](/ifcd0210/IFCD0210-cat.pdf)
+- [IFCD0210 fitxa-es .pdf](/images/ifcd0210/IFCD0210_ficha.pdf)
+- [IFCD0210 fitxa-cat .pdf](/images/ifcd0210/IFCD0210-cat.pdf)
 - [IFCD0210 official document](https://serveiocupacio.gencat.cat/web/.content/20_millorar-el-perfil/programes-formatius/ca/IFCD0210-cat.pdf)
 
 

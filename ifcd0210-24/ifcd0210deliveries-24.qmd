@@ -19,13 +19,13 @@ categories: [ifcd0210, training]
 - Dimarts 19/12/2023
 - Dijous 21/12/2023
 - Divendres 22/12/2023
-- [Calendar 2023](/ifcd0210-24/Calendari%202023.pdf)
+- [Calendar 2023](/images/ifcd0210-24/Calendari%202023.pdf)
 
 ### 2024
 
-![Calendar 2024](/ifcd0210-24/2024-calendar.png)
+![Calendar 2024](/images/ifcd0210-24/2024-calendar.png)
 
-- [Calendar 2024](/ifcd0210-24/Calendari%202024.pdf)
+- [Calendar 2024](/images/ifcd0210-24/Calendari%202024.pdf)
 
 # Syllabus
 

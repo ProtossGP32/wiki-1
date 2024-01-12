@@ -14,7 +14,7 @@ format:
 
 # Cornell Way
 
-![Cornell Note Taking — The Best Way To Take Notes Explained](/learning/cornell%20notes%20note%20taking%20method.jpeg)
+![Cornell Note Taking — The Best Way To Take Notes Explained](/images/learning/cornell%20notes%20note%20taking%20method.jpeg)
 
 - [Cornell way](https://medium.goodnotes.com/study-with-ease-the-best-way-to-take-notes-2749a3e8297b){.external}
 
