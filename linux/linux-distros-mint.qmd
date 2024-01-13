@@ -15,17 +15,119 @@ format:
 
 ![Linux Mint 21](/images/linux/mint.png){width=30%}
 
-## What is Linux Mint?
+# What is Linux Mint?
 
 [Linux Mint](https://linuxmint.com/) is an operating system for desktop and laptop computers. It is designed to work 'out of the box' and comes fully equipped with the apps most people need.
 
-- [Download ISO Linux Mint 21](https://linuxmint.com/edition.php?id=299)
-- [Linux Mint Installation Guide](https://linuxmint-installation-guide.readthedocs.io/en/latest/)
-- [Linux Mint Installation Guide: step-by-step](https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html)
+## Installation
+
+- [Download ISO Linux Mint 21](https://linuxmint.com/edition.php?id=299){.external}
+- [Linux Mint Installation Guide](https://linuxmint-installation-guide.readthedocs.io/en/latest/){.external}
+- [Linux Mint Installation Guide: step-by-step](https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html){.external}
+
+## Post-installation
+
+- [Hardware drivers](https://linuxmint-installation-guide.readthedocs.io/en/latest/drivers.html){.external}
+- [Multimedia codecs](https://linuxmint-installation-guide.readthedocs.io/en/latest/codecs.html){.external}
+- [Language support](https://linuxmint-installation-guide.readthedocs.io/en/latest/locales.html){.external}
+- [System snapshots](https://linuxmint-installation-guide.readthedocs.io/en/latest/timeshift.html){.external}
+
+## Linux Mint System Applications Overview
+
+**System Reports**
+
+Linux Mint provides users with a powerful diagnostic tool known as "System Reports." This application assists users in identifying and troubleshooting issues on their system. Whether it's hardware-related problems, crashes, or performance issues, System Reports gathers relevant data and generates detailed reports to help users and support teams understand and resolve issues efficiently.
+
+![System Reports](https://www.linuxmint.com/pictures/screenshots/tricia/mintreport.png){width="60%"}
+
+Usage and Features:
+
+- Users can access System Reports through the application menu or search bar.
+- The tool collects information on hardware, system logs, and potential conflicts.
+- Detailed reports are available for user analysis or can be shared with the community for assistance.
+
+**System Manager**
+
+Linux Mint's "System Manager" serves as a centralized hub for managing various system settings and configurations. This application consolidates essential system management tools, providing users with a convenient interface to control various aspects of their operating system.
+
+
+Features:
+
+- System Manager includes modules for managing software, updates, and system settings.
+- Users can configure user accounts, system startup applications, and power management options.
+- The application simplifies system maintenance and customization, enhancing the user experience.
+
+**System Settings**
+
+The "System Settings" application in Linux Mint offers a comprehensive set of tools for users to customize and configure their system. From display settings to keyboard shortcuts, users can tailor the Linux Mint environment to suit their preferences.
+
+![System Settings](https://static.packt-cdn.com/products/9781782168157/graphics/8157OS_03_10.jpg){width="60%"}
+
+Highlights:
+
+- System Settings is accessible through the application menu or system tray.
+- Users can adjust display properties, set up printers, and configure network settings.
+- The intuitive interface makes it easy for both beginners and experienced users to personalize their system.
+
+**System Info**
+
+Linux Mint's "System Info" application provides users with detailed information about their system's hardware and software configuration. This tool is invaluable for users seeking to understand their system specifications or troubleshoot compatibility issues.
+
+![System Info](https://www.technipages.com/wp-content/uploads/2020/12/mint-system-info-2.png){width="60%"}
+
+Key Information:
+
+- Users can view details about the processor, memory, graphics, and storage.
+- System Info also provides information on the Linux Mint version, kernel, and desktop environment.
+- The application is a quick reference for users and support personnel dealing with technical inquiries.
+
+**System monitor**
+
+Process Viewer And System Resource Monitor For GNOME
+
+![System Monitor](https://community.linuxmint.com/img/screenshots/gnome-system-monitor.png){width="60%"}
+
+**GParted: A Powerful Disk Partitioning Tool for Linux**
+
+[GParted](https://gparted.org/) stands as a formidable disk partitioning tool in the Linux ecosystem, offering users a robust and user-friendly solution for managing disk partitions on their systems. With its open-source nature and a wide array of features, GParted has become a go-to tool for both beginners and experienced users seeking efficient disk management.
+
+![GParted](https://gparted.org/screens/gparted-main-window.png){width="60%"}
+
+Features of GParted:
+
+1. **Partition Resizing and Moving**
+   - GParted allows users to resize, move, and manipulate partitions effortlessly. Whether you need to expand a partition to accommodate more data or rearrange existing partitions, GParted provides a straightforward interface to carry out these tasks.
+
+2. **Filesystem Support**
+   - The tool supports a variety of filesystems, including ext2, ext3, ext4, FAT16, FAT32, NTFS, and more. This broad compatibility ensures that GParted can be used on a wide range of storage devices and systems.
+
+3. **Create and Delete Partitions**
+   - Users can create new partitions or delete existing ones as needed. This flexibility is especially valuable when setting up new drives, dual-boot systems, or reorganizing storage configurations.
+
+4. **Check and Repair Filesystems**
+   - GParted includes tools to check and repair filesystems, ensuring the integrity of data on partitions. This feature is essential for maintaining a healthy storage environment and preventing data corruption.
+
+Using GParted:
+
+1. **Installation**
+   - GParted is often available in the software repositories of major Linux distributions. Users can install it using their package manager. For Ubuntu-based systems, the command is:
+     ```
+     sudo apt-get install gparted
+     ```
+
+2. **Launching GParted**
+   - After installation, GParted can be launched from the application menu or by running the command `gparted` in the terminal.
+
+3. **GUI Interface**
+   - GParted provides a graphical user interface that displays a visual representation of the disk partitions, making it easy for users to understand and manage their storage configuration.
+
+Community and Support
+
+GParted boasts an active and supportive community, and users can find documentation, tutorials, and forums on the [official GParted website](https://gparted.org/). The website serves as a valuable resource for both new and experienced users, offering guidance on using the tool effectively and troubleshooting common issues.
 
 
 
-## Keep your Linux updated
+# Keep your Linux updated
 
 Open your terminal and execute:
 

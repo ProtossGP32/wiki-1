@@ -1,5 +1,5 @@
 ---
-title: "Linux Distros: Red Hat Enterprise Linux"
+title: "Linux Distros: Red Hat Enterprise"
 subtitle: Red Hat Enterprise Linux
 author: albertprofe
 date: "06/01/2021"
