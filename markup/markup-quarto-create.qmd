@@ -14,7 +14,7 @@ format:
   html
 ---
 
-## Overview
+# Overview
 [Follow the Quick Start](https://quarto.org/docs/websites/) with Visual Code Extension Quarto to get a simple website up and running. After covering the basics, read on to learn about website navigation and other more advanced website features.
 
 ::: {.callout-tip collapse="true" icon=false}
@@ -53,6 +53,49 @@ The new website project will be created and opened within <mark>VS Code</mark>. 
 ![Quarto Visual Code Project Created](https://quarto.org/docs/websites/images/vscode-create-project-render.png){.image-preview #quarto-project-created}
 
 :::
+
+# Config File
+
+Every website has a `_quarto.yml` **config file** that provides website options as well as defaults for HTML documents created within the site.
+
+For example, here is the default config file for the simple site created above:
+
+
+
+``` {.js filename="_quarto.yml"}
+project:
+  type: website
+
+website:
+  title: "My New Quarto web about Dev"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+
+**YAML**
+
+> YAML (YAML Ain't Markup Language) is a **human-readable data serialization format that stands out for its simplicity and readability**.
+> It uses **indentation to represent data structures**, making it easy to write and understand.
+> YAML is often used for **configuration files and data exchange between languages with different data structures**. It's not a programming language but rather a configuration language.
+
+::: {.column-margin}
+The popularity of YAML stems from its clarity and conciseness. Its syntax is clean and doesn't rely on complex symbols, making it accessible to both developers and non-developers. 
+:::
+
+YAML files are commonly used in various contexts, including configuration files for applications, Continuous Integration/Continuous Deployment (CI/CD) pipelines, and infrastructure as code tools.
+
+YAML's readability makes it suitable for expressing configurations in a natural and easily comprehensible way.
+
+It has become a **standard for configuration in many software projects due to its simplicity and broad adoption**. Tools like Ansible, Kubernetes, Docker Compose, and configuration files for languages like Python and JavaScript commonly use YAML. Its human-friendly syntax and widespread support contribute to its prevalence in modern software development.
 
 
 <!--- navLinks -->
