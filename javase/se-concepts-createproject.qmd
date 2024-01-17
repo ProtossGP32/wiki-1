@@ -17,35 +17,50 @@ format:
 To create a Maven project with a **standard directory structure using IntelliJ IDEA**, you can follow these steps:
 
 1. Install the Maven plugin in **IntelliJ IDEA**.
-2. Open IntelliJ IDEA and navigate to the `Plugins` settings.
-3. Search for `Maven` and install the plugin.
-4. In IntelliJ IDEA, click `Create New Project`.
-5. In the `New Project` dialog, select `Maven Archetype` from the list of Generators.
-6. Select the **`maven-archetype-quickstart` archetype**. This archetype creates a <mark>standard Maven project with a directory structure for source code and unit tests.<mark>
-   1. Remember to use `apache`
-7. Click `Advanced Settings` and enter the `GroupId` and `ArtifactId` for your project. These are used to identify your project uniquely across all projects.
-8. Click `Create` to create the project.
+   1. Open IntelliJ IDEA and navigate to the `Plugins` settings.
+   2. Search for `Maven` and install the plugin.
+2. In IntelliJ IDEA, click `Create New Project`.
+   1. In the `New Project` dialog, select `Maven Archetype` from the list of Generators.
+   2. Select the **`maven-archetype-quickstart` archetype**. This archetype creates a <mark>standard Maven project with a directory structure for source code and unit tests.<mark>
+   3. Remember to use `apache` archetype (template).
+3. Choose from system or download the **JDK** to use
+4. Click `Advanced Settings` and enter the `GroupId` and `ArtifactId` for your project. These are used to identify your project uniquely across all projects.
+5. Click `Create` to create the project.
 
 
-Your project will be created with the following directory structure:
 
-``` java
-my-project
-├── pom.xml
-└── src
-    ├── main
-    │   └── Person.java
-    │       Account.java
-    │       AccountManager.java    
-    └── test
-        └── AccountManagerTest.java
-``` 
+- [Creating a Maven project](https://www.jetbrains.com/guide/java/tutorials/working-with-maven/creating-a-project/){.external}
+- [Create a new Maven project](https://www.jetbrains.com/help/idea/maven-support.html){.external}
+
+::: {.column-margin}
+**Catalog**
+
+specify which Maven repository you want to use in your project.
+
+The internal Maven catalog is a default one. You can also select the local repository that is located in the `.m2 directory`, or you can select **Maven central repository**.
+
+:::
+
+Your project will be created with the following **directory structure**:
+
+  ``` java
+    my-project
+    ├── pom.xml
+    └── src
+        ├── main
+        │   └── Person.java
+        │       Account.java
+        │       AccountManager.java    
+        └── test
+            └── AccountManagerTest.java
+            
+  ``` 
 
 The `src/main/java` directory is where you should put your Java source code, and the `src/test/java` directory is where you should put your **unit tests**.
 
 ![Maven project folder-tree](/images/javase/se-createproject/createprojectMavenIntellJI_3.png)
 
-To specify the version of Maven to use, you can edit the pom.xml file and add a <version> element to the <project> element. For example:
+To specify the version of Maven to use, you can edit the `pom.xml` file and add a `<version>` element to the `<project>` element. For example:
 
 ``` xml
 <project>
@@ -59,13 +74,22 @@ To specify the version of Maven to use, you can edit the pom.xml file and add a 
 This will use **version 3.6.3 of Maven** for the project.
 
 ## Step-by-step screenshots
+
 **2022-12-14**
 
 [Slider-presentation Create project Java SE Maven](/images/javase/se-createproject/se-presentation-createproject.qmd)
 
 **2024-01-14**
 
-![Create Maven JavaSE Project Idea 2024](/images/javase/createProject_2024.png){width="60%"}
+::: {#fig-createMavenProject layout-ncol=2}
+![Create Maven JavaSE Project Idea 2024: New Project wizard](/images/javase/createMavenProject-2024.png)
+
+
+![Create Maven JavaSE Project Idea 2024: Project structure](/images/javase/createProject_2024.png)
+
+Create Maven JavaSE Project Idea 2024
+:::
+
 
 > **IntelliJ IDEA 2023.3.2 (Community Edition)**
 > 

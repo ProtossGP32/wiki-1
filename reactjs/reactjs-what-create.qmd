@@ -20,15 +20,21 @@ format:
 
 `nvm` works on any POSIX-compliant shell (sh, dash, ksh, zsh, bash), in particular on these platforms: unix, macOS, and windows WSL.
 
-To install or update nvm, you should run the install script. To do that, you may either download and run the script manually, or use the following cURL command:
+To install or update nvm, you should run the install script. To do that, you may either download and run the script manually, or **use the following cURL command**:
 
 `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
 
-![](/images/reactjs/nvm1.png){width="60%"}
+::: {#fig-instalNVM layout-ncol=3}
 
-![](/images/reactjs/nvm2.png){width="60%"}
+![](/images/reactjs/nvm1.png)
 
-![](/images/reactjs/nvm3.png){width="60%"}
+![](/images/reactjs/nvm2.png)
+
+![](/images/reactjs/nvm3.png)
+
+Use cURL command with bash to install NVM
+
+:::
 
 `nvm install node # "node" is an alias for the latest version`
 

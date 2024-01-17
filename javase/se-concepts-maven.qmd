@@ -35,7 +35,7 @@ Maven addresses two aspects of building software:
 - how software is built and
 - its dependencies
 
-# Maven Central Repository
+## Maven Central Repository
 
 Link: [Maven Central Repository](https://mvnrepository.com/)
 
@@ -45,7 +45,7 @@ These repositories help us to store and maintain useful resources so that they c
 
 All the layout and structure of the underlying repositories of maven of any type are **completely hidden for maven users**.
 
-# Maven Lifecycle
+## Maven Lifecycle
 
 Maven is a **build automation tool for Java projects**. It is used to manage the build, reporting, and documentation of a project. Maven has a defined lifecycle that outlines the steps required to build and distribute a project.
 
@@ -143,9 +143,9 @@ Example of a library dependency in `pom.xml`
 
 
 
-# Configurations in `idea`
+# Configurations in `idea` ide
 
-## JDK, SKD and lenguage level
+## JDK, SKD and language level
 
 <mark>In a Maven IntelliJ IDEA project, the **SDK (Software Development Kit)** represents the Java version used for compilation and execution, determining the available libraries and features. The **language level**, on the other hand, specifies the language features and syntax level within that SDK.</mark>
 
