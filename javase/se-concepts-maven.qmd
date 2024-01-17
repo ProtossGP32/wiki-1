@@ -25,7 +25,7 @@ format:
 These tools allow developers to specify the dependencies for their project in a file, and then automatically handle the process of downloading and installing those dependencies. This can save a lot of time and effort for developers, and helps ensure that all of the necessary dependencies are present and up-to-date in a project.
 
 
-## Maven
+# Maven
 
 Maven is a **build automation tool** used primarily for Java projects.
 
@@ -35,7 +35,7 @@ Maven addresses two aspects of building software:
 - how software is built and
 - its dependencies
 
-## Maven Central Repository
+# Maven Central Repository
 
 Link: [Maven Central Repository](https://mvnrepository.com/)
 
@@ -45,7 +45,7 @@ These repositories help us to store and maintain useful resources so that they c
 
 All the layout and structure of the underlying repositories of maven of any type are **completely hidden for maven users**.
 
-## Maven Lifecycle
+# Maven Lifecycle
 
 Maven is a **build automation tool for Java projects**. It is used to manage the build, reporting, and documentation of a project. Maven has a defined lifecycle that outlines the steps required to build and distribute a project.
 
@@ -74,8 +74,95 @@ Each build phase consists of a set of build goals, which are the specific tasks 
 
 
 
+By following the **defined Maven lifecycle**, developers can **easily build, test, and distribute their Java projects in a consistent and repeatable manner**.
 
-By following the defined Maven lifecycle, developers can **easily build, test, and distribute their Java projects in a consistent and repeatable manner**.
+# Dependencies, plug-in & library
+
+In **Maven** projects, the terms "plugin," "dependency," and "library" refer to different concepts related to **project configuration, build processes, and external dependencies.**
+
+**Plug-in**
+
+- <mark>A Maven plugin is a set of goals (tasks) and configurations that can be executed within the Maven build lifecycle.</mark>
+- Plugins extend or modify the behavior of the Maven build process. They can perform tasks such as compiling code, packaging artifacts, running tests, generating documentation, and more.
+- Plugins are specified in the <build> section of the project's `pom.xml` file. They are responsible for executing various build-related tasks during different phases of the build lifecycle.
+
+Example of a Maven plugin configuration in `pom.xml`:
+
+``` xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.0</version>
+            <configuration>
+                <!-- Plugin configuration options go here -->
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+
+**Dependency**
+
+- <mark>A Maven dependency is an external library or module that your project relies on.</mark>
+- Dependencies are specified in the <dependencies> section of the project's `pom.xml`file. Maven will automatically download and manage these dependencies from a central repository during the build process.
+- Dependencies can include libraries, frameworks, and other artifacts that your project needs to compile, run, or test.
+
+Example of a Maven dependency configuration in `pom.xml`:
+
+``` xml
+<dependencies>
+    <dependency>
+        <groupId>com.example</groupId>
+        <artifactId>example-library</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+</dependencies>
+
+```
+**Library**
+
+- <mark>In the context of Maven, a library is a collection of pre-compiled code and resources that provide specific functionality.</mark>
+- Libraries are typically packaged as JAR (Java Archive) files and are distributed through Maven repositories.
+- When you declare a dependency on a library in your project's `pom.xml`, Maven will download and include the necessary JAR files during the build process.
+
+Example of a library dependency in `pom.xml`
+
+``` xml
+<dependencies>
+    <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.6</version>
+    </dependency>
+</dependencies>
+
+
+```
+
+
+
+# Configurations in `idea`
+
+## JDK, SKD and lenguage level
+
+<mark>In a Maven IntelliJ IDEA project, the **SDK (Software Development Kit)** represents the Java version used for compilation and execution, determining the available libraries and features. The **language level**, on the other hand, specifies the language features and syntax level within that SDK.</mark>
+
+While the SDK sets the overall compatibility, the language level refines language-specific settings.
+
+::: {.column-margin}
+For example, using JDK 11 as the SDK with language level 8 means leveraging JDK 11 capabilities while restricting language features to those compatible with Java 8 syntax. 
+:::
+
+Proper alignment between SDK and language level ensures both Java version compatibility and language feature availability.
+
+**SDK, JDK, JRE**
+
+**SDK (Software Development Kit)** is a broader term encompassing tools and libraries for software development.
+
+**JDK (Java Development Kit)** specifically refers to the Java SDK, providing tools and resources for Java development, including the **Java Runtime Environment (JRE)**, compiler, and libraries.
+
 
 ## Archetype, GroupId, ArtifactId
 

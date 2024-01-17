@@ -65,7 +65,7 @@ This will use **version 3.6.3 of Maven** for the project.
 
 **2024-01-14**
 
-![Create Maven JavaSE Project Idea 2024](/images/javase/createProject_2024.png)
+![Create Maven JavaSE Project Idea 2024](/images/javase/createProject_2024.png){width="60%"}
 
 > **IntelliJ IDEA 2023.3.2 (Community Edition)**
 > 
@@ -75,10 +75,31 @@ VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
 Linux 5.15.0-91-generic
 
 
+## Idea configurations
+
+![Create Maven JavaSE Project Idea 2024: Idea configurations, File](/images/javase/idea-files-menu--2024png.png){width="60%"}
+
+![Create Maven JavaSE Project Idea 2024: Project structure,SDK and lenguage level](/images/javase/createProject_2024-1.png){width="60%"}
+
+
+![Create Maven JavaSE Project Idea 2024: modules and sources](/images/javase/createProject_2024-2.png){width="60%"}
+
+
+![Create Maven JavaSE Project Idea 2024: modules and dependencies](/images/javase/createProject_2024-3.png){width="60%"}
+
+
+
+
 ## What did we create?
 
 
-![Anatomy of our first Class](/images/javase/classMain.png)
+![Anatomy of our first Class](/images/javase/classMain.png){width="60%"}
+
+This Java code defines a class named "HelloWorld" with a main method. When executed, it prints "Hello World!" to the console using the `System.out.println` statement.
+
+The **main method serves as the entry point for the program**.
+
+This simple program is a common introductory example, demonstrating the basic structure of a Java application and how to output text to the console.
 
 <!--- navLinks -->
 <br><br>

@@ -69,6 +69,7 @@ During this course, you will learn the basics of computer programming, along wit
 **IDE: NetBeans + TMC Plug-In**
 
 - [Download and install NetBeans - TMC](https://www.mooc.fi/en/installation/netbeans/){.external}
+- [Installing TMC to Linux Visual Code](https://www.mooc.fi/en/installation/vscode/){.external}
 
 ### Create an account 
 
@@ -165,6 +166,22 @@ You can submit your solution either after all tests have passed, or separately b
 You can check your points by logging in to [tmc.mooc.fi](https://tmc.mooc.fi/){.external} Use your MOOC.fi account to log in to the service.
 :::
 
+## TMC in `VisualCode`
+
+- [Installing TMC to Linux Visual Code](https://www.mooc.fi/en/installation/vscode/){.external}
+
+You need to installing **TestMyCode Extension for VS Code**: 
+
+![TestMyCode Extension for VS Code](https://www.mooc.fi/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fdownload_extension.973e6740.webp&w=640&q=75){width="60%"}
+
+You will need **Java Extension Pack for Visual Studio Code** to compile and run your Java code.
+
+![Java Extension Pack for VS Code](https://www.mooc.fi/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fvscode_java_extension_pack.a5611e27.webp&w=640&q=75){width="60%"}
+
+
+Start TestMyCode Extension by clicking TMC icon in the left bar, **log in by clicking Log in button**. Use the account you made in previous step to log in.
+
+![log in into your TMC account](https://www.mooc.fi/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2FTMC_login.674f3126.webp&w=640&q=75){width="60%"}
 
 ## TMCBeans does NOT start
 
@@ -217,6 +234,27 @@ Otherwise, it is a matter of **local path java variables**:
   - [Setting Java variables on Linux](https://www.ibm.com/docs/ja/b2b-integrator/6.0.3?topic=variables-setting-java-linux){.external}
   - [To Set PATH on Linux](https://docs.oracle.com/cd/E19062-01/sun.mgmt.ctr36/819-5418/gaznb/index.html){.external}
 
+- Install JDK from `tar.gz`within `/opt` not `/user`:
+  - [Installing Java OpenJDK from .tar.gz archive and update the default JDK version](https://kilishek.com/2021/05/05/installing-java-openjdk-from-tar-gz-archive-and-update-the-default-jdk-used/){.exteranl}
+  
+
+You may reset all installations
+
+```bash
+sudo apt-get autoremove openjdk #double tab to list all openjdk versions installed
+sudo apt-get autoremove openjdk-11-jre #do this for all other openjdk versions
+sudo apt-get purge openjdk*
+sudo snap remove netbeans
+sudo snap remove tmcbeans
+sudo apt install openjdk-11-jre-headless
+sudo apt install openjdk-11-jre
+sudo snap install netbeans --classic
+sudo snap install tmcbeans --classic
+
+```
+## Mac
+
+- [TMCbeans does not open after installation](https://stackoverflow.com/questions/70309275/tmcbeans-does-not-open-after-installation){.external}
 
 
 <!--- navLinks -->
