@@ -65,7 +65,9 @@ This will use **version 3.6.3 of Maven** for the project.
 
 **2024-01-14**
 
-![Create Maven JavaSE Project Idea 2024](/images/javase/createProject_2024.png){width="60%"}
+![Create Maven Project](/images/javase/createMavenProject-2024.png)
+
+![Create Maven JavaSE Project Idea 2024](/images/javase/createProject_2024.png)
 
 > **IntelliJ IDEA 2023.3.2 (Community Edition)**
 > 

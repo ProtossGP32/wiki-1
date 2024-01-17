@@ -13,6 +13,31 @@ format:
   html
 ---
 
+
+# Install `nvm`: Node Version Manager
+
+`nvm` is a **version manager for node.js, designed to be installed per-user, and invoked per-shell**. 
+
+`nvm` works on any POSIX-compliant shell (sh, dash, ksh, zsh, bash), in particular on these platforms: unix, macOS, and windows WSL.
+
+To install or update nvm, you should run the install script. To do that, you may either download and run the script manually, or use the following cURL command:
+
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
+
+![](/images/reactjs/nvm1.png){width="60%"}
+
+![](/images/reactjs/nvm2.png){width="60%"}
+
+![](/images/reactjs/nvm3.png){width="60%"}
+
+`nvm install node # "node" is an alias for the latest version`
+
+![](/images/reactjs/nvm4.png){width="60%"}
+
+![](/images/reactjs/nvm5.png){width="60%"}
+
+- [Installing and Updating nvm](https://github.com/nvm-sh/nvm?ref=softhints.com#install--update-script){.external}
+
 # ReactJS Starting
 
 ## React Directly in HTML
