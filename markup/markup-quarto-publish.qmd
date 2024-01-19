@@ -14,7 +14,8 @@ format:
 ---
 
 
-## Overview
+# Overview
+
 [GitHub Pages](https://pages.github.com/) is a website hosting service that enables you to [publish content based on source code](https://quarto.org/docs/publishing/github-pages.html#ignoring-output) managed within a **GitHub repository**.
 
 Use the `quarto publish` **command** to <mark>publish content rendered</mark> on your local machine.
@@ -129,6 +130,58 @@ Your Quarto website will be published by GitHub pages on:
 
 :::
 
+
+# Publishig spedd-track 2024
+
+You need:
+
+- git
+- gh
+- github account
+- gh auth login
+- code with user
+- quarto engine
+- quarto extension
+
+![](/images/markup/quarto-publishing-2024-1.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-2.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-3.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-4.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-5.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-6.png){width="60%"}
+
+``` bash
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AlbertProfe/SpeedMan.git
+git push -u origin main
+
+```
+
+![](/images/markup/quarto-publishing-2024-7.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-8.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-9.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-10.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-11.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-12.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-13.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-14.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-15.png){width="60%"}
+
+![](/images/markup/quarto-publishing-2024-16.png){width="60%"}
 
 
 
