@@ -110,7 +110,7 @@ $ git config --global user.email "eparis@atlassian.com"
 
 ## Git cheat-sheet
 
-[Git-cheat-sheet-Red-Hat-Developer](/images/devops/SGit-cheat-sheet-Red-Hat-Developer.pdf)
+[Git-cheat-sheet-Red-Hat-Developer](/images/devops/Git-cheat-sheet-Red-Hat-Developer.pdf)
 
 
 [Download Git Cheat-sheet Altassian](/images/devops/SWTM-2088_Atlassian-Git-Cheatsheet%20(1).pdf)
