@@ -134,7 +134,10 @@ Your Quarto website will be published by GitHub pages on:
 
 # Publishing quarto website 2024
 
-You need to set up this tools:
+::: {.callout-note collapse="true" icon=false}
+## (0) set up tools
+
+You need to set up these tools:
 
 - `git` & `gh` CLI tools installed
 - ``github.com`` account created and user logged in
@@ -143,12 +146,20 @@ You need to set up this tools:
 - Visual Code [with user logged](https://learn.microsoft.com/en-us/visualstudio/ide/signing-in-to-visual-studio?view=vs-2022){.external}
 - quarto [engine](https://quarto.org/docs/download/){.external} installed
 - quarto extension [in Visual Code](https://quarto.org/docs/tools/vscode.html){.external} installed
+:::
+
+::: {.callout-tip collapse="true" icon=false}
+## (1) create local and remote repositories
 
 ![Once the web in rendered you should ``Publish to GitHub`` by the visual tool Git on VisualCode](/images/markup/quarto-publishing-2024-1.png){width="60%"}
 
 ![Create the public repository on remote](/images/markup/quarto-publishing-2024-2.png){width="60%"}
 
 ![Select the files your do not want to push to remote repository](/images/markup/quarto-publishing-2024-3.png){width="60%"}
+:::
+
+::: {.callout-tip collapse="true" icon=false}
+## (2) first commit and push
 
 ![Once remote repository created, you may commit and push the quarto project](/images/markup/quarto-publishing-2024-4.png){width="60%"}
 
@@ -171,6 +182,10 @@ git push -u origin main
 ![Commands executed properly](/images/markup/quarto-publishing-2024-9.png){width="60%"}
 
 ![We check the remote repository on ``github.com``](/images/markup/quarto-publishing-2024-10.png){width="60%"}
+:::
+
+::: {.callout-tip collapse="true" icon=false}
+## (3) publish on gh-pages
 
 ![Now is time to publish our quarto project to ``gh-pages``](/images/markup/quarto-publishing-2024-11.png){width="60%"}
 
@@ -180,10 +195,17 @@ git push -u origin main
 
 ![The quarto engine is finishing the jobs from ``quarto publish gh-pages``](/images/markup/quarto-publishing-2024-14.png){width="60%"}
 
+:::
+
+
+
+::: {.callout-tip collapse="true" icon=false}
+## (4) quarto website published
+
 ![quarto project finally published on the internet](/images/markup/quarto-publishing-2024-15.png){width="60%"}
 
 ![quarto project finally published on the internet by ``gh-pages``](/images/markup/quarto-publishing-2024-16.png){width="60%"}
-
+:::
 
 
 
