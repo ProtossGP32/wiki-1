@@ -125,10 +125,38 @@ Now your local project is connected to the repository on GitHub and any changes 
 
 ## Maven Project push to GitHub: **CLI git**
 
-to-do
+Once the ``Maven Project Java SE`` is created, **we are going to control its versions with git and upload to GitHub.com by CLI git/gh.**
+
+- [How to create a remote repo](https://cli.github.com/manual/gh_repo_create){.external}
+- [How to log in with gh browser auth](https://albertprofe.dev/images/javase/se-projectgit/login_cli_gh_createrepo.png){.external}
+
+We need:
+
+- ``Github.com`` account created and logged in
+- ``git`` and ``gh`` installed
+- ``gh`` logged to ``GitHub.com``
+- Maven Project Java SE created
 
 
+![The Maven Project Java SE `Hello11` is already created and ready to work with git](/images/javase/mavenGitCLI-gh-1.png)
 
+![Let's create the git local repository with `git init`](/images/javase/mavenGitCLI-gh-2.png)
+
+![Now this folder is `git local repository`](/images/javase/mavenGitCLI-gh-3.png)
+
+
+![Let's identify the user, and then we track the files and commit them](/images/javase/mavenGitCLI-gh-4.png)
+
+![With the gh CLI we create a `remote repo` called `Hello11`](/images/javase/mavenGitCLI-gh-5.png)
+
+![Remote repository created](/images/javase/mavenGitCLI-gh-6.png)
+
+
+![Now it is time to add our remote repository Hello11 to our local repository. It will names as `origin`](/images/javase/mavenGitCLI-gh-7.png)
+
+![Let's `push` the project](/images/javase/mavenGitCLI-gh-8.png)
+
+![Project pushed](/images/javase/mavenGitCLI-gh-9.png)
 
 <!--- navLinks -->
 <br><br>
