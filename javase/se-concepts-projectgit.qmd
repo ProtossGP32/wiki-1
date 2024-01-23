@@ -158,6 +158,65 @@ We need:
 
 ![Project pushed](/images/javase/mavenGitCLI-gh-9.png)
 
+
+::: {.column-page-right}
+
+<details>
+<summary>Code bash linux git/gh</summary>
+
+
+``` bash
+
+albert@albert-VirtualBox:~/MyProjects/Sandbox/Hello11$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/albert/MyProjects/Sandbox/Hello11/.git/
+albert@albert-VirtualBox:~/MyProjects/Sandbox/Hello11$ git config user.name "albert"
+albert@albert-VirtualBox:~/MyProjects/Sandbox/Hello11$ git config user.email "albertprofe@gmail.com"
+albert@albert-VirtualBox:~/MyProjects/Sandbox/Hello11$ git add .
+albert@albert-VirtualBox:~/MyProjects/Sandbox/Hello11$ git commit -m "crete project"
+[master (root-commit) 4cd7009] crete project
+ 7 files changed, 171 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/encodings.xml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/org/example/App.java
+ create mode 100644 src/test/java/org/example/AppTest.java
+albert@albert-VirtualBox:~/MyProjects/Sandbox/Hello11$ gh repo create hello11 --public
+✓ Created repository AlbertProfe/hello11 on GitHub
+albert@albert-VirtualBox:~/MyProjects/Sandbox/Hello11$ git remote add origin https://github.com/AlbertProfe/hello11.git
+albert@albert-VirtualBox:~/MyProjects/Sandbox/Hello11$ git push -u origin master
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (19/19), 2.64 KiB | 675.00 KiB/s, done.
+Total 19 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AlbertProfe/hello11.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+albert@albert-VirtualBox:~/MyProjects/Sandbox/Hello11$
+
+
+```
+
+
+</details>
+
+:::
+
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>
