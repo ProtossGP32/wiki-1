@@ -329,7 +329,7 @@ classDiagram
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab#SE03-2: Library/Book, Sprint Zero](/javase/selab3-2.qmd)
+[{{< fa solid arrow-left >}} Lab#SE03-2: Library/Book, core model](/javase/selab3-2.qmd)
 <br>
 </div>
 <br>
@@ -341,7 +341,7 @@ classDiagram
 <br>
 <div class='column right next'>
 <br>
-[Java SE Resources  {{< fa solid arrow-right >}}](/javase/resources.qmd)
+[Lab#SE04-1: healthyFood Restaurant, Core Model {{< fa solid arrow-right >}}](/javase/selab4-1.qmd)
 <br>
 </div>
 <br>

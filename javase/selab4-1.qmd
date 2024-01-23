@@ -1,0 +1,196 @@
+---
+title: "Lab#SE04-1: healthyFood Restaurant, Core Model"
+subtitle: "Java SE Lab 04 part 1"
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: "Java SE Lab 04, part 1 work on the Core-Model"
+categories: [javase, lab, composition, model]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+
+
+
+::: {.labs}
+📘 **Linux Lab#SE04-1: healthyFood Restaurant**
+
+1. Create a Maven/Gradle `Java SE Project`. 
+    
+    - Crete from [wizard](/javase/se-concepts-createproject.qmd) the Maven Java SE Project and then work with [git](/javase/se-concepts-projectgit.qmd), local and remote.
+
+2. Add the needed dependencies:
+
+    - Lombok
+    - Junit
+    - Java Faker
+
+3. Create three `Java` classes to define the **Model**. Java SE Classes:
+
+    - Core Model: Table, Order and Menu
+    - Managers and Controller: use a fake DataBase like `ArrayList` or `HahsMaps`
+
+4. With `Junit` dependency create **unitary test** to test objects and operations, and then **integration tests**.
+
+5. From here you should add new features **once all the test are passed.**
+
+    - Operations, you could think in a Manager Class o similar
+    - New fields/attributes and new classes
+    - New compositions and inherence: expand your model
+    - Use Factory design pattern to create new objects
+
+:::
+
+---
+
+# Core classes and dependencies
+
+You could then use these classes as follows:
+
+
+
+``` {.java .code-overflow-wrap filename="table.java"}
+import lombok.Data;
+
+@Data
+
+
+```
+## Dependency: Lombok
+
+Use ``Lombok``, [link](https://projectlombok.org/){.external}:
+
+- The **@Data** annotation is a ``Lombok`` annotation that generates getters and setters for the fields of a class, as well as equals, hashCode, and toString methods based on the fields.
+
+- The **@AllArgsConstructor** annotation is a ``Lombok`` annotation that generates a constructor with all of the class's fields as arguments.
+
+- The **@NoArgsConstructor** annotation is a ``Lombok`` annotation that generates a no-argument constructor for a class.
+
+[**@Data**](https://projectlombok.org/features/Data){.external} All together now: A shortcut for **@ToString**, **@EqualsAndHashCode**, **@Getter** on all fields, **@Setter** on all non-final fields, and **@RequiredArgsConstructor**.
+
+Adding lombok to your pom file: to include lombok as a provided dependency, add it to your <dependencies>In your Java code: block like so:
+
+``` {.java .code-overflow-wrap filename="pom.xml"}
+<dependencies>
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.24</version>
+		<scope>provided</scope>
+	</dependency>
+</dependencies>
+```
+## Dependency: Java Faker
+
+Use [Java Faker](https://github.com/DiUS/java-faker){.external}:
+
+In `pom.xml`, add the following xml **dependency** between <dependencies> ... </dependencies>
+
+```{.java .code-overflow-wrap filename="pom.xml"}
+<dependencies>
+  <dependency>
+      <groupId>com.github.javafaker</groupId>
+      <artifactId>javafaker</artifactId>
+      <version>1.0.2</version>
+  </dependency>
+</dependencies>
+```
+In your Java code:
+
+``` {.java .code-overflow-wrap filename="testfaker.java"}
+import com.github.javafaker.Faker;
+import org.junit.jupiter.api.Test;
+
+Faker faker = new Faker();
+
+String name = faker.name().fullName(); // Miss Samanta Schmidt
+String firstName = faker.name().firstName(); // Emory
+String lastName = faker.name().lastName(); // Barton
+
+String streetAddress = faker.address().streetAddress(); // 60018 Sawayn Brooks Suite 449
+```
+
+## Dependency: JUnit 5
+
+To configure support for **JUnit Jupiter based tests**, configure test scoped dependencies on the [JUnit Jupiter API and the JUnit Jupiter TestEngine](https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven-engines-configure){.external} implementation similar to the following.
+
+more on [Java SE TDD](/javase/se-concepts-tdd.qmd)
+
+```{.java .code-overflow-wrap filename="pom.xml"}
+<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.9.1</version>
+      <scope>test</scope>
+    </dependency>
+```
+
+
+# Solving discussion: UMLs
+
+## Core features: table, order and menu
+
+<div class="mermaidContent">
+
+``` {mermaid}
+flowchart LR
+  A[I/O loop] --> B(static method)
+  B --> C{Decision}
+  C --> D[Create Table]
+  C --> E[Create Menu]
+
+
+```
+
+</div>
+
+# Core mockup CLI
+
+
+
+# Fake DataBase: HashMaps and Manger
+
+
+
+# View: user menus and I/O
+
+
+# Busines Logic and Controller
+
+
+
+
+
+
+
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Lab#SE3-3: Library/Book, Expand Model](/javase/selab3-3.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Java Resources {{< fa solid arrow-right >}}](/javase/resources.qmd)
+<br>
+</div>
+<br>
+</div>
