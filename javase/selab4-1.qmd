@@ -204,6 +204,31 @@ true
 
 # Fake DataBase: HashMaps
 
+To start and test our UML we are goint to use HashMaps as a fake database.
+
+![](/images/javase/hashmap-orders.jpg)
+
+``` java
+HashMap<String, Order> orders
+ = new HashMap<String, Order>();
+
+```
+::: {.column-margin}
+Keep in mind that in more recent versions of Java, you can use the diamond operator (<>) to infer the generic types, making the declaration more concise:
+
+`HashMap<String, Order> orders = new HashMap<>();`
+
+:::
+
+Here's what each part of the code means:
+
+- `HashMap<String, Order>`: This declares a new `HashMap` with keys of type `String` and values of type `Order`. In other words, it's a mapping from strings to `Order` objects.
+
+- `orders`: This is the name of the variable that will reference the `HashMap`. You can choose any valid identifier as the variable name.
+
+- `= new HashMap<String, Order>();`: This part of the code creates a new instance of `HashMap` and assigns it to the variable `orders`. The `new` keyword is used to allocate memory for the `HashMap`, and the `<>` syntax specifies the types of keys and values for the `HashMap`. In this case, keys are of type `String`, and values are of type `Order`.
+
+
 
 ## References
 
