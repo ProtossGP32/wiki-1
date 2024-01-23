@@ -21,7 +21,7 @@ format:
 
 1. Create a Maven/Gradle `Java SE Project`. 
     
-    - Crete from [wizard](/javase/se-concepts-createproject.qmd) the Maven Java SE Project and then work with [git](/javase/se-concepts-projectgit.qmd), local and remote.
+    - Crete from [wizard](/javase/se-concepts-createproject.qmd) the Maven Java SE Project and then work with [git](/javase/se-concepts-projectgit.qmd) version control, local and remote (GitHub.com).
 
 2. Add the needed dependencies:
 
@@ -32,7 +32,7 @@ format:
 3. Create three `Java` classes to define the **Model**. Java SE Classes:
 
     - Core Model: Table, Order and Menu
-    - Managers and Controller: use a fake DataBase like `ArrayList` or `HahsMaps`
+    - Managers and Controller: use a fake DataBase like `ArrayList` or `HashMaps`
 
 4. With `Junit` dependency create **unitary test** to test objects and operations, and then **integration tests**.
 
@@ -262,10 +262,11 @@ HashMap<String, String> capitalCities = new HashMap<String, String>();javase/sel
 
 # View: user menus and I/O
 
+to-do
 
 # Business Logic & Controller
 
-
+to-do
 
 # Code
 

@@ -21,6 +21,12 @@ categories: [ifcd0210, backlog]
 
 ::: {.column-page-right}
 
+#### Class Screen Recordings
+
+Code idea/java/react screen: [Class screen recordings .mp4 folder ](https://drive.google.com/drive/folders/1Rn72noZjDC4E0ha6uzFYP3QwXkli8Vgv?usp=sharing){.external}
+
+
+
 ## December 2023
 
 
