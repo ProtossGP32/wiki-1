@@ -135,39 +135,103 @@ more on [Java SE TDD](/javase/se-concepts-tdd.qmd)
 
 ## Core features: table, order and menu
 
-<div class="mermaidContent">
+
 
 ``` {mermaid}
-flowchart LR
-  A[I/O loop] --> B(static method)
-  B --> C{Decision}
-  C --> D[Create Table]
-  C --> E[Create Menu]
 
+classDiagram
+
+
+
+class Table{
+
+  +String name
+  +String description
+  +int qty
+
+}
+
+class Order{
+
+  +date date
+  +String orderNumber
+  +String waiter
+  +int peopleqty
+  +int totalPayment
+  +bool paid
+  +Table table
+  +Menu[] menus
+
+}
+
+class Menu{
+
+  +String name
+  +String price
+  +int price
+  +string conntent
+
+}
+
+  Table "1" --* "n" Order
+  Menu "1" --* "n" Order
 
 ```
 
-</div>
-
-# Core mockup CLI
 
 
+# Core user-case mockup CLI
 
-# Fake DataBase: HashMaps and Manger
+
+```bash
+Welcome to healtyFood Mananger v0.0
+Table number?
+2
+People?
+6
+Menu qty?
+3
+Menu #1?
+5
+Menu #2?
+3
+Menu #3?
+5
+Total to pay: 80€ (3 items)
+Paid?
+true
+```
+
+# Fake DataBase: HashMaps & Manager
 
 
 
 # View: user menus and I/O
 
 
-# Busines Logic and Controller
+# Business Logic & Controller
 
 
 
+# Code
+
+- [GitHub code v0.0](https://github.com/AlbertProfe/hello11/commit/59000f69fc5ab0d42390c3a9f8a28f0b55cc48c3){.external}
 
 
+### Output
 
+``` bash
+/home/albert/.jdks/openjdk-21.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=35021:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/albert/MyProjects/Sandbox/Hello11/target/classes org.example.App
+Hello healthyFood Restaurant!
+Menu{name='Menu Lisboa', price=25.0, content='Meat, Salad, Tuna', active=true, water=true}
+Menu{name='Menu New York', price=23.0, content='Meat, Salad, Fetaccis', active=false, water=false}
+{M002=Menu{name='Menu New York', price=23.0, content='Meat, Salad, Fetaccis', active=false, water=false}, M001=Menu{name='Menu Lisboa', price=25.0, content='Meat, Salad, Tuna', active=true, water=true}}
+{T01=Table{name='Table1', description='Table type Estrella Galicia', qty=4}, T03=Table{name='Table3', description='Table type Estrella Galicia', qty=2}, T02=Table{name='Table2', description='Table type Estrella Galicia', qty=4}, T04=Table{name='Table4', description='Table type Estrella Galicia', qty=2}}
+{43F43WT=Order{date=Tue Jan 23 12:11:14 CET 2024, waiter='Joan', peopleQty=4, totalPayment=60.0, paid=true, table=Table{name='Table1', description='Table type Estrella Galicia', qty=4}, menus=[Menu{name='Menu Lisboa', price=25.0, content='Meat, Salad, Tuna', active=true, water=true}, Menu{name='Menu Lisboa', price=25.0, content='Meat, Salad, Tuna', active=true, water=true}, Menu{name='Menu Lisboa', price=25.0, content='Meat, Salad, Tuna', active=true, water=true}, Menu{name='Menu New York', price=23.0, content='Meat, Salad, Fetaccis', active=false, water=false}]}}
 
+Process finished with exit code 0
+
+```
 
 
 
