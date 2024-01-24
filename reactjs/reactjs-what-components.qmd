@@ -36,6 +36,19 @@ One of the main benefits of the components-oriented paradigm is that it helps to
 
 Additionally, the use of standardized, modular components can make it easier to build larger applications by allowing developers to reuse and compose components rather than building everything from scratch.
 
+::: {.callout-note title="Describing the UI"}
+
+
+`React` is a `JavaScript` library <mark>for rendering user interfaces (UI)</mark>.
+
+UI is built from small units like buttons, text, and images.
+
+React lets you combine them into **reusable, nestable components**. From web sites to phone apps, everything on the screen can be broken down into components.
+
+[Your first component](https://react.dev/learn/describing-the-ui#importing-and-exporting-components){.external}
+
+:::
+
 ## Defining a component
 
 <mark>React puts interactivity first while still using the same technology: a React component is a JavaScript function that you can sprinkle with markup.</mark>

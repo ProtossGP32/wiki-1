@@ -406,6 +406,8 @@ website:
             - reactjs/rjslab5-4.qmd
             - reactjs/rjslab5-5.qmd
             - reactjs/rjslab5-6.qmd
+            - text: "---"
+            - reactjs/rjslab6-1.qmd
         - text: "---" 
         - section: "React JS readings"
           contents: 

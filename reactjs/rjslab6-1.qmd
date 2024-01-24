@@ -1,0 +1,268 @@
+---
+title: "Lab#RE06-1: healthyFood Restaurant"
+subtitle: ReactJS labs
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: labs
+categories: [reactjs, lab, Lab#RE06]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.labs}
+📘  **React JS Lab#RE06-1: healthyFood Restaurant**
+
+In this lab, we will be using:
+
+- the ``create-react-app``
+- w3 css: `cards`
+- components, `JSON` data
+
+
+This React project serves as the front-end for a robust Spring Boot back-end, complemented by a well-designed UML. The UML is meticulously crafted in the context of [Lab#SE04-1](/javase/selab4-1.qmd), ensuring a structured foundation for the restaurant management system.
+
+Project Overview
+
+- **Technology Stack:**
+  - Front-End: React
+  - Back-End: Spring Boot
+
+- **System Design:**
+  - The UML diagram, designed as part of Lab#SE04-1, lays the groundwork for essential entities such as Orders, Tables, and Menus.
+
+Integration with Spring Boot with API Rest
+
+This React front-end seamlessly integrates with the Spring Boot back-end via API Rest, creating a efficient restaurant management.
+
+The UML design acts as a guide, ensuring a cohesive flow between the front-end and back-end components.
+
+- [Lab#SE04-1](/javase/selab4-1.qmd)
+
+
+:::
+
+</br>
+
+<mark>To craft the React front end for our restaurant management system, we begin by comprehending the UML diagram and backend functionalities.</mark>
+
+- **Initiating a new React project using tools like Create React App** establishes the foundational structure.
+- Component design follows, with **entities from the UML diagram mapped to distinct React components**, such as Orders, Tables, Menus, and a centralized Controller.
+- Connecting to the Spring Boot backend is facilitated through React's `fetch` or similar HTTP libraries.
+- `Routing` is implemented using React Router, establishing distinct paths for functionalities like orders, tables, and menus. State management, accomplished through Redux or React Context API, ensures efficient handling of dynamic data.
+- **UI components** are designed and implemented, integrating component libraries for consistency. User input is managed via forms with input validation for an enhanced user experience.
+- **Unit tests using Jest and React Testing Library** validate the correctness of React components.
+- Integration with design tools maintains a cohesive look, and responsiveness is prioritized for varying screen sizes.
+- Ultimately, the **React app is deployed** independently using platforms like Netlify or Vercel, ensuring seamless communication with the Spring Boot backend API.
+  
+
+This systematic approach guarantees the development of a scalable and user-friendly front end, aligning with our grand vision for the restaurant management system's evolution.
+
+</br>
+
+# Mock-up
+
+![healthyFood restaurant mockup](/images/reactjs/healthyfood-mockup.png)
+
+
+# Step-by-step code
+
+Reference:
+
+- [Your first component](https://react.dev/learn/describing-the-ui#your-first-component){.external}
+- [W3.CSS Tutorial](https://www.w3schools.com/w3css/defaulT.asp){.external}
+
+## React functions
+
+```{.js .code-overflow-wrap filename="index.js"}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+```
+## React Application
+
+React application is defined with three instances of the `Profile` component and one instance of the `ProfileData` component. The application imports external components and a **CSS framework ("w3-css/w3.css").**
+
+A **static array** named `menus` represents different restaurant menus, each containing an id, name, list of contents, price, and flags indicating whether the menu is active and includes water.
+
+The `App` function returns a JSX structure representing the main application. The outermost element is a `div` with the class "w3-container," containing three instances of the `Profile` component arranged side by side using the "w3-cell" class. Each `Profile` component represents a section or module in the application.
+
+Below the three `Profile` components, a `ProfileData` component is rendered with the `menu` prop set to the first menu item from the `menus` array (`menus[0]`). This implies that the initial data displayed in the `ProfileData` component corresponds to the "Menu Lisboa."
+
+The code uses the `<>` (fragment) syntax to group multiple elements without introducing an additional parent node.
+
+::: {.column-margin}
+There's a repetition of the `Profile` component, and the application structure isa **placeholder**. Depending on the actual requirements, you may want to dynamically render components based on the data or user interactions for a more dynamic and scalable application.
+:::
+
+```{.js .code-overflow-wrap filename="App.jsx"}
+import ProfileData from "./ProfileData.jsx";
+import Profile from "./Profile.jsx";
+import "w3-css/w3.css";
+
+const menus = [
+  {
+    "id": "M001",
+    "name": "Menu Lisboa",
+    "contents": [
+      "Meat Balls",
+      "Salad with tomato",
+      "Onion and carrot",
+      "Fresh Tuna",
+    ],
+    "price": 80.0,
+    "active": true,
+    "water": true
+  },
+  {
+    "id": "M002",
+    "name": "Menu New York",
+    "contents": [
+      "Meat Balls with Pulled Steak",
+      "Salad with tomato",
+      "Brown Rice",
+      "Fresh Salmon"
+    ],
+    "price": 85.0,
+    "active": true,
+    "water": true,
+  },
+  {
+    "id": "M003",
+    "name": "Menu Santiago",
+    "contents": [
+      "Meat Chicken Curry",
+      "Salad with tomato",
+      "Carrot with edamame",
+      "Fresh Tuna"
+    ],
+    "price": 82.0,
+    "active": true,
+    "water": true,
+  }
+];
+
+function App() {
+  return (
+    <>
+      <div class="w3-container">
+        <div class="w3-container w3-cell">
+          <Profile />
+        </div>
+        <div class="w3-container w3-cell">
+          <Profile />
+        </div>
+        <div class="w3-container w3-cell">
+          <Profile />
+        </div>
+        <div class="w3-container">
+         <ProfileData menu={menus[0]} />
+         </div>
+      </div>
+     
+    </>
+  );
+}
+
+export default App;
+
+
+```
+
+```{.js .code-overflow-wrap filename="ProfileData.jss"}
+import "w3-css/w3.css";
+
+
+export default function ProfileData({menu}) {
+
+//console.log(menu);
+
+  return (
+    <>
+      
+       <div class="w3-panel w3-card w3-teal">
+        <h1> {menu.name} </h1>
+        <span class="w3-sand">{menu.id}</span>
+        <p></p>
+        <p>{menu.contents[0]}, {menu.contents[1]}, {menu.contents[2]} </p>
+        <p>{menu.price} euros</p>
+        <p>Water is {menu.water ? '' : 'not'}  <span>included </span></p>
+        
+      </div>
+    </>
+  );
+}
+
+```
+
+```{.js .code-overflow-wrap filename="Profile.jss"}
+import "w3-css/w3.css";
+import lisboa from './images/lisboa.jpeg'
+
+
+export default function Profile() {
+
+
+  return (
+    <>
+      <div class="w3-panel w3-card w3-sand">
+        <h1> Menu Lisboa </h1>
+        <p>This menu is incredible</p>
+        <img src={lisboa} alt="Menu" style={{ height: 200, width: 200 }} />
+        <br />
+        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+          Learn more
+        </a>
+
+        <ul>
+          <li>Meat Balls with portuguese sauce</li>
+          <li>Fresh Tuna</li>
+          <li>Onion and rice</li>
+
+          <h2>Price: 80€</h2>
+        </ul>
+      </div>
+    </>
+  );
+}
+
+```
+
+# Code
+
+
+| Code Version | Commit | Folder-Tree | Output |
+| -- | -- | -- | -- |
+| [GitHub code v0.0](){.external}  | create project, test to basic cards components | [Basic Structure](/images/reactjs/healthyfood-project-v0-0.png){width="80%"} |[output v0.0 render](/images/reactjs/healthyfood-mockup.png) |
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[React JS: Lab#RE05-6  {{< fa solid arrow-left >}}](/reactjs/rjslab5-6.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[ReactJS Resources  {{< fa solid arrow-right >}}](/reactjs/resources.qmd)
+<br>
+</div>
+<br>
+</div>

@@ -447,7 +447,7 @@ function ConversationsList(propsConversationLines) {
 <br>
 <div class='column right next'>
 <br>
-[ReactJS Resources  {{< fa solid arrow-right >}}](/reactjs/resources.qmd)
+[ReactJS  Lab#RE06-1  {{< fa solid arrow-right >}}](/reactjs/rjslab6-1.qmd)
 <br>
 </div>
 <br>
