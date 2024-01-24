@@ -43,6 +43,24 @@ format:
     - New compositions and inherence: expand your model
     - Use Factory design pattern to create new objects
 
+Project Overview
+
+- **Technology Stack:**
+  - Front-End: React
+  - Back-End: Spring Boot
+
+- **System Design:**
+  - The UML diagram, designed as part of Lab#SE04-1, lays the groundwork for essential entities such as Orders, Tables, and Menus.
+
+Integration with Spring Boot with API Rest
+
+This Java Maven SE backe-end seamlessly integrates with the React front-end via API Rest, creating a efficient restaurant management.
+
+<mark>The UML design acts as a guide, ensuring a cohesive flow between the front-end and back-end components.</mark>
+
+- [Lab#SE06-1](/reactjs/rjslab6-1.qmd)
+
+
 :::
 
 ---
@@ -77,17 +95,18 @@ Get ready to witness the evolution of our restaurant management system from a sm
 
 # Core classes and dependencies
 
-You could then use these classes as follows:
+## Dependencies `pom.xml`
+
+<mark>The `pom.xml` file in a Java SE Maven project is crucial as it serves as the Project Object Model configuration.</mark>
+
+::: {.column-margin}
+The `pom.xml` and dependencies enhance project maintainability, collaboration, and adherence to best practices, making them indispensable components for Java developers leveraging Maven for efficient project management and streamlined workflows.
+:::
+
+It defines project **metadata, dependencies, plugins, and build configurations, ensuring consistent builds**. Dependencies are vital as they specify external libraries required for the project, facilitating easy management and version control. Maven leverages these elements to automate project builds, simplifying development, testing, and deployment.
 
 
 
-``` {.java .code-overflow-wrap filename="table.java"}
-import lombok.Data;
-
-@Data
-
-
-```
 ## Dependency: Lombok
 
 Use ``Lombok``, [link](https://projectlombok.org/){.external}:
@@ -112,7 +131,24 @@ Adding lombok to your pom file: to include lombok as a provided dependency, add 
 	</dependency>
 </dependencies>
 ```
-## Dependency: Java Faker
+::: {.callout-important}
+The version `<version>1.18.24</version>` crashes. Use **1.18.30**
+:::
+
+
+You could then use these classes as follows:
+
+
+
+``` {.java .code-overflow-wrap filename="table.java"}
+import lombok.Data;
+
+@Data
+
+// define your class
+```
+
+### Dependency: Java Faker
 
 Use [Java Faker](https://github.com/DiUS/java-faker){.external}:
 
@@ -142,7 +178,7 @@ String lastName = faker.name().lastName(); // Barton
 String streetAddress = faker.address().streetAddress(); // 60018 Sawayn Brooks Suite 449
 ```
 
-## Dependency: JUnit 5
+### Dependency: JUnit 5
 
 To configure support for **JUnit Jupiter based tests**, configure test scoped dependencies on the [JUnit Jupiter API and the JUnit Jupiter TestEngine](https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven-engines-configure){.external} implementation similar to the following.
 
@@ -159,11 +195,9 @@ more on [Java SE TDD](/javase/se-concepts-tdd.qmd)
 ```
 
 
-# Solving discussion: UMLs
+## Core classes: table, order and menu
 
-## Core features: table, order and menu
-
-
+### Solving discussion: UMLs
 
 ``` {mermaid}
 
