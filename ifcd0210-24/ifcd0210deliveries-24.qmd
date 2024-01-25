@@ -14,14 +14,14 @@ categories: [ifcd0210, training]
 - **Sprints 2024:** January: 4 / February: 4 / March: 3 / April: 5 / May: 4 / June: 4
 - Pràctiques: July 2024
 
-### 2023
+#### 2023
 
 - Dimarts 19/12/2023
 - Dijous 21/12/2023
 - Divendres 22/12/2023
 - [Calendar 2023](/images/ifcd0210-24/Calendari%202023.pdf)
 
-### 2024
+#### 2024
 
 ![Calendar 2024](/images/ifcd0210-24/2024-calendar.png)
 
@@ -34,9 +34,9 @@ categories: [ifcd0210, training]
 | Code | Description | Syllabus |  Hours |
 |---|---|---|---|
 | **MF0491_3** | **Programació web en l'entorn client** | | **180h** |
-| UF1841 | Elaboració de documents web mitjançant llenguatges de marca | [MarkUp intro](/markup/markup-lang-intro.qmd), [Quarto](/markup/markup-quarto-create.qmd) | 60h |
+| UF1841 | Elaboració de documents web mitjançant llenguatges de marca | [MarkUp intro](/markup/markup-lang-intro.qmd), [Quarto](/markup/markup-quarto-create.qmd), [Markdown tutorial](https://commonmark.org/help/tutorial/){.external}, [CSS Tutorial](https://www.w3schools.com/css/default.asp){.external}, [W3.CSS Tutorial](https://www.w3schools.com/w3css/){.external} | 60h |
 | UF1842 |  Desenvolupament i reutilització de components programari i multimèdia mitjançant llenguatges de guió  |  [Deep Dive Into Modern Web Development](https://fullstackopen.com/en/){.external}, [Full Stack Web Development](https://studies.helsinki.fi/courses/course-implementation/otm-dbf5a51d-2121-4110-af0f-f1e8f0b74fb9){.external}, [Full Stack ](https://www.helsinki.fi/en/admissions-and-education/open-university/multidisciplinary-themed-modules/full-stack){.external} | 90h |
-| UF1843 |  Aplicacions tècniques d'usabilitat i accessibilitat a l'entorn client  |  [React](/reactjs/reactjs-what-create.qmd) | 30h |
+| UF1843 |  Aplicacions tècniques d'usabilitat i accessibilitat a l'entorn client  |  [React](/reactjs/reactjs-what-create.qmd), [Learn React: Describing the UI](https://react.dev/learn/describing-the-ui){.external} | 30h |
 | **MF0492_3** |  **Programació web en l'entorn servidor** | |  **240h** |
 | UF1844 |  Desenvolupament d'aplicacions web a l'entorn servidor  |  [Mooc Java](/javase/se-what-moocsyllabus.qmd), [Spring Boot](/springboot/boot-what-basics.qmd), [Git](https://learngitbranching.js.org/){.external} | 90h |
 | UF1845 |  Accés a dades en aplicacions web de l'entorn servidor | [Spring Data](/springboot/boot-concepts-data.qmd) | 90h |
@@ -47,9 +47,6 @@ categories: [ifcd0210, training]
 : IFCD0210, Desenvolupament d’aplicacions amb tecnologies web, 600h table {tbl-colwidths="[10,40,40,10]"}
 :::
 
-#### Product Backlog and Planning
-
-User stories, tasks and hours/task planning: [planning IFCD0210-24](https://cloud.albertprofe.dev/index.php/s/BZ2Q9N53KiwdMWS){.external}
 
 # Deliveries
 

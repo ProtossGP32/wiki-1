@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(3) {
+tr:nth-child(4) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -20,8 +20,8 @@ tr:nth-child(3) {
 | -- | -- | -- | -- | -- |
 | #4 | 12 | 22/01/2024 | - <s>**healthyFood CLI App**</br> (1) Project: mockUp, user-case, versions, iterations  </br> (2) Domains  </br> (3) UML, flow-diagram & pseudo-code </br> (4)  code in intelliJ Idea </br></br> - healthyFood push to GitHub </br> (1) set up tools </br> (2) 3-auth </br> (3) repos local & remote </br> (4) first commit & push </s> </br> ++ Git: basics | - [Git Alatassian: Setting up a repository](https://www.atlassian.com/git/tutorials/setting-up-a-repository){.external}  </br>  - [Git Alatassian: Git commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit){.external} </br> - [Git Alatassian: Git Revert](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert){.external} </br> - [Git Alatassian: Git Checkout](https://www.atlassian.com/git/tutorials/using-branches/git-checkout){.external} </br>  ![](/images/ifcd0210-24/git-map.jpg)  </br> |
 |  | 13 | 23/01/2024 | - <s> **healthyFood CLI App**</br>  code, static & non-static, methods </s> </br>  - **healthyFood CLI App**</br> (1) Project: mockUp, user-case, versions, iterations  </br> (2) Domains  </br> (3) UML, flow-diagram & pseudo-code </br> (4)  code in intelliJ Idea </br></br> - healthyFood push to GitHub </br> (1) set up tools </br> (2) 3-auth </br> (3) repos local & remote </br> (4) first commit & push </br> </br> - healthyFood CLI App v0.0  | - [W3 Schools Java Hashmaps](https://www.w3schools.com/java/java_hashmap.asp){.external} </br> - [W3 Schools Java Hashmaps sandbox](https://www.w3schools.com/java/tryjava.asp?filename=demo_hashmap_put){.external}  </br> </br>  - [GitHub code v0.0](https://github.com/AlbertProfe/hello11/tree/59000f69fc5ab0d42390c3a9f8a28f0b55cc48c3){.external} </br>  - [Lab#SE04-1](/javase/selab4-1.qmd)|
-|  | 14 | 25/01/2024 | -  React introduction: the render cycle   </br> - React Principles: SPA, COP, Virtual DOM, JSX, Hooks, Route </br> - Install nvm: Node Version Manager & create a React Project   </br>   | - [React JS: Introduction](/reactjs/reactjs-what-principles.qmd) </br> - [React JS: Create a React project](/reactjs/reactjs-what-create.qmd) </br> - [React Components](/reactjs/reactjs-what-components.qmd) </br>  - [Lab#RE06-1](/reactjs/rjslab6-1.qmd) |
-|  | 15 | 26/01/2024 | ++ **healthyFood React App**</br> | - [Lab#RE06-1](/reactjs/rjslab6-1.qmd)  |
+|  | 14 | 25/01/2024 | -  React introduction: the render cycle   </br> - React Principles: SPA, COP, Virtual DOM, JSX, Hooks, Route </br> - Install nvm: Node Version Manager & create a React Project   </br> -   **healthyFood React App**: JSX components | - [React JS: Introduction](/reactjs/reactjs-what-principles.qmd) </br> - [React JS: Create a React project](/reactjs/reactjs-what-create.qmd) </br> - [React Components](/reactjs/reactjs-what-components.qmd)</br> - [Learn React: Describing the UI](https://react.dev/learn/describing-the-ui){.external} </br> </br> - [Lab#RE06-1](/reactjs/rjslab6-1.qmd) |
+|  | 15 | 26/01/2024 | - **healthyFood React App**: data and props</br> | - [Lab#RE06-1](/reactjs/rjslab6-1.qmd)  |
 : Backlog Sprint#1 January 2024 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
