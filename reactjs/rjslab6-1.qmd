@@ -63,7 +63,11 @@ The UML design acts as a guide, ensuring a cohesive flow between the front-end a
 
 This systematic approach guarantees the development of a scalable and user-friendly front end, aligning with our grand vision for the restaurant management system's evolution.
 
+# Install `nvm` & `create-react-app`
 
+- [React JS: Create a React project](/reactjs/reactjs-what-create.qmd)
+
+![create-react-app](/images/reactjs/createproject.svg)
 
 # Mock-up
 
