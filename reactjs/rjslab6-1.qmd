@@ -252,6 +252,37 @@ const menus = [
 ];
 ```
 
+In App we may call the component:
+
+```{.js .code-overflow-wrap filename="App.jsx"}
+
+import MenuList from "./MenuList.jsx";
+import Order from "./Order.jsx";;
+import "w3-css/w3.css";
+
+//  const menus = []; 
+
+
+export default function App() {
+  return (
+    <>
+      
+      ...
+      ...
+
+
+      <CreateOrder menu = {menus[0]}>
+
+      <br />
+      <Order />
+      <br />
+    </CreateOrder>
+  );
+}
+
+
+```
+
 Below the three `MenuList` components, a `MenuData` component is rendered with the `menu` prop set to the first menu item from the `menus` array (`menus[0]`).
 
 This implies that the initial data displayed in the `MenuData` component corresponds to the "Menu Lisboa."
@@ -295,7 +326,7 @@ export default function MenuData({menu}) {
 | Code Version | Commit | Folder-Tree | Output |
 | -- | -- | -- | -- |
 | [GitHub code v0.0](https://github.com/AlbertProfe/healthyfoodFront/tree/99df8047f57acbae1bf53c9dd777a4d7cdd1b597){.external}  | create project, test to basic cards components | [Basic Structure](/images/reactjs/healthyfood-project-v0-0.png){width="80%"} | [render v0.0 render](/images/reactjs/healthyfood-render-v0-0.png) |
-| [GitHub code v0.1](https://github.com/AlbertProfe/healthyfoodFront/tree/99df8047f57acbae1bf53c9dd777a4d7cdd1b597){.external}  | create JSON array for data, props |  -  |  [render v0.1 render]()  | 
+| [GitHub code v0.1](https://github.com/AlbertProfe/healthyfoodFront/tree/5fdd2426c239f75de0fcaf4dc681b32d44a8bd99){.external}  | create JSON array for data, props, createOrder component |  -  |  [render v0.1 render](/images/reactjs/healthyfood-render-v0-1.png), [render v0.1 render (2)](/images/reactjs/healthyfood-render-v0-1-2.png) | 
 
 
 <!--- navLinks -->
