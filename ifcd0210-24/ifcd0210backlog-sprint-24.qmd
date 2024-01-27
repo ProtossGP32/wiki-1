@@ -4,7 +4,7 @@ categories: [ifcd0210, backlog]
 ---
 
 <style>
-tr:nth-child(4) {
+tr:nth-child(1) {
   background-color: #b2b2b2!important;
   color: #f4f4f4!important;
 }
@@ -13,15 +13,15 @@ tr:nth-child(4) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
-##  ``Sprint#4: Restaurant (first version on code)`` (January 2024)
+##  ``Sprint#5: healthyFood mockup & model`` (January 2024)
 
 ::: {.column-page-right}
 | Sprint | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #4 | 12 | 22/01/2024 | - <s>**healthyFood CLI App**</br> (1) Project: mockUp, user-case, versions, iterations  </br> (2) Domains  </br> (3) UML, flow-diagram & pseudo-code </br> (4)  code in intelliJ Idea </br></br> - healthyFood push to GitHub </br> (1) set up tools </br> (2) 3-auth </br> (3) repos local & remote </br> (4) first commit & push </s> </br> ++ Git: basics | - [Git Alatassian: Setting up a repository](https://www.atlassian.com/git/tutorials/setting-up-a-repository){.external}  </br>  - [Git Alatassian: Git commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit){.external} </br> - [Git Alatassian: Git Revert](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert){.external} </br> - [Git Alatassian: Git Checkout](https://www.atlassian.com/git/tutorials/using-branches/git-checkout){.external} </br>  ![](/images/ifcd0210-24/git-map.jpg)  </br> |
-|  | 13 | 23/01/2024 | - <s> **healthyFood CLI App**</br>  code, static & non-static, methods </s> </br>  - **healthyFood CLI App**</br> (1) Project: mockUp, user-case, versions, iterations  </br> (2) Domains  </br> (3) UML, flow-diagram & pseudo-code </br> (4)  code in intelliJ Idea </br></br> - healthyFood push to GitHub </br> (1) set up tools </br> (2) 3-auth </br> (3) repos local & remote </br> (4) first commit & push </br> </br> - healthyFood CLI App v0.0  | - [W3 Schools Java Hashmaps](https://www.w3schools.com/java/java_hashmap.asp){.external} </br> - [W3 Schools Java Hashmaps sandbox](https://www.w3schools.com/java/tryjava.asp?filename=demo_hashmap_put){.external}  </br> </br>  - [GitHub code v0.0](https://github.com/AlbertProfe/hello11/tree/59000f69fc5ab0d42390c3a9f8a28f0b55cc48c3){.external} </br>  - [Lab#SE04-1](/javase/selab4-1.qmd)|
-|  | 14 | 25/01/2024 | -  React introduction: the render cycle   </br> - React Principles: SPA, COP, Virtual DOM, JSX, Hooks, Route </br> - Install nvm: Node Version Manager & create a React Project   </br> -   **healthyFood React App**: JSX components | - [React JS: Introduction](/reactjs/reactjs-what-principles.qmd) </br> - [React JS: Create a React project](/reactjs/reactjs-what-create.qmd) </br> - [React Components](/reactjs/reactjs-what-components.qmd)</br> - [Learn React: Describing the UI](https://react.dev/learn/describing-the-ui){.external} </br> </br> - [Lab#RE06-1](/reactjs/rjslab6-1.qmd) |
-|  | 15 | 26/01/2024 | - **healthyFood React App**: data and props</br> </br>  *Homework: </br>  (1) What is the difference btw Literal JS Object, JSON, Java Object  </br>  (2) Check the* **Describing UI from React**    | - [Lab#RE06-1](/reactjs/rjslab6-1.qmd) </br> - [GitHub code v0.1](https://github.com/AlbertProfe/healthyfoodFront/tree/5fdd2426c239f75de0fcaf4dc681b32d44a8bd99){.external}  </br> </br>   -  [JSON crack](https://jsoncrack.com/editor){.external}  </br> - [No, really, what is JSON?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#no_really_what_is_json){.external} </br> - [Working with Literal Objects JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects){.external} </br>  - [What is JSON?](https://www.w3schools.com/whatis/whatis_json.asp){.external}   </br>  |
+| #5 | 16 | 29/01/2024 |  - JUnit Testig & debugger </br> - Dependencies: Junit, Lombok, JavaFaker </br> - UML: adding UI as CLI & controller  </br>  |  - [Testing](/javase/se-concepts-tdd.qmd){.external} </br>   - [Lab#SE04-1](/javase/selab4-1.qmd) |
+|  | 17 | 30/01/2024 | - Main Loop and static methods  |  - [Lab#SE04-1](/javase/selab4-1.qmd) </br> - [Class and objects](/javase/se-concepts-objects.qmd){.external} </br> |
+|  | 18 | 31/01/2024 | - React: composing the UI: <br> (1)  UI as a tree, DOM, Render cycle  </br>  (2)  rendering data, list, images </br>  (3)  the rules of JSX  </br> (4) using Js within HTML: **simple/double curly braces**  </br>  (5) props </br> (6) conditional rendering </br>   | - [Render Cycle](/reactjs/reactjs-what-render-dom.qmd){.external} </br>  - [Rendering lists](https://react.dev/learn/describing-the-ui#rendering-lists){.external},  [Mapping lists](https://react.dev/learn/rendering-lists){.external} </br>  - [The Rules of JSX](https://react.dev/learn/writing-markup-with-jsx#the-rules-of-jsx){.external} </br>  - [Using curly braces: A window into the JavaScript world](https://react.dev/learn/javascript-in-jsx-with-curly-braces#using-curly-braces-a-window-into-the-javascript-world){.external} </br>- [Passing Props to a Component](https://react.dev/learn/passing-props-to-a-component){.external} </br>- [Conditional Rendering](https://react.dev/learn/conditional-rendering){.external} </br>  </br> |
+|  | 19 | 01/02/2024 | - Pure components React | - [Keeping Components Pure](https://react.dev/learn/keeping-components-pure){.external} </br>  -  [Props and states](/reactjs/reactjs-what-props.qmd)   |
 : Backlog Sprint#1 January 2024 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
