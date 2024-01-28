@@ -13,7 +13,7 @@ format:
   html
 ---
 
-![Linux Mint 21](/images/linux/mint.png){width=30%}
+![Linux Mint 21](/images/linux/mint.png){width=40%}
 
 # What is Linux Mint?
 
