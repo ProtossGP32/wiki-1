@@ -95,6 +95,21 @@ Get ready to witness the evolution of our restaurant management system from a sm
 
 # Core classes and dependencies
 
+## EcoSystem: tech stack, system design and architecture
+
+
+(1) Software Core tools: framework/engine/publishing system, Code language, SDK (software development kit)
+(2) Development tools: Configuration system and format (.xml, .json, .yml ), Dependencies & packages management
+(3) Developer tools: IDE, debugger, collaborative & version control, documentation (Mermaid UML)
+(4) DevOps & App LifeCycle: test, deployment, OS, agile management
+
+::: {.column-page-right}
+| (1) Software Core tools | (2) Development tools | (3) Developer tools | (4) DevOps |
+| -- | -- | -- | -- |
+|   |    |   |   |
+:::
+
+
 ## Dependencies `pom.xml`
 
 <mark>The `pom.xml` file in a Java SE Maven project is crucial as it serves as the Project Object Model configuration.</mark>
@@ -361,6 +376,7 @@ to-do
 | Code Version | Commit | Folder-Tree | Output |
 | -- | -- | -- | -- |
 | [GitHub code v0.0](https://github.com/AlbertProfe/hello11/tree/59000f69fc5ab0d42390c3a9f8a28f0b55cc48c3){.external}  | create project, core UML classes and fast-test Hashmaps in main| [Basic Structure](/images/javase/restaurant-tree-folder-v0.0.png){width="80%"} |[output v0.0 cli](/images/javase/ouputs/output-labse04-1-v0-0.pdf) |
+| [GitHub code v0.0 - testFaker](https://github.com/AlbertProfe/hello11/tree/51496acc2d4e3ef0ab87529d21238fb2244612cd){.external}  |  test new dependencies: JUnit, javaFaker, lombok  | - |  [Check version dependencies](https://github.com/AlbertProfe/hello11/blob/51496acc2d4e3ef0ab87529d21238fb2244612cd/pom.xml#L21){.external}  |
 
 
 
