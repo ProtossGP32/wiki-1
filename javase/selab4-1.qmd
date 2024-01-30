@@ -104,9 +104,9 @@ Get ready to witness the evolution of our restaurant management system from a sm
 (4) DevOps & App LifeCycle: test, deployment, OS, agile management
 
 ::: {.column-page-right}
-| (1) Software Core tools | (2) Development tools | (3) Developer tools | (4) DevOps |
-| -- | -- | -- | -- |
-|   |    |   |   |
+| (1) Software Core tools | (2) Development tools | (3) Developer tools | (4) DevOps |  #version |
+| -- | -- | -- | -- | -- |
+| Java SE </br> JDK: open JDK 21 </br>    |  Maven: pom.xml </br>Lombok, JUnit 4.11/5, JavaFaker</br>  | IDE: IntelliJ IDEA 2023.3.3 (Community Edition)</br> Doc: Quarto, markdown</br>Version Control: git & gitHub</br> mermaid UML   | Phase: Sandbox </br> Linux 21.3 Virginia </br> Agile: SCRUM</br>  |  v.0.x | 
 :::
 
 
@@ -377,6 +377,9 @@ to-do
 | -- | -- | -- | -- |
 | [GitHub code v0.0](https://github.com/AlbertProfe/hello11/tree/59000f69fc5ab0d42390c3a9f8a28f0b55cc48c3){.external}  | create project, core UML classes and fast-test Hashmaps in main| [Basic Structure](/images/javase/restaurant-tree-folder-v0.0.png){width="80%"} |[output v0.0 cli](/images/javase/ouputs/output-labse04-1-v0-0.pdf) |
 | [GitHub code v0.0 - testFaker](https://github.com/AlbertProfe/hello11/tree/51496acc2d4e3ef0ab87529d21238fb2244612cd){.external}  |  test new dependencies: JUnit, javaFaker, lombok  | - |  [Check version dependencies](https://github.com/AlbertProfe/hello11/blob/51496acc2d4e3ef0ab87529d21238fb2244612cd/pom.xml#L21){.external}  |
+| [GitHub code v0.1](https://github.com/AlbertProfe/hello11/tree/b4342d0c872dbcf8a45747b73613614ac1eb5ce2){.external}  |  basic MVC structure Java SE  | - |  -  |
+
+
 
 
 
