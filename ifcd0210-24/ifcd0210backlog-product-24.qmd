@@ -16,10 +16,6 @@ Class Screen Recordings by Sprint on Google Drive, **videos with audio class .mp
 [![](/images/ifcd0210-24/computer-laptop-code-icon.png){width="30%"}](https://drive.google.com/drive/folders/1Rn72noZjDC4E0ha6uzFYP3QwXkli8Vgv?usp=sharing){target='_blank'}
 
 
-
-
-
-
 # Product Backlog by Month
 
 ::: {.callout-tip title="Months"}
