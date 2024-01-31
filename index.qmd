@@ -60,6 +60,22 @@ repo-actions: false
 
 <div style="text-align:center;color:grey">
 
+
+</br></br>
+
+
+:::{.column-page}
+| Date | Type | Article | Content |
+| -- | -- | -- | -- |
+| 01/2024 | Java SE | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Lab#SE04-1: healthyFood Restaurant, Core Model](/javase/selab4-1.qmd) | Java SE UML lab  |
+| 01/2024 | React JS | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Lab#RE06-1: healthyFood Restaurant](/reactjs/rjslab6-1.qmd) | React JS composition lab  |
+| 01/2024 | Backlog | [Sprint Backlog](/ifcd0210-24/ifcd0210backlog-sprint-24.qmd) | Sprint Backlog IFCD0210-24  |
+| 01/2024  | Backlog | [Product Backlog](/ifcd0210-24/ifcd0210backlog-product-24.qmd) | Product Backlog IFCD0210-24  |
+: New / updated articles {tbl-colwidths="[10,10,50,30]"}
+:::
+
+</br></br>
+
 [SCRUM](/scrum/scrum-what-concepts.qmd) agile framework |   [Before SCRUM](/scrum/scrum-week10.qmd) management | SCRUM of SCRUM: [Less](/scrum/scrum-week14.qmd#scrum-of-scrum-less) | Team Work, What is it? | [Team Dynamics](/scrum/scrum-week11.qmd), how to manage  | [Mindset](/scrum/scrum-week5.qmd), the key for everything  | [Emotions](/scrum/scrum-week12.qmd) and Thoughts | Managing mind and [time](/scrum/scrum-week7.qmd) | [Beyond SCRUM](/scrum/scrum-week14.qmd)
 
 
