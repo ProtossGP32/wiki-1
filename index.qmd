@@ -27,7 +27,7 @@ repo-actions: false
 }
 #spin:after {
   content:"";
-  padding: 10px;
+  padding: 15px;
   border-radius: 20px;
   animation: spin 16s linear infinite;
 }
@@ -40,11 +40,11 @@ repo-actions: false
   36% { content:"MINDSET"; }
   43% { content:"SCRUM";}
   50% { content: "LINUX"; }
-  59% { content: "API REST"; }
-  65% { content: "DEVOPS"; }
-  75% { content: "AWS"; }
-  80% { content: "MARKDOWN"; }
-  90% { content: "QUARTO";background-color: red; }
+  62% { content: "API REST"; }
+  74% { content: "DEVOPS"; }
+  86% { content: "AWS"; }
+  95% { content: "MARKDOWN"; }
+  100% { content: "QUARTO";background-color: red; }
 }
 
 
@@ -66,12 +66,12 @@ repo-actions: false
 
 :::{.column-page}
 | Date | Type | Article | Content |
-| -- | -- | -- | -- |
+| -- | -- | :-- | :-- |
 | 01/2024 | Java SE | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Lab#SE04-1: healthyFood Restaurant, Core Model](/javase/selab4-1.qmd) | Java SE UML lab  |
 | 01/2024 | React JS | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Lab#RE06-1: healthyFood Restaurant](/reactjs/rjslab6-1.qmd) | React JS composition lab  |
 | 01/2024 | Backlog | [Sprint Backlog](/ifcd0210-24/ifcd0210backlog-sprint-24.qmd) | Sprint Backlog IFCD0210-24  |
 | 01/2024  | Backlog | [Product Backlog](/ifcd0210-24/ifcd0210backlog-product-24.qmd) | Product Backlog IFCD0210-24  |
-: New / updated articles {tbl-colwidths="[10,10,50,30]"}
+: New / updated articles {tbl-colwidths="[10,10,50,30]" .striped .hover}
 :::
 
 </br></br>
