@@ -305,6 +305,42 @@ Here's what each part of the code means:
 
 - `= new HashMap<String, Order>();`: This part of the code creates a new instance of `HashMap` and assigns it to the variable `orders`. The `new` keyword is used to allocate memory for the `HashMap`, and the `<>` syntax specifies the types of keys and values for the `HashMap`. In this case, keys are of type `String`, and values are of type `Order`.
 
+## Entities Manager
+
+**MenuManager**
+
+```{mermaid}
+classDiagram
+
+class MenuManager {
+  - menus: HashMap<String, Menu>
+  - qty: int
+  - size: double
+  - lastModified: Date
+  + addMenu(menu: Menu, data: String): void
+  + updateMenu(): void
+  + deleteMenu(title: String): void
+  + getMenu(title: String): Menu
+  + getMenus(): List<>
+  + rateMenu(rate: int, menu: Menu): void
+  + saveToCSV(): void
+  + deleteCSV(): void
+}
+```
+
+
+::: {.column-margin}
+Overall, the **MenuManager** acts as a central hub for menu-related operations, promoting efficient management and systematic handling of menu entities in Java applications.
+:::
+
+
+A ``MenuManager`` class is essential for managing **entities** like ``Menu`` for several reasons:
+
+- First, it encapsulates the complexity of menu handling by maintaining a ``HashMap<String, Menu>`` to efficiently store and retrieve menus based on their titles.
+  - This abstraction enhances code organization and readability.
+- Second, the ``MenuManager`` includes methods like addMenu, updateMenu, and deleteMenu to provide a clear and controlled interface for manipulating menus, promoting a modular and maintainable codebase.
+- The class also **tracks additional metadata** such as quantity, size, and last modification date, offering valuable insights into the menu collection.
+- It facilitates data persistence with methods like saveToCSV and deleteCSV, allowing menus to be stored in a CSV format. 
 
 
 ## References
@@ -364,7 +400,88 @@ HashMap<String, String> capitalCities = new HashMap<String, String>();javase/sel
 
 # View: user menus and I/O
 
-to-do
+```bash
+Welcome to healtyFood Mananger v0.0
+Main Menu
+
+Choose an option:
+
+0 - Quit
+1 - Create Menu
+2 - Create table
+3 - Create Order
+
+Option?
+
+
+```
+
+## Java User Input (Scanner)
+
+The ``Scanner`` class is used to get user input, and it is found in the ``java.util package.``
+
+To use the ``Scanner`` class, create an object of the class and use any of the available methods found in the ``Scanner`` class documentation.
+
+```java
+Scanner readerObject = new Scanner(System.in);  // Create a Scanner object
+String userName = readerObject.nextLine();  // Read user input
+```
+
+In the example above, we used the ``nextLine()`` method, which is used to read ``Strings``. To read other types, look at the table below:
+
+
+![[Input Types](https://www.w3schools.com/java/java_user_input.asp){.external}](/images/javase/inputTypes.png){width="80%"}
+
+## Try/Catch for wrong inputs
+
+[When executing Java code](https://www.w3schools.com/java/java_try_catch.asp){.external}, **different errors may occur**: coding errors made by the programmer, **errors due to wrong input**, or other unforeseeable things.
+
+::: {.callout-note}
+## Definition Exception
+When an error occurs, Java will normally **stop** and **generate an error message**. The technical term for this is: Java will throw an exception (throw an error).
+:::
+
+The ``try`` and ``catch`` keywords come in pairs:
+
+- The ``try`` statement a**llows you to define a block of code to be tested for errors while it is being executed.**
+- The ``catch`` statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+```java
+try {
+  //  Block of code to try
+}
+catch(Exception e) {
+  //  Block of code to handle errors
+}
+```
+### Example
+
+The ``finally`` statement lets you execute code, after`` try...catch``, regardless of the result 
+
+```java
+public class Main {
+  public static void main(String[] args) {
+   System.out.println("Hi");
+    try {
+      int[] myNumbers = {1, 2, 3};
+      // this code will crash: there is NO positin 10 in this array myNumbers
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");
+    } finally {
+      System.out.println("The 'try catch' is finished.");
+    }
+     System.out.println("Bye");
+  }
+}
+
+// Output:
+// Hi
+// Something went wrong.
+// The 'try catch' is finished.
+// Bye
+```
+[Execute this code on w3schools](https://www.w3schools.com/java/tryjava.asp?filename=demo_try_catch_finally){.external}
 
 # Business Logic & Controller
 
