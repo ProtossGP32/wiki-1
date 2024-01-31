@@ -402,7 +402,7 @@ HashMap<String, String> capitalCities = new HashMap<String, String>();javase/sel
 
 ```bash
 Welcome to healtyFood Mananger v0.0
-Main Menu
+Main options list
 
 Choose an option:
 
@@ -485,9 +485,37 @@ public class Main {
 
 # Business Logic & Controller
 
-to-do
+The **sequence diagram** illustrates the creation of a ``Menu`` object.
 
-# Code
+ It begins with the ``Main`` initiating the process. The ``Controller`` requests **Main options,** and the ``View`` responds. After selecting an option, the ``Controller`` communicates with ``MenuManager`` to create and store the object, ultimately informing the ``Controller`` of the completion before ending the process with Main quitting.
+
+::: {.column-margin}
+![](/images/ifcd0210-24/healthyFood_v.1.jpg)
+:::
+
+```{mermaid}
+sequenceDiagram
+autonumber
+    Note right of Main: useCase create Menu object
+    Main->>+Controller: start
+    Controller-->>-View: call Main options list
+    View-->>Controller: send Main options list
+    Note right of Controller: select option 1
+    Controller->>+menuManager: create Menu object and store at HashMap menus<br/>menuManager.add(menu)
+    menuManager-->>+Menu: uses Menu entity class
+    Menu-->>+menuManager: uses Menu entity class
+    menuManager->>+Controller: object created and stored
+    Controller-->>-Main: quit
+```
+
+**References:**
+
+- [Sequence diagrams](https://mermaid.js.org/syntax/sequenceDiagram.html){.external}
+- [create Menu object use case sequence diagram](https://mermaid.live/view#pako:eNp9Uj1PwzAQ_SsnT6A2INYIdSkDS1iQGFCWq31tjZxz6g-hqup_55xEtKWAJ_vuPb93HwelvSFVq0i7TKzpyeImYNcy5uQ5dysKLYOcF58Igt1sE_g1NGi5hhxpiZFAB0LJNsQZ_OqDdBo5BVUtFrOl5xS8cxRqiAnDlD6FK0FVb5Y-a9Do3EAE3yfrOYKzcSIURIFe_Eds_sJfer5kOXE5UeDhyo-Y7qSaBhk3BX9dIaDoxuQDASZ4xrhtsIdCio-rcL84o9-hMTflfTvqnKVKNbPy69DMOAoQJ5v2oB3GODVSwtWVqf8Y5xo_JjD5H0sypzrMr1MZJ73LVno6AFpWc9VR6NAaWZxDCbYqbamjVtVyNbTG7FKrWj4KtCzS6561qtfoIs1V7o0IT4v2He2R370_vclYMdWM2zks6fEL2MrsJg){.external}
+- [mermaid live editor: create Menu object use case sequence diagram](https://mermaid.live/edit#pako:eNp9Uj1PwzAQ_SsnT6A2INYIdSkDS1iQGFCWq31tjZxz6g-hqup_55xEtKWAJ_vuPb93HwelvSFVq0i7TKzpyeImYNcy5uQ5dysKLYOcF58Igt1sE_g1NGi5hhxpiZFAB0LJNsQZ_OqDdBo5BVUtFrOl5xS8cxRqiAnDlD6FK0FVb5Y-a9Do3EAE3yfrOYKzcSIURIFe_Eds_sJfer5kOXE5UeDhyo-Y7qSaBhk3BX9dIaDoxuQDASZ4xrhtsIdCio-rcL84o9-hMTflfTvqnKVKNbPy69DMOAoQJ5v2oB3GODVSwtWVqf8Y5xo_JjD5H0sypzrMr1MZJ73LVno6AFpWc9VR6NAaWZxDCbYqbamjVtVyNbTG7FKrWj4KtCzS6561qtfoIs1V7o0IT4v2He2R370_vclYMdWM2zks6fEL2MrsJg){.external}
+
+
+# Code & project Management
 
 
 | Code Version | Commit | Folder-Tree | Output |
