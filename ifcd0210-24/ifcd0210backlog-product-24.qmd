@@ -1,6 +1,7 @@
 ---
 title: "IFCD0210 Product Backlog"
 categories: [ifcd0210, backlog]
+toc: false
 ---
 
 
@@ -33,11 +34,8 @@ Class Screen Recordings by Sprint on Google Drive, **videos with audio class .mp
 :::
 
 
-
-
-
-
 ::: {.column-page-right}
+
 ## December 2023
 
 
