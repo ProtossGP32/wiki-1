@@ -1,7 +1,7 @@
 ---
 title: "IFCD0210 Sprint Backlog"
 categories: [ifcd0210, backlog]
-toc: false
+toc: true
 ---
 
 <style>
@@ -15,6 +15,10 @@ tr:nth-child(4) {
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
 
+
+::: {.column-page-right}
+
+
 ##  ``Sprint#5: healthyFood mockup & model`` (January 2024)
 
 
@@ -27,7 +31,7 @@ tr:nth-child(4) {
 |  | 19 | 01/02/2024 | - Pure components React | - [Keeping Components Pure](https://react.dev/learn/keeping-components-pure){.external} </br>  -  [Props and states](/reactjs/reactjs-what-props.qmd)   |
 : Backlog Sprint#5 January 2024 {tbl-colwidths="[2,2,2,55,39]"}
 
-
+:::
 
 ::: {.callout-note}
 - `-` topic planned or pending
