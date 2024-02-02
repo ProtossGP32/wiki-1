@@ -327,6 +327,7 @@ export default function MenuData({menu}) {
 | -- | -- | -- | -- |
 | [GitHub code v0.0](https://github.com/AlbertProfe/healthyfoodFront/tree/99df8047f57acbae1bf53c9dd777a4d7cdd1b597){.external}  | create project, test to basic cards components | [Basic Structure](/images/reactjs/healthyfood-project-v0-0.png){width="80%"} | [render v0.0 render](/images/reactjs/healthyfood-render-v0-0.png) |
 | [GitHub code v0.1](https://github.com/AlbertProfe/healthyfoodFront/tree/5fdd2426c239f75de0fcaf4dc681b32d44a8bd99){.external}  | create JSON array for data, props, createOrder component |  -  |  [render v0.1 render](/images/reactjs/healthyfood-render-v0-1.png), [render v0.1 render (2)](/images/reactjs/healthyfood-render-v0-1-2.png) | 
+| [GitHub code v0.2 - branch ordersMapping ](https://github.com/AlbertProfe/healthyfoodFront/tree/af20283430d97732362b67f9323fedb89ae14c0d){.external}  |  create function dataFaker, JSON data file, useState hook, refactoring, conditional render SPA in root-App   | - | [render v0.2-1 render (2)](/images/reactjs/healthyfood-render-v0-2-1.png), [render v0.2-2 render (2)](/images/reactjs/healthyfood-render-v0-2-2.png) |
 
 
 <!--- navLinks -->
