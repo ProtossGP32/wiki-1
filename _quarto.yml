@@ -34,6 +34,10 @@ editor:
 website:
   title: albertprofe wiki
   favicon: /images/home/favicon.ico
+  
+  #page-navigation: true
+  #back-to-top-navigation: true
+  
   #cookie-consent:
   #  type: express
   #  style: headline
@@ -41,11 +45,14 @@ website:
 
   repo-url: https://github.com/Albertprofe/wiki
   repo-actions: [edit, issue]
+  repo-branch: master
+  repo-link-target: '_blank'
 
   navbar:
     background: secondary
     style: "floating"
     search: true
+    
     
     right:
       - text: Home
