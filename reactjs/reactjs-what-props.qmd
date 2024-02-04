@@ -1,5 +1,5 @@
 ---
-title: "React JS: ``props`` and state"
+title: "React JS: props and state"
 subtitle: Passing Props to a Component
 author: albertprofe
 date: "06/01/2021"

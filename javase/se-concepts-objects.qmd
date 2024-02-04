@@ -41,13 +41,20 @@ Let’s create a ``class`` called ``Person``.
 
 What would we want to know about a person? What we want to know depends on what problem we are trying to solve. In one situation, perhaps when creating an address book, we might want to know the person’s name and phone number and email.
 
-Here’s a possible ``Person`` class with `**instance variables, constructor, and methods.**`
+Here’s a possible ``Person`` class with:
 
-![](/images/javase/personClassDefn.png)
+  - `fields` or `attributes` (instance variables),
+  - `constructor`,
+  - and `methods.`
+
+![Person java class](/images/javase/personClassDefn.png){width="60%"}
 
 ::: {.callout-note collapse="true"}
+
 ## Person class
+
 ``` {.java .code-overflow-wrap filename="Person.java"}
+
 public class Person {
   //fields  
   private int age;

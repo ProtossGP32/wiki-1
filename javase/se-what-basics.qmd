@@ -37,6 +37,8 @@ It is [widely used](https://www.tiobe.com/tiobe-index/) for developing applicati
 
 Java SE is <mark>the core platform for Java-based software development</mark>, and is used by millions of developers around the world to create a wide variety of applications, from desktop and mobile applications to enterprise-level systems.
 
+- [The Java Version Almanac](https://javaalmanac.io/){.external}
+
 ::: {.column-margin}
 Java SE also includes a set of standard libraries, which provide a wide range of functionality, including basic input/output, networking, security, and graphical user interface (GUI) components. 
 :::
