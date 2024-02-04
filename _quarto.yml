@@ -6,7 +6,7 @@ format:
     fontsize:  "1.0em"
     theme:
       light: cosmo
-      dark: slate
+      dark: darkly
     css: styles.css
     toc: true
     toc-depth: 5
@@ -69,11 +69,13 @@ website:
       - sidebar:about
 
   sidebar:
+    
     - id: "linux"
       title: "Linux OS" 
       border: true
       collapse-level: 1
-      background: none
+      background: light
+      search: true
       style: "floating"
       contents: 
         - text: "Linux OS"
