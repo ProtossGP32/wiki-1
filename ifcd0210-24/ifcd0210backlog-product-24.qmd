@@ -12,13 +12,20 @@ format:
 
 # Class Screen Recordings
 
-Class Screen Recordings by Sprint on Google Drive, **videos with audio class .mp4**
+Class Screen Recordings by month on AWS S3, **video/audio screen class .mp4**
 </br>
 
 
 <p style="text-align:center;">
-<a href="https://drive.google.com/drive/folders/1Rn72noZjDC4E0ha6uzFYP3QwXkli8Vgv?usp=sharing" target="_blank"><img src="/images/ifcd0210-24/computer-laptop-code-icon.png" alt="Recordings" height="116" width="147"> <figcaption style="text-align:center;">Screen recordings</figcaption></a>
+<a href="https://cifojava2024screenrecordings.s3.eu-central-1.amazonaws.com/index.html/" target="_blank"><img src="/images/ifcd0210-24/computer-laptop-code-icon.png" alt="Recordings" height="116" width="147"> <figcaption style="text-align:center;">Screen recordings</figcaption></a>
 </p>
+
+::: {.column-page-right}
+
+```{=html}
+<iframe width="780" height="500" src="https://cifojava2024screenrecordings.s3.eu-central-1.amazonaws.com/index.html/" title="Quarto Documentation"></iframe>
+```
+:::
 
 
 # Product Backlog by Month
