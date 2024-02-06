@@ -17,16 +17,13 @@ Class Screen Recordings by month on AWS S3, **video/audio screen class .mp4**
 
 
 <p style="text-align:center;">
-<a href="https://drive.google.com/drive/folders/1Rn72noZjDC4E0ha6uzFYP3QwXkli8Vgv?usp=drive_link" target="_blank"><img src="/images/ifcd0210-24/computer-laptop-code-icon.png" alt="Recordings" height="116" width="147"> <figcaption style="text-align:center;">Screen recordings Google Drive</figcaption></a>
+<a href="https://drive.google.com/drive/folders/1Rn72noZjDC4E0ha6uzFYP3QwXkli8Vgv?usp=drive_link" target="_blank"><img src="/images/ifcd0210-24/computer-laptop-code-icon.png" alt="Recordings" height="116" width="147"> <figcaption style="text-align:center;">Screen recordings Google Drive (**to extinguish very soon ...** )</figcaption></a>
 </p>
 
 <p style="text-align:center;">
-<a href="https://cifojava2024screenrecordings.s3.eu-central-1.amazonaws.com/index.html" target="_blank"><img src="/images/ifcd0210-24/computer-laptop-code-icon.png" alt="Recordings" height="116" width="147"> <figcaption style="text-align:center;">Screen recordings AWS S3 (migrating ...)</figcaption></a>
+<a href="http://tinyurl.com/2pawt4s7" target="_blank"><img src="/images/ifcd0210-24/computer-laptop-code-icon.png" alt="Recordings" height="116" width="147"> <figcaption style="text-align:center;">Screen recordings AWS S3 (**migrating ...**)</figcaption></a>
 </p>
 
-**Temporary link to AWS S3**
-
-<mark>https://cifojava2024screenrecordings.s3.eu-central-1.amazonaws.com/index.html</mark>
 
 # Product Backlog by Month
 
