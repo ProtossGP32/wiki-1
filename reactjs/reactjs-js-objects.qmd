@@ -1,6 +1,6 @@
 ---
-title: "JS: basics"
-subtitle: JavasScript basics Dynamic client-side scripting
+title: "JavaScript: objects"
+subtitle: JavasScript objects Dynamic client-side scripting
 author: albertprofe
 date: "06/01/2021"
 date-modified: last-modified
@@ -41,16 +41,9 @@ import { useState } from 'react';
 :::
 
 ::: {.column-margin}
-![Initial render](/images/reactjs/ex42.png){width=100%}
+
 :::
 
-::: {.column-margin}
-![Next render and async working with ``timeout``](/images/reactjs/ex43.png){width=100%}
-:::
-
-::: {.column-margin}
-![3 Next render, ``timeout`` finished](/images/reactjs/ex44.png){width=100%}
-:::
 
 
 
@@ -60,7 +53,7 @@ import { useState } from 'react';
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} React JS: custom hooks](/reactjs/reactjs-hook-custom.qmd)
+[{{< fa solid arrow-left >}} JavaScript: functions](/reactjs/reactjs-js-functions.qmd)
 <br>
 </div>
 <br>
@@ -72,7 +65,7 @@ import { useState } from 'react';
 <br>
 <div class='column right next'>
 <br>
-[React JS App: events  {{< fa solid arrow-right >}}](/reactjs/reactjs-app-events.qmd)
+[JavaScript: async {{< fa solid arrow-right >}}](/reactjs/reactjs-js-async.qmd)
 <br>
 </div>
 <br>

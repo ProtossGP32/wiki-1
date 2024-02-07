@@ -1,5 +1,5 @@
 ---
-title: "JS: basics"
+title: "JavaScript: basics"
 subtitle: JavasScript basics Dynamic client-side scripting
 author: albertprofe
 date: "06/01/2021"
@@ -55,21 +55,40 @@ function updateName() {
 
 ## Interpreted versus compiled code
 
-You might hear the terms interpreted and compiled in the context of programming. In interpreted languages, the code is run from top to bottom and the result of running the code is immediately returned. You don't have to transform the code into a different form before the browser runs it. The code is received in its programmer-friendly text form and processed directly from that.
+You might hear the terms interpreted and compiled in the context of programming.
 
-Compiled languages on the other hand are transformed (compiled) into another form before they are run by the computer. For example, C/C++ are compiled into machine code that is then run by the computer. The program is executed from a binary format, which was generated from the original program source code.
+- In **interpreted languages, the code is run from top to bottom and the result of running the code is immediately returned.** You don't have to transform the code into a different form before the browser runs it.
+  -  The code is received in its programmer-friendly text form and processed directly from that.
+- **Compiled languages on the other hand are transformed (compiled) into another form before they are run by the computer**.
+  - For example, C/C++ are compiled into machine code that is then run by the computer. The program is executed from a binary format, which was generated from the original program source code.
 
-JavaScript is a lightweight interpreted programming language. The web browser receives the JavaScript code in its original text form and runs the script from that. From a technical standpoint, most modern JavaScript interpreters actually use a technique called just-in-time compiling to improve performance; the JavaScript source code gets compiled into a faster, binary format while the script is being used, so that it can be run as quickly as possible. However, JavaScript is still considered an interpreted language, since the compilation is handled at run time, rather than ahead of time. 
+<mark>JavaScript is a lightweight interpreted programming language. The web browser receives the JavaScript code in its original text form and runs the script from that.</mark>
+
+::: {.callout-note}
+**JS just-in-time compiling**
+From a technical standpoint, most modern JavaScript interpreters actually use a technique called just-in-time compiling to improve performance; the JavaScript source code gets compiled into a faster, binary format while the script is being used, so that it can be run as quickly as possible. However, JavaScript is still considered an interpreted language, since the compilation is handled at run time, rather than ahead of time. 
+:::
 
 ## Server-side versus client-side code
 
-You might also hear the terms server-side and client-side code, especially in the context of web development. Client-side code is code that is run on the user's computer — when a web page is viewed, the page's client-side code is downloaded, then run and displayed by the browser. In this module we are explicitly talking about client-side JavaScript.
+You might also hear the terms server-side and client-side code, especially in the context of web development.
 
-Server-side code on the other hand is run on the server, then its results are downloaded and displayed in the browser. Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET, and even JavaScript! JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our Dynamic Websites – Server-side programming topic.
+- **Client-side** code is code that is run on the user's computer — when a web page is viewed, the page's client-side code is downloaded, then run and displayed by the browser.
+  - In this section we are explicitly talking about client-side JavaScript.
+- **Server-side** code on the other hand is run on the server, then its results are downloaded and displayed in the browser.
+  - Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET, and even JavaScript! JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our Dynamic Websites – Server-side programming topic.
 
 ## Dynamic versus static code
 
-The word dynamic is used to describe both client-side JavaScript, and server-side languages — it refers to the ability to update the display of a web page/app to show different things in different circumstances, generating new content as required. Server-side code dynamically generates new content on the server, e.g. pulling data from a database, whereas client-side JavaScript dynamically generates new content inside the browser on the client, e.g. creating a new HTML table, filling it with data requested from the server, then displaying the table in a web page shown to the user. The meaning is slightly different in the two contexts, but related, and both approaches (server-side and client-side) usually work together
+The word **dynamic** is used to describe both client-side JavaScript, and server-side languages — it refers to the ability to update the display of a web page/app to show different things in different circumstances, generating new content as required.
+
+Server-side code dynamically generates new content on the server, e.g. pulling data from a database, whereas client-side JavaScript dynamically generates new content inside the browser on the client,
+
+::: {.column-margin}
+e.g. **creating a new HTML table**, filling it with data requested from the server, then displaying the table in a web page shown to the user.
+:::
+
+> The meaning is slightly different in the two contexts, but related, and both approaches (server-side and client-side) usually work together
 
 ## JavaScript and Java
 
@@ -77,7 +96,13 @@ The word dynamic is used to describe both client-side JavaScript, and server-sid
 JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but <mark>does not have Java's static typing and strong type checking</mark>. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.
 
 ::: {.column-margin}
-In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.
+In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values.
+:::
+
+::: {.column-margin}
+JavaScript has a prototype-based object model instead of the more common class-based object model.
+
+**The prototype-based model provides dynamic inheritance**; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.
 :::
 
 **JavaScript is a very free-form language compared to Java:** 
@@ -93,33 +118,93 @@ In contrast to Java's compile-time system of classes built by declarations, Java
 |Variable data types are not declared (dynamic typing, loosely typed).|Variable data types must be declared (static typing, strongly typed).|
 |Cannot automatically write to hard disk.|Can automatically write to hard disk.|
 
+# Language basics
 
+## Variables
+
+Variables are containers that store values. You start by declaring a variable with the ``let`` keyword, followed by the name you give to the variable:
 
 ``` {.jsx .code-overflow-wrap filename="App.js"}
-import { useState } from 'react';
-
-
-
+let myVariable;
 
 ```
 
 
-::: {.callout-note}
-
-
-:::
-
 ::: {.column-margin}
-![Initial render](/images/reactjs/ex42.png){width=100%}
+A **semicolon** at the end of a line indicates where a statement ends.
+
+It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement.
+
+There are other rules for when you should and shouldn't use semicolons.
+
+For more details, see [Your Guide to Semicolons in JavaScript.](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/){.external target="_blank"}
+
 :::
 
-::: {.column-margin}
-![Next render and async working with ``timeout``](/images/reactjs/ex43.png){width=100%}
+::: {.callout-important}
+**JavaScript is case sensitive**.
+
+This means myVariable is not the same as myvariable. If you have problems in your code, check the case!
+:::
+Note that variables may hold values that have different [data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures){.external target="_blank"}:
+
+|Variable|Explanation|Example|
+|---|---|---|
+|**String**|This is a sequence of text known as a string. To signify that the value is a string, enclose it in single or double quote marks.|let myVariable = 'Bob'; or let myVariable = "Bob";|
+|**Number**|This is a number. Numbers don't have quotes around them.|let myVariable = 10;|
+|**Boolean**|This is a True/False value. The words true and false are special keywords that don't need quote marks.|let myVariable = true;|
+|**Array**|This is a structure that allows you to store multiple values in a single reference.|let myVariable = [1,'Bob','Steve',10]; Refer to each member of the array like this: myVariable[0], myVariable[1], etc.|
+|Object|This can be anything. Everything in JavaScript is an object and can be stored in a variable. Keep this in mind as you learn.|let myVariable = document.querySelector('h1'); All of the above examples too.|
+
+## Comments
+
+Comments are snippets of text that can be added along with code. The browser ignores text marked as comments. You can write comments in JavaScript just as you can in CSS:
+
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+/*
+Everything in between is a comment.
+*/
+```
+
+If your comment contains no line breaks, it's an option to put it behind two slashes like this:
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+// This is a comment
+```
+
+## Operators
+
+An ``operator`` is a mathematical symbol that produces a result based on two values (or variables). In the following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.
+
+::: {.column-page-right}
+| **Operator** | **Explanation** | **Symbol(s)** | **Example** |
+|--------------|-----------------|---------------|-------------|
+| **Addition**     | Add two numbers together or combine two strings. | + | 6 + 9; </br> 'Hello ' + 'world!'; |
+| **Subtraction**, **Multiplication**, **Division** | These do what you'd expect them to do in basic math. | -, *, / | 9 - 3;</br>8 * 2; // multiply in JS is an asterisk </br> 9 / 3; |
+| **Assignment**   | As you've seen already: this assigns a value to a variable. | = | let myVariable = 'Bob'; |
+| **Strict equality** | This performs a test to see if two values are equal and of the same data type. It returns a true/false (Boolean) result. | === | let myVariable = 3; myVariable === 4; |
+| **Not**, **Does-not-equal** | This returns the logically opposite value of what it precedes. It turns a true into a false, etc.. </br></br>When it is used alongside the Equality operator, the negation operator tests whether two values are not equal. | !, !== | For "Not", the basic expression is true, but the comparison returns false because we negate it: </br>  </br>let myVariable = 3;  </br>!(myVariable === 3); </br> </br> "Does-not-equal" gives basically the same result with different syntax. Here we are testing "is myVariable NOT equal to 3". This returns false because myVariable IS equal to 3: </br> </br>let myVariable = 3; </br>myVariable !== 3; |
+: Operators JS {tbl-colwidths="[10,40,10,40]"}
 :::
 
-::: {.column-margin}
-![3 Next render, ``timeout`` finished](/images/reactjs/ex44.png){width=100%}
-:::
+# Flux control
+
+## Conditionals
+
+Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the if...else statement. For example:
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+
+let iceCream = "chocolate";
+if (iceCream === "chocolate") {
+  alert("Yay, I love chocolate ice cream!");
+} else {
+  alert("Awwww, but chocolate is my favorite…");
+}
+```
+
+The expression inside the if () is the test. This uses the strict equality operator (as described above) to compare the variable iceCream with the string chocolate to see if the two are equal. If this comparison returns true, the first block of code runs. If the comparison is not true, the second block of code—after the else statement—runs instead.
 
 # References
 
