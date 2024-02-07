@@ -309,6 +309,10 @@ Here's what each part of the code means:
 
 **MenuManager**
 
+::: {.column-margin}
+![menuManger object](/images/javase/menuManager-object.png)
+:::
+
 ```{mermaid}
 classDiagram
 
@@ -332,6 +336,9 @@ class MenuManager {
 ::: {.column-margin}
 Overall, the **MenuManager** acts as a central hub for menu-related operations, promoting efficient management and systematic handling of menu entities in Java applications.
 :::
+
+
+- [menuManager java class v0.2](https://github.com/AlbertProfe/hello11/blob/45bd308fa196a3ead3c271f1bd63981ef693d55f/src/main/java/org/example/MenuManager.java){.external target='_blank'}
 
 
 A ``MenuManager`` class is essential for managing **entities** like ``Menu`` for several reasons:
@@ -530,6 +537,9 @@ Within the ``MenuManager`` class, menus are managed using a HashMap, allowing fo
 
 ![healthyFood Restaurant use case create a new menu from CLI by user](/images/javase/healthyFood-createMenu-fluxExecution-v0.2.png)
 
+::: {.column-margin}
+![healthyFood Restaurant use case create a new menu from CLI by user -numbered-](/images/javase/healthyFood-createMenu-fluxExecution-v0.2-steps%20.png)
+:::
 
 # Code & project Management
 
