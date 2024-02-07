@@ -1,0 +1,151 @@
+---
+title: "JS: basics"
+subtitle: JavasScript basics Dynamic client-side scripting
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: description
+categories: [reactjs, js]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+
+
+::: {.summary}
+
+📘 **JavaScript — Dynamic client-side scripting**
+
+<mark>JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.).</mark>
+
+There are also more **advanced server side versions of JavaScript such as Node.js**, which allow you to add more functionality to a website than downloading files (such as realtime collaboration between multiple computers).
+
+JavaScript contains a standard library of objects, such as ``Array``, ``Date``, and ``Math``, and a **core set of language elements such as operators, control structures, and statements**.
+
+Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
+
+- **Client-side JavaScript** extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
+- **Server-side JavaScript** extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.
+
+
+:::
+
+---
+
+# Overview
+
+## JavaScript running order
+
+When the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom. This means that you need to be careful what order you put things in. For example, let's return to the block of JavaScript we saw in our first example: 
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
+
+function updateName() {
+  const name = prompt("Enter a new name");
+  button.textContent = `Player 1: ${name}`;
+}
+
+```
+
+## Interpreted versus compiled code
+
+You might hear the terms interpreted and compiled in the context of programming. In interpreted languages, the code is run from top to bottom and the result of running the code is immediately returned. You don't have to transform the code into a different form before the browser runs it. The code is received in its programmer-friendly text form and processed directly from that.
+
+Compiled languages on the other hand are transformed (compiled) into another form before they are run by the computer. For example, C/C++ are compiled into machine code that is then run by the computer. The program is executed from a binary format, which was generated from the original program source code.
+
+JavaScript is a lightweight interpreted programming language. The web browser receives the JavaScript code in its original text form and runs the script from that. From a technical standpoint, most modern JavaScript interpreters actually use a technique called just-in-time compiling to improve performance; the JavaScript source code gets compiled into a faster, binary format while the script is being used, so that it can be run as quickly as possible. However, JavaScript is still considered an interpreted language, since the compilation is handled at run time, rather than ahead of time. 
+
+## Server-side versus client-side code
+
+You might also hear the terms server-side and client-side code, especially in the context of web development. Client-side code is code that is run on the user's computer — when a web page is viewed, the page's client-side code is downloaded, then run and displayed by the browser. In this module we are explicitly talking about client-side JavaScript.
+
+Server-side code on the other hand is run on the server, then its results are downloaded and displayed in the browser. Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET, and even JavaScript! JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our Dynamic Websites – Server-side programming topic.
+
+## Dynamic versus static code
+
+The word dynamic is used to describe both client-side JavaScript, and server-side languages — it refers to the ability to update the display of a web page/app to show different things in different circumstances, generating new content as required. Server-side code dynamically generates new content on the server, e.g. pulling data from a database, whereas client-side JavaScript dynamically generates new content inside the browser on the client, e.g. creating a new HTML table, filling it with data requested from the server, then displaying the table in a web page shown to the user. The meaning is slightly different in the two contexts, but related, and both approaches (server-side and client-side) usually work together
+
+## JavaScript and Java
+
+
+JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but <mark>does not have Java's static typing and strong type checking</mark>. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.
+
+::: {.column-margin}
+In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.
+:::
+
+**JavaScript is a very free-form language compared to Java:** 
+
+- **You do not have to declare all variables, classes, and methods**.
+- You do not have to be concerned with **whether methods are public, private, or protected**, and
+- you do not have to **implement interfaces**
+- Variables, parameters, and function return types are not explicitly typed.
+
+|JavaScript|Java|
+|---|---|
+|Object-oriented. No distinction between types of objects. Inheritance is through the prototype mechanism, and properties and methods can be added to any object dynamically.|Class-based. Objects are divided into classes and instances with all inheritance through the class hierarchy. Classes and instances cannot have properties or methods added dynamically.|
+|Variable data types are not declared (dynamic typing, loosely typed).|Variable data types must be declared (static typing, strongly typed).|
+|Cannot automatically write to hard disk.|Can automatically write to hard disk.|
+
+
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+import { useState } from 'react';
+
+
+
+
+```
+
+
+::: {.callout-note}
+
+
+:::
+
+::: {.column-margin}
+![Initial render](/images/reactjs/ex42.png){width=100%}
+:::
+
+::: {.column-margin}
+![Next render and async working with ``timeout``](/images/reactjs/ex43.png){width=100%}
+:::
+
+::: {.column-margin}
+![3 Next render, ``timeout`` finished](/images/reactjs/ex44.png){width=100%}
+:::
+
+# References
+
+- [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide){.external target="_blank"}
+- [Introduction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction){.external target="_blank"}
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} React JS: props and state](/reactjs/reactjs-what-props.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[JavaScript: functions {{< fa solid arrow-right >}}](/reactjs/reactjs-js-functions.qmd)
+<br>
+</div>
+<br>
+</div>

@@ -581,7 +581,7 @@ export default function Counter() {
 <br>
 <div class='column right next'>
 <br>
-[React JS ES6: arrow functions  {{< fa solid arrow-right >}}](/reactjs/reactjs-es6-arrow.qmd)
+[JavaScript: basics {{< fa solid arrow-right >}}](/reactjs/reactjs-js-basics.qmd)
 <br>
 </div>
 <br>

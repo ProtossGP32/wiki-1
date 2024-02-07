@@ -1,0 +1,79 @@
+---
+title: "JS: basics"
+subtitle: JavasScript basics Dynamic client-side scripting
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: description
+categories: [reactjs, js]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+## Overview
+
+::: {.summary}
+
+📘 **JavaScript — Dynamic client-side scripting**
+
+
+
+:::
+
+---
+
+
+``` {.jsx .code-overflow-wrap filename="App.js"}
+import { useState } from 'react';
+
+
+
+
+```
+
+
+::: {.callout-note}
+
+
+:::
+
+::: {.column-margin}
+![Initial render](/images/reactjs/ex42.png){width=100%}
+:::
+
+::: {.column-margin}
+![Next render and async working with ``timeout``](/images/reactjs/ex43.png){width=100%}
+:::
+
+::: {.column-margin}
+![3 Next render, ``timeout`` finished](/images/reactjs/ex44.png){width=100%}
+:::
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} JavaScript: async](/reactjs/reactjs-js-async.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[React JS ES6: arrow functions  {{< fa solid arrow-right >}}](/reactjs/reactjs-es6-arrow.qmd)
+<br>
+</div>
+<br>
+</div>
