@@ -320,6 +320,119 @@ export default function MenuData({menu}) {
 
 ```
 
+## Rendering Lists
+
+First at all, import the **data from JSON** into an array of literal object JS:
+
+- [ordersDataJSON](https://github.com/AlbertProfe/healthyfoodFront/blob/ordersMapping/src/ordersDataJSON.js){.external target='_blank'}
+  
+```{.jsx .code-overflow-wrap filename="OrderList.jsx"}
+import { ordersDataJSON } from "./ordersDataJSON.js";
+```
+```{.bash}
+ {
+    "id": "O505",
+    "date": "03/12/2022",
+    "waiter": "Pere",
+    "qtyPeople": 8,
+    "totalPayment": 90.33,
+    "paid": true,
+    "table": "table6",
+    "menus": [
+      {
+        "menu": "Girona",
+        "qty": 9
+      },
+      {
+        "menu": "Santiago",
+        "qty": 1
+      }
+    ]
+  },
+```
+
+Then, **map** the orders into a new array of JSX nodes, for exemple a list for `renderData` ids:
+
+```{.jsx .code-overflow-wrap filename="OrderList.jsx"}
+
+export default function OrdersList() {
+
+
+const renderData = ordersDataJSON.map(order => 
+                    <li>{order.id}</li>);
+
+
+return <ul>{renderData}</ul>;
+
+}
+
+```
+
+::: {.column-margin}
+**Array.prototype.map()**
+The [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map){.external target='_blank'} method of Array instances creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+:::
+
+::: {.callout-note}
+
+The <mark>map()</mark> method is an **iterative** method.
+
+It calls a provided **callbackFn** function once for each element in an array and constructs a new array from the results.
+
+Read the iterative methods section for more information about how these methods work in general.
+
+:::
+
+
+
+
+
+```{.jsx .code-overflow-wrap filename="OrderList.jsx"}
+import "w3-css/w3.css";
+import { ordersDataJSON } from "./ordersDataJSON.js";
+
+export default function OrdersList() {
+  const renderData = ordersDataJSON.map((order) => (
+    <>
+      <div class="w3-card-4" style={{ width: "50%" }}>
+        <header class="w3-container w3-sand">
+          <h3>Id: {order.id}</h3>
+        </header>
+        <br />
+        <div class="w3-container">
+          Waiter: {order.waiter}, qtyPeople: {order.qtyPeople}, To pay:{" "}
+          {order.paid ? " ✔" : "X"} {order.totalPayment} $
+        </div>
+        <div class="w3-container">Date: {order.date}</div>
+        <div class="w3-container">Table: {order.table}</div>
+        <div class="w3-container">Menus:<br/>
+         {order.menus.map ( (menu) => ( <><span>{menu.menu}:{menu.qty}, </span></>))  }</div>
+        <br />
+        <footer class="w3-container w3-black">
+          <h5>healthyFood restaurant</h5>
+        </footer>
+      </div>
+      <br />
+    </>
+  ));
+
+  //console.log(ordersDataJSON);
+  console.log("renderdata", renderData);
+
+
+  return (
+    <>
+      <div class="w3-container">
+        <h1>Orders List</h1>
+        <div class="w3-container">{renderData}</div>
+      </div>
+    </>
+  );
+}
+
+```
+
 # Code
 
 ::: {.column-page-right}
