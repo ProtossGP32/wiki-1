@@ -320,7 +320,13 @@ export default function MenuData({menu}) {
 
 ```
 
-## Rendering Lists
+## Rendering `order` list
+
+Our restaurant will have in this version three *entities*:
+
+- `menu`
+- `table`
+- `order`, it joins menus and tables
 
 First at all, import the **data from JSON** into an array of literal object JS:
 
@@ -368,6 +374,8 @@ return <ul>{renderData}</ul>;
 
 ```
 
+And eventually render `<ul>{renderData}</ul>`
+
 ::: {.column-margin}
 **Array.prototype.map()**
 The [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map){.external target='_blank'} method of Array instances creates a new array populated with the results of calling a provided function on every element in the calling array.
@@ -376,18 +384,20 @@ The [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 ::: {.callout-note}
 
-The <mark>map()</mark> method is an **iterative** method.
+The <mark>map()</mark> method is an **iterative** method. <mark>map()</mark>:
+
+- creates a new array from calling a function for every array element.
+- does not execute the function for empty elements.
+- does not change the original array.
 
 It calls a provided **callbackFn** function once for each element in an array and constructs a new array from the results.
-
-Read the iterative methods section for more information about how these methods work in general.
 
 :::
 
 
+- [Sandbox w3shcool map()](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_map3){.external target='_blank'}
 
-
-
+::: {.column-page-right}
 ```{.jsx .code-overflow-wrap filename="OrderList.jsx"}
 import "w3-css/w3.css";
 import { ordersDataJSON } from "./ordersDataJSON.js";
@@ -432,6 +442,7 @@ export default function OrdersList() {
 }
 
 ```
+:::
 
 # Code
 
