@@ -9,28 +9,50 @@ baseurlaws: "https://cifojava2024screenrecordings.s3.eu-central-1.amazonaws.com/
 ---
 
 <style>
-tr:nth-child(1) {
-  background-color: #b2b2b2!important;
-  color: #f4f4f4!important;
+ .heatMap th {
+        background:  #f4f4f4;
+   
+    }
+tr:nth-child(3) {
+  background-color: #f4f4f4;
+
 }
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color:  #f4f4f4;}
+
+
 </style>
 
 ![Sprint Backlog](/images/home/backlog.jpg){width="30%"}
+
+<div class="heatMap">
 
 ::: {.column-page-right}
 
 ##  ``Sprint#7: healthyFood adding interactivity (2)`` (February 2024)
 
 
+
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #7 | 24 | 12/02/2024 | - Adding more CRUD operations to ``menuManager`` </br>  - Designing UML/MockUp ``createOrder`` </br> - Adding CRUD operations to model: ``table`` </br> - Creating DDD | - [Class and objects](/javase/se-concepts-objects.qmd) </br>   - [Example Controller and Manager: Lab#SE02-04](/javase/selab2-4.qmd)  </br> - [Example UML: Lab#SE03-03](/javase/selab3-3.qmd)  </br>- [Lab#SE04-1](/javase/selab4-1.qmd)</br>  </br>  <mark> [Screen video: Monday-1]({{< meta baseurlaws >}}){.external target='_blank'}<mark>  </br>[Screen video: Monday-2]({{< meta baseurlaws >}}){.external target='_blank'}  |
+| #7 | 24 | **12/02/2024** | - Adding more CRUD operations to ``menuManager`` </br>  - Designing UML/MockUp ``createOrder`` </br> - Adding CRUD operations to model: ``table`` </br> - Creating DDD | - [Class and objects](/javase/se-concepts-objects.qmd) </br>   - [Example Controller and Manager: Lab#SE02-04](/javase/selab2-4.qmd)  </br> - [Example UML: Lab#SE03-03](/javase/selab3-3.qmd)  </br>- [Lab#SE04-1](/javase/selab4-1.qmd)</br>  </br>  <mark> [Screen video: Monday-1]({{< meta baseurlaws >}}){.external target='_blank'}<mark>  </br>[Screen video: Monday-2]({{< meta baseurlaws >}}){.external target='_blank'}  |
 |  | 25 | 13/02/2024 | - Adding CRUD operations to model: ``order`` </br>  | </br>  </br>  <mark> [Screen video: Tuesday-1]({{< meta baseurlaws >}}){.external target='_blank'}<mark>  </br>[Screen video: Tuesday-2]({{< meta baseurlaws >}}){.external target='_blank'}  |
+|  |
 |  | 26 | 15/02/2024 | - React JS: buttons, useState & onclick  </br> - Render cycle  </br> </br> | - [Adding Interactivity](https://react.dev/learn/adding-interactivity){.external target='_blank'}</br></br><mark> [Screen video: Thursday-1]({{< meta baseurlaws >}}){.external target='_blank'}<mark>  </br>[Screen video: Thursday-2]({{< meta baseurlaws >}}){.external target='_blank'}  |
 |  | 27 | 16/02/2024 |  - React JS: State as a Snapshot </br>  |  - [State as a Snapshot](https://react.dev/learn/state-as-a-snapshot){.external target='_blank'} </br> - [Rendering takes a snapshot in time](https://react.dev/learn/state-as-a-snapshot#rendering-takes-a-snapshot-in-time){.external target='_blank'} </br></br><mark> [Screen video: Friday-1]({{< meta baseurlaws >}}){.external target='_blank'}<mark>  </br>[Screen video: Friday-2]({{< meta baseurlaws >}}){.external target='_blank'}  |
 : Backlog Sprint#7 February 2024 {tbl-colwidths="[2,2,2,55,39]"}
 
+
+
 :::
+
+
 
 ::: {.callout-note}
 - `-` topic planned or pending
