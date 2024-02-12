@@ -13,8 +13,7 @@ baseurlaws: "https://cifojava2024screenrecordings.s3.eu-central-1.amazonaws.com/
 
 # Class Screen Recordings
 
-Class Screen Recordings by month on AWS S3, **video/audio screen class .mp4**
-<a href="https://drive.google.com/drive/folders/1Rn72noZjDC4E0ha6uzFYP3QwXkli8Vgv?usp=drive_link" target="_blank">on Google Drive (**to extinguish very soon ...** )</a>
+Class Screen Recordings by day on [AWS S3](http://tinyurl.com/2pawt4s7){.external target='_blank'}, **video/audio screen class .mp4**
 
 </br>
 
