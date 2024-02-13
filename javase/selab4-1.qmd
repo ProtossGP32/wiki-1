@@ -541,8 +541,22 @@ Within the ``MenuManager`` class, menus are managed using a HashMap, allowing fo
 ![healthyFood Restaurant use case create a new menu from CLI by user -numbered-](/images/javase/healthyFood-createMenu-fluxExecution-v0.2-steps%20.png)
 :::
 
-# Domains
+# Exploring Domain-Driven Design: a Practical Approach
 
+Here, we'll break down DDD concepts into simple, understandable components:
+
+- `Controllers` manage user interactions, while `Managers` handle business logic.
+- `Models` represent domain entities.
+- `Repositories` manage data, and
+- `Utils` streamline common tasks.
+  
+Using practical examples like `Orders` and `Menus`, we'll see how these concepts play out in real `Java SE applications`.
+
+By the end, you'll grasp how **DDD principles seamlessly integrate with Java SE**, you will build clearer, more maintainable software.
+
+**Code:**
+
+- [GitHub code v0.4](https://github.com/AlbertProfe/hello11/tree/6678eef933a92298b04b74bb78aae76eedc753cd){.external} 
 
 ::: {.column-page-right}
 | Name         | Description                                                                                                                   | Why                                                                                               | Example                              |
