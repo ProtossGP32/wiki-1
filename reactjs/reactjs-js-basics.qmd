@@ -210,6 +210,7 @@ The expression inside the if () is the test. This uses the strict equality opera
 
 - [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide){.external target="_blank"}
 - [Introduction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction){.external target="_blank"}
+- [The Modern JavaScript Tutorial](https://javascript.info/){.external target='_blank'}
 
 <!--- navLinks -->
 <br><br>

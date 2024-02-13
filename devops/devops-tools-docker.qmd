@@ -14,9 +14,90 @@ format:
   html
 ---
 
-About this site: to-do
 
-https://sites.google.com/view/devopscifo/devops-tools/docker<!--- navLinks -->
+::: {.summary}
+
+📘 **What is a container**
+
+A ``container`` is a lightweight, standalone, and executable software package that includes everything needed to run a piece of software.
+
+And one of the most popular tools for working with containers is **Docker**.
+
+**Docker** is both the name of the company ([Docker Inc](https://en.wikipedia.org/wiki/Docker,_Inc.){.external target='_blank'}) and the software they have created which packages software into containers. 
+:::
+
+# Overview
+
+``Containers`` are designed to isolate applications and their dependencies, ensuring that they can run consistently across different environments. Whether the application is running from your computer or in the cloud, the application behavior remains the same.
+
+::: {.column-margin}
+**Virtual machines (VMs)** are created through a process called virtualization. 
+
+Virtualization is a technology that allows you to create multiple simulated environments or virtual versions of something, such as an operating system, a server, storage, or a network, on a single physical machine.
+
+These virtual environments behave as if they are independent, separate entities, even though they share the resources of the underlying physical system.
+:::
+
+Unlike **VMs** which virtualize the hardware, containers virtualize the operating system. This simply means that a container uses a single OS to create a virtual application and its libraries. Containers run on top of a shared OS provided by the host system.
+
+![](/images/devops/containers.png)
+
+Containers have several benefits:
+
+- **Portability**: Containers are designed to be platform-independent. They can run on any system that supports the container runtime, such as Docker, regardless of the underlying operating system. This makes it easier to move applications between different environments, including local development machines, testing servers, and different cloud platforms.
+- **Efficiency**: Containers share the host system's operating system, which reduces the overhead of running a virtual machine with multiple operating systems. This leads to more efficient resource utilization and allows for a higher density of applications that can run on a single host.
+- **Consistency**: Containers package all the necessary components, including the application code, runtime, libraries, and dependencies, into a single unit. This eliminates the "it works on my machine" problem and ensures that the application runs consistently across different environments, from development to production.
+- **Isolation**: Containers provide a lightweight and isolated environment for running applications. Each container encapsulates the application and its dependencies, ensuring that they do not interfere with each other. This isolation helps prevent conflicts and ensures consistent behavior across different environments.
+- **Fast Deployment**: Containers can be created and started quickly, often in a matter of seconds. This rapid deployment speed is particularly beneficial for applications that need to rapidly scale up or down based on demand.
+
+# What is Docker?
+
+Now that we have covered **VMs and containers**, what exactly is Docker? <mark>Docker is simply a tool for creating and managing containers.</mark>
+
+At its core, ``Docker`` has two concepts that are useful to understand: `
+
+- the ``Dockerfile`` and
+- ``Docker`` Images.
+
+A ``Dockerfile`` contains the set of instructions for building a ``Docker`` Image.
+
+A ``Docker`` Image serves as a template for creating ``Docker`` containers. It contains all the necessary code, runtime, system tools, libraries, and settings required to run a software application.
+
+![](/images/devops/docker-creation.png)
+
+So, a Dockerfile is used to build a Docker Image which is then used as the template for creating one or more Docker containers. This is illustrated below.
+
+# Example
+
+Spring Boot is great for running inside a Docker container. Spring Boot applications ‘just run’.  For running it in a Docker container, you only require a base OS and a JDK and then build into a Docker container.
+
+``` {.dockerfile .code-overflow-wrap filename="App.dockerfile"}
+FROM adoptopenjdk/openjdk11:alpine-jre
+MAINTAINER albertprofe
+COPY springbootClient-0.0.1-SNAPSHOT.jar example1.jar
+ENTRYPOINT ["java","-jar","example1.jar"]
+```
+
+Images (like Docker images) are read-only templates containing instructions for creating a container. A Docker image creates containers to run on the Docker platform.
+
+![](/images/devops/docker-creation-albertprofe.png)
+
+Then
+
+``` {.terminal .code-overflow-wrap}
+> docker build
+> docker run
+```
+
+# References
+
+- [docker](https://sites.google.com/view/devopscifo/devops-tools/docker){.external target='_blank'}
+- [How Docker Containers Work – Explained for Beginners](https://www.freecodecamp.org/news/how-docker-containers-work/){.external target='_blank'}
+
+
+
+
+<!--- navLinks -->
 <br><br>
 <div class=row>
 <br>

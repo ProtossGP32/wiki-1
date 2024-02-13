@@ -53,7 +53,7 @@ import { useState } from 'react';
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} JavaScript: async](/reactjs/reactjs-js-async.qmd)
+[{{< fa solid arrow-left >}} JavaScript: variables](/reactjs/reactjs-js-variables.qmd)
 <br>
 </div>
 <br>

@@ -373,7 +373,7 @@ website:
             - reactjs/reactjs-js-basics.qmd
             - reactjs/reactjs-js-functions.qmd
             - reactjs/reactjs-js-objects.qmd
-            - reactjs/reactjs-js-async.qmd
+            - reactjs/reactjs-js-variables.qmd
             - reactjs/reactjs-js-api.qmd
         - text: "---"  
         - section: "ES6: ECMAScript 6"
