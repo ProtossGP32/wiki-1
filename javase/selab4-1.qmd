@@ -551,6 +551,7 @@ Within the ``MenuManager`` class, menus are managed using a HashMap, allowing fo
 | [GitHub code v0.1](https://github.com/AlbertProfe/hello11/tree/b4342d0c872dbcf8a45747b73613614ac1eb5ce2){.external}  |  basic MVC structure Java SE  | - |  -  |
 | [GitHub code v0.2](https://github.com/AlbertProfe/hello11/tree/45bd308fa196a3ead3c271f1bd63981ef693d55f){.external}  |   create and save `Menu` on HashMap `menus` from UI cli to `MenuManager`  | [Classes Structure](/images/javase/restaurant-tree-folder-v0.2.png){width="80%"} |  [output v0.2 cli](/images/javase/ouputs/output-healthyFood-v0.2.pdf)  |
 | [GitHub code v0.3](https://github.com/AlbertProfe/hello11/tree/0bd253bf88ee5ac2aaa150fe04754ac9ae5b408c){.external}  |  refactoring to DDD and `tableManager` with `createTable`   | [Classes Structure](/images/javase/restaurant-tree-folder-v0.3.png){width="80%"} |  [output v0.3 cli](/images/javase/ouputs/output-healthyFood-v0.3.pdf)  |
+| [GitHub code v0.4](https://github.com/AlbertProfe/hello11/tree/6678eef933a92298b04b74bb78aae76eedc753cd){.external}  |  refactoring to DDD **first non-tentative approach**  | [Classes Structure](/images/javase/restaurant-tree-folder-v0.4.png){width="80%"} |  [output v0.4 cli](/images/javase/ouputs/output-healthyFood-v0.4.pdf)  |
 
 
 
