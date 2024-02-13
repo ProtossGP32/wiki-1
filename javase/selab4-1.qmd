@@ -541,6 +541,21 @@ Within the ``MenuManager`` class, menus are managed using a HashMap, allowing fo
 ![healthyFood Restaurant use case create a new menu from CLI by user -numbered-](/images/javase/healthyFood-createMenu-fluxExecution-v0.2-steps%20.png)
 :::
 
+# Domains
+
+
+::: {.column-page-right}
+| Name         | Description                                                                                                                   | Why                                                                                               | Example                              |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------|
+| Controller   | Controls the flow of the application, handling user input and invoking appropriate manager methods.                           | Separates user interaction from business logic, promoting modularity and easier maintenance.     | `HealthyController.java`            |
+| Manager      | Contains the business logic of the application, coordinating operations between different components and enforcing rules.     | Centralizes and encapsulates business rules, ensuring consistency and facilitating testing.     | `TableManager.java`, `MenuManager.java` |
+| Model        | Represents domain entities and data structures used within the application, encapsulating their state and behavior.           | Provides a clear representation of the application's domain, promoting understanding and reuse. | `Order.java`, `Menu.java`, `Table.java` |
+| Repository   | Manages the persistence of domain objects, abstracting data storage and retrieval details, providing a clean data access layer. | Separates data access concerns from business logic, enabling flexibility and testability.       | `TableRepository.java`, `MenuRepository.java` |
+| Utils        | Contains utility classes and methods providing common functionalities required across the application.                        | Encourages code reuse, reduces redundancy, and enhances maintainability.                        | `CommonUtilities.java`               |
+| View         | Represents the user interface components of the application, presenting data to the user and capturing user interactions.    | Separates presentation logic from other components, improving maintainability and flexibility. | `MenuOptions.java`  |
+
+:::
+
 # Code & project Management
 
 
