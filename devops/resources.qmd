@@ -34,7 +34,7 @@ format:
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab 5: k8s on Digital Ocean](/devops/devops-lab-k8sdigitalocean.qmd)
+[{{< fa solid arrow-left >}} Lab 6: Spring Boot AWS codecommit ](/devops/devops-lab-springawsdeploy.qmd)
 <br>
 </div>
 <br>

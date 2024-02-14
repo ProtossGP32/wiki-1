@@ -1,5 +1,5 @@
 ---
-title: "Lab 3: Spring Boot and AWS S3"
+title: "Lab 3: Spring Boot and AWS S3 publisher"
 subtitle: Lab
 author: albertprofe
 date: "06/01/2021"
@@ -14,15 +14,30 @@ format:
   html
 ---
 
-About this site: to-do
+![Spring Boot deploy](/images/devops/springboot-deploy.png)
 
-https://sites.google.com/view/devopscifo/labs/3-springb-books-s3<!--- navLinks -->
+Spring Boot app  build with Jenkins via Github and deployed to AWS:
+
+1. create ``Spring Boot``s projects
+2. commit && push to ``GitHub``
+3. create ``.jar executable from Github with Jenkins``
+4. **Upload** ``.jar to AWS S3 with s3publisher``
+5. connect ``AWS S3 to AWS AEB``
+6. AWS AEB ``deploy`` and ``publish``
+
+# References
+
+
+- [Spring Boot AWS S3](https://sites.google.com/view/devopscifo/labs/3-springb-books-s3){.external target0='_blank'}
+
+
+<!--- navLinks -->
 <br><br>
 <div class=row>
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab 2: Spring Boot Intro](/devops/devops-lab-springbooksintro.qmd)
+[{{< fa solid arrow-left >}} Lab 2: Spring Boot AWS AEB manually](/devops/devops-lab-springbooksintro.qmd)
 <br>
 </div>
 <br>
@@ -34,7 +49,7 @@ https://sites.google.com/view/devopscifo/labs/3-springb-books-s3<!--- navLinks -
 <br>
 <div class='column right next'>
 <br>
-[Lab 4: Spring Boot and Docker  {{< fa solid arrow-right >}}](/devops/devops-lab-springbooksdocker.qmd)
+[Lab 4: Spring Boot Docker/Jenkins  {{< fa solid arrow-right >}}](/devops/devops-lab-springbooksdocker.qmd)
 <br>
 </div>
 <br>

@@ -79,7 +79,7 @@ Lastly, its integration with popular **DevOps** tools and provision of APIs faci
 <br>
 <div class='column right next'>
 <br>
-[Howto install Jenkins  {{< fa solid arrow-right >}}](/devops/devops-tools-installjenkins.qmd)
+[Nagios {{< fa solid arrow-right >}}](/devops/devops-tools-nagios.qmd)
 <br>
 </div>
 <br>

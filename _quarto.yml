@@ -167,8 +167,8 @@ website:
             - devops/devops-tools-jenkins.qmd
             - devops/devops-tools-k8s.qmd
             - devops/devops-tools-digitalocean.qmd
-            - devops/devops-tools-installjenkins.qmd
-            - devops/devops-tools-installmaven.qmd
+            - devops/devops-tools-nagios.qmd
+            - devops/devops-tools-ansible.qmd
         - text: "---"      
         - section: "DevOps Laboratories"
           contents: 
@@ -177,6 +177,7 @@ website:
             - devops/devops-lab-springbookss3.qmd
             - devops/devops-lab-springbooksdocker.qmd
             - devops/devops-lab-k8sdigitalocean.qmd
+            - devops/devops-lab-springawsdeploy.qmd
         - text: "---"  
         - section: "DevOps readings"
           contents: 
