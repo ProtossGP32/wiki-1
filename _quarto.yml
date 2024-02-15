@@ -375,7 +375,7 @@ website:
             - reactjs/reactjs-js-functions.qmd
             - reactjs/reactjs-js-objects.qmd
             - reactjs/reactjs-js-variables.qmd
-            - reactjs/reactjs-js-api.qmd
+            - reactjs/reactjs-js-flux.qmd
         - text: "---"  
         - section: "ES6: ECMAScript 6"
           contents: 

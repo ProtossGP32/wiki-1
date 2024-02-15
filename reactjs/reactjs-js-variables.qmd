@@ -136,7 +136,7 @@ Variables declared with the ``const`` maintain constant values. ``const`` declar
 <br>
 <div class='column right next'>
 <br>
-[JavaScript: api {{< fa solid arrow-right >}}](/reactjs/reactjs-js-api.qmd)
+[JavaScript: flux control {{< fa solid arrow-right >}}](/reactjs/reactjs-js-flux.qmd)
 <br>
 </div>
 <br>

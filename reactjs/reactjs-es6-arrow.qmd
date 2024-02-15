@@ -78,7 +78,7 @@ They do not have their own ``this`` value, and they cannot be used as constructo
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} JavaScript: api](/reactjs/reactjs-js-api.qmd)
+[{{< fa solid arrow-left >}} JavaScript: flux control](/reactjs/reactjs-js-flux.qmd)
 <br>
 </div>
 <br>
