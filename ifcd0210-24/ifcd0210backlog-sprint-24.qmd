@@ -38,11 +38,11 @@ tr:hover {background-color:  #f4f4f4;}
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #8 | 28 | 19/02/2024 | - CRUD operations for ``menu`` and ``table`` </br> - Create ``order`` mockup and UML | - [Lab#SE04-1](/javase/selab4-1.qmd) </br> |
-|  | 29 | 20/02/2024 | - Create ``order``  | - [Lab#SE04-1](/javase/selab4-1.qmd) </br> - [Static modifier](/javase/se-concepts-static.qmd) </br> - [Coupling and DDD](/javase/se-concepts-coupling.qmd)  </br>   |
+| #8 | 28 | 19/02/2024 | - CRUD operations for ``menu`` and ``table`` </br> - Create ``order`` mockup and UML |  - [Static modifier](/javase/se-concepts-static.qmd) </br> - [Coupling and DDD](/javase/se-concepts-coupling.qmd)  </br>  - [Lab#SE04-1](/javase/selab4-1.qmd) </br> |
+|  | 29 | 20/02/2024 | - Create ``order``  | - [Lab#SE04-1](/javase/selab4-1.qmd) </br>  |
 |  |
 |  | 30 | 22/02/2024 |  - React JS: buttons, useState & ``onclick``  </br>   - Render cycle | - [Adding Interactivity](https://react.dev/learn/adding-interactivity){.external target='_blank'}  </br>  |
-|  | 31 | 23/02/2024 | - React JS: State as a Snapshot </br>   - DDD: router and project structure  </br>  -  | - [State as a Snapshot](https://react.dev/learn/state-as-a-snapshot){.external target='_blank'} </br> - [Rendering takes a snapshot in time](https://react.dev/learn/state-as-a-snapshot#rendering-takes-a-snapshot-in-time){.external target='_blank'} </br>   |
+|  | 31 | 23/02/2024 | - React JS: State as a Snapshot </br>   - DDD: router and project structure  </br>   | - [State as a Snapshot](https://react.dev/learn/state-as-a-snapshot){.external target='_blank'} </br> - [Rendering takes a snapshot in time](https://react.dev/learn/state-as-a-snapshot#rendering-takes-a-snapshot-in-time){.external target='_blank'} </br>   |
 : Backlog Sprint#8 February 2024 {tbl-colwidths="[2,2,2,55,39]"}
 
 
