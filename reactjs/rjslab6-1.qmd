@@ -473,13 +473,48 @@ export default function OrdersList() {
 
 - [w3.css templates](https://www.w3schools.com/w3css/w3css_templates.asp){.external target='_blank'}
 - [Gourment and catering template](https://www.w3schools.com/w3css/tryw3css_templates_gourmet_catering.htm#about){.external target='_blank'}
-- [Gourment and catering  sandbox](https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_gourmet_catering&stacked=h){.external target='_blank'} 
+- [Gourment and catering  sandbox](https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_gourmet_catering&stacked=h){.external target='_blank'}
+- [GitHub code v0.5 - branch ordersMapping](https://github.com/AlbertProfe/healthyfoodFront/tree/220e0f3604fb205f0fade6f54219aed3d575a7dd){.external} 
 
 
 To add **W3.CSS** to a React project, first, include the** W3.CSS CDN link** in the ``<head>`` section of your ``public/index.html file`` or install the dependency: ``mpm install w3-css``
 
 Then, utilize ``W3.CSS`` classes directly within your React components' JSX code. Import the ``W3.CSS`` stylesheet in your main component or global stylesheet. Now, you can apply ``W3.CSS`` styles to your React components by adding the appropriate class names. Ensure compatibility and avoid conflicts with existing styles. Finally, leverage ``W3.CSS``'s extensive documentation for guidance on styling your React project efficiently.
 
+## Deploying the React Project
+
+![](/images/devops/react-deploy-2.png)
+
+- [AWS Amplify](https://aws.amazon.com/amplify/){.external target='_blank'}
+
+**Upload project to GitHub**
+
+- [Git and GitHub 2023 CLI](/devops/devops-vc-gitgh.qmd)
+
+**What is Amplify?**
+
+
+Amplify is everything you need to build full-stack web and mobile apps on AWS. Build and host your frontend, add features like auth and storage, connect to real-time data sources, deploy, and scale to millions of users.
+
+
+![Host your web app on AWS Amplify](/images/devops/react-deploy-1.png){width="60%"}
+
+![Host your web app on AWS Amplify](/images/devops/react-deploy-6.png){width="60%"}
+
+![Host your web app on AWS Amplify step-by-step](/images/devops/react-deploy-3.png){width="60%"}
+
+![Host your web app on AWS Amplify step-by-step](/images/devops/react-deploy-7.png){width="60%"}
+
+![Authorize AWS Amplify on GitHub](/images/devops/react-deploy-4.png){width="60%"}
+
+![App Information](/images/devops/react-deploy-5.png){width="60%"}
+
+This tab lists all connected branches, select a branch to view build details: ``ordersMapping``
+<mark>Continuous deploys set up</mark>
+
+![healthyfoodFront deployed](/images/devops/react-deploy-8.png){width="60%"}
+
+- [healthyfoodFront url aws](https://ordersmapping.dg5sulzkp1wxf.amplifyapp.com/){.external target='_blank'}
 
 # Code
 
