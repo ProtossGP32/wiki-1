@@ -444,6 +444,43 @@ export default function OrdersList() {
 ```
 :::
 
+## Adding DDD
+
+- [ReactJs Project Structure](/reactjs/reactjs-what-create.qmd#reactjs-project-structure)
+- [DDD: Domain-driven Design](/javase/se-concepts-coupling.qmd)
+
+
+
+![DDD React project](/images/reactjs/react-directory-structure.png)
+
+
+
+
+::: {.column-page-right}
+
+| Name         | Description                                                                                                                   | Why                                                                                               | Example                              |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------|
+| Middleware   | Provides intermediate processing logic, intercepting requests and responses, and performing tasks such as authentication, logging, api calls, etc. | Separates cross-cutting concerns from the main application logic, enhancing modularity and reusability. | `AuthMiddleware.js`, `LoggerMiddleware.js`, , `ApiMiddleware.js` |
+| Pages        | Represents the main views or screens of the application, each typically corresponding to a specific URL route.               | Organizes the user interface into distinct sections, improving navigation and usability.         | `Home.jsx`, `Orders.jsx`, , `Menus.jsx` |
+| Components   | Encapsulates reusable UI elements or functional units, promoting modularization and facilitating composition.               | Enhances maintainability by breaking down the UI into smaller, reusable pieces.                   | `Button.jsx`, `Modal.jsx`, `Avatar.jsx` |
+| Utils        | Contains utility functions and helper classes providing common functionalities needed throughout the application.             | Reduces code duplication, improves readability, and promotes consistency.                        | `apiUtils.js`, `dateUtils.js`        |
+| Assets       | Stores static files such as images, fonts, or CSS files used within the application.                                        | Centralizes and manages static resources, simplifying asset management and deployment.            | `logo.png`, `font.ttf`, `styles.css` |
+| Layout       | Defines the overall structure and arrangement of UI elements on the page, including headers, footers, sidebars, etc.        | Promotes consistency in the visual presentation of the application and improves user experience. | `MainLayout.jsx`, `SidebarLayout.jsx` |
+| Routes       | Handles the mapping between URLs and corresponding components or views, defining the navigation paths within the application. | Facilitates navigation between different sections of the application and ensures proper routing.  | `AppRoutes.jsx`, `PrivateRoutes.jsx` |
+:::
+
+## Adding CSS
+
+- [w3.css templates](https://www.w3schools.com/w3css/w3css_templates.asp){.external target='_blank'}
+- [Gourment and catering template](https://www.w3schools.com/w3css/tryw3css_templates_gourmet_catering.htm#about){.external target='_blank'}
+- [Gourment and catering  sandbox](https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_gourmet_catering&stacked=h){.external target='_blank'} 
+
+
+To add **W3.CSS** to a React project, first, include the** W3.CSS CDN link** in the ``<head>`` section of your ``public/index.html file`` or install the dependency: ``mpm install w3-css``
+
+Then, utilize ``W3.CSS`` classes directly within your React components' JSX code. Import the ``W3.CSS`` stylesheet in your main component or global stylesheet. Now, you can apply ``W3.CSS`` styles to your React components by adding the appropriate class names. Ensure compatibility and avoid conflicts with existing styles. Finally, leverage ``W3.CSS``'s extensive documentation for guidance on styling your React project efficiently.
+
+
 # Code
 
 ::: {.column-page-right}
@@ -455,7 +492,7 @@ export default function OrdersList() {
 | [GitHub code v0.2 - branch ordersMapping](https://github.com/AlbertProfe/healthyfoodFront/tree/af20283430d97732362b67f9323fedb89ae14c0d){.external}  |  create function dataFaker, JSON data file, useState hook, refactoring, conditional render SPA in root-App   | - | [render v0.2 render (1)](/images/reactjs/healthyfood-render-v0-2-1.png), [render v0.2 render (2)](/images/reactjs/healthyfood-render-v0-2-2.png) |
 | [GitHub code v0.3 - branch ordersMapping](https://github.com/AlbertProfe/healthyfoodFront/tree/e6ec2bc280cf5745e46e3417477d3efec9ede828){.external}  |  create component orderTable  | - | [render v0.3 render (1)](/images/reactjs/healthyfood-render-v0-3-1.png) |
 | [GitHub code v0.4 - branch ordersMapping ](https://github.com/AlbertProfe/healthyfoodFront/tree/c18fa76f3a551eb9364c8007b87f079e0ba10027){.external}  |  create domains & routes  | [Router Structure](/images/reactjs/healthyfood-project-v0-4.png){width="80%"} | [render v0.4 render (1)](/images/reactjs/healthyfood-render-v0-4-1.png),  [render v0.4 render (2)](/images/reactjs/healthyfood-render-v0-4-2.png) , [render v0.4 render (3)](/images/reactjs/healthyfood-render-v0-4-3.png) , [render v0.4 render (4)](/images/reactjs/healthyfood-render-v0-4-4.png),  [render v0.4 render (5)](/images/reactjs/healthyfood-render-v0-4-5.png) ,  [render v0.4 render (6)](/images/reactjs/healthyfood-render-v0-4-6.png)   |
-| [GitHub code v0.5 - branch ordersMapping](https://github.com/AlbertProfe/healthyfoodFront/tree/220e0f3604fb205f0fade6f54219aed3d575a7dd){.external}  |  adding `w3.css` and `Team` page  | [Router Structure (1)](/images/reactjs/healthyfood-project-v0-5-1.png){width="80%"}, [Router Structure (2)](/images/reactjs/healthyfood-project-v0-5-2.png){width="80%"} | - |
+| [GitHub code v0.5 - branch ordersMapping](https://github.com/AlbertProfe/healthyfoodFront/tree/220e0f3604fb205f0fade6f54219aed3d575a7dd){.external}  |  adding `w3.css` and `Team` page  | [Router Structure (1)](/images/reactjs/healthyfood-project-v0-5-1.png){width="80%"}, [Router Structure (2)](/images/reactjs/healthyfood-project-v0-5-2.png){width="80%"} | [render v0.5 render (1)](/images/reactjs/healthyfood-render-v0-5-1.png), [render v0.5 render (2)](/images/reactjs/healthyfood-render-v0-5-2.png), [render v0.5 render (3)](/images/reactjs/healthyfood-render-v0-5-3.png), [render v0.5 render (4)](/images/reactjs/healthyfood-render-v0-5-4.png), [render v0.5 render (5)](/images/reactjs/healthyfood-render-v0-5-5.png), [render v0.5 render (6)](/images/reactjs/healthyfood-render-v0-5-6.png), [render v0.5 render (7)](/images/reactjs/healthyfood-render-v0-5-7.png),  |
 
 :::
 <!--- navLinks -->
