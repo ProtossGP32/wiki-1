@@ -407,7 +407,9 @@ HashMap<String, String> capitalCities = new HashMap<String, String>();javase/sel
 
 # View: user menus and I/O
 
-```bash
+**Main menu**
+
+```js
 Welcome to healtyFood Mananger v0.0
 Main options list
 
@@ -420,6 +422,59 @@ Choose an option:
 
 Option?
 
+
+```
+
+**Create order**
+
+Interactivity to create a new `order`: 
+
+```js
+Welcome to create new Order
+Date 2024-02-19 10:36
+
+Waiter? Joan
+Qty? 4
+Available tables:
+0 - Take away
+1 - Table3
+2 - Table5
+3 - Table6
+Table? 1
+Menus
+0 - Quit
+1 - Menu Lisboa
+2 - Menu New York
+3 - Menu Girona
+Menu? 1
+Menus
+0 - Quit
+1 - Menu Lisboa
+2 - Menu New York
+3 - Menu Girona
+Menu? 1
+Menus
+0 - Quit
+1 - Menu Lisboa
+2 - Menu New York
+3 - Menu Girona
+Menu? 3
+Menus
+0 - Quit
+1 - Menu Lisboa
+2 - Menu New York
+3 - Menu Girona
+Menu? 0
+
+Order #154VD4
+Total to pay: 32.50 EUROS
+Date: 2024-02-19 10:36
+Waiter: Joan
+Qty people: 4
+Table: Table3
+Menus: Total Menus 3, Lisboa 2, Girona 1
+
+Paid? Yes
 
 ```
 
@@ -581,6 +636,7 @@ By the end, you'll grasp how **DDD principles seamlessly integrate with Java SE*
 | [GitHub code v0.2](https://github.com/AlbertProfe/hello11/tree/45bd308fa196a3ead3c271f1bd63981ef693d55f){.external}  |   create and save `Menu` on HashMap `menus` from UI cli to `MenuManager`  | [Classes Structure](/images/javase/restaurant-tree-folder-v0.2.png){width="80%"} |  [output v0.2 cli](/images/javase/ouputs/output-healthyFood-v0.2.pdf)  |
 | [GitHub code v0.3](https://github.com/AlbertProfe/hello11/tree/0bd253bf88ee5ac2aaa150fe04754ac9ae5b408c){.external}  |  refactoring to DDD and `tableManager` with `createTable`   | [Classes Structure](/images/javase/restaurant-tree-folder-v0.3.png){width="80%"} |  [output v0.3 cli](/images/javase/ouputs/output-healthyFood-v0.3.pdf)  |
 | [GitHub code v0.4](https://github.com/AlbertProfe/hello11/tree/6678eef933a92298b04b74bb78aae76eedc753cd){.external}  |  refactoring to DDD **first non-tentative approach**  | [Classes Structure](/images/javase/restaurant-tree-folder-v0.4.png){width="80%"} |  [output v0.4 cli](/images/javase/ouputs/output-healthyFood-v0.4.pdf)  |
+| [GitHub code v0.5](){.external}  |  create new `order`  | [Classes Structure](){width="80%"} |  [output v0.5 cli]()  |
 
 
 

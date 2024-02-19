@@ -38,7 +38,7 @@ tr:hover {background-color:  #f4f4f4;}
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #8 | 28 | 19/02/2024 | - CRUD operations for ``menu`` and ``table`` </br> - Create ``order`` mockup and UML |  - [Static modifier](/javase/se-concepts-static.qmd) </br> - [Coupling and DDD](/javase/se-concepts-coupling.qmd)  </br>  - [Lab#SE04-1](/javase/selab4-1.qmd) </br> |
+| #8 | 28 | 19/02/2024 | - <s>CRUD operations for ``menu`` and ``table`` </br> - Create ``order`` mockup and UML</s> </br >++ Git clone Java SE project: manage remotes  </br>  ++ How to plan, solving issues: (1) Learn to give up (2) Knowledge ilusion (3) Decision-Making (4) Anxiety (5) Resting & creating energy (6) Detect core  |  - [Static modifier](/javase/se-concepts-static.qmd) </br> - [Coupling and DDD](/javase/se-concepts-coupling.qmd)  </br>  - [Managing remote repositories](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories){.external target='_blank'}  </br> - [Pushing commits to a remote repository](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository){.external target='_blank'}  </br>- [Lab#SE04-1](/javase/selab4-1.qmd) </br> |
 |  | 29 | 20/02/2024 | - Create ``order``  | - [Lab#SE04-1](/javase/selab4-1.qmd) </br>  |
 |  |
 |  | 30 | 22/02/2024 |  - React JS: buttons, useState & ``onclick``  </br>   - Render cycle | - [Adding Interactivity](https://react.dev/learn/adding-interactivity){.external target='_blank'}  </br>  |
