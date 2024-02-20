@@ -13,7 +13,7 @@ format:
   html
 ---
 
-## Overview
+
 
 ::: {.summary}
 
@@ -27,7 +27,9 @@ In other words, the `static` modifier indicates that the class or class member i
 
 ---
 
-Classical use and basic exmaple of ``static method``, we **call within the ``class`` our ``static`` ``method``** just using the name of the method ``printArea()``: 
+# ``static`` modifier
+
+Classical use and basic example of ``static method``, we **call within the ``class`` our ``static`` ``method``** just using the name of the method ``printArea()``: 
 
 ![Two static methods with parameters. Parameters are the variables we use in the method definition whereas arguments are the values we pass in the method call. These two terms are often used interchangeably](/images/javase/staticMethod.png)
 
@@ -308,7 +310,58 @@ public class Account {
 Here is an example of how the ``static`` modifier can be used when applied to a ``class`` in ``Java``, using an ``Account`` class and a nested ``Transaction`` class as examples:
 :::
 
-##  `static` vs. `non-static`
+# `static` scope
+
+In Java SE (Standard Edition), the term **"static scope"** typically refers to <mark>the visibility and accessibility of variables and methods marked with the `static` keyword within a class or interface.</mark>
+
+When a variable or method is declared as `static` within a class or interface, it means that it belongs to the class itself rather than to instances of the class. This has **implications** for how these members are accessed:
+
+- **Visibility within the class:** Static variables and methods can be accessed directly within other static methods or variables of the same class without needing an instance of the class.
+
+- **Access from outside the class:** Static variables and methods can also be accessed directly using the class name, without needing an instance of the class. This access can occur from other classes, as long as the static member is declared with appropriate access modifiers (e.g., `public`, `protected`, or `private`).
+
+- **Lifetime:** Static variables exist for the entire duration of the program's execution, and there is only one instance of each static variable per class, shared by all instances of the class.
+
+- **Initialization:** Static variables are initialized only once, at the start of the program execution, before any instances of the class are created.
+
+Here's a basic example to illustrate static scope:
+
+
+
+
+``` {.java .code-overflow-wrap filename="Account.java"}
+public class MyClass {
+    // Static variable
+    public static int staticVariable = 10;
+    
+    // Instance variable
+    public int instanceVariable;
+    
+    // Static method
+    public static void staticMethod() {
+        System.out.println("This is a static method.");
+        // Can access static variables directly
+        System.out.println("Static variable: " + staticVariable);
+        // Cannot access instance variables directly
+        // System.out.println("Instance variable: " + instanceVariable); // This line would cause a compilation error
+    }
+    
+    // Instance method
+    public void instanceMethod() {
+        System.out.println("This is an instance method.");
+        // Can access both static and instance variables directly
+        System.out.println("Static variable: " + staticVariable);
+        System.out.println("Instance variable: " + instanceVariable);
+    }
+}
+
+
+```
+
+In this example, `staticVariable` is a static variable that can be accessed directly within both `staticMethod()` and `instanceMethod()`, while `instanceVariable` is an instance variable that can only be accessed within `instanceMethod()` or other instance methods, requiring an instance of `MyClass`.
+
+
+#  `static` vs. `non-static`
 
 ### Pros & cons usage `static` methods
 
