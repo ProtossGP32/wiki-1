@@ -67,13 +67,12 @@ repo-actions: false
 :::{.column-page}
 | Date | Type | Article | Content |
 | -- | -- | :-- | :-- |
-| 02/2024 | <mark>Figure</mark> | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [healthyFood Restaurant use case createMenu by terminal](/images/javase/healthyFood-createMenu-fluxExecution-v0.2.png){ .external target='_blank'} | healthyFood Restaurant use case   |
-| 02/2024 | <mark>AWS S3</mark> | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Migrating to AWS S3, google drive to extinguish soon ... ](http://tinyurl.com/2pawt4s7){.external target='_blank'} | Screen recordings repository  |
-| 02/2024 | <mark>JavaScript</mark> | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [JavaScript basics](/reactjs/reactjs-js-basics.qmd) | JavaScript article from basics to apis  |
-| 01/2024 |  <mark>Java SE | [Lab#SE04-1: healthyFood Restaurant, Core Model](/javase/selab4-1.qmd) | Java SE UML lab  |
+| 02/2024 | News | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Technology Trends for 2024](https://www.oreilly.com/radar/technology-trends-for-2024/){.external target='_blank'} | Where the Industry Is Headed  |
+| 02/2024 | **Book** | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Playing to win](/books/playingtowin.qmd)| New added book on strategy    |
+| 01/2024 |  <mark>Java SE</mark> | [Lab#SE04-1: healthyFood Restaurant, Core Model](/javase/selab4-1.qmd) | Java SE UML lab  |
 | 01/2024 |  <mark>React JS</mark> |  [Lab#RE06-1: healthyFood Restaurant](/reactjs/rjslab6-1.qmd) | React JS composition lab  |
-| 01/2024 | <mark>Backlog</mark> | [Sprint Backlog](/ifcd0210-24/ifcd0210backlog-sprint-24.qmd) | Sprint Backlog IFCD0210-24  |
-| 01/2024  | <mark>Backlog</mark> | [Product Backlog](/ifcd0210-24/ifcd0210backlog-product-24.qmd) | Product Backlog IFCD0210-24  |
+| 01/2024 | **Backlog** | [Sprint Backlog](/ifcd0210-24/ifcd0210backlog-sprint-24.qmd) | Sprint Backlog IFCD0210-24  |
+| 01/2024  | **Backlog** | [Product Backlog](/ifcd0210-24/ifcd0210backlog-product-24.qmd) | Product Backlog IFCD0210-24  |
 : New / updated articles {tbl-colwidths="[10,10,50,30]" .striped .hover}
 :::
 
