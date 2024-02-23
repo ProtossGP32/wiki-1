@@ -516,6 +516,14 @@ This tab lists all connected branches, select a branch to view build details: ``
 
 - [healthyfoodFront url aws](https://ordersmapping.dg5sulzkp1wxf.amplifyapp.com/){.external target='_blank'}
 
+
+## pull request
+
+![pull request `ordersMapping` to `master`](/images/reactjs/healthyfood-pullrequest-v0-5.png)
+
+
+[Pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests){.external target='_blank'} let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+
 # Code
 
 ::: {.column-page-right}
@@ -527,7 +535,10 @@ This tab lists all connected branches, select a branch to view build details: ``
 | [GitHub code v0.2 - branch ordersMapping](https://github.com/AlbertProfe/healthyfoodFront/tree/af20283430d97732362b67f9323fedb89ae14c0d){.external}  |  create function dataFaker, JSON data file, useState hook, refactoring, conditional render SPA in root-App   | - | [render v0.2 render (1)](/images/reactjs/healthyfood-render-v0-2-1.png), [render v0.2 render (2)](/images/reactjs/healthyfood-render-v0-2-2.png) |
 | [GitHub code v0.3 - branch ordersMapping](https://github.com/AlbertProfe/healthyfoodFront/tree/e6ec2bc280cf5745e46e3417477d3efec9ede828){.external}  |  create component orderTable  | - | [render v0.3 render (1)](/images/reactjs/healthyfood-render-v0-3-1.png) |
 | [GitHub code v0.4 - branch ordersMapping ](https://github.com/AlbertProfe/healthyfoodFront/tree/c18fa76f3a551eb9364c8007b87f079e0ba10027){.external}  |  create domains & routes  | [Router Structure](/images/reactjs/healthyfood-project-v0-4.png){width="80%"} | [render v0.4 render (1)](/images/reactjs/healthyfood-render-v0-4-1.png),  [render v0.4 render (2)](/images/reactjs/healthyfood-render-v0-4-2.png) , [render v0.4 render (3)](/images/reactjs/healthyfood-render-v0-4-3.png) , [render v0.4 render (4)](/images/reactjs/healthyfood-render-v0-4-4.png),  [render v0.4 render (5)](/images/reactjs/healthyfood-render-v0-4-5.png) ,  [render v0.4 render (6)](/images/reactjs/healthyfood-render-v0-4-6.png)   |
-| [GitHub code v0.5 - branch ordersMapping](https://github.com/AlbertProfe/healthyfoodFront/tree/220e0f3604fb205f0fade6f54219aed3d575a7dd){.external}  |  adding `w3.css` and `Team` page  | [Router Structure (1)](/images/reactjs/healthyfood-project-v0-5-1.png){width="80%"}, [Router Structure (2)](/images/reactjs/healthyfood-project-v0-5-2.png){width="80%"} | [render v0.5 render (1)](/images/reactjs/healthyfood-render-v0-5-1.png), [render v0.5 render (2)](/images/reactjs/healthyfood-render-v0-5-2.png), [render v0.5 render (3)](/images/reactjs/healthyfood-render-v0-5-3.png), [render v0.5 render (4)](/images/reactjs/healthyfood-render-v0-5-4.png), [render v0.5 render (5)](/images/reactjs/healthyfood-render-v0-5-5.png), [render v0.5 render (6)](/images/reactjs/healthyfood-render-v0-5-6.png), [render v0.5 render (7)](/images/reactjs/healthyfood-render-v0-5-7.png),  |
+| [GitHub code v0.5 - branch ordersMapping](https://github.com/AlbertProfe/healthyfoodFront/tree/220e0f3604fb205f0fade6f54219aed3d575a7dd){.external}  |  adding `w3.css` and `Team` page  | [Router Structure (1)](/images/reactjs/healthyfood-project-v0-5-1.png){width="80%"}, [Router Structure (2)](/images/reactjs/healthyfood-project-v0-5-2.png){width="80%"} | [render v0.5 render (1)](/images/reactjs/healthyfood-render-v0-5-1.png), [render v0.5 render (2)](/images/reactjs/healthyfood-render-v0-5-2.png), [render v0.5 render (3)](/images/reactjs/healthyfood-render-v0-5-3.png), [render v0.5 render (4)](/images/reactjs/healthyfood-render-v0-5-4.png), [render v0.5 render (5)](/images/reactjs/healthyfood-render-v0-5-5.png), [render v0.5 render (6)](/images/reactjs/healthyfood-render-v0-5-6.png), [render v0.5 render (7)](/images/reactjs/healthyfood-render-v0-5-7.png)  |
+|   | depoy branch `ordersMapping` to `AWS Amplify`| [pull request `ordersMapping` to `master`](/images/reactjs/healthyfood-pullrequest-v0-5.png) | [healthyfoodFront url aws](https://ordersmapping.dg5sulzkp1wxf.amplifyapp.com/){.external target='_blank'} |
+|  [GitHub code v0.6 ](){.external}   | pull request **master**: `readme` & `form`  |  |
+
 
 :::
 <!--- navLinks -->
