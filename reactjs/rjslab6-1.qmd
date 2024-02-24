@@ -517,7 +517,7 @@ This tab lists all connected branches, select a branch to view build details: ``
 - [healthyfoodFront url aws](https://ordersmapping.dg5sulzkp1wxf.amplifyapp.com/){.external target='_blank'}
 
 
-## pull request: `ordersMapping` & `createOrder` to `master`
+## pull request: `ordersMapping` & `createOrder` into `master`
 
 
 
@@ -525,18 +525,50 @@ This tab lists all connected branches, select a branch to view build details: ``
 
 Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
 
-- [GitHub code v0.6 ](https://github.com/AlbertProfe/healthyfoodFront/tree/445ef389766db843757b4a0573e14e5cfd93ca25){.external} 
+
+**Initial code: master and two branches**
+
+- GitHub code `ordersMapping` [**220e0f3**](https://github.com/AlbertProfe/healthyfoodFront/tree/220e0f3604fb205f0fade6f54219aed3d575a7dd){.external}
+- GitHub code `master` [**117e56a**](https://github.com/AlbertProfe/healthyfoodFront/tree/117e56ae48f41302b05d516b8d47a8f2daaadf5b){.external}
+- GitHub code `createOrder` [**72db4f7**](https://github.com/AlbertProfe/healthyfoodFront/tree/72db4f7e094e12e20d781620df3f00f7c6e9b6c4){.external}
+
+At this moment we have three `heads`: 220e0f3, 117e56a and 72db4f7
 
 ![we have three branches/heads: `ordersMapping`, `createOrder`,`master` ](/images/reactjs/healthyfood-pullrequest-v0-5-1.png){width="60%"}
 
 ![we create a commmit on `master`  ](/images/reactjs/healthyfood-pullrequest-v0-5-2.png){width="60%"}
 
 
+**pull request #1: `Orders mapping #1`**
+
+
+AlbertProfe *merged* **8 commits** into `master` from `ordersMapping`
+
+- [Orders mapping #1](https://github.com/AlbertProfe/healthyfoodFront/pull/1){.external target='_blank'}
+- [Files changed](https://github.com/AlbertProfe/healthyfoodFront/pull/1/files){.external target='_blank'}
+- [8 commits into master](https://github.com/AlbertProfe/healthyfoodFront/pull/1/commits){.external target='_blank'}
+
+**pull request #2: `Master #2`**
+
+
+AlbertProfe *merged* **4 commits** into `master` from `createOrder`
+
+- [Master #2](https://github.com/AlbertProfe/healthyfoodFront/pull/2){.external target='_blank'}
+- [files changed](https://github.com/AlbertProfe/healthyfoodFront/pull/2/files){.external target='_blank'}
+- [4 commits into master](https://github.com/AlbertProfe/healthyfoodFront/pull/2/commits){.external target='_blank'}
+
 ![we merge **twice**: `ordersMapping` to `master` and then `createOrder`to`master`](/images/reactjs/healthyfood-pullrequest-v0-5-3.png){width="60%"}
 
 ![commit on `master` to move `createOrder` component from root project  to its domain](/images/reactjs/healthyfood-pullrequest-v0-5-4.png){width="60%"}
 
+
+**Final code**
+
+- [GitHub code v0.6 ](https://github.com/AlbertProfe/healthyfoodFront/tree/445ef389766db843757b4a0573e14e5cfd93ca25){.external} 
+
 ## API Rest
+
+- [React Axios](/reactjs/rjslab1.qmd)
 
 # Code
 
