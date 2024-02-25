@@ -553,8 +553,25 @@ At this moment we have three `heads`: 220e0f3, 117e56a and 72db4f7
 
 :::
 
-### Two pull request executed
+### pull request and `merge`
 
+<mark>To **merge** two branches into `master`</mark> we are going to:
+
+- first, review and merge pull request #1, "`Orders mapping` #1," containing 8 commits from the "`ordersMapping`" branch
+- Then, address conflicts in pull request #2, "`Master` #2," which integrated 4 commits from "`createOrder`" into `master`.
+  - **Resolve** these conflicts, commit changes, and merge pull request #2.
+  - **ensure** all changes align with project standards.
+- Finally, we need to verify the merged master branch for stability and functionality (<mark>review the final output project structure</mark>).
+
+::: {.callout-note} 
+Efficiently managing conflicts and adhering to project guidelines ensures smooth integration of features into the master branch, maintaining code integrity and project continuity.
+:::
+
+Let's do the first pull request step-by-step:
+
+[Step-by-step pull request](/reactjs/rjslab6-1-PR.qmd)
+
+This is the output documentation on Github.com:
 
 ![](/images/reactjs/healthyfood-pullrequest-v0-5-3-2.png){width="60%"}
 
@@ -595,7 +612,19 @@ Since the pull request #2, `Master #2`, have **conflicts** we must resolve them 
 
 **Final code**
 
-- [GitHub code v0.6 ](https://github.com/AlbertProfe/healthyfoodFront/tree/445ef389766db843757b4a0573e14e5cfd93ca25){.external} 
+After the two pull requests, the `master` branch incorporates all commits from the two branches due to the process of merging. 
+
+<mark>When a pull request is accepted and merged into the master branch, all the changes (commits) from the respective branches are integrated into the master branch.</mark>
+
+In the first pull request (#1: Orders mapping #1), 8 commits from the "`ordersMapping`" branch were merged into master. Similarly, in the second pull request (#2: Master #2), 4 commits from the "`createOrder`" branch were merged into master.
+
+As a result, **the master branch now includes all changes from both branches**, ensuring that the latest developments from each branch are consolidated into the main codebase.
+
+- [GitHub code v0.6 ](https://github.com/AlbertProfe/healthyfoodFront/tree/445ef389766db843757b4a0573e14e5cfd93ca25){.external}
+
+Now, the `master` has all the commits:
+
+- [GitHub code v0.6: commits ](https://github.com/AlbertProfe/healthyfoodFront/commits/master){.external}
 
 ## API Rest
 
