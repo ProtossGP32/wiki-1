@@ -69,8 +69,8 @@ repo-actions: false
 | -- | -- | :-- | :-- |
 | 02/2024 | News | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Technology Trends for 2024](https://www.oreilly.com/radar/technology-trends-for-2024/){.external target='_blank'} | Where the Industry Is Headed  |
 | 02/2024 | **Book** | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Playing to win](/books/playingtowin.qmd)| New added book on strategy    |
-| 01/2024 |  <mark>Java SE</mark> | [Lab#SE04-1: healthyFood Restaurant, Core Model](/javase/selab4-1.qmd) | Java SE UML lab  |
-| 01/2024 |  <mark>React JS</mark> |  [Lab#RE06-1: healthyFood Restaurant](/reactjs/rjslab6-1.qmd) | React JS composition lab  |
+| 01/2024 |  ![](/images/home/java-logo.png){width="30%"} </br><mark>Java SE</mark> | [Lab#SE04-1: healthyFood Restaurant, Core Model](/javase/selab4-1.qmd) | Java SE UML lab  |
+| 01/2024 |   ![](/images/home/react-log.png){width="30%"} </br><mark>React JS</mark> |  [Lab#RE06-1: healthyFood Restaurant](/reactjs/rjslab6-1.qmd) | React JS composition lab  |
 | 01/2024 | **Backlog** | [Sprint Backlog](/ifcd0210-24/ifcd0210backlog-sprint-24.qmd) | Sprint Backlog IFCD0210-24  |
 | 01/2024  | **Backlog** | [Product Backlog](/ifcd0210-24/ifcd0210backlog-product-24.qmd) | Product Backlog IFCD0210-24  |
 : New / updated articles {tbl-colwidths="[10,10,50,30]" .striped .hover}
