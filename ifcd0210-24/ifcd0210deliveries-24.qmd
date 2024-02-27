@@ -56,10 +56,12 @@ Always in **Quarto/Wiki .md format** and code in GitHub **repositories** (or Org
 | Code | Date | Description|
 |---|---|---|
 | **MF01-0491**  | **19/12/2023**  | **Front-end** |
-| UF01-1841 |   |  |
-| UF02-1842 | |  |
-| UF03-1843 |   |  |
-| MF01-0491 | 27/02/2024  | 1. *Prova objectiva*</br> 2. *Avaluació Continuada*: Java Mooc, React.dev exercises, Git exercises, Mindset tasks, Personal Project </br> 3. *Prova pràctica*, Web App front: </br> - **Option A Quarto Web**:  Prototip [WebApp Quarto](/markup/markup-quarto-create.qmd): web multipage, markdwon/HTML, with github repository and gh-pages deployement, [advanced features](/markup/markup-quarto-basics.qmd): markdown basics, figures, tables, Mermaid Diagrams, callout, cross-references, code highlighted, [Document Listings](https://quarto.org/docs/websites/website-listings.html){.external} </br> - **Option B React Web**: crete React App, 3 pages with Router and mapping JSON, 3 objects, print tables, cards and lists, navbar and footer |
+| UF01-1841 | 19/01/2024  | Markup: HTML/MD/React |
+| UF02-1842 | 19/02/2024 | POOC: Components |
+| UF03-1843 | 27/02/2024  | CSS/Router: Responsive & Multipage |
+| MF01-0491 | 27/02/2024  | 1. *Prova objectiva*: test 15 preguntes |
+||| 2. *Avaluació Continuada*: Java Mooc, React.dev exercises, Git exercises, Mindset tasks, Personal Project |
+||| 3. *Prova pràctica*, Web App front-end: </br> - **Option A Quarto Web**:  Prototip [WebApp Quarto](/markup/markup-quarto-create.qmd): web multipage, markdwon/HTML, with github repository and gh-pages deployement, [advanced features](/markup/markup-quarto-basics.qmd): markdown basics, figures, tables, Mermaid Diagrams, callout, cross-references, code highlighted, [Document Listings](https://quarto.org/docs/websites/website-listings.html){.external} </br> - **Option B React Web**: crete React App, 3 pages with Router and mapping JSON, 3 objects, print tables, cards and lists, navbar and footer |
 | **MF02-0492**  | **29/02/2024**  | **Back-end** |
 | UF01-1844 |   | Laboratori app MVC amb Spring Boot Thyemeleaf (alternatiu Rest) un objecte amb totes les operacions CRUD |
 | UF02-1845 |   | Laboratori app Spring Boot Thyemeleaf (opcional Rest) amb H2 JPA (alternatiu objectes amb Composition/Inherence) |
