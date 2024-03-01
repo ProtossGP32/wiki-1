@@ -646,8 +646,11 @@ Now, the `master` has all the commits:
 |  [GitHub code v0.6 ](https://github.com/AlbertProfe/healthyfoodFront/tree/445ef389766db843757b4a0573e14e5cfd93ca25){.external}   | pull request: `ordersMapping` & `createOrder` to `master`: modify `readme`  | [project v0.6](/images/reactjs/healthyfood-project-v0-6-1.png) | [render v0.6 render (1)](/images/reactjs/healthyfood-render-v0-6-1.png) |
 |  [GitHub code v0.7 ](){.external}   |   | [project v0.7]() | [render v0.7 render (1)]() |
 
-
 :::
+
+
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>
@@ -666,7 +669,7 @@ Now, the `master` has all the commits:
 <br>
 <div class='column right next'>
 <br>
-[ReactJS Resources  {{< fa solid arrow-right >}}](/reactjs/resources.qmd)
+[React JS: Lab#RE06-1 Pull Request  {{< fa solid arrow-right >}}](/reactjs/rjslab6-1-PR.qmd)
 <br>
 </div>
 <br>

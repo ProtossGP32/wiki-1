@@ -1,0 +1,278 @@
+---
+title: "Lab#RE07-1: traffic lights game"
+subtitle: ReactJS labs
+author: albertprofe
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+description: labs
+categories: [reactjs, lab, Lab#RE07]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+::: {.labs}
+📘 **React JS Lab#RE07-1: Traffic Lights Game**
+
+In this lab, we'll delve into building a traffic lights game using React.js. Here's an overview of what we'll cover:
+
+1. **Project Setup**: We'll kick off by creating a new React project using **Vite**, a modern build tool. With Vite's fast build times, we'll set up our project environment swiftly.
+
+2. **CSS Inline Styling**: Instead of separate CSS files, we'll utilize inline styling for our components. This approach keeps our styling concise and localized within each component.
+
+3. **JSX Components**: We'll dive into JSX, a syntax extension for JavaScript often used with React. JSX allows us to write HTML-like code within JavaScript, making it seamless to create UI components.
+
+4. **Form Management with Hooks and Literal Objects**: We'll manage our form state using React hooks like (these hooks empower us to handle stateful logic effectively within functional components):
+   1.  useState,
+   2.  useMemo,
+   3.  useContext,
+   4.  and useEffect
+   
+5.  Additionally, we'll leverage literal objects for organized state management.
+   
+6. **Timeouts for Game Logic**: We'll incorporate timeouts to control the game flow. Timeouts allow us to delay certain actions, such as changing traffic light colors or updating pedestrian movements, adding an interactive and dynamic element to our traffic lights game.
+   
+7. **Forms**
+
+
+By the end of this lab, you'll have gained hands-on experience in React.js development, mastering essential concepts like state management, JSX rendering, component styling, and integrating timeouts for game logic. This project serves as an engaging introduction to building dynamic web applications with React. Let's get started and create an interactive traffic lights game together!
+
+
+:::
+
+</br>
+
+# References
+
+ - [codesandbox **walking**](https://codesandbox.io/p/sandbox/react-dev-mzqnh7?file=%2Fsrc%2FApp.js&utm_medium=sandpack){.external target='_blank'}
+ - [codesandbox **marketplace**](https://codesandbox.io/p/sandbox/react-dev-hl8cxc?file=%2Fsrc%2FApp.js&utm_medium=sandpack){.external target='_blank'}
+ - [codesandbox **red-point**](https://codesandbox.io/p/sandbox/react-dev-5tfwx3?file=%2Fsrc%2FApp.js&utm_medium=sandpack){.external target='_blank'} 
+
+Coode repository:
+
+- [Github repo](https://github.com/AlbertProfe/trafficlights/tree/master){.external target=''_blank}
+
+# Create project
+
+## Vite
+
+Next Generation Frontend Tooling
+
+Get ready for a development environment that can finally catch up with you.
+
+- [Vite](https://vitejs.dev/){.external target='_blank'}
+- [Getting Started | Vite](https://vitejs.dev/guide/)
+
+```shell
+$ node -v
+```
+
+```shell
+$ npm create vite@latest <nombre-de-mi-proyecto>
+```
+
+```shell
+✔ Project name: … vite-project
+? Select a framework: › - Use arrow-keys. Return to submit.
+    Vanilla
+    Vue
+❯   React
+    Preact
+    Lit
+    Svelte
+```
+
+```shell
+? Select a variant: › - Use arrow-keys. Return to submit.
+❯   JavaScript
+    TypeScript
+```
+
+```shell
+Scaffolding project in /Users/carlosazaustre/dev/vite-project...
+
+Done. Now run:
+
+  cd vite-project
+  npm install
+  npm run dev
+```
+
+## exposing port
+
+[npm run dev --host network: not exposed](https://stackoverflow.com/questions/71939532/npm-run-dev-host-network-not-exposed)
+
+```json
+ "scripts": {
+    "dev": "vite --host --port 8888",
+   .....  what ever else was here.....
+  },
+```
+
+## Shortcuts
+
+```json
+ "scripts": {
+    "dev": "vite --host --port 8888",
+   .....  what ever else was here.....
+  },
+```
+
+# Mock-up
+
+to-do
+
+
+# Step-by-step code
+
+Reference:
+
+
+
+## React functions
+
+```{.js .code-overflow-wrap filename="index.js"}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const root = 
+ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+```
+## React Application
+
+This first iteration defines a React functional component called `RequestTracker`, <mark>which simulates a traffic light and tracks pedestrian crossings</mark>.
+
+It uses the `useState` hook to manage **four state variables**:
+
+- **pending** (number of pedestrians waiting),
+- **walking** (number of pedestrians crossing),
+- **completed** (number of completed crossings),
+- and **light** (status of the traffic light).
+
+When the user clicks the "Traffic Light" `button`, the `handleTrafficLightClick` function is **triggered**. It decrements pending, increments walking, and sets the light to green. After a **delay of 5 seconds**, it decrements walking, increments completed, and sets the light to red.
+
+The code uses the `<>` (fragment) syntax to group multiple elements without introducing an additional parent node.
+
+::: {.column-margin}
+
+The UI displays the current counts of pending, walking, and completed pedestrians, and the color of the text changes based on the status of the traffic light. The button's color also changes to reflect the traffic light's color.
+:::
+
+
+
+
+```{.js .code-overflow-wrap filename="App.jsx"}
+import { useState } from "react";
+
+export default function RequestTracker() {
+  const [pending, setPending] = useState(100);
+  const [walking, setWalking] = useState(0);
+  const [completed, setCompleted] = useState(0);
+  const [light, setLight] = useState(false);
+
+  /*
+  useEffect(() => {
+    console.log("pending effect:", pending);
+  }, [pending]);
+  */
+
+  function handleTrafficLightClick() {
+    //console.log("before", pending);
+    setPending((p) => p - 10);
+    //console.log("after", pending);
+    setWalking((w) => w + 10);
+    setLight(true); // Set light to green when walking starts
+    setTimeout(() => {
+      setWalking((w) => w - 10);
+      setCompleted((c) => c + 10);
+      setLight(false); // Set light to red when walking is completed
+    }, 5000); // Delay for 3000 milliseconds (5 seconds)
+  }
+
+  return (
+    <>
+      <h3 style={{ color: light ? "grey" : "white" }}> Pending: {pending} </h3>
+      <h3 style={{ color: light ? "white" : "grey" }}>
+        Walking: {walking} {light ? " . . . . ." : ""}
+      </h3>
+      <h3 style={{ color: light ? "green" : "grey" }}>
+        Completed: {completed}
+      </h3>
+      <button
+        onClick={handleTrafficLightClick}
+        style={{
+          backgroundColor: light ? "green" : "red",
+          padding: "10px 24px",
+          borderRadius: "8px",
+          border: "none",
+          color: "white",
+          fontSize: "20px",
+        }}
+      >
+        Taffic Light
+      </button>
+    </>
+  );
+}
+
+
+```
+## Adding graphics
+
+to-do
+
+## Consolidation and merge: literal object
+
+The operation of consolidating multiple state variables into a single object using the useState hook and the spread operator can be referred to as state consolidation or state merging.
+
+Here's a breakdown:
+
+- **State Consolidation**: This term emphasizes the process of bringing together multiple individual state variables into a single, cohesive object. It highlights the idea of simplifying state management by grouping related pieces of state.
+- **State Merging**: This term underscores the use of the spread operator (...) to merge the previous state with the updated state when setting the state. It emphasizes the technique used to update multiple properties of the state object simultaneously.
+
+
+## Adding form
+
+
+## Adding data
+
+# Code
+
+::: {.column-page-right}
+
+| Code Version | Commit | Folder-Tree | Output |
+| -- | -- | -- | -- |
+| [GitHub code v0.0](https://github.com/AlbertProfe/trafficlights/tree/5219b5acb611bd3c7faba7b22b14e0fd49f38b45){.external}  | create project | [Basic Structure](/){width="80%"} | [render v0.0 render]() |
+
+:::
+
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} React JS: Lab#RE06-1-PR  ](/reactjs/rjslab6-1-PR.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[ReactJS Resources  {{< fa solid arrow-right >}}](/reactjs/resources.qmd)
+<br>
+</div>
+<br>
+</div>
