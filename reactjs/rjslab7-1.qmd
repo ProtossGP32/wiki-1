@@ -303,7 +303,7 @@ Here's a breakdown:
 
 | Code Version | Commit | Folder-Tree | Output |
 | -- | -- | -- | -- |
-| [GitHub code v0.0](https://github.com/AlbertProfe/trafficlights/tree/5219b5acb611bd3c7faba7b22b14e0fd49f38b45){.external}  | create project (React Vite) and core business logic | [Basic Structure](/){width="80%"} | [render v0.0 render]() |
+| [GitHub code v0.0](https://github.com/AlbertProfe/trafficlights/tree/5219b5acb611bd3c7faba7b22b14e0fd49f38b45){.external}  | create project (React Vite) and core business logic | [Basic Structure](/images/reactjs/traffic-project-v0.0-1.png){width="80%"} | [render v0.0 render(1)](/images/reactjs/traffic-render-v0.0-1.png), [render v0.0 render(2)](/images/reactjs/traffic-render-v0.0-2.png), [render v0.0 render(3)](/images/reactjs/traffic-render-v0.0-3.png) |
 
 :::
 
