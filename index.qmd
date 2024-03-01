@@ -67,6 +67,7 @@ repo-actions: false
 :::{.column-page}
 | Date | Type | Article | Content |
 | -- | -- | :-- | :-- |
+| 03/2024 |    <mark>React JS</mark> | ![](/images/home/react-log.png){width="5%"} [Lab#RE07-1: traffic lights Simulation](/reactjs/rjslab7-1.qmd) | React JS data, form and hooks lab  |
 | 02/2024 | 📜 News | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Technology Trends for 2024](https://www.oreilly.com/radar/technology-trends-for-2024/){.external target='_blank'} | Where the Industry Is Headed  |
 | 02/2024 | 📘 **Book** | ![](/images/home/new-icon-1497910_1280.png){width="6%"} [Playing to win](/books/playingtowin.qmd)| New added book on strategy    |
 | 01/2024 |  <mark>Java SE</mark> | ![](/images/home/java-logo.png){width="5%"} [Lab#SE04-1: healthyFood Restaurant, Core Model](/javase/selab4-1.qmd) | Java SE UML lab  |
