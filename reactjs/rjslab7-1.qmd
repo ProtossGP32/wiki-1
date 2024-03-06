@@ -179,7 +179,9 @@ Done. Now run:
 
 # Mock-up
 
-to-do
+Two domains: home/simulation and user/mySimulations
+
+![Mockup draft](/images/reactjs/trafficlights-mockup.drawio.png) 
 
 
 # Step-by-step code
