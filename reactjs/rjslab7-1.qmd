@@ -38,6 +38,7 @@ In this lab, we'll delve into building a **traffic lights simulation** using `Re
       1. Timeouts allow us to delay certain actions, such as changing traffic light colors or updating pedestrian movements, adding an interactive and dynamic element to our traffic lights simulation.
    
 5. **Form Management**: We'll dive into forms to manage **user data**
+   1. **Axios**: we will use `axios` to persist our data at *fake-server* [mockapi](https://mockapi.io/){.external target='_blank'}
 
 
 By the end of this lab, you'll have gained hands-on experience in React.js development, mastering essential concepts like state management, JSX rendering, component styling, and integrating timeouts for simulation logic. This project serves as an engaging introduction to building dynamic web applications with React. 
@@ -108,12 +109,12 @@ Arrays are mutable in JavaScript, but you should treat them as immutable when yo
 </details>
 
 
-
-
-## Code repository
+**Code repository**
 
 - [Github repo](https://github.com/AlbertProfe/trafficlights/tree/master){.external target='_blank'}
--  [traffic lights axios SPA: codesanbox](https://codesandbox.io/p/sandbox/beautiful-sea-9j7tn4?file=%2Fsrc%2FApp.js%3A41%2C5){.external target='_blank'}
+- [trafficlights SPA 1.0.1](https://codesandbox.io/p/sandbox/trafficslights-v1-0-1-thjt2d){.external target='_blank'}
+- [trafficlights SPA 1.2.1](https://codesandbox.io/p/sandbox/trafficslights-v1-2-1-4znjj6){.external target='_blank'}
+- [trafficlights SPA 1.3.0](https://codesandbox.io/p/sandbox/trafficslights-v1-3-0-9hs8rw){.external target='_blank'}
 
 # Create project
 
@@ -188,9 +189,15 @@ Done. Now run:
 
 # Mock-up
 
-Whe should [evolve](https://www.dhiwise.com/post/single-page-application-vs-multi-page-application){.external target='_blank'} the project from a SPA to multpage `react-router-dom` site
+Whe should [evolve](https://www.dhiwise.com/post/single-page-application-vs-multi-page-application){.external target='_blank'} the project from a SPA to **multi-page** `react-router-dom` site.
 
-Two domains:
+From these `basic mockup SPA` versions:
+
+- [trafficlights SPA 1.0.1](https://codesandbox.io/p/sandbox/trafficslights-v1-0-1-thjt2d){.external target='_blank'}
+- [trafficlights SPA 1.2.1](https://codesandbox.io/p/sandbox/trafficslights-v1-2-1-4znjj6){.external target='_blank'}
+- [trafficlights SPA 1.3.0](https://codesandbox.io/p/sandbox/trafficslights-v1-3-0-9hs8rw){.external target='_blank'}
+
+To a `multi-page two domains` site:
 
 - home/**simulation**
 - and user/**mySimulations**
@@ -225,14 +232,16 @@ It uses the `useState` hook to manage **four state variables**:
 - **completed** (number of completed crossings),
 - and **light** (status of the traffic light).
 
-When the user clicks the "Traffic Light" `button`, the `handleTrafficLightClick` function is **triggered**. It decrements pending, increments walking, and sets the light to green. After a **delay of 5 seconds**, it decrements walking, increments completed, and sets the light to red.
-
-The code uses the `<>` (fragment) syntax to group multiple elements without introducing an additional parent node.
-
 ::: {.column-margin}
 
 The UI displays the current counts of pending, walking, and completed pedestrians, and the color of the text changes based on the status of the traffic light. The button's color also changes to reflect the traffic light's color.
 :::
+
+When the user clicks the "Traffic Light" `button`, the `handleTrafficLightClick` function is **triggered**. It decrements pending, increments walking, and sets the light to green. After a **delay of 5 seconds**, it decrements walking, increments completed, and sets the light to red.
+
+The code uses the `<>` (fragment) syntax to group multiple elements without introducing an additional parent node.
+
+
 
 
 ::: {.column-page-right}
