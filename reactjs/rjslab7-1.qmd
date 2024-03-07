@@ -518,11 +518,11 @@ Here's a breakdown:
 
 to-do
 
-## Adding form
+## Adding form: login & fake-token
 
 to-do
 
-## Adding data
+## Adding server: axios & mockapi
 
 to-do
 
