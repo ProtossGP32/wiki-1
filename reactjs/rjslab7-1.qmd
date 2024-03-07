@@ -52,27 +52,31 @@ By the end of this lab, you'll have gained hands-on experience in React.js devel
 ## Scripts and tools
 
 
-**Implement a traffic light**
-
+<details>
+<summary>**Implement a traffic light**</summary>
 Here is a crosswalk light component that toggles when the button is pressed:
 
 - [Implement a traffic light](https://react.dev/learn/state-as-a-snapshot#challenges){.external target='_blank'}
 - [codesandbox **walking**](https://codesandbox.io/p/sandbox/react-dev-mzqnh7?file=%2Fsrc%2FApp.js&utm_medium=sandpack){.external target='_blank'}
+</details>
 
 
-**Fix a request counter**
 
+<details>
+<summary>**Fix a request counter**</summary>
 You’re working on an art marketplace app that lets the user submit multiple orders for an art item at the same time. Each time the user presses the “Buy” button, the “Pending” counter should increase by one. After three seconds, the “Pending” counter should decrease, and the “Completed” counter should increase.
 
-However, the “Pending” counter does not behave as intended. When you press “Buy”, it decreases to -1 (which should not be possible!). And if you click fast twice, both counters seem to behave unpredictably.
+> However, the “Pending” counter does not behave as intended. When you press “Buy”, it decreases to -1 (which should not be possible!). And if you click fast twice, both counters seem to behave unpredictably.
 
 Why does this happen? Fix both counters.
 
 - [Implement a traffic light](https://react.dev/learn/queueing-a-series-of-state-updates#fix-a-request-counter){.external target='_blank'}
 - [codesandbox **marketplace**](https://codesandbox.io/p/sandbox/react-dev-hl8cxc?file=%2Fsrc%2FApp.js&utm_medium=sandpack){.external target='_blank'}
+</details>
 
-**Treat state as read-only**
 
+<details>
+<summary>**Treat state as read-only**</summary>
 In other words, you should treat any JavaScript object that you put into state as read-only.
 
 This example holds an object in state to represent the current pointer position. The red dot is supposed to move when you touch or move the cursor over the preview area. But the dot stays in the initial position:
@@ -80,9 +84,11 @@ This example holds an object in state to represent the current pointer position.
 
 - [Treat state as read-only](https://react.dev/learn/updating-objects-in-state#treat-state-as-read-only){.external target='_blank'}
 - [codesandbox **red-point**](https://codesandbox.io/p/sandbox/react-dev-5tfwx3?file=%2Fsrc%2FApp.js&utm_medium=sandpack){.external target='_blank'}
+</details>
 
-**Copying objects with the spread syntax**
 
+<details>
+<summary>**Copying objects with the spread syntax**</summary>
 In the previous example, the position object is always created fresh from the current cursor position. But often, you will want to include existing data as a part of the new object you’re creating. For example, you may want to update only one field in a form, but keep the previous values for all other fields.
 
 These input fields don’t work because the onChange handlers mutate the state:
@@ -90,27 +96,30 @@ These input fields don’t work because the onChange handlers mutate the state:
 - [Copying objects with the spread syntax](https://react.dev/learn/updating-objects-in-state#copying-objects-with-the-spread-syntax){.external target='_blank'}
 - [codesandbox **form**](https://codesandbox.io/p/sandbox/react-dev-xjd24m?file=%2Fsrc%2FApp.js&utm_medium=sandpack){.external target='_blank'}
 
+</details>
 
-**Updating Arrays in State**
 
+<details>
+<summary>**Updating Arrays in State**</summary>
 Arrays are mutable in JavaScript, but you should treat them as immutable when you store them in state. Just like with objects, when you want to update an array stored in state, you need to create a new one (or make a copy of an existing one), and then set state to use the new array.
 
 - [Updating Arrays in State](https://react.dev/learn/updating-arrays-in-state){.external target='_blank'}
 - [codesandbox **sculptors**](https://codesandbox.io/p/sandbox/react-dev-yy44zn?file=%2Fsrc%2FApp.js&utm_medium=sandpack){.external target='_blank'}
+</details>
+
 
 
 
 ## Code repository
 
 - [Github repo](https://github.com/AlbertProfe/trafficlights/tree/master){.external target='_blank'}
+-  [traffic lights axios SPA: codesanbox](https://codesandbox.io/p/sandbox/beautiful-sea-9j7tn4?file=%2Fsrc%2FApp.js%3A41%2C5){.external target='_blank'}
 
 # Create project
 
 ## Vite
 
-Next Generation Frontend Tooling
-
-Get ready for a development environment that can finally catch up with you.
+> Next Generation Frontend Tooling: Get ready for a development environment that can finally catch up with you.
 
 - [Vite](https://vitejs.dev/){.external target='_blank'}
 - [Getting Started | Vite](https://vitejs.dev/guide/)
@@ -179,7 +188,12 @@ Done. Now run:
 
 # Mock-up
 
-Two domains: home/simulation and user/mySimulations
+Whe should [evolve](https://www.dhiwise.com/post/single-page-application-vs-multi-page-application){.external target='_blank'} the project from a SPA to multpage `react-router-dom` site
+
+Two domains:
+
+- home/**simulation**
+- and user/**mySimulations**
 
 ![Mockup draft](/images/reactjs/trafficlights-mockup.drawio.png) 
 
@@ -282,7 +296,213 @@ export default function RequestTracker() {
 
 ## Adding graphics
 
-to-do
+> React component called **TrafficLightSimulation**: It simulates a pedestrian crossing at a traffic light.
+
+::: {.column-margin}
+The code provides an interactive simulation of a traffic light pedestrian crossing using React.
+:::
+
+The component initializes with a random number of people waiting to cross (`peopleToWalk`) and a random number of people allowed to cross in each group (`groupWalking`).
+
+When the traffic light is clicked, it turns `green`, and pedestrians start crossing in groups according to the `groupWalking` limit.
+
+The component visually represents `pending` pedestrians, `walking` pedestrians, and `completed` crossings. When all pedestrians have crossed, a "`Play Again`" button appears to refresh the page and start the simulation again.
+
+The `useMemo` hook ensures that the initial values for `peopleToWalk` and `groupWalking` **remain constant throughout the component's lifecycle.** 
+
+The `useState` hook **manages the state of the crossing simulation**.
+
+
+- [trafficlights: graphics](https://github.com/AlbertProfe/trafficlights/tree/f847634752f6109d5575417c8505634451656d6f){.external target='_blank'}
+- [App.jsx](https://github.com/AlbertProfe/trafficlights/blob/f847634752f6109d5575417c8505634451656d6f/src/App.jsx){.external target='_blank'}
+
+<details>
+<summary>App.jsx with graphics</summary>
+
+::: {.column-page-right}
+
+```{.js .code-overflow-wrap filename="App.jsx"}
+
+import { useState, useMemo } from "react";
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandomColor() {
+  const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+  return colors[getRandomInt(0, colors.length - 1)];
+}
+
+function refreshPage() {
+  window.location.reload(false);
+}
+
+export default function TrafficLightSimulation() {
+  const initPeopleToWalk = useMemo(() => getRandomInt(10, 20), []); // Initialize peopleToWalk with a random value that remains constant
+
+  const peopleToWalk = useMemo(() => initPeopleToWalk, []); // peopleToWalk does not change along all the execution
+  const initGroupWalking = getRandomInt(2, 6);
+
+  const [crossing, setCrossing] = useState({
+    pending: peopleToWalk,
+    walking: 0,
+    completed: 0,
+    groupWalking: initGroupWalking,
+    light: false,
+  });
+
+  function handleTrafficLightClick() {
+    setCrossing((prevState) => ({
+      ...prevState,
+      light: true,
+    }));
+
+    let walked = 0;
+    let maxToWalk = 0;
+    const walkingInterval = setInterval(() => {
+      const { pending, groupWalking } = crossing;
+      if (groupWalking >= pending) maxToWalk = pending;
+      else maxToWalk = groupWalking;
+
+      if (walked < maxToWalk) {
+        setCrossing((prevState) => ({
+          ...prevState,
+          walking: prevState.walking + 1,
+          pending: prevState.pending - 1,
+        }));
+        walked++;
+      } else {
+        clearInterval(walkingInterval);
+        setCrossing((prevState) => ({
+          ...prevState,
+          completed: prevState.completed + walked,
+          walking: 0,
+          light: false,
+          groupWalking: initGroupWalking,
+        }));
+      }
+    }, 1000);
+  }
+
+  const { pending, walking, completed, groupWalking, light } = crossing;
+
+  return (
+    <>
+      <div style={{ textAlign: "center" }}>
+        <h1>Traffic Light Crossing Simulation</h1>
+        <h4>Help pedestrians cross the street safely!</h4>{" "}
+        <div className="chip">
+         {peopleToWalk} people want to cross the pedestrian/zebra crossing
+         </div><p></p>
+        {completed === peopleToWalk ? (
+          <button
+            onClick={refreshPage}
+            style={{
+              backgroundColor: "black",
+              padding: "10px 24px",
+              borderRadius: "8px",
+              border: "none",
+              color: "white",
+              fontSize: "20px",
+              marginBottom: "20px",
+            }}
+          >
+            Play Again (refresh page)
+          </button>
+        ) : (
+          <>
+            <button
+              onClick={handleTrafficLightClick}
+              style={{
+                backgroundColor: light ? "green" : "red",
+                padding: "10px 24px",
+                borderRadius: "8px",
+                border: "none",
+                color: "white",
+                fontSize: "20px",
+                marginBottom: "20px",
+              }}
+            >
+              Traffic Light
+            </button>
+
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+              }}
+            >
+              <h3>Group walking: {groupWalking} </h3>
+              {Array.from({ length: groupWalking }).map((_, index) => (
+                <div
+                  key={index}
+                  style={{
+                    backgroundColor: "blue",
+                    width: "10px",
+                    height: "10px",
+                    margin: "2px",
+                  }}
+                />
+              ))}
+            </div>
+          </>
+        )}
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div>
+            <h3>Pending: {pending}</h3>
+            {Array.from({ length: pending }).map((_, index) => (
+              <div
+                key={index}
+                style={{
+                  backgroundColor: getRandomColor(),
+                  width: "10px",
+                  height: "10px",
+                  margin: "2px",
+                }}
+              />
+            ))}
+          </div>
+          <div>
+            <h3>Walking: {walking}</h3>
+            {Array.from({ length: walking }).map((_, index) => (
+              <div
+                key={index}
+                style={{
+                  backgroundColor: "blue",
+                  width: "10px",
+                  height: "10px",
+                  margin: "2px",
+                }}
+              />
+            ))}
+          </div>
+          <div>
+            <h3>Completed: {completed}</h3>
+            {Array.from({ length: completed }).map((_, index) => (
+              <div
+                key={index}
+                style={{
+                  backgroundColor: "green",
+                  width: "10px",
+                  height: "10px",
+                  margin: "2px",
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+```
+:::
+
+</details>
+
+![render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png)
 
 ## Consolidation and merge: `literal object`
 
@@ -294,10 +514,17 @@ Here's a breakdown:
 - **State Merging**: This term underscores the use of the spread operator (...) to merge the previous state with the updated state when setting the state. It emphasizes the technique used to update multiple properties of the state object simultaneously.
 
 
+## Adding domains: router
+
+to-do
+
 ## Adding form
 
+to-do
 
 ## Adding data
+
+to-do
 
 # Code
 
@@ -306,6 +533,7 @@ Here's a breakdown:
 | Code Version | Commit | Folder-Tree | Output |
 | -- | -- | -- | -- |
 | [GitHub code v0.0](https://github.com/AlbertProfe/trafficlights/tree/5219b5acb611bd3c7faba7b22b14e0fd49f38b45){.external}  | create project (React Vite) and core business logic | [Basic Structure](/images/reactjs/traffic-project-v0.0-1.png){width="80%"} | [render v0.0 render(1)](/images/reactjs/traffic-render-v0.0-1.png), [render v0.0 render(2)](/images/reactjs/traffic-render-v0.0-2.png), [render v0.0 render(3)](/images/reactjs/traffic-render-v0.0-3.png) |
+| [GitHub code v0.1](https://github.com/AlbertProfe/trafficlights/tree/f847634752f6109d5575417c8505634451656d6f){.external}  | adding graphics |  |  [render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png), [render v0.1 render(2)](/images/reactjs/traffic-render-v0.1-2.png), [render v0.1 render(3)](/images/reactjs/traffic-render-v0.1-3.png), [render v0.1 render(4)](/images/reactjs/traffic-render-v0.1-4.png),|
 
 :::
 
