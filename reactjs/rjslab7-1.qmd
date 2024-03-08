@@ -221,7 +221,7 @@ ReactDOM.createRoot(
 root.render(<App />);
 
 ```
-## React Application
+## Core Business logic & use case
 
 This first iteration defines a React functional component called `RequestTracker`, <mark>which simulates a traffic light and tracks pedestrian crossings</mark>.
 
@@ -275,7 +275,8 @@ export default function RequestTracker() {
 
   return (
     <>
-      <h3 style={{ color: light ? "grey" : "white" }}> Pending: {pending} </h3>
+      <h3 style={{ color: light ? "grey" : "white" }}> 
+        Pending: {pending} </h3>
       <h3 style={{ color: light ? "white" : "grey" }}>
         Walking: {walking} {light ? " . . . . ." : ""}
       </h3>
@@ -303,7 +304,7 @@ export default function RequestTracker() {
 ```
 :::
 
-## Adding graphics
+## Adding graphics & improving business logic
 
 > React component called **TrafficLightSimulation**: It simulates a pedestrian crossing at a traffic light.
 
@@ -341,7 +342,8 @@ function getRandomInt(min, max) {
 }
 
 function getRandomColor() {
-  const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+  const colors = 
+        ["red", "blue", "green", "yellow", "purple", "orange"];
   return colors[getRandomInt(0, colors.length - 1)];
 }
 
@@ -350,9 +352,19 @@ function refreshPage() {
 }
 
 export default function TrafficLightSimulation() {
-  const initPeopleToWalk = useMemo(() => getRandomInt(10, 20), []); // Initialize peopleToWalk with a random value that remains constant
-
-  const peopleToWalk = useMemo(() => initPeopleToWalk, []); // peopleToWalk does not change along all the execution
+  
+  // total people to walk, to cross  the traffic lights
+  const initPeopleToWalk = 
+        useMemo(() => getRandomInt(10, 20), []);
+        // Initialize peopleToWalk with a 
+        //random value that remains constant
+  const peopleToWalk = 
+        useMemo(() => initPeopleToWalk, []); 
+        // peopleToWalk does not change along all the execution
+  
+  // people will cross by gropus, the value is random each time
+  // each time traffic ights are green the group
+  // will cross one by one to complete the lights cycle
   const initGroupWalking = getRandomInt(2, 6);
 
   const [crossing, setCrossing] = useState({
@@ -545,7 +557,7 @@ to-do
 | Code Version | Commit | Folder-Tree | Output |
 | -- | -- | -- | -- |
 | [GitHub code v0.0](https://github.com/AlbertProfe/trafficlights/tree/5219b5acb611bd3c7faba7b22b14e0fd49f38b45){.external target='_blank'}  | create project (React Vite) and core business logic | [Basic Structure](/images/reactjs/traffic-project-v0.0-1.png){.external target='_blank'} | [render v0.0 render(1)](/images/reactjs/traffic-render-v0.0-1.png){.external target='_blank'}, [render v0.0 render(2)](/images/reactjs/traffic-render-v0.0-2.png){.external target='_blank'}, [render v0.0 render(3)](/images/reactjs/traffic-render-v0.0-3.png){.external target='_blank'} |
-| [GitHub code v0.1](https://github.com/AlbertProfe/trafficlights/tree/f847634752f6109d5575417c8505634451656d6f){.external target='_blank'}  | adding graphics, simulation ending, groups crossing and random |  |  [render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png){.external target='_blank'}, [render v0.1 render(2)](/images/reactjs/traffic-render-v0.1-2.png){.external target='_blank'}, [render v0.1 render(3)](/images/reactjs/traffic-render-v0.1-3.png){.external target='_blank'}, [render v0.1 render(4)](/images/reactjs/traffic-render-v0.1-4.png){.external target='_blank'} |
+| [GitHub code v0.1](https://github.com/AlbertProfe/trafficlights/tree/f847634752f6109d5575417c8505634451656d6f){.external target='_blank'}  | adding graphics, simulation ending, refresh `button`, groups crossing and random values |  |  [render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png){.external target='_blank'}, [render v0.1 render(2)](/images/reactjs/traffic-render-v0.1-2.png){.external target='_blank'}, [render v0.1 render(3)](/images/reactjs/traffic-render-v0.1-3.png){.external target='_blank'}, [render v0.1 render(4)](/images/reactjs/traffic-render-v0.1-4.png){.external target='_blank'} |
 
 :::
 
