@@ -55,7 +55,7 @@ By the end of this lab, you'll have gained hands-on experience in React.js devel
 **`React.dev` scripts**
 
 <details>
-<summary>**Implement a traffic light**</summary>
+<summary>Implement a traffic light</summary>
 Here is a crosswalk light component that toggles when the button is pressed:
 
 - [Implement a traffic light](https://react.dev/learn/state-as-a-snapshot#challenges){.external target='_blank'}
@@ -65,7 +65,7 @@ Here is a crosswalk light component that toggles when the button is pressed:
 
 
 <details>
-<summary>**Fix a request counter**</summary>
+<summary>Fix a request counter</summary>
 You’re working on an art marketplace app that lets the user submit multiple orders for an art item at the same time. Each time the user presses the “Buy” button, the “Pending” counter should increase by one. After three seconds, the “Pending” counter should decrease, and the “Completed” counter should increase.
 
 > However, the “Pending” counter does not behave as intended. When you press “Buy”, it decreases to -1 (which should not be possible!). And if you click fast twice, both counters seem to behave unpredictably.
@@ -78,7 +78,7 @@ Why does this happen? Fix both counters.
 
 
 <details>
-<summary>**Treat state as read-only**</summary>
+<summary>Treat state as read-only</summary>
 In other words, you should treat any JavaScript object that you put into state as read-only.
 
 This example holds an object in state to represent the current pointer position. The red dot is supposed to move when you touch or move the cursor over the preview area. But the dot stays in the initial position:
@@ -90,7 +90,7 @@ This example holds an object in state to represent the current pointer position.
 
 
 <details>
-<summary>**Copying objects with the spread syntax**</summary>
+<summary>Copying objects with the spread syntax</summary>
 In the previous example, the position object is always created fresh from the current cursor position. But often, you will want to include existing data as a part of the new object you’re creating. For example, you may want to update only one field in a form, but keep the previous values for all other fields.
 
 These input fields don’t work because the onChange handlers mutate the state:
@@ -102,7 +102,7 @@ These input fields don’t work because the onChange handlers mutate the state:
 
 
 <details>
-<summary>**Updating Arrays in State**</summary>
+<summary>Updating Arrays in State</summary>
 Arrays are mutable in JavaScript, but you should treat them as immutable when you store them in state. Just like with objects, when you want to update an array stored in state, you need to create a new one (or make a copy of an existing one), and then set state to use the new array.
 
 - [Updating Arrays in State](https://react.dev/learn/updating-arrays-in-state){.external target='_blank'}
@@ -142,7 +142,8 @@ Select `React` framework:
 
 ```{.sh .code-overflow-wrap filename="bash.sh"}
 ✔ Project name: … vite-project
-? Select a framework: › - Use arrow-keys. Return to submit.
+? Select a framework: 
+› - Use arrow-keys. Return to submit.
     Vanilla
     Vue
 ❯   React
@@ -154,13 +155,15 @@ Select `React` framework:
 And `js`:
 
 ```{.sh .code-overflow-wrap filename="bash.sh"}
-? Select a variant: › - Use arrow-keys. Return to submit.
+? Select a variant: 
+› - Use arrow-keys. Return to submit.
 ❯   JavaScript
     TypeScript
 ```
 
 Output:
 
+::: {.column-body-outset-right}
 ```{.sh .code-overflow-wrap filename="bash.sh"}
 Scaffolding project in /Users/carlosazaustre/dev/vite-project...
 
@@ -170,8 +173,9 @@ Done. Now run:
   npm install
   npm run dev
 ```
+:::
 
-## Exposing port
+**Exposing port**
 
 [npm run dev --host network: not exposed](https://stackoverflow.com/questions/71939532/npm-run-dev-host-network-not-exposed)
 
@@ -182,7 +186,7 @@ Done. Now run:
   },
 ```
 
-## Shortcuts
+**Shortcuts**
 
 ```{.json .code-overflow-wrap filename="package.json"}
  "scripts": {
@@ -310,6 +314,8 @@ export default function RequestTracker() {
 
 ## Adding graphics & improving business logic
 
+**use case: pedestrians crossing a traffic light**
+
 > React component called **TrafficLightSimulation**: It simulates a pedestrian crossing at a traffic light.
 
 ::: {.column-margin}
@@ -320,7 +326,7 @@ The component initializes with a random number of people waiting to cross (`peop
 
 When the traffic light is clicked, it turns `green`, and pedestrians start crossing in groups according to the `groupWalking` limit.
 
-The component visually represents `pending` pedestrians, `walking` pedestrians, and `completed` crossings. When all pedestrians have crossed, a "`Play Again`" button appears to refresh the page and start the simulation again.
+The component visually represents `pending` pedestrians, `walking` pedestrians, and `completed` crossings. When all pedestrians have crossed, a "`Play Again`" <mark>button appears to refresh the page and start the simulation again./<mark>
 
 The `useMemo` hook ensures that the initial values for `peopleToWalk` and `groupWalking` **remain constant throughout the component's lifecycle.** 
 
@@ -329,6 +335,7 @@ The `useState` hook **manages the state of the crossing simulation**.
 
 - [trafficlights: graphics](https://github.com/AlbertProfe/trafficlights/tree/f847634752f6109d5575417c8505634451656d6f){.external target='_blank'}
 - [App.jsx](https://github.com/AlbertProfe/trafficlights/blob/f847634752f6109d5575417c8505634451656d6f/src/App.jsx){.external target='_blank'}
+
 
 ::: {.column-page-right}
 
@@ -527,6 +534,34 @@ export default function TrafficLightSimulation() {
 </details>
 
 :::
+
+**code: setInterval**
+
+The `handleTrafficLightClick` function sets up an [interval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval){.external target='_blank'} using `setInterval`, <mark>which repeatedly executes a specified function</mark> (`() => { ... }`) with a <mark>fixed time delay between each execution</mark>. 
+
+In this case, the function inside `setInterval` **acts as a loop with a delay**.
+
+![ `setInterval` acts as a loop with a delay](/images/reactjs/traffic-setInterval-v0.1.png)
+
+
+Here's how it works:
+
+1. When `handleTrafficLightClick` is called, it sets the `light` property of the `crossing` state to `true` using `setCrossing`.
+
+2. It then initializes variables `walked` and `maxToWalk` to keep track of the number of pedestrians walking and the maximum number of pedestrians allowed to walk, respectively.
+
+3. Inside the interval function, it calculates `maxToWalk` based on the number of pending pedestrians and the maximum number of pedestrians allowed to walk simultaneously (`groupWalking`).
+
+4. If the number of `walked` pedestrians is less than `maxToWalk`, it increments the `walking` property by 1 and decrements the `pending` property by 1 in the state using `setCrossing`. It then increments the `walked` counter.
+
+5. If the maximum number of pedestrians have walked (`walked >= maxToWalk`), it clears the interval using `clearInterval(walkingInterval)` to stop the loop. It then updates the state with the number of completed pedestrians (`completed`), resets the `walking` counter to 0, sets the `light` property back to `false`, and resets the `groupWalking` property to its initial value using `setCrossing`.
+
+6. The interval function repeats this process every 1000 milliseconds (1 second) until it is stopped by calling `clearInterval`.
+
+This loop effectively controls the flow of pedestrians crossing the street, incrementally allowing them to walk within the specified time intervals until the maximum number of pedestrians have crossed, at which point it resets the state and ends the loop.
+
+
+**code: prevState**
 
 
 `prevState` is used as an argument in the functional update form of the `setCrossing` function, **which is part of React's useState hook**. 
