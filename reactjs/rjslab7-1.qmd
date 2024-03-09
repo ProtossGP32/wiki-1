@@ -116,6 +116,9 @@ Arrays are mutable in JavaScript, but you should treat them as immutable when yo
 - `Axios` and Api `Rest`: [trafficlights SPA 1.2.1](https://codesandbox.io/p/sandbox/trafficslights-v1-2-1-4znjj6){.external target='_blank'}
 - `useContext` to decouple `axios` from render: [trafficlights SPA 1.3.0](https://codesandbox.io/p/sandbox/trafficslights-v1-3-0-9hs8rw){.external target='_blank'}
 
+::: {.column-margin}
+ ![useContext in trafficlights SPA 1.3.0](/images/ifcd0210-24/photo_2024-03-09_06-29-18.jpg){.lightbox}
+:::
 
 # Create project
 
@@ -209,7 +212,7 @@ To a `multi-page two domains` site:
 # Step-by-step code
 
 
-## React functions
+## React functions & components
 
 ```{.js .code-overflow-wrap filename="index.js"}
 import React from 'react';
@@ -331,8 +334,6 @@ The `useState` hook **manages the state of the crossing simulation**.
 
 <details>
 <summary>App.jsx with graphics</summary>
-
-
 
 ```{.js .code-overflow-wrap filename="App.jsx"}
 
@@ -526,6 +527,92 @@ export default function TrafficLightSimulation() {
 </details>
 
 :::
+
+
+`prevState` is used as an argument in the functional update form of the `setCrossing` function, **which is part of React's useState hook**. 
+
+> This functional form allows you to access the previous state of the component's state variable (in this case, `crossing`) and perform updates based on that previous state.
+
+::: {.column-page-right}
+
+```{.js .code-overflow-wrap filename="App.jsx"}
+
+// functions ...
+
+export default function TrafficLightSimulation() {
+  
+// code ...
+
+  const [crossing, setCrossing] = useState({
+    pending: peopleToWalk,
+    walking: 0,
+    completed: 0,
+    groupWalking: initGroupWalking,
+    light: false,
+  });
+
+  function handleTrafficLightClick() {
+    setCrossing((prevState) => ({
+      ...prevState,
+      light: true,
+    }));
+
+    let walked = 0;
+    let maxToWalk = 0;
+    const walkingInterval = setInterval(() => {
+      const { pending, groupWalking } = crossing;
+      if (groupWalking >= pending) maxToWalk = pending;
+      else maxToWalk = groupWalking;
+
+      if (walked < maxToWalk) {
+        setCrossing((prevState) => ({
+          ...prevState,
+          walking: prevState.walking + 1,
+          pending: prevState.pending - 1,
+        }));
+        walked++;
+      } else {
+        clearInterval(walkingInterval);
+        setCrossing((prevState) => ({
+          ...prevState,
+          completed: prevState.completed + walked,
+          walking: 0,
+          light: false,
+          groupWalking: initGroupWalking,
+        }));
+      }
+    }, 1000);
+  }
+
+  return (
+    <>
+    </>
+  );
+}
+```
+:::
+
+
+1. When updating the state using `setCrossing`, the code utilizes the functional form `(prevState) => { ... }`.
+   - This function receives the previous state (`prevState`) as an argument and returns the new state based on that previous state.
+
+2. Inside the function, the **spread operator** (`...prevState`) is used to create a shallow copy of the previous state object.
+   1. This ensures that **you are not mutating the original state directly**, which is important for maintaining the immutability of React state.
+
+3. The properties of the state object are then modified according to the logic defined in the function.
+   - In the first part of the code block, `walking` is incremented by 1 and `pending` is decremented by 1.
+    - In the second part of the code block (the `else` block), various properties of the state object are updated based on some condition.
+  
+4. `prevState` is not a reserved word in React; rather, it's a variable name used conventionally to refer to the previous state in functional updates when using the `useState` hook.
+   1.  It's a common practice in React to use `prevState` as the parameter name in functional updates, but it's not enforced by React itself.
+   2.  You could technically use **any valid variable name in its place**, but using `prevState` makes the code more readable and understandable for other developers who are familiar with React conventions.
+
+
+::: {.callout-note}
+
+By using `prevState` in this manner, the code ensures that the state updates are based on the previous state, rather than relying on the current state directly. This is important because React's state updates may be asynchronous, and accessing the previous state via the functional form ensures that the updates are based on the most recent state at the time the update is applied.
+
+::::
 
 ![render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png)
 
