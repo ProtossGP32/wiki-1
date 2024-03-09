@@ -163,7 +163,7 @@ And `js`:
 
 Output:
 
-::: {.column-body-outset-right}
+::: {.column-page-right}
 ```{.sh .code-overflow-wrap filename="bash.sh"}
 Scaffolding project in /Users/carlosazaustre/dev/vite-project...
 
@@ -535,13 +535,25 @@ export default function TrafficLightSimulation() {
 
 :::
 
+**Consolidation and merge: `literal object`**
+
+![Consolidation and merge: `literal object`](/images/reactjs/traffic-literalobject-v0.1.png)
+
+
+> The operation of consolidating multiple state variables **into a single object using the useState hook and the spread operator** can be referred to as state consolidation or state merging.
+
+Here's a breakdown:
+
+- **State Consolidation**: This term emphasizes the process of bringing together multiple individual state variables into a single, cohesive object. It highlights the idea of simplifying state management by grouping related pieces of state.
+- **State Merging**: This term underscores the use of the spread operator (...) to merge the previous state with the updated state when setting the state. It emphasizes the technique used to update multiple properties of the state object simultaneously.
+
 **code: setInterval**
 
 The `handleTrafficLightClick` function sets up an [interval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval){.external target='_blank'} using `setInterval`, <mark>which repeatedly executes a specified function</mark> (`() => { ... }`) with a <mark>fixed time delay between each execution</mark>. 
 
 In this case, the function inside `setInterval` **acts as a loop with a delay**.
 
-![ `setInterval` acts as a loop with a delay](/images/reactjs/traffic-setInterval-v0.1.png)
+![`setInterval` acts as a loop with a delay](/images/reactjs/traffic-setInterval-v0.1.png)
 
 
 Here's how it works:
@@ -569,6 +581,10 @@ This loop effectively controls the flow of pedestrians crossing the street, incr
 > This functional form allows you to access the previous state of the component's state variable (in this case, `crossing`) and perform updates based on that previous state.
 
 ::: {.column-page-right}
+<details>
+<summary>App.jsx with graphics</summary>
+
+
 
 ```{.js .code-overflow-wrap filename="App.jsx"}
 
@@ -625,8 +641,12 @@ export default function TrafficLightSimulation() {
   );
 }
 ```
+
+</details>
+
 :::
 
+![`prevState` to access updated state](/images/reactjs/traffic-prevState-v0.1.png)
 
 1. When updating the state using `setCrossing`, the code utilizes the functional form `(prevState) => { ... }`.
    - This function receives the previous state (`prevState`) as an argument and returns the new state based on that previous state.
@@ -651,14 +671,7 @@ By using `prevState` in this manner, the code ensures that the state updates are
 
 ![render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png)
 
-## Consolidation and merge: `literal object`
 
-The operation of consolidating multiple state variables into a single object using the useState hook and the spread operator can be referred to as state consolidation or state merging.
-
-Here's a breakdown:
-
-- **State Consolidation**: This term emphasizes the process of bringing together multiple individual state variables into a single, cohesive object. It highlights the idea of simplifying state management by grouping related pieces of state.
-- **State Merging**: This term underscores the use of the spread operator (...) to merge the previous state with the updated state when setting the state. It emphasizes the technique used to update multiple properties of the state object simultaneously.
 
 
 ## Adding domains: router
