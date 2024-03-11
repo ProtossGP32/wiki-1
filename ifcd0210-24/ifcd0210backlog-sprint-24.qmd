@@ -33,15 +33,15 @@ tr:hover {background-color:  #f4f4f4;}
 ::: {.column-page-right}
 
 
-##  ``Sprint#11 Spring Boot create-project`` (March 2024)
+##  ``Sprint#11 Spring Boot Rest & H2 create-project`` (March 2024)
 
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #11 | 40 | 11/03/2024 | - Spring Boot: request-response cycle </br> - Create project </br> - `@RestController` and `@Controller` </br>  - JPA: `@Repository` and `application.properties`  </br> - H2 db | - [Create a project](/springboot/boot-what-create.qmd) - [Controller](/springboot/boot-concepts-controller.qmd) </br>  |
-|  | 41 | 12/03/2024 | - Sprint Boot CRUD API Rest </br> - Postman |  |
-|  | 42 | 14/03/2024 | - trafficliights adding `react-router-dom` | - [Lab#RE07-1](/reactjs/rjslab7-1.qmd) |
-|  | 43 | 15/03/2024 | - trafficliights adding axios and ``useEffect`` | - [Lab#RE07-1](/reactjs/rjslab7-1.qmd) |
+| #11 | 40 | 11/03/2024 | - Spring Boot: request-response cycle </br> - Create project </br> - `@RestController` and `@Controller` </br>  - JPA: `@Repository` and `application.properties`  </br> - <s> H2 db</s>  </br> - create `@Service` fake array of `simulation` `model`   | - [Create a project](/springboot/boot-what-create.qmd) </br> - [Controller](/springboot/boot-concepts-controller.qmd) </br> - [RestController](/springboot/boot-concepts-rest.qmd) </br>  - [vaadin](https://vaadin.com/){.external target='_blank'}  </br> - [demoBoot0](https://github.com/AlbertProfe/monitorBook/tree/master/demoJavaBoot0){.external target='_blank'} </br> ![](/images/ifcd0210-24/photo_2024-03-11_11-32-37.jpg) </br></br><mark> [Screen video: Monday-1]({{< meta baseurlaws >}}CifjoJava-2024-03-18-1.mp4){.external target='_blank'}<mark>|
+|  | 41 | 12/03/2024 | - Sprint Boot CRUD API Rest `simulation` </br> - Postman |  |
+|  | 42 | 14/03/2024 | - Spring Boot `JPA` & database `H2` |  |
+|  | 43 | 15/03/2024 |  - Spring Boot `JPA` & database `H2`  |  |
 : Backlog Sprint#11 March 2024 {tbl-colwidths="[2,2,2,55,39]"}
 
 

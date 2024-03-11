@@ -115,8 +115,8 @@ Class Screen Recordings by day on [AWS S3](http://tinyurl.com/2pawt4s7){.externa
 |  | 41 | 12/03/2024 |  |  |
 |  | 42 | 14/03/2024 |  |  |
 |  | 43 | 15/03/2024 |  |  |
-| #12 | 44 | 18/03/2024 |  |  |
-|  | 45 | 19/03/2024 |  |  |
+| #12 | 44 | 18/03/2024 |- trafficliights adding `react-router-dom` | - [Lab#RE07-1](/reactjs/rjslab7-1.qmd) |
+|  | 45 | 19/03/2024 | - trafficliights adding axios and ``useEffect`` | - [Lab#RE07-1](/reactjs/rjslab7-1.qmd) |
 |  | 46 | 21/03/2024 |  |  |
 |  | 47 | 22/03/2024 |  |  |
 : Backlog course March 2024 table {tbl-colwidths="[2,2,2,64,30]"}
