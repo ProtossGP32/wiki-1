@@ -672,17 +672,23 @@ By using `prevState` in this manner, the code ensures that the state updates are
 ![render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png)
 
 
-
-
 ## Adding domains: router
 
 to-do
 
+
+## Adding server: data
+
+**Axios & mockapi**
+
+
+
+**Backend: Spring Boot**
+
+
+
+
 ## Adding form: login & fake-token
-
-to-do
-
-## Adding server: axios & mockapi
 
 to-do
 

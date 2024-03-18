@@ -33,15 +33,15 @@ tr:hover {background-color:  #f4f4f4;}
 ::: {.column-page-right}
 
 
-##  ``Sprint#12 CRUD operations`` (March 2024)
+##  ``Sprint#12 Raact: trafficlights (2)`` (March 2024)
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #12 | 44 | 18/03/2024 |- Spring Boot `JPA`: all **CRUD** operations       |              - [`simulations` Spring Boot: **project** v0.4](https://github.com/AlbertProfe/simulations/wiki/simulations-v0.4){.external target='_blank'}</br> - [`simulations` Spring Boot: **code** v0.4](){.external target='_blank'}   </br></br><mark> [Screen video: Monday-1]({{< meta baseurlaws >}}CifjoJava-2024-03-18-1.mp4){.external target='_blank'}<mark> </br><mark> [Screen video: Monday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-18-2.mp4){.external target='_blank'}<mark> |
-|  | 45 | 19/03/2024 | - Spring Boot `JPA`: all **CRUD** operations                    |              - [`simulations` Spring Boot: **project** v0.5](https://github.com/AlbertProfe/simulations/wiki/simulations-v0.5){.external target='_blank'}</br> - [`simulations` Spring Boot: **code** v0.5](){.external target='_blank'} </br></br><mark> [Screen video: Tuesday-1]({{< meta baseurlaws >}}CifjoJava-2024-03-19-1.mp4){.external target='_blank'}<mark>   <br><mark> [Screen video: Tuesday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-19-2.mp4){.external target='_blank'}<mark>   |
+| #12 | 44 | 18/03/2024 | - trafficliights adding `react-router-dom`   |    - [Lab#RE07-1](/reactjs/rjslab7-1.qmd)             </br></br><mark> [Screen video: Monday-1]({{< meta baseurlaws >}}CifjoJava-2024-03-18-1.mp4){.external target='_blank'}<mark> </br><mark> [Screen video: Monday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-18-2.mp4){.external target='_blank'}<mark> |
+|  | 45 | 19/03/2024 |  - trafficliights adding `axios`    |    - [Lab#RE07-1](/reactjs/rjslab7-1.qmd)          </br></br><mark> [Screen video: Tuesday-1]({{< meta baseurlaws >}}CifjoJava-2024-03-19-1.mp4){.external target='_blank'}<mark>   <br><mark> [Screen video: Tuesday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-19-2.mp4){.external target='_blank'}<mark>   |
 |  |
-|  | 46 | 21/03/2024 |- trafficliights adding `react-router-dom` | - [Lab#RE07-1](/reactjs/rjslab7-1.qmd)  </br></br><mark> [Screen video: Thursday-1]({{< meta baseurlaws >}}CifjoJava-2024-03-14-1.mp4){.external target='_blank'}<mark>   <br><mark> [Screen video: Thursday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-21-2.mp4){.external target='_blank'}<mark>   |
-|  | 47 | 22/03/2024 |  - trafficliights adding axios and ``useEffect`` | - [Lab#RE07-1](/reactjs/rjslab7-1.qmd)  </br></br><mark> [Screen video: Friday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-23-2.mp4){.external target='_blank'} </br><mark> [Screen video: Friday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-23-2.mp4){.external target='_blank'}<mark>  |
+|  | 46 | 21/03/2024 |   - trafficliights adding ``useEffect`` | - [Lab#RE07-1](/reactjs/rjslab7-1.qmd)  </br></br><mark> [Screen video: Thursday-1]({{< meta baseurlaws >}}CifjoJava-2024-03-14-1.mp4){.external target='_blank'}<mark>   <br><mark> [Screen video: Thursday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-21-2.mp4){.external target='_blank'}<mark>   |
+|  | 47 | 22/03/2024 |  - trafficliights adding `login`  | - [Lab#RE07-1](/reactjs/rjslab7-1.qmd)  </br></br><mark> [Screen video: Friday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-23-2.mp4){.external target='_blank'} </br><mark> [Screen video: Friday-2]({{< meta baseurlaws >}}CifjoJava-2024-03-23-2.mp4){.external target='_blank'}<mark>  |
 : Backlog Sprint#12 March 2024 {tbl-colwidths="[2,2,2,55,39]"}
 
 
