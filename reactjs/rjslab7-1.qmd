@@ -863,8 +863,9 @@ to-do
 | -- | -- | -- | -- |
 | [GitHub code v0.0](https://github.com/AlbertProfe/trafficlights/tree/5219b5acb611bd3c7faba7b22b14e0fd49f38b45){.external target='_blank'}  | create project (React Vite) and core business logic | [Basic Structure](/images/reactjs/traffic-project-v0.0-1.png){.external target='_blank'} | [render v0.0 render(1)](/images/reactjs/traffic-render-v0.0-1.png){.external target='_blank'}, [render v0.0 render(2)](/images/reactjs/traffic-render-v0.0-2.png){.external target='_blank'}, [render v0.0 render(3)](/images/reactjs/traffic-render-v0.0-3.png){.external target='_blank'} |
 | [GitHub code v0.1](https://github.com/AlbertProfe/trafficlights/tree/f847634752f6109d5575417c8505634451656d6f){.external target='_blank'}  | adding graphics, simulation ending, refresh `button`, groups crossing and random values |  |  [render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png){.external target='_blank'}, [render v0.1 render(2)](/images/reactjs/traffic-render-v0.1-2.png){.external target='_blank'}, [render v0.1 render(3)](/images/reactjs/traffic-render-v0.1-3.png){.external target='_blank'}, [render v0.1 render(4)](/images/reactjs/traffic-render-v0.1-4.png){.external target='_blank'} |
-| [GitHub code v0.3](){.external target='_blank'}  | adding `react-router-dom`, two routes: `simulation` and `mySimulations` |  | |
-| [GitHub code v0.4](){.external target='_blank'}  | adding data from server: mockapi & spring boot |  | |
+| [GitHub code v0.3 `integrationcruddata` ](https://github.com/AlbertProfe/trafficlights/tree/20e9ee5cb695d8e10ba10c3d867081d7c6285fbc){.external target='_blank'}  | adding `react-router-dom`, two routes: `simulation` and `mySimulations` | [branch `mySimulations` ](/images/reactjs/traffic-branches-v0.3-4.png), [project structure](/images/reactjs/traffic-project-v0.3.png) | [render v0.3 render(1)](/images/reactjs/traffic-render-v0.3-1.png){.external target='_blank'}, [render v0.3 render(2)](/images/reactjs/traffic-render-v0.3-2.png){.external target='_blank'}, [render v0.3 render(3)](/images/reactjs/traffic-render-v0.3-3.png){.external target='_blank'},|
+| [GitHub code v0.4 `integrationcruddata`](){.external target='_blank'}  |  decoupling `mySimulations`  |  |   |
+| [GitHub code v0.5](){.external target='_blank'}  | adding data from server: mockapi & spring boot |  |   |
 
 :::
 
