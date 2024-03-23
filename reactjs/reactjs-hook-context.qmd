@@ -325,7 +325,7 @@ export default ToggleLocale;
 <br>
 <div class='column right next'>
 <br>
-[ReactJS: custom hooks  {{< fa solid arrow-right >}}](/reactjs/reactjs-hook-custom.qmd)
+[ReactJS: useMemo  {{< fa solid arrow-right >}}](/reactjs/reactjs-hook-memo.qmd)
 <br>
 </div>
 <br>

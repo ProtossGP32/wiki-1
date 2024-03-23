@@ -106,7 +106,7 @@ We have created a new file called ``useFetch.js`` containing a function called `
 <br>
 <div class='column left previous'>
 <br>
-[ {{< fa solid arrow-left >}} React JS: useContext](/reactjs/reactjs-hook-context.qmd)
+[ {{< fa solid arrow-left >}} React JS: useMemo](/reactjs/reactjs-hook-memo.qmd)
 <br>
 </div>
 <br>

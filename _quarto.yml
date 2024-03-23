@@ -393,6 +393,7 @@ website:
             - reactjs/reactjs-hook-ref.qmd
             - reactjs/reactjs-hook-effect.qmd
             - reactjs/reactjs-hook-context.qmd
+            - reactjs/reactjs-hook-memo.qmd
             - reactjs/reactjs-hook-custom.qmd
         - text: "---"  
         - section: "ReactJS: Designing an App"

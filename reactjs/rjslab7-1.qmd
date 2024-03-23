@@ -343,6 +343,8 @@ The `useState` hook **manages the state of the crossing simulation**.
 
 - [trafficlights: graphics](https://github.com/AlbertProfe/trafficlights/tree/f847634752f6109d5575417c8505634451656d6f){.external target='_blank'}
 - [App.jsx](https://github.com/AlbertProfe/trafficlights/blob/f847634752f6109d5575417c8505634451656d6f/src/App.jsx){.external target='_blank'}
+- [useMemo](/reactjs/reactjs-hook-memo.qmd)
+- [useState](/reactjs/reactjs-hook-state.qmd)
 
 
 ::: {.column-page-right}
@@ -802,6 +804,69 @@ It provides an **easy-to-use** and consistent API for performing **asynchronous 
 
 `Axios` simplifies the process of making HTTP requests by providing a higher-level abstraction and allowing developers to handle responses and errors more efficiently
 
+
+**useEffect**
+
+- [useEffect](/reactjs/reactjs-hook-effect.qmd)
+- [cancelCall code github](https://github.com/AlbertProfe/cancelCall){.external target='_blank'}
+
+<mark>In React, the `useEffect` hook is used to perform side effects in function components. </mark>
+
+This includes data **fetching**, subscriptions, or manually changing the DOM. When dealing with API calls using **Axios**, it's essential **to handle cleanup to prevent memory leaks and unexpected behavior**. Below is a clear function demonstrating **how to cancel an Axios API call using the `useEffect` hook**:
+
+::: {.column-page-right}
+
+<details>
+<summary>DataSimulation.jsx CRUD Axios</summary>
+
+```javascript
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const DataSimulation = () => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const source = axios.CancelToken.source();
+
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://api.example.com/data', {
+          cancelToken: source.token,
+        });
+        setData(response.data);
+      } catch (error) {
+        if (axios.isCancel(error)) {
+          console.log('Request canceled:', error.message);
+        } else {
+          setError(error);
+        }
+      }
+    };
+
+    fetchData();
+
+    return () => {
+      source.cancel('Component unmounted - Cancelling API request');
+    };
+  }, []); // Empty dependency array means this effect will only run once
+
+  return (
+    <div>
+      {data && <p>Data: {data}</p>}
+      {error && <p>Error: {error.message}</p>}
+    </div>
+  );
+};
+
+export default DataSimulation;
+```
+
+</details>
+
+:::
+
 **data component: axios & `useContext`**
 
 
@@ -942,6 +1007,8 @@ Here's a breakdown of what the code does:
 To reduce the potential confusion between `default` and `named` exports, **some teams choose to only stick to one style (`default` or `named`)**, or avoid mixing them in a single file. Do what works best for you!
 
 :::
+
+
 
 ## Rendering data: `MySimulations`
 
