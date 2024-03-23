@@ -680,10 +680,97 @@ By using `prevState` in this manner, the code ensures that the state updates are
 ![render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png)
 
 
-## Adding domains: router
+## Adding domains: react-router-dom
 
 - [react-router-dom](/reactjs/reactjs-app-router.qmd)
+- [DDD with Lab#RE06-1](/reactjs/rjslab6-1.qmd#add-json-data-as-model)
 
+Remember to install the dependency:
+
+```{.bash}
+npm instal react-router-dom
+```
+
+
+::: {.column-page-right}
+
+<details>
+<summary>App.jsx with **Routes**</summary>
+
+
+
+```{.js .code-overflow-wrap filename="App.jsx"}
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import MySimulations from "./mysimulatons/MySimulations";
+import Simulation from "./simulation/Simulation";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Simulation />} />
+          <Route path="simulation" element={<Simulation />} />
+          <Route path="mysimulations" element={<MySimulations />} />
+          <Route path="*" element={<Simulation />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+```
+
+</details>
+
+- [Folder Layout](https://github.com/AlbertProfe/trafficlights/tree/bff9bb44cc67536ca3a1c296169c1279bd93d6b9/src/layout){.external target='_blanke'}
+
+
+<details>
+<summary>Layout.jsx with **Layout**</summary>
+
+
+
+```{.js .code-overflow-wrap filename="/layout/Layout.jsx"}
+
+import Footer from './Footer.jsx'
+import Header from "./Header.jsx";
+import { Outlet, Link } from "react-router-dom";
+
+export default function Layout () {
+
+  return (
+    <>
+      <nav>
+        <div>
+          <Header />
+        </div>
+        <div >
+          <Link to="/simulation">Simulation</Link>
+          <br/>
+          <Link to="/mysimulations">MySimulations</Link>
+          <br />
+          <br />
+        </div>
+      </nav>
+
+      <div style={{ width: "80%" }}>
+        <Outlet />
+      </div>
+
+      <div>
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+```
+
+</details>
+
+:::
 
 ## Adding server: data
 
@@ -842,7 +929,35 @@ Here's a breakdown of what the code does:
 
 4. **Export**:
    - It exports `DataSimulations` component and `SimulationsContext` context.
+   - Be careful: do not use `default`. [Exporting and importing](https://react.dev/learn/importing-and-exporting-components#exporting-and-importing-a-component){.external target='_blank'} a component 
+  
 
+::: {.callout-caution}
+What if you want to show just one Profile instead of a gallery? You can export the Profile component, too. But Gallery.js already has a default export, and you can’t have two default exports. You could create a new file with a default export, or you could add a named export for Profile. A file can only have one default export, but it can have numerous named exports!
+
+:::
+
+
+
+**decoupling `MySimulations.jsx` CRUD**
+
+- [`mySiulations` folder](https://github.com/AlbertProfe/trafficlights/tree/bff9bb44cc67536ca3a1c296169c1279bd93d6b9/src/mysimulatons){.external target='_blank'}
+
+::: {.column-margin}
+Decoupled components CRUD in React promotes modularity, reusability, maintainability, and scalability, making it a preferred choice for building robust and adaptable applications.
+:::
+
+![component tree project](/images/reactjs/traffic-tree-v0.3.png)
+
+<mark>Decoupled components CRUD in React offers significant advantages over tightly coupled implementations.</mark>
+
+By breaking down functionality into modular components, developers can achieve: greater **reusability**, **scalability**, **better maintenance** and **flexibility**.
+
+Each component focuses on a specific task, promoting **separation of concerns and simplifying maintenance**. With decoupled components, testing becomes more straightforward as each unit can be isolated and tested independently.
+
+Additionally, performance optimizations can be applied at the component level, leading to better overall application performance. This approach fosters cleaner codebases and facilitates collaboration among team members. 
+
+![component tree decoupled](/images/reactjs/traffic-tree-v0.4.png)
 
 **Backend: Spring Boot**
 
@@ -863,9 +978,9 @@ to-do
 | -- | -- | -- | -- |
 | [GitHub code v0.0](https://github.com/AlbertProfe/trafficlights/tree/5219b5acb611bd3c7faba7b22b14e0fd49f38b45){.external target='_blank'}  | create project (React Vite) and core business logic | [Basic Structure](/images/reactjs/traffic-project-v0.0-1.png){.external target='_blank'} | [render v0.0 render(1)](/images/reactjs/traffic-render-v0.0-1.png){.external target='_blank'}, [render v0.0 render(2)](/images/reactjs/traffic-render-v0.0-2.png){.external target='_blank'}, [render v0.0 render(3)](/images/reactjs/traffic-render-v0.0-3.png){.external target='_blank'} |
 | [GitHub code v0.1](https://github.com/AlbertProfe/trafficlights/tree/f847634752f6109d5575417c8505634451656d6f){.external target='_blank'}  | adding graphics, simulation ending, refresh `button`, groups crossing and random values |  |  [render v0.1 render(1)](/images/reactjs/traffic-render-v0.1-1.png){.external target='_blank'}, [render v0.1 render(2)](/images/reactjs/traffic-render-v0.1-2.png){.external target='_blank'}, [render v0.1 render(3)](/images/reactjs/traffic-render-v0.1-3.png){.external target='_blank'}, [render v0.1 render(4)](/images/reactjs/traffic-render-v0.1-4.png){.external target='_blank'} |
-| [GitHub code v0.3 `integrationcruddata` ](https://github.com/AlbertProfe/trafficlights/tree/20e9ee5cb695d8e10ba10c3d867081d7c6285fbc){.external target='_blank'}  | adding `react-router-dom`, two routes: `simulation` and `mySimulations` | [branch `mySimulations` ](/images/reactjs/traffic-branches-v0.3-4.png), [project structure](/images/reactjs/traffic-project-v0.3.png) | [render v0.3 render(1)](/images/reactjs/traffic-render-v0.3-1.png){.external target='_blank'}, [render v0.3 render(2)](/images/reactjs/traffic-render-v0.3-2.png){.external target='_blank'}, [render v0.3 render(3)](/images/reactjs/traffic-render-v0.3-3.png){.external target='_blank'},|
-| [GitHub code v0.4 `integrationcruddata`](https://github.com/AlbertProfe/trafficlights/tree/bff9bb44cc67536ca3a1c296169c1279bd93d6b9){.external target='_blank'}  |  decoupling `mySimulations`  | - | -  |
-| [GitHub code v0.5](){.external target='_blank'}  | adding data from server: mockapi & spring boot |  |   |
+| [GitHub code v0.3 `integrationcruddata`](https://github.com/AlbertProfe/trafficlights/tree/20e9ee5cb695d8e10ba10c3d867081d7c6285fbc){.external target='_blank'}  | **integration**: adding `react-router-dom`, two routes: `simulation` and `mySimulations` and data: axios, `DataSimulation` & `useContext` | [branch `mySimulations` ](/images/reactjs/traffic-branches-v0.3-4.png), [project structure](/images/reactjs/traffic-project-v0.3.png) | [render v0.3 render(1)](/images/reactjs/traffic-render-v0.3-1.png){.external target='_blank'}, [render v0.3 render(2)](/images/reactjs/traffic-render-v0.3-2.png){.external target='_blank'}, [render v0.3 render(3)](/images/reactjs/traffic-render-v0.3-3.png){.external target='_blank'},|
+| [GitHub code v0.4 `integrationcruddata`](https://github.com/AlbertProfe/trafficlights/tree/bff9bb44cc67536ca3a1c296169c1279bd93d6b9){.external target='_blank'}  |  decoupling `mySimulations`  | [componets tree](/images/reactjs/traffic-tree-v0.3.png) | -  |
+| [GitHub code v0.5](){.external target='_blank'}  | server: spring boot for mockapi |  |   |
 
 :::
 
