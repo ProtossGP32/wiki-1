@@ -126,6 +126,8 @@ export default function Counter() {
 
 ```
 
+
+
 ::: {.column-margin}
 ![inital render](/images/reactjs/ex25.png){width=100%}
 :::
@@ -137,6 +139,68 @@ export default function Counter() {
 This time we use a combination of ``useState``, ``useEffect``, and ``useRef`` to keep track of the previous state.
 
 In the ``useEffect``, we are updating the ``useRef`` current value each time the ``inputValue`` **is updated by entering text into the input field.**
+
+## Example 3
+
+- [Examples of referencing a value with useRef](https://react.dev/reference/react/useRef#examples-value){.external target='_blank'}
+
+This example uses a combination of `state` and `refs`.
+
+Both `startTime` and now are state variables because they are used for **rendering**. But we also need to hold an **interval ID so that we can stop the [interval](https://www.w3schools.com/jsref/met_win_setinterval.asp){.external target='_blank'} on button press**.
+
+
+
+
+::: {.column-margin}
+You may use `console.count('counter')` to count **how many times React renders.**
+:::
+
+
+Since the **interval ID** is not used for rendering, it’s appropriate to keep it in a `ref`, and manually update it
+
+``` {.jsx .code-overflow-wrap filename="Stopwatch.jsx"}
+import { useState, useRef } from 'react';
+
+export default function Stopwatch() {
+  const [startTime, setStartTime] = useState(null);
+  const [now, setNow] = useState(null);
+  const intervalRef = useRef(null);
+
+  function handleStart() {
+    setStartTime(Date.now());
+    setNow(Date.now());
+
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setNow(Date.now());
+    }, 10);
+  }
+
+  function handleStop() {
+    clearInterval(intervalRef.current);
+  }
+
+  let secondsPassed = 0;
+  if (startTime != null && now != null) {
+    secondsPassed = (now - startTime) / 1000;
+  }
+
+  return (
+    <>
+      <h1>Time passed: {secondsPassed.toFixed(3)}</h1>
+      <button onClick={handleStart}>
+        Start
+      </button>
+      <button onClick={handleStop}>
+        Stop
+      </button>
+    </>
+  );
+}
+
+```
+
+
 
 
 <!--- navLinks -->

@@ -14,7 +14,6 @@ format:
 ---
 
 
-## Overview
 
 ::: {.summary}
 📘 **What is Spring Framework?**
@@ -23,9 +22,17 @@ format:
 
 :::
 
----
+
+# Overview
 
 The Spring Framework is a popular Java framework for building enterprise-level applications.
+
+
+::: {.column-margin}
+
+Spring Framework is a powerful and popular toolkit for building enterprise-level applications in Java, and provides a wide range of tools and libraries for supporting various aspects of application development. By using the Spring Framework, developers can take advantage of the framework's modular design, and can choose the specific modules that are most relevant to their needs and goals.
+:::
+
 
 The Spring Framework provides a comprehensive set of tools and libraries for building and maintaining enterprise applications, and is designed to support the <mark>"software development principles of modularity, component-based development, and non-invasive programming"</mark>.
 
@@ -41,20 +48,53 @@ The Spring Framework consists of several modules, each of which provides a diffe
 
 - **Spring Boot**: The Boot module provides a way to quickly and easily create stand-alone, production-grade Spring applications. Spring Boot uses an "opinionated" approach to configuration, which means that it provides a set of default configurations that are designed to work well together, and allows developers to get started quickly without having to spend a lot of time configuring the application.
 
-Overall, the Spring Framework is a powerful and popular toolkit for building enterprise-level applications in Java, and provides a wide range of tools and libraries for supporting various aspects of application development. By using the Spring Framework, developers can take advantage of the framework's modular design, and can choose the specific modules that are most relevant to their needs and goals.
 
-## Timeline
+# Timeline
 
-- The current stable version, as of December 2022, is **Spring 6.0.2**. You can always find new version announcements on <https://github.com/spring-projects/spring-framework/releases>.
+## JEE: 1999
 
-- The current stable version, as of December 2022, is Spring Boot 3.0.0. You can always find new version announcements on <https://github.com/spring-projects/spring-boot/releases>.
+**Spring** was not the first framework trying to solve the problems around building *enterprise Java applications*.
 
-- **Spring Boot 3.0.0** (and therefore the latest Spring Framework 6.0.2) supports Java 19 while also remaining compatible with Java 11 and 8.
+`J2EE` or `Java Enterprise Edition` that preceded Spring tried to do the same thing. On paper, `J2EE` was meant to become the standard way of building Java enterprise applications. In other words, it was supposed to be the game-changer in terms of overall architecture.
+
+Everything sounded quite promising with `J2EE`. However, when it came to actually implementing things using `J2EE`, *everything wasn’t so rosy*. Some of the major problems with `J2EE` were in regards to **EJB or Enterprise Java Beans**.
+
+
+![If you see the above timeline, Spring started in 2004. Just before that, 2001-2003 was the period during which everyone became fed up with EJB. The launch of Spring coincided with the worst phase in EJB implementation.](/images/springmvc/timeline-jee.png){width=100%}
+
+
+Due to these problems, there was <mark>discontent among developers with regards to EJB and J2EE.</mark>
+
+> EJB became that bad uncle in the family that you want to avoid because they mess up everything. It basically fell out of favor. That’s when **Spring** came in.
+
+## Spring: 2004
+
+**Rod Johnson**, the founder of `Spring`, started on this journey to create an alternative to `J2EE`. This led to the birth of `Spring Framework`.
+
 
 ![Following is the timeline shown about major releases in the history of Spring](/images/springmvc/spring-history.png){width=100%}
 
 
-## Differences between the Spring Framework and Spring Boot
+Over the years, one of the most criticized aspects of the `Spring Framework` was <mark>the complex dependency management handled by massive `XML` configuration files.</mark>
+
+## Boot: 2014
+
+`Spring Boot` **was launched in April 2014** [resolving](https://se.ewi.tudelft.nl/desosa2019/chapters/spring-boot/){.external target='_blank'} the problem of complex `XML` configurations by having three notable features that make it both unique and easy to use.
+
+![History of Spring Framework to Boot](/images/springmvc/spring_versions-boot.png){width=60%}
+
+
+Due to the power of creating Spring-based applications that can “just run,” Spring Boot’s popularity grew faster. Spring Boot is being used by many large companies such as Netflix, American Express, ESPN, Mobile.de, Wix.com etc.
+
+## Boot: 2024
+
+![Spring Boot 1.0 GA Released](/images/springmvc/boot-release-note-2024.png){width=60%}
+
+- [Spring Boot 1.0 GA Released](https://spring.io/blog/2014/04/01/spring-boot-1-0-ga-released){.external target='_blank'}
+- [Bootiful Spring Boot in 2024 (part 1)](https://spring.io/blog/2024/03/11/bootiful-spring-boot-in-2024-part-1){.external target='_blank'}
+
+
+# Differences between the Spring Framework and Spring Boot
 
 - The Spring Framework is a comprehensive framework for building and maintaining enterprise-level applications in Java, while Spring Boot is focused specifically on simplifying the process of creating and deploying stand-alone, production-grade Spring applications.
 
@@ -64,10 +104,43 @@ Overall, the Spring Framework is a powerful and popular toolkit for building ent
 
 - In general, the Spring Framework and Spring Boot are both useful frameworks for building enterprise-level applications in Java, but have different scopes, focus, and approaches to configuration, and may be more or less suitable for different types of projects and goals.
 
-![ table summarizing the differences between the Spring Framework and Spring Boot](/images/springmvc/table-spring-boot.png)
+![Table summarizing the differences between the Spring Framework and Spring Boot](/images/springmvc/table-spring-boot.png)
+
+# Releases
+
+- You can always find new version announcements on **Spring-framework**: [Last release](https://github.com/spring-projects/spring-framework/releases){.external target='_blank'}.
+- You can always find new version announcements on **Spring-boot**: [Last release](https://github.com/spring-projects/spring-boot/releases){.external target='_blank'}.
+
+::: {.callout-note}
+
+The <mark>stable version</mark> for 2024 wil be [Spring Boot 3.2 Release Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.2-Release-Notes){.external target='_blank'}  if there is not new announcements or major improvements.
+
+Meanwhile, regarding on the milestones current workings (**M3**): [Spring Boot 3.3 Release Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.3-Release-Notes){.external target='_blank'}.
+:::
+
+## 2024: April (*updated*)
+
+-  The current stable version, as of April 2024, is **Spring 6.15**.
+-  The current stable version, as of April 2024, is **Spring Boot 3.2.4**.
+
+## 2023
+
+- The current stable version, as of September 2023, is **Spring 6.0.1**
+- The current stable version, as of September 2023, is **Spring Boot 3.1.3**.
+
+## 2022
 
 
+- The current stable version, as of December 2022, is **Spring 6.0.2**. 
+- The current stable version, as of December 2022, is **Spring Boot 3.0.0**. 
+- **Spring Boot 3.0.0** (and therefore the latest Spring Framework 6.0.2) supports Java 19 while also remaining compatible with Java 11 and 8.
 
+# References
+
+- [Spring Framework History: 2002 – Present (Updated 1st Oct 2017)](https://springtutorials.com/spring-framework-history/){.external target='_blank'}
+- [Spring And Spring Boot Versions](https://www.marcobehler.com/guides/spring-and-spring-boot-versions){.external target='_blank'}
+- [The Rise of Spring Framework](https://progressivecoder.com/the-rise-of-spring-framework/){.external target='_blank'}
+- [Spring History: images](https://www.quora.com/What-is-the-history-of-The-Spring-Framework){.external target='_blank'}
 
 <!--- navLinks -->
 <br><br>
