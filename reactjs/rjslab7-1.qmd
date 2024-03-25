@@ -774,6 +774,33 @@ export default function Layout () {
 
 :::
 
+## Data: `simulation`
+
+In React.js, unlike in Java or Spring Boot, **there isn't a built-in model framework**.
+
+However, for our purposes, we can define our model using a literal object in JavaScript. Here's an example of how we can define a model in React.js:
+
+
+
+```{.js .code-overflow-wrap filename="MyApp.jsx"}
+
+// ....
+const simulation = { 
+    id: "",
+    createdAt: new Date().toString(),
+    time: 0,
+    user: ""
+}
+// ...
+```
+
+In this code snippet, we've created a `simulation` **object which represents our model**.
+
+It has properties such as `id`, `user`, `createdAt`, and `time`. This object can serve as a model for organizing and manipulating data within our React.js application.
+
+
+![We will also need a fake-server-data to store `simulation` object](/images/reactjs/traffic-schema-v0.1-1.png)
+
 ## Fetching data: fake server
 
 References:
@@ -783,6 +810,24 @@ References:
 - [useContext](/reactjs/reactjs-hook-context.qmd)
 
 **mockapi**
+
+::: {.callout-caution}
+
+There's a vast array of free web services available that offer APIs for developers to use in their projects.
+
+These services, like [mockapi.io](https://www.mockapi.io/) or [jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/), **provide developers with simulated data or temporary endpoints to test their applications without the need to set up their own backend servers or databases.**
+
+For instance, in our lab, you're using **mockapi.io** with a <mark>real endpoint to test our applicationrk
+
+This allows to mimic real-world **scenarios** and **interactions** without having to invest **in creating a backend infrastructure from scratch**.
+
+However, it's important to note that these services typically offer temporary solutions for testing purposes. Once our testing phase is complete and our application is ready for production, relying on such external services might not be feasible or reliable in the long term. 
+
+For instance, in our lab, we're using **mockapi.io** with a <mark>real endpoint to test our application.
+
+
+<mar>Therefore, the URL provided by **mockapi.io** will be discontinued after the testing phase, and you'll need to transition to a more stable and permanent solution for your application's backend like using Spring Boot Server.
+:::
 
 > `MockAPI.io` is a web service that allows developers **to create and simulate RESTful APIs for testing and development purposes.**
 
