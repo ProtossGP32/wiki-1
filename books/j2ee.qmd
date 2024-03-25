@@ -6,8 +6,8 @@ date: 1/20/2023
 date-modified: last-modified
 date-format: full
 description: "The results of using J2EE in practice are often disappointing: applications are often slow, unduly complex, and take too long to develop. Rod Johnson believes that the problem lies not in J2EE itself, but in that it is often used badly. Many J2EE publications advocate approaches that, while fine in theory, often fail in reality, or deliver no real business value."
-categories: [programming]
-subcategories: [java, j2ee, spring]
+categories: [java]
+subcategories: [programming, j2ee, spring]
 format:
     html
 ---
