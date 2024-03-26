@@ -21,7 +21,7 @@ A ``servlet`` in Java is a **server-side technology** that enables the **handlin
 ``Servlets`` are **Java classes** that extend the functionality of web servers and allow developers to dynamically generate web pages and other resources based on user requests.
 :::
 
-## Overview: JSP, Servlets and DAOs
+# Overview: JSP, Servlets and DAOs
 
 - [Servlet Container and Spring Framework](https://mossgreen.github.io/Servlet-Containers-and-Spring-Framework/){.external}
 - [Servelets examples](https://drive.google.com/drive/folders/1CEhyfjf1VhEOlZUuewzWu-zxwqzpBVD6?usp=sharing){.external}
@@ -58,7 +58,7 @@ The end result is a web application that can provide rich functionality to users
 
 
 
-## JSP: JavaServer Page
+# JSP: JavaServer Page
 
 - [Java Server-side Programming, Getting started with JSP by Examples](https://www3.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html){.external}
 
@@ -72,7 +72,7 @@ It allows you to mix static HTML with dynamically generated HTML - in the way th
 
 - [Book servlet](/images/springmvc/servlet.book.pdf){.external}
 
-### JSPs are Internally Compiled into Java Servlets
+## JSPs are Internally Compiled into Java Servlets
 
 That is to say, anything that can be done using JSPs can also be accomplished using Java servlets.
 
@@ -89,7 +89,7 @@ In a typical **Model-View-Control (MVC) application**:
 
 ![Servlet life cycle](/images/springmvc/servlet_lifecycle_webserver.png){width="80%"}
 
-### Apache Tomcat Server
+## Apache Tomcat Server
 
 JSPs, like servlets, are **server-side programs run inside a HTTP server.**
 
@@ -114,6 +114,7 @@ If the number is greater than 0.95, the user is told they will have a lucky day,
 
 
 
+::: {.column-page-right}
 
 ``` {.java .code-overflow-wrap filename="DemoApplication.java"}
 <html>
@@ -135,13 +136,61 @@ If the number is greater than 0.95, the user is told they will have a lucky day,
 </body>
 </html>
 ```
+:::
 
 The random number is displayed along with the message, and the user is given the option to try again by clicking on a link that reloads the page.
 
-## In 2023, is this tech obsolete? Yes and Not
+# EJB: Enterprise JavaBeans
+
+![EJB Architecture](/images/springmvc/ejb.bmp)
+
+`Enterprise JavaBeans` (*Enterprise JavaBeans*) is one of several Java APIs for modular construction of enterprise software.
+
+<mark>EJB is a server-side software component that encapsulates business logic of an application. An EJB web container provides a runtime environment for web related software components, including computer security, Java servlet lifecycle management, transaction processing, and other web services.</mark> 
+
+The EJB specification is a subset of the Java EE specification.
+
+> The EJB specification provides a standard way to implement the server-side (also called "back-end") 'business' software typically found in enterprise applications (as opposed to 'front-end' user interface software). Such software addresses the same types of problem, and solutions to these problems are often repeatedly re-implemented by programmers.
+
+
+`Jakarta Enterprise Beans` is intended to handle such common concerns as persistence, transactional integrity and security in a standard way, leaving programmers free to concentrate on the particular parts of the enterprise software at hand.
+
+The following shows a basic example of what an EJB looks like in code: 
+
+``` {.java .code-overflow-wrap filename="CustomerService.java"}
+@Stateless 
+public class CustomerService { 
+  
+
+  private EntityManager entityManager; 
+   
+  public void addCustomer(Customer customer) { 
+    entityManager.persist(customer); 
+  } 
+}
+```
+
+
+## EJB vs Spring 
+
+EJB and Spring both are used to develop enterprise applications. But there are few differences exists between them. 
+
+![EJB vs Spring](/images/springmvc/EJBvsSPRING.png)
+
+
+# In 2023, is this tech obsolete? Yes and Not
 
 ![ [Servlet and JSP Tutorial- How to Build Web Applications in Java?](https://www.edureka.co/blog/servlet-and-jsp-tutorial/){.external} ](/images/springmvc/jsp_tech.png){width="40%"}
 
+
+![[Does assignment to the legacy project with pure Java EE/EJB for 2 years will make me make a worse software engineer even if I was a senior and lead people, but now just code old EJB stuff deployed on JBoss?](https://www.quora.com/Does-assignment-to-the-legacy-project-with-pure-Java-EE-EJB-for-2-years-will-make-me-make-a-worse-software-engineer-even-if-I-was-a-senior-and-lead-people-but-now-just-code-old-EJB-stuff-deployed-on-JBoss){.external target='_blank'}](/images/springmvc/Quora-ejb.png){width="40%"}
+
+# References
+
+
+- [EJB vs Spring](https://www.educba.com/ejb-vs-spring/){.external target='_blank'}
+- [A Guide to Migrating Enterprise Applications to Spring](https://assets.spring.io/drupal/files/MigratingAppsToSpring.pdf){.external target='_blank'}
+- [A Detailed Guide to Enterprise Java Beans w/Code Examples](https://stackify.com/enterprise-java-beans/){.external target='_blank'}
 
 <!--- navLinks -->
 <br><br>

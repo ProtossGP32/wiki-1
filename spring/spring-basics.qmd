@@ -48,14 +48,40 @@ The Spring Framework consists of several modules, each of which provides a diffe
 
 - **Spring Boot**: The Boot module provides a way to quickly and easily create stand-alone, production-grade Spring applications. Spring Boot uses an "opinionated" approach to configuration, which means that it provides a set of default configurations that are designed to work well together, and allows developers to get started quickly without having to spend a lot of time configuring the application.
 
+# Spring tech stack along the years
 
-# Timeline
+- [Servlets](/spring/spring-servlets.qmd#springs-servlets)
+- [JSP](/spring/spring-servlets.qmd#jsp-javaserver-page) (Java Server Pages)
+- Spring XML notation
+- [EJB](/spring/spring-servlets.qmd#ejb) (Enterprise Java Beans)
+- JDBC & Hibernate
+- Struts
+- DAOs
+
+
+# Timeline: 1996-2024
+
+## Origins: 1996
+
+By 1996, <mark>Java had already become popular among developer for its friendly APIs and automated Garbage Collection and was starting to be widely used in back-end systems</mark>.
+
+One problem, however, was that most of these systems needed the same set of standard capabilities – such as `persistence`, `transaction integrity`, and `concurrency control` – which the JDK lacked at that time. That, naturally, led to many home-grown, closed implementations.
+
+**IBM** stepped forward and released the `Enterprise Java Bean (EJB)` specification in **1997**, with the promise that developers could write code in a standard way, with many of the common concerns automatically handled.
+
+That’s how <mark>the first Java framework for the enterprise was born; the specification was later adopted by Sun in 1999 as `EJB 1.0`.</mark>
+
+Fast forward twenty years and `EJB 3.2` is now the subset of the `JavaEE 9` specification.
+
+Those years saw the release of the first incarnation of `Enterprise Java`, but soon after, important technologies joined the mix, such as `Servlets`, `Messaging`, and `Enterprise Java Beans`.
 
 ## JEE: 1999
 
-**Spring** was not the first framework trying to solve the problems around building *enterprise Java applications*.
+As we have seen, JEE neither **Spring** were not the first frameworks trying to solve the problems around building *enterprise Java applications*.
 
-`J2EE` or `Java Enterprise Edition` that preceded Spring tried to do the same thing. On paper, `J2EE` was meant to become the standard way of building Java enterprise applications. In other words, it was supposed to be the game-changer in terms of overall architecture.
+`J2EE` or `Java Enterprise Edition` that preceded Spring tried to do the same thing.
+
+On paper, `J2EE` was meant to become the standard way of building Java enterprise applications. In other words, it was supposed to be the **game-changer** in terms of overall architecture.
 
 Everything sounded quite promising with `J2EE`. However, when it came to actually implementing things using `J2EE`, *everything wasn’t so rosy*. Some of the major problems with `J2EE` were in regards to **EJB or Enterprise Java Beans**.
 
@@ -180,6 +206,7 @@ Meanwhile, regarding on the milestones current workings (**M3**): [Spring Boot 3
 - [Spring And Spring Boot Versions](https://www.marcobehler.com/guides/spring-and-spring-boot-versions){.external target='_blank'}
 - [The Rise of Spring Framework](https://progressivecoder.com/the-rise-of-spring-framework/){.external target='_blank'}
 - [Spring History: images](https://www.quora.com/What-is-the-history-of-The-Spring-Framework){.external target='_blank'}
+- [A Detailed Guide to Enterprise Java Beans w/Code Examples](https://stackify.com/enterprise-java-beans/){.external target='_blank'}
 
 <!--- navLinks -->
 <br><br>
