@@ -18,7 +18,7 @@ format:
 ::: {.summary}
 📘 **What is Spring Framework?**
 
-**Spring Framework is a powerful lightweight application development framework** used for Enterprise Java (JEE).
+**Spring Framework is a powerful lightweight application development framework** used for Enterprise Java (Java EE).
 
 :::
 
@@ -30,7 +30,11 @@ The [Spring Framework](https://en.wikipedia.org/wiki/Spring_Framework){.external
 
 ::: {.column-margin}
 
-[Spring Framework](https://en.wikipedia.org/wiki/Spring_Framework){.external target='_blank'} is a powerful and popular toolkit for building enterprise-level applications in Java, and provides a wide range of tools and libraries for supporting various aspects of application development. By using the Spring Framework, developers can take advantage of the framework's modular design, and can choose the specific modules that are most relevant to their needs and goals.
+[Spring Framework](https://en.wikipedia.org/wiki/Spring_Framework){.external target='_blank'} is a powerful and popular toolkit for building enterprise-level applications in Java, and provides a wide range of tools and libraries for supporting various aspects of application development.
+:::
+
+::: {.column-margin}
+By using the `Spring Framework`, developers can take advantage of the framework's modular design, and **can choose the specific modules that are most relevant to their needs and goals.**
 :::
 
 
@@ -48,7 +52,7 @@ The Spring Framework consists of several modules, each of which provides a diffe
 
 - **Spring Boot**: The Boot module provides a way to quickly and easily create stand-alone, production-grade Spring applications. Spring Boot uses an "opinionated" approach to configuration, which means that it provides a set of default configurations that are designed to work well together, and allows developers to get started quickly without having to spend a lot of time configuring the application.
 
-# Spring tech stack along the years
+# Spring tech stack along the early years
 
 - [Servlets](/spring/spring-servlets.qmd#springs-servlets)
 - [JSP](/spring/spring-servlets.qmd#jsp-javaserver-page) (Java Server Pages)
@@ -75,11 +79,13 @@ Fast forward twenty years and `EJB 3.2` is now the subset of the `JavaEE 9` spec
 
 Those years saw the release of the first incarnation of `Enterprise Java`, but soon after, important technologies joined the mix, such as `Servlets`, `Messaging`, and `Enterprise Java Beans`.
 
-## JEE: 1999
+## J2EE: 1999
 
-As we have seen, JEE neither **Spring** were not the first frameworks trying to solve the problems around building *enterprise Java applications*.
 
-`J2EE` or `Java Enterprise Edition` that preceded Spring tried to do the same thing.
+
+::: {.column-margin}
+The platform was known as `Java 2 Platform`, `Enterprise Edition` or `J2EE` from version 1.2, until the name was changed to `Java Platform`, Enterprise Edition or `Java EE` in version 1.5.
+:::
 
 On paper, `J2EE` was meant to become the standard way of building Java enterprise applications. In other words, it was supposed to be the **game-changer** in terms of overall architecture.
 
@@ -89,15 +95,40 @@ Everything sounded quite promising with `J2EE`. However, when it came to actuall
 ![If you see the above timeline, Spring started in 2004. Just before that, 2001-2003 was the period during which everyone became fed up with EJB. The launch of Spring coincided with the worst phase in EJB implementation.](/images/springmvc/timeline-jee.png){width=100%}
 
 
-Due to these problems, there was <mark>discontent among developers with regards to EJB and J2EE.</mark>
+Due to these problems, there was <mark>discontent among developers with regards to `EJB` and `J2EE`.</mark>
 
-> EJB became that bad uncle in the family that you want to avoid because they mess up everything. It basically fell out of favor. That’s when **Spring** came in.
+> `EJB` became that bad uncle in the family that you want to avoid because they mess up everything. It basically fell out of favor. That’s when **Spring** came in.
 
 **Rod Johnson**, the [founder](https://en.wikipedia.org/wiki/Rod_Johnson_(programmer)){.external target='_blank'} of `Spring`, started on this journey to create an alternative to `J2EE`. This led to the birth of `Spring Framework`.
 
+::: {.callout-warning}
+## J2EE, Java EE or Jakarta?
+
+`Java EE` was maintained by **Oracle** under the *Java Community Process*.
+
+On September 12, 2017, **Oracle** Corporation announced that it would submit `Java EE` to the **Eclipse** Foundation.
+
+The **Eclipse** top-level project has been named `Eclipse Enterprise for Java` (`EE4J`).
+
+The **Eclipse** Foundation could not agree with **Oracle** over the use of `javax` and Java trademarks.
+
+**Oracle** owns the trademark for the name **"Java"** and the platform was renamed from `Java EE` to `Jakarta EE`
+:::
+
+::: {.column-margin}
+![](/images/springmvc/j2ee-jakarta.png)
+:::
+
+
 ## Spring: 2004
 
-The first version was written by **Rod Johnson**, who <mark>released the framework with the publication of his book [Expert One-on-One J2EE Design and Development](/books/j2ee.qmd) in October 2002</mark>.
+As we have seen, **IBM** set the foundations.` Java EE` and `EJB` were the first frameworks trying to solve the problems around building *enterprise Java applications*.
+
+`J2EE`, `Java Enterprise Edition` or `EJB` that preceded `Spring` tried to do the same thing.
+
+Then, the `EJB` and `J2EE` frameworks were to be surpassed by `Spring`.
+
+The first try was written by **Rod Johnson**, who <mark>contributed to the understanding of `J2EE` development practices and with the publication of his book [Expert One-on-One J2EE Design and Development](/books/j2ee.qmd) in October 2002 mean to develop without `EJB`</mark>.
 
 ::: {.column-margin}
 **Roderick "Rod" Johnson** is an Australian computer specialist who created the Spring Framework and co-founded SpringSource, where he served as CEO until its 2009 acquisition by VMware.
@@ -110,6 +141,9 @@ In 2011, Johnson became Chairman of Neo4j's Board of Directors. At the JavaOne 2
 
 :::
 
+`Spring Framework` was indeed influenced by many concepts discussed in **Expert One-on-One J2EE Design and Development**, particularly in terms of addressing the complexities and limitations of `J2EE` development.
+
+`Spring` provided a more lightweight and flexible alternative to the heavy, XML-configured, and often cumbersome `J2EE` frameworks of the time.
 
 
 The framework was first released under the **Apache 2.0 license in June 2003**. The first production release, `1.0`, was released in March 2004.
@@ -118,19 +152,29 @@ The `Spring 1.2.6` framework won a Jolt productivity award and a JAX Innovation 
 
 ![Following is the timeline shown about major releases in the history of Spring](/images/springmvc/spring-history.png){width=100%}
 
-`Spring 2.0` was released in October 2006, Spring 2.5 in November 2007, Spring 3.0 in December 2009, Spring 3.1 in December 2011, and Spring 3.2.5 in November 2013.
+[Spring 2.0](https://docs.spring.io/spring-framework/docs/2.5.x/reference/new-in-2.html){.external target='_blank'} introduced in 2006 **support for various annotations for configuration purposes.**
 
-`Spring Framework 4.0` was released in December 2013: Notable improvements in Spring 4.0 included support for **Java SE (Standard Edition) 8**, Groovy 2, some aspects of Java EE 7, and **WebSocket**.
+
+`Spring Framework 4.0` was released in December 2013: Notable improvements in `Spring 4.0` included support for **Java SE (Standard Edition) 8**, Groovy 2, some aspects of Java EE 7, and **WebSocket**.
+
+::: {.column-margin}
+`Spring 2.0` was released in October 2006, `Spring 2.5` in November 2007, `Spring 3.0` in December 2009, `Spring 3.1` in December 2011, and Spring `3.2.5` in November 2013.
+:::
 
 Over the years, one of the most criticized aspects of the `Spring Framework` was <mark>the complex dependency management handled by massive `XML` configuration files.</mark>
 
+This criticism led to the creation of `Spring Boot`, which opted for annotations instead of XML configurations and simplify the use of the framework.
+
 ## Boot: 2014
 
-`Spring Boot` is an open source project part of the Java Spring Framework designed </mark>to simplify the creation of stand-alone, production-grade Spring-based applications.</mark>
+::: {.callout-note}
+## Spring Boot
+`Spring Boot` is an open source project part of the `Java Spring Framework` designed </mark>to simplify the creation of stand-alone, production-grade Spring-based applications.</mark>
+:::
 
-`Spring Boot` has revolutionized **the way production-ready applications are developed, allowing developers to focus more on the application logic rather than spending time on boilerplate code to handle the necessary configurations and dependencies to run the application.**
+`Spring Boot` revolutionized **the way production-ready applications were developed, allowing developers to focus more on the application logic rather than spending time on boilerplate code to handle the necessary configurations and dependencies to run the application.**
 
-> `Spring Boot` is used in many **enterprise** solutions (e.g Netflix) for the fast building of **massive** applications, especially web-based ones.
+> `Spring Boot` is used in many large **enterprise** solutions (e.g Netflix, American Express, ESPN, Mobile.de, Wix.com) for the fast building of **massive** applications, especially web-based ones.
 
 `Spring Boot` **was launched in April 2014** [resolving](https://se.ewi.tudelft.nl/desosa2019/chapters/spring-boot/){.external target='_blank'} the problem of complex `XML` configurations by having three notable features that make it both unique and easy to use.
 
@@ -139,12 +183,12 @@ Over the years, one of the most criticized aspects of the `Spring Framework` was
 
 <mark>Due to the power of creating Spring-based applications that can “just run,” Spring Boot’s popularity grew faster</mark>.
 
-`Spring Boot` is being used by many large companies such as Netflix, American Express, ESPN, Mobile.de, Wix.com etc.
 
 ## Boot: 2024
 
+**It's been a long ride!**
 
-Extract from [Bootiful Spring Boot in 2024 (part 1)](https://spring.io/blog/2024/03/11/bootiful-spring-boot-in-2024-part-1){.external target='_blank'}.
+To sum up where we are now, let's add this extract from [Bootiful Spring Boot in 2024 (part 1)](https://spring.io/blog/2024/03/11/bootiful-spring-boot-in-2024-part-1){.external target='_blank'}.
 
 > I'm of the opinion that there's never been a better time to be a Java and Spring Boot developer. I say that fully aware of where we stand in the span of things today. It's been 21+ years since the earliest releases of the Spring Framework and 11+ years since the earliest releases of Spring Boot.** This year marks 20 years since the Spring Framework and 10 years since Spring Boot**.
 > 
@@ -163,7 +207,7 @@ Extract from [Bootiful Spring Boot in 2024 (part 1)](https://spring.io/blog/2024
 
 - The Spring Framework is a comprehensive framework for building and maintaining enterprise-level applications in Java, <mark>while Spring Boot is focused specifically on simplifying the process of creating and deploying stand-alone, production-grade Spring applications.</mark>
 
--<mark> The Spring Framework provides a flexible and modular approach to configuration</mark>, while **Spring Boot uses an "opinionated" approach** to configuration, which provides a set of default configurations that are designed to work well together.
+- <mark> The Spring Framework provides a flexible and modular approach to configuration</mark>, while **Spring Boot uses an "opinionated" approach** to configuration, which provides a set of default configurations that are designed to work well together.
 
 - The Spring Framework provides a web-oriented framework **called Spring MVC**, while Spring Boot provides a <mark>more integrated approach to web application development</mark>, and includes support for building web applications using a wide range of technologies.
 

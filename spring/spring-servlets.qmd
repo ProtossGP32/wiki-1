@@ -173,7 +173,20 @@ public class CustomerService {
 
 ## EJB vs Spring 
 
-EJB and Spring both are used to develop enterprise applications. But there are few differences exists between them. 
+**EJB** (Enterprise JavaBeans) and **Spring** are frameworks for developing enterprise applications in Java.
+
+::: {.column-margin}
+![EJB vs Spring](/images/springmvc/EJB-vs-Spring-info-1.jpg.webp){width="40%"}
+:::
+
+Both offer solutions for managing application components and facilitating enterprise-level features like transaction management and security. However, they differ in several *key* aspects. 
+
+**EJB** is part of the Java EE platform, providing a standardized approach to building enterprise applications, while Spring is a lightweight and modular framework offering comprehensive support for dependency injection, aspect-oriented programming, and MVC architecture. 
+
+Spring promotes **loosely coupled components** and easier **unit testing** compared to **EJB**, which traditionally requires a full-fledged Java EE container for deployment.
+
+
+
 
 ![EJB vs Spring](/images/springmvc/EJBvsSPRING.png)
 
