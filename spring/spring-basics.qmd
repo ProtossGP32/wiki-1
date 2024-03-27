@@ -43,11 +43,11 @@ By using the `Spring Framework`, developers can take advantage of the framework'
 :::
 
 
-The Spring Framework provides a comprehensive set of tools and libraries for building and maintaining enterprise applications, and is designed to support the <mark>"software development principles of modularity, component-based development, and non-invasive programming"</mark>.
+The `Spring Framework` provides a comprehensive set of tools and libraries for building and maintaining enterprise applications, and is designed to support the <mark>"software development principles of modularity, component-based development, and non-invasive programming"</mark>.
 
-The Spring Framework consists of several modules, each of which provides a different set of functionality and tools. Some of the key modules of the Spring Framework include:
+The `Spring Framework` consists of several modules, each of which provides a different set of functionality and tools. Some of the key modules of the `Spring Framework` include:
 
-- **Spring Core**: The core module provides the fundamental functionality of the Spring Framework, including dependency injection, inversion of control, and support for aspect-oriented programming.
+- **Spring Core**: The core module provides the fundamental functionality of the `Spring Framework`, including dependency injection, inversion of control, and support for aspect-oriented programming.
 
 - **Spring MVC**: The MVC (Model-View-Controller) module provides a web-oriented framework for building web applications, and supports the development of web applications using a "front controller" pattern.
 
@@ -56,6 +56,9 @@ The Spring Framework consists of several modules, each of which provides a diffe
 - **Spring Security**: The Security module provides tools and libraries for implementing authentication and authorization in applications, and supports the development of secure applications.
 
 - **Spring Boot**: The Boot module provides a way to quickly and easily create stand-alone, production-grade Spring applications. Spring Boot uses an "opinionated" approach to configuration, which means that it provides a set of default configurations that are designed to work well together, and allows developers to get started quickly without having to spend a lot of time configuring the application.
+
+![From EJB to Spring Boot](/images/springmvc/spring-timeline.png)
+
 
 # Spring tech stack along the early years
 
