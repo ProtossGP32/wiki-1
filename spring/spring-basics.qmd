@@ -16,10 +16,15 @@ format:
 
 
 ::: {.summary}
-📘 **What is Spring Framework?**
+📘 **What is Spring Framework/Platform?**
 
-**Spring Framework is a powerful lightweight application development framework** used for Enterprise Java (Java EE).
+**`Spring Framework` is a open-source powerful lightweight application development [platform](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/overview.html){.external target='_blank'}** used for robust, fast and scalable Web Apps with Java.
 
+At its core, `Spring framework` is really just **a dependency injection of control container**, with a couple of convenience layers (database access, proxies, aspect-oriented programming, RPC, a web MVC framework) added on top.
+
+`Spring Framework` is a Java platform that provides comprehensive **infrastructure** support for developing Java applications. Spring handles the **infrastructure** so programmers can focus on the **application**.
+
+`Spring` enables you to build applications from *plain old Java objects* (POJOs) and to apply enterprise services non-invasively to POJOs. This capability applies to the `Java SE `programming model and to full and partial `Java EE`.
 :::
 
 
@@ -63,6 +68,8 @@ The Spring Framework consists of several modules, each of which provides a diffe
 - DAOs
 
 
+![The Spring Framework consists of features organized into about 20 modules. These modules are grouped into Core Container, Data Access/Integration, Web, AOP (Aspect Oriented Programming), Instrumentation, and Test, as shown in the following diagram.](/images/springmvc/spring-overview.png)
+
 # Timeline: 1996-2024
 
 ## Origins: 1996
@@ -82,12 +89,12 @@ Those years saw the release of the first incarnation of `Enterprise Java`, but s
 ## J2EE: 1999
 
 
+On paper, `J2EE` was meant to become the standard way of building Java enterprise applications. In other words, it was supposed to be the **game-changer** in terms of overall architecture.
 
 ::: {.column-margin}
 The platform was known as `Java 2 Platform`, `Enterprise Edition` or `J2EE` from version 1.2, until the name was changed to `Java Platform`, Enterprise Edition or `Java EE` in version 1.5.
 :::
 
-On paper, `J2EE` was meant to become the standard way of building Java enterprise applications. In other words, it was supposed to be the **game-changer** in terms of overall architecture.
 
 Everything sounded quite promising with `J2EE`. However, when it came to actually implementing things using `J2EE`, *everything wasn’t so rosy*. Some of the major problems with `J2EE` were in regards to **EJB or Enterprise Java Beans**.
 
@@ -100,6 +107,14 @@ Due to these problems, there was <mark>discontent among developers with regards 
 > `EJB` became that bad uncle in the family that you want to avoid because they mess up everything. It basically fell out of favor. That’s when **Spring** came in.
 
 **Rod Johnson**, the [founder](https://en.wikipedia.org/wiki/Rod_Johnson_(programmer)){.external target='_blank'} of `Spring`, started on this journey to create an alternative to `J2EE`. This led to the birth of `Spring Framework`.
+
+However, the guys at `Sun Microsystems` (the creators of Java and J2EE) took note of the rise of `Spring`. They tried to understand the reasons behind the declining popularity of `J2EE`. And they also realized that the `EJB` implementation was the major problem.
+
+So they actually went back and re-engineered `EJB`. In other words, they made it simpler to use. This coincides with `Java EE5` release in 2006. Since then, `J2EE` has steadily improved with every new version.
+
+Practically speaking, at this point of time, both `Spring` and `J2EE` are pretty equal in terms of features. You can basically do the same thing with both the frameworks. However, the `J2EE` folks were slightly slow to solve the problems and the earlier problems with `EJB` had tarnished the image of `J2EE` forever.
+
+It was so late, during this time, `Spring` has gone from strength to strength. It has gathered a tremendous amount of momentum in the industry and the developer community. 
 
 ::: {.callout-warning}
 ## J2EE, Java EE or Jakarta?
@@ -122,13 +137,12 @@ The **Eclipse** Foundation could not agree with **Oracle** over the use of `java
 
 ## Spring: 2004
 
-As we have seen, **IBM** set the foundations.` Java EE` and `EJB` were the first frameworks trying to solve the problems around building *enterprise Java applications*.
+As we have seen, **IBM** set the foundations with `EJB` specifications. So, `Java EE` and `EJB` were the first platforms & specificatios trying to solve the problems around building *enterprise Java applications*.
 
-`J2EE`, `Java Enterprise Edition` or `EJB` that preceded `Spring` tried to do the same thing.
 
-Then, the `EJB` and `J2EE` frameworks were to be surpassed by `Spring`.
+Then, the `EJB` and `J2EE` specifications/frameworks were to be surpassed by `Spring`.
 
-The first try was written by **Rod Johnson**, who <mark>contributed to the understanding of `J2EE` development practices and with the publication of his book [Expert One-on-One J2EE Design and Development](/books/j2ee.qmd) in October 2002 mean to develop without `EJB`</mark>.
+The first try, before the rise of `Spring`, was written by **Rod Johnson**, who <mark>contributed to the understanding of `J2EE` development practices and with the publication of his book [Expert One-on-One J2EE Design and Development](/books/j2ee.qmd) in October 2002 mean to develop without `EJB`</mark>.
 
 ::: {.column-margin}
 **Roderick "Rod" Johnson** is an Australian computer specialist who created the Spring Framework and co-founded SpringSource, where he served as CEO until its 2009 acquisition by VMware.
@@ -143,7 +157,7 @@ In 2011, Johnson became Chairman of Neo4j's Board of Directors. At the JavaOne 2
 
 `Spring Framework` was indeed influenced by many concepts discussed in **Expert One-on-One J2EE Design and Development**, particularly in terms of addressing the complexities and limitations of `J2EE` development.
 
-`Spring` provided a more lightweight and flexible alternative to the heavy, XML-configured, and often cumbersome `J2EE` frameworks of the time.
+`Spring` provided a more lightweight and flexible alternative to the heavy, XML-configured, and often cumbersome `J2EE` frameworks of the time. Besides, it worked flawlessly without `EJB`: more modular, decoupled and with lots of cofiguration options for the users.
 
 
 The framework was first released under the **Apache 2.0 license in June 2003**. The first production release, `1.0`, was released in March 2004.
