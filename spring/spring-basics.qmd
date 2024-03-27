@@ -73,10 +73,31 @@ The `Spring Framework` consists of several modules, each of which provides a dif
 
 ![The Spring Framework consists of features organized into about 20 modules. These modules are grouped into Core Container, Data Access/Integration, Web, AOP (Aspect Oriented Programming), Instrumentation, and Test, as shown in the following diagram.](/images/springmvc/spring-overview.png)
 
-# Timeline: 1996-2024
+# Timeline: 1994-2024
 
-## Origins: 1996
+## Origins: 1994
 
+`Java` has come a long way since its inception in 1991 when `Sun` launched ["Project Green"](https://www.tech-insider.org/java/research/1998/05-a.html){.external target='_blank'}, which tried to [integrate](https://en.wikipedia.org/wiki/Java_(software_platform)#History){.external target='_blank'} digitally controlled consumer devices like TV sets, CD players, and computers.
+
+<mark>This was a humble beginning</mark>
+
+`Sun` threw the gauntlet down in [1995](https://www.pearsonitcertification.com/articles/article.aspx?p=29786&seqNum=3){.external target='_blank'} by releasing **Java as open source**. The feedback was tremendous, and fixed more than just a few bugs. This drove `Java` **deep into the server-side development industry.**
+
+![](/images/springmvc/servlet-history.png)
+
+In June and July 1994 – after three days of brainstorming with **John Gage** (the Director of Science for Sun), **Gosling**, **Joy**, **Naughton**, **Wayne Rosing**, and **Eric Schmidt** – <mark>the team re-targeted the platform for the World Wide Web.</mark>
+
+![Java meets the web, July, 1994](/images/springmvc/javameetsweb.png){width="60%"}
+
+Together, `servlets` and `JSPs` pages enabled programmers to develop modular, maintainable, scalable, and portable Web applications with Java.
+
+This was between 1994 and 1995. The `Java Servlet API` was first publicly announced at the inaugural [JavaOne](https://en.wikipedia.org/wiki/Jakarta_Servlet#cite_note-12){.external target='_blank'} conference in May 1996. The `Servlet1` [specification](https://web.archive.org/web/20000816161328/http://java.sun.com/javaone/javaone96/pres/ServExt.pdf){.external target='_blank'} was created by **Pavni Diwanji** while she worked at `Sun Microsystems`.
+
+::: {.column-margin}
+![Servlet api](/images/springmvc/servlet-api.png)
+:::
+
+ 
 By 1996, <mark>Java had already become popular among developer for its friendly APIs and automated Garbage Collection and was starting to be widely used in back-end systems</mark>.
 
 One problem, however, was that most of these systems needed the same set of standard capabilities – such as `persistence`, `transaction integrity`, and `concurrency control` – which the JDK lacked at that time. That, naturally, led to many home-grown, closed implementations.
