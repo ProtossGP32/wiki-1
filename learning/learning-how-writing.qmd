@@ -55,6 +55,96 @@ This requires not that the writer make all his sentences short, or that he avoid
 
 > **Emphasis** - put the word or words you want to emphasise at the end of a sentence
 
+## Making a proper CV
+
+### GitHub resources
+
+- [Quarto-cv Format](https://github.com/mps9506/quarto-cv/){.external target='_blank'}
+- [Create a CV with Quarto](http://archive.schochastics.net/post/create-a-cv-with-quarto/){.external target='_blank'}
+- [markdown-cv](https://elipapa.github.io/markdown-cv/){.external target='_blank'}
+- [markdown-cv github to fork](https://github.com/elipapa/markdown-cv?tab=readme-ov-file){.external target='_blank'}
+
+
+::: {.column-margin}
+
+[Markdown](https://daringfireball.net/projects/markdown/syntax#link){.external target='_blank'}
+
+LINKS: Markdown supports two style of links: **inline** and **reference**. In both styles, the link text is delimited by `[square brackets]`.
+
+![](/images/learning/md-insert-variable.jpg)
+
+
+:::
+
+### CV examples
+
+- [CV-examples-1](/images/learning/CV-examples/cv-example-1.jpg){.external target='_blank'}
+- [CV-examples-2](/images/learning/CV-examples/cv-example-2.jpg){.external target='_blank'}
+- [CV-examples-3](/images/learning/CV-examples/cv-example-3.jpg){.external target='_blank'}
+- [CV-examples-4](/images/learning/CV-examples/cv-example-4.jpg){.external target='_blank'}
+- [CV-examples-5](/images/learning/CV-examples/cv-example-5.jpg){.external target='_blank'}
+- [CV-examples-6](/images/learning/CV-examples/cv-example-6.jpg){.external target='_blank'}
+
+
+
+### Crafting Your CV with Authenticity, Clarity, and Value
+
+By following these principles, you can create an **authentic**, **clear**, and compelling CV that effectively communicates your **value** proposition to potential employers.
+
+**Authenticity**
+
+- Be genuine in portraying yourself: reflect **your professional path**.
+- Use language that reflects your personality and experiences truthfully.
+- Avoid overused buzzwords, **emotional lenguage or exaggerated claims**.
+- Highlight your real strengths, tasks done, and achievements.
+
+**Action Verbs**
+
+- Recommend using **action verbs** that reflect executive, planning, revisioning, etc.
+- Examples include: orchestrated, spearheaded, devised, formulated, strategized, reimagined, restructured, colaborated, created, designed.
+- It should sign to participate into Agile teams.
+
+
+**Clarity & Vocabulary**
+
+- Keep language simple and concise.
+- Use **active voice and straightforward sentences.**
+- Avoid jargon or overly technical terms **unless necessary common tech vocabulary.**
+- Clearly communicate skills, experiences, and accomplishments.
+
+**Value**
+
+- Emphasize **quantifiable** achievements.
+- **Focus on meeting targets, increasing efficiency, or solving specific problems.**
+- Use action verbs and concrete examples to demonstrate impact.
+
+**Tailoring**
+
+- Customize CV for each job application.
+- Highlight most relevant skills and experiences.
+- Align CV with company values and role requirements.
+
+**Storytelling**
+
+- Tell a compelling career journey.
+- Showcase **key moments, challenges overcome, and lessons learned.**
+- Connect with recruiters on a deeper level.
+
+**Proofreading**
+
+- Ensure CV is error-free.
+- **Double-check grammar, punctuation, and formatting.**
+- Seek feedback from trusted sources.
+
+**Honesty**
+
+- Be transparent about skills and experiences.
+- Highlight **genuine strengths**.
+- Prepare to discuss areas for growth or development.
+
+
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>
