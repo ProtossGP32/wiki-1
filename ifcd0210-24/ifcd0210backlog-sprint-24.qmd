@@ -33,18 +33,16 @@ tr:hover {background-color:  #f4f4f4;}
 ::: {.column-page-right}
 
 
-##  ``Sprint#21 Spring JPQL & AI`` (May 2024)
+##  ``Sprint#22 Spring JPQL & AI`` (May 2024)
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #21 | 75 | 27/05/2024 | -  React Reducer & AWS: Chat Project  v0.2.2 </br>  - Fetch & display contacts & groups, `chatMenu.jsx`  </br> - Display user's contacts and groups & **select**  </br> - Saving Conversation to Local Storage | - [myChat: wiki](https://github.com/AlbertProfe/Chat/wiki){.external target='_blank'}</br>  </br></br><mark> [Screen video: Monday-1]({{< meta baseurlaws >}}CifjoJava-2024-05-27-1.mp4){.external target='_blank'}<mark>  </br><mark> [Screen video: Monday-2]({{< meta baseurlaws >}}CifjoJava-2024-05-27-2.mp4){.external target='_blank'}<mark> |
-|  | 76 | 28/05/2024  |  - React Reducer & AWS: Chat Project  v0.3 </br>    - Create chat, add contact in  `chatMenu.jsx`  </br>  |  - [myChat: wiki](https://github.com/AlbertProfe/Chat/wiki){.external target='_blank'}</br>  </br></br><mark> [Screen video: Tuesdya-1]({{< meta baseurlaws >}}CifjoJava-2024-05-28-1.mp4){.external target='_blank'}<mark>  </br><mark> [Screen video: Tuesday-2]({{< meta baseurlaws >}}CifjoJava-2024-05-28-2.mp4){.external target='_blank'}<mark> |
+| #22 | 79 | 03/06/20274 | - JPQL: JPA Query Methods  |  - [JPA Query Methods](https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html){.external target='_blank'} </br></br><mark> [Screen video: Monday-1]({{< meta baseurlaws >}}CifjoJava-2024-06-03-1.mp4){.external target='_blank'}<mark>  </br><mark> [Screen video: Monday-2]({{< meta baseurlaws >}}CifjoJava-2024-06-03-2.mp4){.external target='_blank'}<mark> |
+|   | 80 |  04/06/20274 |  - JPQL: JPA Query Methods |  </br></br><mark> [Screen video: Tuesday-1]({{< meta baseurlaws >}}CifjoJava-2024-06-04-1.mp4){.external target='_blank'}<mark>  </br><mark> [Screen video: Tuesday-2]({{< meta baseurlaws >}}CifjoJava-2024-06-04-2.mp4){.external target='_blank'}<mark> |
 |   |
-|  | 77 | 30/05/2024  | - Spring Boot JPQL | - [JPA Query Methods](https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html){.external target='_blank'} </br></br><mark> [Screen video: Thursday-1]({{< meta baseurlaws >}}CifjoJava-2024-05-30-1.mp4){.external target='_blank'}<mark>  </br><mark> [Screen video: Thursday-2]({{< meta baseurlaws >}}CifjoJava-2024-05-30-2.mp4){.external target='_blank'}<mark> |
-|  | 78 | 31/05/2024  | - Spring Boot AI  | - [Mistral Chat](https://chat.mistral.ai/chat){.external target='_blank'} </br> - [Mistral Tech](https://mistral.ai/technology/){.external target='_blank'} </br> - [Spring AI](https://spring.io/projects/spring-ai){.external target='_blank'} </br> - [LM Studio](https://lmstudio.ai/){.external target='_blank'} </br> - [Vaadin](https://vaadin.com/){.external target='_blank'} </br>  - [CodeGPT: Chat & AI Agents](https://marketplace.visualstudio.com/items?itemName=DanielSanMedium.dscodegpt){.external target='_blank'}</br>  - [Spring Boot, Mistral, DB](https://chat.mistral.ai/chat/e617e049-c77e-4dde-8126-1751b5bfd5a4){.external target='_blank'} </br></br><mark> [Screen video: Friday-1]({{< meta baseurlaws >}}CifjoJava-2024-05-31-1.mp4){.external target='_blank'}<mark>  </br><mark> [Screen video: Friday-2]({{< meta baseurlaws >}}CifjoJava-2024-05-31-2.mp4){.external target='_blank'}<mark> |
-: Backlog Sprint#21 May 2024 {tbl-colwidths="[2,2,2,55,39]"}
-
-
+|  | 81 |  06/06/20274 | - Spring Boot AI | </br></br><mark> [Screen video: Thursday-1]({{< meta baseurlaws >}}CifjoJava-2024-06-06-1.mp4){.external target='_blank'}<mark>  </br><mark> [Screen video: Thursday-2]({{< meta baseurlaws >}}CifjoJava-2024-06-06-2.mp4){.external target='_blank'}<mark>  |
+|  | 82 |  07/06/20274 | - Spring Boot AI  | </br></br><mark> [Screen video: Friday-1]({{< meta baseurlaws >}}CifjoJava-2024-06-07-1.mp4){.external target='_blank'}<mark>  </br><mark> [Screen video: Friday-2]({{< meta baseurlaws >}}CifjoJava-2024-06-07-2.mp4){.external target='_blank'}<mark>  |
+: Backlog Sprint#22 June 2024 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
 
