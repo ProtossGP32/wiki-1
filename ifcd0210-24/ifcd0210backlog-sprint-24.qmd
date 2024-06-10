@@ -33,7 +33,7 @@ tr:hover {background-color:  #f4f4f4;}
 ::: {.column-page-right}
 
 
-##  ``Sprint#23 Spring JPQL & AI`` (May 2024)
+##  ``Sprint#23 Spring Boot AI, Thymeleaf&HTMX, Security & Deploy`` (May 2024)
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
