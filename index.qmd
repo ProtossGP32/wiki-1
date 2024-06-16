@@ -70,6 +70,7 @@ repo-actions: false
 | -- | -- | :-- | :-- |
 | 06/2024 | **Backlog** | 🗂 [Sprint Backlog](/ifcd0210-24/ifcd0210backlog-sprint-24.qmd) | Sprint Backlog IFCD0210-24  |
 | 06/2024  | **Backlog** | 🗃 [Product Backlog](/ifcd0210-24/ifcd0210backlog-product-24.qmd) | Product Backlog IFCD0210-24  |
+| 06/2024 |    <mark>Next JS</mark> | ![](/images/home/react-log.png){width="5%"} [NextJS movies next-flix project](https://github.com/AlbertProfe/next-flix/wiki) |  NextJS & mongoDB   |
 | 06/2024 |    <mark>Java EE</mark> | ![](/images/home/java-logo.png){width="5%"} [Spring Boot Security & Deploy AWS EC2](https://github.com/AlbertProfe/securityDeploy/wiki) | Spring Boot Security & Deploy AWS EC2 with SSH  |
 | 06/2024 |    <mark>Java EE</mark> | ![](/images/home/java-logo.png){width="5%"} [Spring Boot Assistant AI](https://github.com/AlbertProfe/AssistantAI/wiki) | Spring Boot Assistant AI  |
 | 06/2024 |    <mark>Java EE</mark> | ![](/images/home/java-logo.png){width="5%"} [Spring Boot JPA: JPQL & queries](https://github.com/AlbertProfe/simulations/wiki/simulations-v1.1) | Spring Boot Queries  |
