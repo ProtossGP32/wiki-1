@@ -39,6 +39,8 @@ tr:hover {background-color:  #f4f4f4;}
 | -- | -- | -- | -- | -- |
 | #25 | 91 | 26/06/2024 | - Formació Copmplementària | - |
 |  | 92 | 27/06/2024 | - Formació Copmplementària | - |
+|  |  |  | - NextJS: server actions | - [next-flix-router](https://github.com/AlbertProfe/next-flix-router/wiki){.external target='_blank'} </br> - [App Router](https://nextjs.org/docs/app){.external target='_blank'} </br> |
+
 : Backlog Sprint#24 June 2024 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
