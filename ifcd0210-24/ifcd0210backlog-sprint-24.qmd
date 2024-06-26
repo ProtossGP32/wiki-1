@@ -37,9 +37,9 @@ tr:hover {background-color:  #f4f4f4;}
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-| #25 | 91 | 26/06/2024 | - Formació Copmplementària | - |
-|  | 92 | 27/06/2024 | - Formació Copmplementària | - |
-|  |  |  | - NextJS: server actions | - [next-flix-router](https://github.com/AlbertProfe/next-flix-router/wiki){.external target='_blank'} </br> - [App Router](https://nextjs.org/docs/app){.external target='_blank'} </br> |
+| #25 | 91 | 26/06/2024 | - Formació Copmplementària </br> - Inserció laboral, sensibilització mediambiental i en la igualtat de gènere   | - [Programa Formatiu](https://serveiocupacio.gencat.cat/web/.content/20_millorar-el-perfil/programes-formatius/ca/FCOO03_CAT.pdf){.external target='_blank'}  |
+|  | 92 | 27/06/2024 | - Formació Copmplementària  </br> - Inserció laboral, sensibilització mediambiental i en la igualtat de gènere    | - [Programa Formatiu](https://serveiocupacio.gencat.cat/web/.content/20_millorar-el-perfil/programes-formatius/ca/FCOO03_CAT.pdf){.external target='_blank'}  |
+|  |  |  | - NextJS: server actions </br>  - App router vs Pages router </br> - CRUD nextJS  </br>  - Pagination  & search| ![](/images/ifcd0210-24/pagesvsapprouter.png){.lightbox}  - [next-flix (pages/router)](https://github.com/AlbertProfe/next-flix/wiki){.external target='_blank'} </br> - [next-flix-router (app/router)](https://github.com/AlbertProfe/next-flix-router/wiki){.external target='_blank'} </br> - [App Router](https://nextjs.org/docs/app){.external target='_blank'} </br> <mark> [Screen video: Wednesday-1]({{< meta baseurlaws >}}CifjoJava-2024-06-26-1.mp4){.external target='_blank'}<mark> </br> <mark> [Screen video: Thursday-1]({{< meta baseurlaws >}}CifjoJava-2024-06-27-1.mp4){.external target='_blank'}<mark>  |
 
 : Backlog Sprint#24 June 2024 {tbl-colwidths="[2,2,2,55,39]"}
 :::
