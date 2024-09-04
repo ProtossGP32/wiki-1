@@ -1,0 +1,60 @@
+---
+title: "IFCD0021 Calendar & Deliveries"
+categories: [ifcd0210, training]
+---
+
+
+![Calendar & Deliveries](/images/home/deliveries.jpg){width="30%"}
+
+# Calendar 2024
+
+- **Inici-final de curs**: 09/05/2024-19/11/2024
+
+
+![Calendar 2024](/images/ifcd0021-24/calendar.png)
+
+
+- [Calendar 2024](/images/ifcd0210-24/Calendari%202024.pdf)
+
+# Planificació didàctica
+
+
+![Planificació didàctica de l’ACCIÓ Formativa](/images/ifcd0021-24/planificaciodidactica.png)
+
+# Deliveries
+
+Always in **Quarto/Wiki .md format** and code in GitHub **repositories** (or Organizations). Deliveries **via github** or similar: 
+
+
+| Code | Date | Description|
+|---|---|---|
+| **MF01**  |   |  |
+| **MF02**  |   |  |
+| **MF03**  |   |  |
+| **MF04**  |   |  |
+| **MF05**  |   |  |
+: Deliveries table {tbl-colwidths="[20,20,60]"}
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} IFCD0021 Official Docs ](/ifcd0021-24/ifcd0021-24.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[IFCD0021 Sprint Backlog {{< fa solid arrow-right >}}](/ifcd0021-24/ifcd0021backlog-sprint-24.qmd)
+<br>
+</div>
+<br>
+</div>
