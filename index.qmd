@@ -67,13 +67,8 @@ repo-actions: false
 :::{.column-page}
 | Date | Type | Article | Content |
 | -- | -- | :-- | :-- |
-| 06/2024 |    <mark>Next JS</mark> | ![](/images/home/react-log.png){width="5%"} [NextJS movies next-flix-router project](https://github.com/AlbertProfe/next-flix-router/wiki) |  NextJS & mongoDB router   |
-| 06/2024 |    <mark>Next JS</mark> | ![](/images/home/react-log.png){width="5%"} [NextJS movies next-flix project](https://github.com/AlbertProfe/next-flix/wiki) |  NextJS & mongoDB pages   |
-| 06/2024 |    <mark>Java EE</mark> | ![](/images/home/java-logo.png){width="5%"} [Spring Boot Security & Deploy AWS EC2](https://github.com/AlbertProfe/securityDeploy/wiki) | Spring Boot Security & Deploy AWS EC2 with SSH  |
-| 06/2024 |    <mark>Java EE</mark> | ![](/images/home/java-logo.png){width="5%"} [Spring Boot Assistant AI](https://github.com/AlbertProfe/AssistantAI/wiki) | Spring Boot Assistant AI  |
-| 06/2024 |    <mark>Java EE</mark> | ![](/images/home/java-logo.png){width="5%"} [Spring Boot JPA: JPQL & queries](https://github.com/AlbertProfe/simulations/wiki/simulations-v1.1) | Spring Boot Queries  |
-| 05/2024 |    <mark>React JS</mark> | ![](/images/home/react-log.png){width="5%"} [Authentication ReactJS Cognito Identity User Pool AWS SDK JS v3](https://github.com/AlbertProfe/authReactCognitoJS/wiki) | React JS AWS SDK, Auth, Cognito lab  |
-| 05/2024 |    <mark>React JS</mark> | ![](/images/home/react-log.png){width="5%"} [Chat React JS & AWS Server](https://github.com/AlbertProfe/Chat/wiki) | React JS AWS, WebSocket, Semantic CSS lab  |
+| 09/2024 | **Backlog** | 🗂 [Sprint Backlog](/ifcd0021-24/ifcd0021backlog-sprint-24.qmd) | Sprint Backlog IFCD0021-24  |
+| 09/2024  | **Backlog** | 🗃 [Product Backlog](/ifcd0021-24/ifcd0021backlog-product-24.qmd) | Product Backlog IFCD0021-24  |
 : New / updated articles {tbl-colwidths="[10,10,50,30]" .striped .hover}
 
 

@@ -28,6 +28,13 @@ format:
 ### Teach is best
 > Teach what you learn to others. Do it, now.
 
+
+## Cone of learning
+
+![The cone of Learning](/images/learning/cone.jpg){width=50%}
+
+- [Has eLearning Killed the “Learning Cone”?](https://www.simplilearn.com/has-e-learning-killed-the-learning-cone-article){.external target='_blank'}
+
 ## Jim Kwik: learn anything faster
 
 [To learn anything faster](https://www.jimkwik.com/podcasts/kwik-brain-001-learning-anything-faster/), just remember **FAST**
@@ -66,7 +73,7 @@ format:
 - When I teach something, I get to learn it twice.
 - People often say that those who can’t do teach. But I never saw that as a negative. I always thought, wow, if I can’t do something, I can teach it, and then I can do it.
 
-### References: Learning How to Learn
+## References: Learning How to Learn
 
 > This course gives you easy access to the invaluable learning techniques used by experts in art, music, literature, math, science, sports, and many other disciplines.
 
