@@ -11,6 +11,7 @@ toc: true
 number-sections: true
 format:
   html
+highlight-style: github
 ---
 
 ::: {.summary}
@@ -284,9 +285,14 @@ format: revealjs
 
 ## Include
 
+``{{< include _content.qmd >}}``
+
 ``` bash
+
 {{< include _content.qmd >}}
+
 ```
+
 
 - [inlcude](https://quarto.org/docs/authoring/includes.html){.external}
 

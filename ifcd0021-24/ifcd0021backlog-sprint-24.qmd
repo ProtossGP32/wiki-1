@@ -5,7 +5,6 @@ toc: true
 number-sections: false
 format:
   html
-baseurlaws: "https://cifojava2024screenrecordings.s3.eu-central-1.amazonaws.com/"
 filters:
    - lightbox
 lightbox: true
@@ -37,14 +36,14 @@ tr:hover {background-color:  #f4f4f4;}
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-|  #01 | 1 | 09/09/2024 |  |  |
-|   | 2 | 10/09/2024 |  |  |
-|   | 3 | 12/09/2024 |  |  |
-|   | 4 | 13/09/2024 |  |  |
+|  #01 | 1 | 09/09/2024 | - <b>Mindset</b> </br>- <b>Presentation</b>:  web, why i do not like full stack definition (netflix definition), what is a dev (2022-25), scrum/agile? AI?, what is this course and what is not (personal tutor, university, an oportunity to learn and code and not getting a title, java),  learning is (your responsibility: ask, debate, speak, be active, balance in class: positive emotions and active dynamics), how to learn</br> - <b>POO & Java</b> (SE & EE: Spring Boot)  </br> - <b>Systems</b>: gitHub, Linux (VirtualBox SSD ext), VCode, IntellIJIdea, MOOC Helsinki, Markdown, NextCloud, FlameShot, Jitsi  </br> </br> |  - [albertprofe.dev](https://albertprofe.dev){.external target='_blank'} </br> - [Unveiling the Technological Marvels behind Netflix’s Seamless Experience](https://kasun-r-weerasinghe.medium.com/architecture-of-netflix-1c38257f1f4a){.external target='_blank'} </br>  - [Jit Si Meet fullstack2024](https://meet.jit.si/fullstack2024){.external target='_blank'}|
+|   | 2 | 10/09/2024 | - POO: methods </br> - GitHub: create repo, commit, push,.. </br> - UML | - Project |
+|   | 3 | 12/09/2024 | - POO: static modifier </br> - UML | - Project |
+|   | 4 | 13/09/2024 | - POO: class, object, model, MVC </br> - UML | - Project |
 : Backlog Sprint#01 September 2024 {tbl-colwidths="[2,2,2,55,39]"}
 :::
 
-
+</div>
 
 ::: {.callout-note}
 - `-` topic planned or pending
@@ -55,6 +54,7 @@ tr:hover {background-color:  #f4f4f4;}
 
 <!--- navLinks -->
 <br><br>
+
 <div class=row>
 <br>
 <div class='column left previous'>
