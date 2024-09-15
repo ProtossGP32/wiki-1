@@ -68,7 +68,7 @@ repo-actions: false
 | Date | Type | Article | Content |
 | -- | -- | :-- | :-- |
 | 09/2024 |  Gist | [Projects UML](https://gist.github.com/AlbertProfe/ae6bf1af9cee2ccf77d6c400556d18c7){.external target='_blank'} | Java SE UML 10 projects class exercise  |
-| 09/2024 |  <mark>Java SE</mark> | ![](/images/home/java-logo.png){width="5%"} [Lab#]() | Java SE UML lab  |
+| 09/2024 |  <mark>Java SE</mark> | ![](/images/home/java-logo.png){width="5%"} [Lab#Restaurant](https://github.com/AlbertProfe/restaurant) | Java SE UML & project lab  |
 | 09/2024 |  Documentation |  📜  [IFCD0021-24](/ifcd0021-24/ifcd0021-24.qmd) | Official documents IFCD0021-24 course  |
 | 09/2024 | **Backlog** | 🗂 [Sprint Backlog](/ifcd0021-24/ifcd0021backlog-sprint-24.qmd) | Sprint Backlog IFCD0021-24  |
 | 09/2024  | **Backlog** | 🗃 [Product Backlog](/ifcd0021-24/ifcd0021backlog-product-24.qmd) | Product Backlog IFCD0021-24  |
