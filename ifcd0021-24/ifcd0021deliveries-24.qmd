@@ -8,7 +8,7 @@ categories: [ifcd0210, training]
 
 # Calendar 2024
 
-- **Inici-final de curs**: 09/05/2024-19/11/2024
+- **Inici-final de curs**: 09/09/2024-19/11/2024
 
 
 ![Calendar 2024](/images/ifcd0021-24/calendar.png)
