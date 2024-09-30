@@ -1,0 +1,136 @@
+---
+title: "Lab#SB08-1: Restaurant DDD and UML"
+subtitle: Spring Boot Restaurant Management UML
+author: albertprofe
+date: "01/010/2024"
+date-modified: last-modified
+date-format: full
+description:  Spring Boot
+categories: [Spring-Boot, lab]
+toc: true
+number-sections: true
+format:
+  html
+---
+
+:::: {.labs}
+📘 Spring Boot Lab#SB00-1: Restaurant UML
+We are going to evolve the current Java SE Restaurant project into a Spring Boot Restaurant Management System with an H2 DB and web interface using Thymeleaf.
+:::
+</br>
+
+> The resulting Spring Boot Project would be similar to the current Java SE Restaurant Project, with the addition of the Spring Boot annotations and the H2 database configuration.
+
+
+> The classes (such as Booking, Menu, Table, Customer, and the various Order classes) would be annotated with the @Entity annotation to indicate that they are persistent entities, and the repositories would be annotated with the @Repository annotation.
+
+
+> The services would be annotated with the @Service annotation, and the controllers would be annotated with the @Controller annotation.
+
+
+> The Thymeleaf templates would be created in the resources/templates folder of the project. These templates would include views for managing bookings, menus, tables, customers, and different types of orders (TakeAway, Shipping, and EatIn).
+
+
+This Spring Boot version of the Restaurant Management System would provide a robust, database-backed web application for managing all aspects of a restaurant's operations, from bookings and menu management to order processing and customer interactions.
+
+# From RestaurantProject to RestaurantManagement
+
+## Create a new Spring Boot project & H2 DB
+
+- ``Create a new Spring Boot project``: The first step would be to create a new Spring Boot project in the preferred IDE or text editor.
+
+::: {.callout-note}
+The project can be created using **Spring Initializr**, which will create the necessary **file structure and dependencies**.
+:::
+
+- ``Configure the H2 database``: In the newly created project, configure the H2 database by adding:
+  - the H2 dependency in the ``pom.xml`` file,
+  - and also create a new ``application.properties`` file
+  - set the database properties such as:
+    - the database **URL**,
+    - **username**,
+    - and **password**.
+
+## Model & Entities
+
+- `Create a Menu Entity`: To represent a menu item in the restaurant management system, create a Menu @Entity 
+
+::: {.column-margin}
+It could include attributes such as name, price, description, category (appetizer, main course, dessert, etc.), and availability status.
+:::
+
+- `Create a Customer Entity`: To represent a customer in the system, create a Customer entity that includes attributes such as customer ID, name, phone number, email, and **reservation history.**
+
+- `Create Booking Entity`: To represent a booking in the system, create a Booking entity that includes attributes such as booking date, time, number of people, tables, and associated customer.
+
+- `Create Staff Entity`: To represent staff members in the system, create a Staff entity that includes attributes such as staff ID, name, position, shift schedules, and assigned tables.
+
+## Domains: @Controller, @Service and @Repository
+
+- `Create Repositories`: To access the data stored in the database, create repositories for each entity. **The repositories will provide the methods to create, read, update, and delete the data.**
+
+- `Create Services`: Create services that **will implement the business logic of the system by calling the repository methods.** 
+
+::: {.column-margin}
+The **services** will provide the methods to search for available tables, make a reservation, update menu items, process orders, manage staff schedules, handle customer feedback, and generate reports on restaurant performance.
+:::
+
+- `Create Controllers`: Create controllers that **will handle the HTTP requests from the web interface by calling the service methods.** 
+
+::: {.column-margin}
+The **controllers** will provide the methods to create a customer account, search for available tables, make a reservation, view and update menu items, place an order, manage staff schedules, submit customer feedback, and generate various reports.
+:::
+
+## HTML Thymeleaf
+
+### Modern server-side Java template engine
+- [ThymeLeaf](https://www.thymeleaf.org/){.external}
+- [Tutorial: Using Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html){.external}
+- [Tutorial: Thymeleaf + Spring](https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html){.external}
+
+### Create Thymeleaf
+
+- `Create Thymeleaf templates`: To create the web interface of the system, create Thymeleaf templates for each of the controller methods. **The templates will be used to display the data and also to handle the user input.**
+
+::: {.callout-note}
+Thymeleaf is a **modern server-side Java template engine** for both web and standalone environments.
+
+Thymeleaf's main goal is to bring elegant natural templates to your development workflow — HTML that can be correctly displayed in browsers and also work as static prototypes, allowing for stronger collaboration in development teams.
+:::
+
+## Test
+
+- Test the system: Test the system by running it and making sure that all the functionalities work as expected. This includes testing reservation creation, menu management, order processing, staff scheduling, and report generation.
+
+# MockUp
+
+## Core use-case: borrowBook() and returnBook() with user and librarian
+
+
+
+# Discussion Solving: UML
+
+
+<!--- navLinks -->
+<br><br>
+<div class=row>
+<br>
+<div class='column left previous'>
+<br>
+[{{< fa solid arrow-left >}} Lab#SB06-1: `employeeCourse` ](/springboot/sblab6.qmd)
+<br>
+</div>
+<br>
+<div class='column center'>
+<br>
+[{{< fa solid arrow-up >}} top](#top)
+<br>
+</div>
+<br>
+<div class='column right next'>
+<br>
+[Spring Boot Resources  {{< fa solid arrow-right >}}](/springboot/resources.qmd)
+<br>
+</div>
+<br>
+</div>
