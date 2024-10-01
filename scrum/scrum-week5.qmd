@@ -89,6 +89,7 @@ Dweck's research underscores the transformative power of cultivating a growth mi
 
 # Survival Mindset
 
+![](/images/scrum/cycle-survial.PNG)
 
 A **survival mindset** in a context where each action is perceived as life or death, despite the absence of real risk or threat, can be characterized by several key elements:
 
