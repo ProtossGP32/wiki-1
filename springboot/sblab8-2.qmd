@@ -1,6 +1,6 @@
 ---
-title: "Lab#SB08-1: Restaurant DDD and UML"
-subtitle: Spring Boot Restaurant Management UML
+title: "Lab#SB08-2: RestaurantManager"
+subtitle: Spring Boot Restaurant Management
 author: albertprofe
 date: "01/010/2024"
 date-modified: last-modified
@@ -14,7 +14,7 @@ format:
 ---
 
 :::: {.labs}
-📘 Spring Boot Lab#SB00-1: Restaurant UML
+📘 Spring Boot Lab#SB00-2: RestaurantManager
 We are going to evolve the current Java SE Restaurant project into a Spring Boot Restaurant Management System with an H2 DB and web interface using Thymeleaf.
 :::
 </br>
@@ -43,7 +43,13 @@ This Spring Boot version of the Restaurant Management System would provide a rob
 The project can be created using **Spring Initializr**, which will create the necessary **file structure and dependencies**.
 :::
 
-
+- ``Configure the H2 database``: In the newly created project, configure the H2 database by adding:
+  - the H2 dependency in the ``pom.xml`` file,
+  - and also create a new ``application.properties`` file
+  - set the database properties such as:
+    - the database **URL**,
+    - **username**,
+    - and **password**.
 
 ## Model & Entities
 
@@ -75,12 +81,30 @@ The **services** will provide the methods to search for available tables, make a
 The **controllers** will provide the methods to create a customer account, search for available tables, make a reservation, view and update menu items, place an order, manage staff schedules, submit customer feedback, and generate various reports.
 :::
 
+## HTML Thymeleaf
 
+### Modern server-side Java template engine
+- [ThymeLeaf](https://www.thymeleaf.org/){.external}
+- [Tutorial: Using Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html){.external}
+- [Tutorial: Thymeleaf + Spring](https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html){.external}
 
+### Create Thymeleaf
+
+- `Create Thymeleaf templates`: To create the web interface of the system, create Thymeleaf templates for each of the controller methods. **The templates will be used to display the data and also to handle the user input.**
+
+::: {.callout-note}
+Thymeleaf is a **modern server-side Java template engine** for both web and standalone environments.
+
+Thymeleaf's main goal is to bring elegant natural templates to your development workflow — HTML that can be correctly displayed in browsers and also work as static prototypes, allowing for stronger collaboration in development teams.
+:::
+
+## Test
+
+- Test the system: Test the system by running it and making sure that all the functionalities work as expected. This includes testing reservation creation, menu management, order processing, staff scheduling, and report generation.
 
 # MockUp
 
-
+## Core use-case: borrowBook() and returnBook() with user and librarian
 
 
 
@@ -93,7 +117,7 @@ The **controllers** will provide the methods to create a customer account, searc
 <br>
 <div class='column left previous'>
 <br>
-[{{< fa solid arrow-left >}} Lab#SB06-1: `employeeCourse` ](/springboot/sblab6.qmd)
+[{{< fa solid arrow-left >}} Lab#SB08-1: RestaurantManager ](/springboot/sblab8-1.qmd)
 <br>
 </div>
 <br>
@@ -105,7 +129,7 @@ The **controllers** will provide the methods to create a customer account, searc
 <br>
 <div class='column right next'>
 <br>
-[Lab#SB08-2: RestaurantManager  {{< fa solid arrow-right >}}](/springboot/sblab8-2.qmd)
+[Spring Boot Resources  {{< fa solid arrow-right >}}](/springboot/resources.qmd)
 <br>
 </div>
 <br>
