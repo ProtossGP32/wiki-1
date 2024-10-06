@@ -36,11 +36,11 @@ tr:hover {background-color:  #f4f4f4;}
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-|  #05 | 19 | 07/10/2024 | - Lab#SB08-1 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity Customer & Order   </br> (2) API Rest: @RestController with **Swagger** </br> (3) @CustomerService and @CustomerServiceImpl </br> (4) application.properties</br> (5) JPA and H2 </BR>  </br> | ![](/images/springboot/lab08-1-vaadin-view-restaurantVaadin.png)  </BR> - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>  |
-|   | 20 | 08/10/2024 | - Lab#SB08-1 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity Customer & Order   </br> (2) API Rest: @RestController with **Swagger**  </br> (3) @CustomerService and @CustomerServiceImpl </br> (4) application.properties with **local H2 DB** </br> (5) JPA and H2: JUnit to test DB </BR>  </br> |  - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>  |
-|   | 21 | 09/10/2024 | - Lab#SB08-1 Spring Boot **RestaurantManager**: </br>   | - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>  |
-|   | 22 | 10/10/2024 | - Lab#SB08-1 Spring Boot **RestaurantManager**: </br>   </BR> -  Git </br>  | - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>   |
-|   | 23 | 11/10/2024 | - Lab#SB08-1 Spring Boot **RestaurantManager**: </br>  </BR> - Gi </br> | - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>  |
+|  #05 | 19 | 07/10/2024 | - Lab#SB08-1 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity Customer (& Order)   </br> (2) API Rest: @RestController with **Swagger** </br> (3) @CustomerService and @CustomerServiceImpl </br> (4) application.properties</br> (5) JPA and H2 </BR>  </br> | ![](/images/springboot/lab08-1-vaadin-view-restaurantVaadin.png)  </BR> - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>  |
+|   | 20 | 08/10/2024 | - Lab#SB08-1 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity Customer & Order   </br> (2) API Rest: @RestController with Swagger  </br> (3) @OrderService and @OrderServiceImpl </br> (4) application.properties with **local H2 DB** </br> (5) JPA and H2 </BR>  </br> |  - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>  |
+|   | 21 | 09/10/2024 |  - Lab#SB08-1 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity Customer & Order   </br> (2) API Rest: @RestController with Swagger  </br> (3) @OrderService and @OrderServiceImpl </br> (4) application.properties with local H2 DB </br> (5) JPA and H2: **JUnit to test DB** </BR>  </br> |  - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>  |
+|   | 22 | 10/10/2024 | - Lab#SB08-1 Spring Boot **RestaurantManager**: </br> (1) Model @Entitiy **Table and Menu** </BR>  (2) Inherence: Order </br> </br>- Git </br>  | - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>   |
+|   | 23 | 11/10/2024 | - Lab#SB08-1 Spring Boot **RestaurantManager**: </br> (1) Model @Entitiy Table and Menu </BR>  (2) **Inherence: Order** </br>  </BR> - Gi </br> | - [Lab#SB08-1](/springboot/sblab8-1.qmd){.external target='_blank'} </BR>  |
 : Backlog course October 2024 table {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
