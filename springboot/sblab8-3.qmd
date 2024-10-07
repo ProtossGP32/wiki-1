@@ -22,7 +22,7 @@ We are going to evolve the current **Java SE Restaurant** project into a **Sprin
 
 # RestaurantManager Project Summary
 
-## Key Components
+`Key Components`
 
 - **Java Faker**: Library for generating fake data. [Java Faker GitHub](https://github.com/DiUS/java-faker)
 - **@Bean Annotation**: Spring annotation for declaring managed beans.
@@ -31,30 +31,29 @@ We are going to evolve the current **Java SE Restaurant** project into a **Sprin
 - **ResponseEntity**: Spring class for HTTP response control.
 - **JUnit**: Spring Boot uitlity for testing. 
 
-## Approaches to Create Fake Customers
+`Approaches to Create Fake Customers`
 
 1. Using **@Bean** and **CommandLineRunner**
 2. Using static method (not recommended)
 3. Using **ApplicationRunner** (recommended)
-
-## H2 Database Configuration
+`H2 Database Configuration`
 
 - **In-memory**: Temporary database, resets on application restart
 - **Local**: Persistent storage on disk
 - **Mixed**: In-memory for development, local for production
 
-## API and Controller
+`API and Controller`
 
 - **CustomerController**: Implements CRUD operations
 - Uses **Swagger annotations** for API documentation
 - Utilizes **ResponseEntity** for flexible HTTP responses
 
-## Service, Repo and JUnit
+`Service, Repo and JUnit`
 
 - @Service with all business logic from app
 - JpaRepository interface
 
-## Additional Resources
+`Additional Resources`
 
 - [Spring Framework Documentation](https://docs.spring.io/spring-framework/reference/)
 - [Spring Boot Guide](https://spring.io/guides/gs/spring-boot/)
@@ -137,6 +136,8 @@ This `CommandLineRunner`does the following:
 5. The fake `customers` are saved to the `CustomerRepository`.
 6. Finally, it prints a message confirming that 100 fake customers have been created and saved.
 
+
+::: {.column-page-right}
 ```java
 package dev.example.restaurant;
 
@@ -182,6 +183,7 @@ public class RestaurantVaadinApplication {
     }
 }
 ```
+:::
 
 ### Approach #2 static
 
@@ -198,6 +200,7 @@ In this approach:
 > 
 > A better approach would be to use an `ApplicationRunner` or `CommandLineRunner` <mark>bean, which allows for proper dependency injection. </mark>
 
+::: {.column-page-right}
 ```java
 package dev.example.restaurant;
 
@@ -243,9 +246,11 @@ public class RestaurantVaadinApplication {
     }
 }
 ```
+:::
 
 ### Approach #3
 
+::: {.column-page-right}
 ```java
 package dev.example.restaurant;
 
@@ -294,8 +299,10 @@ public class RestaurantVaadinApplication {
     }
 }
 ```
+:::
 
-This approach maintains proper dependency injection and is more in line with Spring best practices for a few key reasons:
+
+This approach **maintains proper dependency injection** and is more in line with Spring best practices for a few key reasons:
 
 1. **Proper dependency injection**: By using an ApplicationRunner bean, we allow Spring to manage the lifecycle and injection of dependencies. The CustomerRepository is properly injected by Spring, rather than being accessed statically.
 2. **Separation of concerns**: The data loading logic is separated from the main application class, improving modularity and maintainability.
@@ -395,6 +402,7 @@ springdoc.swagger-ui.path=/swagger-ui.html
 
 Annotate your REST controllers and methods with OpenAPI annotations to provide more details:
 
+::: {.column-page-right}
 ```java
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -409,11 +417,13 @@ public class ExampleController {
     @GetMapping("/hello")
     @Operation(summary = "Say hello", description = "Returns a greeting message")
     @ApiResponse(responseCode = "200", description = "Successful response")
-    public String hello(@Parameter(description = "Name to greet") @RequestParam(required = false) String name) {
+    public String hello(@Parameter(description = "Name to greet") 
+                        @RequestParam(required = false) String name) {
         return "Hello, " + (name != null ? name : "World") + "!";
     }
 }
 ```
+:::
 
 ## Open url browser
 
@@ -444,6 +454,7 @@ Understanding ResponseEntity in Spring
 ![ResponseEntity in Spring Framework](https://cdn.hashnode.com/res/hashnode/image/upload/v1701526522110/2c2b7ee3-2e37-4d9a-ab10-b647fc751d7b.png?auto=compress,format&format=webp)
 
 Here's a simple example of how to use `ResponseEntity`:
+
 
 ```java
 @GetMapping("/example")
@@ -485,6 +496,7 @@ By using `ResponseEntity`, you can create more flexible and powerful RESTful API
 
 ## CustomerController
 
+::: {.column-page-right}
 ```java
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -493,7 +505,8 @@ import io.swagger.annotations.*;
 
     @RestController
     @RequestMapping("/api/customers")
-    @Api(value = "Customer Management System", description = "Operations pertaining to customers in the Customer Management System")
+    @Api(value = "Customer Management System", 
+            description = "Operations pertaining to customers in the Customer Management System")
     public class CustomerController {
 
         private final CustomerService customerService;
@@ -516,7 +529,8 @@ import io.swagger.annotations.*;
         @ApiOperation(value = "Add a new customer")
         @PostMapping
         public ResponseEntity<Customer> createCustomer(
-                @ApiParam(value = "Customer object store in database table", required = true)
+                @ApiParam(value = "Customer object store in database table", 
+                            required = true)
                 @RequestBody Customer customer) {
             Customer createdCustomer = customerService.createCustomer(customer);
             return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
@@ -525,7 +539,8 @@ import io.swagger.annotations.*;
         @ApiOperation(value = "Get a customer by Id")
         @GetMapping("/{id}")
         public ResponseEntity<Customer> getCustomerById(
-                @ApiParam(value = "Customer id from which customer object will retrieve", required = true)
+                @ApiParam(value = "Customer id from which customer object will retrieve",
+                            required = true)
                 @PathVariable String id) {
             Customer customer = customerService.getCustomerById(id);
             return customer != null
@@ -549,14 +564,16 @@ import io.swagger.annotations.*;
         @ApiOperation(value = "Delete a customer")
         @DeleteMapping("/{id}")
         public ResponseEntity<Void> deleteCustomer(
-                @ApiParam(value = "Customer Id from which customer object will be deleted from database table", required = true)
+                @ApiParam(value = "Customer Id from which customer 
+                                    object will be deleted from database table", 
+                          required = true)
                 @PathVariable String id) {
             customerService.deleteCustomer(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
     }
 ```
-
+:::
 
 
 # Service and Repository
