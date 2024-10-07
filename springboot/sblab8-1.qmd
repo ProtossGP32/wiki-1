@@ -167,7 +167,11 @@ The **MenuManager** acts as a central hub for menu-related operations, promoting
 
 # Discussion Solving: UML
 
+**Basic UML Java SE with restaurantDB Hashmap**
+
 ![](/images/springboot/labsb08/lab08-1-uml.png){width="80%"}
+
+**Inhrence Order Spring Boot implementation**
 
 ![](/images/springboot/labsb08/mermaid-diagram-2024-09-30-133021.png){width="100%"}
 

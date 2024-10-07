@@ -15,11 +15,563 @@ format:
 
 :::: {.labs}
 📘 Spring Boot Lab#SB00-3: RestaurantManager
-We are going to evolve the current Java SE Restaurant project into a Spring Boot Restaurant Management System with an H2 DB and web interface using Thymeleaf.
+
+We are going to evolve the current **Java SE Restaurant** project into a **Spring Boot Restaurant Management System** with an `H2 DB` and `API Rest` manages by `Swagger`.
 :::
 </br>
 
+# RestaurantManager Project Summary
 
+## Key Components
+
+- **Java Faker**: Library for generating fake data. [Java Faker GitHub](https://github.com/DiUS/java-faker)
+- **@Bean Annotation**: Spring annotation for declaring managed beans.
+- **H2 Database**: In-memory database for testing. [H2 Database Engine](https://www.h2database.com/)
+- **Swagger**: Tool for API documentation. [Swagger Documentation](https://swagger.io/docs/)
+- **ResponseEntity**: Spring class for HTTP response control.
+- **JUnit**: Spring Boot uitlity for testing. 
+
+## Approaches to Create Fake Customers
+
+1. Using **@Bean** and **CommandLineRunner**
+2. Using static method (not recommended)
+3. Using **ApplicationRunner** (recommended)
+
+## H2 Database Configuration
+
+- **In-memory**: Temporary database, resets on application restart
+- **Local**: Persistent storage on disk
+- **Mixed**: In-memory for development, local for production
+
+## API and Controller
+
+- **CustomerController**: Implements CRUD operations
+- Uses **Swagger annotations** for API documentation
+- Utilizes **ResponseEntity** for flexible HTTP responses
+
+## Service, Repo and JUnit
+
+- @Service with all business logic from app
+- JpaRepository interface
+
+## Additional Resources
+
+- [Spring Framework Documentation](https://docs.spring.io/spring-framework/reference/)
+- [Spring Boot Guide](https://spring.io/guides/gs/spring-boot/)
+- [RESTful Web Services Guide](https://spring.io/guides/gs/rest-service/)
+
+
+# Fake customer RestaurantManager
+
+## Java Faker
+
+**Java Faker** is a library that generates fake data for various purposes such as testing, development, and demonstration.
+
+> Java Faker is a tool that creates realistic-looking fake data, including names, addresses, phone numbers, and much more.
+
+It's useful for:
+
+1. Populating databases with test data
+2. Creating mock objects for unit testing
+3. Generating sample data for applications
+4. Prototyping user interfaces
+
+The library provides a wide range of pre-defined categories (like name, address, phone number) and methods to generate fake data within those categories. It's easy to use and can generate data in multiple languages and locales.
+
+For example, you can create a Faker instance and generate fake data like this:
+
+```java
+Faker faker = new Faker();
+String name = faker.name().fullName(); // Generates a random full name
+String email = faker.internet().emailAddress(); // Generates a random email address
+```
+
+Dependency for maven:
+
+```xml
+<dependency>
+    <groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>1.0.2</version>
+</dependency>
+```
+
+## Bean
+
+`@Bean` in Spring is:
+
+1. A <mark>method-level annotation</mark>
+2. Used to declare a Spring bean typically used in `@Configuration` classes
+3. Tells Spring to:
+  1. manage the object returned by the method
+  2. and allows you to configure and customize the bean
+4. [JavaBeans - Wikipedia](https://en.wikipedia.org/wiki/JavaBeans)
+
+> `@Bean` in Spring is like telling a toy factory to make a special toy for you. When you use `@Bean`, you are saying,:
+> 
+> - "Please create this toy and keep it safe so I can play with it whenever I want."
+> 
+> Just like the factory remembers how to make your favorite toy, Spring remembers how to create and manage the special object you asked for, so you can use it in your game whenever you need it.
+
+Example:
+
+```java
+@Configuration
+public class AppConfig {
+
+@Bean
+public MyService myService() {
+return new MyService();
+}
+}
+```
+
+### Approach #1: @Bean
+
+This `CommandLineRunner`does the following:
+
+1. It checks if the database is empty by counting the number of customers in the repository.
+2. If the database is empty, it creates a `new Faker` instance with the US locale.
+3. It then generates <mark>100 fake customers using Faker to create realistic</mark> `names`, `email` addresses, and` phone numbers`.
+4. Each customer is assigned a random `UUID` as their ID`.`
+5. The fake `customers` are saved to the `CustomerRepository`.
+6. Finally, it prints a message confirming that 100 fake customers have been created and saved.
+
+```java
+package dev.example.restaurant;
+
+import com.github.javafaker.Faker;
+import dev.example.restaurant.model.Customer;
+import dev.example.restaurant.repository.CustomerRepository;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import java.util.Locale;
+import java.util.UUID;
+
+@SpringBootApplication
+public class RestaurantVaadinApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(RestaurantVaadinApplication.class, args);
+    }
+
+    @Bean
+    public CommandLineRunner loadData(CustomerRepository customerRepository) {
+        return args -> {
+            // Check if the database is empty
+            if (customerRepository.count() == 0) {
+                Faker faker = new Faker(new Locale("en-US"));
+
+                // Create and save 100 fake customers
+                for (int i = 0; i < 100; i++) {
+                    Customer customer = new Customer(
+                            UUID.randomUUID().toString(),
+                            faker.name().fullName(),
+                            faker.internet().emailAddress(),
+                            faker.phoneNumber().cellPhone()
+                    );
+                    customerRepository.save(customer);
+                }
+
+                System.out.println("100 fake customers have been created and saved to the database.");
+            }
+        };
+    }
+}
+```
+
+### Approach #2 static
+
+In this approach:
+
+1. We've removed the `@Bean` annotation and the `CommandLineRunner`.
+2. We've added a static `CustomerRepository` field with `@Autowired` annotation.
+3. We've created a `static` method `createFakeCustomers()` that contains the logic for creating and saving fake customers.
+4. In the `main` method, we call `createFakeCustomers()` <mark>after the Spring application context is initialized.</mark>
+
+> There's an important <mark>caveat</mark> with this approach: using <mark>static fields</mark> with `@Autowired` is generally **not recommended in Spring** applications.
+> 
+> It can lead to issues with testing and violates the principle of dependency injection.
+> 
+> A better approach would be to use an `ApplicationRunner` or `CommandLineRunner` <mark>bean, which allows for proper dependency injection. </mark>
+
+```java
+package dev.example.restaurant;
+
+import com.github.javafaker.Faker;
+import dev.example.restaurant.model.Customer;
+import dev.example.restaurant.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.Locale;
+import java.util.UUID;
+
+@SpringBootApplication
+public class RestaurantVaadinApplication {
+
+    @Autowired
+    private static CustomerRepository customerRepository;
+
+    public static void main(String[] args) {
+        SpringApplication.run(RestaurantVaadinApplication.class, args);
+        createFakeCustomers();
+    }
+
+    public static void createFakeCustomers() {
+        // Check if the database is empty
+        if (customerRepository.count() == 0) {
+            Faker faker = new Faker(new Locale("en-US"));
+
+            // Create and save 100 fake customers
+            for (int i = 0; i < 100; i++) {
+                Customer customer = new Customer(
+                        UUID.randomUUID().toString(),
+                        faker.name().fullName(),
+                        faker.internet().emailAddress(),
+                        faker.phoneNumber().cellPhone()
+                );
+                customerRepository.save(customer);
+            }
+
+            System.out.println("100 fake customers have been created and saved to the database.");
+        }
+    }
+}
+```
+
+### Approach #3
+
+```java
+package dev.example.restaurant;
+
+import com.github.javafaker.Faker;
+import dev.example.restaurant.model.Customer;
+import dev.example.restaurant.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import java.util.Locale;
+import java.util.UUID;
+
+@SpringBootApplication
+public class RestaurantVaadinApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(RestaurantVaadinApplication.class, args);
+    }
+
+    @Bean
+    public ApplicationRunner dataLoader(CustomerRepository customerRepository) {
+        return args -> createFakeCustomers(customerRepository);
+    }
+
+    private void createFakeCustomers(CustomerRepository customerRepository) {
+        // Check if the database is empty
+        if (customerRepository.count() == 0) {
+            Faker faker = new Faker(new Locale("en-US"));
+
+            // Create and save 100 fake customers
+            for (int i = 0; i < 100; i++) {
+                Customer customer = new Customer(
+                        UUID.randomUUID().toString(),
+                        faker.name().fullName(),
+                        faker.internet().emailAddress(),
+                        faker.phoneNumber().cellPhone()
+                );
+                customerRepository.save(customer);
+            }
+
+            System.out.println("100 fake customers have been created and saved to the database.");
+        }
+    }
+}
+```
+
+This approach maintains proper dependency injection and is more in line with Spring best practices for a few key reasons:
+
+1. **Proper dependency injection**: By using an ApplicationRunner bean, we allow Spring to manage the lifecycle and injection of dependencies. The CustomerRepository is properly injected by Spring, rather than being accessed statically.
+2. **Separation of concerns**: The data loading logic is separated from the main application class, improving modularity and maintainability.
+3. **Testability**: This approach makes it easier to unit test the data loading logic in isolation, as dependencies can be easily mocked.
+4. **Constructor injection**: By passing the CustomerRepository as a parameter to the ApplicationRunner, we're using constructor injection, which is considered a best practice in Spring.
+5. **Avoiding static dependencies**: Static `@Autowired` fields are generally discouraged as they can lead to issues with testing and violate dependency injection principles.
+6. **Flexibility**: This approach allows for easier configuration and potential customization of when and how the data loading occurs.
+7. **Alignment with Spring lifecycle**: Using ApplicationRunner ensures the data loading happens at the appropriate time during application startup, after the Spring context is fully initialized.
+  By following these practices, the code becomes more maintainable, testable, and aligned with Spring's dependency injection principles.
+
+# H2 DB
+
+## H2 in RestaurantManager in memory
+
+![](/images/springboot/labsb08/lab08-1-h2.png)
+
+## Install and create a H2 DB
+
+References:
+
+- [Spring Boot: H2 DB and Thymeleaf](/springboot/boot-what-create-th-h2.qmd)
+- [Spring Boot: Rest](/springboot/boot-concepts-rest.qmd)
+
+
+Step-by-step:
+
+- Download and install Java JDK from the official Oracle website.
+- Download and install Spring Boot from the official Spring website.
+- Download the H2 database from the official H2 website.
+- Extract the downloaded file to a location on your Linux machine.
+- Execute H2 Desktop app and create a local H2 DB.
+
+![Create a H2 DB](/images/springboot/LibraryManagementRest-H2-1.png){width="60%"}
+
+- [Creation H2 DB step-by-step](/springboot/boot-what-create-th-h2.qmd#h2-db-creation-step-by-step)
+
+
+# API Rest & Swagger
+
+![](/images/springboot/labsb08/lab08-1-rest-customer.png)
+
+- [API rest](/devops/devops-network-rest.qmd){.external target='_blank'}
+
+## What is Swagger
+
+![](/images/springboot/labsb08/lab08-1-swagger.png)
+
+> Swagger is an open-source set of tools for designing, building, documenting, and consuming RESTful web services. It provides a standardized way to describe APIs using JSON or YAML, making it easier for both humans and machines to understand the capabilities of a service without accessing its source code.
+
+**Key Components**
+
+1. **Swagger Specification**: A format for describing RESTful APIs.
+2. **Swagger UI**: A web-based UI for exploring and testing APIs.
+3. **Swagger Codegen**: A tool for generating client libraries and server stubs.
+
+**Benefits**
+
+- Improves API documentation
+- Enables interactive API exploration
+- Facilitates API-first development
+- Supports automatic code generation
+- Enhances collaboration between frontend and backend teams
+
+Can be easily integrated with various frameworks, including Spring Boot, through libraries like SpringFox or SpringDoc OpenAPI.
+
+**Usage**
+
+1. Define API specifications
+2. Generate interactive documentation
+3. Test API endpoints directly from the UI
+4. Generate client SDKs or server stubs
+
+Swagger (now part of the OpenAPI Initiative) has become a de facto standard for RESTful API documentation and development.
+
+## Maven Dependency
+
+Add the SpringDoc OpenAPI dependency to your `pom.xml` (for Maven):
+
+```xml
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.1.0</version>
+</dependency>
+```
+
+## Configure in Spring Boot
+
+Configure SpringDoc OpenAPI in your `application.properties` or `application.yml`:
+
+```yaml
+springdoc.api-docs.path=/api-docs
+springdoc.swagger-ui.path=/swagger-ui.html
+```
+
+## Annotate (optional)
+
+Annotate your REST controllers and methods with OpenAPI annotations to provide more details:
+
+```java
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
+@RestController
+@RequestMapping("/api")
+@Tag(name = "Example API", description = "API for example operations")
+public class ExampleController {
+
+    @GetMapping("/hello")
+    @Operation(summary = "Say hello", description = "Returns a greeting message")
+    @ApiResponse(responseCode = "200", description = "Successful response")
+    public String hello(@Parameter(description = "Name to greet") @RequestParam(required = false) String name) {
+        return "Hello, " + (name != null ? name : "World") + "!";
+    }
+}
+```
+
+## Open url browser
+
+Run your Spring Boot application and access the Swagger UI at:
+
+`http://localhost:8080/swagger-ui.html`
+
+Understanding ResponseEntity in Spring
+
+# What is ResponseEntity?
+
+`ResponseEntity` is a class in Spring Framework that represents the entire HTTP response. It allows you to control the following aspects of the HTTP response:
+
+- Status code
+- Headers
+- Body
+
+![custom response using springboot  Medium](https://miro.medium.com/v2/resize:fit:1400/1*Z0XmoMjwiC61rdAROwZZ1A.jpeg)
+
+## Key Features
+
+1. **Flexibility**: You can customize every part of the HTTP response.
+2. **Type Safety**: It uses generics to ensure type safety of the response body.
+3. **Convenience Methods**: It provides static methods for quickly creating responses.
+
+## Basic Usage
+
+![ResponseEntity in Spring Framework](https://cdn.hashnode.com/res/hashnode/image/upload/v1701526522110/2c2b7ee3-2e37-4d9a-ab10-b647fc751d7b.png?auto=compress,format&format=webp)
+
+Here's a simple example of how to use `ResponseEntity`:
+
+```java
+@GetMapping("/example")
+public ResponseEntity<String> example() {
+    return ResponseEntity.ok("Hello, World!");
+}
+```
+
+## Advanced Usage
+
+You can set custom status codes, headers, and body:
+
+```java
+@GetMapping("/advanced")
+public ResponseEntity<MyObject> advanced() {
+    MyObject body = new MyObject("data");
+    return ResponseEntity
+        .status(HttpStatus.CREATED)
+        .header("Custom-Header", "value")
+        .body(body);
+}
+```
+
+## Useful Links
+
+- [Official Spring Documentation on ResponseEntity](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/ResponseEntity.html)
+- [Spring.io Guide on Building REST services](https://spring.io/guides/tutorials/rest/)
+
+## When to Use ResponseEntity
+
+Use `ResponseEntity` when you need fine-grained control over the HTTP response, such as:
+
+- Setting custom status codes
+- Adding or modifying response headers
+- Conditionally returning different status codes based on some logic
+- Creating responses with no body (like for DELETE operations)
+
+By using `ResponseEntity`, you can create more flexible and powerful RESTful APIs in your Spring applications.
+
+## CustomerController
+
+```java
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import io.swagger.annotations.*;
+
+    @RestController
+    @RequestMapping("/api/customers")
+    @Api(value = "Customer Management System", description = "Operations pertaining to customers in the Customer Management System")
+    public class CustomerController {
+
+        private final CustomerService customerService;
+
+        public CustomerController(CustomerService customerService) {
+            this.customerService = customerService;
+        }
+
+        @ApiOperation(value = "View a list of available customers", response = List.class)
+        @ApiResponses(value = {
+                @ApiResponse(code = 200, message = "Successfully retrieved list"),
+                @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
+        })
+        @GetMapping("/allCustomers")
+        public ResponseEntity<List<Customer>> getAllCustomers() {
+            List<Customer> customers = customerService.getAllCustomers();
+            return new ResponseEntity<>(customers, HttpStatus.OK);
+        }
+
+        @ApiOperation(value = "Add a new customer")
+        @PostMapping
+        public ResponseEntity<Customer> createCustomer(
+                @ApiParam(value = "Customer object store in database table", required = true)
+                @RequestBody Customer customer) {
+            Customer createdCustomer = customerService.createCustomer(customer);
+            return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
+        }
+
+        @ApiOperation(value = "Get a customer by Id")
+        @GetMapping("/{id}")
+        public ResponseEntity<Customer> getCustomerById(
+                @ApiParam(value = "Customer id from which customer object will retrieve", required = true)
+                @PathVariable String id) {
+            Customer customer = customerService.getCustomerById(id);
+            return customer != null
+                    ? new ResponseEntity<>(customer, HttpStatus.OK)
+                    : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        @ApiOperation(value = "Update a customer")
+        @PutMapping("/{id}")
+        public ResponseEntity<Customer> updateCustomer(
+                @ApiParam(value = "ID of the customer to be updated", required = true)
+                @PathVariable String id,
+                @ApiParam(value = "Updated customer object", required = true)
+                @RequestBody Customer customerDetails) {
+            Customer updatedCustomer = customerService.updateCustomer(id, customerDetails);
+            return updatedCustomer != null
+                    ? new ResponseEntity<>(updatedCustomer, HttpStatus.OK)
+                    : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        @ApiOperation(value = "Delete a customer")
+        @DeleteMapping("/{id}")
+        public ResponseEntity<Void> deleteCustomer(
+                @ApiParam(value = "Customer Id from which customer object will be deleted from database table", required = true)
+                @PathVariable String id) {
+            customerService.deleteCustomer(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+    }
+```
+
+
+
+# Service and Repository
+
+//to-do
+
+# JUnit 5 tests
+
+//to-do
+
+# Code 
+
+![](/images/springboot/labsb08/lab08-1-v0.0.png)
+
+- [Commits](https://github.com/AlbertProfe/restaurantManager/commits/master/){.external target='_blank'}
 
 <!--- navLinks -->
 <br><br>
