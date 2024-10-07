@@ -1,6 +1,6 @@
 ---
-title: "Lab#SB08-2: RestaurantManager"
-subtitle: Spring Boot Restaurant Management
+title: "Lab#SB08-2: Vaadin"
+subtitle: Spring Boot Restaurant Management Vaadin
 author: albertprofe
 date: "01/010/2024"
 date-modified: last-modified
@@ -14,102 +14,118 @@ format:
 ---
 
 :::: {.labs}
-📘 Spring Boot Lab#SB00-2: RestaurantManager
-We are going to evolve the current Java SE Restaurant project into a Spring Boot Restaurant Management System with an H2 DB and web interface using Thymeleaf.
+📘 Spring Boot Lab#SB00-2: RestaurantManager Vaadin
+We are going to evolve the current Java SE Restaurant project into a `Spring Boot Restaurant Management System` with an `H2 DB` and web interface using `Vaadin`.
 :::
 </br>
 
-> The resulting Spring Boot Project would be similar to the current Java SE Restaurant Project, with the addition of the Spring Boot annotations and the H2 database configuration.
-
-
-> The classes (such as Booking, Menu, Table, Customer, and the various Order classes) would be annotated with the @Entity annotation to indicate that they are persistent entities, and the repositories would be annotated with the @Repository annotation.
-
-
-> The services would be annotated with the @Service annotation, and the controllers would be annotated with the @Controller annotation.
-
-
-> The Thymeleaf templates would be created in the resources/templates folder of the project. These templates would include views for managing bookings, menus, tables, customers, and different types of orders (TakeAway, Shipping, and EatIn).
-
-
-This Spring Boot version of the Restaurant Management System would provide a robust, database-backed web application for managing all aspects of a restaurant's operations, from bookings and menu management to order processing and customer interactions.
+![](/images/springboot/labsb08/lab08-1-vaadin-view-restaurantVaadin2.png)
 
 # From RestaurantProject to RestaurantManagement
 
-## Create a new Spring Boot project & H2 DB
+- [Restuarant Java SE Lab](/javase/selab4-1.qmd)
+- [Restaurant Java SE Code](https://github.com/AlbertProfe/restaurant){.external target='_blank'}
+- [Restaurant Java SE Wiki](https://github.com/AlbertProfe/restaurant/wiki){.external target='_blank'}
+- [Spring Boot H2 and TH](/springboot/boot-what-create-th-h2.qmd){.external target='_blank'}
 
-- ``Create a new Spring Boot project``: The first step would be to create a new Spring Boot project in the preferred IDE or text editor.
+# Create a new Spring Boot project & H2 DB
 
-::: {.callout-note}
-The project can be created using **Spring Initializr**, which will create the necessary **file structure and dependencies**.
-:::
+- **Create a new Spring Boot project**: The first step would be to create a new Spring Boot project in the preferred IDE or text editor.
 
-- ``Configure the H2 database``: In the newly created project, configure the H2 database by adding:
-  - the H2 dependency in the ``pom.xml`` file,
-  - and also create a new ``application.properties`` file
+> The project can be created using **Spring Initializr**, which will create the necessary **file structure and dependencies**.
+
+- **Configure the H2 database**: In the newly created project, configure the H2 database by adding:
+  - the H2 dependency in the `pom.xml` file,
+  - and also create a new `application.properties` file
   - set the database properties such as:
     - the database **URL**,
     - **username**,
     - and **password**.
 
+
 ## Model & Entities
 
-- `Create a Menu Entity`: To represent a menu item in the restaurant management system, create a Menu @Entity 
+- **Create a Menu Entity**: To represent a menu item in the restaurant management system, create a Menu @Entity 
 
-::: {.column-margin}
-It could include attributes such as name, price, description, category (appetizer, main course, dessert, etc.), and availability status.
-:::
+> It could include attributes such as name, price, description, category (appetizer, main course, dessert, etc.), and availability status.
 
-- `Create a Customer Entity`: To represent a customer in the system, create a Customer entity that includes attributes such as customer ID, name, phone number, email, and **reservation history.**
+- **Create a Customer Entity**: To represent a customer in the system, create a Customer entity that includes attributes such as customer ID, name, phone number, email, and **reservation history.**
 
-- `Create Booking Entity`: To represent a booking in the system, create a Booking entity that includes attributes such as booking date, time, number of people, tables, and associated customer.
+- **Create Booking Entity**: To represent a booking in the system, create a Booking entity that includes attributes such as booking date, time, number of people, tables, and associated customer.
 
-- `Create Staff Entity`: To represent staff members in the system, create a Staff entity that includes attributes such as staff ID, name, position, shift schedules, and assigned tables.
+- **Create Staff Entity**: To represent staff members in the system, create a Staff entity that includes attributes such as staff ID, name, position, shift schedules, and assigned tables.
 
 ## Domains: @Controller, @Service and @Repository
 
-- `Create Repositories`: To access the data stored in the database, create repositories for each entity. **The repositories will provide the methods to create, read, update, and delete the data.**
+- **Create Repositories**: To access the data stored in the database, create repositories for each entity. **The repositories will provide the methods to create, read, update, and delete the data.**
 
-- `Create Services`: Create services that **will implement the business logic of the system by calling the repository methods.** 
+- **Create Services**: Create services that **will implement the business logic of the system by calling the repository methods.** 
 
-::: {.column-margin}
-The **services** will provide the methods to search for available tables, make a reservation, update menu items, process orders, manage staff schedules, handle customer feedback, and generate reports on restaurant performance.
-:::
+> The **services** will provide the methods to search for available tables, make a reservation, update menu items, process orders, manage staff schedules, handle customer feedback, and generate reports on restaurant performance.
 
-- `Create Controllers`: Create controllers that **will handle the HTTP requests from the web interface by calling the service methods.** 
+- **Create Controllers**: Create controllers that **will handle the requests from the Vaadin UI by calling the service methods.** 
 
-::: {.column-margin}
-The **controllers** will provide the methods to create a customer account, search for available tables, make a reservation, view and update menu items, place an order, manage staff schedules, submit customer feedback, and generate various reports.
-:::
+> The **controllers** will provide the methods to create a customer account, search for available tables, make a reservation, view and update menu items, place an order, manage staff schedules, submit customer feedback, and generate various reports.
 
-## HTML Thymeleaf
+# Vaadin
 
-### Modern server-side Java template engine
-- [ThymeLeaf](https://www.thymeleaf.org/){.external}
-- [Tutorial: Using Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html){.external}
-- [Tutorial: Thymeleaf + Spring](https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html){.external}
+## Modern Java framework for building web applications
 
-### Create Thymeleaf
+Vaadin is a web application framework for Java that allows developers to build modern, interactive web applications using Java without having to write HTML, CSS, or JavaScript. Here are some key points about Vaadin:
 
-- `Create Thymeleaf templates`: To create the web interface of the system, create Thymeleaf templates for each of the controller methods. **The templates will be used to display the data and also to handle the user input.**
+- [Vaadin Official Website](https://vaadin.com/)
+- [Vaadin Documentation](https://vaadin.com/docs/latest/)
+- [Vaadin Spring Boot Integration](https://vaadin.com/docs/latest/flow/integrations/spring/)
 
-::: {.callout-note}
-Thymeleaf is a **modern server-side Java template engine** for both web and standalone environments.
+## Create Vaadin Views
 
-Thymeleaf's main goal is to bring elegant natural templates to your development workflow — HTML that can be correctly displayed in browsers and also work as static prototypes, allowing for stronger collaboration in development teams.
-:::
+- **Create Vaadin Views**: To create the web interface of the system, create Vaadin views for each of the main functionalities. **The views will be used to display the data and handle user interactions.**
 
-## Test
+> Vaadin allows you to create rich, interactive UIs using Java code. It provides a wide range of UI components and layouts that you can use to build your application's interface.
+
+Example of a simple Vaadin view:
+
+```java
+@Route("menu")
+public class MenuView extends VerticalLayout {
+    private final MenuService menuService;
+
+    public MenuView(MenuService menuService) {
+        this.menuService = menuService;
+        
+        H1 title = new H1("Restaurant Menu");
+        Grid<Menu> grid = new Grid<>(Menu.class);
+        grid.setItems(menuService.getAllMenuItems());
+        
+        add(title, grid);
+    }
+}
+```
+
+This view creates a page with a title and a grid showing all menu items.
+
+## Key Vaadin Concepts
+
+1. **Server-side Architecture**: Vaadin primarily runs on the server, which means your business logic stays secure and you can leverage the full power of Java.
+
+2. **Component-based UI**: Build UIs by combining and customizing existing components or creating your own.
+
+3. **Data Binding**: Easily bind UI components to data sources, including JPA entities.
+
+4. **Themes and Styling**: Customize the look and feel of your application using CSS and Vaadin's theming capabilities.
+
+5. **Integration with Spring Boot**: Vaadin integrates seamlessly with Spring Boot, allowing you to use Spring's dependency injection and other features.
+
+
+# Test
 
 - Test the system: Test the system by running it and making sure that all the functionalities work as expected. This includes testing reservation creation, menu management, order processing, staff scheduling, and report generation.
 
-# MockUp
+# Code and output
 
-## Core use-case: borrowBook() and returnBook() with user and librarian
+![](/images/springboot/labsb08/lab08-1-vaadin-view.png)
 
-
-
-# Discussion Solving: UML
-
+- [GitHub code](https://github.com/AlbertProfe/restaurantVaadin){.external target='_blank'}
 
 <!--- navLinks -->
 <br><br>
@@ -129,7 +145,7 @@ Thymeleaf's main goal is to bring elegant natural templates to your development 
 <br>
 <div class='column right next'>
 <br>
-[Spring Boot Resources  {{< fa solid arrow-right >}}](/springboot/resources.qmd)
+[Lab#SB08-3: RestaurantManager  {{< fa solid arrow-right >}}](/springboot/sblab8-3.qmd)
 <br>
 </div>
 <br>

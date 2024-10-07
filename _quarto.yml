@@ -353,6 +353,9 @@ website:
             - text: "---"
             - springboot/sblab8-1.qmd
             - springboot/sblab8-2.qmd
+            - springboot/sblab8-3.qmd
+            - springboot/sblab8-4.qmd
+            - springboot/sblab8-5.qmd
         - text: "---" 
         - section: "Spring Boot readings"
           contents: 
