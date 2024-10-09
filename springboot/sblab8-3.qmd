@@ -311,7 +311,8 @@ This approach **maintains proper dependency injection** and is more in line with
 5. **Avoiding static dependencies**: Static `@Autowired` fields are generally discouraged as they can lead to issues with testing and violate dependency injection principles.
 6. **Flexibility**: This approach allows for easier configuration and potential customization of when and how the data loading occurs.
 7. **Alignment with Spring lifecycle**: Using ApplicationRunner ensures the data loading happens at the appropriate time during application startup, after the Spring context is fully initialized.
-  By following these practices, the code becomes more maintainable, testable, and aligned with Spring's dependency injection principles.
+
+By following these practices, the code becomes more maintainable, testable, and aligned with Spring's dependency injection principles.
 
 # H2 DB
 
@@ -339,6 +340,154 @@ Step-by-step:
 
 - [Creation H2 DB step-by-step](/springboot/boot-what-create-th-h2.qmd#h2-db-creation-step-by-step)
 
+### H2 local DB creation using CLI
+
+![](/images/springboot/labsb08/lab08-3-h2-console.png)
+
+
+Prerequisites:
+
+- Java Runtime Environment (JRE) installed
+- H2 database JAR file downloaded
+
+
+
+**Download H2 Database**
+
+   - Visit the official H2 database website: [https://www.h2database.com](https://www.h2database.com)
+   - Download the latest version of H2
+
+**Extract the H2 JAR File**
+
+   - Unzip the downloaded file
+   - Locate the `h2-x.x.x.jar` file (where x.x.x is the version number)
+
+**Open Command Prompt or Terminal**
+
+   - Navigate to the directory containing the H2 JAR file
+
+**Start H2 Console**
+
+   - Run the following command:
+     ```
+     java -cp h2-x.x.x.jar org.h2.tools.Console
+     ```
+   - Replace `x.x.x` with your actual H2 version number
+
+**Connect to the Database**
+
+   - In the H2 Console, use the following settings:
+     - Driver Class: `org.h2.Driver`
+     - JDBC URL: `jdbc:h2:~/test` (creates a 'test' database in your home directory)
+     - User Name: `sa` (default)
+     - Password: (leave blank for default)
+
+**Create Tables and Data**
+
+   - Use SQL commands to create tables and insert data, for example:
+     ```sql
+     CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(50));
+     INSERT INTO users VALUES (1, 'John Doe');
+     ```
+
+**Accessing the Database via CLI**
+
+   - To access the database directly from the command line:
+     ```
+     java -cp h2-x.x.x.jar org.h2.tools.Shell
+     ```
+   - Follow the prompts to connect to your database
+
+**Stopping the Database**
+
+   - Close the H2 Console window
+   - Or, if running in background, find the Java process and terminate it
+
+Remember to replace `x.x.x` with the actual version number of your H2 JAR file in all commands.
+
+## Configuring H2 Database in Spring Boot with DDL Auto-generation
+
+Dependencies
+
+First, ensure you have the necessary dependencies in your `pom.xml` (for Maven) or `build.gradle` (for Gradle):
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+`application Properties`
+
+In your `application.properties` file, add the following configurations:
+
+```properties
+# H2 Database Configuration
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# H2 Console Configuration (optional)
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# JPA and Hibernate Configuration
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+
+**Explanation of Properties**
+
+- `spring.datasource.url`: Specifies the JDBC URL for H2. `jdbc:h2:mem:testdb` creates an in-memory database named "testdb".
+- `spring.datasource.driverClassName`: Specifies the H2 driver class.
+- `spring.datasource.username` and `spring.datasource.password`: Set the database credentials.
+- `spring.h2.console.enabled`: Enables the H2 web console for database management.
+- `spring.h2.console.path`: Sets the path to access the H2 console.
+- `spring.jpa.database-platform`: Specifies the Hibernate dialect for H2.
+- `spring.jpa.hibernate.ddl-auto=update`: This is the key property for DDL auto-generation. It tells Hibernate to automatically create or update the database schema based on your entity classes.
+- `spring.jpa.show-sql=true`: Enables logging of SQL statements.
+
+**DDL Auto-generation Options**
+
+The `spring.jpa.hibernate.ddl-auto` property can have the following values:
+
+- `create`: Drops and creates the schema at application startup.
+- `create-drop`: Creates the schema at startup and drops it at shutdown.
+- `update`: Updates the schema if necessary (recommended for development).
+- `validate`: Validates the schema but makes no changes.
+- `none`: Disables DDL handling.
+
+`Entity` Classes
+
+Create your entity classes with JPA annotations. Hibernate will use these to generate the DDL:
+
+```java
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String name;
+    
+    // getters, setters, constructors
+}
+```
+
+**Accessing the Database**
+
+- The H2 console will be available at `http://localhost:8080/h2-console` (assuming default port).
+- Use the JDBC URL, username, and password specified in your properties to connect.
+
+Remember to use `update` or `create-drop` carefully in production environments to avoid data loss.
 
 # API Rest & Swagger
 
@@ -360,26 +509,26 @@ Step-by-step:
 
 **Benefits**
 
-- Improves API documentation
+- Improves `API` **documentation**
 - Enables interactive API exploration
 - Facilitates API-first development
 - Supports automatic code generation
 - Enhances collaboration between frontend and backend teams
 
-Can be easily integrated with various frameworks, including Spring Boot, through libraries like SpringFox or SpringDoc OpenAPI.
+Can be easily integrated with various frameworks, including `Spring Boot`, through libraries like `SpringFox` or `SpringDoc` `OpenAPI`.
 
 **Usage**
 
-1. Define API specifications
+1. Define `API` specifications
 2. Generate interactive documentation
-3. Test API endpoints directly from the UI
+3. Test `API` endpoints directly from the UI
 4. Generate client SDKs or server stubs
 
-Swagger (now part of the OpenAPI Initiative) has become a de facto standard for RESTful API documentation and development.
+`Swagger` (now part of the `OpenAPI` Initiative) has become a de facto standard for `RESTful` API documentation and development.
 
 ## Maven Dependency
 
-Add the SpringDoc OpenAPI dependency to your `pom.xml` (for Maven):
+Add the `SpringDoc` `OpenAPI` dependency to your `pom.xml` (for `Maven`):
 
 ```xml
 <dependency>
@@ -427,7 +576,7 @@ public class ExampleController {
 
 ## Open url browser
 
-Run your Spring Boot application and access the Swagger UI at:
+Run your `Spring Boot` application and access the `Swagger UI` at:
 
 `http://localhost:8080/swagger-ui.html`
 
@@ -435,7 +584,7 @@ Understanding ResponseEntity in Spring
 
 # What is ResponseEntity?
 
-`ResponseEntity` is a class in Spring Framework that represents the entire HTTP response. It allows you to control the following aspects of the HTTP response:
+`ResponseEntity` is a class in `Spring Framework` that represents the entire `HTTP` response. It allows you to control the following aspects of the `HTTP` response:
 
 - Status code
 - Headers
@@ -445,9 +594,30 @@ Understanding ResponseEntity in Spring
 
 ## Key Features
 
-1. **Flexibility**: You can customize every part of the HTTP response.
+1. **Flexibility**: You can customize every part of the `HTTP` response.
 2. **Type Safety**: It uses generics to ensure type safety of the response body.
 3. **Convenience Methods**: It provides static methods for quickly creating responses.
+
+In `Java Spring Boot`, when you use `ResponseEntity<>()` with just the name of a class, it's typically referred to as a "parameterized type" or "generic type."
+
+More specifically, this syntax is using a **generic type parameter**. The class name inside the angle brackets `<>` specifies the type of data that the `ResponseEntity` will contain.
+
+For example:
+
+```java
+ResponseEntity<User>
+```
+
+This declares a `ResponseEntity` that will contain a `User` object.
+
+```java
+ResponseEntity<List<Product>>
+```
+
+This declares a `ResponseEntity` that will contain a `List` of `Product` objects.
+
+The use of these <mark>parameterized types allows for type safety and helps the compiler ensure that you're working with the correct types of objects</mark> when you're handling the response.
+
 
 ## Basic Usage
 
@@ -578,7 +748,164 @@ import io.swagger.annotations.*;
 
 # Service and Repository
 
-//to-do
+// to-do
+
+# Spring Boot JPA Query Methods
+
+`Spring Boot and JPA` offer several ways to create queries. Here are the <mark>four most relevant methods:</mark>
+
+1. JPA Derived Query Methods
+2. @Query Annotation
+3. EntityManager with JPQL
+4. Native SQL Queries
+
+## 1. JPA Derived Query Methods
+
+`Spring Data JPA` can automatically create queries <mark>based on method names in your repository interface.</mark>
+
+```java
+public interface UserRepository extends JpaRepository<User, Long> {
+    List<User> findByLastNameAndAge(String lastName, int age);
+}
+```
+
+## 2. @Query Annotation
+
+You can use the `@Query` annotation to define <mark>custom JPQL queries.</mark>
+
+```java
+public interface UserRepository extends JpaRepository<User, Long> {
+    @Query("SELECT u FROM User u WHERE u.emailAddress = ?1")
+    User findByEmailAddress(String emailAddress);
+}
+```
+
+## 3. EntityManager with JPQL
+
+For more complex queries, you can use the `EntityManager` directly with <mark>JPQL.</mark>
+
+::: {.column-page-right}
+```java
+@PersistenceContext
+private EntityManager entityManager;
+
+public List<User> findUsersByAgeRange(int minAge, int maxAge) {
+    String jpql = "SELECT u FROM User u WHERE u.age BETWEEN :minAge AND :maxAge";
+    return entityManager.createQuery(jpql, User.class)
+            .setParameter("minAge", minAge)
+            .setParameter("maxAge", maxAge)
+            .getResultList();
+}
+```
+:::
+
+## 4. Native SQL Queries
+
+When you need to use database-specific features, you can write <mark>native SQL queries.</mark>
+
+::: {.column-page-right}
+```java
+public interface UserRepository extends JpaRepository<User, Long> {
+    @Query(value = "SELECT * FROM users WHERE status = ?1", nativeQuery = true)
+    List<User> findUsersByStatus(int status);
+}
+```
+:::
+
+## JPQL (Java Persistence Query Language)
+
+JPQL (Java Persistence Query Language) is an object-oriented query language used to define queries for entities and their relationships in JPA (Java Persistence API). It's similar to SQL but operates on JPA entity objects rather than database tables.
+
+### Key Characteristics of JPQL
+
+1. Object-Oriented: Works with Java objects and their properties, not database tables and columns.
+2. Database-Independent: Queries can work across different database systems without modification.
+3. Supports JPA Relationships: Can easily navigate entity relationships.
+4. Powerful: Supports complex operations like joins, aggregations, and subqueries.
+
+### JPQL vs SQL
+
+Here's a comparison between JPQL and SQL:
+
+| Aspect | JPQL | SQL |
+| --- | --- | --- |
+| Operates on | Entity objects | Database tables |
+| Case sensitivity | Case-sensitive | Generally case-insensitive |
+| Portability | Database-independent | May contain database-specific syntax |
+| Join syntax | Simplified using relationships | Requires explicit join conditions |
+
+### JPQL Syntax Examples
+
+1. Basic Select Query:
+
+```jpql
+SELECT u FROM User u WHERE u.age > 18
+```
+
+2. Join Query:
+
+```jpql
+SELECT o FROM Order o JOIN o.customer c WHERE c.country = 'USA'
+```
+
+3. Aggregate Function:
+
+```jpql
+SELECT AVG(e.salary) FROM Employee e WHERE e.department.name = 'IT'
+```
+
+4. Subquery:
+
+```jpql
+SELECT e FROM Employee e WHERE e.salary > (SELECT AVG(emp.salary) FROM Employee emp)
+```
+
+### Using JPQL in Spring Data JPA
+
+1. With `@Query` annotation:
+
+::: {.column-page-right}
+```java
+@Query("SELECT u FROM User u WHERE u.email = ?1 AND u.active = true")
+User findActiveUserByEmail(String email);
+```
+:::
+
+1. With `EntityManager`:
+
+::: {.column-page-right}
+```java
+String jpql = "SELECT p FROM Product p WHERE p.category.name = :categoryName";
+List<Product> products = entityManager.createQuery(jpql, Product.class)
+    .setParameter("categoryName", "Electronics")
+    .getResultList();
+```
+:::
+
+### Benefits of JPQL
+
+1. Type-safety: Works with Java types, reducing runtime errors.
+2. Abstraction: Shields developers from database-specific details.
+3. Optimization: JPA providers can optimize JPQL queries for better performance.
+4. Flexibility: Allows for complex queries while maintaining database independence.
+
+## Additional Resources
+
+### JPQL
+
+- [JPQL - Java Persistence Query Language](https://docs.oracle.com/javaee/6/tutorial/doc/bnbtg.html){.external target='_blank'} </br>
+- [JPA Query Language](https://docs.oracle.com/javaee/7/tutorial/persistence-querylanguage.htm){.external target='_blank'} </br>
+- [JPQL Reference](https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#hql){.external target='_blank'} </br>
+- [Spring Data JPA - Query Creation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation){.external target='_blank'}
+
+### JPA Queries
+
+For more information on Spring Boot JPA query methods, check out these resources:
+
+- [Defining Query Methods](https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html){.external target='_blank'} </br>
+- [Query by Example](https://docs.spring.io/spring-data/jpa/reference/repositories/query-by-example.html){.external target='_blank'} </br>
+- [JPA Query Methods](https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html){.external target='_blank'} </br>
+- [Spring Boot: JPA & DI](/springboot/boot-concepts-jpa.qmd){.external target='_blank'}
 
 # JUnit 5 tests
 
@@ -586,7 +913,7 @@ import io.swagger.annotations.*;
 
 # Code 
 
-![](/images/springboot/labsb08/lab08-1-v0.0.png)
+![](/images/springboot/labsb08/lab08-1-v0.0.png){width=50%}
 
 - [Commits](https://github.com/AlbertProfe/restaurantManager/commits/master/){.external target='_blank'}
 
