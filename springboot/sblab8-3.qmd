@@ -582,7 +582,7 @@ Run your `Spring Boot` application and access the `Swagger UI` at:
 
 Understanding ResponseEntity in Spring
 
-# What is ResponseEntity?
+# `ResponseEntity`
 
 `ResponseEntity` is a class in `Spring Framework` that represents the entire `HTTP` response. It allows you to control the following aspects of the `HTTP` response:
 
@@ -748,7 +748,197 @@ import io.swagger.annotations.*;
 
 # Service and Repository
 
-// to-do
+- [Spring Data](/springboot/boot-concepts-data.qmd)
+- [RestaurantManager customerService](https://github.com/AlbertProfe/restaurantManager/tree/319b94239321dde826d78b7cbe00e29895065b53/src/main/java/dev/example/restaurantManager/service){.external target='_blank'}
+
+## `CustomerService` interface and implementation
+
+
+> Why Use `Interfaces` for Services in Spring Boot? Because using `interfaces` for services in Spring Boot is a best practice that offers several advantages from `Loose Coupling` to having a **clear contract**.
+
+**Loose Coupling**
+
+Interfaces promote loose coupling between components. The code that depends on the service only knows about the interface, not the implementation. This makes it easier to change the implementation without affecting the rest of the application.
+
+**Easier Testing**
+
+Interfaces facilitate easier unit testing through mocking. You can create mock implementations of the interface for testing purposes, allowing you to isolate the component under test.
+
+**Multiple Implementations**
+
+Interfaces allow for multiple implementations of the same service. This is useful when you need different implementations for different scenarios (e.g., production vs. testing, or different business logic for different clients).
+
+**Dependency Injection**
+
+Spring's dependency injection works well with interfaces. You can easily switch implementations by changing the configuration, without modifying the code that uses the service.
+
+**Clear Contract**
+
+Interfaces serve as a clear contract for what operations a service provides. This improves code readability and helps in understanding the system's architecture.
+
+**Aspect-Oriented Programming (AOP)**
+
+Spring's AOP features work more smoothly with interfaces, allowing you to add cross-cutting concerns like logging or transaction management more easily.
+
+**Design by Contract**
+
+Interfaces encourage "design by contract" principles, where you define what a service does rather than how it does it, leading to more robust and maintainable code.
+
+### `CustomerService`
+
+```java
+package dev.example.restaurantManager.service;
+
+import dev.example.restaurantManager.model.Customer;
+import java.util.List;
+
+public interface CustomerService {
+    List<Customer> getAllCustomers();
+    Customer createCustomer(Customer customer);
+    Customer getCustomerById(String id);
+    Customer updateCustomer(String id, Customer customerDetails);
+    boolean deleteCustomer(String id);
+    long countCustomers();
+}
+```
+
+> By using this interface, you define a clear contract for customer-related operations.
+
+## Two impplementations
+
+
+Two very different implementations of the `CustomerService` interface:
+
+- One will be a standard implementation using a database,
+- and the other will be an in-memory implementation for testing or prototyping purposes.
+
+### Implementation 1: Database-backed CustomerService
+
+```java
+package dev.example.restaurantManager.service;
+
+import dev.example.restaurantManager.model.Customer;
+import dev.example.restaurantManager.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class DatabaseCustomerService implements CustomerService {
+
+    @Autowired
+    private CustomerRepository customerRepository;
+
+    @Override
+    public List<Customer> getAllCustomers() {
+        return customerRepository.findAll();
+    }
+
+    @Override
+    public Customer createCustomer(Customer customer) {
+        return customerRepository.save(customer);
+    }
+
+    @Override
+    public Customer getCustomerById(String id) {
+        Optional<Customer> customer = customerRepository.findById(id);
+        return customer.orElseThrow(() -> new RuntimeException("Customer not found"));
+    }
+
+    @Override
+    public Customer updateCustomer(String id, Customer customerDetails) {
+        Customer customer = getCustomerById(id);
+        customer.setName(customerDetails.getName());
+        customer.setEmail(customerDetails.getEmail());
+        // Update other fields as necessary
+        return customerRepository.save(customer);
+    }
+
+    @Override
+    public boolean deleteCustomer(String id) {
+        if (customerRepository.existsById(id)) {
+            customerRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+}
+```
+
+### Implementation 2: In-Memory CustomerService
+
+```java
+package dev.example.restaurantManager.service;
+
+import dev.example.restaurantManager.model.Customer;
+import org.springframework.stereotype.Service;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
+
+@Service
+public class InMemoryCustomerService implements CustomerService {
+
+    private final Map<String, Customer> customerStore = new ConcurrentHashMap<>();
+
+    @Override
+    public List<Customer> getAllCustomers() {
+        return new ArrayList<>(customerStore.values());
+    }
+
+    @Override
+    public Customer createCustomer(Customer customer) {
+        String id = UUID.randomUUID().toString();
+        customer.setId(id);
+        customerStore.put(id, customer);
+        return customer;
+    }
+
+    @Override
+    public Customer getCustomerById(String id) {
+        Customer customer = customerStore.get(id);
+        if (customer == null) {
+            throw new RuntimeException("Customer not found");
+        }
+        return customer;
+    }
+
+    @Override
+    public Customer updateCustomer(String id, Customer customerDetails) {
+        if (!customerStore.containsKey(id)) {
+            throw new RuntimeException("Customer not found");
+        }
+        customerDetails.setId(id);
+        customerStore.put(id, customerDetails);
+        return customerDetails;
+    }
+
+    @Override
+    public boolean deleteCustomer(String id) {
+        return customerStore.remove(id) != null;
+    }
+
+    // Additional methods for demonstration
+    public List<Customer> searchCustomersByName(String name) {
+        return customerStore.values().stream()
+                .filter(customer -> customer.getName().toLowerCase().contains(name.toLowerCase()))
+                .collect(Collectors.toList());
+    }
+
+    public void clearAllCustomers() {
+        customerStore.clear();
+    }
+}
+```
+
+These two implementations showcase different approaches:
+
+1. **DatabaseCustomerService**: This implementation uses a CustomerRepository, likely backed by a database. It's suitable for production environments where data persistence is required.
+
+2. **InMemoryCustomerService**: This implementation stores customers in a ConcurrentHashMap. It's useful for testing, prototyping, or scenarios where a lightweight, non-persistent solution is needed.
+
+Both implementations adhere to the CustomerService interface, demonstrating how the same contract can be fulfilled in very different ways. This flexibility is one of the key advantages of using interfaces in Spring Boot services.
 
 # Spring Boot JPA Query Methods
 
@@ -909,7 +1099,7 @@ For more information on Spring Boot JPA query methods, check out these resources
 
 # JUnit 5 tests
 
-//to-do
+- [JUnit and TDD](/javase/se-concepts-tdd.qmd)
 
 # Code 
 
