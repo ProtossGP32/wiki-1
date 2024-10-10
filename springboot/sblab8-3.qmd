@@ -20,6 +20,8 @@ We are going to evolve the current **Java SE Restaurant** project into a **Sprin
 :::
 </br>
 
+- [Commits](https://github.com/AlbertProfe/restaurantManager/commits/master/){.external target='_blank'}
+
 # RestaurantManager Project Summary
 
 `Key Components`
@@ -62,6 +64,69 @@ We are going to evolve the current **Java SE Restaurant** project into a **Sprin
 
 
 # Project structrue
+
+
+`RestaurantManager` directory structure represents a <mark>typical Java Spring Boot project for a restaurant management application</mark>.
+
+Here's a basic explanation of the **main** components:
+
+**Root Directory**
+
+- `HELP.md`: contains project general information about `RestaurantManager`.
+- `mvnw` and `mvnw.cmd`: `Maven wrapper` scripts for `Unix-like` systems and `Windows`, respectively.
+- `pom.xml`: The `Maven` project configuration file.
+
+**Source Code (`src`)**
+
+The `src` directory contains the main application code and test code.
+
+**Main Application Code (`src/main`)**
+
+- `java/dev/example/restaurantManager`: The root package for the application.
+  - `controller`: Contains controller classes for handling HTTP requests.
+  - `model`: Defines the data models (entities) for the application.
+  - `repository`: Interfaces for database operations.
+  - `service`: Service layer implementation.
+  - `utilities`: Utility classes, such as data loaders.
+  - `RestaurantManagerApplication.java`: The main class to run the Spring Boot application.
+
+**Resources (`src/main/resources`)**
+
+- Configuration files (`application*.properties`)
+- Static resources and templates (.js, .css, etc..)
+
+**Test Code (`src/test`)**
+
+Contains test classes for the application.
+
+**Build Output (`target`)**
+
+This directory contains compiled classes, JAR files, and other build artifacts.
+
+**Project Structure**
+
+The project follows a typical MVC (Model-View-Controller) structure with additional layers:
+
+1. Models (in `model` package)
+2. Views (in `resources/templates`)
+3. Controllers (in `controller` package)
+4. Services (in `service` package)
+5. Repositories (in `repository` package)
+
+This structure allows for a clean separation of concerns and promotes maintainability and scalability of the application.
+
+![](/images/springboot/labsb08/lab08-3-tree.png)
+
+![](/images/springboot/labsb08/lab08-3-tree-scr.png)
+
+![](/images/springboot/labsb08/lab08-3-tree-scr-2.png)
+
+
+
+<details>
+<summary>Code</summary>
+
+
 
 ``` java
 .
@@ -164,63 +229,7 @@ We are going to evolve the current **Java SE Restaurant** project into a **Sprin
                     └── RestaurantManagerApplicationTests.class
 
 ```
-
-`RestaurantManager` directory structure represents a <mark>typical Java Spring Boot project for a restaurant management application</mark>.
-
-Here's a basic explanation of the **main** components:
-
-**Root Directory**
-
-- `HELP.md`: contains project general information about `RestaurantManager`.
-- `mvnw` and `mvnw.cmd`: `Maven wrapper` scripts for `Unix-like` systems and `Windows`, respectively.
-- `pom.xml`: The `Maven` project configuration file.
-
-**Source Code (`src`)**
-
-The `src` directory contains the main application code and test code.
-
-**Main Application Code (`src/main`)**
-
-- `java/dev/example/restaurantManager`: The root package for the application.
-  - `controller`: Contains controller classes for handling HTTP requests.
-  - `model`: Defines the data models (entities) for the application.
-  - `repository`: Interfaces for database operations.
-  - `service`: Service layer implementation.
-  - `utilities`: Utility classes, such as data loaders.
-  - `RestaurantManagerApplication.java`: The main class to run the Spring Boot application.
-
-**Resources (`src/main/resources`)**
-
-- Configuration files (`application*.properties`)
-- Static resources and templates (.js, .css, etc..)
-
-**Test Code (`src/test`)**
-
-Contains test classes for the application.
-
-**Build Output (`target`)**
-
-This directory contains compiled classes, JAR files, and other build artifacts.
-
-**Project Structure**
-
-The project follows a typical MVC (Model-View-Controller) structure with additional layers:
-
-1. Models (in `model` package)
-2. Views (in `resources/templates`)
-3. Controllers (in `controller` package)
-4. Services (in `service` package)
-5. Repositories (in `repository` package)
-
-This structure allows for a clean separation of concerns and promotes maintainability and scalability of the application.
-
-![](/images/springboot/labsb08/lab08-3-tree.png)
-
-![](/images/springboot/labsb08/lab08-3-tree-scr.png)
-
-![](/images/springboot/labsb08/lab08-3-tree-scr-2.png)
-
-
+</details>
 
 # Fake customer RestaurantManager
 
