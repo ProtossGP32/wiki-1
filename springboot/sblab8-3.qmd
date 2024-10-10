@@ -60,13 +60,175 @@ We are going to evolve the current **Java SE Restaurant** project into a **Sprin
 - [RESTful Web Services Guide](https://spring.io/guides/gs/rest-service/)
 
 
+
+# Project structrue
+
+``` java
+.
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── _PRA
+│   └── PRA01.md
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── dev
+│   │   │       └── example
+│   │   │           └── restaurantManager
+│   │   │               ├── controller
+│   │   │               │   ├── CustomerController.java
+│   │   │               │   └── CustomerWebController.java
+│   │   │               ├── model
+│   │   │               │   ├── Booking.java
+│   │   │               │   ├── Customer.java
+│   │   │               │   ├── Menu.java
+│   │   │               │   ├── Order.java
+│   │   │               │   └── Table.java
+│   │   │               ├── repository
+│   │   │               │   └── CustomerRepository.java
+│   │   │               ├── RestaurantManagerApplication.java
+│   │   │               ├── service
+│   │   │               │   ├── CustomerServiceImpl.java
+│   │   │               │   └── CustomerService.java
+│   │   │               └── utilities
+│   │   │                   └── CustomerDataLoader.java
+│   │   └── resources
+│   │       ├── application-local.properties
+│   │       ├── application-memory.properties
+│   │       ├── application.properties
+│   │       ├── static
+│   │       └── templates
+│   │           └── home.html
+│   └── test
+│       └── java
+│           └── dev
+│               └── example
+│                   └── restaurantManager
+│                       ├── CustomerRepositoryTest.java
+│                       └── RestaurantManagerApplicationTests.java
+└── target
+    ├── classes
+    │   ├── application-local.properties
+    │   ├── application-memory.properties
+    │   ├── application.properties
+    │   ├── dev
+    │   │   └── example
+    │   │       └── restaurantManager
+    │   │           ├── controller
+    │   │           │   ├── CustomerController.class
+    │   │           │   └── CustomerWebController.class
+    │   │           ├── model
+    │   │           │   ├── Booking.class
+    │   │           │   ├── Customer.class
+    │   │           │   ├── Menu.class
+    │   │           │   ├── Order.class
+    │   │           │   └── Table.class
+    │   │           ├── repository
+    │   │           │   └── CustomerRepository.class
+    │   │           ├── RestaurantManagerApplication.class
+    │   │           ├── service
+    │   │           │   ├── CustomerService.class
+    │   │           │   └── CustomerServiceImpl.class
+    │   │           └── utilities
+    │   │               └── CustomerDataLoader.class
+    │   └── templates
+    │       └── home.html
+    ├── generated-sources
+    │   └── annotations
+    ├── generated-test-sources
+    │   └── test-annotations
+    ├── maven-archiver
+    │   └── pom.properties
+    ├── maven-status
+    │   └── maven-compiler-plugin
+    │       ├── compile
+    │       │   └── default-compile
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── testCompile
+    │           └── default-testCompile
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    ├── restaurantManager-0.0.1-SNAPSHOT.jar
+    ├── restaurantManager-0.0.1-SNAPSHOT.jar.original
+    ├── surefire-reports
+    │   ├── dev.example.restaurantManager.RestaurantManagerApplicationTests.txt
+    │   └── TEST-dev.example.restaurantManager.RestaurantManagerApplicationTests.xml
+    └── test-classes
+        └── dev
+            └── example
+                └── restaurantManager
+                    ├── CustomerRepositoryTest.class
+                    └── RestaurantManagerApplicationTests.class
+
+```
+
+`RestaurantManager` directory structure represents a <mark>typical Java Spring Boot project for a restaurant management application</mark>.
+
+Here's a basic explanation of the **main** components:
+
+**Root Directory**
+
+- `HELP.md`: contains project general information about `RestaurantManager`.
+- `mvnw` and `mvnw.cmd`: `Maven wrapper` scripts for `Unix-like` systems and `Windows`, respectively.
+- `pom.xml`: The `Maven` project configuration file.
+
+**Source Code (`src`)**
+
+The `src` directory contains the main application code and test code.
+
+**Main Application Code (`src/main`)**
+
+- `java/dev/example/restaurantManager`: The root package for the application.
+  - `controller`: Contains controller classes for handling HTTP requests.
+  - `model`: Defines the data models (entities) for the application.
+  - `repository`: Interfaces for database operations.
+  - `service`: Service layer implementation.
+  - `utilities`: Utility classes, such as data loaders.
+  - `RestaurantManagerApplication.java`: The main class to run the Spring Boot application.
+
+**Resources (`src/main/resources`)**
+
+- Configuration files (`application*.properties`)
+- Static resources and templates (.js, .css, etc..)
+
+**Test Code (`src/test`)**
+
+Contains test classes for the application.
+
+**Build Output (`target`)**
+
+This directory contains compiled classes, JAR files, and other build artifacts.
+
+**Project Structure**
+
+The project follows a typical MVC (Model-View-Controller) structure with additional layers:
+
+1. Models (in `model` package)
+2. Views (in `resources/templates`)
+3. Controllers (in `controller` package)
+4. Services (in `service` package)
+5. Repositories (in `repository` package)
+
+This structure allows for a clean separation of concerns and promotes maintainability and scalability of the application.
+
+![](/images/springboot/labsb08/lab08-3-tree.png)
+
+![](/images/springboot/labsb08/lab08-3-tree-scr.png)
+
+![](/images/springboot/labsb08/lab08-3-tree-scr-2.png)
+
+
+
 # Fake customer RestaurantManager
 
 ## Java Faker
 
 **Java Faker** is a library that generates fake data for various purposes such as testing, development, and demonstration.
 
-> Java Faker is a tool that creates realistic-looking fake data, including names, addresses, phone numbers, and much more.
+> Java Faker is a tool that <mark>creates realistic-looking fake data</mark>, including names, addresses, phone numbers, and much more.
 
 It's useful for:
 
