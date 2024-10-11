@@ -1293,6 +1293,7 @@ Therefore, if the profile is active and specifies `ddl-auto=create`, it will tak
 ## `.env`
 
 // to-do
+// explain now devops helps to manage CRITICAL variables like endpoints, passwords, etcc
 
 # Code 
 
