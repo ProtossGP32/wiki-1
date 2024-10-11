@@ -1272,6 +1272,28 @@ For more information on Spring Boot JPA query methods, check out these resources
 
 - [JUnit and TDD](/javase/se-concepts-tdd.qmd)
 
+
+# DevOps
+
+## Creating a excutable .jar
+
+// to-do
+
+## Working on different environments
+
+// to-do
+
+When a property like s`pring.jpa.hibernate.ddl-auto` is defined in both `application.properties` and a profile-specific properties file (e.g., `application-dev.properties`), the <mark>value from the active profile will override the one in application.properties</mark>.
+
+Therefore, if the profile is active and specifies `ddl-auto=create`, it will take precedence over `ddl-auto=update` in `application.properties`. 
+
+> The order of execution is determined by the active profiles and their precedence over the default properties.
+
+
+## `.env`
+
+// to-do
+
 # Code 
 
 ![](/images/springboot/labsb08/lab08-1-v0.0.png){width=50%}
