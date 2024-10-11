@@ -63,7 +63,7 @@ We are going to evolve the current **Java SE Restaurant** project into a **Sprin
 
 
 
-# Project structrue
+# Project structure
 
 
 `RestaurantManager` directory structure represents a <mark>typical Java Spring Boot project for a restaurant management application</mark>.
@@ -252,8 +252,10 @@ For example, you can create a Faker instance and generate fake data like this:
 
 ```java
 Faker faker = new Faker();
-String name = faker.name().fullName(); // Generates a random full name
-String email = faker.internet().emailAddress(); // Generates a random email address
+ // Generates a random full name
+String name = faker.name().fullName();
+// Generates a random email address
+String email = faker.internet().emailAddress(); 
 ```
 
 Dependency for maven:
@@ -348,7 +350,8 @@ public class RestaurantVaadinApplication {
                     customerRepository.save(customer);
                 }
 
-                System.out.println("100 fake customers have been created and saved to the database.");
+                System.out.println("100 fake customers have been"
+                + " created and saved to the database.");
             }
         };
     }
@@ -412,7 +415,8 @@ public class RestaurantVaadinApplication {
                 customerRepository.save(customer);
             }
 
-            System.out.println("100 fake customers have been created and saved to the database.");
+            System.out.println("100 fake customers have been"
+            + " created and saved to the database.");
         }
     }
 }
@@ -465,7 +469,8 @@ public class RestaurantVaadinApplication {
                 customerRepository.save(customer);
             }
 
-            System.out.println("100 fake customers have been created and saved to the database.");
+            System.out.println("100 fake customers have been created"
+            + " and saved to the database.");
         }
     }
 }
@@ -475,15 +480,15 @@ public class RestaurantVaadinApplication {
 
 This approach **maintains proper dependency injection** and is more in line with Spring best practices for a few key reasons:
 
-1. **Proper dependency injection**: By using an ApplicationRunner bean, we allow Spring to manage the lifecycle and injection of dependencies. The CustomerRepository is properly injected by Spring, rather than being accessed statically.
+1. **Proper dependency injection**: By using an `ApplicationRunner` bean, we allow Spring to manage the lifecycle and injection of dependencies. The CustomerRepository is properly injected by Spring, rather than being accessed statically.
 2. **Separation of concerns**: The data loading logic is separated from the main application class, improving modularity and maintainability.
 3. **Testability**: This approach makes it easier to unit test the data loading logic in isolation, as dependencies can be easily mocked.
 4. **Constructor injection**: By passing the CustomerRepository as a parameter to the ApplicationRunner, we're using constructor injection, which is considered a best practice in Spring.
 5. **Avoiding static dependencies**: Static `@Autowired` fields are generally discouraged as they can lead to issues with testing and violate dependency injection principles.
 6. **Flexibility**: This approach allows for easier configuration and potential customization of when and how the data loading occurs.
-7. **Alignment with Spring lifecycle**: Using ApplicationRunner ensures the data loading happens at the appropriate time during application startup, after the Spring context is fully initialized.
+7. **Alignment with Spring lifecycle**: Using `ApplicationRunner` ensures the data loading happens at the appropriate time during application startup, after the Spring context is fully initialized.
 
-By following these practices, the code becomes more maintainable, testable, and aligned with Spring's dependency injection principles.
+By following these practices, the code becomes more <mark>maintainable, testable, and aligned with Spring's dependency injection principles</mark>.
 
 # H2 DB
 
@@ -501,11 +506,11 @@ References:
 
 Step-by-step:
 
-- Download and install Java JDK from the official Oracle website.
-- Download and install Spring Boot from the official Spring website.
-- Download the H2 database from the official H2 website.
-- Extract the downloaded file to a location on your Linux machine.
-- Execute H2 Desktop app and create a local H2 DB.
+- Download and install `Java JDK` from the official `Oracle` website.
+- Download and install Spring Boot from the official `Spring` website.
+- Download the `H2` database from the official `H2` website.
+- Extract the downloaded file to a location on your `Linux` machine.
+- Execute `H2` Desktop app and create a local `H2 DB`.
 
 ![Create a H2 DB](/images/springboot/LibraryManagementRest-H2-1.png){width="60%"}
 
@@ -556,6 +561,7 @@ Prerequisites:
 **Create Tables and Data**
 
    - Use SQL commands to create tables and insert data, for example:
+  
      ```sql
      CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(50));
      INSERT INTO users VALUES (1, 'John Doe');
@@ -582,7 +588,8 @@ Dependencies
 
 First, ensure you have the necessary dependencies in your `pom.xml` (for Maven) or `build.gradle` (for Gradle):
 
-```xml
+::: {.column-page-right}
+``` xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -593,12 +600,16 @@ First, ensure you have the necessary dependencies in your `pom.xml` (for Maven) 
     <scope>runtime</scope>
 </dependency>
 ```
+:::
 
 `application Properties`
 
 In your `application.properties` file, add the following configurations:
 
-```properties
+
+::: {.column-page-right}
+``` yml
+
 # H2 Database Configuration
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.driverClassName=org.h2.Driver
@@ -614,6 +625,8 @@ spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
+:::
+
 
 **Explanation of Properties**
 
@@ -704,7 +717,9 @@ Add the `SpringDoc` `OpenAPI` dependency to your `pom.xml` (for `Maven`):
 ```xml
 <dependency>
     <groupId>org.springdoc</groupId>
-    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <artifactId>
+    springdoc-openapi-starter-webmvc-ui
+    </artifactId>
     <version>2.1.0</version>
 </dependency>
 ```
@@ -761,7 +776,7 @@ Understanding ResponseEntity in Spring
 - Headers
 - Body
 
-![custom response using springboot  Medium](https://miro.medium.com/v2/resize:fit:1400/1*Z0XmoMjwiC61rdAROwZZ1A.jpeg)
+![custom response using springboot  Medium](https://miro.medium.com/v2/resize:fit:1400/1*Z0XmoMjwiC61rdAROwZZ1A.jpeg){width=50%}
 
 ## Key Features
 
@@ -792,7 +807,7 @@ The use of these <mark>parameterized types allows for type safety and helps the 
 
 ## Basic Usage
 
-![ResponseEntity in Spring Framework](https://cdn.hashnode.com/res/hashnode/image/upload/v1701526522110/2c2b7ee3-2e37-4d9a-ab10-b647fc751d7b.png?auto=compress,format&format=webp)
+![ResponseEntity in Spring Framework](https://cdn.hashnode.com/res/hashnode/image/upload/v1701526522110/2c2b7ee3-2e37-4d9a-ab10-b647fc751d7b.png?auto=compress,format&format=webp){width="60%"}
 
 Here's a simple example of how to use `ResponseEntity`:
 
@@ -929,7 +944,7 @@ import io.swagger.annotations.*;
 
 **Loose Coupling**
 
-Interfaces promote loose coupling between components. The code that depends on the service only knows about the interface, not the implementation. This makes it easier to change the implementation without affecting the rest of the application.
+`Interfaces` promote `loose coupling between components`. The code that depends on the service only knows about the `interface`, not the implementation. This makes it easier to change the implementation without affecting the rest of the application.
 
 **Easier Testing**
 
@@ -937,15 +952,15 @@ Interfaces facilitate easier unit testing through mocking. You can create mock i
 
 **Multiple Implementations**
 
-Interfaces allow for multiple implementations of the same service. This is useful when you need different implementations for different scenarios (e.g., production vs. testing, or different business logic for different clients).
+`Interfaces` allow for multiple implementations of the same service. This is useful when you need different implementations for different scenarios (e.g., production vs. testing, or different business logic for different clients).
 
 **Dependency Injection**
 
-Spring's dependency injection works well with interfaces. You can easily switch implementations by changing the configuration, without modifying the code that uses the service.
+`Spring's dependency injection` works well with `interfaces`. You can easily switch implementations by changing the configuration, without modifying the code that uses the service.
 
 **Clear Contract**
 
-Interfaces serve as a clear contract for what operations a service provides. This improves code readability and helps in understanding the system's architecture.
+`Interfaces` <mark>serve as a clear contract for what operations a service provides</mark>. This improves <mark>code readability and helps in understanding the system's architecture</mark>.
 
 **Aspect-Oriented Programming (AOP)**
 
@@ -953,7 +968,7 @@ Spring's AOP features work more smoothly with interfaces, allowing you to add cr
 
 **Design by Contract**
 
-Interfaces encourage "design by contract" principles, where you define what a service does rather than how it does it, leading to more robust and maintainable code.
+`Interfaces` encourage "`design by contract`" principles, <mark>where you define what a service does rather than how it does it</mark>, leading to more robust and maintainable code.
 
 ### `CustomerService`
 
@@ -985,6 +1000,7 @@ Two very different implementations of the `CustomerService` interface:
 
 ### Implementation 1: Database-backed CustomerService
 
+::: {.column-page-right}
 ```java
 package dev.example.restaurantManager.service;
 
@@ -1014,7 +1030,8 @@ public class DatabaseCustomerService implements CustomerService {
     @Override
     public Customer getCustomerById(String id) {
         Optional<Customer> customer = customerRepository.findById(id);
-        return customer.orElseThrow(() -> new RuntimeException("Customer not found"));
+        return 
+        customer.orElseThrow(() -> new RuntimeException("Customer not found"));
     }
 
     @Override
@@ -1036,8 +1053,12 @@ public class DatabaseCustomerService implements CustomerService {
     }
 }
 ```
+:::
+
 
 ### Implementation 2: In-Memory CustomerService
+
+::: {.column-page-right}
 
 ```java
 package dev.example.restaurantManager.service;
@@ -1102,6 +1123,9 @@ public class InMemoryCustomerService implements CustomerService {
     }
 }
 ```
+:::
+
+
 
 These two implementations showcase different approaches:
 
@@ -1125,7 +1149,8 @@ Both implementations adhere to the CustomerService interface, demonstrating how 
 `Spring Data JPA` can automatically create queries <mark>based on method names in your repository interface.</mark>
 
 ```java
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository 
+        extends JpaRepository<User, Long> {
     List<User> findByLastNameAndAge(String lastName, int age);
 }
 ```
@@ -1135,7 +1160,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
 You can use the `@Query` annotation to define <mark>custom JPQL queries.</mark>
 
 ```java
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository 
+        extends JpaRepository<User, Long> {
     @Query("SELECT u FROM User u WHERE u.emailAddress = ?1")
     User findByEmailAddress(String emailAddress);
 }
@@ -1275,13 +1301,55 @@ For more information on Spring Boot JPA query methods, check out these resources
 
 # DevOps
 
-## Creating a excutable .jar
+## Creating a executable .jar
 
-// to-do
+The command `mvn clean package` is a Maven command that performs two main phases of the Maven build lifecycle:
+
+1. `clean`: This phase removes the target directory and any compiled files from previous builds. It essentially "cleans" your project's working directory.
+  
+2. `package`: This phase compiles your source code, runs tests, and packages the compiled code into a distributable format, such as a JAR file.
+  
+
+When you run `mvn clean package`, Maven will:
+
+1. Delete the `target` directory (clean)
+2. Compile the source code
+3. Run unit tests
+4. Package the compiled code into a JAR/WAR file (depending on your project type)
+
+This command is commonly used to ensure a fresh build of your project, starting from a clean state. It's useful when you want to create a new package of your application, especially before deploying or sharing your code.
 
 ## Working on different environments
 
-// to-do
+- [Profiles](https://docs.spring.io/spring-boot/reference/features/profiles.html){.external target='_blank'}
+
+> Spring Profiles provide a way to <mark>segregate parts of your application configuration and make it be available only in certain environments</mark>. Any @Component, @Configuration or @ConfigurationProperties can be marked with @Profile to limit when it is loaded, as shown in the following example:
+
+
+``` java
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+@Configuration(proxyBeanMethods = false)
+@Profile("production")
+public class ProductionConfiguration {
+
+	// ...
+
+}
+```
+
+### `application.properties`
+
+You can use a` spring.profiles.active` **Environment property** to specify which profiles are active, for example, you could include it in your `application.properties`, as shown in the following example:
+
+``` yml
+spring.profiles.active=prod
+#---
+spring.config.activate.on-profile=prod
+spring.profiles.active=metrics
+
+```
 
 When a property like s`pring.jpa.hibernate.ddl-auto` is defined in both `application.properties` and a profile-specific properties file (e.g., `application-dev.properties`), the <mark>value from the active profile will override the one in application.properties</mark>.
 
@@ -1292,8 +1360,8 @@ Therefore, if the profile is active and specifies `ddl-auto=create`, it will tak
 
 ## `.env`
 
-// to-do
-// explain now devops helps to manage CRITICAL variables like endpoints, passwords, etcc
+
+// explain how devops helps to manage CRITICAL variables like endpoints, passwords, etcc
 
 # Code 
 
