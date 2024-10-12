@@ -32,15 +32,15 @@ tr:hover {background-color:  #f4f4f4;}
 ::: {.column-page-right}
 
 
-##  ``Sprint#06 Spring Boot JPA: Queries, Mappings and Relationships`` (October 2024)
+##  ``Sprint#06 JPA: Queries, Mappings and Relationships`` (October 2024)
 
 | # | Day | Date | Topics |  Details Topics |
 | -- | -- | -- | -- | -- |
-|  #06 | 24 | 14/10/2024 |  |  |
-|   | 25 | 15/10/2024 |  |  |
-|   | 26 | 16/10/2024 |  |  |
-|   | 27 | 17/10/2024 |  |  |
-|   | 28 | 18/10/2024 |  |  |
+|  #06 | 24 | 14/10/2024 |  - Planning Spring#6 </br> - Lab#SB08-3 Spring Boot RestaurantManager: </br>  (1) JPQL Queries & JUnit Tests </br>  - Lab#SB08-4 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity **Order**   </br> (2) Inherence: Order </br> (3) @ManyToOne relationship </br> (4) ORM </br>(5)  Annotations </br ></br> - `ResponseEntity`  | - [Spring Boot: Data & DB](/springboot/boot-concepts-data.qmd) </br> - [Spring Boot: JPA & DI](/springboot/boot-concepts-jpa.qmd) </br> - [Spring Boot: JPA Mappings](/springboot/boot-concepts-jpa-2.qmd) |
+|   | 25 | 15/10/2024 | - Lab#SB08-4 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity Order   </br> (2) Inherence: Order </br> (3) @ManyToOne relationship </br> (4) ORM </br>(5)  Annotations </br ></br> |  - [Spring Boot: Data & DB](/springboot/boot-concepts-data.qmd) </br> - [Spring Boot: JPA & DI](/springboot/boot-concepts-jpa.qmd) </br> - [Spring Boot: JPA Mappings](/springboot/boot-concepts-jpa-2.qmd)  |
+|   | 26 | 16/10/2024 | - Lab#SB08-4 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity Order  </br> (2)  @ManyToMany relationship </br> (3) @ManyToOne relationship </br> (4) ORM </br>(5)  Annotations </br ></br> |  - [Spring Boot: Data & DB](/springboot/boot-concepts-data.qmd) </br> - [Spring Boot: JPA & DI](/springboot/boot-concepts-jpa.qmd) </br> - [Spring Boot: JPA Mappings](/springboot/boot-concepts-jpa-2.qmd)  |
+|   | 27 | 17/10/2024 | - Lab#SB08-4 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity Order   </br> (2) Inherence: Order implementation </br> </br>- Git: `gitTutorial` project </br> | - [Lab#SB04-1: JPA Inherence](/springboot/sblab4.qmd)    </br> - [Spring Boot Projects JPA Inherence strategies](https://github.com/AlbertProfe/cifojava2022-6/wiki){.external target='_blank'} </br> ![Entity Inheritance](/images/springboot/labsb04-1-entity-inherence-.png)|
+|   | 28 | 18/10/2024 | - Lab#SB08-4 Spring Boot **RestaurantManager**: </br>  (1) Model @Entity Order   </br> (2) Inherence: Order implementation </br> </br> - Git: `gitTutorial` project </br>   | - [Lab#SB04-1: JPA Inherence](/springboot/sblab4.qmd) </br> - [Spring Boot Projects JPA Inherence strategies](https://github.com/AlbertProfe/cifojava2022-6/wiki){.external target='_blank'} </br>  |
 : Backlog course October 2024 table {tbl-colwidths="[2,2,2,60,34]"}
 :::
 
