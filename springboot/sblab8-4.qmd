@@ -1,6 +1,6 @@
 ---
-title: "Lab#SB08-4: RestaurantManager"
-subtitle: Spring Boot Restaurant Management UML
+title: "Lab#SB08-4: JPA"
+subtitle: Spring Boot Restaurant Management JPA, Queries, Mappings and Relationships
 author: albertprofe
 date: "01/010/2024"
 date-modified: last-modified
@@ -14,10 +14,111 @@ format:
 ---
 
 :::: {.labs}
-📘 Spring Boot Lab#SB00-4: RestaurantManager
-We are going to evolve the current Java SE Restaurant project into a Spring Boot Restaurant Management System with an H2 DB and web interface using Thymeleaf.
+📘 Spring Boot Lab#SB00-4: `RestaurantManager` JPA, Queries, Mappings and Relationships
+## Summary
+
+The Spring Boot `RestaurantManagement` System utilizes `JPA` to efficiently manage restaurant operations:
+
+- Key entities include `Menu`, `MenuItem`, `Table`, `Order`, and `Customer`, with defined relationships such as one-to-many and many-to-many.
+- The system employs repositories for database H2 access and services for business logic.
+- Custom `queries` enhance data retrieval, enabling functionalities like fetching recent orders or customer-specific orders.
+
+This architecture not only facilitates effective data management but also provides a robust foundation for building scalable restaurant applications, leveraging the power of Spring Boot and JPA for seamless integration and performance.
 :::
 </br>
+
+
+- [Commits](https://github.com/AlbertProfe/restaurantManager/commits/master/){.external target='_blank'}
+
+# RestaurantManager Project Summary
+
+Here's an introduction to Spring Boot Restaurant Management focusing on JPA, queries, mappings and relationships:
+
+This project demonstrates how to build a restaurant management system using Spring Boot and JPA. It covers key concepts like entity relationships, JPA mappings, and database queries.
+
+**Key Components**
+
+- **Entities**: Menu, MenuItem, Order, Customer
+- **Repositories**: JpaRepository interfaces for database access  
+- **Services**: Business logic and database operations
+- **Controllers**: REST API endpoints
+- **Tests**: JUnit unitary tests for queries
+
+**JPA Mappings**
+
+The system uses the following JPA entity relationships:
+
+- One-to-Many: Menu to MenuItems
+- Many-to-One: Order to Customer
+- Many-to-Many: Order to MenuItems
+
+
+<details>
+<summary>Example Menu entity:</summary>
+
+```{.java .code-overflow-wrap filename="Menu.java"}
+
+@Entity
+public class Menu {
+
+  @Id
+  //@GeneratedValue
+  private String id;
+  
+  private String name;
+
+  @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL)
+  private List<MenuItem> items;
+
+}
+```
+</details>
+
+**Sample Queries**
+
+
+
+
+<details>
+<summary>Example Sample OrderRepository:</summary>
+
+```{.java .code-overflow-wrap filename="Menu.java"}
+
+@Repository
+public interface OrderRepository extends JpaRepository<Order, Long> {
+
+  List<Order> findByCustomer(Customer customer);
+  
+  @Query("SELECT o FROM Order o WHERE o.orderDate > :date")
+  List<Order> findRecentOrders(@Param("date") LocalDate date);
+
+}
+```
+</details>
+
+
+**Key Relationships**
+
+- Menu contains many MenuItems
+- Order is placed by one Customer
+- Order contains multiple MenuItems
+- Customer can have multiple Orders
+
+This structure allows for efficient querying and management of restaurant data using Spring Data JPA.
+
+
+# JPA Relationships
+
+
+
+# Inherence and JPA
+
+
+
+# Queries
+
+
+
 
 
 
