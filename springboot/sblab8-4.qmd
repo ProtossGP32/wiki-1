@@ -32,14 +32,12 @@ This architecture not only facilitates effective data management but also provid
 
 # RestaurantManager Project Summary
 
-Here's an introduction to Spring Boot Restaurant Management focusing on JPA, queries, mappings and relationships:
-
-This project demonstrates how to build a restaurant management system using Spring Boot and JPA. It covers key concepts like entity relationships, JPA mappings, and database queries.
+> Here's an introduction to Spring Boot Restaurant Management focusing on JPA, queries, mappings and relationships. This project demonstrates how to build a restaurant management system using Spring Boot and JPA. It covers key concepts like entity relationships, JPA mappings, and database queries.
 
 **Key Components**
 
 - **Entities**: Menu, MenuItem, Order, Customer
-- **Repositories**: JpaRepository interfaces for database access  
+- **Repositories**: JpaRepository interfaces for database access
 - **Services**: Business logic and database operations
 - **Controllers**: REST API endpoints
 - **Tests**: JUnit unitary tests for queries
@@ -77,8 +75,6 @@ public class Menu {
 **Sample Queries**
 
 
-
-
 <details>
 <summary>Example Sample OrderRepository:</summary>
 
@@ -110,6 +106,116 @@ This structure allows for efficient querying and management of restaurant data u
 # JPA Relationships
 
 
+`JPA (Java Persistence API)` provides several types of relationships to <mark>model associations between entities </mark>:
+
+1. **OneToOne**: Represents a single-valued association where an instance of one entity is related to a single instance of another entity.
+
+2. **OneToMany**: Represents a multi-valued association where an instance of one entity can be related to multiple instances of another entity.
+
+3. **ManyToOne**: The inverse of `OneToMany`, where multiple instances of an entity can be related to a single instance of another entity.
+
+4. **ManyToMany**: Represents a multi-valued association where multiple instances of one entity can be related to multiple instances of another entity.
+
+These relationships can be either `unidirectional` or `bidirectional`:
+
+- **Unidirectional**: Only one entity has a reference to the other.
+- **Bidirectional**: Both entities have references to each other.
+
+> Relationships are typically annotated in entity classes using `@OneToOne`, `@OneToMany`, `@ManyToOne`, or `@ManyToMany`. Additional annotations like `@JoinColumn` and `mappedBy` are used to specify the joining strategy and the owning side of the relationship.
+
+
+
+## OneToMany and ManyToOne
+
+
+![Entity @oneToMany](/images/springboot/labsb08/labsb08-4-onetomay.png)
+
+**`OneToMany` Unidirectional**
+
+- One entity has a collection of another entity
+- Only the *owning* side (the "One" side) has a reference to the other entity
+- Example: One Department has many Employees
+
+```java
+@Entity
+public class Department {
+    @OneToMany
+    private List<Employee> employees;
+}
+
+@Entity
+public class Employee {
+    // No reference to Department
+}
+```
+
+
+**ManyToOne Unidirectional**
+
+
+::: {.column-margin}
+ManyToOne Unidirectional example:  [Order and Customer](https://github.com/AlbertProfe/restaurantManager/blob/51b172d69b9f04196dbd52d3abdf9c50a05a3ff9/src/test/java/dev/example/restaurantManager/TestsRelationshipsOrderRestaurant.java){.external target='_blank'}
+:::
+
+
+- Many entities are associated with one entity
+- Only the **owning** side (the "Many" side) has a reference to the other entity
+- Example: Many Employees belong to one Department
+
+```java
+@Entity
+public class Employee {
+    @ManyToOne
+    private Department department;
+}
+
+@Entity
+public class Department {
+    // No reference to Employee
+}
+```
+
+
+**Bidirectional Relationships**
+
+
+::: {.column-margin}
+Bidirectional Relationships example: [Library2: API Rest Author Book @OneToMany CRUD with Swagger](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library2:-API-Rest-Author-Book-@OneToMany-CRUD-with-Swagger){.external target='_blank'}
+:::
+
+- Both entities have references to each other
+- The "Many" side is usually the owning side
+- Example: One Department has many Employees, and each Employee belongs to one Department
+
+```java
+@Entity
+public class Department {
+    @OneToMany(mappedBy = "department")
+    private List<Employee> employees;
+}
+
+@Entity
+public class Employee {
+    @ManyToOne
+    private Department department;
+}
+```
+
+> In bidirectional relationships, use `mappedBy` on the <mark>non-owning side to indicate the owning side's field name</mark>.
+
+
+::: {.callout-note}
+# Why Serialization is Needed?
+
+**Serialization** is <mark>the process of converting an object or class into a byte stream</mark>. This byte stream can then be easily saved to a file, sent over a network, or stored in a database.
+
+`Hibernate` uses serialization to <mark>create deep copies of entity objects</mark> for various purposes, such as **detached** entities, Session Management or **caching**.
+
+For example: Collections within entities (like an `ArrayList<Menu> menus` within a `Order` entity ) are often **serialized** to store them efficiently in the database or to manage state changes.
+
+Implementing `Serializable` is **not always the best solution**. In some cases, it might be better to adjust your entity relationships (`@OneToMany`) or use different mapping strategies (`@ElementCollection` for simple collections).
+
+:::
 
 # Inherence and JPA
 
