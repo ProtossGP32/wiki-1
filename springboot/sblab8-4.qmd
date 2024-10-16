@@ -260,7 +260,10 @@ public class Department {
 
 
 ::: {.column-margin}
-Bidirectional Relationships example: [Library2: API Rest Author Book @OneToMany CRUD with Swagger](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library2:-API-Rest-Author-Book-@OneToMany-CRUD-with-Swagger){.external target='_blank'}
+Bidirectional Relationships example: 
+
+-[Library2: API Rest Author Book @OneToMany CRUD with Swagger](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library2:-API-Rest-Author-Book-@OneToMany-CRUD-with-Swagger){.external target='_blank'}
+- [TestCreateBookingTable() with JPA, TableRestaurant 1:n Booking bidirectional relationship](https://github.com/AlbertProfe/restaurantManager/tree/c562d8da650da2f758754312c0e1ecea2d8909af){.external target='_blank'}
 :::
 
 - Both entities have references to each other
@@ -297,7 +300,37 @@ Implementing `Serializable` is **not always the best solution**. In some cases, 
 
 :::
 
+### Casting
 
+The [original](https://github.com/AlbertProfe/restaurantManager/blob/c562d8da650da2f758754312c0e1ecea2d8909af/src/test/java/dev/example/restaurantManager/RelationshipsOrderRestaurantTest.java#L80){.external target='_blank'} code avoids these issues by declaring orderToSave directly as TakeAwayOrder, eliminating the need for casting. This approach is generally preferred when possible, as it's safer and more straightforward.
+
+``` java
+// Assume OrderRestaurant is a superclass of TakeAwayOrder
+OrderRestaurant orderToSave = new TakeAwayOrder(
+    "T11", new Date(), "Alice", 1, 10.99,
+    true, new ArrayList<>(Arrays.asList(menu1)), null );
+
+// We need to cast here
+((TakeAwayOrder) orderToSave).setCustomerTakeAway(customer1);
+
+// We might need to cast here too, depending on the repository's type parameter
+takeAwayOrderRepository.save((TakeAwayOrder) orderToSave);
+```
+
+
+
+- **Upcasting**: When we assigned a TakeAwayOrder object to an OrderRestaurant variable, we performed an implicit upcast. This is always safe because a TakeAwayOrder is an OrderRestaurant.
+- **Downcasting**: When we cast orderToSave back to TakeAwayOrder, we're performing a downcast. This is potentially risky because not all OrderRestaurant objects are TakeAwayOrder objects.
+
+::: {.callout-note}
+# Why casting can be problematic?
+
+- Type safety: Downcasting can lead to runtime errors if the object isn't actually of the type you're casting to.
+- Code readability: Excessive casting can make code harder to read and understand.
+- Performance: While minor, casting does involve a runtime check.
+
+
+:::
 
 ## ManyToMany
 
