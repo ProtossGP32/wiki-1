@@ -103,6 +103,86 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 This structure allows for efficient querying and management of restaurant data using Spring Data JPA.
 
 
+# Updated UML
+
+This is the updated UML from [Lab#SB08-1 UML and DDD](/springboot/sblab8-1.qmd#discussion-solving-uml){.external target='_blank'} correspoing to this <mark>commit</mark>: [TestCreateOrder() with JPA, Customer 1:n TakeAwayOrder unidirectional relationship](https://github.com/AlbertProfe/restaurantManager/tree/51b172d69b9f04196dbd52d3abdf9c50a05a3ff9){.external target='_blank'}
+
+::: {.column-page-right}
+```{mermaid}
+classDiagram
+    class OrderRestaurant {
+        <<Entity>>
+        -String id
+        -Date date
+        -String waiter
+        -int peopleQty
+        -double totalPayment
+        -boolean paid
+        -ArrayList<Menu> menus
+        +toString()
+    }
+    class TakeAwayOrder {
+        <<Entity>>
+        -Customer customerTakeAway
+        +toString()
+    }
+    class TableRestaurant {
+        -String name
+        -String description
+        -int qty
+        -boolean busy
+        +toString()
+    }
+    class ShippingOrderRestaurant {
+        -String address
+        -String city
+        -String riderName
+        +toString()
+    }
+    class Customer {
+        <<Entity>>
+        -String id
+        -String name
+        -String email
+        -String phoneNumber
+        -int age
+        -boolean vipCustomer
+        -boolean deleted
+    }
+    class EatInOrderRestaurant {
+        -ArrayList<TableRestaurant> tableRestaurants
+        +toString()
+    }
+    class Menu {
+        <<Serializable>>
+        -String name
+        -Double price
+        -String content
+        -boolean active
+        -boolean water
+    }
+    class Booking {
+        -String name
+        -String phoneNumber
+        -int peopleQty
+        -LocalDateTime date
+        -TableRestaurant tableRestaurant
+        -boolean confirmed
+        +toString()
+    }
+
+    OrderRestaurant <|-- TakeAwayOrder
+    OrderRestaurant <|-- ShippingOrderRestaurant
+    OrderRestaurant <|-- EatInOrderRestaurant
+    OrderRestaurant "1" *-- "*" Menu
+    TakeAwayOrder "*" -- "1" Customer
+    EatInOrderRestaurant "1" *-- "*" TableRestaurant
+    Booking "1" -- "1" TableRestaurant
+
+```
+::: 
+
+
 # JPA Relationships
 
 
@@ -217,16 +297,82 @@ Implementing `Serializable` is **not always the best solution**. In some cases, 
 
 :::
 
+
+
+## ManyToMany
+
+
+**ManyToMany Unidirectional**
+
+- Multiple entities are associated with multiple entities of another type
+- Only one side has a reference to the other entity
+- Example: Many Students can enroll in many Courses
+
+```java
+@Entity
+public class Student {
+    @ManyToMany
+    @JoinTable(name = "student_course",
+               joinColumns = @JoinColumn(name = "student_id"),
+               inverseJoinColumns = @JoinColumn(name = "course_id"))
+    private Set<Course> courses;
+}
+
+@Entity
+public class Course {
+    // No reference to Student
+}
+```
+
+**ManyToMany Bidirectional**
+
+- Both entities have references to each other
+- One side is designated as the owning side
+- Example: Many Students can enroll in many Courses, and each Course can have many Students
+
+```java
+@Entity
+public class Student {
+    @ManyToMany
+    @JoinTable(name = "student_course",
+               joinColumns = @JoinColumn(name = "student_id"),
+               inverseJoinColumns = @JoinColumn(name = "course_id"))
+    private Set<Course> courses;
+}
+
+@Entity
+public class Course {
+    @ManyToMany(mappedBy = "courses")
+    private Set<Student> students;
+}
+```
+
+> In bidirectional ManyToMany relationships, use `mappedBy` on the non-owning side to indicate the owning side's field name. The `@JoinTable` annotation is used to specify the join table details.
+
+::: {.callout-note}
+# ManyToMany Considerations
+
+- ManyToMany relationships often require a join table in the database
+- Consider using an intermediate entity for complex relationships or when additional attributes are needed for the relationship
+- Be cautious of performance implications with large datasets
+:::
+
+
+
+
 # Inherence and JPA
 
-
+// to do
 
 # Queries
 
 
+// to do
 
 
+# Code
 
+- [Commits](https://github.com/AlbertProfe/restaurantManager/commits/master/){.external target='_blank'}
 
 <!--- navLinks -->
 <br><br>
