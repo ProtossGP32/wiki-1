@@ -28,12 +28,12 @@ Always in **Quarto/Wiki .md format** and code in GitHub **repositories** (or Org
 
 | Code | Date | Description|
 |---|---|---|
-| **MF01**  |   |  |
-| **MF02**  |   |  |
-| **MF03**  |   |  |
-| **MF04**  |   |  |
-| **MF05**  |   |  |
-: Deliveries table {tbl-colwidths="[20,20,60]"}
+| **MF01**  | Pull Request to [AlbertProfe github](https://github.com/AlbertProfe){.external target='_blank'}  |  |
+| **MF02**  |  [PRA01: Spring Boot JPA Repository and Entity Class Exercise](https://github.com/AlbertProfe/restaurantManager/blob/master/_PRA/PRA01.md){.external target='_blank'} |  |
+| **MF03**  |  [PRA02: Implementing OneToMany and ManyToOne Relationships in JPA](https://github.com/AlbertProfe/restaurantManager/blob/master/_PRA/PRA02.md){.external target='_blank'}  |  |
+| **MF04**  | PRA04  |  |
+| **MF05**  |  PRA05 |  |
+: Deliveries table {tbl-colwidths="[20,50,30]"}
 
 <!--- navLinks -->
 <br><br>
