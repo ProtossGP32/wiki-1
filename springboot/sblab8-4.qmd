@@ -418,6 +418,32 @@ public class Course {
 
 - [Commits](https://github.com/AlbertProfe/restaurantManager/commits/master/){.external target='_blank'}
 
+## commit `85a23ab`
+
+- [manytomany menu n:m order](https://github.com/AlbertProfe/restaurantManager/tree/85a23abcf1d3e7a4818d7e374f2cbb1f81709371){.external target='_blank'}
+
+![](/images/springboot/labsb08/85a23ab-1.png){.lightbox}
+
+![](/images/springboot/labsb08/85a23ab-2.png){.lightbox}
+
+
+> <mark>When iterating on a project and introducing new relationships</mark>, such as a **many-to-many** relationship between **orders** and **menus**, existing tests m**ay fail due to outdated assumptions and data setup**. In this case, the test `TestCreateOrder` needs to be updated to reflect the new relationship structure.
+
+The main issue is that the test is creating `MenuRestaurant` objects in memory but not persisting them to the database. With a **many-to-many** relationship, both entities (**Order** and **Menu**) need to exist in the database before they can be associated.
+
+To fix this, the test should be refactored to:
+
+1. Save `MenuRestaurant` entities to the database using a repository before creating `orders`.
+2. Fetch the saved `menus` from the database when creating `orders`.
+3. Update the `order` creation process to use the new relationship structure.
+4. Adjust `assertions` to verify the new relationship.
+
+This **refactoring** ensures that the test <mark>accurately reflects the new data model and relationships</mark>.
+
+It also helps maintain the integrity of the test suite as the project evolves, ensuring that tests remain valid and useful for catching potential issues in the updated codebase.
+
+
+
 <!--- navLinks -->
 <br><br>
 <div class=row>
