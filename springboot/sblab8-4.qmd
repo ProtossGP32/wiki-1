@@ -195,6 +195,101 @@ classDiagram
 ```
 :::
 
+## Final UML
+
+This UML would fit the final version of our project:
+
+::: {.column-page-right}
+```{mermaid}
+classDiagram
+    class OrderRestaurant {
+        <<Entity>>
+        -String id
+        -Date date
+        -String waiter
+        -int peopleQty
+        -double totalPayment
+        -boolean paid
+        -ArrayList<MenuRestaurant> menusRestaurant
+        +toString()
+    }
+    class TakeAwayOrder {
+        <<Entity>>
+        -Customer customerTakeAway
+        +toString()
+    }
+    class TableRestaurant {
+        <<Entity>>
+        -String name
+        -String description
+        -int qty
+        -boolean busy
+        -ArrayList<Booking> Bookings
+        +toString()
+    }
+    class ShippingOrderRestaurant {
+         <<Entity>>
+        -String address
+        -String city
+        -String riderName
+        +toString()
+    }
+    class Customer {
+        <<Entity>>
+        -String id
+        -String name
+        -String email
+        -String phoneNumber
+        -int age
+        -boolean vipCustomer
+        -boolean deleted
+    }
+    class EatInOrderRestaurant {
+        <<Entity>>
+        -ArrayList<TableRestaurant> tablesRestaurant
+        +toString()
+    }
+    class MenuRestaurant {
+        <<Entity>>
+        -String name
+        -Double price
+        -String content
+        -boolean active
+        -boolean water
+        -ArrayList<OrderRestaurant> ordersRestaurant
+        -ArrayList<MenuItemRestaurant> MenusItemsRestaurant
+    }
+      class MenuItemRestaurant {
+        <<Entity>>
+        -String name
+        -String content
+        -boolean active
+        -ArrayList<MenuRestaurant> MenusRestaurant
+    }
+    class Booking {
+        <<Entity>>
+        -String name
+        -String phoneNumber
+        -int peopleQty
+        -LocalDateTime date
+        -TableRestaurant tableRestaurant
+        -boolean confirmed
+        +toString()
+    }
+
+    OrderRestaurant <|-- TakeAwayOrder
+    OrderRestaurant <|-- ShippingOrderRestaurant
+    OrderRestaurant <|-- EatInOrderRestaurant
+    OrderRestaurant "n" *--* "m" MenuRestaurant
+    MenuRestaurant "n" *--* "m" MenuItemRestaurant
+    TakeAwayOrder "n" -- "1" Customer
+    EatInOrderRestaurant "1" *-- "n" TableRestaurant
+    Booking "1" *-- "n" TableRestaurant
+   
+  
+```
+:::
+
 
 # JPA Relationships
 
