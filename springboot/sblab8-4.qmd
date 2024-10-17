@@ -10,7 +10,10 @@ categories: [Spring-Boot, lab]
 toc: true
 number-sections: true
 format:
-  html
+    html
+filters:
+    - lightbox
+lightbox: true
 ---
 
 :::: {.labs}
@@ -105,7 +108,15 @@ This structure allows for efficient querying and management of restaurant data u
 
 # Updated UML
 
-This is the updated UML from [Lab#SB08-1 UML and DDD](/springboot/sblab8-1.qmd#discussion-solving-uml){.external target='_blank'} correspoing to this <mark>commit</mark>: [TestCreateOrder() with JPA, Customer 1:n TakeAwayOrder unidirectional relationship](https://github.com/AlbertProfe/restaurantManager/tree/51b172d69b9f04196dbd52d3abdf9c50a05a3ff9){.external target='_blank'}
+This is the updated UML from [Lab#SB08-1 UML and DDD](/springboot/sblab8-1.qmd#discussion-solving-uml){.external target='_blank'} correspond to this <mark>commit</mark>: [TestCreateOrder() with JPA, Customer 1:n TakeAwayOrder unidirectional relationship](https://github.com/AlbertProfe/restaurantManager/tree/51b172d69b9f04196dbd52d3abdf9c50a05a3ff9){.external target='_blank'}
+
+
+::: {.column-margin}
+This Lab#SB08-4 will implement this entities relationships:
+
+![RestaurantManager UML](/images/springboot/labsb08/lab08-4-uml-2.png){.lightbox}
+
+:::
 
 ::: {.column-page-right}
 ```{mermaid}
@@ -180,7 +191,7 @@ classDiagram
     Booking "1" -- "1" TableRestaurant
 
 ```
-::: 
+:::
 
 
 # JPA Relationships
@@ -260,9 +271,9 @@ public class Department {
 
 
 ::: {.column-margin}
-Bidirectional Relationships example: 
+Bidirectional Relationships example:
 
--[Library2: API Rest Author Book @OneToMany CRUD with Swagger](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library2:-API-Rest-Author-Book-@OneToMany-CRUD-with-Swagger){.external target='_blank'}
+- [Library2: API Rest Author Book @OneToMany CRUD with Swagger](https://github.com/AlbertProfe/cifojava2022-3/wiki/Library2:-API-Rest-Author-Book-@OneToMany-CRUD-with-Swagger){.external target='_blank'}
 - [TestCreateBookingTable() with JPA, TableRestaurant 1:n Booking bidirectional relationship](https://github.com/AlbertProfe/restaurantManager/tree/c562d8da650da2f758754312c0e1ecea2d8909af){.external target='_blank'}
 :::
 
@@ -360,8 +371,8 @@ public class Course {
 **ManyToMany Bidirectional**
 
 - Both entities have references to each other
-- One side is designated as the owning side
-- Example: Many Students can enroll in many Courses, and each Course can have many Students
+- One side is designated as the <mark>owning side, the other the inverse side</mark>
+  - **Example**: Many Students can enroll in many Courses, and each Course can have many Students
 
 ```java
 @Entity
@@ -385,9 +396,9 @@ public class Course {
 ::: {.callout-note}
 # ManyToMany Considerations
 
-- ManyToMany relationships often require a join table in the database
-- Consider using an intermediate entity for complex relationships or when additional attributes are needed for the relationship
-- Be cautious of performance implications with large datasets
+- `ManyToMany` relationships often require a <mark>join table in the database</mark>
+- Consider using an <mark>intermediate entity for complex relationships</mark> or when additional attributes are needed for the relationship
+- Be cautious of **performance** implications with large datasets
 :::
 
 
