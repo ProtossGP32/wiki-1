@@ -388,7 +388,8 @@ classDiagram
   
 ```
   
-::: {.column-page-right}
+:::
+
 
 
 # JPA Relationships
