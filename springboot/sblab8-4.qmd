@@ -28,6 +28,7 @@ The Spring Boot `RestaurantManagement` System utilizes `JPA` to efficiently mana
 
 This architecture not only facilitates effective data management but also provides a robust foundation for building scalable restaurant applications, leveraging the power of Spring Boot and JPA for seamless integration and performance.
 :::
+
 </br>
 
 
@@ -197,7 +198,7 @@ classDiagram
 
 ## Final UML
 
-This UML would fit the final version of our project:
+This UML would fit the final version of our project (without the @ManyToMany `Customer 1-n Booking n-1 TableRestaurant` relationship:):
 
 ::: {.column-page-right}
 ```{mermaid}
@@ -282,13 +283,112 @@ classDiagram
     OrderRestaurant <|-- EatInOrderRestaurant
     OrderRestaurant "n" *--* "m" MenuRestaurant
     MenuRestaurant "n" *--* "m" MenuItemRestaurant
-    TakeAwayOrder "n" -- "1" Customer
+    TakeAwayOrder "n" *-- "1" Customer
     EatInOrderRestaurant "1" *-- "n" TableRestaurant
     Booking "1" *-- "n" TableRestaurant
    
   
 ```
 :::
+
+With the @ManyToMany `Customer 1-n Booking n-1 TableRestaurant` relationship:
+
+::: {.column-page-right}
+```{mermaid}
+classDiagram
+    class OrderRestaurant {
+        <<Entity>>
+        -String id
+        -Date date
+        -String waiter
+        -int peopleQty
+        -double totalPayment
+        -boolean paid
+        -ArrayList<MenuRestaurant> menusRestaurant
+        +toString()
+    }
+    class TakeAwayOrder {
+        <<Entity>>
+        -Customer customerTakeAway
+        +toString()
+    }
+    class TableRestaurant {
+        <<Entity>>
+        -String name
+        -String description
+        -int qty
+        -boolean busy
+        -ArrayList<Booking> Bookings
+        +toString()
+    }
+    class ShippingOrderRestaurant {
+         <<Entity>>
+        -String address
+        -String city
+        -String riderName
+        +toString()
+    }
+    class Customer {
+        <<Entity>>
+        -String id
+        -String name
+        -String email
+        -String phoneNumber
+        -int age
+        -boolean vipCustomer
+        -boolean deleted
+    }
+    class EatInOrderRestaurant {
+        <<Entity>>
+        -ArrayList<TableRestaurant> tablesRestaurant
+        +toString()
+    }
+    class MenuRestaurant {
+        <<Entity>>
+        -String name
+        -Double price
+        -String content
+        -boolean active
+        -boolean water
+        -ArrayList<OrderRestaurant> ordersRestaurant
+        -ArrayList<MenuItemRestaurant> MenusItemsRestaurant
+    }
+      class MenuItemRestaurant {
+        <<Entity>>
+        -String name
+        -String content
+        -boolean active
+        -ArrayList<MenuRestaurant> MenusRestaurant
+    }
+    class Booking {
+        <<Entity>>
+        -String name
+        -String phoneNumber
+        -int peopleQty
+        -LocalDateTime date
+        -LocalDateTime BookingDate
+        -String service
+        -TableRestaurant tableRestaurant
+        -boolean confirmed
+        -Customer customer
+        +toString()
+    }
+   
+    OrderRestaurant <|-- TakeAwayOrder
+    OrderRestaurant <|-- ShippingOrderRestaurant
+    OrderRestaurant <|-- EatInOrderRestaurant
+    OrderRestaurant "n" *--* "m" MenuRestaurant
+    MenuRestaurant "n" *--* "m" MenuItemRestaurant
+    TakeAwayOrder "n" *-- "1" Customer
+    EatInOrderRestaurant "n" *-- "1" TableRestaurant
+    Booking "n" *-- "1" TableRestaurant
+    Customer  "1" --* "n" Booking
+
+   
+  
+```
+  
+::: {.column-page-right}
 
 
 # JPA Relationships
@@ -499,6 +599,59 @@ public class Course {
 :::
 
 
+**ManyToMany with Join Table Entity**
+
+Entity @ManyToMany with Join Table
+
+
+- Represents a `many-to-many` relationship <mark>using an intermediate entity</mark>
+- The `join table` becomes an **entity itself**, with two `one-to-many` relationships
+- Provides more flexibility and allows additional attributes on the relationship
+- **Example**: Students enrolled in Courses, with additional enrollment information
+
+```java
+@Entity
+public class Student {
+    @OneToMany(mappedBy = "student")
+    private List<Enrollment> enrollments;
+}
+
+@Entity
+public class Course {
+    @OneToMany(mappedBy = "course")
+    private List<Enrollment> enrollments;
+}
+
+@Entity
+public class Enrollment {
+    @ManyToOne
+    private Student student;
+
+    @ManyToOne
+    private Course course;
+
+    private LocalDate enrollmentDate;
+    private String grade;
+}
+```
+
+In this approach:
+
+- The `Enrollment` entity serves as the join table
+- It has two `@ManyToOne` relationships: one to `Student` and one to `Course`
+- Additional fields like `enrollmentDate` and `grade` can be added to the `Enrollment` entity
+- Both `Student` and `Course` have `@OneToMany` relationships to `Enrollment`
+- The mappedBy attribute in @OneToMany indicates the owning side of the relationship
+
+This structure allows for more detailed modeling of the relationship between students and courses, enabling the storage of relationship-specific data and easier querying of the association.
+
+**Key Points**
+
+This structure allows you to:
+
+- Add additional fields to the relationship (e.g., enrollmentDate)
+- Easily query the relationship from both sides
+- Maintain better control over the lifecycle of the relationship
 
 
 # Inherence and JPA
