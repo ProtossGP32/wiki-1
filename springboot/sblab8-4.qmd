@@ -63,14 +63,14 @@ The system uses the following JPA entity relationships:
 @Entity
 public class Menu {
 
-  @Id
-  //@GeneratedValue
-  private String id;
-  
-  private String name;
+    @Id
+    //@GeneratedValue
+    private String id;
 
-  @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL)
-  private List<MenuItem> items;
+    private String name;
+
+    @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL)
+    private List<MenuItem> items;
 
 }
 ```
@@ -87,10 +87,10 @@ public class Menu {
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-  List<Order> findByCustomer(Customer customer);
-  
-  @Query("SELECT o FROM Order o WHERE o.orderDate > :date")
-  List<Order> findRecentOrders(@Param("date") LocalDate date);
+    List<Order> findByCustomer(Customer customer);
+
+    @Query("SELECT o FROM Order o WHERE o.orderDate > :date")
+    List<Order> findRecentOrders(@Param("date") LocalDate date);
 
 }
 ```
@@ -107,8 +107,33 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 This structure allows for efficient querying and management of restaurant data using Spring Data JPA.
 
 
-# Updated UML
+# UML
 
+## `RestaurantManager` Relationships
+
+
+1. **Inheritance:**
+   - `TakeAwayOrder`, `ShippingOrderRestaurant`, and `EatInOrderRestaurant` all <mark>inherit</mark> from `OrderRestaurant`.
+
+2. **One-to-Many associations:**
+   - A `Customer` can have multiple `TakeAwayOrders`.
+   - An `EatInOrderRestaurant` can be associated with multiple `TableRestaurants`.
+   - A `Booking` can be associated with multiple `TableRestaurants`.
+
+3. **Many-to-One associations:**
+   - Multiple `TakeAwayOrders` can be associated with a single `Customer`.
+   - Multiple `Customers` can be associated with a single `Booking`.
+
+4. **Many-to-Many associations:**
+   - `OrderRestaurant` and `MenuRestaurant` have a many-to-many relationship.
+   - `MenuRestaurant` and `MenuItemRestaurant` have a many-to-many relationship.
+
+5. **Many-to-Many with join table:**
+   - The relationship between `Customer` and `TableRestaurant` is effectively a many-to-many relationship, with `Booking` <mark>serving as a join table entity</mark>.
+   - This is implemented as two one-to-many relationships:
+     a. One `Customer` can have many `Bookings` (one-to-many)
+     b. One `Booking` can have many `TableRestaurants` (one-to-many)
+   - This structure allows for additional attributes on the `Booking` entity (such as date, time, etc.) while maintaining the many-to-many relationship between `Customer` and `TableRestaurant`.
 
 ::: {.column-margin}
 This Lab#SB08-4 will implement this entities relationships:
@@ -117,11 +142,64 @@ This Lab#SB08-4 will implement this entities relationships:
 
 :::
 
+```{mermaid}
+classDiagram
+direction LR
+    class TableRestaurant {
+        <<Entity>>
+        -String name
+        -String description
+        -int qty
+        -boolean busy
+        -ArrayList<Booking> Bookings
+        +toString()
+    }
+    
+    class Customer {
+        <<Entity>>
+        -String id
+        -String name
+        -String email
+        -String phoneNumber
+        -int age
+        -boolean vipCustomer
+        -boolean deleted
+        -ArrayList<Booking> Bookings
+        +toString()
+    }
+
+    class Booking {
+        <<Entity>>
+        -String name
+        -String phoneNumber
+        -int peopleQty
+        -LocalDateTime date
+        -LocalDateTime SlotDate
+        -String service
+        -boolean confirmed
+        -TableRestaurant tableRestaurant
+        -Customer customer
+        +toString()
+    }
+
+    Booking "n" *-- "1" TableRestaurant
+    Customer  "1" --* "n" Booking
+
+```
+
+
+
+
+##  Updated UML
 
 This is the updated UML from [Lab#SB08-1 UML and DDD](/springboot/sblab8-1.qmd#discussion-solving-uml){.external target='_blank'} correspond to this <mark>commit</mark>: [TestCreateOrder() with JPA, Customer 1:n TakeAwayOrder unidirectional relationship](https://github.com/AlbertProfe/restaurantManager/tree/51b172d69b9f04196dbd52d3abdf9c50a05a3ff9){.external target='_blank'}
 
 
 ::: {.column-page-right}
+
+<details>
+<summary>Updated UML from Lab#SB08-1 UML and DDD</summary>
+
 ```{mermaid}
 classDiagram
     class OrderRestaurant {
@@ -194,13 +272,21 @@ classDiagram
     Booking "1" -- "1" TableRestaurant
 
 ```
+
+</details>
+
 :::
 
-## Final UML
+## UML with `MenuItemsRestaurant`
 
-This UML would fit the final version of our project (without the @ManyToMany `Customer 1-n Booking n-1 TableRestaurant` relationship:):
+This UML would fit *almost* the final version (with `MenuItemsRestaurant`) of our project (without the @ManyToMany `Customer 1-n Booking n-1 TableRestaurant` relationship:
 
 ::: {.column-page-right}
+
+<details>
+<summary>UML without the Many-To-Many `Customer 1-n Booking n-1 TableRestaurant` relationship:
+</summary>
+
 ```{mermaid}
 classDiagram
     class OrderRestaurant {
@@ -229,7 +315,7 @@ classDiagram
         +toString()
     }
     class ShippingOrderRestaurant {
-         <<Entity>>
+        <<Entity>>
         -String address
         -String city
         -String riderName
@@ -260,7 +346,7 @@ classDiagram
         -ArrayList<OrderRestaurant> ordersRestaurant
         -ArrayList<MenuItemRestaurant> MenusItemsRestaurant
     }
-      class MenuItemRestaurant {
+    class MenuItemRestaurant {
         <<Entity>>
         -String name
         -String content
@@ -286,17 +372,29 @@ classDiagram
     TakeAwayOrder "n" *-- "1" Customer
     EatInOrderRestaurant "1" *-- "n" TableRestaurant
     Booking "1" *-- "n" TableRestaurant
-   
-  
+
+
 ```
+
+
+</details>
+
 :::
 
-With the @ManyToMany `Customer 1-n Booking n-1 TableRestaurant` relationship:
+## UML with `ManyToMany` join table entity
+
+With the Many-To-Many `Customer 1-n Booking n-1 TableRestaurant` relationship:
 
 ::: {.column-page-right}
+
+<details>
+<summary>UML with Many-To-Many `Customer 1-n Booking n-1 TableRestaurant` relationship:
+</summary>
+
+
 ```{mermaid}
 classDiagram
- direction LR
+direction LR
     class OrderRestaurant {
         <<Entity>>
         -String id
@@ -314,9 +412,9 @@ classDiagram
         -Customer customerTakeAway
         +toString()
     }
-  
+
     class ShippingOrderRestaurant {
-         <<Entity>>
+        <<Entity>>
         -String address
         -String city
         -String riderName
@@ -338,7 +436,7 @@ classDiagram
         -ArrayList<OrderRestaurant> ordersRestaurant
         -ArrayList<MenuItemRestaurant> MenusItemsRestaurant
     }
-      class MenuItemRestaurant {
+    class MenuItemRestaurant {
         <<Entity>>
         -String name
         -String content
@@ -372,7 +470,7 @@ classDiagram
         
     }
 
-      class TableRestaurant {
+    class TableRestaurant {
         <<Entity>>
         -String name
         -String description
@@ -381,7 +479,7 @@ classDiagram
         -ArrayList<Booking> Bookings
         +toString()
     }
-   
+
     OrderRestaurant <|-- TakeAwayOrder
     OrderRestaurant <|-- ShippingOrderRestaurant
     OrderRestaurant <|-- EatInOrderRestaurant
@@ -392,84 +490,12 @@ classDiagram
     Booking "n" *-- "1" TableRestaurant
     Customer  "1" --* "n" Booking
 
-   
 ```
+
+</details>
 
 :::
 
-### RestaurantManger Relationships
-
-
-1. **Inheritance:**
-   - `TakeAwayOrder`, `ShippingOrderRestaurant`, and `EatInOrderRestaurant` all inherit from `OrderRestaurant`.
-
-2. **Many-to-Many associations:**
-   - `OrderRestaurant` and `MenuRestaurant` have a many-to-many relationship.
-   - `MenuRestaurant` and `MenuItemRestaurant` have a many-to-many relationship.
-
-3. **One-to-Many associations:**
-   - A `Customer` can have multiple `TakeAwayOrders`.
-   - An `EatInOrderRestaurant` can be associated with multiple `TableRestaurants`.
-   - A `Booking` can be associated with multiple `TableRestaurants`.
-
-4. **Many-to-One associations:**
-   - Multiple `TakeAwayOrders` can be associated with a single `Customer`.
-   - Multiple `Customers` can be associated with a single `Booking`.
-
-5. **Many-to-Many with join table:**
-   - The relationship between `Customer` and `TableRestaurant` is effectively a many-to-many relationship, with `Booking` serving as a join table entity.
-   - This is implemented as two one-to-many relationships:
-     a. One `Customer` can have many `Bookings` (one-to-many)
-     b. One `Booking` can have many `TableRestaurants` (one-to-many)
-   - This structure allows for additional attributes on the `Booking` entity (such as date, time, etc.) while maintaining the many-to-many relationship between `Customer` and `TableRestaurant`.
-
-
-
-```{mermaid}
-classDiagram
-   direction LR
-    class TableRestaurant {
-        <<Entity>>
-        -String name
-        -String description
-        -int qty
-        -boolean busy
-        -ArrayList<Booking> Bookings
-        +toString()
-    }
-    
-    class Customer {
-        <<Entity>>
-        -String id
-        -String name
-        -String email
-        -String phoneNumber
-        -int age
-        -boolean vipCustomer
-        -boolean deleted
-        -ArrayList<Booking> Bookings
-        +toString()
-    }
-
-    class Booking {
-        <<Entity>>
-        -String name
-        -String phoneNumber
-        -int peopleQty
-        -LocalDateTime date
-        -LocalDateTime SlotDate
-        -String service
-        -boolean confirmed
-        -TableRestaurant tableRestaurant
-        -Customer customer
-        +toString()
-    }
-   
-    Booking "n" *-- "1" TableRestaurant
-    Customer  "1" --* "n" Booking
-
-```
-  
 
 # JPA Relationships
 
