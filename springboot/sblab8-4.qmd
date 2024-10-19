@@ -118,8 +118,8 @@ This structure allows for efficient querying and management of restaurant data u
 2. **One-to-Many/Many-to-One associations:**
     - One-to-Many
         - A `Customer` can have multiple `TakeAwayOrders`.
-        - An `EatInOrderRestaurant` can be associated with multiple `TableRestaurants`.
-        - A `Booking` can be associated with multiple `TableRestaurants`.
+        - An `TableRestaurant` can be associated with multiple `EatInOrderRestaurant`, <mark>we do not allow to group tables</mark> .
+        - A `Booking` can be associated with multiple `TableRestaurant`.
     - Many-to-One
         - Multiple `TakeAwayOrders` can be associated with a single `Customer`.
         - Multiple `Customers` can be associated with a single `Booking`.
