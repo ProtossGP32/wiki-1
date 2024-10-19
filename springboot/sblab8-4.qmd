@@ -109,7 +109,10 @@ This structure allows for efficient querying and management of restaurant data u
 
 # UML
 
-## `RestaurantManager` Relationships
+
+<mark>The **work-in-progress** laboratory gaol is transform all model classes to **entities** and relate them by JPA.</mark>
+
+## `RestaurantManager` relationships goal
 
 
 1. **Inheritance:**
@@ -117,12 +120,11 @@ This structure allows for efficient querying and management of restaurant data u
 
 2. **One-to-Many/Many-to-One associations:**
     - One-to-Many
-        - A `Customer` can have multiple `TakeAwayOrders`.
-        - An `TableRestaurant` can be associated with multiple `EatInOrderRestaurant`, <mark>we do not allow to group tables</mark> .
+        - A `Customer` can have multiple `TakeAwayOrder`.
+        - A `TableRestaurant` can be associated with multiple `EatInOrderRestaurant`, <mark>we do not allow to group tables</mark> .
         - A `Booking` can be associated with multiple `TableRestaurant`.
     - Many-to-One
         - Multiple `TakeAwayOrders` can be associated with a single `Customer`.
-        - Multiple `Customers` can be associated with a single `Booking`.
 
 3. **Many-to-Many associations:**
     - Many-to-Many
@@ -135,12 +137,16 @@ This structure allows for efficient querying and management of restaurant data u
             b. One `Booking` can have many `TableRestaurants` (one-to-many)
         - This structure allows for additional attributes on the `Booking` entity (such as date, time, etc.) while maintaining the many-to-many relationship between `Customer` and `TableRestaurant`.
 
+
+
 ::: {.column-margin}
 This Lab#SB08-4 will implement this entities relationships:
 
 ![RestaurantManager UML](/images/springboot/labsb08/lab08-4-uml-2.png){.lightbox}
 
 :::
+
+Many-to-Many with join table as entity `Customer 1-n Booking n-1 TableRestaurant` relationship:
 
 ```{mermaid}
 classDiagram
@@ -190,7 +196,7 @@ direction LR
 
 
 
-##  Updated UML
+## Updated UML
 
 This is the updated UML from [Lab#SB08-1 UML and DDD](/springboot/sblab8-1.qmd#discussion-solving-uml){.external target='_blank'} correspond to this <mark>commit</mark>: [TestCreateOrder() with JPA, Customer 1:n TakeAwayOrder unidirectional relationship](https://github.com/AlbertProfe/restaurantManager/tree/51b172d69b9f04196dbd52d3abdf9c50a05a3ff9){.external target='_blank'}
 
@@ -279,7 +285,10 @@ classDiagram
 
 ## UML with `MenuItemsRestaurant`
 
+> All model classes now are `@Entity.`
+
 This UML would fit *almost* the final version (with `MenuItemsRestaurant`) of our project (without the @ManyToMany `Customer 1-n Booking n-1 TableRestaurant` relationship:
+
 
 ::: {.column-page-right}
 
